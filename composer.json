@@ -1,0 +1,37 @@
+{
+  "name": "softonic/catalog_api_api_sdk",
+  "type": "softonic-instance",
+  "description": "Catalog API SDK",
+  "keywords": [
+    "catalog",
+    "api",
+    "sdk"
+  ],
+  "version": "0.0.200",
+  "homepage": "http://catalog.priv.sftapi.com",
+  "repositories": [
+    {
+      "packagist": false
+    },
+    {
+      "type": "composer",
+      "url": "http://satis.redtonic/softonic"
+    },
+    {
+      "type": "composer",
+      "url": "http://satis.redtonic/packagist"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Softonic\\CatalogApiInstance\\": "src/Softonic/CatalogApiInstance"
+    }
+  },
+  "require": {
+    "php": "5.3.*",
+    "ext-curl": "*",
+    "psr/log": "*"
+  },
+  "minimum-stability": "stable"
+}
+
