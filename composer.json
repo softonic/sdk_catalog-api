@@ -8,7 +8,7 @@
     "sdk"
   ],
   "version": "0.0.200",
-  "homepage": "http://v1.catalog.sftapi.com",
+  "homepage": "http://v1.catalog.priv.sftapi.com",
   "autoload": {
     "psr-4": {
       "Softonic\\CatalogApiInstance\\": "src/Softonic/CatalogApiInstance"
