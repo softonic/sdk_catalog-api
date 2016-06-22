@@ -1,37 +1,36 @@
 {
-  "name": "softonic/catalog_api_api_sdk",
-  "type": "softonic-instance",
-  "description": "Catalog API SDK",
-  "keywords": [
-    "catalog",
-    "api",
-    "sdk"
-  ],
-  "version": "0.0.200",
-  "homepage": "http://catalog.priv.sftapi.com",
-  "repositories": [
-    {
-      "packagist": false
+    "name": "softonic/catalog_api_sdk",
+    "version": "2.0.17",
+    "description": "",
+    "keywords": [
+        "swagger",
+        "php",
+        "sdk",
+        "api"
+    ],
+    "homepage": "http://swagger.io",
+    "license": "Apache v2",
+    "authors": [
+        {
+            "name": "Swagger and contributors",
+            "homepage": "https://github.com/swagger-api/swagger-codegen"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*"
     },
-    {
-      "type": "composer",
-      "url": "http://satis.redtonic/softonic"
+    "require-dev": {
+        "phpunit/phpunit": "~4.8",
+        "satooshi/php-coveralls": "~1.0",
+        "squizlabs/php_codesniffer": "~2.6"
     },
-    {
-      "type": "composer",
-      "url": "http://satis.redtonic/packagist"
+    "autoload": {
+        "psr-4": { "Softonic\\CatalogApiSdk\\" : "src/" }
+    },
+    "autoload-dev": {
+        "psr-4": { "Softonic\\CatalogApiSdk\\" : "test/" }
     }
-  ],
-  "autoload": {
-    "psr-4": {
-      "Softonic\\CatalogApiInstance\\": "src/Softonic/CatalogApiInstance"
-    }
-  },
-  "require": {
-    "php": "5.3.*",
-    "ext-curl": "*",
-    "psr/log": "*"
-  },
-  "minimum-stability": "stable"
 }
-
