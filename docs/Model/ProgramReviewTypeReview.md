@@ -1,0 +1,27 @@
+# ProgramReviewTypeReview
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id_program** | **string** | Program UUID or numeric ID | 
+**id_review_type** | **string** | Review owner type | 
+**id_review** | **string** | Review identifier as UUID | 
+**public_note** | **string** | Public note. | [optional] 
+**type** | **string** | Review type. This field is used for tracking purposes. Ex: core | 
+**rating** | **int** | Program rating. | 
+**headline** | **string** | Headline. | 
+**lead** | **string** | Lead | [optional] 
+**subfeatures** | **string** | Subfeatures | [optional] 
+**features** | **string** | Features | [optional] 
+**subusability** | **string** | Subusability | [optional] 
+**usability** | **string** | Usability | [optional] 
+**subconclusion** | **string** | Subconclusion | [optional] 
+**conclusion** | **string** | Conclusion | [optional] 
+**changes** | **string** | Version changes | [optional] 
+**extra** | **string** | Unrecognized parts from the review | [optional] 
+**pros** | **string[]** | Pros | [optional] 
+**cons** | **string[]** | Cons | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

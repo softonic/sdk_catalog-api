@@ -1,0 +1,294 @@
+# Softonic\CatalogApiSdk\ProgramsVersionsApi
+
+All URIs are relative to *http://v2.catalog.priv.sftapi.com.sft-staging.com*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**createProgramVersion**](ProgramsVersionsApi.md#createProgramVersion) | **POST** /programs/{id_program}/versions | Creates a new ProgramVersion
+[**deleteProgramVersion**](ProgramsVersionsApi.md#deleteProgramVersion) | **DELETE** /programs/{id_program}/versions/{id_version} | Deletes a ProgramVersion
+[**findProgramVersion**](ProgramsVersionsApi.md#findProgramVersion) | **GET** /programs/{id_program}/versions | List of ProgramVersions
+[**readProgramVersion**](ProgramsVersionsApi.md#readProgramVersion) | **GET** /programs/{id_program}/versions/{id_version} | Fetches a single ProgramVersion
+[**replaceProgramVersion**](ProgramsVersionsApi.md#replaceProgramVersion) | **PUT** /programs/{id_program}/versions/{id_version} | Entirely replaces a ProgramVersion
+[**updateProgramVersion**](ProgramsVersionsApi.md#updateProgramVersion) | **PATCH** /programs/{id_program}/versions/{id_version} | Partially updates a ProgramVersion
+
+
+# **createProgramVersion**
+> createProgramVersion($id_program, $body)
+
+Creates a new ProgramVersion
+
+Creates a new ProgramVersion
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsApi();
+$id_program = "id_program_example"; // string | Program UUID
+$body = new \Softonic\CatalogApiSdk\Model\ProgramVersion(); // \Softonic\CatalogApiSdk\Model\ProgramVersion | 
+
+try {
+    $api_instance->createProgramVersion($id_program, $body);
+} catch (Exception $e) {
+    echo 'Exception when calling ProgramsVersionsApi->createProgramVersion: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id_program** | **string**| Program UUID |
+ **body** | [**\Softonic\CatalogApiSdk\Model\ProgramVersion**](../Model/\Softonic\CatalogApiSdk\Model\ProgramVersion.md)|  | [optional]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **deleteProgramVersion**
+> deleteProgramVersion($id_program, $id_version)
+
+Deletes a ProgramVersion
+
+Deletes a ProgramVersion
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsApi();
+$id_program = "id_program_example"; // string | Program UUID
+$id_version = "id_version_example"; // string | Version UUID
+
+try {
+    $api_instance->deleteProgramVersion($id_program, $id_version);
+} catch (Exception $e) {
+    echo 'Exception when calling ProgramsVersionsApi->deleteProgramVersion: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id_program** | **string**| Program UUID |
+ **id_version** | **string**| Version UUID |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **findProgramVersion**
+> \Softonic\CatalogApiSdk\Model\ProgramVersion[] findProgramVersion($id_program)
+
+List of ProgramVersions
+
+List of ProgramVersions
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsApi();
+$id_program = "id_program_example"; // string | Program UUID
+
+try {
+    $result = $api_instance->findProgramVersion($id_program);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ProgramsVersionsApi->findProgramVersion: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id_program** | **string**| Program UUID |
+
+### Return type
+
+[**\Softonic\CatalogApiSdk\Model\ProgramVersion[]**](../Model/ProgramVersion.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **readProgramVersion**
+> \Softonic\CatalogApiSdk\Model\ProgramVersion readProgramVersion($id_program, $id_version)
+
+Fetches a single ProgramVersion
+
+Fetches a single ProgramVersion
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsApi();
+$id_program = "id_program_example"; // string | Program UUID
+$id_version = "id_version_example"; // string | Version UUID
+
+try {
+    $result = $api_instance->readProgramVersion($id_program, $id_version);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ProgramsVersionsApi->readProgramVersion: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id_program** | **string**| Program UUID |
+ **id_version** | **string**| Version UUID |
+
+### Return type
+
+[**\Softonic\CatalogApiSdk\Model\ProgramVersion**](../Model/ProgramVersion.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **replaceProgramVersion**
+> replaceProgramVersion($id_program, $id_version, $body)
+
+Entirely replaces a ProgramVersion
+
+Entirely replaces a ProgramVersion
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsApi();
+$id_program = "id_program_example"; // string | Program UUID
+$id_version = "id_version_example"; // string | Version UUID
+$body = new \Softonic\CatalogApiSdk\Model\ProgramVersion(); // \Softonic\CatalogApiSdk\Model\ProgramVersion | 
+
+try {
+    $api_instance->replaceProgramVersion($id_program, $id_version, $body);
+} catch (Exception $e) {
+    echo 'Exception when calling ProgramsVersionsApi->replaceProgramVersion: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id_program** | **string**| Program UUID |
+ **id_version** | **string**| Version UUID |
+ **body** | [**\Softonic\CatalogApiSdk\Model\ProgramVersion**](../Model/\Softonic\CatalogApiSdk\Model\ProgramVersion.md)|  | [optional]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **updateProgramVersion**
+> updateProgramVersion($id_program, $id_version, $body)
+
+Partially updates a ProgramVersion
+
+Partially updates a ProgramVersion
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsApi();
+$id_program = "id_program_example"; // string | Program UUID
+$id_version = "id_version_example"; // string | Version UUID
+$body = new \Softonic\CatalogApiSdk\Model\ProgramVersion(); // \Softonic\CatalogApiSdk\Model\ProgramVersion | 
+
+try {
+    $api_instance->updateProgramVersion($id_program, $id_version, $body);
+} catch (Exception $e) {
+    echo 'Exception when calling ProgramsVersionsApi->updateProgramVersion: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id_program** | **string**| Program UUID |
+ **id_version** | **string**| Version UUID |
+ **body** | [**\Softonic\CatalogApiSdk\Model\ProgramVersion**](../Model/\Softonic\CatalogApiSdk\Model\ProgramVersion.md)|  | [optional]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
