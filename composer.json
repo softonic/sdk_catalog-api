@@ -34,3 +34,4 @@
         "psr-4": { "Softonic\\CatalogApiSdk\\" : "test/" }
     }
 }
+
