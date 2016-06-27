@@ -1,23 +1,23 @@
-# Softonic\CatalogApiSdk\ProgramsVersionsLocalesApi
+# Softonic\CatalogApiSdk\CategoriesApi
 
 All URIs are relative to *https://v2.catalog.sftapi.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createProgramVersionLocale**](ProgramsVersionsLocalesApi.md#createProgramVersionLocale) | **POST** /programs/{id_program}/versions/{id_version}/locales | Creates a new ProgramVersionLocale
-[**deleteProgramVersionLocale**](ProgramsVersionsLocalesApi.md#deleteProgramVersionLocale) | **DELETE** /programs/{id_program}/versions/{id_version}/locales/{id_locale} | Deletes a ProgramVersionLocale
-[**findProgramVersionLocale**](ProgramsVersionsLocalesApi.md#findProgramVersionLocale) | **GET** /programs/{id_program}/versions/{id_version}/locales | List of ProgramVersionLocales
-[**readProgramVersionLocale**](ProgramsVersionsLocalesApi.md#readProgramVersionLocale) | **GET** /programs/{id_program}/versions/{id_version}/locales/{id_locale} | Fetches a single ProgramVersionLocale
-[**replaceProgramVersionLocale**](ProgramsVersionsLocalesApi.md#replaceProgramVersionLocale) | **PUT** /programs/{id_program}/versions/{id_version}/locales/{id_locale} | Entirely replaces a ProgramVersionLocale
-[**updateProgramVersionLocale**](ProgramsVersionsLocalesApi.md#updateProgramVersionLocale) | **PATCH** /programs/{id_program}/versions/{id_version}/locales/{id_locale} | Partially updates a ProgramVersionLocale
+[**createCategory**](CategoriesApi.md#createCategory) | **POST** /categories | Creates a new Category
+[**deleteCategory**](CategoriesApi.md#deleteCategory) | **DELETE** /categories/{id_category} | Deletes a Category
+[**findCategory**](CategoriesApi.md#findCategory) | **GET** /categories | List of Categorys
+[**readCategory**](CategoriesApi.md#readCategory) | **GET** /categories/{id_category} | Fetches a single Category
+[**replaceCategory**](CategoriesApi.md#replaceCategory) | **PUT** /categories/{id_category} | Entirely replaces a Category
+[**updateCategory**](CategoriesApi.md#updateCategory) | **PATCH** /categories/{id_category} | Partially updates a Category
 
 
-# **createProgramVersionLocale**
-> createProgramVersionLocale($id_program, $id_version, $body)
+# **createCategory**
+> createCategory($body)
 
-Creates a new ProgramVersionLocale
+Creates a new Category
 
-Creates a new ProgramVersionLocale
+Creates a new Category
 
 ### Example
 ```php
@@ -33,15 +33,13 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_application
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesApi();
-$id_program = "id_program_example"; // string | Program UUID
-$id_version = "id_version_example"; // string | Version UUID
-$body = new \Softonic\CatalogApiSdk\Model\ProgramVersionLocale(); // \Softonic\CatalogApiSdk\Model\ProgramVersionLocale | 
+$api_instance = new Softonic\CatalogApiSdk\Api\CategoriesApi();
+$body = new \Softonic\CatalogApiSdk\Model\Category(); // \Softonic\CatalogApiSdk\Model\Category | 
 
 try {
-    $api_instance->createProgramVersionLocale($id_program, $id_version, $body);
+    $api_instance->createCategory($body);
 } catch (Exception $e) {
-    echo 'Exception when calling ProgramsVersionsLocalesApi->createProgramVersionLocale: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CategoriesApi->createCategory: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -50,9 +48,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID |
- **id_version** | **string**| Version UUID |
- **body** | [**\Softonic\CatalogApiSdk\Model\ProgramVersionLocale**](../Model/\Softonic\CatalogApiSdk\Model\ProgramVersionLocale.md)|  | [optional]
+ **body** | [**\Softonic\CatalogApiSdk\Model\Category**](../Model/\Softonic\CatalogApiSdk\Model\Category.md)|  | [optional]
 
 ### Return type
 
@@ -69,12 +65,12 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **deleteProgramVersionLocale**
-> deleteProgramVersionLocale($id_program, $id_version, $id_locale)
+# **deleteCategory**
+> deleteCategory($id_category)
 
-Deletes a ProgramVersionLocale
+Deletes a Category
 
-Deletes a ProgramVersionLocale
+Deletes a Category
 
 ### Example
 ```php
@@ -90,15 +86,13 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_application
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesApi();
-$id_program = "id_program_example"; // string | Program UUID
-$id_version = "id_version_example"; // string | Version UUID
-$id_locale = "id_locale_example"; // string | locale identifier.
+$api_instance = new Softonic\CatalogApiSdk\Api\CategoriesApi();
+$id_category = "id_category_example"; // string | Categories identifier
 
 try {
-    $api_instance->deleteProgramVersionLocale($id_program, $id_version, $id_locale);
+    $api_instance->deleteCategory($id_category);
 } catch (Exception $e) {
-    echo 'Exception when calling ProgramsVersionsLocalesApi->deleteProgramVersionLocale: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CategoriesApi->deleteCategory: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -107,9 +101,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID |
- **id_version** | **string**| Version UUID |
- **id_locale** | **string**| locale identifier. |
+ **id_category** | **string**| Categories identifier |
 
 ### Return type
 
@@ -126,12 +118,12 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **findProgramVersionLocale**
-> \Softonic\CatalogApiSdk\Model\ProgramVersionLocale[] findProgramVersionLocale($id_program, $id_version)
+# **findCategory**
+> \Softonic\CatalogApiSdk\Model\Category[] findCategory()
 
-List of ProgramVersionLocales
+List of Categorys
 
-List of ProgramVersionLocales
+List of Categorys
 
 ### Example
 ```php
@@ -147,29 +139,23 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_application
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesApi();
-$id_program = "id_program_example"; // string | Program UUID
-$id_version = "id_version_example"; // string | Version UUID
+$api_instance = new Softonic\CatalogApiSdk\Api\CategoriesApi();
 
 try {
-    $result = $api_instance->findProgramVersionLocale($id_program, $id_version);
+    $result = $api_instance->findCategory();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ProgramsVersionsLocalesApi->findProgramVersionLocale: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CategoriesApi->findCategory: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID |
- **id_version** | **string**| Version UUID |
+This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Model\ProgramVersionLocale[]**](../Model/ProgramVersionLocale.md)
+[**\Softonic\CatalogApiSdk\Model\Category[]**](../Model/Category.md)
 
 ### Authorization
 
@@ -182,12 +168,12 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **readProgramVersionLocale**
-> \Softonic\CatalogApiSdk\Model\ProgramVersionLocale readProgramVersionLocale($id_program, $id_version, $id_locale)
+# **readCategory**
+> \Softonic\CatalogApiSdk\Model\Category readCategory($id_category)
 
-Fetches a single ProgramVersionLocale
+Fetches a single Category
 
-Fetches a single ProgramVersionLocale
+Fetches a single Category
 
 ### Example
 ```php
@@ -203,16 +189,14 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_application
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesApi();
-$id_program = "id_program_example"; // string | Program UUID
-$id_version = "id_version_example"; // string | Version UUID
-$id_locale = "id_locale_example"; // string | locale identifier.
+$api_instance = new Softonic\CatalogApiSdk\Api\CategoriesApi();
+$id_category = "id_category_example"; // string | Categories identifier
 
 try {
-    $result = $api_instance->readProgramVersionLocale($id_program, $id_version, $id_locale);
+    $result = $api_instance->readCategory($id_category);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ProgramsVersionsLocalesApi->readProgramVersionLocale: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CategoriesApi->readCategory: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -221,13 +205,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID |
- **id_version** | **string**| Version UUID |
- **id_locale** | **string**| locale identifier. |
+ **id_category** | **string**| Categories identifier |
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Model\ProgramVersionLocale**](../Model/ProgramVersionLocale.md)
+[**\Softonic\CatalogApiSdk\Model\Category**](../Model/Category.md)
 
 ### Authorization
 
@@ -240,12 +222,12 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **replaceProgramVersionLocale**
-> replaceProgramVersionLocale($id_program, $id_version, $id_locale, $body)
+# **replaceCategory**
+> replaceCategory($id_category, $body)
 
-Entirely replaces a ProgramVersionLocale
+Entirely replaces a Category
 
-Entirely replaces a ProgramVersionLocale
+Entirely replaces a Category
 
 ### Example
 ```php
@@ -261,16 +243,14 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_application
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesApi();
-$id_program = "id_program_example"; // string | Program UUID
-$id_version = "id_version_example"; // string | Version UUID
-$id_locale = "id_locale_example"; // string | locale identifier.
-$body = new \Softonic\CatalogApiSdk\Model\ProgramVersionLocale(); // \Softonic\CatalogApiSdk\Model\ProgramVersionLocale | 
+$api_instance = new Softonic\CatalogApiSdk\Api\CategoriesApi();
+$id_category = "id_category_example"; // string | Categories identifier
+$body = new \Softonic\CatalogApiSdk\Model\Category(); // \Softonic\CatalogApiSdk\Model\Category | 
 
 try {
-    $api_instance->replaceProgramVersionLocale($id_program, $id_version, $id_locale, $body);
+    $api_instance->replaceCategory($id_category, $body);
 } catch (Exception $e) {
-    echo 'Exception when calling ProgramsVersionsLocalesApi->replaceProgramVersionLocale: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CategoriesApi->replaceCategory: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -279,10 +259,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID |
- **id_version** | **string**| Version UUID |
- **id_locale** | **string**| locale identifier. |
- **body** | [**\Softonic\CatalogApiSdk\Model\ProgramVersionLocale**](../Model/\Softonic\CatalogApiSdk\Model\ProgramVersionLocale.md)|  | [optional]
+ **id_category** | **string**| Categories identifier |
+ **body** | [**\Softonic\CatalogApiSdk\Model\Category**](../Model/\Softonic\CatalogApiSdk\Model\Category.md)|  | [optional]
 
 ### Return type
 
@@ -299,12 +277,12 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **updateProgramVersionLocale**
-> updateProgramVersionLocale($id_program, $id_version, $id_locale, $body)
+# **updateCategory**
+> updateCategory($id_category, $body)
 
-Partially updates a ProgramVersionLocale
+Partially updates a Category
 
-Partially updates a ProgramVersionLocale
+Partially updates a Category
 
 ### Example
 ```php
@@ -320,16 +298,14 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_application
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesApi();
-$id_program = "id_program_example"; // string | Program UUID
-$id_version = "id_version_example"; // string | Version UUID
-$id_locale = "id_locale_example"; // string | locale identifier.
-$body = new \Softonic\CatalogApiSdk\Model\ProgramVersionLocale(); // \Softonic\CatalogApiSdk\Model\ProgramVersionLocale | 
+$api_instance = new Softonic\CatalogApiSdk\Api\CategoriesApi();
+$id_category = "id_category_example"; // string | Categories identifier
+$body = new \Softonic\CatalogApiSdk\Model\Category(); // \Softonic\CatalogApiSdk\Model\Category | 
 
 try {
-    $api_instance->updateProgramVersionLocale($id_program, $id_version, $id_locale, $body);
+    $api_instance->updateCategory($id_category, $body);
 } catch (Exception $e) {
-    echo 'Exception when calling ProgramsVersionsLocalesApi->updateProgramVersionLocale: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CategoriesApi->updateCategory: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -338,10 +314,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID |
- **id_version** | **string**| Version UUID |
- **id_locale** | **string**| locale identifier. |
- **body** | [**\Softonic\CatalogApiSdk\Model\ProgramVersionLocale**](../Model/\Softonic\CatalogApiSdk\Model\ProgramVersionLocale.md)|  | [optional]
+ **id_category** | **string**| Categories identifier |
+ **body** | [**\Softonic\CatalogApiSdk\Model\Category**](../Model/\Softonic\CatalogApiSdk\Model\Category.md)|  | [optional]
 
 ### Return type
 

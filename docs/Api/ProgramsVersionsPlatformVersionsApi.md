@@ -1,6 +1,6 @@
 # Softonic\CatalogApiSdk\ProgramsVersionsPlatformVersionsApi
 
-All URIs are relative to *http://v2.catalog.priv.sftapi.com.sft-staging.com*
+All URIs are relative to *https://v2.catalog.sftapi.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -9,7 +9,6 @@ Method | HTTP request | Description
 [**findProgramVersionPlatformVersion**](ProgramsVersionsPlatformVersionsApi.md#findProgramVersionPlatformVersion) | **GET** /programs/{id_program}/versions/{id_version}/platform-versions | List of ProgramVersionPlatformVersions
 [**readProgramVersionPlatformVersion**](ProgramsVersionsPlatformVersionsApi.md#readProgramVersionPlatformVersion) | **GET** /programs/{id_program}/versions/{id_version}/platform-versions/{id_platform_version} | Fetches a single ProgramVersionPlatformVersion
 [**replaceProgramVersionPlatformVersion**](ProgramsVersionsPlatformVersionsApi.md#replaceProgramVersionPlatformVersion) | **PUT** /programs/{id_program}/versions/{id_version}/platform-versions/{id_platform_version} | Entirely replaces a ProgramVersionPlatformVersion
-[**updateProgramVersionPlatformVersion**](ProgramsVersionsPlatformVersionsApi.md#updateProgramVersionPlatformVersion) | **PATCH** /programs/{id_program}/versions/{id_version}/platform-versions/{id_platform_version} | Partially updates a ProgramVersionPlatformVersion
 
 
 # **createProgramVersionPlatformVersion**
@@ -24,8 +23,17 @@ Creates a new ProgramVersionPlatformVersion
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure OAuth2 access token for authorization: catalog_api_implicit
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: catalog_api_access_code
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: catalog_api_password
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: catalog_api_application
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsPlatformVersionsApi();
-$id_program = "id_program_example"; // string | Program UUID
+$id_program = "id_program_example"; // string | Program UUID or numeric ID
 $id_version = "id_version_example"; // string | Program version ID
 $body = new \Softonic\CatalogApiSdk\Model\ProgramVersionPlatformVersion(); // \Softonic\CatalogApiSdk\Model\ProgramVersionPlatformVersion | 
 
@@ -41,7 +49,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID |
+ **id_program** | **string**| Program UUID or numeric ID |
  **id_version** | **string**| Program version ID |
  **body** | [**\Softonic\CatalogApiSdk\Model\ProgramVersionPlatformVersion**](../Model/\Softonic\CatalogApiSdk\Model\ProgramVersionPlatformVersion.md)|  | [optional]
 
@@ -51,7 +59,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[catalog_api_implicit](../../README.md#catalog_api_implicit), [catalog_api_access_code](../../README.md#catalog_api_access_code), [catalog_api_password](../../README.md#catalog_api_password), [catalog_api_application](../../README.md#catalog_api_application)
 
 ### HTTP request headers
 
@@ -72,8 +80,17 @@ Deletes a ProgramVersionPlatformVersion
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure OAuth2 access token for authorization: catalog_api_implicit
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: catalog_api_access_code
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: catalog_api_password
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: catalog_api_application
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsPlatformVersionsApi();
-$id_program = "id_program_example"; // string | Program UUID
+$id_program = "id_program_example"; // string | Program UUID or numeric ID
 $id_version = "id_version_example"; // string | Program version ID
 $id_platform_version = "id_platform_version_example"; // string | Platform Version ID
 
@@ -89,7 +106,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID |
+ **id_program** | **string**| Program UUID or numeric ID |
  **id_version** | **string**| Program version ID |
  **id_platform_version** | **string**| Platform Version ID |
 
@@ -99,7 +116,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[catalog_api_implicit](../../README.md#catalog_api_implicit), [catalog_api_access_code](../../README.md#catalog_api_access_code), [catalog_api_password](../../README.md#catalog_api_password), [catalog_api_application](../../README.md#catalog_api_application)
 
 ### HTTP request headers
 
@@ -120,8 +137,17 @@ List of ProgramVersionPlatformVersions
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure OAuth2 access token for authorization: catalog_api_implicit
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: catalog_api_access_code
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: catalog_api_password
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: catalog_api_application
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsPlatformVersionsApi();
-$id_program = "id_program_example"; // string | Program UUID
+$id_program = "id_program_example"; // string | Program UUID or numeric ID
 $id_version = "id_version_example"; // string | Program version ID
 
 try {
@@ -137,7 +163,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID |
+ **id_program** | **string**| Program UUID or numeric ID |
  **id_version** | **string**| Program version ID |
 
 ### Return type
@@ -146,7 +172,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[catalog_api_implicit](../../README.md#catalog_api_implicit), [catalog_api_access_code](../../README.md#catalog_api_access_code), [catalog_api_password](../../README.md#catalog_api_password), [catalog_api_application](../../README.md#catalog_api_application)
 
 ### HTTP request headers
 
@@ -167,8 +193,17 @@ Fetches a single ProgramVersionPlatformVersion
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure OAuth2 access token for authorization: catalog_api_implicit
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: catalog_api_access_code
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: catalog_api_password
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: catalog_api_application
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsPlatformVersionsApi();
-$id_program = "id_program_example"; // string | Program UUID
+$id_program = "id_program_example"; // string | Program UUID or numeric ID
 $id_version = "id_version_example"; // string | Program version ID
 $id_platform_version = "id_platform_version_example"; // string | Platform Version ID
 
@@ -185,7 +220,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID |
+ **id_program** | **string**| Program UUID or numeric ID |
  **id_version** | **string**| Program version ID |
  **id_platform_version** | **string**| Platform Version ID |
 
@@ -195,7 +230,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[catalog_api_implicit](../../README.md#catalog_api_implicit), [catalog_api_access_code](../../README.md#catalog_api_access_code), [catalog_api_password](../../README.md#catalog_api_password), [catalog_api_application](../../README.md#catalog_api_application)
 
 ### HTTP request headers
 
@@ -216,8 +251,17 @@ Entirely replaces a ProgramVersionPlatformVersion
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure OAuth2 access token for authorization: catalog_api_implicit
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: catalog_api_access_code
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: catalog_api_password
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: catalog_api_application
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsPlatformVersionsApi();
-$id_program = "id_program_example"; // string | Program UUID
+$id_program = "id_program_example"; // string | Program UUID or numeric ID
 $id_version = "id_version_example"; // string | Program version ID
 $id_platform_version = "id_platform_version_example"; // string | Platform Version ID
 
@@ -233,7 +277,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID |
+ **id_program** | **string**| Program UUID or numeric ID |
  **id_version** | **string**| Program version ID |
  **id_platform_version** | **string**| Platform Version ID |
 
@@ -243,55 +287,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **updateProgramVersionPlatformVersion**
-> updateProgramVersionPlatformVersion($id_program, $id_version, $id_platform_version)
-
-Partially updates a ProgramVersionPlatformVersion
-
-Partially updates a ProgramVersionPlatformVersion
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsPlatformVersionsApi();
-$id_program = "id_program_example"; // string | Program UUID
-$id_version = "id_version_example"; // string | Program version ID
-$id_platform_version = "id_platform_version_example"; // string | Platform Version ID
-
-try {
-    $api_instance->updateProgramVersionPlatformVersion($id_program, $id_version, $id_platform_version);
-} catch (Exception $e) {
-    echo 'Exception when calling ProgramsVersionsPlatformVersionsApi->updateProgramVersionPlatformVersion: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID |
- **id_version** | **string**| Program version ID |
- **id_platform_version** | **string**| Platform Version ID |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
+[catalog_api_implicit](../../README.md#catalog_api_implicit), [catalog_api_access_code](../../README.md#catalog_api_access_code), [catalog_api_password](../../README.md#catalog_api_password), [catalog_api_application](../../README.md#catalog_api_application)
 
 ### HTTP request headers
 

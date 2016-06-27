@@ -1,21 +1,20 @@
-# Softonic\CatalogApiSdk\AgesApi
+# Softonic\CatalogApiSdk\CategoriesChildsApi
 
 All URIs are relative to *https://v2.catalog.sftapi.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createAge**](AgesApi.md#createAge) | **POST** /ages | Creates a new Age
-[**deleteAge**](AgesApi.md#deleteAge) | **DELETE** /ages/{id_age} | Deletes a Age
-[**findAge**](AgesApi.md#findAge) | **GET** /ages | List of Ages
-[**readAge**](AgesApi.md#readAge) | **GET** /ages/{id_age} | Fetches a single Age
+[**createCategoryChild**](CategoriesChildsApi.md#createCategoryChild) | **POST** /categories/{id_category}/childs | Creates a new CategoryChild
+[**findCategoryChild**](CategoriesChildsApi.md#findCategoryChild) | **GET** /categories/{id_category}/childs | List of CategoryChilds
+[**readCategoryChild**](CategoriesChildsApi.md#readCategoryChild) | **GET** /categories/{id_category}/childs/{id_child} | Fetches a single CategoryChild
 
 
-# **createAge**
-> createAge($body)
+# **createCategoryChild**
+> createCategoryChild($id_category, $body)
 
-Creates a new Age
+Creates a new CategoryChild
 
-Creates a new Age
+Creates a new CategoryChild
 
 ### Example
 ```php
@@ -31,13 +30,14 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_application
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\AgesApi();
-$body = new \Softonic\CatalogApiSdk\Model\Age(); // \Softonic\CatalogApiSdk\Model\Age | 
+$api_instance = new Softonic\CatalogApiSdk\Api\CategoriesChildsApi();
+$id_category = "id_category_example"; // string | Parent category identifier
+$body = new \Softonic\CatalogApiSdk\Model\CategoryChild(); // \Softonic\CatalogApiSdk\Model\CategoryChild | 
 
 try {
-    $api_instance->createAge($body);
+    $api_instance->createCategoryChild($id_category, $body);
 } catch (Exception $e) {
-    echo 'Exception when calling AgesApi->createAge: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CategoriesChildsApi->createCategoryChild: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -46,7 +46,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Softonic\CatalogApiSdk\Model\Age**](../Model/\Softonic\CatalogApiSdk\Model\Age.md)|  | [optional]
+ **id_category** | **string**| Parent category identifier |
+ **body** | [**\Softonic\CatalogApiSdk\Model\CategoryChild**](../Model/\Softonic\CatalogApiSdk\Model\CategoryChild.md)|  | [optional]
 
 ### Return type
 
@@ -63,12 +64,12 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **deleteAge**
-> deleteAge($id_age)
+# **findCategoryChild**
+> \Softonic\CatalogApiSdk\Model\CategoryChild[] findCategoryChild($id_category)
 
-Deletes a Age
+List of CategoryChilds
 
-Deletes a Age
+List of CategoryChilds
 
 ### Example
 ```php
@@ -84,13 +85,14 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_application
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\AgesApi();
-$id_age = 56; // int | Ages identifier.
+$api_instance = new Softonic\CatalogApiSdk\Api\CategoriesChildsApi();
+$id_category = "id_category_example"; // string | Parent category identifier
 
 try {
-    $api_instance->deleteAge($id_age);
+    $result = $api_instance->findCategoryChild($id_category);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling AgesApi->deleteAge: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CategoriesChildsApi->findCategoryChild: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -99,11 +101,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_age** | **int**| Ages identifier. |
+ **id_category** | **string**| Parent category identifier |
 
 ### Return type
 
-void (empty response body)
+[**\Softonic\CatalogApiSdk\Model\CategoryChild[]**](../Model/CategoryChild.md)
 
 ### Authorization
 
@@ -116,62 +118,12 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **findAge**
-> \Softonic\CatalogApiSdk\Model\Age[] findAge()
+# **readCategoryChild**
+> \Softonic\CatalogApiSdk\Model\CategoryChild readCategoryChild($id_category, $id_child)
 
-List of Ages
+Fetches a single CategoryChild
 
-List of Ages
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-// Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-// Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-// Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-$api_instance = new Softonic\CatalogApiSdk\Api\AgesApi();
-
-try {
-    $result = $api_instance->findAge();
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling AgesApi->findAge: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**\Softonic\CatalogApiSdk\Model\Age[]**](../Model/Age.md)
-
-### Authorization
-
-[catalog_api_implicit](../../README.md#catalog_api_implicit), [catalog_api_access_code](../../README.md#catalog_api_access_code), [catalog_api_password](../../README.md#catalog_api_password), [catalog_api_application](../../README.md#catalog_api_application)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **readAge**
-> \Softonic\CatalogApiSdk\Model\Age readAge($id_age)
-
-Fetches a single Age
-
-Fetches a single Age
+Fetches a single CategoryChild
 
 ### Example
 ```php
@@ -187,14 +139,15 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_application
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\AgesApi();
-$id_age = 56; // int | Ages identifier.
+$api_instance = new Softonic\CatalogApiSdk\Api\CategoriesChildsApi();
+$id_category = "id_category_example"; // string | Parent category identifier
+$id_child = "id_child_example"; // string | Child category identifier
 
 try {
-    $result = $api_instance->readAge($id_age);
+    $result = $api_instance->readCategoryChild($id_category, $id_child);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling AgesApi->readAge: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CategoriesChildsApi->readCategoryChild: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -203,11 +156,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_age** | **int**| Ages identifier. |
+ **id_category** | **string**| Parent category identifier |
+ **id_child** | **string**| Child category identifier |
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Model\Age**](../Model/Age.md)
+[**\Softonic\CatalogApiSdk\Model\CategoryChild**](../Model/CategoryChild.md)
 
 ### Authorization
 

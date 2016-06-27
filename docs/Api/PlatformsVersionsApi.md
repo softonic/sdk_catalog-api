@@ -1,108 +1,12 @@
 # Softonic\CatalogApiSdk\PlatformsVersionsApi
 
-All URIs are relative to *http://v2.catalog.priv.sftapi.com.sft-staging.com*
+All URIs are relative to *https://v2.catalog.sftapi.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createPlatformVersion**](PlatformsVersionsApi.md#createPlatformVersion) | **POST** /platforms/{id_platform}/versions | Creates a new PlatformVersion
-[**deletePlatformVersion**](PlatformsVersionsApi.md#deletePlatformVersion) | **DELETE** /platforms/{id_platform}/versions/{id_version} | Deletes a PlatformVersion
 [**findPlatformVersion**](PlatformsVersionsApi.md#findPlatformVersion) | **GET** /platforms/{id_platform}/versions | List of PlatformVersions
 [**readPlatformVersion**](PlatformsVersionsApi.md#readPlatformVersion) | **GET** /platforms/{id_platform}/versions/{id_version} | Fetches a single PlatformVersion
-[**replacePlatformVersion**](PlatformsVersionsApi.md#replacePlatformVersion) | **PUT** /platforms/{id_platform}/versions/{id_version} | Entirely replaces a PlatformVersion
-[**updatePlatformVersion**](PlatformsVersionsApi.md#updatePlatformVersion) | **PATCH** /platforms/{id_platform}/versions/{id_version} | Partially updates a PlatformVersion
 
-
-# **createPlatformVersion**
-> createPlatformVersion($id_platform, $body)
-
-Creates a new PlatformVersion
-
-Creates a new PlatformVersion
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new Softonic\CatalogApiSdk\Api\PlatformsVersionsApi();
-$id_platform = "id_platform_example"; // string | Platform ID
-$body = new \Softonic\CatalogApiSdk\Model\PlatformVersion(); // \Softonic\CatalogApiSdk\Model\PlatformVersion | 
-
-try {
-    $api_instance->createPlatformVersion($id_platform, $body);
-} catch (Exception $e) {
-    echo 'Exception when calling PlatformsVersionsApi->createPlatformVersion: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id_platform** | **string**| Platform ID |
- **body** | [**\Softonic\CatalogApiSdk\Model\PlatformVersion**](../Model/\Softonic\CatalogApiSdk\Model\PlatformVersion.md)|  | [optional]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **deletePlatformVersion**
-> deletePlatformVersion($id_platform, $id_version)
-
-Deletes a PlatformVersion
-
-Deletes a PlatformVersion
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new Softonic\CatalogApiSdk\Api\PlatformsVersionsApi();
-$id_platform = "id_platform_example"; // string | Platform ID
-$id_version = "id_version_example"; // string | Platform version ID
-
-try {
-    $api_instance->deletePlatformVersion($id_platform, $id_version);
-} catch (Exception $e) {
-    echo 'Exception when calling PlatformsVersionsApi->deletePlatformVersion: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id_platform** | **string**| Platform ID |
- **id_version** | **string**| Platform version ID |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **findPlatformVersion**
 > \Softonic\CatalogApiSdk\Model\PlatformVersion[] findPlatformVersion($id_platform)
@@ -115,6 +19,15 @@ List of PlatformVersions
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: catalog_api_implicit
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: catalog_api_access_code
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: catalog_api_password
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: catalog_api_application
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Softonic\CatalogApiSdk\Api\PlatformsVersionsApi();
 $id_platform = "id_platform_example"; // string | Platform ID
@@ -140,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[catalog_api_implicit](../../README.md#catalog_api_implicit), [catalog_api_access_code](../../README.md#catalog_api_access_code), [catalog_api_password](../../README.md#catalog_api_password), [catalog_api_application](../../README.md#catalog_api_application)
 
 ### HTTP request headers
 
@@ -160,6 +73,15 @@ Fetches a single PlatformVersion
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: catalog_api_implicit
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: catalog_api_access_code
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: catalog_api_password
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: catalog_api_application
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Softonic\CatalogApiSdk\Api\PlatformsVersionsApi();
 $id_platform = "id_platform_example"; // string | Platform ID
@@ -187,103 +109,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **replacePlatformVersion**
-> replacePlatformVersion($id_platform, $id_version, $body)
-
-Entirely replaces a PlatformVersion
-
-Entirely replaces a PlatformVersion
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new Softonic\CatalogApiSdk\Api\PlatformsVersionsApi();
-$id_platform = "id_platform_example"; // string | Platform ID
-$id_version = "id_version_example"; // string | Platform version ID
-$body = new \Softonic\CatalogApiSdk\Model\PlatformVersion(); // \Softonic\CatalogApiSdk\Model\PlatformVersion | 
-
-try {
-    $api_instance->replacePlatformVersion($id_platform, $id_version, $body);
-} catch (Exception $e) {
-    echo 'Exception when calling PlatformsVersionsApi->replacePlatformVersion: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id_platform** | **string**| Platform ID |
- **id_version** | **string**| Platform version ID |
- **body** | [**\Softonic\CatalogApiSdk\Model\PlatformVersion**](../Model/\Softonic\CatalogApiSdk\Model\PlatformVersion.md)|  | [optional]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **updatePlatformVersion**
-> updatePlatformVersion($id_platform, $id_version, $body)
-
-Partially updates a PlatformVersion
-
-Partially updates a PlatformVersion
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new Softonic\CatalogApiSdk\Api\PlatformsVersionsApi();
-$id_platform = "id_platform_example"; // string | Platform ID
-$id_version = "id_version_example"; // string | Platform version ID
-$body = new \Softonic\CatalogApiSdk\Model\PlatformVersion(); // \Softonic\CatalogApiSdk\Model\PlatformVersion | 
-
-try {
-    $api_instance->updatePlatformVersion($id_platform, $id_version, $body);
-} catch (Exception $e) {
-    echo 'Exception when calling PlatformsVersionsApi->updatePlatformVersion: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id_platform** | **string**| Platform ID |
- **id_version** | **string**| Platform version ID |
- **body** | [**\Softonic\CatalogApiSdk\Model\PlatformVersion**](../Model/\Softonic\CatalogApiSdk\Model\PlatformVersion.md)|  | [optional]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
+[catalog_api_implicit](../../README.md#catalog_api_implicit), [catalog_api_access_code](../../README.md#catalog_api_access_code), [catalog_api_password](../../README.md#catalog_api_password), [catalog_api_application](../../README.md#catalog_api_application)
 
 ### HTTP request headers
 

@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id_program** | **string** | Program UUID | 
+**id_program** | **string** | Program UUID or numeric ID | 
 **id_version** | **string** | Program version ID | 
 **id_platform_version** | **string** | Platform Version ID | 
 

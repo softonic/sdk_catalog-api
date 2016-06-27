@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id_program** | **string** | Program Identifier. | 
+**id_program** | **string** | Program UUID or numeric ID | 
 **id_version** | **string** | Version from program | 
 **id_binary** | **string** | Binary identifier in SHA1-Hash format. | 
 **id_compliance_scans** | **string** | Compliance scan UUID. | [optional] 

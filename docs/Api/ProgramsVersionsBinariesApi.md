@@ -1,6 +1,6 @@
 # Softonic\CatalogApiSdk\ProgramsVersionsBinariesApi
 
-All URIs are relative to *http://v2.catalog.priv.sftapi.com.sft-staging.com*
+All URIs are relative to *https://v2.catalog.sftapi.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -24,8 +24,17 @@ Creates a new ProgramVersionBinary
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure OAuth2 access token for authorization: catalog_api_implicit
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: catalog_api_access_code
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: catalog_api_password
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: catalog_api_application
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsBinariesApi();
-$id_program = "id_program_example"; // string | Program Identifier.
+$id_program = "id_program_example"; // string | Program UUID or numeric ID
 $id_version = "id_version_example"; // string | Version from program
 $body = new \Softonic\CatalogApiSdk\Model\ProgramVersionBinary(); // \Softonic\CatalogApiSdk\Model\ProgramVersionBinary | 
 
@@ -41,7 +50,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program Identifier. |
+ **id_program** | **string**| Program UUID or numeric ID |
  **id_version** | **string**| Version from program |
  **body** | [**\Softonic\CatalogApiSdk\Model\ProgramVersionBinary**](../Model/\Softonic\CatalogApiSdk\Model\ProgramVersionBinary.md)|  | [optional]
 
@@ -51,7 +60,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[catalog_api_implicit](../../README.md#catalog_api_implicit), [catalog_api_access_code](../../README.md#catalog_api_access_code), [catalog_api_password](../../README.md#catalog_api_password), [catalog_api_application](../../README.md#catalog_api_application)
 
 ### HTTP request headers
 
@@ -72,8 +81,17 @@ Deletes a ProgramVersionBinary
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure OAuth2 access token for authorization: catalog_api_implicit
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: catalog_api_access_code
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: catalog_api_password
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: catalog_api_application
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsBinariesApi();
-$id_program = "id_program_example"; // string | Program Identifier.
+$id_program = "id_program_example"; // string | Program UUID or numeric ID
 $id_version = "id_version_example"; // string | Version from program
 $id_binary = "id_binary_example"; // string | Binary identifier in SHA1-Hash format.
 
@@ -89,7 +107,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program Identifier. |
+ **id_program** | **string**| Program UUID or numeric ID |
  **id_version** | **string**| Version from program |
  **id_binary** | **string**| Binary identifier in SHA1-Hash format. |
 
@@ -99,7 +117,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[catalog_api_implicit](../../README.md#catalog_api_implicit), [catalog_api_access_code](../../README.md#catalog_api_access_code), [catalog_api_password](../../README.md#catalog_api_password), [catalog_api_application](../../README.md#catalog_api_application)
 
 ### HTTP request headers
 
@@ -120,8 +138,17 @@ List of ProgramVersionBinarys
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure OAuth2 access token for authorization: catalog_api_implicit
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: catalog_api_access_code
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: catalog_api_password
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: catalog_api_application
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsBinariesApi();
-$id_program = "id_program_example"; // string | Program Identifier.
+$id_program = "id_program_example"; // string | Program UUID or numeric ID
 $id_version = "id_version_example"; // string | Version from program
 
 try {
@@ -137,7 +164,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program Identifier. |
+ **id_program** | **string**| Program UUID or numeric ID |
  **id_version** | **string**| Version from program |
 
 ### Return type
@@ -146,7 +173,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[catalog_api_implicit](../../README.md#catalog_api_implicit), [catalog_api_access_code](../../README.md#catalog_api_access_code), [catalog_api_password](../../README.md#catalog_api_password), [catalog_api_application](../../README.md#catalog_api_application)
 
 ### HTTP request headers
 
@@ -167,8 +194,17 @@ Fetches a single ProgramVersionBinary
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure OAuth2 access token for authorization: catalog_api_implicit
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: catalog_api_access_code
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: catalog_api_password
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: catalog_api_application
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsBinariesApi();
-$id_program = "id_program_example"; // string | Program Identifier.
+$id_program = "id_program_example"; // string | Program UUID or numeric ID
 $id_version = "id_version_example"; // string | Version from program
 $id_binary = "id_binary_example"; // string | Binary identifier in SHA1-Hash format.
 
@@ -185,7 +221,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program Identifier. |
+ **id_program** | **string**| Program UUID or numeric ID |
  **id_version** | **string**| Version from program |
  **id_binary** | **string**| Binary identifier in SHA1-Hash format. |
 
@@ -195,7 +231,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[catalog_api_implicit](../../README.md#catalog_api_implicit), [catalog_api_access_code](../../README.md#catalog_api_access_code), [catalog_api_password](../../README.md#catalog_api_password), [catalog_api_application](../../README.md#catalog_api_application)
 
 ### HTTP request headers
 
@@ -216,8 +252,17 @@ Entirely replaces a ProgramVersionBinary
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure OAuth2 access token for authorization: catalog_api_implicit
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: catalog_api_access_code
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: catalog_api_password
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: catalog_api_application
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsBinariesApi();
-$id_program = "id_program_example"; // string | Program Identifier.
+$id_program = "id_program_example"; // string | Program UUID or numeric ID
 $id_version = "id_version_example"; // string | Version from program
 $id_binary = "id_binary_example"; // string | Binary identifier in SHA1-Hash format.
 $body = new \Softonic\CatalogApiSdk\Model\ProgramVersionBinary(); // \Softonic\CatalogApiSdk\Model\ProgramVersionBinary | 
@@ -234,7 +279,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program Identifier. |
+ **id_program** | **string**| Program UUID or numeric ID |
  **id_version** | **string**| Version from program |
  **id_binary** | **string**| Binary identifier in SHA1-Hash format. |
  **body** | [**\Softonic\CatalogApiSdk\Model\ProgramVersionBinary**](../Model/\Softonic\CatalogApiSdk\Model\ProgramVersionBinary.md)|  | [optional]
@@ -245,7 +290,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[catalog_api_implicit](../../README.md#catalog_api_implicit), [catalog_api_access_code](../../README.md#catalog_api_access_code), [catalog_api_password](../../README.md#catalog_api_password), [catalog_api_application](../../README.md#catalog_api_application)
 
 ### HTTP request headers
 
@@ -266,8 +311,17 @@ Partially updates a ProgramVersionBinary
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure OAuth2 access token for authorization: catalog_api_implicit
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: catalog_api_access_code
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: catalog_api_password
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: catalog_api_application
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsBinariesApi();
-$id_program = "id_program_example"; // string | Program Identifier.
+$id_program = "id_program_example"; // string | Program UUID or numeric ID
 $id_version = "id_version_example"; // string | Version from program
 $id_binary = "id_binary_example"; // string | Binary identifier in SHA1-Hash format.
 $body = new \Softonic\CatalogApiSdk\Model\ProgramVersionBinary(); // \Softonic\CatalogApiSdk\Model\ProgramVersionBinary | 
@@ -284,7 +338,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program Identifier. |
+ **id_program** | **string**| Program UUID or numeric ID |
  **id_version** | **string**| Version from program |
  **id_binary** | **string**| Binary identifier in SHA1-Hash format. |
  **body** | [**\Softonic\CatalogApiSdk\Model\ProgramVersionBinary**](../Model/\Softonic\CatalogApiSdk\Model\ProgramVersionBinary.md)|  | [optional]
@@ -295,7 +349,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[catalog_api_implicit](../../README.md#catalog_api_implicit), [catalog_api_access_code](../../README.md#catalog_api_access_code), [catalog_api_password](../../README.md#catalog_api_password), [catalog_api_application](../../README.md#catalog_api_application)
 
 ### HTTP request headers
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * OriginsApi
+ * CategoriesChildsApi
  * PHP version 5
  *
  * @category Class
@@ -46,7 +46,7 @@ use \Softonic\CatalogApiSdk\ApiException;
 use \Softonic\CatalogApiSdk\ObjectSerializer;
 
 /**
- * OriginsApi Class Doc Comment
+ * CategoriesChildsApi Class Doc Comment
  *
  * @category Class
  * @package  Softonic\CatalogApiSdk
@@ -54,7 +54,7 @@ use \Softonic\CatalogApiSdk\ObjectSerializer;
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class OriginsApi
+class CategoriesChildsApi
 {
 
     /**
@@ -94,7 +94,7 @@ class OriginsApi
      *
      * @param \Softonic\CatalogApiSdk\ApiClient $apiClient set the API client
      *
-     * @return OriginsApi
+     * @return CategoriesChildsApi
      */
     public function setApiClient(\Softonic\CatalogApiSdk\ApiClient $apiClient)
     {
@@ -103,268 +103,51 @@ class OriginsApi
     }
 
     /**
-     * Operation findOrigin
+     * Operation createCategoryChild
      *
-     * List of Origins.
+     * Creates a new CategoryChild.
      *
-     *
-     * @return \Softonic\CatalogApiSdk\Model\Origin[]
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
-     */
-    public function findOrigin()
-    {
-        list($response) = $this->findOriginWithHttpInfo();
-        return $response;
-    }
-
-
-    /**
-     * Operation findOriginWithHttpInfo
-     *
-     * List of Origins.
-     *
-     *
-     * @return Array of \Softonic\CatalogApiSdk\Model\Origin[], HTTP status code, HTTP response headers (array of strings)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
-     */
-    public function findOriginWithHttpInfo()
-    {
-        
-        // parse inputs
-        $resourcePath = "/origins";
-        $httpBody = '';
-        $queryParams = array();
-        $headerParams = array();
-        $formParams = array();
-        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json'));
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
-
-        
-        
-        
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        
-        // this endpoint requires OAuth (access token)
-        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
-            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
-        }
-
-        // this endpoint requires OAuth (access token)
-        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
-            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
-        }
-
-        // this endpoint requires OAuth (access token)
-        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
-            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
-        }
-
-        // this endpoint requires OAuth (access token)
-        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
-            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'GET',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\Softonic\CatalogApiSdk\Model\Origin[]'
-            );
-
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Model\Origin[]', $httpHeader), $statusCode, $httpHeader);
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Softonic\CatalogApiSdk\Model\Origin[]', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-    /**
-     * Operation readOrigin
-     *
-     * Fetches a single Origin.
-     *
-     * @param string $id_origin Origin ID (required)
-     *
-     * @return \Softonic\CatalogApiSdk\Model\Origin
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
-     */
-    public function readOrigin($id_origin)
-    {
-        list($response) = $this->readOriginWithHttpInfo($id_origin);
-        return $response;
-    }
-
-
-    /**
-     * Operation readOriginWithHttpInfo
-     *
-     * Fetches a single Origin.
-     *
-     * @param string $id_origin Origin ID (required)
-     *
-     * @return Array of \Softonic\CatalogApiSdk\Model\Origin, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
-     */
-    public function readOriginWithHttpInfo($id_origin)
-    {
-        
-        // verify the required parameter 'id_origin' is set
-        if ($id_origin === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_origin when calling readOrigin');
-        }
-        if (strlen($id_origin) > 40) {
-            throw new \InvalidArgumentException('invalid length for "$id_origin" when calling OriginsApi.readOrigin, must be smaller than or equal to 40.');
-        }
-        if (strlen($id_origin) < 1) {
-            throw new \InvalidArgumentException('invalid length for "$id_origin" when calling OriginsApi.readOrigin, must be bigger than or equal to 1.');
-        }
-
-
-        // parse inputs
-        $resourcePath = "/origins/{id_origin}";
-        $httpBody = '';
-        $queryParams = array();
-        $headerParams = array();
-        $formParams = array();
-        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json'));
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
-
-        
-        
-        // path params
-        if ($id_origin !== null) {
-            $resourcePath = str_replace(
-                "{" . "id_origin" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id_origin),
-                $resourcePath
-            );
-        }
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        
-        // this endpoint requires OAuth (access token)
-        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
-            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
-        }
-
-        // this endpoint requires OAuth (access token)
-        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
-            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
-        }
-
-        // this endpoint requires OAuth (access token)
-        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
-            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
-        }
-
-        // this endpoint requires OAuth (access token)
-        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
-            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'GET',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\Softonic\CatalogApiSdk\Model\Origin'
-            );
-
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Model\Origin', $httpHeader), $statusCode, $httpHeader);
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Softonic\CatalogApiSdk\Model\Origin', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-    /**
-     * Operation updateOrigin
-     *
-     * Partially updates a Origin.
-     *
-     * @param string $id_origin Origin ID (required)
-     * @param \Softonic\CatalogApiSdk\Model\Origin $body  (optional)
+     * @param string $id_category Parent category identifier (required)
+     * @param \Softonic\CatalogApiSdk\Model\CategoryChild $body  (optional)
      *
      * @return void
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
-    public function updateOrigin($id_origin, $body = null)
+    public function createCategoryChild($id_category, $body = null)
     {
-        list($response) = $this->updateOriginWithHttpInfo($id_origin, $body);
+        list($response) = $this->createCategoryChildWithHttpInfo($id_category, $body);
         return $response;
     }
 
 
     /**
-     * Operation updateOriginWithHttpInfo
+     * Operation createCategoryChildWithHttpInfo
      *
-     * Partially updates a Origin.
+     * Creates a new CategoryChild.
      *
-     * @param string $id_origin Origin ID (required)
-     * @param \Softonic\CatalogApiSdk\Model\Origin $body  (optional)
+     * @param string $id_category Parent category identifier (required)
+     * @param \Softonic\CatalogApiSdk\Model\CategoryChild $body  (optional)
      *
      * @return Array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
-    public function updateOriginWithHttpInfo($id_origin, $body = null)
+    public function createCategoryChildWithHttpInfo($id_category, $body = null)
     {
         
-        // verify the required parameter 'id_origin' is set
-        if ($id_origin === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_origin when calling updateOrigin');
+        // verify the required parameter 'id_category' is set
+        if ($id_category === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id_category when calling createCategoryChild');
         }
-        if (strlen($id_origin) > 40) {
-            throw new \InvalidArgumentException('invalid length for "$id_origin" when calling OriginsApi.updateOrigin, must be smaller than or equal to 40.');
+        if (strlen($id_category) > 40) {
+            throw new \InvalidArgumentException('invalid length for "$id_category" when calling CategoriesChildsApi.createCategoryChild, must be smaller than or equal to 40.');
         }
-        if (strlen($id_origin) < 1) {
-            throw new \InvalidArgumentException('invalid length for "$id_origin" when calling OriginsApi.updateOrigin, must be bigger than or equal to 1.');
+        if (strlen($id_category) < 1) {
+            throw new \InvalidArgumentException('invalid length for "$id_category" when calling CategoriesChildsApi.createCategoryChild, must be bigger than or equal to 1.');
         }
 
 
         // parse inputs
-        $resourcePath = "/origins/{id_origin}";
+        $resourcePath = "/categories/{id_category}/childs";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -378,10 +161,10 @@ class OriginsApi
         
         
         // path params
-        if ($id_origin !== null) {
+        if ($id_category !== null) {
             $resourcePath = str_replace(
-                "{" . "id_origin" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id_origin),
+                "{" . "id_category" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id_category),
                 $resourcePath
             );
         }
@@ -425,7 +208,7 @@ class OriginsApi
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath,
-                'PATCH',
+                'POST',
                 $queryParams,
                 $httpBody,
                 $headerParams
@@ -434,6 +217,265 @@ class OriginsApi
             return array(null, $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+    /**
+     * Operation findCategoryChild
+     *
+     * List of CategoryChilds.
+     *
+     * @param string $id_category Parent category identifier (required)
+     *
+     * @return \Softonic\CatalogApiSdk\Model\CategoryChild[]
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     */
+    public function findCategoryChild($id_category)
+    {
+        list($response) = $this->findCategoryChildWithHttpInfo($id_category);
+        return $response;
+    }
+
+
+    /**
+     * Operation findCategoryChildWithHttpInfo
+     *
+     * List of CategoryChilds.
+     *
+     * @param string $id_category Parent category identifier (required)
+     *
+     * @return Array of \Softonic\CatalogApiSdk\Model\CategoryChild[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     */
+    public function findCategoryChildWithHttpInfo($id_category)
+    {
+        
+        // verify the required parameter 'id_category' is set
+        if ($id_category === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id_category when calling findCategoryChild');
+        }
+        if (strlen($id_category) > 40) {
+            throw new \InvalidArgumentException('invalid length for "$id_category" when calling CategoriesChildsApi.findCategoryChild, must be smaller than or equal to 40.');
+        }
+        if (strlen($id_category) < 1) {
+            throw new \InvalidArgumentException('invalid length for "$id_category" when calling CategoriesChildsApi.findCategoryChild, must be bigger than or equal to 1.');
+        }
+
+
+        // parse inputs
+        $resourcePath = "/categories/{id_category}/childs";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
+
+        
+        
+        // path params
+        if ($id_category !== null) {
+            $resourcePath = str_replace(
+                "{" . "id_category" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id_category),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Softonic\CatalogApiSdk\Model\CategoryChild[]'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Model\CategoryChild[]', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Softonic\CatalogApiSdk\Model\CategoryChild[]', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+    /**
+     * Operation readCategoryChild
+     *
+     * Fetches a single CategoryChild.
+     *
+     * @param string $id_category Parent category identifier (required)
+     * @param string $id_child Child category identifier (required)
+     *
+     * @return \Softonic\CatalogApiSdk\Model\CategoryChild
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     */
+    public function readCategoryChild($id_category, $id_child)
+    {
+        list($response) = $this->readCategoryChildWithHttpInfo($id_category, $id_child);
+        return $response;
+    }
+
+
+    /**
+     * Operation readCategoryChildWithHttpInfo
+     *
+     * Fetches a single CategoryChild.
+     *
+     * @param string $id_category Parent category identifier (required)
+     * @param string $id_child Child category identifier (required)
+     *
+     * @return Array of \Softonic\CatalogApiSdk\Model\CategoryChild, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     */
+    public function readCategoryChildWithHttpInfo($id_category, $id_child)
+    {
+        
+        // verify the required parameter 'id_category' is set
+        if ($id_category === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id_category when calling readCategoryChild');
+        }
+        if (strlen($id_category) > 40) {
+            throw new \InvalidArgumentException('invalid length for "$id_category" when calling CategoriesChildsApi.readCategoryChild, must be smaller than or equal to 40.');
+        }
+        if (strlen($id_category) < 1) {
+            throw new \InvalidArgumentException('invalid length for "$id_category" when calling CategoriesChildsApi.readCategoryChild, must be bigger than or equal to 1.');
+        }
+
+
+        // verify the required parameter 'id_child' is set
+        if ($id_child === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id_child when calling readCategoryChild');
+        }
+        if (strlen($id_child) > 40) {
+            throw new \InvalidArgumentException('invalid length for "$id_child" when calling CategoriesChildsApi.readCategoryChild, must be smaller than or equal to 40.');
+        }
+        if (strlen($id_child) < 1) {
+            throw new \InvalidArgumentException('invalid length for "$id_child" when calling CategoriesChildsApi.readCategoryChild, must be bigger than or equal to 1.');
+        }
+
+
+        // parse inputs
+        $resourcePath = "/categories/{id_category}/childs/{id_child}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
+
+        
+        
+        // path params
+        if ($id_category !== null) {
+            $resourcePath = str_replace(
+                "{" . "id_category" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id_category),
+                $resourcePath
+            );
+        }// path params
+        if ($id_child !== null) {
+            $resourcePath = str_replace(
+                "{" . "id_child" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id_child),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Softonic\CatalogApiSdk\Model\CategoryChild'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Model\CategoryChild', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Softonic\CatalogApiSdk\Model\CategoryChild', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
             }
 
             throw $e;

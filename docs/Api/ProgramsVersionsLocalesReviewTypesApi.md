@@ -1,23 +1,23 @@
-# Softonic\CatalogApiSdk\ProgramsVersionsLocalesApi
+# Softonic\CatalogApiSdk\ProgramsVersionsLocalesReviewTypesApi
 
 All URIs are relative to *https://v2.catalog.sftapi.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createProgramVersionLocale**](ProgramsVersionsLocalesApi.md#createProgramVersionLocale) | **POST** /programs/{id_program}/versions/{id_version}/locales | Creates a new ProgramVersionLocale
-[**deleteProgramVersionLocale**](ProgramsVersionsLocalesApi.md#deleteProgramVersionLocale) | **DELETE** /programs/{id_program}/versions/{id_version}/locales/{id_locale} | Deletes a ProgramVersionLocale
-[**findProgramVersionLocale**](ProgramsVersionsLocalesApi.md#findProgramVersionLocale) | **GET** /programs/{id_program}/versions/{id_version}/locales | List of ProgramVersionLocales
-[**readProgramVersionLocale**](ProgramsVersionsLocalesApi.md#readProgramVersionLocale) | **GET** /programs/{id_program}/versions/{id_version}/locales/{id_locale} | Fetches a single ProgramVersionLocale
-[**replaceProgramVersionLocale**](ProgramsVersionsLocalesApi.md#replaceProgramVersionLocale) | **PUT** /programs/{id_program}/versions/{id_version}/locales/{id_locale} | Entirely replaces a ProgramVersionLocale
-[**updateProgramVersionLocale**](ProgramsVersionsLocalesApi.md#updateProgramVersionLocale) | **PATCH** /programs/{id_program}/versions/{id_version}/locales/{id_locale} | Partially updates a ProgramVersionLocale
+[**createProgramVersionLocaleReviewType**](ProgramsVersionsLocalesReviewTypesApi.md#createProgramVersionLocaleReviewType) | **POST** /programs/{id_program}/versions/{id_version}/locales/{id_locale}/review-types | Creates a new ProgramVersionLocaleReviewType
+[**deleteProgramVersionLocaleReviewType**](ProgramsVersionsLocalesReviewTypesApi.md#deleteProgramVersionLocaleReviewType) | **DELETE** /programs/{id_program}/versions/{id_version}/locales/{id_locale}/review-types/{id_review_type} | Deletes a ProgramVersionLocaleReviewType
+[**findProgramVersionLocaleReviewType**](ProgramsVersionsLocalesReviewTypesApi.md#findProgramVersionLocaleReviewType) | **GET** /programs/{id_program}/versions/{id_version}/locales/{id_locale}/review-types | List of ProgramVersionLocaleReviewTypes
+[**readProgramVersionLocaleReviewType**](ProgramsVersionsLocalesReviewTypesApi.md#readProgramVersionLocaleReviewType) | **GET** /programs/{id_program}/versions/{id_version}/locales/{id_locale}/review-types/{id_review_type} | Fetches a single ProgramVersionLocaleReviewType
+[**replaceProgramVersionLocaleReviewType**](ProgramsVersionsLocalesReviewTypesApi.md#replaceProgramVersionLocaleReviewType) | **PUT** /programs/{id_program}/versions/{id_version}/locales/{id_locale}/review-types/{id_review_type} | Entirely replaces a ProgramVersionLocaleReviewType
+[**updateProgramVersionLocaleReviewType**](ProgramsVersionsLocalesReviewTypesApi.md#updateProgramVersionLocaleReviewType) | **PATCH** /programs/{id_program}/versions/{id_version}/locales/{id_locale}/review-types/{id_review_type} | Partially updates a ProgramVersionLocaleReviewType
 
 
-# **createProgramVersionLocale**
-> createProgramVersionLocale($id_program, $id_version, $body)
+# **createProgramVersionLocaleReviewType**
+> createProgramVersionLocaleReviewType($id_program, $id_version, $id_locale, $body)
 
-Creates a new ProgramVersionLocale
+Creates a new ProgramVersionLocaleReviewType
 
-Creates a new ProgramVersionLocale
+Creates a new ProgramVersionLocaleReviewType
 
 ### Example
 ```php
@@ -33,15 +33,16 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_application
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesReviewTypesApi();
 $id_program = "id_program_example"; // string | Program UUID
-$id_version = "id_version_example"; // string | Version UUID
-$body = new \Softonic\CatalogApiSdk\Model\ProgramVersionLocale(); // \Softonic\CatalogApiSdk\Model\ProgramVersionLocale | 
+$id_version = "id_version_example"; // string | Version id
+$id_locale = "id_locale_example"; // string | Locales id
+$body = new \Softonic\CatalogApiSdk\Model\ProgramVersionLocaleReviewType(); // \Softonic\CatalogApiSdk\Model\ProgramVersionLocaleReviewType | 
 
 try {
-    $api_instance->createProgramVersionLocale($id_program, $id_version, $body);
+    $api_instance->createProgramVersionLocaleReviewType($id_program, $id_version, $id_locale, $body);
 } catch (Exception $e) {
-    echo 'Exception when calling ProgramsVersionsLocalesApi->createProgramVersionLocale: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProgramsVersionsLocalesReviewTypesApi->createProgramVersionLocaleReviewType: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -51,8 +52,9 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_program** | **string**| Program UUID |
- **id_version** | **string**| Version UUID |
- **body** | [**\Softonic\CatalogApiSdk\Model\ProgramVersionLocale**](../Model/\Softonic\CatalogApiSdk\Model\ProgramVersionLocale.md)|  | [optional]
+ **id_version** | **string**| Version id |
+ **id_locale** | **string**| Locales id |
+ **body** | [**\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleReviewType**](../Model/\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleReviewType.md)|  | [optional]
 
 ### Return type
 
@@ -69,12 +71,12 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **deleteProgramVersionLocale**
-> deleteProgramVersionLocale($id_program, $id_version, $id_locale)
+# **deleteProgramVersionLocaleReviewType**
+> deleteProgramVersionLocaleReviewType($id_program, $id_version, $id_locale, $id_review_type)
 
-Deletes a ProgramVersionLocale
+Deletes a ProgramVersionLocaleReviewType
 
-Deletes a ProgramVersionLocale
+Deletes a ProgramVersionLocaleReviewType
 
 ### Example
 ```php
@@ -90,15 +92,16 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_application
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesReviewTypesApi();
 $id_program = "id_program_example"; // string | Program UUID
-$id_version = "id_version_example"; // string | Version UUID
-$id_locale = "id_locale_example"; // string | locale identifier.
+$id_version = "id_version_example"; // string | Version id
+$id_locale = "id_locale_example"; // string | Locales id
+$id_review_type = "id_review_type_example"; // string | Review owner type
 
 try {
-    $api_instance->deleteProgramVersionLocale($id_program, $id_version, $id_locale);
+    $api_instance->deleteProgramVersionLocaleReviewType($id_program, $id_version, $id_locale, $id_review_type);
 } catch (Exception $e) {
-    echo 'Exception when calling ProgramsVersionsLocalesApi->deleteProgramVersionLocale: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProgramsVersionsLocalesReviewTypesApi->deleteProgramVersionLocaleReviewType: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -108,8 +111,9 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_program** | **string**| Program UUID |
- **id_version** | **string**| Version UUID |
- **id_locale** | **string**| locale identifier. |
+ **id_version** | **string**| Version id |
+ **id_locale** | **string**| Locales id |
+ **id_review_type** | **string**| Review owner type |
 
 ### Return type
 
@@ -126,12 +130,12 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **findProgramVersionLocale**
-> \Softonic\CatalogApiSdk\Model\ProgramVersionLocale[] findProgramVersionLocale($id_program, $id_version)
+# **findProgramVersionLocaleReviewType**
+> \Softonic\CatalogApiSdk\Model\ProgramVersionLocaleReviewType[] findProgramVersionLocaleReviewType($id_program, $id_version, $id_locale)
 
-List of ProgramVersionLocales
+List of ProgramVersionLocaleReviewTypes
 
-List of ProgramVersionLocales
+List of ProgramVersionLocaleReviewTypes
 
 ### Example
 ```php
@@ -147,15 +151,16 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_application
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesReviewTypesApi();
 $id_program = "id_program_example"; // string | Program UUID
-$id_version = "id_version_example"; // string | Version UUID
+$id_version = "id_version_example"; // string | Version id
+$id_locale = "id_locale_example"; // string | Locales id
 
 try {
-    $result = $api_instance->findProgramVersionLocale($id_program, $id_version);
+    $result = $api_instance->findProgramVersionLocaleReviewType($id_program, $id_version, $id_locale);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ProgramsVersionsLocalesApi->findProgramVersionLocale: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProgramsVersionsLocalesReviewTypesApi->findProgramVersionLocaleReviewType: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -165,11 +170,12 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_program** | **string**| Program UUID |
- **id_version** | **string**| Version UUID |
+ **id_version** | **string**| Version id |
+ **id_locale** | **string**| Locales id |
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Model\ProgramVersionLocale[]**](../Model/ProgramVersionLocale.md)
+[**\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleReviewType[]**](../Model/ProgramVersionLocaleReviewType.md)
 
 ### Authorization
 
@@ -182,12 +188,12 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **readProgramVersionLocale**
-> \Softonic\CatalogApiSdk\Model\ProgramVersionLocale readProgramVersionLocale($id_program, $id_version, $id_locale)
+# **readProgramVersionLocaleReviewType**
+> \Softonic\CatalogApiSdk\Model\ProgramVersionLocaleReviewType readProgramVersionLocaleReviewType($id_program, $id_version, $id_locale, $id_review_type)
 
-Fetches a single ProgramVersionLocale
+Fetches a single ProgramVersionLocaleReviewType
 
-Fetches a single ProgramVersionLocale
+Fetches a single ProgramVersionLocaleReviewType
 
 ### Example
 ```php
@@ -203,16 +209,17 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_application
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesReviewTypesApi();
 $id_program = "id_program_example"; // string | Program UUID
-$id_version = "id_version_example"; // string | Version UUID
-$id_locale = "id_locale_example"; // string | locale identifier.
+$id_version = "id_version_example"; // string | Version id
+$id_locale = "id_locale_example"; // string | Locales id
+$id_review_type = "id_review_type_example"; // string | Review owner type
 
 try {
-    $result = $api_instance->readProgramVersionLocale($id_program, $id_version, $id_locale);
+    $result = $api_instance->readProgramVersionLocaleReviewType($id_program, $id_version, $id_locale, $id_review_type);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ProgramsVersionsLocalesApi->readProgramVersionLocale: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProgramsVersionsLocalesReviewTypesApi->readProgramVersionLocaleReviewType: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -222,12 +229,13 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_program** | **string**| Program UUID |
- **id_version** | **string**| Version UUID |
- **id_locale** | **string**| locale identifier. |
+ **id_version** | **string**| Version id |
+ **id_locale** | **string**| Locales id |
+ **id_review_type** | **string**| Review owner type |
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Model\ProgramVersionLocale**](../Model/ProgramVersionLocale.md)
+[**\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleReviewType**](../Model/ProgramVersionLocaleReviewType.md)
 
 ### Authorization
 
@@ -240,12 +248,12 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **replaceProgramVersionLocale**
-> replaceProgramVersionLocale($id_program, $id_version, $id_locale, $body)
+# **replaceProgramVersionLocaleReviewType**
+> replaceProgramVersionLocaleReviewType($id_program, $id_version, $id_locale, $id_review_type, $body)
 
-Entirely replaces a ProgramVersionLocale
+Entirely replaces a ProgramVersionLocaleReviewType
 
-Entirely replaces a ProgramVersionLocale
+Entirely replaces a ProgramVersionLocaleReviewType
 
 ### Example
 ```php
@@ -261,16 +269,17 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_application
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesReviewTypesApi();
 $id_program = "id_program_example"; // string | Program UUID
-$id_version = "id_version_example"; // string | Version UUID
-$id_locale = "id_locale_example"; // string | locale identifier.
-$body = new \Softonic\CatalogApiSdk\Model\ProgramVersionLocale(); // \Softonic\CatalogApiSdk\Model\ProgramVersionLocale | 
+$id_version = "id_version_example"; // string | Version id
+$id_locale = "id_locale_example"; // string | Locales id
+$id_review_type = "id_review_type_example"; // string | Review owner type
+$body = new \Softonic\CatalogApiSdk\Model\ProgramVersionLocaleReviewType(); // \Softonic\CatalogApiSdk\Model\ProgramVersionLocaleReviewType | 
 
 try {
-    $api_instance->replaceProgramVersionLocale($id_program, $id_version, $id_locale, $body);
+    $api_instance->replaceProgramVersionLocaleReviewType($id_program, $id_version, $id_locale, $id_review_type, $body);
 } catch (Exception $e) {
-    echo 'Exception when calling ProgramsVersionsLocalesApi->replaceProgramVersionLocale: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProgramsVersionsLocalesReviewTypesApi->replaceProgramVersionLocaleReviewType: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -280,9 +289,10 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_program** | **string**| Program UUID |
- **id_version** | **string**| Version UUID |
- **id_locale** | **string**| locale identifier. |
- **body** | [**\Softonic\CatalogApiSdk\Model\ProgramVersionLocale**](../Model/\Softonic\CatalogApiSdk\Model\ProgramVersionLocale.md)|  | [optional]
+ **id_version** | **string**| Version id |
+ **id_locale** | **string**| Locales id |
+ **id_review_type** | **string**| Review owner type |
+ **body** | [**\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleReviewType**](../Model/\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleReviewType.md)|  | [optional]
 
 ### Return type
 
@@ -299,12 +309,12 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **updateProgramVersionLocale**
-> updateProgramVersionLocale($id_program, $id_version, $id_locale, $body)
+# **updateProgramVersionLocaleReviewType**
+> updateProgramVersionLocaleReviewType($id_program, $id_version, $id_locale, $id_review_type, $body)
 
-Partially updates a ProgramVersionLocale
+Partially updates a ProgramVersionLocaleReviewType
 
-Partially updates a ProgramVersionLocale
+Partially updates a ProgramVersionLocaleReviewType
 
 ### Example
 ```php
@@ -320,16 +330,17 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_application
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesReviewTypesApi();
 $id_program = "id_program_example"; // string | Program UUID
-$id_version = "id_version_example"; // string | Version UUID
-$id_locale = "id_locale_example"; // string | locale identifier.
-$body = new \Softonic\CatalogApiSdk\Model\ProgramVersionLocale(); // \Softonic\CatalogApiSdk\Model\ProgramVersionLocale | 
+$id_version = "id_version_example"; // string | Version id
+$id_locale = "id_locale_example"; // string | Locales id
+$id_review_type = "id_review_type_example"; // string | Review owner type
+$body = new \Softonic\CatalogApiSdk\Model\ProgramVersionLocaleReviewType(); // \Softonic\CatalogApiSdk\Model\ProgramVersionLocaleReviewType | 
 
 try {
-    $api_instance->updateProgramVersionLocale($id_program, $id_version, $id_locale, $body);
+    $api_instance->updateProgramVersionLocaleReviewType($id_program, $id_version, $id_locale, $id_review_type, $body);
 } catch (Exception $e) {
-    echo 'Exception when calling ProgramsVersionsLocalesApi->updateProgramVersionLocale: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProgramsVersionsLocalesReviewTypesApi->updateProgramVersionLocaleReviewType: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -339,9 +350,10 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_program** | **string**| Program UUID |
- **id_version** | **string**| Version UUID |
- **id_locale** | **string**| locale identifier. |
- **body** | [**\Softonic\CatalogApiSdk\Model\ProgramVersionLocale**](../Model/\Softonic\CatalogApiSdk\Model\ProgramVersionLocale.md)|  | [optional]
+ **id_version** | **string**| Version id |
+ **id_locale** | **string**| Locales id |
+ **id_review_type** | **string**| Review owner type |
+ **body** | [**\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleReviewType**](../Model/\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleReviewType.md)|  | [optional]
 
 ### Return type
 
