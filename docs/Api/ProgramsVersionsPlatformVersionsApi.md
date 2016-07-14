@@ -1,6 +1,6 @@
 # Softonic\CatalogApiSdk\ProgramsVersionsPlatformVersionsApi
 
-All URIs are relative to *https://v2.catalog.sftapi.com*
+All URIs are relative to *http://v2.catalog.sftapi.com.sft-staging.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

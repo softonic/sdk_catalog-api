@@ -1,6 +1,6 @@
 # Softonic\CatalogApiSdk\ProgramsVersionsLocalesReviewTypesApi
 
-All URIs are relative to *https://v2.catalog.sftapi.com*
+All URIs are relative to *http://v2.catalog.sftapi.com.sft-staging.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -34,9 +34,9 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesReviewTypesApi();
-$id_program = "id_program_example"; // string | Program UUID
-$id_version = "id_version_example"; // string | Version id
-$id_locale = "id_locale_example"; // string | Locales id
+$id_program = "id_program_example"; // string | Program UUID or numeric ID
+$id_version = "id_version_example"; // string | Program version identifier
+$id_locale = "id_locale_example"; // string | Locale identifier
 $body = new \Softonic\CatalogApiSdk\Model\ProgramVersionLocaleReviewType(); // \Softonic\CatalogApiSdk\Model\ProgramVersionLocaleReviewType | 
 
 try {
@@ -51,9 +51,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID |
- **id_version** | **string**| Version id |
- **id_locale** | **string**| Locales id |
+ **id_program** | **string**| Program UUID or numeric ID |
+ **id_version** | **string**| Program version identifier |
+ **id_locale** | **string**| Locale identifier |
  **body** | [**\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleReviewType**](../Model/\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleReviewType.md)|  | [optional]
 
 ### Return type
@@ -93,9 +93,9 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesReviewTypesApi();
-$id_program = "id_program_example"; // string | Program UUID
-$id_version = "id_version_example"; // string | Version id
-$id_locale = "id_locale_example"; // string | Locales id
+$id_program = "id_program_example"; // string | Program UUID or numeric ID
+$id_version = "id_version_example"; // string | Program version identifier
+$id_locale = "id_locale_example"; // string | Locale identifier
 $id_review_type = "id_review_type_example"; // string | Review owner type
 
 try {
@@ -110,9 +110,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID |
- **id_version** | **string**| Version id |
- **id_locale** | **string**| Locales id |
+ **id_program** | **string**| Program UUID or numeric ID |
+ **id_version** | **string**| Program version identifier |
+ **id_locale** | **string**| Locale identifier |
  **id_review_type** | **string**| Review owner type |
 
 ### Return type
@@ -152,9 +152,9 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesReviewTypesApi();
-$id_program = "id_program_example"; // string | Program UUID
-$id_version = "id_version_example"; // string | Version id
-$id_locale = "id_locale_example"; // string | Locales id
+$id_program = "id_program_example"; // string | Program UUID or numeric ID
+$id_version = "id_version_example"; // string | Program version identifier
+$id_locale = "id_locale_example"; // string | Locale identifier
 
 try {
     $result = $api_instance->findProgramVersionLocaleReviewType($id_program, $id_version, $id_locale);
@@ -169,9 +169,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID |
- **id_version** | **string**| Version id |
- **id_locale** | **string**| Locales id |
+ **id_program** | **string**| Program UUID or numeric ID |
+ **id_version** | **string**| Program version identifier |
+ **id_locale** | **string**| Locale identifier |
 
 ### Return type
 
@@ -210,9 +210,9 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesReviewTypesApi();
-$id_program = "id_program_example"; // string | Program UUID
-$id_version = "id_version_example"; // string | Version id
-$id_locale = "id_locale_example"; // string | Locales id
+$id_program = "id_program_example"; // string | Program UUID or numeric ID
+$id_version = "id_version_example"; // string | Program version identifier
+$id_locale = "id_locale_example"; // string | Locale identifier
 $id_review_type = "id_review_type_example"; // string | Review owner type
 
 try {
@@ -228,9 +228,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID |
- **id_version** | **string**| Version id |
- **id_locale** | **string**| Locales id |
+ **id_program** | **string**| Program UUID or numeric ID |
+ **id_version** | **string**| Program version identifier |
+ **id_locale** | **string**| Locale identifier |
  **id_review_type** | **string**| Review owner type |
 
 ### Return type
@@ -270,9 +270,9 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesReviewTypesApi();
-$id_program = "id_program_example"; // string | Program UUID
-$id_version = "id_version_example"; // string | Version id
-$id_locale = "id_locale_example"; // string | Locales id
+$id_program = "id_program_example"; // string | Program UUID or numeric ID
+$id_version = "id_version_example"; // string | Program version identifier
+$id_locale = "id_locale_example"; // string | Locale identifier
 $id_review_type = "id_review_type_example"; // string | Review owner type
 $body = new \Softonic\CatalogApiSdk\Model\ProgramVersionLocaleReviewType(); // \Softonic\CatalogApiSdk\Model\ProgramVersionLocaleReviewType | 
 
@@ -288,9 +288,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID |
- **id_version** | **string**| Version id |
- **id_locale** | **string**| Locales id |
+ **id_program** | **string**| Program UUID or numeric ID |
+ **id_version** | **string**| Program version identifier |
+ **id_locale** | **string**| Locale identifier |
  **id_review_type** | **string**| Review owner type |
  **body** | [**\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleReviewType**](../Model/\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleReviewType.md)|  | [optional]
 
@@ -331,9 +331,9 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesReviewTypesApi();
-$id_program = "id_program_example"; // string | Program UUID
-$id_version = "id_version_example"; // string | Version id
-$id_locale = "id_locale_example"; // string | Locales id
+$id_program = "id_program_example"; // string | Program UUID or numeric ID
+$id_version = "id_version_example"; // string | Program version identifier
+$id_locale = "id_locale_example"; // string | Locale identifier
 $id_review_type = "id_review_type_example"; // string | Review owner type
 $body = new \Softonic\CatalogApiSdk\Model\ProgramVersionLocaleReviewType(); // \Softonic\CatalogApiSdk\Model\ProgramVersionLocaleReviewType | 
 
@@ -349,9 +349,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID |
- **id_version** | **string**| Version id |
- **id_locale** | **string**| Locales id |
+ **id_program** | **string**| Program UUID or numeric ID |
+ **id_version** | **string**| Program version identifier |
+ **id_locale** | **string**| Locale identifier |
  **id_review_type** | **string**| Review owner type |
  **body** | [**\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleReviewType**](../Model/\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleReviewType.md)|  | [optional]
 

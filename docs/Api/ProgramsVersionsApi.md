@@ -1,6 +1,6 @@
 # Softonic\CatalogApiSdk\ProgramsVersionsApi
 
-All URIs are relative to *https://v2.catalog.sftapi.com*
+All URIs are relative to *http://v2.catalog.sftapi.com.sft-staging.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -34,7 +34,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsApi();
-$id_program = "id_program_example"; // string | Program UUID
+$id_program = "id_program_example"; // string | Program UUID or numeric ID
 $body = new \Softonic\CatalogApiSdk\Model\ProgramVersion(); // \Softonic\CatalogApiSdk\Model\ProgramVersion | 
 
 try {
@@ -49,7 +49,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID |
+ **id_program** | **string**| Program UUID or numeric ID |
  **body** | [**\Softonic\CatalogApiSdk\Model\ProgramVersion**](../Model/\Softonic\CatalogApiSdk\Model\ProgramVersion.md)|  | [optional]
 
 ### Return type
@@ -89,8 +89,8 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsApi();
-$id_program = "id_program_example"; // string | Program UUID
-$id_version = "id_version_example"; // string | Version UUID
+$id_program = "id_program_example"; // string | Program UUID or numeric ID
+$id_version = "id_version_example"; // string | Program version identifier
 
 try {
     $api_instance->deleteProgramVersion($id_program, $id_version);
@@ -104,8 +104,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID |
- **id_version** | **string**| Version UUID |
+ **id_program** | **string**| Program UUID or numeric ID |
+ **id_version** | **string**| Program version identifier |
 
 ### Return type
 
@@ -144,7 +144,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsApi();
-$id_program = "id_program_example"; // string | Program UUID
+$id_program = "id_program_example"; // string | Program UUID or numeric ID
 
 try {
     $result = $api_instance->findProgramVersion($id_program);
@@ -159,7 +159,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID |
+ **id_program** | **string**| Program UUID or numeric ID |
 
 ### Return type
 
@@ -198,8 +198,8 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsApi();
-$id_program = "id_program_example"; // string | Program UUID
-$id_version = "id_version_example"; // string | Version UUID
+$id_program = "id_program_example"; // string | Program UUID or numeric ID
+$id_version = "id_version_example"; // string | Program version identifier
 
 try {
     $result = $api_instance->readProgramVersion($id_program, $id_version);
@@ -214,8 +214,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID |
- **id_version** | **string**| Version UUID |
+ **id_program** | **string**| Program UUID or numeric ID |
+ **id_version** | **string**| Program version identifier |
 
 ### Return type
 
@@ -254,8 +254,8 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsApi();
-$id_program = "id_program_example"; // string | Program UUID
-$id_version = "id_version_example"; // string | Version UUID
+$id_program = "id_program_example"; // string | Program UUID or numeric ID
+$id_version = "id_version_example"; // string | Program version identifier
 $body = new \Softonic\CatalogApiSdk\Model\ProgramVersion(); // \Softonic\CatalogApiSdk\Model\ProgramVersion | 
 
 try {
@@ -270,8 +270,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID |
- **id_version** | **string**| Version UUID |
+ **id_program** | **string**| Program UUID or numeric ID |
+ **id_version** | **string**| Program version identifier |
  **body** | [**\Softonic\CatalogApiSdk\Model\ProgramVersion**](../Model/\Softonic\CatalogApiSdk\Model\ProgramVersion.md)|  | [optional]
 
 ### Return type
@@ -311,8 +311,8 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsApi();
-$id_program = "id_program_example"; // string | Program UUID
-$id_version = "id_version_example"; // string | Version UUID
+$id_program = "id_program_example"; // string | Program UUID or numeric ID
+$id_version = "id_version_example"; // string | Program version identifier
 $body = new \Softonic\CatalogApiSdk\Model\ProgramVersion(); // \Softonic\CatalogApiSdk\Model\ProgramVersion | 
 
 try {
@@ -327,8 +327,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID |
- **id_version** | **string**| Version UUID |
+ **id_program** | **string**| Program UUID or numeric ID |
+ **id_version** | **string**| Program version identifier |
  **body** | [**\Softonic\CatalogApiSdk\Model\ProgramVersion**](../Model/\Softonic\CatalogApiSdk\Model\ProgramVersion.md)|  | [optional]
 
 ### Return type

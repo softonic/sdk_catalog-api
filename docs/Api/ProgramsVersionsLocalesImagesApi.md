@@ -1,23 +1,23 @@
-# Softonic\CatalogApiSdk\ProgramsVersionsLocalesVideosApi
+# Softonic\CatalogApiSdk\ProgramsVersionsLocalesImagesApi
 
-All URIs are relative to *https://v2.catalog.sftapi.com*
+All URIs are relative to *http://v2.catalog.sftapi.com.sft-staging.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createProgramVersionLocaleVideo**](ProgramsVersionsLocalesVideosApi.md#createProgramVersionLocaleVideo) | **POST** /programs/{id_program}/versions/{id_version}/locales/{id_locale}/videos | Creates a new ProgramVersionLocaleVideo
-[**deleteProgramVersionLocaleVideo**](ProgramsVersionsLocalesVideosApi.md#deleteProgramVersionLocaleVideo) | **DELETE** /programs/{id_program}/versions/{id_version}/locales/{id_locale}/videos/{id_video} | Deletes a ProgramVersionLocaleVideo
-[**findProgramVersionLocaleVideo**](ProgramsVersionsLocalesVideosApi.md#findProgramVersionLocaleVideo) | **GET** /programs/{id_program}/versions/{id_version}/locales/{id_locale}/videos | List of ProgramVersionLocaleVideos
-[**readProgramVersionLocaleVideo**](ProgramsVersionsLocalesVideosApi.md#readProgramVersionLocaleVideo) | **GET** /programs/{id_program}/versions/{id_version}/locales/{id_locale}/videos/{id_video} | Fetches a single ProgramVersionLocaleVideo
-[**replaceProgramVersionLocaleVideo**](ProgramsVersionsLocalesVideosApi.md#replaceProgramVersionLocaleVideo) | **PUT** /programs/{id_program}/versions/{id_version}/locales/{id_locale}/videos/{id_video} | Entirely replaces a ProgramVersionLocaleVideo
-[**updateProgramVersionLocaleVideo**](ProgramsVersionsLocalesVideosApi.md#updateProgramVersionLocaleVideo) | **PATCH** /programs/{id_program}/versions/{id_version}/locales/{id_locale}/videos/{id_video} | Partially updates a ProgramVersionLocaleVideo
+[**createProgramVersionLocaleImage**](ProgramsVersionsLocalesImagesApi.md#createProgramVersionLocaleImage) | **POST** /programs/{id_program}/versions/{id_version}/locales/{id_locale}/images | Creates a new ProgramVersionLocaleImage
+[**deleteProgramVersionLocaleImage**](ProgramsVersionsLocalesImagesApi.md#deleteProgramVersionLocaleImage) | **DELETE** /programs/{id_program}/versions/{id_version}/locales/{id_locale}/images/{id_image} | Deletes a ProgramVersionLocaleImage
+[**findProgramVersionLocaleImage**](ProgramsVersionsLocalesImagesApi.md#findProgramVersionLocaleImage) | **GET** /programs/{id_program}/versions/{id_version}/locales/{id_locale}/images | List of ProgramVersionLocaleImages
+[**readProgramVersionLocaleImage**](ProgramsVersionsLocalesImagesApi.md#readProgramVersionLocaleImage) | **GET** /programs/{id_program}/versions/{id_version}/locales/{id_locale}/images/{id_image} | Fetches a single ProgramVersionLocaleImage
+[**replaceProgramVersionLocaleImage**](ProgramsVersionsLocalesImagesApi.md#replaceProgramVersionLocaleImage) | **PUT** /programs/{id_program}/versions/{id_version}/locales/{id_locale}/images/{id_image} | Entirely replaces a ProgramVersionLocaleImage
+[**updateProgramVersionLocaleImage**](ProgramsVersionsLocalesImagesApi.md#updateProgramVersionLocaleImage) | **PATCH** /programs/{id_program}/versions/{id_version}/locales/{id_locale}/images/{id_image} | Partially updates a ProgramVersionLocaleImage
 
 
-# **createProgramVersionLocaleVideo**
-> createProgramVersionLocaleVideo($id_program, $id_version, $id_locale, $body)
+# **createProgramVersionLocaleImage**
+> createProgramVersionLocaleImage($id_program, $id_version, $id_locale, $body)
 
-Creates a new ProgramVersionLocaleVideo
+Creates a new ProgramVersionLocaleImage
 
-Creates a new ProgramVersionLocaleVideo
+Creates a new ProgramVersionLocaleImage
 
 ### Example
 ```php
@@ -33,16 +33,16 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_application
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesVideosApi();
-$id_program = "id_program_example"; // string | Program UUID
-$id_version = "id_version_example"; // string | Version identifier
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesImagesApi();
+$id_program = "id_program_example"; // string | Program UUID or numeric ID
+$id_version = "id_version_example"; // string | Program version identifier
 $id_locale = "id_locale_example"; // string | Locale identifier
-$body = new \Softonic\CatalogApiSdk\Model\ProgramVersionLocaleVideo(); // \Softonic\CatalogApiSdk\Model\ProgramVersionLocaleVideo | 
+$body = new \Softonic\CatalogApiSdk\Model\ProgramVersionLocaleImage(); // \Softonic\CatalogApiSdk\Model\ProgramVersionLocaleImage | 
 
 try {
-    $api_instance->createProgramVersionLocaleVideo($id_program, $id_version, $id_locale, $body);
+    $api_instance->createProgramVersionLocaleImage($id_program, $id_version, $id_locale, $body);
 } catch (Exception $e) {
-    echo 'Exception when calling ProgramsVersionsLocalesVideosApi->createProgramVersionLocaleVideo: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProgramsVersionsLocalesImagesApi->createProgramVersionLocaleImage: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -51,10 +51,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID |
- **id_version** | **string**| Version identifier |
+ **id_program** | **string**| Program UUID or numeric ID |
+ **id_version** | **string**| Program version identifier |
  **id_locale** | **string**| Locale identifier |
- **body** | [**\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleVideo**](../Model/\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleVideo.md)|  | [optional]
+ **body** | [**\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleImage**](../Model/\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleImage.md)|  | [optional]
 
 ### Return type
 
@@ -71,12 +71,12 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **deleteProgramVersionLocaleVideo**
-> deleteProgramVersionLocaleVideo($id_program, $id_version, $id_locale, $id_video)
+# **deleteProgramVersionLocaleImage**
+> deleteProgramVersionLocaleImage($id_program, $id_version, $id_locale, $id_image)
 
-Deletes a ProgramVersionLocaleVideo
+Deletes a ProgramVersionLocaleImage
 
-Deletes a ProgramVersionLocaleVideo
+Deletes a ProgramVersionLocaleImage
 
 ### Example
 ```php
@@ -92,16 +92,16 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_application
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesVideosApi();
-$id_program = "id_program_example"; // string | Program UUID
-$id_version = "id_version_example"; // string | Version identifier
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesImagesApi();
+$id_program = "id_program_example"; // string | Program UUID or numeric ID
+$id_version = "id_version_example"; // string | Program version identifier
 $id_locale = "id_locale_example"; // string | Locale identifier
-$id_video = "id_video_example"; // string | Video Identifier
+$id_image = "id_image_example"; // string | Image identifier in SHA1-Hash format
 
 try {
-    $api_instance->deleteProgramVersionLocaleVideo($id_program, $id_version, $id_locale, $id_video);
+    $api_instance->deleteProgramVersionLocaleImage($id_program, $id_version, $id_locale, $id_image);
 } catch (Exception $e) {
-    echo 'Exception when calling ProgramsVersionsLocalesVideosApi->deleteProgramVersionLocaleVideo: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProgramsVersionsLocalesImagesApi->deleteProgramVersionLocaleImage: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -110,10 +110,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID |
- **id_version** | **string**| Version identifier |
+ **id_program** | **string**| Program UUID or numeric ID |
+ **id_version** | **string**| Program version identifier |
  **id_locale** | **string**| Locale identifier |
- **id_video** | **string**| Video Identifier |
+ **id_image** | **string**| Image identifier in SHA1-Hash format |
 
 ### Return type
 
@@ -130,12 +130,12 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **findProgramVersionLocaleVideo**
-> \Softonic\CatalogApiSdk\Model\ProgramVersionLocaleVideo[] findProgramVersionLocaleVideo($id_program, $id_version, $id_locale)
+# **findProgramVersionLocaleImage**
+> \Softonic\CatalogApiSdk\Model\ProgramVersionLocaleImage[] findProgramVersionLocaleImage($id_program, $id_version, $id_locale)
 
-List of ProgramVersionLocaleVideos
+List of ProgramVersionLocaleImages
 
-List of ProgramVersionLocaleVideos
+List of ProgramVersionLocaleImages
 
 ### Example
 ```php
@@ -151,16 +151,16 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_application
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesVideosApi();
-$id_program = "id_program_example"; // string | Program UUID
-$id_version = "id_version_example"; // string | Version identifier
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesImagesApi();
+$id_program = "id_program_example"; // string | Program UUID or numeric ID
+$id_version = "id_version_example"; // string | Program version identifier
 $id_locale = "id_locale_example"; // string | Locale identifier
 
 try {
-    $result = $api_instance->findProgramVersionLocaleVideo($id_program, $id_version, $id_locale);
+    $result = $api_instance->findProgramVersionLocaleImage($id_program, $id_version, $id_locale);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ProgramsVersionsLocalesVideosApi->findProgramVersionLocaleVideo: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProgramsVersionsLocalesImagesApi->findProgramVersionLocaleImage: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -169,13 +169,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID |
- **id_version** | **string**| Version identifier |
+ **id_program** | **string**| Program UUID or numeric ID |
+ **id_version** | **string**| Program version identifier |
  **id_locale** | **string**| Locale identifier |
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleVideo[]**](../Model/ProgramVersionLocaleVideo.md)
+[**\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleImage[]**](../Model/ProgramVersionLocaleImage.md)
 
 ### Authorization
 
@@ -188,12 +188,12 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **readProgramVersionLocaleVideo**
-> \Softonic\CatalogApiSdk\Model\ProgramVersionLocaleVideo readProgramVersionLocaleVideo($id_program, $id_version, $id_locale, $id_video)
+# **readProgramVersionLocaleImage**
+> \Softonic\CatalogApiSdk\Model\ProgramVersionLocaleImage readProgramVersionLocaleImage($id_program, $id_version, $id_locale, $id_image)
 
-Fetches a single ProgramVersionLocaleVideo
+Fetches a single ProgramVersionLocaleImage
 
-Fetches a single ProgramVersionLocaleVideo
+Fetches a single ProgramVersionLocaleImage
 
 ### Example
 ```php
@@ -209,17 +209,17 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_application
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesVideosApi();
-$id_program = "id_program_example"; // string | Program UUID
-$id_version = "id_version_example"; // string | Version identifier
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesImagesApi();
+$id_program = "id_program_example"; // string | Program UUID or numeric ID
+$id_version = "id_version_example"; // string | Program version identifier
 $id_locale = "id_locale_example"; // string | Locale identifier
-$id_video = "id_video_example"; // string | Video Identifier
+$id_image = "id_image_example"; // string | Image identifier in SHA1-Hash format
 
 try {
-    $result = $api_instance->readProgramVersionLocaleVideo($id_program, $id_version, $id_locale, $id_video);
+    $result = $api_instance->readProgramVersionLocaleImage($id_program, $id_version, $id_locale, $id_image);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ProgramsVersionsLocalesVideosApi->readProgramVersionLocaleVideo: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProgramsVersionsLocalesImagesApi->readProgramVersionLocaleImage: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -228,14 +228,14 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID |
- **id_version** | **string**| Version identifier |
+ **id_program** | **string**| Program UUID or numeric ID |
+ **id_version** | **string**| Program version identifier |
  **id_locale** | **string**| Locale identifier |
- **id_video** | **string**| Video Identifier |
+ **id_image** | **string**| Image identifier in SHA1-Hash format |
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleVideo**](../Model/ProgramVersionLocaleVideo.md)
+[**\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleImage**](../Model/ProgramVersionLocaleImage.md)
 
 ### Authorization
 
@@ -248,12 +248,12 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **replaceProgramVersionLocaleVideo**
-> replaceProgramVersionLocaleVideo($id_program, $id_version, $id_locale, $id_video)
+# **replaceProgramVersionLocaleImage**
+> replaceProgramVersionLocaleImage($id_program, $id_version, $id_locale, $id_image, $body)
 
-Entirely replaces a ProgramVersionLocaleVideo
+Entirely replaces a ProgramVersionLocaleImage
 
-Entirely replaces a ProgramVersionLocaleVideo
+Entirely replaces a ProgramVersionLocaleImage
 
 ### Example
 ```php
@@ -269,16 +269,17 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_application
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesVideosApi();
-$id_program = "id_program_example"; // string | Program UUID
-$id_version = "id_version_example"; // string | Version identifier
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesImagesApi();
+$id_program = "id_program_example"; // string | Program UUID or numeric ID
+$id_version = "id_version_example"; // string | Program version identifier
 $id_locale = "id_locale_example"; // string | Locale identifier
-$id_video = "id_video_example"; // string | Video Identifier
+$id_image = "id_image_example"; // string | Image identifier in SHA1-Hash format
+$body = new \Softonic\CatalogApiSdk\Model\ProgramVersionLocaleImage(); // \Softonic\CatalogApiSdk\Model\ProgramVersionLocaleImage | 
 
 try {
-    $api_instance->replaceProgramVersionLocaleVideo($id_program, $id_version, $id_locale, $id_video);
+    $api_instance->replaceProgramVersionLocaleImage($id_program, $id_version, $id_locale, $id_image, $body);
 } catch (Exception $e) {
-    echo 'Exception when calling ProgramsVersionsLocalesVideosApi->replaceProgramVersionLocaleVideo: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProgramsVersionsLocalesImagesApi->replaceProgramVersionLocaleImage: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -287,10 +288,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID |
- **id_version** | **string**| Version identifier |
+ **id_program** | **string**| Program UUID or numeric ID |
+ **id_version** | **string**| Program version identifier |
  **id_locale** | **string**| Locale identifier |
- **id_video** | **string**| Video Identifier |
+ **id_image** | **string**| Image identifier in SHA1-Hash format |
+ **body** | [**\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleImage**](../Model/\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleImage.md)|  | [optional]
 
 ### Return type
 
@@ -307,12 +309,12 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **updateProgramVersionLocaleVideo**
-> updateProgramVersionLocaleVideo($id_program, $id_version, $id_locale, $id_video)
+# **updateProgramVersionLocaleImage**
+> updateProgramVersionLocaleImage($id_program, $id_version, $id_locale, $id_image, $body)
 
-Partially updates a ProgramVersionLocaleVideo
+Partially updates a ProgramVersionLocaleImage
 
-Partially updates a ProgramVersionLocaleVideo
+Partially updates a ProgramVersionLocaleImage
 
 ### Example
 ```php
@@ -328,16 +330,17 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_application
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesVideosApi();
-$id_program = "id_program_example"; // string | Program UUID
-$id_version = "id_version_example"; // string | Version identifier
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesImagesApi();
+$id_program = "id_program_example"; // string | Program UUID or numeric ID
+$id_version = "id_version_example"; // string | Program version identifier
 $id_locale = "id_locale_example"; // string | Locale identifier
-$id_video = "id_video_example"; // string | Video Identifier
+$id_image = "id_image_example"; // string | Image identifier in SHA1-Hash format
+$body = new \Softonic\CatalogApiSdk\Model\ProgramVersionLocaleImage(); // \Softonic\CatalogApiSdk\Model\ProgramVersionLocaleImage | 
 
 try {
-    $api_instance->updateProgramVersionLocaleVideo($id_program, $id_version, $id_locale, $id_video);
+    $api_instance->updateProgramVersionLocaleImage($id_program, $id_version, $id_locale, $id_image, $body);
 } catch (Exception $e) {
-    echo 'Exception when calling ProgramsVersionsLocalesVideosApi->updateProgramVersionLocaleVideo: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProgramsVersionsLocalesImagesApi->updateProgramVersionLocaleImage: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -346,10 +349,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID |
- **id_version** | **string**| Version identifier |
+ **id_program** | **string**| Program UUID or numeric ID |
+ **id_version** | **string**| Program version identifier |
  **id_locale** | **string**| Locale identifier |
- **id_video** | **string**| Video Identifier |
+ **id_image** | **string**| Image identifier in SHA1-Hash format |
+ **body** | [**\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleImage**](../Model/\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleImage.md)|  | [optional]
 
 ### Return type
 

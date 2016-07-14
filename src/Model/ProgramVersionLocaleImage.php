@@ -1,6 +1,6 @@
 <?php
 /**
- * ProgramVersionBinary
+ * ProgramVersionLocaleImage
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace Softonic\CatalogApiSdk\Model;
 use \ArrayAccess;
 
 /**
- * ProgramVersionBinary Class Doc Comment
+ * ProgramVersionLocaleImage Class Doc Comment
  *
  * @category    Class
  * @package     Softonic\CatalogApiSdk
@@ -52,13 +52,13 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ProgramVersionBinary implements ArrayAccess
+class ProgramVersionLocaleImage implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'ProgramVersionBinary';
+    protected static $swaggerModelName = 'ProgramVersionLocaleImage';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -67,9 +67,11 @@ class ProgramVersionBinary implements ArrayAccess
     protected static $swaggerTypes = array(
         'id_program' => 'string',
         'id_version' => 'string',
-        'id_binary' => 'string',
-        'id_compliance_scan' => 'string',
-        'status' => 'string'
+        'id_locale' => 'string',
+        'id_image' => 'string',
+        'type' => 'string',
+        'priority' => 'int',
+        'caption' => 'string'
     );
 
     public static function swaggerTypes()
@@ -84,9 +86,11 @@ class ProgramVersionBinary implements ArrayAccess
     protected static $attributeMap = array(
         'id_program' => 'id_program',
         'id_version' => 'id_version',
-        'id_binary' => 'id_binary',
-        'id_compliance_scan' => 'id_compliance_scan',
-        'status' => 'status'
+        'id_locale' => 'id_locale',
+        'id_image' => 'id_image',
+        'type' => 'type',
+        'priority' => 'priority',
+        'caption' => 'caption'
     );
 
     public static function attributeMap()
@@ -101,9 +105,11 @@ class ProgramVersionBinary implements ArrayAccess
     protected static $setters = array(
         'id_program' => 'setIdProgram',
         'id_version' => 'setIdVersion',
-        'id_binary' => 'setIdBinary',
-        'id_compliance_scan' => 'setIdComplianceScan',
-        'status' => 'setStatus'
+        'id_locale' => 'setIdLocale',
+        'id_image' => 'setIdImage',
+        'type' => 'setType',
+        'priority' => 'setPriority',
+        'caption' => 'setCaption'
     );
 
     public static function setters()
@@ -118,9 +124,11 @@ class ProgramVersionBinary implements ArrayAccess
     protected static $getters = array(
         'id_program' => 'getIdProgram',
         'id_version' => 'getIdVersion',
-        'id_binary' => 'getIdBinary',
-        'id_compliance_scan' => 'getIdComplianceScan',
-        'status' => 'getStatus'
+        'id_locale' => 'getIdLocale',
+        'id_image' => 'getIdImage',
+        'type' => 'getType',
+        'priority' => 'getPriority',
+        'caption' => 'getCaption'
     );
 
     public static function getters()
@@ -128,11 +136,9 @@ class ProgramVersionBinary implements ArrayAccess
         return self::$getters;
     }
 
-    const STATUS_PENDING = 'pending';
-    const STATUS_UNSCANNABLE = 'unscannable';
-    const STATUS_CLEAN = 'clean';
-    const STATUS_WARNING = 'warning';
-    const STATUS_BLOCKED = 'blocked';
+    const TYPE_COVER = 'cover';
+    const TYPE_ICON = 'icon';
+    const TYPE_SCREENSHOT = 'screenshot';
     
 
     
@@ -140,14 +146,12 @@ class ProgramVersionBinary implements ArrayAccess
      * Gets allowable values of the enum
      * @return string[]
      */
-    public function getStatusAllowableValues()
+    public function getTypeAllowableValues()
     {
         return [
-            self::STATUS_PENDING,
-            self::STATUS_UNSCANNABLE,
-            self::STATUS_CLEAN,
-            self::STATUS_WARNING,
-            self::STATUS_BLOCKED,
+            self::TYPE_COVER,
+            self::TYPE_ICON,
+            self::TYPE_SCREENSHOT,
         ];
     }
     
@@ -166,9 +170,11 @@ class ProgramVersionBinary implements ArrayAccess
     {
         $this->container['id_program'] = isset($data['id_program']) ? $data['id_program'] : null;
         $this->container['id_version'] = isset($data['id_version']) ? $data['id_version'] : null;
-        $this->container['id_binary'] = isset($data['id_binary']) ? $data['id_binary'] : null;
-        $this->container['id_compliance_scan'] = isset($data['id_compliance_scan']) ? $data['id_compliance_scan'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['id_locale'] = isset($data['id_locale']) ? $data['id_locale'] : null;
+        $this->container['id_image'] = isset($data['id_image']) ? $data['id_image'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
+        $this->container['caption'] = isset($data['caption']) ? $data['caption'] : null;
     }
 
     /**
@@ -197,24 +203,42 @@ class ProgramVersionBinary implements ArrayAccess
         if (strlen($this->container['id_version']) < 1) {
             $invalid_properties[] = "invalid value for 'id_version', the character length must be bigger than or equal to 1.";
         }
-        if ($this->container['id_binary'] === null) {
-            $invalid_properties[] = "'id_binary' can't be null";
+        if ($this->container['id_locale'] === null) {
+            $invalid_properties[] = "'id_locale' can't be null";
         }
-        if (strlen($this->container['id_binary']) > 40) {
-            $invalid_properties[] = "invalid value for 'id_binary', the character length must be smaller than or equal to 40.";
+        if (strlen($this->container['id_locale']) > 2) {
+            $invalid_properties[] = "invalid value for 'id_locale', the character length must be smaller than or equal to 2.";
         }
-        if (strlen($this->container['id_binary']) < 40) {
-            $invalid_properties[] = "invalid value for 'id_binary', the character length must be bigger than or equal to 40.";
+        if (strlen($this->container['id_locale']) < 2) {
+            $invalid_properties[] = "invalid value for 'id_locale', the character length must be bigger than or equal to 2.";
         }
-        if (strlen($this->container['id_compliance_scan']) > 36) {
-            $invalid_properties[] = "invalid value for 'id_compliance_scan', the character length must be smaller than or equal to 36.";
+        if ($this->container['id_image'] === null) {
+            $invalid_properties[] = "'id_image' can't be null";
         }
-        if (strlen($this->container['id_compliance_scan']) < 36) {
-            $invalid_properties[] = "invalid value for 'id_compliance_scan', the character length must be bigger than or equal to 36.";
+        if (strlen($this->container['id_image']) > 40) {
+            $invalid_properties[] = "invalid value for 'id_image', the character length must be smaller than or equal to 40.";
         }
-        $allowed_values = array("pending", "unscannable", "clean", "warning", "blocked");
-        if (!in_array($this->container['status'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'status', must be one of #{allowed_values}.";
+        if (strlen($this->container['id_image']) < 40) {
+            $invalid_properties[] = "invalid value for 'id_image', the character length must be bigger than or equal to 40.";
+        }
+        if ($this->container['type'] === null) {
+            $invalid_properties[] = "'type' can't be null";
+        }
+        $allowed_values = array("cover", "icon", "screenshot");
+        if (!in_array($this->container['type'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'type', must be one of #{allowed_values}.";
+        }
+        if ($this->container['priority'] > 255.0) {
+            $invalid_properties[] = "invalid value for 'priority', must be smaller than or equal to 255.0.";
+        }
+        if ($this->container['priority'] < 0.0) {
+            $invalid_properties[] = "invalid value for 'priority', must be bigger than or equal to 0.0.";
+        }
+        if (strlen($this->container['caption']) > 200) {
+            $invalid_properties[] = "invalid value for 'caption', the character length must be smaller than or equal to 200.";
+        }
+        if (strlen($this->container['caption']) < 1) {
+            $invalid_properties[] = "invalid value for 'caption', the character length must be bigger than or equal to 1.";
         }
         return $invalid_properties;
     }
@@ -245,23 +269,41 @@ class ProgramVersionBinary implements ArrayAccess
         if (strlen($this->container['id_version']) < 1) {
             return false;
         }
-        if ($this->container['id_binary'] === null) {
+        if ($this->container['id_locale'] === null) {
             return false;
         }
-        if (strlen($this->container['id_binary']) > 40) {
+        if (strlen($this->container['id_locale']) > 2) {
             return false;
         }
-        if (strlen($this->container['id_binary']) < 40) {
+        if (strlen($this->container['id_locale']) < 2) {
             return false;
         }
-        if (strlen($this->container['id_compliance_scan']) > 36) {
+        if ($this->container['id_image'] === null) {
             return false;
         }
-        if (strlen($this->container['id_compliance_scan']) < 36) {
+        if (strlen($this->container['id_image']) > 40) {
             return false;
         }
-        $allowed_values = array("pending", "unscannable", "clean", "warning", "blocked");
-        if (!in_array($this->container['status'], $allowed_values)) {
+        if (strlen($this->container['id_image']) < 40) {
+            return false;
+        }
+        if ($this->container['type'] === null) {
+            return false;
+        }
+        $allowed_values = array("cover", "icon", "screenshot");
+        if (!in_array($this->container['type'], $allowed_values)) {
+            return false;
+        }
+        if ($this->container['priority'] > 255.0) {
+            return false;
+        }
+        if ($this->container['priority'] < 0.0) {
+            return false;
+        }
+        if (strlen($this->container['caption']) > 200) {
+            return false;
+        }
+        if (strlen($this->container['caption']) < 1) {
             return false;
         }
         return true;
@@ -285,10 +327,10 @@ class ProgramVersionBinary implements ArrayAccess
     public function setIdProgram($id_program)
     {
         if (strlen($id_program) > 36) {
-            throw new \InvalidArgumentException('invalid length for $id_program when calling ProgramVersionBinary., must be smaller than or equal to 36.');
+            throw new \InvalidArgumentException('invalid length for $id_program when calling ProgramVersionLocaleImage., must be smaller than or equal to 36.');
         }
         if (strlen($id_program) < 1) {
-            throw new \InvalidArgumentException('invalid length for $id_program when calling ProgramVersionBinary., must be bigger than or equal to 1.');
+            throw new \InvalidArgumentException('invalid length for $id_program when calling ProgramVersionLocaleImage., must be bigger than or equal to 1.');
         }
         $this->container['id_program'] = $id_program;
 
@@ -306,16 +348,16 @@ class ProgramVersionBinary implements ArrayAccess
 
     /**
      * Sets id_version
-     * @param string $id_version Version from program
+     * @param string $id_version Program version identifier
      * @return $this
      */
     public function setIdVersion($id_version)
     {
         if (strlen($id_version) > 60) {
-            throw new \InvalidArgumentException('invalid length for $id_version when calling ProgramVersionBinary., must be smaller than or equal to 60.');
+            throw new \InvalidArgumentException('invalid length for $id_version when calling ProgramVersionLocaleImage., must be smaller than or equal to 60.');
         }
         if (strlen($id_version) < 1) {
-            throw new \InvalidArgumentException('invalid length for $id_version when calling ProgramVersionBinary., must be bigger than or equal to 1.');
+            throw new \InvalidArgumentException('invalid length for $id_version when calling ProgramVersionLocaleImage., must be bigger than or equal to 1.');
         }
         $this->container['id_version'] = $id_version;
 
@@ -323,80 +365,135 @@ class ProgramVersionBinary implements ArrayAccess
     }
 
     /**
-     * Gets id_binary
+     * Gets id_locale
      * @return string
      */
-    public function getIdBinary()
+    public function getIdLocale()
     {
-        return $this->container['id_binary'];
+        return $this->container['id_locale'];
     }
 
     /**
-     * Sets id_binary
-     * @param string $id_binary Binary identifier in SHA1-Hash format.
+     * Sets id_locale
+     * @param string $id_locale Locale identifier
      * @return $this
      */
-    public function setIdBinary($id_binary)
+    public function setIdLocale($id_locale)
     {
-        if (strlen($id_binary) > 40) {
-            throw new \InvalidArgumentException('invalid length for $id_binary when calling ProgramVersionBinary., must be smaller than or equal to 40.');
+        if (strlen($id_locale) > 2) {
+            throw new \InvalidArgumentException('invalid length for $id_locale when calling ProgramVersionLocaleImage., must be smaller than or equal to 2.');
         }
-        if (strlen($id_binary) < 40) {
-            throw new \InvalidArgumentException('invalid length for $id_binary when calling ProgramVersionBinary., must be bigger than or equal to 40.');
+        if (strlen($id_locale) < 2) {
+            throw new \InvalidArgumentException('invalid length for $id_locale when calling ProgramVersionLocaleImage., must be bigger than or equal to 2.');
         }
-        $this->container['id_binary'] = $id_binary;
+        $this->container['id_locale'] = $id_locale;
 
         return $this;
     }
 
     /**
-     * Gets id_compliance_scan
+     * Gets id_image
      * @return string
      */
-    public function getIdComplianceScan()
+    public function getIdImage()
     {
-        return $this->container['id_compliance_scan'];
+        return $this->container['id_image'];
     }
 
     /**
-     * Sets id_compliance_scan
-     * @param string $id_compliance_scan Compliance scan UUID.
+     * Sets id_image
+     * @param string $id_image Image identifier in SHA1-Hash format
      * @return $this
      */
-    public function setIdComplianceScan($id_compliance_scan)
+    public function setIdImage($id_image)
     {
-        if (strlen($id_compliance_scan) > 36) {
-            throw new \InvalidArgumentException('invalid length for $id_compliance_scan when calling ProgramVersionBinary., must be smaller than or equal to 36.');
+        if (strlen($id_image) > 40) {
+            throw new \InvalidArgumentException('invalid length for $id_image when calling ProgramVersionLocaleImage., must be smaller than or equal to 40.');
         }
-        if (strlen($id_compliance_scan) < 36) {
-            throw new \InvalidArgumentException('invalid length for $id_compliance_scan when calling ProgramVersionBinary., must be bigger than or equal to 36.');
+        if (strlen($id_image) < 40) {
+            throw new \InvalidArgumentException('invalid length for $id_image when calling ProgramVersionLocaleImage., must be bigger than or equal to 40.');
         }
-        $this->container['id_compliance_scan'] = $id_compliance_scan;
+        $this->container['id_image'] = $id_image;
 
         return $this;
     }
 
     /**
-     * Gets status
+     * Gets type
      * @return string
      */
-    public function getStatus()
+    public function getType()
     {
-        return $this->container['status'];
+        return $this->container['type'];
     }
 
     /**
-     * Sets status
-     * @param string $status Compliance status
+     * Sets type
+     * @param string $type Image type
      * @return $this
      */
-    public function setStatus($status)
+    public function setType($type)
     {
-        $allowed_values = array('pending', 'unscannable', 'clean', 'warning', 'blocked');
-        if (!in_array($status, $allowed_values)) {
-            throw new \InvalidArgumentException("Invalid value for 'status', must be one of 'pending', 'unscannable', 'clean', 'warning', 'blocked'");
+        $allowed_values = array('cover', 'icon', 'screenshot');
+        if (!in_array($type, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'cover', 'icon', 'screenshot'");
         }
-        $this->container['status'] = $status;
+        $this->container['type'] = $type;
+
+        return $this;
+    }
+
+    /**
+     * Gets priority
+     * @return int
+     */
+    public function getPriority()
+    {
+        return $this->container['priority'];
+    }
+
+    /**
+     * Sets priority
+     * @param int $priority Priority used to order the images
+     * @return $this
+     */
+    public function setPriority($priority)
+    {
+
+        if ($priority > 255.0) {
+            throw new \InvalidArgumentException('invalid value for $priority when calling ProgramVersionLocaleImage., must be smaller than or equal to 255.0.');
+        }
+        if ($priority < 0.0) {
+            throw new \InvalidArgumentException('invalid value for $priority when calling ProgramVersionLocaleImage., must be bigger than or equal to 0.0.');
+        }
+        $this->container['priority'] = $priority;
+
+        return $this;
+    }
+
+    /**
+     * Gets caption
+     * @return string
+     */
+    public function getCaption()
+    {
+        return $this->container['caption'];
+    }
+
+    /**
+     * Sets caption
+     * @param string $caption Small text shown usually below the image
+     * @return $this
+     */
+    public function setCaption($caption)
+    {
+        if (strlen($caption) > 200) {
+            throw new \InvalidArgumentException('invalid length for $caption when calling ProgramVersionLocaleImage., must be smaller than or equal to 200.');
+        }
+        if (strlen($caption) < 1) {
+            throw new \InvalidArgumentException('invalid length for $caption when calling ProgramVersionLocaleImage., must be bigger than or equal to 1.');
+        }
+        $this->container['caption'] = $caption;
 
         return $this;
     }

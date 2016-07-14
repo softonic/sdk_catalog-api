@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id_program** | **string** | Program UUID or numeric ID | 
-**id_developer** | **string** | Developers identifier | 
+**id_developer** | **string** | Developers identifier | [optional] 
 **id_origin** | **string** | Origins identifier | 
 **id_platform** | **string** | Platforms identifier | 
 **id_category** | **string** | Categories identifier | 

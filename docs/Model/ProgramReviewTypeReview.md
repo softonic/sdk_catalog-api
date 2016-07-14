@@ -9,13 +9,9 @@ Name | Type | Description | Notes
 **public_note** | **string** | Public note. | [optional] 
 **type** | **string** | Review type. This field is used for tracking purposes. Ex: core | 
 **rating** | **int** | Program rating. | 
-**headline** | **string** | Headline. | 
+**headline** | **string** | Headline. | [optional] 
 **lead** | **string** | Lead | [optional] 
-**subfeatures** | **string** | Subfeatures | [optional] 
-**features** | **string** | Features | [optional] 
-**subusability** | **string** | Subusability | [optional] 
-**usability** | **string** | Usability | [optional] 
-**subconclusion** | **string** | Subconclusion | [optional] 
+**body** | **string** | Body | [optional] 
 **conclusion** | **string** | Conclusion | [optional] 
 **changes** | **string** | Version changes | [optional] 
 **extra** | **string** | Unrecognized parts from the review | [optional] 

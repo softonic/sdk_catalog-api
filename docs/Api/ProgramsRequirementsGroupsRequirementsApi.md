@@ -1,6 +1,6 @@
 # Softonic\CatalogApiSdk\ProgramsRequirementsGroupsRequirementsApi
 
-All URIs are relative to *https://v2.catalog.sftapi.com*
+All URIs are relative to *http://v2.catalog.sftapi.com.sft-staging.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -34,7 +34,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsRequirementsGroupsRequirementsApi();
-$id_program = "id_program_example"; // string | Program UUID
+$id_program = "id_program_example"; // string | Program UUID or numeric ID
 $id_requirements_group = "id_requirements_group_example"; // string | Requirements group UUID
 $body = new \Softonic\CatalogApiSdk\Model\ProgramRequirementGroupRequirement(); // \Softonic\CatalogApiSdk\Model\ProgramRequirementGroupRequirement | 
 
@@ -50,7 +50,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID |
+ **id_program** | **string**| Program UUID or numeric ID |
  **id_requirements_group** | **string**| Requirements group UUID |
  **body** | [**\Softonic\CatalogApiSdk\Model\ProgramRequirementGroupRequirement**](../Model/\Softonic\CatalogApiSdk\Model\ProgramRequirementGroupRequirement.md)|  | [optional]
 
@@ -91,7 +91,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsRequirementsGroupsRequirementsApi();
-$id_program = "id_program_example"; // string | Program UUID
+$id_program = "id_program_example"; // string | Program UUID or numeric ID
 $id_requirements_group = "id_requirements_group_example"; // string | Requirements group UUID
 $id_requirement = "id_requirement_example"; // string | Requirement ID
 
@@ -107,7 +107,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID |
+ **id_program** | **string**| Program UUID or numeric ID |
  **id_requirements_group** | **string**| Requirements group UUID |
  **id_requirement** | **string**| Requirement ID |
 
@@ -148,7 +148,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsRequirementsGroupsRequirementsApi();
-$id_program = "id_program_example"; // string | Program UUID
+$id_program = "id_program_example"; // string | Program UUID or numeric ID
 $id_requirements_group = "id_requirements_group_example"; // string | Requirements group UUID
 
 try {
@@ -164,7 +164,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID |
+ **id_program** | **string**| Program UUID or numeric ID |
  **id_requirements_group** | **string**| Requirements group UUID |
 
 ### Return type
@@ -204,7 +204,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsRequirementsGroupsRequirementsApi();
-$id_program = "id_program_example"; // string | Program UUID
+$id_program = "id_program_example"; // string | Program UUID or numeric ID
 $id_requirements_group = "id_requirements_group_example"; // string | Requirements group UUID
 $id_requirement = "id_requirement_example"; // string | Requirement ID
 
@@ -221,7 +221,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID |
+ **id_program** | **string**| Program UUID or numeric ID |
  **id_requirements_group** | **string**| Requirements group UUID |
  **id_requirement** | **string**| Requirement ID |
 
@@ -262,7 +262,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsRequirementsGroupsRequirementsApi();
-$id_program = "id_program_example"; // string | Program UUID
+$id_program = "id_program_example"; // string | Program UUID or numeric ID
 $id_requirements_group = "id_requirements_group_example"; // string | Requirements group UUID
 $id_requirement = "id_requirement_example"; // string | Requirement ID
 $body = new \Softonic\CatalogApiSdk\Model\ProgramRequirementGroupRequirement(); // \Softonic\CatalogApiSdk\Model\ProgramRequirementGroupRequirement | 
@@ -279,7 +279,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID |
+ **id_program** | **string**| Program UUID or numeric ID |
  **id_requirements_group** | **string**| Requirements group UUID |
  **id_requirement** | **string**| Requirement ID |
  **body** | [**\Softonic\CatalogApiSdk\Model\ProgramRequirementGroupRequirement**](../Model/\Softonic\CatalogApiSdk\Model\ProgramRequirementGroupRequirement.md)|  | [optional]
@@ -321,7 +321,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsRequirementsGroupsRequirementsApi();
-$id_program = "id_program_example"; // string | Program UUID
+$id_program = "id_program_example"; // string | Program UUID or numeric ID
 $id_requirements_group = "id_requirements_group_example"; // string | Requirements group UUID
 $id_requirement = "id_requirement_example"; // string | Requirement ID
 $body = new \Softonic\CatalogApiSdk\Model\ProgramRequirementGroupRequirement(); // \Softonic\CatalogApiSdk\Model\ProgramRequirementGroupRequirement | 
@@ -338,7 +338,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID |
+ **id_program** | **string**| Program UUID or numeric ID |
  **id_requirements_group** | **string**| Requirements group UUID |
  **id_requirement** | **string**| Requirement ID |
  **body** | [**\Softonic\CatalogApiSdk\Model\ProgramRequirementGroupRequirement**](../Model/\Softonic\CatalogApiSdk\Model\ProgramRequirementGroupRequirement.md)|  | [optional]
