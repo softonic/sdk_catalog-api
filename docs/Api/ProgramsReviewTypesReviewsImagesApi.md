@@ -1,23 +1,23 @@
-# Softonic\CatalogApiSdk\ProgramsVersionsLocalesImagesApi
+# Softonic\CatalogApiSdk\ProgramsReviewTypesReviewsImagesApi
 
 All URIs are relative to *http://v2.catalog.sftapi.com.sft-staging.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createProgramVersionLocaleImage**](ProgramsVersionsLocalesImagesApi.md#createProgramVersionLocaleImage) | **POST** /programs/{id_program}/versions/{id_version}/locales/{id_locale}/images | Creates a new ProgramVersionLocaleImage
-[**deleteProgramVersionLocaleImage**](ProgramsVersionsLocalesImagesApi.md#deleteProgramVersionLocaleImage) | **DELETE** /programs/{id_program}/versions/{id_version}/locales/{id_locale}/images/{id_image} | Deletes a ProgramVersionLocaleImage
-[**findProgramVersionLocaleImage**](ProgramsVersionsLocalesImagesApi.md#findProgramVersionLocaleImage) | **GET** /programs/{id_program}/versions/{id_version}/locales/{id_locale}/images | List of ProgramVersionLocaleImages
-[**readProgramVersionLocaleImage**](ProgramsVersionsLocalesImagesApi.md#readProgramVersionLocaleImage) | **GET** /programs/{id_program}/versions/{id_version}/locales/{id_locale}/images/{id_image} | Fetches a single ProgramVersionLocaleImage
-[**replaceProgramVersionLocaleImage**](ProgramsVersionsLocalesImagesApi.md#replaceProgramVersionLocaleImage) | **PUT** /programs/{id_program}/versions/{id_version}/locales/{id_locale}/images/{id_image} | Entirely replaces a ProgramVersionLocaleImage
-[**updateProgramVersionLocaleImage**](ProgramsVersionsLocalesImagesApi.md#updateProgramVersionLocaleImage) | **PATCH** /programs/{id_program}/versions/{id_version}/locales/{id_locale}/images/{id_image} | Partially updates a ProgramVersionLocaleImage
+[**createProgramReviewTypeReviewImage**](ProgramsReviewTypesReviewsImagesApi.md#createProgramReviewTypeReviewImage) | **POST** /programs/{id_program}/review-types/{id_review_type}/reviews/{id_review}/images | Creates a new ProgramReviewTypeReviewImage
+[**deleteProgramReviewTypeReviewImage**](ProgramsReviewTypesReviewsImagesApi.md#deleteProgramReviewTypeReviewImage) | **DELETE** /programs/{id_program}/review-types/{id_review_type}/reviews/{id_review}/images/{id_image} | Deletes a ProgramReviewTypeReviewImage
+[**findProgramReviewTypeReviewImage**](ProgramsReviewTypesReviewsImagesApi.md#findProgramReviewTypeReviewImage) | **GET** /programs/{id_program}/review-types/{id_review_type}/reviews/{id_review}/images | List of ProgramReviewTypeReviewImages
+[**readProgramReviewTypeReviewImage**](ProgramsReviewTypesReviewsImagesApi.md#readProgramReviewTypeReviewImage) | **GET** /programs/{id_program}/review-types/{id_review_type}/reviews/{id_review}/images/{id_image} | Fetches a single ProgramReviewTypeReviewImage
+[**replaceProgramReviewTypeReviewImage**](ProgramsReviewTypesReviewsImagesApi.md#replaceProgramReviewTypeReviewImage) | **PUT** /programs/{id_program}/review-types/{id_review_type}/reviews/{id_review}/images/{id_image} | Entirely replaces a ProgramReviewTypeReviewImage
+[**updateProgramReviewTypeReviewImage**](ProgramsReviewTypesReviewsImagesApi.md#updateProgramReviewTypeReviewImage) | **PATCH** /programs/{id_program}/review-types/{id_review_type}/reviews/{id_review}/images/{id_image} | Partially updates a ProgramReviewTypeReviewImage
 
 
-# **createProgramVersionLocaleImage**
-> createProgramVersionLocaleImage($id_program, $id_version, $id_locale, $body)
+# **createProgramReviewTypeReviewImage**
+> createProgramReviewTypeReviewImage($id_program, $id_review_type, $id_review, $body)
 
-Creates a new ProgramVersionLocaleImage
+Creates a new ProgramReviewTypeReviewImage
 
-Creates a new ProgramVersionLocaleImage
+Creates a new ProgramReviewTypeReviewImage
 
 ### Example
 ```php
@@ -33,16 +33,16 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_application
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesImagesApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsReviewTypesReviewsImagesApi();
 $id_program = "id_program_example"; // string | Program UUID or numeric ID
-$id_version = "id_version_example"; // string | Program version identifier
-$id_locale = "id_locale_example"; // string | Locale identifier
-$body = new \Softonic\CatalogApiSdk\Model\ProgramVersionLocaleImage(); // \Softonic\CatalogApiSdk\Model\ProgramVersionLocaleImage | 
+$id_review_type = "id_review_type_example"; // string | Review owner type
+$id_review = "id_review_example"; // string | Review identifier as UUID
+$body = new \Softonic\CatalogApiSdk\Model\ProgramReviewTypeReviewImage(); // \Softonic\CatalogApiSdk\Model\ProgramReviewTypeReviewImage | 
 
 try {
-    $api_instance->createProgramVersionLocaleImage($id_program, $id_version, $id_locale, $body);
+    $api_instance->createProgramReviewTypeReviewImage($id_program, $id_review_type, $id_review, $body);
 } catch (Exception $e) {
-    echo 'Exception when calling ProgramsVersionsLocalesImagesApi->createProgramVersionLocaleImage: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProgramsReviewTypesReviewsImagesApi->createProgramReviewTypeReviewImage: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -52,9 +52,9 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_program** | **string**| Program UUID or numeric ID |
- **id_version** | **string**| Program version identifier |
- **id_locale** | **string**| Locale identifier |
- **body** | [**\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleImage**](../Model/\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleImage.md)|  | [optional]
+ **id_review_type** | **string**| Review owner type |
+ **id_review** | **string**| Review identifier as UUID |
+ **body** | [**\Softonic\CatalogApiSdk\Model\ProgramReviewTypeReviewImage**](../Model/\Softonic\CatalogApiSdk\Model\ProgramReviewTypeReviewImage.md)|  | [optional]
 
 ### Return type
 
@@ -71,12 +71,12 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **deleteProgramVersionLocaleImage**
-> deleteProgramVersionLocaleImage($id_program, $id_version, $id_locale, $id_image)
+# **deleteProgramReviewTypeReviewImage**
+> deleteProgramReviewTypeReviewImage($id_program, $id_review_type, $id_review, $id_image)
 
-Deletes a ProgramVersionLocaleImage
+Deletes a ProgramReviewTypeReviewImage
 
-Deletes a ProgramVersionLocaleImage
+Deletes a ProgramReviewTypeReviewImage
 
 ### Example
 ```php
@@ -92,16 +92,16 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_application
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesImagesApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsReviewTypesReviewsImagesApi();
 $id_program = "id_program_example"; // string | Program UUID or numeric ID
-$id_version = "id_version_example"; // string | Program version identifier
-$id_locale = "id_locale_example"; // string | Locale identifier
+$id_review_type = "id_review_type_example"; // string | Review owner type
+$id_review = "id_review_example"; // string | Review identifier as UUID
 $id_image = "id_image_example"; // string | Image identifier in SHA1-Hash format
 
 try {
-    $api_instance->deleteProgramVersionLocaleImage($id_program, $id_version, $id_locale, $id_image);
+    $api_instance->deleteProgramReviewTypeReviewImage($id_program, $id_review_type, $id_review, $id_image);
 } catch (Exception $e) {
-    echo 'Exception when calling ProgramsVersionsLocalesImagesApi->deleteProgramVersionLocaleImage: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProgramsReviewTypesReviewsImagesApi->deleteProgramReviewTypeReviewImage: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -111,8 +111,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_program** | **string**| Program UUID or numeric ID |
- **id_version** | **string**| Program version identifier |
- **id_locale** | **string**| Locale identifier |
+ **id_review_type** | **string**| Review owner type |
+ **id_review** | **string**| Review identifier as UUID |
  **id_image** | **string**| Image identifier in SHA1-Hash format |
 
 ### Return type
@@ -130,12 +130,12 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **findProgramVersionLocaleImage**
-> \Softonic\CatalogApiSdk\Model\ProgramVersionLocaleImage[] findProgramVersionLocaleImage($id_program, $id_version, $id_locale)
+# **findProgramReviewTypeReviewImage**
+> \Softonic\CatalogApiSdk\Model\ProgramReviewTypeReviewImage[] findProgramReviewTypeReviewImage($id_program, $id_review_type, $id_review)
 
-List of ProgramVersionLocaleImages
+List of ProgramReviewTypeReviewImages
 
-List of ProgramVersionLocaleImages
+List of ProgramReviewTypeReviewImages
 
 ### Example
 ```php
@@ -151,16 +151,16 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_application
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesImagesApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsReviewTypesReviewsImagesApi();
 $id_program = "id_program_example"; // string | Program UUID or numeric ID
-$id_version = "id_version_example"; // string | Program version identifier
-$id_locale = "id_locale_example"; // string | Locale identifier
+$id_review_type = "id_review_type_example"; // string | Review owner type
+$id_review = "id_review_example"; // string | Review identifier as UUID
 
 try {
-    $result = $api_instance->findProgramVersionLocaleImage($id_program, $id_version, $id_locale);
+    $result = $api_instance->findProgramReviewTypeReviewImage($id_program, $id_review_type, $id_review);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ProgramsVersionsLocalesImagesApi->findProgramVersionLocaleImage: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProgramsReviewTypesReviewsImagesApi->findProgramReviewTypeReviewImage: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -170,12 +170,12 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_program** | **string**| Program UUID or numeric ID |
- **id_version** | **string**| Program version identifier |
- **id_locale** | **string**| Locale identifier |
+ **id_review_type** | **string**| Review owner type |
+ **id_review** | **string**| Review identifier as UUID |
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleImage[]**](../Model/ProgramVersionLocaleImage.md)
+[**\Softonic\CatalogApiSdk\Model\ProgramReviewTypeReviewImage[]**](../Model/ProgramReviewTypeReviewImage.md)
 
 ### Authorization
 
@@ -188,12 +188,12 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **readProgramVersionLocaleImage**
-> \Softonic\CatalogApiSdk\Model\ProgramVersionLocaleImage readProgramVersionLocaleImage($id_program, $id_version, $id_locale, $id_image)
+# **readProgramReviewTypeReviewImage**
+> \Softonic\CatalogApiSdk\Model\ProgramReviewTypeReviewImage readProgramReviewTypeReviewImage($id_program, $id_review_type, $id_review, $id_image)
 
-Fetches a single ProgramVersionLocaleImage
+Fetches a single ProgramReviewTypeReviewImage
 
-Fetches a single ProgramVersionLocaleImage
+Fetches a single ProgramReviewTypeReviewImage
 
 ### Example
 ```php
@@ -209,17 +209,17 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_application
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesImagesApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsReviewTypesReviewsImagesApi();
 $id_program = "id_program_example"; // string | Program UUID or numeric ID
-$id_version = "id_version_example"; // string | Program version identifier
-$id_locale = "id_locale_example"; // string | Locale identifier
+$id_review_type = "id_review_type_example"; // string | Review owner type
+$id_review = "id_review_example"; // string | Review identifier as UUID
 $id_image = "id_image_example"; // string | Image identifier in SHA1-Hash format
 
 try {
-    $result = $api_instance->readProgramVersionLocaleImage($id_program, $id_version, $id_locale, $id_image);
+    $result = $api_instance->readProgramReviewTypeReviewImage($id_program, $id_review_type, $id_review, $id_image);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ProgramsVersionsLocalesImagesApi->readProgramVersionLocaleImage: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProgramsReviewTypesReviewsImagesApi->readProgramReviewTypeReviewImage: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -229,13 +229,13 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_program** | **string**| Program UUID or numeric ID |
- **id_version** | **string**| Program version identifier |
- **id_locale** | **string**| Locale identifier |
+ **id_review_type** | **string**| Review owner type |
+ **id_review** | **string**| Review identifier as UUID |
  **id_image** | **string**| Image identifier in SHA1-Hash format |
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleImage**](../Model/ProgramVersionLocaleImage.md)
+[**\Softonic\CatalogApiSdk\Model\ProgramReviewTypeReviewImage**](../Model/ProgramReviewTypeReviewImage.md)
 
 ### Authorization
 
@@ -248,12 +248,12 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **replaceProgramVersionLocaleImage**
-> replaceProgramVersionLocaleImage($id_program, $id_version, $id_locale, $id_image, $body)
+# **replaceProgramReviewTypeReviewImage**
+> replaceProgramReviewTypeReviewImage($id_program, $id_review_type, $id_review, $id_image, $body)
 
-Entirely replaces a ProgramVersionLocaleImage
+Entirely replaces a ProgramReviewTypeReviewImage
 
-Entirely replaces a ProgramVersionLocaleImage
+Entirely replaces a ProgramReviewTypeReviewImage
 
 ### Example
 ```php
@@ -269,17 +269,17 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_application
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesImagesApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsReviewTypesReviewsImagesApi();
 $id_program = "id_program_example"; // string | Program UUID or numeric ID
-$id_version = "id_version_example"; // string | Program version identifier
-$id_locale = "id_locale_example"; // string | Locale identifier
+$id_review_type = "id_review_type_example"; // string | Review owner type
+$id_review = "id_review_example"; // string | Review identifier as UUID
 $id_image = "id_image_example"; // string | Image identifier in SHA1-Hash format
-$body = new \Softonic\CatalogApiSdk\Model\ProgramVersionLocaleImage(); // \Softonic\CatalogApiSdk\Model\ProgramVersionLocaleImage | 
+$body = new \Softonic\CatalogApiSdk\Model\ProgramReviewTypeReviewImage(); // \Softonic\CatalogApiSdk\Model\ProgramReviewTypeReviewImage | 
 
 try {
-    $api_instance->replaceProgramVersionLocaleImage($id_program, $id_version, $id_locale, $id_image, $body);
+    $api_instance->replaceProgramReviewTypeReviewImage($id_program, $id_review_type, $id_review, $id_image, $body);
 } catch (Exception $e) {
-    echo 'Exception when calling ProgramsVersionsLocalesImagesApi->replaceProgramVersionLocaleImage: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProgramsReviewTypesReviewsImagesApi->replaceProgramReviewTypeReviewImage: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -289,10 +289,10 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_program** | **string**| Program UUID or numeric ID |
- **id_version** | **string**| Program version identifier |
- **id_locale** | **string**| Locale identifier |
+ **id_review_type** | **string**| Review owner type |
+ **id_review** | **string**| Review identifier as UUID |
  **id_image** | **string**| Image identifier in SHA1-Hash format |
- **body** | [**\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleImage**](../Model/\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleImage.md)|  | [optional]
+ **body** | [**\Softonic\CatalogApiSdk\Model\ProgramReviewTypeReviewImage**](../Model/\Softonic\CatalogApiSdk\Model\ProgramReviewTypeReviewImage.md)|  | [optional]
 
 ### Return type
 
@@ -309,12 +309,12 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **updateProgramVersionLocaleImage**
-> updateProgramVersionLocaleImage($id_program, $id_version, $id_locale, $id_image, $body)
+# **updateProgramReviewTypeReviewImage**
+> updateProgramReviewTypeReviewImage($id_program, $id_review_type, $id_review, $id_image, $body)
 
-Partially updates a ProgramVersionLocaleImage
+Partially updates a ProgramReviewTypeReviewImage
 
-Partially updates a ProgramVersionLocaleImage
+Partially updates a ProgramReviewTypeReviewImage
 
 ### Example
 ```php
@@ -330,17 +330,17 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_application
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesImagesApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsReviewTypesReviewsImagesApi();
 $id_program = "id_program_example"; // string | Program UUID or numeric ID
-$id_version = "id_version_example"; // string | Program version identifier
-$id_locale = "id_locale_example"; // string | Locale identifier
+$id_review_type = "id_review_type_example"; // string | Review owner type
+$id_review = "id_review_example"; // string | Review identifier as UUID
 $id_image = "id_image_example"; // string | Image identifier in SHA1-Hash format
-$body = new \Softonic\CatalogApiSdk\Model\ProgramVersionLocaleImage(); // \Softonic\CatalogApiSdk\Model\ProgramVersionLocaleImage | 
+$body = new \Softonic\CatalogApiSdk\Model\ProgramReviewTypeReviewImage(); // \Softonic\CatalogApiSdk\Model\ProgramReviewTypeReviewImage | 
 
 try {
-    $api_instance->updateProgramVersionLocaleImage($id_program, $id_version, $id_locale, $id_image, $body);
+    $api_instance->updateProgramReviewTypeReviewImage($id_program, $id_review_type, $id_review, $id_image, $body);
 } catch (Exception $e) {
-    echo 'Exception when calling ProgramsVersionsLocalesImagesApi->updateProgramVersionLocaleImage: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProgramsReviewTypesReviewsImagesApi->updateProgramReviewTypeReviewImage: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -350,10 +350,10 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_program** | **string**| Program UUID or numeric ID |
- **id_version** | **string**| Program version identifier |
- **id_locale** | **string**| Locale identifier |
+ **id_review_type** | **string**| Review owner type |
+ **id_review** | **string**| Review identifier as UUID |
  **id_image** | **string**| Image identifier in SHA1-Hash format |
- **body** | [**\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleImage**](../Model/\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleImage.md)|  | [optional]
+ **body** | [**\Softonic\CatalogApiSdk\Model\ProgramReviewTypeReviewImage**](../Model/\Softonic\CatalogApiSdk\Model\ProgramReviewTypeReviewImage.md)|  | [optional]
 
 ### Return type
 
