@@ -241,16 +241,16 @@ class ProgramReviewTypeReviewImage implements ArrayAccess
         if (!in_array($this->container['type'], $allowed_values)) {
             $invalid_properties[] = "invalid value for 'type', must be one of #{allowed_values}.";
         }
-        if (!is_null(${{$this->container['priority']}}) && ($this->container['priority'] > 255.0)) {
+        if (!is_null($this->container['priority']) && ($this->container['priority'] > 255.0)) {
             $invalid_properties[] = "invalid value for 'priority', must be smaller than or equal to 255.0.";
         }
-        if (!is_null(${{$this->container['priority']}}) && ($this->container['priority'] < 0.0)) {
+        if (!is_null($this->container['priority']) && ($this->container['priority'] < 0.0)) {
             $invalid_properties[] = "invalid value for 'priority', must be bigger than or equal to 0.0.";
         }
-        if (!is_null(${{$this->container['caption']}}) && (strlen($this->container['caption']) > 200)) {
+        if (!is_null($this->container['caption']) && (strlen($this->container['caption']) > 200)) {
             $invalid_properties[] = "invalid value for 'caption', the character length must be smaller than or equal to 200.";
         }
-        if (!is_null(${{$this->container['caption']}}) && (strlen($this->container['caption']) < 1)) {
+        if (!is_null($this->container['caption']) && (strlen($this->container['caption']) < 1)) {
             $invalid_properties[] = "invalid value for 'caption', the character length must be bigger than or equal to 1.";
         }
         return $invalid_properties;

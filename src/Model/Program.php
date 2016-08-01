@@ -169,10 +169,10 @@ class Program implements ArrayAccess
         if ((strlen($this->container['id_program']) < 1)) {
             $invalid_properties[] = "invalid value for 'id_program', the character length must be bigger than or equal to 1.";
         }
-        if (!is_null(${{$this->container['id_developer']}}) && (strlen($this->container['id_developer']) > 100)) {
+        if (!is_null($this->container['id_developer']) && (strlen($this->container['id_developer']) > 100)) {
             $invalid_properties[] = "invalid value for 'id_developer', the character length must be smaller than or equal to 100.";
         }
-        if (!is_null(${{$this->container['id_developer']}}) && (strlen($this->container['id_developer']) < 1)) {
+        if (!is_null($this->container['id_developer']) && (strlen($this->container['id_developer']) < 1)) {
             $invalid_properties[] = "invalid value for 'id_developer', the character length must be bigger than or equal to 1.";
         }
         if ($this->container['id_origin'] === null) {

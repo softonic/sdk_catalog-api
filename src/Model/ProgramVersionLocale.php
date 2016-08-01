@@ -268,19 +268,19 @@ class ProgramVersionLocale implements ArrayAccess
         if (!in_array($this->container['status'], $allowed_values)) {
             $invalid_properties[] = "invalid value for 'status', must be one of #{allowed_values}.";
         }
-        if (!is_null(${{$this->container['id_editor']}}) && ($this->container['id_editor'] < 1.0)) {
+        if (!is_null($this->container['id_editor']) && ($this->container['id_editor'] < 1.0)) {
             $invalid_properties[] = "invalid value for 'id_editor', must be bigger than or equal to 1.0.";
         }
-        if (!is_null(${{$this->container['id_binary']}}) && (strlen($this->container['id_binary']) > 40)) {
+        if (!is_null($this->container['id_binary']) && (strlen($this->container['id_binary']) > 40)) {
             $invalid_properties[] = "invalid value for 'id_binary', the character length must be smaller than or equal to 40.";
         }
-        if (!is_null(${{$this->container['id_binary']}}) && (strlen($this->container['id_binary']) < 40)) {
+        if (!is_null($this->container['id_binary']) && (strlen($this->container['id_binary']) < 40)) {
             $invalid_properties[] = "invalid value for 'id_binary', the character length must be bigger than or equal to 40.";
         }
-        if (!is_null(${{$this->container['about_license']}}) && (strlen($this->container['about_license']) > 1200)) {
+        if (!is_null($this->container['about_license']) && (strlen($this->container['about_license']) > 1200)) {
             $invalid_properties[] = "invalid value for 'about_license', the character length must be smaller than or equal to 1200.";
         }
-        if (!is_null(${{$this->container['about_license']}}) && (strlen($this->container['about_license']) < 1)) {
+        if (!is_null($this->container['about_license']) && (strlen($this->container['about_license']) < 1)) {
             $invalid_properties[] = "invalid value for 'about_license', the character length must be bigger than or equal to 1.";
         }
         return $invalid_properties;

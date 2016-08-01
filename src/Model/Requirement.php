@@ -168,7 +168,7 @@ class Requirement implements ArrayAccess
         if ((strlen($this->container['name']) < 1)) {
             $invalid_properties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
         }
-        if (!is_null(${{$this->container['description']}}) && (strlen($this->container['description']) > 255)) {
+        if (!is_null($this->container['description']) && (strlen($this->container['description']) > 255)) {
             $invalid_properties[] = "invalid value for 'description', the character length must be smaller than or equal to 255.";
         }
         return $invalid_properties;

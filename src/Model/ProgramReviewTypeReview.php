@@ -272,10 +272,10 @@ class ProgramReviewTypeReview implements ArrayAccess
         if ((strlen($this->container['id_review']) < 36)) {
             $invalid_properties[] = "invalid value for 'id_review', the character length must be bigger than or equal to 36.";
         }
-        if (!is_null(${{$this->container['public_note']}}) && (strlen($this->container['public_note']) > 3500)) {
+        if (!is_null($this->container['public_note']) && (strlen($this->container['public_note']) > 3500)) {
             $invalid_properties[] = "invalid value for 'public_note', the character length must be smaller than or equal to 3500.";
         }
-        if (!is_null(${{$this->container['public_note']}}) && (strlen($this->container['public_note']) < 1)) {
+        if (!is_null($this->container['public_note']) && (strlen($this->container['public_note']) < 1)) {
             $invalid_properties[] = "invalid value for 'public_note', the character length must be bigger than or equal to 1.";
         }
         if ($this->container['type'] === null) {
@@ -294,40 +294,40 @@ class ProgramReviewTypeReview implements ArrayAccess
         if (($this->container['rating'] < 0.0)) {
             $invalid_properties[] = "invalid value for 'rating', must be bigger than or equal to 0.0.";
         }
-        if (!is_null(${{$this->container['headline']}}) && (strlen($this->container['headline']) > 2000)) {
+        if (!is_null($this->container['headline']) && (strlen($this->container['headline']) > 2000)) {
             $invalid_properties[] = "invalid value for 'headline', the character length must be smaller than or equal to 2000.";
         }
-        if (!is_null(${{$this->container['headline']}}) && (strlen($this->container['headline']) < 1)) {
+        if (!is_null($this->container['headline']) && (strlen($this->container['headline']) < 1)) {
             $invalid_properties[] = "invalid value for 'headline', the character length must be bigger than or equal to 1.";
         }
-        if (!is_null(${{$this->container['lead']}}) && (strlen($this->container['lead']) > 2000)) {
+        if (!is_null($this->container['lead']) && (strlen($this->container['lead']) > 2000)) {
             $invalid_properties[] = "invalid value for 'lead', the character length must be smaller than or equal to 2000.";
         }
-        if (!is_null(${{$this->container['lead']}}) && (strlen($this->container['lead']) < 1)) {
+        if (!is_null($this->container['lead']) && (strlen($this->container['lead']) < 1)) {
             $invalid_properties[] = "invalid value for 'lead', the character length must be bigger than or equal to 1.";
         }
-        if (!is_null(${{$this->container['body']}}) && (strlen($this->container['body']) > 65535)) {
+        if (!is_null($this->container['body']) && (strlen($this->container['body']) > 65535)) {
             $invalid_properties[] = "invalid value for 'body', the character length must be smaller than or equal to 65535.";
         }
-        if (!is_null(${{$this->container['body']}}) && (strlen($this->container['body']) < 1)) {
+        if (!is_null($this->container['body']) && (strlen($this->container['body']) < 1)) {
             $invalid_properties[] = "invalid value for 'body', the character length must be bigger than or equal to 1.";
         }
-        if (!is_null(${{$this->container['conclusion']}}) && (strlen($this->container['conclusion']) > 4000)) {
+        if (!is_null($this->container['conclusion']) && (strlen($this->container['conclusion']) > 4000)) {
             $invalid_properties[] = "invalid value for 'conclusion', the character length must be smaller than or equal to 4000.";
         }
-        if (!is_null(${{$this->container['conclusion']}}) && (strlen($this->container['conclusion']) < 1)) {
+        if (!is_null($this->container['conclusion']) && (strlen($this->container['conclusion']) < 1)) {
             $invalid_properties[] = "invalid value for 'conclusion', the character length must be bigger than or equal to 1.";
         }
-        if (!is_null(${{$this->container['changes']}}) && (strlen($this->container['changes']) > 10500)) {
+        if (!is_null($this->container['changes']) && (strlen($this->container['changes']) > 10500)) {
             $invalid_properties[] = "invalid value for 'changes', the character length must be smaller than or equal to 10500.";
         }
-        if (!is_null(${{$this->container['changes']}}) && (strlen($this->container['changes']) < 1)) {
+        if (!is_null($this->container['changes']) && (strlen($this->container['changes']) < 1)) {
             $invalid_properties[] = "invalid value for 'changes', the character length must be bigger than or equal to 1.";
         }
-        if (!is_null(${{$this->container['extra']}}) && (strlen($this->container['extra']) > 65535)) {
+        if (!is_null($this->container['extra']) && (strlen($this->container['extra']) > 65535)) {
             $invalid_properties[] = "invalid value for 'extra', the character length must be smaller than or equal to 65535.";
         }
-        if (!is_null(${{$this->container['extra']}}) && (strlen($this->container['extra']) < 1)) {
+        if (!is_null($this->container['extra']) && (strlen($this->container['extra']) < 1)) {
             $invalid_properties[] = "invalid value for 'extra', the character length must be bigger than or equal to 1.";
         }
         return $invalid_properties;

@@ -196,7 +196,7 @@ class ProgramRequirementGroupRequirement implements ArrayAccess
         if ((strlen($this->container['value']) < 1)) {
             $invalid_properties[] = "invalid value for 'value', the character length must be bigger than or equal to 1.";
         }
-        if (!is_null(${{$this->container['units']}}) && (strlen($this->container['units']) > 40)) {
+        if (!is_null($this->container['units']) && (strlen($this->container['units']) > 40)) {
             $invalid_properties[] = "invalid value for 'units', the character length must be smaller than or equal to 40.";
         }
         return $invalid_properties;
