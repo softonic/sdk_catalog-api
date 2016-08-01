@@ -39,13 +39,14 @@
  * Please update the test case below to test the model.
  */
 
-namespace Softonic\CatalogApiSdk\Model;
+namespace Softonic\CatalogApiSdk;
 
 /**
  * ProgramRequirementGroupRequirementTest Class Doc Comment
  *
- * @category    Class
- * @description ProgramRequirementGroupRequirement
+ * @category    Class */
+// * @description ProgramRequirementGroupRequirement
+/**
  * @package     Softonic\CatalogApiSdk
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -55,7 +56,7 @@ class ProgramRequirementGroupRequirementTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
-     * Setup before running each test case
+     * Setup before running any test case
      */
     public static function setUpBeforeClass()
     {
@@ -63,7 +64,23 @@ class ProgramRequirementGroupRequirementTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Setup before running each test case
+     */
+    public function setUp()
+    {
+
+    }
+
+    /**
      * Clean up after running each test case
+     */
+    public function tearDown()
+    {
+
+    }
+
+    /**
+     * Clean up after running all test cases
      */
     public static function tearDownAfterClass()
     {
@@ -77,4 +94,45 @@ class ProgramRequirementGroupRequirementTest extends \PHPUnit_Framework_TestCase
     {
 
     }
+
+    /**
+     * Test attribute "id_program"
+     */
+    public function testPropertyIdProgram()
+    {
+
+    }
+
+    /**
+     * Test attribute "id_requirements_group"
+     */
+    public function testPropertyIdRequirementsGroup()
+    {
+
+    }
+
+    /**
+     * Test attribute "id_requirement"
+     */
+    public function testPropertyIdRequirement()
+    {
+
+    }
+
+    /**
+     * Test attribute "value"
+     */
+    public function testPropertyValue()
+    {
+
+    }
+
+    /**
+     * Test attribute "units"
+     */
+    public function testPropertyUnits()
+    {
+
+    }
+
 }

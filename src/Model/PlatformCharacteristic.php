@@ -46,7 +46,8 @@ use \ArrayAccess;
 /**
  * PlatformCharacteristic Class Doc Comment
  *
- * @category    Class
+ * @category    Class */
+/** 
  * @package     Softonic\CatalogApiSdk
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -152,28 +153,28 @@ class PlatformCharacteristic implements ArrayAccess
         if ($this->container['id_platform'] === null) {
             $invalid_properties[] = "'id_platform' can't be null";
         }
-        if (strlen($this->container['id_platform']) > 20) {
+        if ((strlen($this->container['id_platform']) > 20)) {
             $invalid_properties[] = "invalid value for 'id_platform', the character length must be smaller than or equal to 20.";
         }
-        if (strlen($this->container['id_platform']) < 1) {
+        if ((strlen($this->container['id_platform']) < 1)) {
             $invalid_properties[] = "invalid value for 'id_platform', the character length must be bigger than or equal to 1.";
         }
         if ($this->container['id_characteristic'] === null) {
             $invalid_properties[] = "'id_characteristic' can't be null";
         }
-        if (strlen($this->container['id_characteristic']) > 40) {
+        if ((strlen($this->container['id_characteristic']) > 40)) {
             $invalid_properties[] = "invalid value for 'id_characteristic', the character length must be smaller than or equal to 40.";
         }
-        if (strlen($this->container['id_characteristic']) < 1) {
+        if ((strlen($this->container['id_characteristic']) < 1)) {
             $invalid_properties[] = "invalid value for 'id_characteristic', the character length must be bigger than or equal to 1.";
         }
         if ($this->container['name'] === null) {
             $invalid_properties[] = "'name' can't be null";
         }
-        if (strlen($this->container['name']) > 40) {
+        if ((strlen($this->container['name']) > 40)) {
             $invalid_properties[] = "invalid value for 'name', the character length must be smaller than or equal to 40.";
         }
-        if (strlen($this->container['name']) < 1) {
+        if ((strlen($this->container['name']) < 1)) {
             $invalid_properties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
         }
         return $invalid_properties;
@@ -356,3 +357,5 @@ class PlatformCharacteristic implements ArrayAccess
         return json_encode(\Softonic\CatalogApiSdk\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
+
+

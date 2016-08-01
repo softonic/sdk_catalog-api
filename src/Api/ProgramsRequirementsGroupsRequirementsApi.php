@@ -105,12 +105,11 @@ class ProgramsRequirementsGroupsRequirementsApi
     /**
      * Operation createProgramRequirementGroupRequirement
      *
-     * Creates a new ProgramRequirementGroupRequirement.
+     * Creates a new ProgramRequirementGroupRequirement
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_requirements_group Requirements group UUID (required)
      * @param \Softonic\CatalogApiSdk\Model\ProgramRequirementGroupRequirement $body  (optional)
-     *
      * @return void
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -120,45 +119,40 @@ class ProgramsRequirementsGroupsRequirementsApi
         return $response;
     }
 
-
     /**
      * Operation createProgramRequirementGroupRequirementWithHttpInfo
      *
-     * Creates a new ProgramRequirementGroupRequirement.
+     * Creates a new ProgramRequirementGroupRequirement
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_requirements_group Requirements group UUID (required)
      * @param \Softonic\CatalogApiSdk\Model\ProgramRequirementGroupRequirement $body  (optional)
-     *
      * @return Array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function createProgramRequirementGroupRequirementWithHttpInfo($id_program, $id_requirements_group, $body = null)
     {
-        
         // verify the required parameter 'id_program' is set
         if ($id_program === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_program when calling createProgramRequirementGroupRequirement');
         }
-        if (strlen($id_program) > 36) {
+        if ((strlen($id_program) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsRequirementsGroupsRequirementsApi.createProgramRequirementGroupRequirement, must be smaller than or equal to 36.');
         }
-        if (strlen($id_program) < 36) {
+        if ((strlen($id_program) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsRequirementsGroupsRequirementsApi.createProgramRequirementGroupRequirement, must be bigger than or equal to 36.');
         }
-
 
         // verify the required parameter 'id_requirements_group' is set
         if ($id_requirements_group === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_requirements_group when calling createProgramRequirementGroupRequirement');
         }
-        if (strlen($id_requirements_group) > 36) {
+        if ((strlen($id_requirements_group) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_requirements_group" when calling ProgramsRequirementsGroupsRequirementsApi.createProgramRequirementGroupRequirement, must be smaller than or equal to 36.');
         }
-        if (strlen($id_requirements_group) < 36) {
+        if ((strlen($id_requirements_group) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_requirements_group" when calling ProgramsRequirementsGroupsRequirementsApi.createProgramRequirementGroupRequirement, must be bigger than or equal to 36.');
         }
-
 
         // parse inputs
         $resourcePath = "/programs/{id_program}/requirements-groups/{id_requirements_group}/requirements";
@@ -172,8 +166,6 @@ class ProgramsRequirementsGroupsRequirementsApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_program !== null) {
             $resourcePath = str_replace(
@@ -181,7 +173,8 @@ class ProgramsRequirementsGroupsRequirementsApi
                 $this->apiClient->getSerializer()->toPathValue($id_program),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_requirements_group !== null) {
             $resourcePath = str_replace(
                 "{" . "id_requirements_group" . "}",
@@ -192,7 +185,6 @@ class ProgramsRequirementsGroupsRequirementsApi
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
-        
         // body params
         $_tempBody = null;
         if (isset($body)) {
@@ -205,22 +197,18 @@ class ProgramsRequirementsGroupsRequirementsApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -232,7 +220,9 @@ class ProgramsRequirementsGroupsRequirementsApi
                 'POST',
                 $queryParams,
                 $httpBody,
-                $headerParams
+                $headerParams,
+                null,
+                '/programs/{id_program}/requirements-groups/{id_requirements_group}/requirements'
             );
 
             return array(null, $statusCode, $httpHeader);
@@ -243,15 +233,15 @@ class ProgramsRequirementsGroupsRequirementsApi
             throw $e;
         }
     }
+
     /**
      * Operation deleteProgramRequirementGroupRequirement
      *
-     * Deletes a ProgramRequirementGroupRequirement.
+     * Deletes a ProgramRequirementGroupRequirement
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_requirements_group Requirements group UUID (required)
      * @param string $id_requirement Requirement ID (required)
-     *
      * @return void
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -261,57 +251,51 @@ class ProgramsRequirementsGroupsRequirementsApi
         return $response;
     }
 
-
     /**
      * Operation deleteProgramRequirementGroupRequirementWithHttpInfo
      *
-     * Deletes a ProgramRequirementGroupRequirement.
+     * Deletes a ProgramRequirementGroupRequirement
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_requirements_group Requirements group UUID (required)
      * @param string $id_requirement Requirement ID (required)
-     *
      * @return Array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function deleteProgramRequirementGroupRequirementWithHttpInfo($id_program, $id_requirements_group, $id_requirement)
     {
-        
         // verify the required parameter 'id_program' is set
         if ($id_program === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_program when calling deleteProgramRequirementGroupRequirement');
         }
-        if (strlen($id_program) > 36) {
+        if ((strlen($id_program) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsRequirementsGroupsRequirementsApi.deleteProgramRequirementGroupRequirement, must be smaller than or equal to 36.');
         }
-        if (strlen($id_program) < 36) {
+        if ((strlen($id_program) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsRequirementsGroupsRequirementsApi.deleteProgramRequirementGroupRequirement, must be bigger than or equal to 36.');
         }
-
 
         // verify the required parameter 'id_requirements_group' is set
         if ($id_requirements_group === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_requirements_group when calling deleteProgramRequirementGroupRequirement');
         }
-        if (strlen($id_requirements_group) > 36) {
+        if ((strlen($id_requirements_group) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_requirements_group" when calling ProgramsRequirementsGroupsRequirementsApi.deleteProgramRequirementGroupRequirement, must be smaller than or equal to 36.');
         }
-        if (strlen($id_requirements_group) < 36) {
+        if ((strlen($id_requirements_group) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_requirements_group" when calling ProgramsRequirementsGroupsRequirementsApi.deleteProgramRequirementGroupRequirement, must be bigger than or equal to 36.');
         }
-
 
         // verify the required parameter 'id_requirement' is set
         if ($id_requirement === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_requirement when calling deleteProgramRequirementGroupRequirement');
         }
-        if (strlen($id_requirement) > 12) {
+        if ((strlen($id_requirement) > 12)) {
             throw new \InvalidArgumentException('invalid length for "$id_requirement" when calling ProgramsRequirementsGroupsRequirementsApi.deleteProgramRequirementGroupRequirement, must be smaller than or equal to 12.');
         }
-        if (strlen($id_requirement) < 1) {
+        if ((strlen($id_requirement) < 1)) {
             throw new \InvalidArgumentException('invalid length for "$id_requirement" when calling ProgramsRequirementsGroupsRequirementsApi.deleteProgramRequirementGroupRequirement, must be bigger than or equal to 1.');
         }
-
 
         // parse inputs
         $resourcePath = "/programs/{id_program}/requirements-groups/{id_requirements_group}/requirements/{id_requirement}";
@@ -325,8 +309,6 @@ class ProgramsRequirementsGroupsRequirementsApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_program !== null) {
             $resourcePath = str_replace(
@@ -334,14 +316,16 @@ class ProgramsRequirementsGroupsRequirementsApi
                 $this->apiClient->getSerializer()->toPathValue($id_program),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_requirements_group !== null) {
             $resourcePath = str_replace(
                 "{" . "id_requirements_group" . "}",
                 $this->apiClient->getSerializer()->toPathValue($id_requirements_group),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_requirement !== null) {
             $resourcePath = str_replace(
                 "{" . "id_requirement" . "}",
@@ -353,30 +337,24 @@ class ProgramsRequirementsGroupsRequirementsApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-        
-
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -388,7 +366,9 @@ class ProgramsRequirementsGroupsRequirementsApi
                 'DELETE',
                 $queryParams,
                 $httpBody,
-                $headerParams
+                $headerParams,
+                null,
+                '/programs/{id_program}/requirements-groups/{id_requirements_group}/requirements/{id_requirement}'
             );
 
             return array(null, $statusCode, $httpHeader);
@@ -399,14 +379,14 @@ class ProgramsRequirementsGroupsRequirementsApi
             throw $e;
         }
     }
+
     /**
      * Operation findProgramRequirementGroupRequirement
      *
-     * List of ProgramRequirementGroupRequirements.
+     * List of ProgramRequirementGroupRequirements
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_requirements_group Requirements group UUID (required)
-     *
      * @return \Softonic\CatalogApiSdk\Model\ProgramRequirementGroupRequirement[]
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -416,44 +396,39 @@ class ProgramsRequirementsGroupsRequirementsApi
         return $response;
     }
 
-
     /**
      * Operation findProgramRequirementGroupRequirementWithHttpInfo
      *
-     * List of ProgramRequirementGroupRequirements.
+     * List of ProgramRequirementGroupRequirements
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_requirements_group Requirements group UUID (required)
-     *
      * @return Array of \Softonic\CatalogApiSdk\Model\ProgramRequirementGroupRequirement[], HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function findProgramRequirementGroupRequirementWithHttpInfo($id_program, $id_requirements_group)
     {
-        
         // verify the required parameter 'id_program' is set
         if ($id_program === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_program when calling findProgramRequirementGroupRequirement');
         }
-        if (strlen($id_program) > 36) {
+        if ((strlen($id_program) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsRequirementsGroupsRequirementsApi.findProgramRequirementGroupRequirement, must be smaller than or equal to 36.');
         }
-        if (strlen($id_program) < 36) {
+        if ((strlen($id_program) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsRequirementsGroupsRequirementsApi.findProgramRequirementGroupRequirement, must be bigger than or equal to 36.');
         }
-
 
         // verify the required parameter 'id_requirements_group' is set
         if ($id_requirements_group === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_requirements_group when calling findProgramRequirementGroupRequirement');
         }
-        if (strlen($id_requirements_group) > 36) {
+        if ((strlen($id_requirements_group) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_requirements_group" when calling ProgramsRequirementsGroupsRequirementsApi.findProgramRequirementGroupRequirement, must be smaller than or equal to 36.');
         }
-        if (strlen($id_requirements_group) < 36) {
+        if ((strlen($id_requirements_group) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_requirements_group" when calling ProgramsRequirementsGroupsRequirementsApi.findProgramRequirementGroupRequirement, must be bigger than or equal to 36.');
         }
-
 
         // parse inputs
         $resourcePath = "/programs/{id_program}/requirements-groups/{id_requirements_group}/requirements";
@@ -467,8 +442,6 @@ class ProgramsRequirementsGroupsRequirementsApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_program !== null) {
             $resourcePath = str_replace(
@@ -476,7 +449,8 @@ class ProgramsRequirementsGroupsRequirementsApi
                 $this->apiClient->getSerializer()->toPathValue($id_program),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_requirements_group !== null) {
             $resourcePath = str_replace(
                 "{" . "id_requirements_group" . "}",
@@ -488,30 +462,24 @@ class ProgramsRequirementsGroupsRequirementsApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-        
-
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -524,7 +492,8 @@ class ProgramsRequirementsGroupsRequirementsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\CatalogApiSdk\Model\ProgramRequirementGroupRequirement[]'
+                '\Softonic\CatalogApiSdk\Model\ProgramRequirementGroupRequirement[]',
+                '/programs/{id_program}/requirements-groups/{id_requirements_group}/requirements'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Model\ProgramRequirementGroupRequirement[]', $httpHeader), $statusCode, $httpHeader);
@@ -539,15 +508,15 @@ class ProgramsRequirementsGroupsRequirementsApi
             throw $e;
         }
     }
+
     /**
      * Operation readProgramRequirementGroupRequirement
      *
-     * Fetches a single ProgramRequirementGroupRequirement.
+     * Fetches a single ProgramRequirementGroupRequirement
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_requirements_group Requirements group UUID (required)
      * @param string $id_requirement Requirement ID (required)
-     *
      * @return \Softonic\CatalogApiSdk\Model\ProgramRequirementGroupRequirement
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -557,57 +526,51 @@ class ProgramsRequirementsGroupsRequirementsApi
         return $response;
     }
 
-
     /**
      * Operation readProgramRequirementGroupRequirementWithHttpInfo
      *
-     * Fetches a single ProgramRequirementGroupRequirement.
+     * Fetches a single ProgramRequirementGroupRequirement
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_requirements_group Requirements group UUID (required)
      * @param string $id_requirement Requirement ID (required)
-     *
      * @return Array of \Softonic\CatalogApiSdk\Model\ProgramRequirementGroupRequirement, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function readProgramRequirementGroupRequirementWithHttpInfo($id_program, $id_requirements_group, $id_requirement)
     {
-        
         // verify the required parameter 'id_program' is set
         if ($id_program === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_program when calling readProgramRequirementGroupRequirement');
         }
-        if (strlen($id_program) > 36) {
+        if ((strlen($id_program) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsRequirementsGroupsRequirementsApi.readProgramRequirementGroupRequirement, must be smaller than or equal to 36.');
         }
-        if (strlen($id_program) < 36) {
+        if ((strlen($id_program) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsRequirementsGroupsRequirementsApi.readProgramRequirementGroupRequirement, must be bigger than or equal to 36.');
         }
-
 
         // verify the required parameter 'id_requirements_group' is set
         if ($id_requirements_group === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_requirements_group when calling readProgramRequirementGroupRequirement');
         }
-        if (strlen($id_requirements_group) > 36) {
+        if ((strlen($id_requirements_group) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_requirements_group" when calling ProgramsRequirementsGroupsRequirementsApi.readProgramRequirementGroupRequirement, must be smaller than or equal to 36.');
         }
-        if (strlen($id_requirements_group) < 36) {
+        if ((strlen($id_requirements_group) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_requirements_group" when calling ProgramsRequirementsGroupsRequirementsApi.readProgramRequirementGroupRequirement, must be bigger than or equal to 36.');
         }
-
 
         // verify the required parameter 'id_requirement' is set
         if ($id_requirement === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_requirement when calling readProgramRequirementGroupRequirement');
         }
-        if (strlen($id_requirement) > 12) {
+        if ((strlen($id_requirement) > 12)) {
             throw new \InvalidArgumentException('invalid length for "$id_requirement" when calling ProgramsRequirementsGroupsRequirementsApi.readProgramRequirementGroupRequirement, must be smaller than or equal to 12.');
         }
-        if (strlen($id_requirement) < 1) {
+        if ((strlen($id_requirement) < 1)) {
             throw new \InvalidArgumentException('invalid length for "$id_requirement" when calling ProgramsRequirementsGroupsRequirementsApi.readProgramRequirementGroupRequirement, must be bigger than or equal to 1.');
         }
-
 
         // parse inputs
         $resourcePath = "/programs/{id_program}/requirements-groups/{id_requirements_group}/requirements/{id_requirement}";
@@ -621,8 +584,6 @@ class ProgramsRequirementsGroupsRequirementsApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_program !== null) {
             $resourcePath = str_replace(
@@ -630,14 +591,16 @@ class ProgramsRequirementsGroupsRequirementsApi
                 $this->apiClient->getSerializer()->toPathValue($id_program),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_requirements_group !== null) {
             $resourcePath = str_replace(
                 "{" . "id_requirements_group" . "}",
                 $this->apiClient->getSerializer()->toPathValue($id_requirements_group),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_requirement !== null) {
             $resourcePath = str_replace(
                 "{" . "id_requirement" . "}",
@@ -649,30 +612,24 @@ class ProgramsRequirementsGroupsRequirementsApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-        
-
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -685,7 +642,8 @@ class ProgramsRequirementsGroupsRequirementsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\CatalogApiSdk\Model\ProgramRequirementGroupRequirement'
+                '\Softonic\CatalogApiSdk\Model\ProgramRequirementGroupRequirement',
+                '/programs/{id_program}/requirements-groups/{id_requirements_group}/requirements/{id_requirement}'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Model\ProgramRequirementGroupRequirement', $httpHeader), $statusCode, $httpHeader);
@@ -700,16 +658,16 @@ class ProgramsRequirementsGroupsRequirementsApi
             throw $e;
         }
     }
+
     /**
      * Operation replaceProgramRequirementGroupRequirement
      *
-     * Entirely replaces a ProgramRequirementGroupRequirement.
+     * Entirely replaces a ProgramRequirementGroupRequirement
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_requirements_group Requirements group UUID (required)
      * @param string $id_requirement Requirement ID (required)
      * @param \Softonic\CatalogApiSdk\Model\ProgramRequirementGroupRequirement $body  (optional)
-     *
      * @return void
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -719,58 +677,52 @@ class ProgramsRequirementsGroupsRequirementsApi
         return $response;
     }
 
-
     /**
      * Operation replaceProgramRequirementGroupRequirementWithHttpInfo
      *
-     * Entirely replaces a ProgramRequirementGroupRequirement.
+     * Entirely replaces a ProgramRequirementGroupRequirement
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_requirements_group Requirements group UUID (required)
      * @param string $id_requirement Requirement ID (required)
      * @param \Softonic\CatalogApiSdk\Model\ProgramRequirementGroupRequirement $body  (optional)
-     *
      * @return Array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function replaceProgramRequirementGroupRequirementWithHttpInfo($id_program, $id_requirements_group, $id_requirement, $body = null)
     {
-        
         // verify the required parameter 'id_program' is set
         if ($id_program === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_program when calling replaceProgramRequirementGroupRequirement');
         }
-        if (strlen($id_program) > 36) {
+        if ((strlen($id_program) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsRequirementsGroupsRequirementsApi.replaceProgramRequirementGroupRequirement, must be smaller than or equal to 36.');
         }
-        if (strlen($id_program) < 36) {
+        if ((strlen($id_program) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsRequirementsGroupsRequirementsApi.replaceProgramRequirementGroupRequirement, must be bigger than or equal to 36.');
         }
-
 
         // verify the required parameter 'id_requirements_group' is set
         if ($id_requirements_group === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_requirements_group when calling replaceProgramRequirementGroupRequirement');
         }
-        if (strlen($id_requirements_group) > 36) {
+        if ((strlen($id_requirements_group) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_requirements_group" when calling ProgramsRequirementsGroupsRequirementsApi.replaceProgramRequirementGroupRequirement, must be smaller than or equal to 36.');
         }
-        if (strlen($id_requirements_group) < 36) {
+        if ((strlen($id_requirements_group) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_requirements_group" when calling ProgramsRequirementsGroupsRequirementsApi.replaceProgramRequirementGroupRequirement, must be bigger than or equal to 36.');
         }
-
 
         // verify the required parameter 'id_requirement' is set
         if ($id_requirement === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_requirement when calling replaceProgramRequirementGroupRequirement');
         }
-        if (strlen($id_requirement) > 12) {
+        if ((strlen($id_requirement) > 12)) {
             throw new \InvalidArgumentException('invalid length for "$id_requirement" when calling ProgramsRequirementsGroupsRequirementsApi.replaceProgramRequirementGroupRequirement, must be smaller than or equal to 12.');
         }
-        if (strlen($id_requirement) < 1) {
+        if ((strlen($id_requirement) < 1)) {
             throw new \InvalidArgumentException('invalid length for "$id_requirement" when calling ProgramsRequirementsGroupsRequirementsApi.replaceProgramRequirementGroupRequirement, must be bigger than or equal to 1.');
         }
-
 
         // parse inputs
         $resourcePath = "/programs/{id_program}/requirements-groups/{id_requirements_group}/requirements/{id_requirement}";
@@ -784,8 +736,6 @@ class ProgramsRequirementsGroupsRequirementsApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_program !== null) {
             $resourcePath = str_replace(
@@ -793,14 +743,16 @@ class ProgramsRequirementsGroupsRequirementsApi
                 $this->apiClient->getSerializer()->toPathValue($id_program),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_requirements_group !== null) {
             $resourcePath = str_replace(
                 "{" . "id_requirements_group" . "}",
                 $this->apiClient->getSerializer()->toPathValue($id_requirements_group),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_requirement !== null) {
             $resourcePath = str_replace(
                 "{" . "id_requirement" . "}",
@@ -811,7 +763,6 @@ class ProgramsRequirementsGroupsRequirementsApi
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
-        
         // body params
         $_tempBody = null;
         if (isset($body)) {
@@ -824,22 +775,18 @@ class ProgramsRequirementsGroupsRequirementsApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -851,7 +798,9 @@ class ProgramsRequirementsGroupsRequirementsApi
                 'PUT',
                 $queryParams,
                 $httpBody,
-                $headerParams
+                $headerParams,
+                null,
+                '/programs/{id_program}/requirements-groups/{id_requirements_group}/requirements/{id_requirement}'
             );
 
             return array(null, $statusCode, $httpHeader);
@@ -862,16 +811,16 @@ class ProgramsRequirementsGroupsRequirementsApi
             throw $e;
         }
     }
+
     /**
      * Operation updateProgramRequirementGroupRequirement
      *
-     * Partially updates a ProgramRequirementGroupRequirement.
+     * Partially updates a ProgramRequirementGroupRequirement
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_requirements_group Requirements group UUID (required)
      * @param string $id_requirement Requirement ID (required)
      * @param \Softonic\CatalogApiSdk\Model\ProgramRequirementGroupRequirement $body  (optional)
-     *
      * @return void
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -881,58 +830,52 @@ class ProgramsRequirementsGroupsRequirementsApi
         return $response;
     }
 
-
     /**
      * Operation updateProgramRequirementGroupRequirementWithHttpInfo
      *
-     * Partially updates a ProgramRequirementGroupRequirement.
+     * Partially updates a ProgramRequirementGroupRequirement
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_requirements_group Requirements group UUID (required)
      * @param string $id_requirement Requirement ID (required)
      * @param \Softonic\CatalogApiSdk\Model\ProgramRequirementGroupRequirement $body  (optional)
-     *
      * @return Array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function updateProgramRequirementGroupRequirementWithHttpInfo($id_program, $id_requirements_group, $id_requirement, $body = null)
     {
-        
         // verify the required parameter 'id_program' is set
         if ($id_program === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_program when calling updateProgramRequirementGroupRequirement');
         }
-        if (strlen($id_program) > 36) {
+        if ((strlen($id_program) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsRequirementsGroupsRequirementsApi.updateProgramRequirementGroupRequirement, must be smaller than or equal to 36.');
         }
-        if (strlen($id_program) < 36) {
+        if ((strlen($id_program) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsRequirementsGroupsRequirementsApi.updateProgramRequirementGroupRequirement, must be bigger than or equal to 36.');
         }
-
 
         // verify the required parameter 'id_requirements_group' is set
         if ($id_requirements_group === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_requirements_group when calling updateProgramRequirementGroupRequirement');
         }
-        if (strlen($id_requirements_group) > 36) {
+        if ((strlen($id_requirements_group) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_requirements_group" when calling ProgramsRequirementsGroupsRequirementsApi.updateProgramRequirementGroupRequirement, must be smaller than or equal to 36.');
         }
-        if (strlen($id_requirements_group) < 36) {
+        if ((strlen($id_requirements_group) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_requirements_group" when calling ProgramsRequirementsGroupsRequirementsApi.updateProgramRequirementGroupRequirement, must be bigger than or equal to 36.');
         }
-
 
         // verify the required parameter 'id_requirement' is set
         if ($id_requirement === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_requirement when calling updateProgramRequirementGroupRequirement');
         }
-        if (strlen($id_requirement) > 12) {
+        if ((strlen($id_requirement) > 12)) {
             throw new \InvalidArgumentException('invalid length for "$id_requirement" when calling ProgramsRequirementsGroupsRequirementsApi.updateProgramRequirementGroupRequirement, must be smaller than or equal to 12.');
         }
-        if (strlen($id_requirement) < 1) {
+        if ((strlen($id_requirement) < 1)) {
             throw new \InvalidArgumentException('invalid length for "$id_requirement" when calling ProgramsRequirementsGroupsRequirementsApi.updateProgramRequirementGroupRequirement, must be bigger than or equal to 1.');
         }
-
 
         // parse inputs
         $resourcePath = "/programs/{id_program}/requirements-groups/{id_requirements_group}/requirements/{id_requirement}";
@@ -946,8 +889,6 @@ class ProgramsRequirementsGroupsRequirementsApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_program !== null) {
             $resourcePath = str_replace(
@@ -955,14 +896,16 @@ class ProgramsRequirementsGroupsRequirementsApi
                 $this->apiClient->getSerializer()->toPathValue($id_program),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_requirements_group !== null) {
             $resourcePath = str_replace(
                 "{" . "id_requirements_group" . "}",
                 $this->apiClient->getSerializer()->toPathValue($id_requirements_group),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_requirement !== null) {
             $resourcePath = str_replace(
                 "{" . "id_requirement" . "}",
@@ -973,7 +916,6 @@ class ProgramsRequirementsGroupsRequirementsApi
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
-        
         // body params
         $_tempBody = null;
         if (isset($body)) {
@@ -986,22 +928,18 @@ class ProgramsRequirementsGroupsRequirementsApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -1013,7 +951,9 @@ class ProgramsRequirementsGroupsRequirementsApi
                 'PATCH',
                 $queryParams,
                 $httpBody,
-                $headerParams
+                $headerParams,
+                null,
+                '/programs/{id_program}/requirements-groups/{id_requirements_group}/requirements/{id_requirement}'
             );
 
             return array(null, $statusCode, $httpHeader);
@@ -1024,4 +964,5 @@ class ProgramsRequirementsGroupsRequirementsApi
             throw $e;
         }
     }
+
 }

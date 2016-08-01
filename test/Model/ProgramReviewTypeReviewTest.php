@@ -39,13 +39,14 @@
  * Please update the test case below to test the model.
  */
 
-namespace Softonic\CatalogApiSdk\Model;
+namespace Softonic\CatalogApiSdk;
 
 /**
  * ProgramReviewTypeReviewTest Class Doc Comment
  *
- * @category    Class
- * @description ProgramReviewTypeReview
+ * @category    Class */
+// * @description ProgramReviewTypeReview
+/**
  * @package     Softonic\CatalogApiSdk
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -55,7 +56,7 @@ class ProgramReviewTypeReviewTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
-     * Setup before running each test case
+     * Setup before running any test case
      */
     public static function setUpBeforeClass()
     {
@@ -63,7 +64,23 @@ class ProgramReviewTypeReviewTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Setup before running each test case
+     */
+    public function setUp()
+    {
+
+    }
+
+    /**
      * Clean up after running each test case
+     */
+    public function tearDown()
+    {
+
+    }
+
+    /**
+     * Clean up after running all test cases
      */
     public static function tearDownAfterClass()
     {
@@ -77,4 +94,117 @@ class ProgramReviewTypeReviewTest extends \PHPUnit_Framework_TestCase
     {
 
     }
+
+    /**
+     * Test attribute "id_program"
+     */
+    public function testPropertyIdProgram()
+    {
+
+    }
+
+    /**
+     * Test attribute "id_review_type"
+     */
+    public function testPropertyIdReviewType()
+    {
+
+    }
+
+    /**
+     * Test attribute "id_review"
+     */
+    public function testPropertyIdReview()
+    {
+
+    }
+
+    /**
+     * Test attribute "public_note"
+     */
+    public function testPropertyPublicNote()
+    {
+
+    }
+
+    /**
+     * Test attribute "type"
+     */
+    public function testPropertyType()
+    {
+
+    }
+
+    /**
+     * Test attribute "rating"
+     */
+    public function testPropertyRating()
+    {
+
+    }
+
+    /**
+     * Test attribute "headline"
+     */
+    public function testPropertyHeadline()
+    {
+
+    }
+
+    /**
+     * Test attribute "lead"
+     */
+    public function testPropertyLead()
+    {
+
+    }
+
+    /**
+     * Test attribute "body"
+     */
+    public function testPropertyBody()
+    {
+
+    }
+
+    /**
+     * Test attribute "conclusion"
+     */
+    public function testPropertyConclusion()
+    {
+
+    }
+
+    /**
+     * Test attribute "changes"
+     */
+    public function testPropertyChanges()
+    {
+
+    }
+
+    /**
+     * Test attribute "extra"
+     */
+    public function testPropertyExtra()
+    {
+
+    }
+
+    /**
+     * Test attribute "pros"
+     */
+    public function testPropertyPros()
+    {
+
+    }
+
+    /**
+     * Test attribute "cons"
+     */
+    public function testPropertyCons()
+    {
+
+    }
+
 }

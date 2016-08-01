@@ -46,7 +46,8 @@ use \ArrayAccess;
 /**
  * ProgramReviewTypeReviewImage Class Doc Comment
  *
- * @category    Class
+ * @category    Class */
+/** 
  * @package     Softonic\CatalogApiSdk
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -202,10 +203,10 @@ class ProgramReviewTypeReviewImage implements ArrayAccess
         if ($this->container['id_program'] === null) {
             $invalid_properties[] = "'id_program' can't be null";
         }
-        if (strlen($this->container['id_program']) > 36) {
+        if ((strlen($this->container['id_program']) > 36)) {
             $invalid_properties[] = "invalid value for 'id_program', the character length must be smaller than or equal to 36.";
         }
-        if (strlen($this->container['id_program']) < 36) {
+        if ((strlen($this->container['id_program']) < 36)) {
             $invalid_properties[] = "invalid value for 'id_program', the character length must be bigger than or equal to 36.";
         }
         if ($this->container['id_review_type'] === null) {
@@ -218,19 +219,19 @@ class ProgramReviewTypeReviewImage implements ArrayAccess
         if ($this->container['id_review'] === null) {
             $invalid_properties[] = "'id_review' can't be null";
         }
-        if (strlen($this->container['id_review']) > 36) {
+        if ((strlen($this->container['id_review']) > 36)) {
             $invalid_properties[] = "invalid value for 'id_review', the character length must be smaller than or equal to 36.";
         }
-        if (strlen($this->container['id_review']) < 36) {
+        if ((strlen($this->container['id_review']) < 36)) {
             $invalid_properties[] = "invalid value for 'id_review', the character length must be bigger than or equal to 36.";
         }
         if ($this->container['id_image'] === null) {
             $invalid_properties[] = "'id_image' can't be null";
         }
-        if (strlen($this->container['id_image']) > 40) {
+        if ((strlen($this->container['id_image']) > 40)) {
             $invalid_properties[] = "invalid value for 'id_image', the character length must be smaller than or equal to 40.";
         }
-        if (strlen($this->container['id_image']) < 40) {
+        if ((strlen($this->container['id_image']) < 40)) {
             $invalid_properties[] = "invalid value for 'id_image', the character length must be bigger than or equal to 40.";
         }
         if ($this->container['type'] === null) {
@@ -240,16 +241,16 @@ class ProgramReviewTypeReviewImage implements ArrayAccess
         if (!in_array($this->container['type'], $allowed_values)) {
             $invalid_properties[] = "invalid value for 'type', must be one of #{allowed_values}.";
         }
-        if ($this->container['priority'] > 255.0) {
+        if (!is_null(${{$this->container['priority']}}) && ($this->container['priority'] > 255.0)) {
             $invalid_properties[] = "invalid value for 'priority', must be smaller than or equal to 255.0.";
         }
-        if ($this->container['priority'] < 0.0) {
+        if (!is_null(${{$this->container['priority']}}) && ($this->container['priority'] < 0.0)) {
             $invalid_properties[] = "invalid value for 'priority', must be bigger than or equal to 0.0.";
         }
-        if (strlen($this->container['caption']) > 200) {
+        if (!is_null(${{$this->container['caption']}}) && (strlen($this->container['caption']) > 200)) {
             $invalid_properties[] = "invalid value for 'caption', the character length must be smaller than or equal to 200.";
         }
-        if (strlen($this->container['caption']) < 1) {
+        if (!is_null(${{$this->container['caption']}}) && (strlen($this->container['caption']) < 1)) {
             $invalid_properties[] = "invalid value for 'caption', the character length must be bigger than or equal to 1.";
         }
         return $invalid_properties;
@@ -563,3 +564,5 @@ class ProgramReviewTypeReviewImage implements ArrayAccess
         return json_encode(\Softonic\CatalogApiSdk\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
+
+

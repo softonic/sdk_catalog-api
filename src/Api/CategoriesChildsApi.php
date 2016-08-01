@@ -105,11 +105,10 @@ class CategoriesChildsApi
     /**
      * Operation createCategoryChild
      *
-     * Creates a new CategoryChild.
+     * Creates a new CategoryChild
      *
      * @param string $id_category Parent category identifier (required)
      * @param \Softonic\CatalogApiSdk\Model\CategoryChild $body  (optional)
-     *
      * @return void
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -119,32 +118,28 @@ class CategoriesChildsApi
         return $response;
     }
 
-
     /**
      * Operation createCategoryChildWithHttpInfo
      *
-     * Creates a new CategoryChild.
+     * Creates a new CategoryChild
      *
      * @param string $id_category Parent category identifier (required)
      * @param \Softonic\CatalogApiSdk\Model\CategoryChild $body  (optional)
-     *
      * @return Array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function createCategoryChildWithHttpInfo($id_category, $body = null)
     {
-        
         // verify the required parameter 'id_category' is set
         if ($id_category === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_category when calling createCategoryChild');
         }
-        if (strlen($id_category) > 40) {
+        if ((strlen($id_category) > 40)) {
             throw new \InvalidArgumentException('invalid length for "$id_category" when calling CategoriesChildsApi.createCategoryChild, must be smaller than or equal to 40.');
         }
-        if (strlen($id_category) < 1) {
+        if ((strlen($id_category) < 1)) {
             throw new \InvalidArgumentException('invalid length for "$id_category" when calling CategoriesChildsApi.createCategoryChild, must be bigger than or equal to 1.');
         }
-
 
         // parse inputs
         $resourcePath = "/categories/{id_category}/childs";
@@ -158,8 +153,6 @@ class CategoriesChildsApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_category !== null) {
             $resourcePath = str_replace(
@@ -171,7 +164,6 @@ class CategoriesChildsApi
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
-        
         // body params
         $_tempBody = null;
         if (isset($body)) {
@@ -184,22 +176,18 @@ class CategoriesChildsApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -211,7 +199,9 @@ class CategoriesChildsApi
                 'POST',
                 $queryParams,
                 $httpBody,
-                $headerParams
+                $headerParams,
+                null,
+                '/categories/{id_category}/childs'
             );
 
             return array(null, $statusCode, $httpHeader);
@@ -222,13 +212,13 @@ class CategoriesChildsApi
             throw $e;
         }
     }
+
     /**
      * Operation findCategoryChild
      *
-     * List of CategoryChilds.
+     * List of CategoryChilds
      *
      * @param string $id_category Parent category identifier (required)
-     *
      * @return \Softonic\CatalogApiSdk\Model\CategoryChild[]
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -238,31 +228,27 @@ class CategoriesChildsApi
         return $response;
     }
 
-
     /**
      * Operation findCategoryChildWithHttpInfo
      *
-     * List of CategoryChilds.
+     * List of CategoryChilds
      *
      * @param string $id_category Parent category identifier (required)
-     *
      * @return Array of \Softonic\CatalogApiSdk\Model\CategoryChild[], HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function findCategoryChildWithHttpInfo($id_category)
     {
-        
         // verify the required parameter 'id_category' is set
         if ($id_category === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_category when calling findCategoryChild');
         }
-        if (strlen($id_category) > 40) {
+        if ((strlen($id_category) > 40)) {
             throw new \InvalidArgumentException('invalid length for "$id_category" when calling CategoriesChildsApi.findCategoryChild, must be smaller than or equal to 40.');
         }
-        if (strlen($id_category) < 1) {
+        if ((strlen($id_category) < 1)) {
             throw new \InvalidArgumentException('invalid length for "$id_category" when calling CategoriesChildsApi.findCategoryChild, must be bigger than or equal to 1.');
         }
-
 
         // parse inputs
         $resourcePath = "/categories/{id_category}/childs";
@@ -276,8 +262,6 @@ class CategoriesChildsApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_category !== null) {
             $resourcePath = str_replace(
@@ -290,30 +274,24 @@ class CategoriesChildsApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-        
-
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -326,7 +304,8 @@ class CategoriesChildsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\CatalogApiSdk\Model\CategoryChild[]'
+                '\Softonic\CatalogApiSdk\Model\CategoryChild[]',
+                '/categories/{id_category}/childs'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Model\CategoryChild[]', $httpHeader), $statusCode, $httpHeader);
@@ -341,14 +320,14 @@ class CategoriesChildsApi
             throw $e;
         }
     }
+
     /**
      * Operation readCategoryChild
      *
-     * Fetches a single CategoryChild.
+     * Fetches a single CategoryChild
      *
      * @param string $id_category Parent category identifier (required)
      * @param string $id_child Child category identifier (required)
-     *
      * @return \Softonic\CatalogApiSdk\Model\CategoryChild
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -358,44 +337,39 @@ class CategoriesChildsApi
         return $response;
     }
 
-
     /**
      * Operation readCategoryChildWithHttpInfo
      *
-     * Fetches a single CategoryChild.
+     * Fetches a single CategoryChild
      *
      * @param string $id_category Parent category identifier (required)
      * @param string $id_child Child category identifier (required)
-     *
      * @return Array of \Softonic\CatalogApiSdk\Model\CategoryChild, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function readCategoryChildWithHttpInfo($id_category, $id_child)
     {
-        
         // verify the required parameter 'id_category' is set
         if ($id_category === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_category when calling readCategoryChild');
         }
-        if (strlen($id_category) > 40) {
+        if ((strlen($id_category) > 40)) {
             throw new \InvalidArgumentException('invalid length for "$id_category" when calling CategoriesChildsApi.readCategoryChild, must be smaller than or equal to 40.');
         }
-        if (strlen($id_category) < 1) {
+        if ((strlen($id_category) < 1)) {
             throw new \InvalidArgumentException('invalid length for "$id_category" when calling CategoriesChildsApi.readCategoryChild, must be bigger than or equal to 1.');
         }
-
 
         // verify the required parameter 'id_child' is set
         if ($id_child === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_child when calling readCategoryChild');
         }
-        if (strlen($id_child) > 40) {
+        if ((strlen($id_child) > 40)) {
             throw new \InvalidArgumentException('invalid length for "$id_child" when calling CategoriesChildsApi.readCategoryChild, must be smaller than or equal to 40.');
         }
-        if (strlen($id_child) < 1) {
+        if ((strlen($id_child) < 1)) {
             throw new \InvalidArgumentException('invalid length for "$id_child" when calling CategoriesChildsApi.readCategoryChild, must be bigger than or equal to 1.');
         }
-
 
         // parse inputs
         $resourcePath = "/categories/{id_category}/childs/{id_child}";
@@ -409,8 +383,6 @@ class CategoriesChildsApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_category !== null) {
             $resourcePath = str_replace(
@@ -418,7 +390,8 @@ class CategoriesChildsApi
                 $this->apiClient->getSerializer()->toPathValue($id_category),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_child !== null) {
             $resourcePath = str_replace(
                 "{" . "id_child" . "}",
@@ -430,30 +403,24 @@ class CategoriesChildsApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-        
-
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -466,7 +433,8 @@ class CategoriesChildsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\CatalogApiSdk\Model\CategoryChild'
+                '\Softonic\CatalogApiSdk\Model\CategoryChild',
+                '/categories/{id_category}/childs/{id_child}'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Model\CategoryChild', $httpHeader), $statusCode, $httpHeader);
@@ -481,4 +449,5 @@ class CategoriesChildsApi
             throw $e;
         }
     }
+
 }

@@ -38,7 +38,7 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace Softonic\CatalogApiSdk\Api;
+namespace Softonic\CatalogApiSdk;
 
 use \Softonic\CatalogApiSdk\Configuration;
 use \Softonic\CatalogApiSdk\ApiClient;
@@ -58,7 +58,7 @@ class ProgramsVersionsPlatformVersionsApiTest extends \PHPUnit_Framework_TestCas
 {
 
     /**
-     * Setup before running each test case
+     * Setup before running any test cases
      */
     public static function setUpBeforeClass()
     {
@@ -66,7 +66,23 @@ class ProgramsVersionsPlatformVersionsApiTest extends \PHPUnit_Framework_TestCas
     }
 
     /**
+     * Setup before running each test case
+     */
+    public function setUp()
+    {
+
+    }
+
+    /**
      * Clean up after running each test case
+     */
+    public function tearDown()
+    {
+
+    }
+
+    /**
+     * Clean up after running all test cases
      */
     public static function tearDownAfterClass()
     {
@@ -83,6 +99,7 @@ class ProgramsVersionsPlatformVersionsApiTest extends \PHPUnit_Framework_TestCas
     {
 
     }
+
     /**
      * Test case for deleteProgramVersionPlatformVersion
      *
@@ -93,6 +110,7 @@ class ProgramsVersionsPlatformVersionsApiTest extends \PHPUnit_Framework_TestCas
     {
 
     }
+
     /**
      * Test case for findProgramVersionPlatformVersion
      *
@@ -103,6 +121,7 @@ class ProgramsVersionsPlatformVersionsApiTest extends \PHPUnit_Framework_TestCas
     {
 
     }
+
     /**
      * Test case for readProgramVersionPlatformVersion
      *
@@ -113,6 +132,7 @@ class ProgramsVersionsPlatformVersionsApiTest extends \PHPUnit_Framework_TestCas
     {
 
     }
+
     /**
      * Test case for replaceProgramVersionPlatformVersion
      *
@@ -123,4 +143,5 @@ class ProgramsVersionsPlatformVersionsApiTest extends \PHPUnit_Framework_TestCas
     {
 
     }
+
 }

@@ -105,12 +105,11 @@ class ProgramsVersionsLocalesApi
     /**
      * Operation createProgramVersionLocale
      *
-     * Creates a new ProgramVersionLocale.
+     * Creates a new ProgramVersionLocale
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_version Program version identifier (required)
      * @param \Softonic\CatalogApiSdk\Model\ProgramVersionLocale $body  (optional)
-     *
      * @return void
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -120,45 +119,40 @@ class ProgramsVersionsLocalesApi
         return $response;
     }
 
-
     /**
      * Operation createProgramVersionLocaleWithHttpInfo
      *
-     * Creates a new ProgramVersionLocale.
+     * Creates a new ProgramVersionLocale
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_version Program version identifier (required)
      * @param \Softonic\CatalogApiSdk\Model\ProgramVersionLocale $body  (optional)
-     *
      * @return Array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function createProgramVersionLocaleWithHttpInfo($id_program, $id_version, $body = null)
     {
-        
         // verify the required parameter 'id_program' is set
         if ($id_program === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_program when calling createProgramVersionLocale');
         }
-        if (strlen($id_program) > 36) {
+        if ((strlen($id_program) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsLocalesApi.createProgramVersionLocale, must be smaller than or equal to 36.');
         }
-        if (strlen($id_program) < 36) {
+        if ((strlen($id_program) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsLocalesApi.createProgramVersionLocale, must be bigger than or equal to 36.');
         }
-
 
         // verify the required parameter 'id_version' is set
         if ($id_version === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_version when calling createProgramVersionLocale');
         }
-        if (strlen($id_version) > 60) {
+        if ((strlen($id_version) > 60)) {
             throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsLocalesApi.createProgramVersionLocale, must be smaller than or equal to 60.');
         }
-        if (strlen($id_version) < 1) {
+        if ((strlen($id_version) < 1)) {
             throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsLocalesApi.createProgramVersionLocale, must be bigger than or equal to 1.');
         }
-
 
         // parse inputs
         $resourcePath = "/programs/{id_program}/versions/{id_version}/locales";
@@ -172,8 +166,6 @@ class ProgramsVersionsLocalesApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_program !== null) {
             $resourcePath = str_replace(
@@ -181,7 +173,8 @@ class ProgramsVersionsLocalesApi
                 $this->apiClient->getSerializer()->toPathValue($id_program),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_version !== null) {
             $resourcePath = str_replace(
                 "{" . "id_version" . "}",
@@ -192,7 +185,6 @@ class ProgramsVersionsLocalesApi
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
-        
         // body params
         $_tempBody = null;
         if (isset($body)) {
@@ -205,22 +197,18 @@ class ProgramsVersionsLocalesApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -232,7 +220,9 @@ class ProgramsVersionsLocalesApi
                 'POST',
                 $queryParams,
                 $httpBody,
-                $headerParams
+                $headerParams,
+                null,
+                '/programs/{id_program}/versions/{id_version}/locales'
             );
 
             return array(null, $statusCode, $httpHeader);
@@ -243,15 +233,15 @@ class ProgramsVersionsLocalesApi
             throw $e;
         }
     }
+
     /**
      * Operation deleteProgramVersionLocale
      *
-     * Deletes a ProgramVersionLocale.
+     * Deletes a ProgramVersionLocale
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_version Program version identifier (required)
      * @param string $id_locale Locale identifier (required)
-     *
      * @return void
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -261,57 +251,51 @@ class ProgramsVersionsLocalesApi
         return $response;
     }
 
-
     /**
      * Operation deleteProgramVersionLocaleWithHttpInfo
      *
-     * Deletes a ProgramVersionLocale.
+     * Deletes a ProgramVersionLocale
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_version Program version identifier (required)
      * @param string $id_locale Locale identifier (required)
-     *
      * @return Array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function deleteProgramVersionLocaleWithHttpInfo($id_program, $id_version, $id_locale)
     {
-        
         // verify the required parameter 'id_program' is set
         if ($id_program === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_program when calling deleteProgramVersionLocale');
         }
-        if (strlen($id_program) > 36) {
+        if ((strlen($id_program) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsLocalesApi.deleteProgramVersionLocale, must be smaller than or equal to 36.');
         }
-        if (strlen($id_program) < 36) {
+        if ((strlen($id_program) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsLocalesApi.deleteProgramVersionLocale, must be bigger than or equal to 36.');
         }
-
 
         // verify the required parameter 'id_version' is set
         if ($id_version === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_version when calling deleteProgramVersionLocale');
         }
-        if (strlen($id_version) > 60) {
+        if ((strlen($id_version) > 60)) {
             throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsLocalesApi.deleteProgramVersionLocale, must be smaller than or equal to 60.');
         }
-        if (strlen($id_version) < 1) {
+        if ((strlen($id_version) < 1)) {
             throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsLocalesApi.deleteProgramVersionLocale, must be bigger than or equal to 1.');
         }
-
 
         // verify the required parameter 'id_locale' is set
         if ($id_locale === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_locale when calling deleteProgramVersionLocale');
         }
-        if (strlen($id_locale) > 2) {
+        if ((strlen($id_locale) > 2)) {
             throw new \InvalidArgumentException('invalid length for "$id_locale" when calling ProgramsVersionsLocalesApi.deleteProgramVersionLocale, must be smaller than or equal to 2.');
         }
-        if (strlen($id_locale) < 2) {
+        if ((strlen($id_locale) < 2)) {
             throw new \InvalidArgumentException('invalid length for "$id_locale" when calling ProgramsVersionsLocalesApi.deleteProgramVersionLocale, must be bigger than or equal to 2.');
         }
-
 
         // parse inputs
         $resourcePath = "/programs/{id_program}/versions/{id_version}/locales/{id_locale}";
@@ -325,8 +309,6 @@ class ProgramsVersionsLocalesApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_program !== null) {
             $resourcePath = str_replace(
@@ -334,14 +316,16 @@ class ProgramsVersionsLocalesApi
                 $this->apiClient->getSerializer()->toPathValue($id_program),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_version !== null) {
             $resourcePath = str_replace(
                 "{" . "id_version" . "}",
                 $this->apiClient->getSerializer()->toPathValue($id_version),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_locale !== null) {
             $resourcePath = str_replace(
                 "{" . "id_locale" . "}",
@@ -353,30 +337,24 @@ class ProgramsVersionsLocalesApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-        
-
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -388,7 +366,9 @@ class ProgramsVersionsLocalesApi
                 'DELETE',
                 $queryParams,
                 $httpBody,
-                $headerParams
+                $headerParams,
+                null,
+                '/programs/{id_program}/versions/{id_version}/locales/{id_locale}'
             );
 
             return array(null, $statusCode, $httpHeader);
@@ -399,14 +379,14 @@ class ProgramsVersionsLocalesApi
             throw $e;
         }
     }
+
     /**
      * Operation findProgramVersionLocale
      *
-     * List of ProgramVersionLocales.
+     * List of ProgramVersionLocales
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_version Program version identifier (required)
-     *
      * @return \Softonic\CatalogApiSdk\Model\ProgramVersionLocale[]
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -416,44 +396,39 @@ class ProgramsVersionsLocalesApi
         return $response;
     }
 
-
     /**
      * Operation findProgramVersionLocaleWithHttpInfo
      *
-     * List of ProgramVersionLocales.
+     * List of ProgramVersionLocales
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_version Program version identifier (required)
-     *
      * @return Array of \Softonic\CatalogApiSdk\Model\ProgramVersionLocale[], HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function findProgramVersionLocaleWithHttpInfo($id_program, $id_version)
     {
-        
         // verify the required parameter 'id_program' is set
         if ($id_program === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_program when calling findProgramVersionLocale');
         }
-        if (strlen($id_program) > 36) {
+        if ((strlen($id_program) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsLocalesApi.findProgramVersionLocale, must be smaller than or equal to 36.');
         }
-        if (strlen($id_program) < 36) {
+        if ((strlen($id_program) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsLocalesApi.findProgramVersionLocale, must be bigger than or equal to 36.');
         }
-
 
         // verify the required parameter 'id_version' is set
         if ($id_version === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_version when calling findProgramVersionLocale');
         }
-        if (strlen($id_version) > 60) {
+        if ((strlen($id_version) > 60)) {
             throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsLocalesApi.findProgramVersionLocale, must be smaller than or equal to 60.');
         }
-        if (strlen($id_version) < 1) {
+        if ((strlen($id_version) < 1)) {
             throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsLocalesApi.findProgramVersionLocale, must be bigger than or equal to 1.');
         }
-
 
         // parse inputs
         $resourcePath = "/programs/{id_program}/versions/{id_version}/locales";
@@ -467,8 +442,6 @@ class ProgramsVersionsLocalesApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_program !== null) {
             $resourcePath = str_replace(
@@ -476,7 +449,8 @@ class ProgramsVersionsLocalesApi
                 $this->apiClient->getSerializer()->toPathValue($id_program),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_version !== null) {
             $resourcePath = str_replace(
                 "{" . "id_version" . "}",
@@ -488,30 +462,24 @@ class ProgramsVersionsLocalesApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-        
-
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -524,7 +492,8 @@ class ProgramsVersionsLocalesApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\CatalogApiSdk\Model\ProgramVersionLocale[]'
+                '\Softonic\CatalogApiSdk\Model\ProgramVersionLocale[]',
+                '/programs/{id_program}/versions/{id_version}/locales'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Model\ProgramVersionLocale[]', $httpHeader), $statusCode, $httpHeader);
@@ -539,15 +508,15 @@ class ProgramsVersionsLocalesApi
             throw $e;
         }
     }
+
     /**
      * Operation readProgramVersionLocale
      *
-     * Fetches a single ProgramVersionLocale.
+     * Fetches a single ProgramVersionLocale
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_version Program version identifier (required)
      * @param string $id_locale Locale identifier (required)
-     *
      * @return \Softonic\CatalogApiSdk\Model\ProgramVersionLocale
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -557,57 +526,51 @@ class ProgramsVersionsLocalesApi
         return $response;
     }
 
-
     /**
      * Operation readProgramVersionLocaleWithHttpInfo
      *
-     * Fetches a single ProgramVersionLocale.
+     * Fetches a single ProgramVersionLocale
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_version Program version identifier (required)
      * @param string $id_locale Locale identifier (required)
-     *
      * @return Array of \Softonic\CatalogApiSdk\Model\ProgramVersionLocale, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function readProgramVersionLocaleWithHttpInfo($id_program, $id_version, $id_locale)
     {
-        
         // verify the required parameter 'id_program' is set
         if ($id_program === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_program when calling readProgramVersionLocale');
         }
-        if (strlen($id_program) > 36) {
+        if ((strlen($id_program) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsLocalesApi.readProgramVersionLocale, must be smaller than or equal to 36.');
         }
-        if (strlen($id_program) < 36) {
+        if ((strlen($id_program) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsLocalesApi.readProgramVersionLocale, must be bigger than or equal to 36.');
         }
-
 
         // verify the required parameter 'id_version' is set
         if ($id_version === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_version when calling readProgramVersionLocale');
         }
-        if (strlen($id_version) > 60) {
+        if ((strlen($id_version) > 60)) {
             throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsLocalesApi.readProgramVersionLocale, must be smaller than or equal to 60.');
         }
-        if (strlen($id_version) < 1) {
+        if ((strlen($id_version) < 1)) {
             throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsLocalesApi.readProgramVersionLocale, must be bigger than or equal to 1.');
         }
-
 
         // verify the required parameter 'id_locale' is set
         if ($id_locale === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_locale when calling readProgramVersionLocale');
         }
-        if (strlen($id_locale) > 2) {
+        if ((strlen($id_locale) > 2)) {
             throw new \InvalidArgumentException('invalid length for "$id_locale" when calling ProgramsVersionsLocalesApi.readProgramVersionLocale, must be smaller than or equal to 2.');
         }
-        if (strlen($id_locale) < 2) {
+        if ((strlen($id_locale) < 2)) {
             throw new \InvalidArgumentException('invalid length for "$id_locale" when calling ProgramsVersionsLocalesApi.readProgramVersionLocale, must be bigger than or equal to 2.');
         }
-
 
         // parse inputs
         $resourcePath = "/programs/{id_program}/versions/{id_version}/locales/{id_locale}";
@@ -621,8 +584,6 @@ class ProgramsVersionsLocalesApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_program !== null) {
             $resourcePath = str_replace(
@@ -630,14 +591,16 @@ class ProgramsVersionsLocalesApi
                 $this->apiClient->getSerializer()->toPathValue($id_program),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_version !== null) {
             $resourcePath = str_replace(
                 "{" . "id_version" . "}",
                 $this->apiClient->getSerializer()->toPathValue($id_version),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_locale !== null) {
             $resourcePath = str_replace(
                 "{" . "id_locale" . "}",
@@ -649,30 +612,24 @@ class ProgramsVersionsLocalesApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-        
-
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -685,7 +642,8 @@ class ProgramsVersionsLocalesApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\CatalogApiSdk\Model\ProgramVersionLocale'
+                '\Softonic\CatalogApiSdk\Model\ProgramVersionLocale',
+                '/programs/{id_program}/versions/{id_version}/locales/{id_locale}'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Model\ProgramVersionLocale', $httpHeader), $statusCode, $httpHeader);
@@ -700,16 +658,16 @@ class ProgramsVersionsLocalesApi
             throw $e;
         }
     }
+
     /**
      * Operation replaceProgramVersionLocale
      *
-     * Entirely replaces a ProgramVersionLocale.
+     * Entirely replaces a ProgramVersionLocale
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_version Program version identifier (required)
      * @param string $id_locale Locale identifier (required)
      * @param \Softonic\CatalogApiSdk\Model\ProgramVersionLocale $body  (optional)
-     *
      * @return void
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -719,58 +677,52 @@ class ProgramsVersionsLocalesApi
         return $response;
     }
 
-
     /**
      * Operation replaceProgramVersionLocaleWithHttpInfo
      *
-     * Entirely replaces a ProgramVersionLocale.
+     * Entirely replaces a ProgramVersionLocale
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_version Program version identifier (required)
      * @param string $id_locale Locale identifier (required)
      * @param \Softonic\CatalogApiSdk\Model\ProgramVersionLocale $body  (optional)
-     *
      * @return Array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function replaceProgramVersionLocaleWithHttpInfo($id_program, $id_version, $id_locale, $body = null)
     {
-        
         // verify the required parameter 'id_program' is set
         if ($id_program === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_program when calling replaceProgramVersionLocale');
         }
-        if (strlen($id_program) > 36) {
+        if ((strlen($id_program) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsLocalesApi.replaceProgramVersionLocale, must be smaller than or equal to 36.');
         }
-        if (strlen($id_program) < 36) {
+        if ((strlen($id_program) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsLocalesApi.replaceProgramVersionLocale, must be bigger than or equal to 36.');
         }
-
 
         // verify the required parameter 'id_version' is set
         if ($id_version === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_version when calling replaceProgramVersionLocale');
         }
-        if (strlen($id_version) > 60) {
+        if ((strlen($id_version) > 60)) {
             throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsLocalesApi.replaceProgramVersionLocale, must be smaller than or equal to 60.');
         }
-        if (strlen($id_version) < 1) {
+        if ((strlen($id_version) < 1)) {
             throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsLocalesApi.replaceProgramVersionLocale, must be bigger than or equal to 1.');
         }
-
 
         // verify the required parameter 'id_locale' is set
         if ($id_locale === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_locale when calling replaceProgramVersionLocale');
         }
-        if (strlen($id_locale) > 2) {
+        if ((strlen($id_locale) > 2)) {
             throw new \InvalidArgumentException('invalid length for "$id_locale" when calling ProgramsVersionsLocalesApi.replaceProgramVersionLocale, must be smaller than or equal to 2.');
         }
-        if (strlen($id_locale) < 2) {
+        if ((strlen($id_locale) < 2)) {
             throw new \InvalidArgumentException('invalid length for "$id_locale" when calling ProgramsVersionsLocalesApi.replaceProgramVersionLocale, must be bigger than or equal to 2.');
         }
-
 
         // parse inputs
         $resourcePath = "/programs/{id_program}/versions/{id_version}/locales/{id_locale}";
@@ -784,8 +736,6 @@ class ProgramsVersionsLocalesApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_program !== null) {
             $resourcePath = str_replace(
@@ -793,14 +743,16 @@ class ProgramsVersionsLocalesApi
                 $this->apiClient->getSerializer()->toPathValue($id_program),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_version !== null) {
             $resourcePath = str_replace(
                 "{" . "id_version" . "}",
                 $this->apiClient->getSerializer()->toPathValue($id_version),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_locale !== null) {
             $resourcePath = str_replace(
                 "{" . "id_locale" . "}",
@@ -811,7 +763,6 @@ class ProgramsVersionsLocalesApi
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
-        
         // body params
         $_tempBody = null;
         if (isset($body)) {
@@ -824,22 +775,18 @@ class ProgramsVersionsLocalesApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -851,7 +798,9 @@ class ProgramsVersionsLocalesApi
                 'PUT',
                 $queryParams,
                 $httpBody,
-                $headerParams
+                $headerParams,
+                null,
+                '/programs/{id_program}/versions/{id_version}/locales/{id_locale}'
             );
 
             return array(null, $statusCode, $httpHeader);
@@ -862,16 +811,16 @@ class ProgramsVersionsLocalesApi
             throw $e;
         }
     }
+
     /**
      * Operation updateProgramVersionLocale
      *
-     * Partially updates a ProgramVersionLocale.
+     * Partially updates a ProgramVersionLocale
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_version Program version identifier (required)
      * @param string $id_locale Locale identifier (required)
      * @param \Softonic\CatalogApiSdk\Model\ProgramVersionLocale $body  (optional)
-     *
      * @return void
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -881,58 +830,52 @@ class ProgramsVersionsLocalesApi
         return $response;
     }
 
-
     /**
      * Operation updateProgramVersionLocaleWithHttpInfo
      *
-     * Partially updates a ProgramVersionLocale.
+     * Partially updates a ProgramVersionLocale
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_version Program version identifier (required)
      * @param string $id_locale Locale identifier (required)
      * @param \Softonic\CatalogApiSdk\Model\ProgramVersionLocale $body  (optional)
-     *
      * @return Array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function updateProgramVersionLocaleWithHttpInfo($id_program, $id_version, $id_locale, $body = null)
     {
-        
         // verify the required parameter 'id_program' is set
         if ($id_program === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_program when calling updateProgramVersionLocale');
         }
-        if (strlen($id_program) > 36) {
+        if ((strlen($id_program) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsLocalesApi.updateProgramVersionLocale, must be smaller than or equal to 36.');
         }
-        if (strlen($id_program) < 36) {
+        if ((strlen($id_program) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsLocalesApi.updateProgramVersionLocale, must be bigger than or equal to 36.');
         }
-
 
         // verify the required parameter 'id_version' is set
         if ($id_version === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_version when calling updateProgramVersionLocale');
         }
-        if (strlen($id_version) > 60) {
+        if ((strlen($id_version) > 60)) {
             throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsLocalesApi.updateProgramVersionLocale, must be smaller than or equal to 60.');
         }
-        if (strlen($id_version) < 1) {
+        if ((strlen($id_version) < 1)) {
             throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsLocalesApi.updateProgramVersionLocale, must be bigger than or equal to 1.');
         }
-
 
         // verify the required parameter 'id_locale' is set
         if ($id_locale === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_locale when calling updateProgramVersionLocale');
         }
-        if (strlen($id_locale) > 2) {
+        if ((strlen($id_locale) > 2)) {
             throw new \InvalidArgumentException('invalid length for "$id_locale" when calling ProgramsVersionsLocalesApi.updateProgramVersionLocale, must be smaller than or equal to 2.');
         }
-        if (strlen($id_locale) < 2) {
+        if ((strlen($id_locale) < 2)) {
             throw new \InvalidArgumentException('invalid length for "$id_locale" when calling ProgramsVersionsLocalesApi.updateProgramVersionLocale, must be bigger than or equal to 2.');
         }
-
 
         // parse inputs
         $resourcePath = "/programs/{id_program}/versions/{id_version}/locales/{id_locale}";
@@ -946,8 +889,6 @@ class ProgramsVersionsLocalesApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_program !== null) {
             $resourcePath = str_replace(
@@ -955,14 +896,16 @@ class ProgramsVersionsLocalesApi
                 $this->apiClient->getSerializer()->toPathValue($id_program),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_version !== null) {
             $resourcePath = str_replace(
                 "{" . "id_version" . "}",
                 $this->apiClient->getSerializer()->toPathValue($id_version),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_locale !== null) {
             $resourcePath = str_replace(
                 "{" . "id_locale" . "}",
@@ -973,7 +916,6 @@ class ProgramsVersionsLocalesApi
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
-        
         // body params
         $_tempBody = null;
         if (isset($body)) {
@@ -986,22 +928,18 @@ class ProgramsVersionsLocalesApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -1013,7 +951,9 @@ class ProgramsVersionsLocalesApi
                 'PATCH',
                 $queryParams,
                 $httpBody,
-                $headerParams
+                $headerParams,
+                null,
+                '/programs/{id_program}/versions/{id_version}/locales/{id_locale}'
             );
 
             return array(null, $statusCode, $httpHeader);
@@ -1024,4 +964,5 @@ class ProgramsVersionsLocalesApi
             throw $e;
         }
     }
+
 }

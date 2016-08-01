@@ -46,7 +46,8 @@ use \ArrayAccess;
 /**
  * ProgramRequirementGroupRequirement Class Doc Comment
  *
- * @category    Class
+ * @category    Class */
+/** 
  * @package     Softonic\CatalogApiSdk
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -162,40 +163,40 @@ class ProgramRequirementGroupRequirement implements ArrayAccess
         if ($this->container['id_program'] === null) {
             $invalid_properties[] = "'id_program' can't be null";
         }
-        if (strlen($this->container['id_program']) > 36) {
+        if ((strlen($this->container['id_program']) > 36)) {
             $invalid_properties[] = "invalid value for 'id_program', the character length must be smaller than or equal to 36.";
         }
-        if (strlen($this->container['id_program']) < 36) {
+        if ((strlen($this->container['id_program']) < 36)) {
             $invalid_properties[] = "invalid value for 'id_program', the character length must be bigger than or equal to 36.";
         }
         if ($this->container['id_requirements_group'] === null) {
             $invalid_properties[] = "'id_requirements_group' can't be null";
         }
-        if (strlen($this->container['id_requirements_group']) > 36) {
+        if ((strlen($this->container['id_requirements_group']) > 36)) {
             $invalid_properties[] = "invalid value for 'id_requirements_group', the character length must be smaller than or equal to 36.";
         }
-        if (strlen($this->container['id_requirements_group']) < 36) {
+        if ((strlen($this->container['id_requirements_group']) < 36)) {
             $invalid_properties[] = "invalid value for 'id_requirements_group', the character length must be bigger than or equal to 36.";
         }
         if ($this->container['id_requirement'] === null) {
             $invalid_properties[] = "'id_requirement' can't be null";
         }
-        if (strlen($this->container['id_requirement']) > 12) {
+        if ((strlen($this->container['id_requirement']) > 12)) {
             $invalid_properties[] = "invalid value for 'id_requirement', the character length must be smaller than or equal to 12.";
         }
-        if (strlen($this->container['id_requirement']) < 1) {
+        if ((strlen($this->container['id_requirement']) < 1)) {
             $invalid_properties[] = "invalid value for 'id_requirement', the character length must be bigger than or equal to 1.";
         }
         if ($this->container['value'] === null) {
             $invalid_properties[] = "'value' can't be null";
         }
-        if (strlen($this->container['value']) > 40) {
+        if ((strlen($this->container['value']) > 40)) {
             $invalid_properties[] = "invalid value for 'value', the character length must be smaller than or equal to 40.";
         }
-        if (strlen($this->container['value']) < 1) {
+        if ((strlen($this->container['value']) < 1)) {
             $invalid_properties[] = "invalid value for 'value', the character length must be bigger than or equal to 1.";
         }
-        if (strlen($this->container['units']) > 40) {
+        if (!is_null(${{$this->container['units']}}) && (strlen($this->container['units']) > 40)) {
             $invalid_properties[] = "invalid value for 'units', the character length must be smaller than or equal to 40.";
         }
         return $invalid_properties;
@@ -441,3 +442,5 @@ class ProgramRequirementGroupRequirement implements ArrayAccess
         return json_encode(\Softonic\CatalogApiSdk\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
+
+

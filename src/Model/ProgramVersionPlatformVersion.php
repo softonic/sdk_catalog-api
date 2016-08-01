@@ -46,7 +46,8 @@ use \ArrayAccess;
 /**
  * ProgramVersionPlatformVersion Class Doc Comment
  *
- * @category    Class
+ * @category    Class */
+/** 
  * @package     Softonic\CatalogApiSdk
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -152,28 +153,28 @@ class ProgramVersionPlatformVersion implements ArrayAccess
         if ($this->container['id_program'] === null) {
             $invalid_properties[] = "'id_program' can't be null";
         }
-        if (strlen($this->container['id_program']) > 36) {
+        if ((strlen($this->container['id_program']) > 36)) {
             $invalid_properties[] = "invalid value for 'id_program', the character length must be smaller than or equal to 36.";
         }
-        if (strlen($this->container['id_program']) < 36) {
+        if ((strlen($this->container['id_program']) < 36)) {
             $invalid_properties[] = "invalid value for 'id_program', the character length must be bigger than or equal to 36.";
         }
         if ($this->container['id_version'] === null) {
             $invalid_properties[] = "'id_version' can't be null";
         }
-        if (strlen($this->container['id_version']) > 60) {
+        if ((strlen($this->container['id_version']) > 60)) {
             $invalid_properties[] = "invalid value for 'id_version', the character length must be smaller than or equal to 60.";
         }
-        if (strlen($this->container['id_version']) < 1) {
+        if ((strlen($this->container['id_version']) < 1)) {
             $invalid_properties[] = "invalid value for 'id_version', the character length must be bigger than or equal to 1.";
         }
         if ($this->container['id_platform_version'] === null) {
             $invalid_properties[] = "'id_platform_version' can't be null";
         }
-        if (strlen($this->container['id_platform_version']) > 40) {
+        if ((strlen($this->container['id_platform_version']) > 40)) {
             $invalid_properties[] = "invalid value for 'id_platform_version', the character length must be smaller than or equal to 40.";
         }
-        if (strlen($this->container['id_platform_version']) < 1) {
+        if ((strlen($this->container['id_platform_version']) < 1)) {
             $invalid_properties[] = "invalid value for 'id_platform_version', the character length must be bigger than or equal to 1.";
         }
         return $invalid_properties;
@@ -356,3 +357,5 @@ class ProgramVersionPlatformVersion implements ArrayAccess
         return json_encode(\Softonic\CatalogApiSdk\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
+
+

@@ -38,7 +38,7 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace Softonic\CatalogApiSdk\Api;
+namespace Softonic\CatalogApiSdk;
 
 use \Softonic\CatalogApiSdk\Configuration;
 use \Softonic\CatalogApiSdk\ApiClient;
@@ -58,7 +58,7 @@ class ProgramsVersionsLocalesUrlTypesApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
-     * Setup before running each test case
+     * Setup before running any test cases
      */
     public static function setUpBeforeClass()
     {
@@ -66,7 +66,23 @@ class ProgramsVersionsLocalesUrlTypesApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Setup before running each test case
+     */
+    public function setUp()
+    {
+
+    }
+
+    /**
      * Clean up after running each test case
+     */
+    public function tearDown()
+    {
+
+    }
+
+    /**
+     * Clean up after running all test cases
      */
     public static function tearDownAfterClass()
     {
@@ -83,6 +99,7 @@ class ProgramsVersionsLocalesUrlTypesApiTest extends \PHPUnit_Framework_TestCase
     {
 
     }
+
     /**
      * Test case for deleteProgramVersionLocaleUrlType
      *
@@ -93,6 +110,7 @@ class ProgramsVersionsLocalesUrlTypesApiTest extends \PHPUnit_Framework_TestCase
     {
 
     }
+
     /**
      * Test case for findProgramVersionLocaleUrlType
      *
@@ -103,6 +121,7 @@ class ProgramsVersionsLocalesUrlTypesApiTest extends \PHPUnit_Framework_TestCase
     {
 
     }
+
     /**
      * Test case for readProgramVersionLocaleUrlType
      *
@@ -113,6 +132,7 @@ class ProgramsVersionsLocalesUrlTypesApiTest extends \PHPUnit_Framework_TestCase
     {
 
     }
+
     /**
      * Test case for replaceProgramVersionLocaleUrlType
      *
@@ -123,6 +143,7 @@ class ProgramsVersionsLocalesUrlTypesApiTest extends \PHPUnit_Framework_TestCase
     {
 
     }
+
     /**
      * Test case for updateProgramVersionLocaleUrlType
      *
@@ -133,4 +154,5 @@ class ProgramsVersionsLocalesUrlTypesApiTest extends \PHPUnit_Framework_TestCase
     {
 
     }
+
 }

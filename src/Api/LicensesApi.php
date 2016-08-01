@@ -105,10 +105,9 @@ class LicensesApi
     /**
      * Operation createLicense
      *
-     * Creates a new License.
+     * Creates a new License
      *
      * @param \Softonic\CatalogApiSdk\Model\License $body  (optional)
-     *
      * @return void
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -118,20 +117,17 @@ class LicensesApi
         return $response;
     }
 
-
     /**
      * Operation createLicenseWithHttpInfo
      *
-     * Creates a new License.
+     * Creates a new License
      *
      * @param \Softonic\CatalogApiSdk\Model\License $body  (optional)
-     *
      * @return Array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function createLicenseWithHttpInfo($body = null)
     {
-        
         // parse inputs
         $resourcePath = "/licenses";
         $httpBody = '';
@@ -144,13 +140,9 @@ class LicensesApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
-        
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
-        
         // body params
         $_tempBody = null;
         if (isset($body)) {
@@ -163,22 +155,18 @@ class LicensesApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -190,7 +178,9 @@ class LicensesApi
                 'POST',
                 $queryParams,
                 $httpBody,
-                $headerParams
+                $headerParams,
+                null,
+                '/licenses'
             );
 
             return array(null, $statusCode, $httpHeader);
@@ -201,13 +191,13 @@ class LicensesApi
             throw $e;
         }
     }
+
     /**
      * Operation deleteLicense
      *
-     * Deletes a License.
+     * Deletes a License
      *
      * @param string $id_license License acronym. (required)
-     *
      * @return void
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -217,31 +207,27 @@ class LicensesApi
         return $response;
     }
 
-
     /**
      * Operation deleteLicenseWithHttpInfo
      *
-     * Deletes a License.
+     * Deletes a License
      *
      * @param string $id_license License acronym. (required)
-     *
      * @return Array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function deleteLicenseWithHttpInfo($id_license)
     {
-        
         // verify the required parameter 'id_license' is set
         if ($id_license === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_license when calling deleteLicense');
         }
-        if (strlen($id_license) > 3) {
+        if ((strlen($id_license) > 3)) {
             throw new \InvalidArgumentException('invalid length for "$id_license" when calling LicensesApi.deleteLicense, must be smaller than or equal to 3.');
         }
-        if (strlen($id_license) < 1) {
+        if ((strlen($id_license) < 1)) {
             throw new \InvalidArgumentException('invalid length for "$id_license" when calling LicensesApi.deleteLicense, must be bigger than or equal to 1.');
         }
-
 
         // parse inputs
         $resourcePath = "/licenses/{id_license}";
@@ -255,8 +241,6 @@ class LicensesApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_license !== null) {
             $resourcePath = str_replace(
@@ -269,30 +253,24 @@ class LicensesApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-        
-
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -304,7 +282,9 @@ class LicensesApi
                 'DELETE',
                 $queryParams,
                 $httpBody,
-                $headerParams
+                $headerParams,
+                null,
+                '/licenses/{id_license}'
             );
 
             return array(null, $statusCode, $httpHeader);
@@ -315,11 +295,11 @@ class LicensesApi
             throw $e;
         }
     }
+
     /**
      * Operation findLicense
      *
-     * List of Licenses.
-     *
+     * List of Licenses
      *
      * @return \Softonic\CatalogApiSdk\Model\License[]
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
@@ -330,19 +310,16 @@ class LicensesApi
         return $response;
     }
 
-
     /**
      * Operation findLicenseWithHttpInfo
      *
-     * List of Licenses.
-     *
+     * List of Licenses
      *
      * @return Array of \Softonic\CatalogApiSdk\Model\License[], HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function findLicenseWithHttpInfo()
     {
-        
         // parse inputs
         $resourcePath = "/licenses";
         $httpBody = '';
@@ -355,37 +332,28 @@ class LicensesApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
-        
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-        
-
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -398,7 +366,8 @@ class LicensesApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\CatalogApiSdk\Model\License[]'
+                '\Softonic\CatalogApiSdk\Model\License[]',
+                '/licenses'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Model\License[]', $httpHeader), $statusCode, $httpHeader);
@@ -413,13 +382,13 @@ class LicensesApi
             throw $e;
         }
     }
+
     /**
      * Operation readLicense
      *
-     * Fetches a single License.
+     * Fetches a single License
      *
      * @param string $id_license License acronym. (required)
-     *
      * @return \Softonic\CatalogApiSdk\Model\License
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -429,31 +398,27 @@ class LicensesApi
         return $response;
     }
 
-
     /**
      * Operation readLicenseWithHttpInfo
      *
-     * Fetches a single License.
+     * Fetches a single License
      *
      * @param string $id_license License acronym. (required)
-     *
      * @return Array of \Softonic\CatalogApiSdk\Model\License, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function readLicenseWithHttpInfo($id_license)
     {
-        
         // verify the required parameter 'id_license' is set
         if ($id_license === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_license when calling readLicense');
         }
-        if (strlen($id_license) > 3) {
+        if ((strlen($id_license) > 3)) {
             throw new \InvalidArgumentException('invalid length for "$id_license" when calling LicensesApi.readLicense, must be smaller than or equal to 3.');
         }
-        if (strlen($id_license) < 1) {
+        if ((strlen($id_license) < 1)) {
             throw new \InvalidArgumentException('invalid length for "$id_license" when calling LicensesApi.readLicense, must be bigger than or equal to 1.');
         }
-
 
         // parse inputs
         $resourcePath = "/licenses/{id_license}";
@@ -467,8 +432,6 @@ class LicensesApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_license !== null) {
             $resourcePath = str_replace(
@@ -481,30 +444,24 @@ class LicensesApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-        
-
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -517,7 +474,8 @@ class LicensesApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\CatalogApiSdk\Model\License'
+                '\Softonic\CatalogApiSdk\Model\License',
+                '/licenses/{id_license}'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Model\License', $httpHeader), $statusCode, $httpHeader);
@@ -532,14 +490,14 @@ class LicensesApi
             throw $e;
         }
     }
+
     /**
      * Operation replaceLicense
      *
-     * Entirely replaces a License.
+     * Entirely replaces a License
      *
      * @param string $id_license License acronym. (required)
      * @param \Softonic\CatalogApiSdk\Model\License $body  (optional)
-     *
      * @return void
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -549,32 +507,28 @@ class LicensesApi
         return $response;
     }
 
-
     /**
      * Operation replaceLicenseWithHttpInfo
      *
-     * Entirely replaces a License.
+     * Entirely replaces a License
      *
      * @param string $id_license License acronym. (required)
      * @param \Softonic\CatalogApiSdk\Model\License $body  (optional)
-     *
      * @return Array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function replaceLicenseWithHttpInfo($id_license, $body = null)
     {
-        
         // verify the required parameter 'id_license' is set
         if ($id_license === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_license when calling replaceLicense');
         }
-        if (strlen($id_license) > 3) {
+        if ((strlen($id_license) > 3)) {
             throw new \InvalidArgumentException('invalid length for "$id_license" when calling LicensesApi.replaceLicense, must be smaller than or equal to 3.');
         }
-        if (strlen($id_license) < 1) {
+        if ((strlen($id_license) < 1)) {
             throw new \InvalidArgumentException('invalid length for "$id_license" when calling LicensesApi.replaceLicense, must be bigger than or equal to 1.');
         }
-
 
         // parse inputs
         $resourcePath = "/licenses/{id_license}";
@@ -588,8 +542,6 @@ class LicensesApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_license !== null) {
             $resourcePath = str_replace(
@@ -601,7 +553,6 @@ class LicensesApi
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
-        
         // body params
         $_tempBody = null;
         if (isset($body)) {
@@ -614,22 +565,18 @@ class LicensesApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -641,7 +588,9 @@ class LicensesApi
                 'PUT',
                 $queryParams,
                 $httpBody,
-                $headerParams
+                $headerParams,
+                null,
+                '/licenses/{id_license}'
             );
 
             return array(null, $statusCode, $httpHeader);
@@ -652,14 +601,14 @@ class LicensesApi
             throw $e;
         }
     }
+
     /**
      * Operation updateLicense
      *
-     * Partially updates a License.
+     * Partially updates a License
      *
      * @param string $id_license License acronym. (required)
      * @param \Softonic\CatalogApiSdk\Model\License $body  (optional)
-     *
      * @return void
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -669,32 +618,28 @@ class LicensesApi
         return $response;
     }
 
-
     /**
      * Operation updateLicenseWithHttpInfo
      *
-     * Partially updates a License.
+     * Partially updates a License
      *
      * @param string $id_license License acronym. (required)
      * @param \Softonic\CatalogApiSdk\Model\License $body  (optional)
-     *
      * @return Array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function updateLicenseWithHttpInfo($id_license, $body = null)
     {
-        
         // verify the required parameter 'id_license' is set
         if ($id_license === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_license when calling updateLicense');
         }
-        if (strlen($id_license) > 3) {
+        if ((strlen($id_license) > 3)) {
             throw new \InvalidArgumentException('invalid length for "$id_license" when calling LicensesApi.updateLicense, must be smaller than or equal to 3.');
         }
-        if (strlen($id_license) < 1) {
+        if ((strlen($id_license) < 1)) {
             throw new \InvalidArgumentException('invalid length for "$id_license" when calling LicensesApi.updateLicense, must be bigger than or equal to 1.');
         }
-
 
         // parse inputs
         $resourcePath = "/licenses/{id_license}";
@@ -708,8 +653,6 @@ class LicensesApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_license !== null) {
             $resourcePath = str_replace(
@@ -721,7 +664,6 @@ class LicensesApi
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
-        
         // body params
         $_tempBody = null;
         if (isset($body)) {
@@ -734,22 +676,18 @@ class LicensesApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -761,7 +699,9 @@ class LicensesApi
                 'PATCH',
                 $queryParams,
                 $httpBody,
-                $headerParams
+                $headerParams,
+                null,
+                '/licenses/{id_license}'
             );
 
             return array(null, $statusCode, $httpHeader);
@@ -772,4 +712,5 @@ class LicensesApi
             throw $e;
         }
     }
+
 }

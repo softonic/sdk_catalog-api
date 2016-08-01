@@ -105,10 +105,9 @@ class RequirementsApi
     /**
      * Operation createRequirement
      *
-     * Creates a new Requirement.
+     * Creates a new Requirement
      *
      * @param \Softonic\CatalogApiSdk\Model\Requirement $body  (optional)
-     *
      * @return void
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -118,20 +117,17 @@ class RequirementsApi
         return $response;
     }
 
-
     /**
      * Operation createRequirementWithHttpInfo
      *
-     * Creates a new Requirement.
+     * Creates a new Requirement
      *
      * @param \Softonic\CatalogApiSdk\Model\Requirement $body  (optional)
-     *
      * @return Array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function createRequirementWithHttpInfo($body = null)
     {
-        
         // parse inputs
         $resourcePath = "/requirements";
         $httpBody = '';
@@ -144,13 +140,9 @@ class RequirementsApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
-        
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
-        
         // body params
         $_tempBody = null;
         if (isset($body)) {
@@ -163,22 +155,18 @@ class RequirementsApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -190,7 +178,9 @@ class RequirementsApi
                 'POST',
                 $queryParams,
                 $httpBody,
-                $headerParams
+                $headerParams,
+                null,
+                '/requirements'
             );
 
             return array(null, $statusCode, $httpHeader);
@@ -201,13 +191,13 @@ class RequirementsApi
             throw $e;
         }
     }
+
     /**
      * Operation deleteRequirement
      *
-     * Deletes a Requirement.
+     * Deletes a Requirement
      *
      * @param string $id_requirement Requirement ID as slug (required)
-     *
      * @return void
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -217,31 +207,27 @@ class RequirementsApi
         return $response;
     }
 
-
     /**
      * Operation deleteRequirementWithHttpInfo
      *
-     * Deletes a Requirement.
+     * Deletes a Requirement
      *
      * @param string $id_requirement Requirement ID as slug (required)
-     *
      * @return Array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function deleteRequirementWithHttpInfo($id_requirement)
     {
-        
         // verify the required parameter 'id_requirement' is set
         if ($id_requirement === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_requirement when calling deleteRequirement');
         }
-        if (strlen($id_requirement) > 40) {
+        if ((strlen($id_requirement) > 40)) {
             throw new \InvalidArgumentException('invalid length for "$id_requirement" when calling RequirementsApi.deleteRequirement, must be smaller than or equal to 40.');
         }
-        if (strlen($id_requirement) < 1) {
+        if ((strlen($id_requirement) < 1)) {
             throw new \InvalidArgumentException('invalid length for "$id_requirement" when calling RequirementsApi.deleteRequirement, must be bigger than or equal to 1.');
         }
-
 
         // parse inputs
         $resourcePath = "/requirements/{id_requirement}";
@@ -255,8 +241,6 @@ class RequirementsApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_requirement !== null) {
             $resourcePath = str_replace(
@@ -269,30 +253,24 @@ class RequirementsApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-        
-
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -304,7 +282,9 @@ class RequirementsApi
                 'DELETE',
                 $queryParams,
                 $httpBody,
-                $headerParams
+                $headerParams,
+                null,
+                '/requirements/{id_requirement}'
             );
 
             return array(null, $statusCode, $httpHeader);
@@ -315,11 +295,11 @@ class RequirementsApi
             throw $e;
         }
     }
+
     /**
      * Operation findRequirement
      *
-     * List of Requirements.
-     *
+     * List of Requirements
      *
      * @return \Softonic\CatalogApiSdk\Model\Requirement[]
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
@@ -330,19 +310,16 @@ class RequirementsApi
         return $response;
     }
 
-
     /**
      * Operation findRequirementWithHttpInfo
      *
-     * List of Requirements.
-     *
+     * List of Requirements
      *
      * @return Array of \Softonic\CatalogApiSdk\Model\Requirement[], HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function findRequirementWithHttpInfo()
     {
-        
         // parse inputs
         $resourcePath = "/requirements";
         $httpBody = '';
@@ -355,37 +332,28 @@ class RequirementsApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
-        
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-        
-
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -398,7 +366,8 @@ class RequirementsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\CatalogApiSdk\Model\Requirement[]'
+                '\Softonic\CatalogApiSdk\Model\Requirement[]',
+                '/requirements'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Model\Requirement[]', $httpHeader), $statusCode, $httpHeader);
@@ -413,13 +382,13 @@ class RequirementsApi
             throw $e;
         }
     }
+
     /**
      * Operation readRequirement
      *
-     * Fetches a single Requirement.
+     * Fetches a single Requirement
      *
      * @param string $id_requirement Requirement ID as slug (required)
-     *
      * @return \Softonic\CatalogApiSdk\Model\Requirement
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -429,31 +398,27 @@ class RequirementsApi
         return $response;
     }
 
-
     /**
      * Operation readRequirementWithHttpInfo
      *
-     * Fetches a single Requirement.
+     * Fetches a single Requirement
      *
      * @param string $id_requirement Requirement ID as slug (required)
-     *
      * @return Array of \Softonic\CatalogApiSdk\Model\Requirement, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function readRequirementWithHttpInfo($id_requirement)
     {
-        
         // verify the required parameter 'id_requirement' is set
         if ($id_requirement === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_requirement when calling readRequirement');
         }
-        if (strlen($id_requirement) > 40) {
+        if ((strlen($id_requirement) > 40)) {
             throw new \InvalidArgumentException('invalid length for "$id_requirement" when calling RequirementsApi.readRequirement, must be smaller than or equal to 40.');
         }
-        if (strlen($id_requirement) < 1) {
+        if ((strlen($id_requirement) < 1)) {
             throw new \InvalidArgumentException('invalid length for "$id_requirement" when calling RequirementsApi.readRequirement, must be bigger than or equal to 1.');
         }
-
 
         // parse inputs
         $resourcePath = "/requirements/{id_requirement}";
@@ -467,8 +432,6 @@ class RequirementsApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_requirement !== null) {
             $resourcePath = str_replace(
@@ -481,30 +444,24 @@ class RequirementsApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-        
-
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -517,7 +474,8 @@ class RequirementsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\CatalogApiSdk\Model\Requirement'
+                '\Softonic\CatalogApiSdk\Model\Requirement',
+                '/requirements/{id_requirement}'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Model\Requirement', $httpHeader), $statusCode, $httpHeader);
@@ -532,14 +490,14 @@ class RequirementsApi
             throw $e;
         }
     }
+
     /**
      * Operation replaceRequirement
      *
-     * Entirely replaces a Requirement.
+     * Entirely replaces a Requirement
      *
      * @param string $id_requirement Requirement ID as slug (required)
      * @param \Softonic\CatalogApiSdk\Model\Requirement $body  (optional)
-     *
      * @return void
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -549,32 +507,28 @@ class RequirementsApi
         return $response;
     }
 
-
     /**
      * Operation replaceRequirementWithHttpInfo
      *
-     * Entirely replaces a Requirement.
+     * Entirely replaces a Requirement
      *
      * @param string $id_requirement Requirement ID as slug (required)
      * @param \Softonic\CatalogApiSdk\Model\Requirement $body  (optional)
-     *
      * @return Array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function replaceRequirementWithHttpInfo($id_requirement, $body = null)
     {
-        
         // verify the required parameter 'id_requirement' is set
         if ($id_requirement === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_requirement when calling replaceRequirement');
         }
-        if (strlen($id_requirement) > 40) {
+        if ((strlen($id_requirement) > 40)) {
             throw new \InvalidArgumentException('invalid length for "$id_requirement" when calling RequirementsApi.replaceRequirement, must be smaller than or equal to 40.');
         }
-        if (strlen($id_requirement) < 1) {
+        if ((strlen($id_requirement) < 1)) {
             throw new \InvalidArgumentException('invalid length for "$id_requirement" when calling RequirementsApi.replaceRequirement, must be bigger than or equal to 1.');
         }
-
 
         // parse inputs
         $resourcePath = "/requirements/{id_requirement}";
@@ -588,8 +542,6 @@ class RequirementsApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_requirement !== null) {
             $resourcePath = str_replace(
@@ -601,7 +553,6 @@ class RequirementsApi
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
-        
         // body params
         $_tempBody = null;
         if (isset($body)) {
@@ -614,22 +565,18 @@ class RequirementsApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -641,7 +588,9 @@ class RequirementsApi
                 'PUT',
                 $queryParams,
                 $httpBody,
-                $headerParams
+                $headerParams,
+                null,
+                '/requirements/{id_requirement}'
             );
 
             return array(null, $statusCode, $httpHeader);
@@ -652,14 +601,14 @@ class RequirementsApi
             throw $e;
         }
     }
+
     /**
      * Operation updateRequirement
      *
-     * Partially updates a Requirement.
+     * Partially updates a Requirement
      *
      * @param string $id_requirement Requirement ID as slug (required)
      * @param \Softonic\CatalogApiSdk\Model\Requirement $body  (optional)
-     *
      * @return void
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -669,32 +618,28 @@ class RequirementsApi
         return $response;
     }
 
-
     /**
      * Operation updateRequirementWithHttpInfo
      *
-     * Partially updates a Requirement.
+     * Partially updates a Requirement
      *
      * @param string $id_requirement Requirement ID as slug (required)
      * @param \Softonic\CatalogApiSdk\Model\Requirement $body  (optional)
-     *
      * @return Array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function updateRequirementWithHttpInfo($id_requirement, $body = null)
     {
-        
         // verify the required parameter 'id_requirement' is set
         if ($id_requirement === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_requirement when calling updateRequirement');
         }
-        if (strlen($id_requirement) > 40) {
+        if ((strlen($id_requirement) > 40)) {
             throw new \InvalidArgumentException('invalid length for "$id_requirement" when calling RequirementsApi.updateRequirement, must be smaller than or equal to 40.');
         }
-        if (strlen($id_requirement) < 1) {
+        if ((strlen($id_requirement) < 1)) {
             throw new \InvalidArgumentException('invalid length for "$id_requirement" when calling RequirementsApi.updateRequirement, must be bigger than or equal to 1.');
         }
-
 
         // parse inputs
         $resourcePath = "/requirements/{id_requirement}";
@@ -708,8 +653,6 @@ class RequirementsApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_requirement !== null) {
             $resourcePath = str_replace(
@@ -721,7 +664,6 @@ class RequirementsApi
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
-        
         // body params
         $_tempBody = null;
         if (isset($body)) {
@@ -734,22 +676,18 @@ class RequirementsApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -761,7 +699,9 @@ class RequirementsApi
                 'PATCH',
                 $queryParams,
                 $httpBody,
-                $headerParams
+                $headerParams,
+                null,
+                '/requirements/{id_requirement}'
             );
 
             return array(null, $statusCode, $httpHeader);
@@ -772,4 +712,5 @@ class RequirementsApi
             throw $e;
         }
     }
+
 }

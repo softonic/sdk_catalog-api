@@ -39,13 +39,14 @@
  * Please update the test case below to test the model.
  */
 
-namespace Softonic\CatalogApiSdk\Model;
+namespace Softonic\CatalogApiSdk;
 
 /**
  * ProgramReviewTypeTest Class Doc Comment
  *
- * @category    Class
- * @description ProgramReviewType
+ * @category    Class */
+// * @description ProgramReviewType
+/**
  * @package     Softonic\CatalogApiSdk
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -55,7 +56,7 @@ class ProgramReviewTypeTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
-     * Setup before running each test case
+     * Setup before running any test case
      */
     public static function setUpBeforeClass()
     {
@@ -63,7 +64,23 @@ class ProgramReviewTypeTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Setup before running each test case
+     */
+    public function setUp()
+    {
+
+    }
+
+    /**
      * Clean up after running each test case
+     */
+    public function tearDown()
+    {
+
+    }
+
+    /**
+     * Clean up after running all test cases
      */
     public static function tearDownAfterClass()
     {
@@ -77,4 +94,21 @@ class ProgramReviewTypeTest extends \PHPUnit_Framework_TestCase
     {
 
     }
+
+    /**
+     * Test attribute "id_program"
+     */
+    public function testPropertyIdProgram()
+    {
+
+    }
+
+    /**
+     * Test attribute "id_review_type"
+     */
+    public function testPropertyIdReviewType()
+    {
+
+    }
+
 }

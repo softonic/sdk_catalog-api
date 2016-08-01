@@ -39,13 +39,14 @@
  * Please update the test case below to test the model.
  */
 
-namespace Softonic\CatalogApiSdk\Model;
+namespace Softonic\CatalogApiSdk;
 
 /**
  * LicenseTest Class Doc Comment
  *
- * @category    Class
- * @description License
+ * @category    Class */
+// * @description License
+/**
  * @package     Softonic\CatalogApiSdk
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -55,7 +56,7 @@ class LicenseTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
-     * Setup before running each test case
+     * Setup before running any test case
      */
     public static function setUpBeforeClass()
     {
@@ -63,7 +64,23 @@ class LicenseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Setup before running each test case
+     */
+    public function setUp()
+    {
+
+    }
+
+    /**
      * Clean up after running each test case
+     */
+    public function tearDown()
+    {
+
+    }
+
+    /**
+     * Clean up after running all test cases
      */
     public static function tearDownAfterClass()
     {
@@ -77,4 +94,29 @@ class LicenseTest extends \PHPUnit_Framework_TestCase
     {
 
     }
+
+    /**
+     * Test attribute "id_license"
+     */
+    public function testPropertyIdLicense()
+    {
+
+    }
+
+    /**
+     * Test attribute "description"
+     */
+    public function testPropertyDescription()
+    {
+
+    }
+
+    /**
+     * Test attribute "type"
+     */
+    public function testPropertyType()
+    {
+
+    }
+
 }

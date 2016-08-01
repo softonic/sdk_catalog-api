@@ -39,13 +39,14 @@
  * Please update the test case below to test the model.
  */
 
-namespace Softonic\CatalogApiSdk\Model;
+namespace Softonic\CatalogApiSdk;
 
 /**
  * RequirementTest Class Doc Comment
  *
- * @category    Class
- * @description Requirement
+ * @category    Class */
+// * @description Requirement
+/**
  * @package     Softonic\CatalogApiSdk
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -55,7 +56,7 @@ class RequirementTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
-     * Setup before running each test case
+     * Setup before running any test case
      */
     public static function setUpBeforeClass()
     {
@@ -63,7 +64,23 @@ class RequirementTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Setup before running each test case
+     */
+    public function setUp()
+    {
+
+    }
+
+    /**
      * Clean up after running each test case
+     */
+    public function tearDown()
+    {
+
+    }
+
+    /**
+     * Clean up after running all test cases
      */
     public static function tearDownAfterClass()
     {
@@ -77,4 +94,29 @@ class RequirementTest extends \PHPUnit_Framework_TestCase
     {
 
     }
+
+    /**
+     * Test attribute "id_requirement"
+     */
+    public function testPropertyIdRequirement()
+    {
+
+    }
+
+    /**
+     * Test attribute "name"
+     */
+    public function testPropertyName()
+    {
+
+    }
+
+    /**
+     * Test attribute "description"
+     */
+    public function testPropertyDescription()
+    {
+
+    }
+
 }

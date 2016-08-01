@@ -105,13 +105,12 @@ class ProgramsVersionsLocalesReviewTypesApi
     /**
      * Operation createProgramVersionLocaleReviewType
      *
-     * Creates a new ProgramVersionLocaleReviewType.
+     * Creates a new ProgramVersionLocaleReviewType
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_version Program version identifier (required)
      * @param string $id_locale Locale identifier (required)
      * @param \Softonic\CatalogApiSdk\Model\ProgramVersionLocaleReviewType $body  (optional)
-     *
      * @return void
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -121,58 +120,52 @@ class ProgramsVersionsLocalesReviewTypesApi
         return $response;
     }
 
-
     /**
      * Operation createProgramVersionLocaleReviewTypeWithHttpInfo
      *
-     * Creates a new ProgramVersionLocaleReviewType.
+     * Creates a new ProgramVersionLocaleReviewType
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_version Program version identifier (required)
      * @param string $id_locale Locale identifier (required)
      * @param \Softonic\CatalogApiSdk\Model\ProgramVersionLocaleReviewType $body  (optional)
-     *
      * @return Array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function createProgramVersionLocaleReviewTypeWithHttpInfo($id_program, $id_version, $id_locale, $body = null)
     {
-        
         // verify the required parameter 'id_program' is set
         if ($id_program === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_program when calling createProgramVersionLocaleReviewType');
         }
-        if (strlen($id_program) > 36) {
+        if ((strlen($id_program) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsLocalesReviewTypesApi.createProgramVersionLocaleReviewType, must be smaller than or equal to 36.');
         }
-        if (strlen($id_program) < 36) {
+        if ((strlen($id_program) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsLocalesReviewTypesApi.createProgramVersionLocaleReviewType, must be bigger than or equal to 36.');
         }
-
 
         // verify the required parameter 'id_version' is set
         if ($id_version === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_version when calling createProgramVersionLocaleReviewType');
         }
-        if (strlen($id_version) > 60) {
+        if ((strlen($id_version) > 60)) {
             throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsLocalesReviewTypesApi.createProgramVersionLocaleReviewType, must be smaller than or equal to 60.');
         }
-        if (strlen($id_version) < 1) {
+        if ((strlen($id_version) < 1)) {
             throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsLocalesReviewTypesApi.createProgramVersionLocaleReviewType, must be bigger than or equal to 1.');
         }
-
 
         // verify the required parameter 'id_locale' is set
         if ($id_locale === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_locale when calling createProgramVersionLocaleReviewType');
         }
-        if (strlen($id_locale) > 2) {
+        if ((strlen($id_locale) > 2)) {
             throw new \InvalidArgumentException('invalid length for "$id_locale" when calling ProgramsVersionsLocalesReviewTypesApi.createProgramVersionLocaleReviewType, must be smaller than or equal to 2.');
         }
-        if (strlen($id_locale) < 2) {
+        if ((strlen($id_locale) < 2)) {
             throw new \InvalidArgumentException('invalid length for "$id_locale" when calling ProgramsVersionsLocalesReviewTypesApi.createProgramVersionLocaleReviewType, must be bigger than or equal to 2.');
         }
-
 
         // parse inputs
         $resourcePath = "/programs/{id_program}/versions/{id_version}/locales/{id_locale}/review-types";
@@ -186,8 +179,6 @@ class ProgramsVersionsLocalesReviewTypesApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_program !== null) {
             $resourcePath = str_replace(
@@ -195,14 +186,16 @@ class ProgramsVersionsLocalesReviewTypesApi
                 $this->apiClient->getSerializer()->toPathValue($id_program),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_version !== null) {
             $resourcePath = str_replace(
                 "{" . "id_version" . "}",
                 $this->apiClient->getSerializer()->toPathValue($id_version),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_locale !== null) {
             $resourcePath = str_replace(
                 "{" . "id_locale" . "}",
@@ -213,7 +206,6 @@ class ProgramsVersionsLocalesReviewTypesApi
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
-        
         // body params
         $_tempBody = null;
         if (isset($body)) {
@@ -226,22 +218,18 @@ class ProgramsVersionsLocalesReviewTypesApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -253,7 +241,9 @@ class ProgramsVersionsLocalesReviewTypesApi
                 'POST',
                 $queryParams,
                 $httpBody,
-                $headerParams
+                $headerParams,
+                null,
+                '/programs/{id_program}/versions/{id_version}/locales/{id_locale}/review-types'
             );
 
             return array(null, $statusCode, $httpHeader);
@@ -264,16 +254,16 @@ class ProgramsVersionsLocalesReviewTypesApi
             throw $e;
         }
     }
+
     /**
      * Operation deleteProgramVersionLocaleReviewType
      *
-     * Deletes a ProgramVersionLocaleReviewType.
+     * Deletes a ProgramVersionLocaleReviewType
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_version Program version identifier (required)
      * @param string $id_locale Locale identifier (required)
      * @param string $id_review_type Review owner type (required)
-     *
      * @return void
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -283,64 +273,57 @@ class ProgramsVersionsLocalesReviewTypesApi
         return $response;
     }
 
-
     /**
      * Operation deleteProgramVersionLocaleReviewTypeWithHttpInfo
      *
-     * Deletes a ProgramVersionLocaleReviewType.
+     * Deletes a ProgramVersionLocaleReviewType
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_version Program version identifier (required)
      * @param string $id_locale Locale identifier (required)
      * @param string $id_review_type Review owner type (required)
-     *
      * @return Array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function deleteProgramVersionLocaleReviewTypeWithHttpInfo($id_program, $id_version, $id_locale, $id_review_type)
     {
-        
         // verify the required parameter 'id_program' is set
         if ($id_program === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_program when calling deleteProgramVersionLocaleReviewType');
         }
-        if (strlen($id_program) > 36) {
+        if ((strlen($id_program) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsLocalesReviewTypesApi.deleteProgramVersionLocaleReviewType, must be smaller than or equal to 36.');
         }
-        if (strlen($id_program) < 36) {
+        if ((strlen($id_program) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsLocalesReviewTypesApi.deleteProgramVersionLocaleReviewType, must be bigger than or equal to 36.');
         }
-
 
         // verify the required parameter 'id_version' is set
         if ($id_version === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_version when calling deleteProgramVersionLocaleReviewType');
         }
-        if (strlen($id_version) > 60) {
+        if ((strlen($id_version) > 60)) {
             throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsLocalesReviewTypesApi.deleteProgramVersionLocaleReviewType, must be smaller than or equal to 60.');
         }
-        if (strlen($id_version) < 1) {
+        if ((strlen($id_version) < 1)) {
             throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsLocalesReviewTypesApi.deleteProgramVersionLocaleReviewType, must be bigger than or equal to 1.');
         }
-
 
         // verify the required parameter 'id_locale' is set
         if ($id_locale === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_locale when calling deleteProgramVersionLocaleReviewType');
         }
-        if (strlen($id_locale) > 2) {
+        if ((strlen($id_locale) > 2)) {
             throw new \InvalidArgumentException('invalid length for "$id_locale" when calling ProgramsVersionsLocalesReviewTypesApi.deleteProgramVersionLocaleReviewType, must be smaller than or equal to 2.');
         }
-        if (strlen($id_locale) < 2) {
+        if ((strlen($id_locale) < 2)) {
             throw new \InvalidArgumentException('invalid length for "$id_locale" when calling ProgramsVersionsLocalesReviewTypesApi.deleteProgramVersionLocaleReviewType, must be bigger than or equal to 2.');
         }
-
 
         // verify the required parameter 'id_review_type' is set
         if ($id_review_type === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_review_type when calling deleteProgramVersionLocaleReviewType');
         }
-
         // parse inputs
         $resourcePath = "/programs/{id_program}/versions/{id_version}/locales/{id_locale}/review-types/{id_review_type}";
         $httpBody = '';
@@ -353,8 +336,6 @@ class ProgramsVersionsLocalesReviewTypesApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_program !== null) {
             $resourcePath = str_replace(
@@ -362,21 +343,24 @@ class ProgramsVersionsLocalesReviewTypesApi
                 $this->apiClient->getSerializer()->toPathValue($id_program),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_version !== null) {
             $resourcePath = str_replace(
                 "{" . "id_version" . "}",
                 $this->apiClient->getSerializer()->toPathValue($id_version),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_locale !== null) {
             $resourcePath = str_replace(
                 "{" . "id_locale" . "}",
                 $this->apiClient->getSerializer()->toPathValue($id_locale),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_review_type !== null) {
             $resourcePath = str_replace(
                 "{" . "id_review_type" . "}",
@@ -388,30 +372,24 @@ class ProgramsVersionsLocalesReviewTypesApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-        
-
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -423,7 +401,9 @@ class ProgramsVersionsLocalesReviewTypesApi
                 'DELETE',
                 $queryParams,
                 $httpBody,
-                $headerParams
+                $headerParams,
+                null,
+                '/programs/{id_program}/versions/{id_version}/locales/{id_locale}/review-types/{id_review_type}'
             );
 
             return array(null, $statusCode, $httpHeader);
@@ -434,15 +414,15 @@ class ProgramsVersionsLocalesReviewTypesApi
             throw $e;
         }
     }
+
     /**
      * Operation findProgramVersionLocaleReviewType
      *
-     * List of ProgramVersionLocaleReviewTypes.
+     * List of ProgramVersionLocaleReviewTypes
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_version Program version identifier (required)
      * @param string $id_locale Locale identifier (required)
-     *
      * @return \Softonic\CatalogApiSdk\Model\ProgramVersionLocaleReviewType[]
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -452,57 +432,51 @@ class ProgramsVersionsLocalesReviewTypesApi
         return $response;
     }
 
-
     /**
      * Operation findProgramVersionLocaleReviewTypeWithHttpInfo
      *
-     * List of ProgramVersionLocaleReviewTypes.
+     * List of ProgramVersionLocaleReviewTypes
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_version Program version identifier (required)
      * @param string $id_locale Locale identifier (required)
-     *
      * @return Array of \Softonic\CatalogApiSdk\Model\ProgramVersionLocaleReviewType[], HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function findProgramVersionLocaleReviewTypeWithHttpInfo($id_program, $id_version, $id_locale)
     {
-        
         // verify the required parameter 'id_program' is set
         if ($id_program === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_program when calling findProgramVersionLocaleReviewType');
         }
-        if (strlen($id_program) > 36) {
+        if ((strlen($id_program) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsLocalesReviewTypesApi.findProgramVersionLocaleReviewType, must be smaller than or equal to 36.');
         }
-        if (strlen($id_program) < 36) {
+        if ((strlen($id_program) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsLocalesReviewTypesApi.findProgramVersionLocaleReviewType, must be bigger than or equal to 36.');
         }
-
 
         // verify the required parameter 'id_version' is set
         if ($id_version === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_version when calling findProgramVersionLocaleReviewType');
         }
-        if (strlen($id_version) > 60) {
+        if ((strlen($id_version) > 60)) {
             throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsLocalesReviewTypesApi.findProgramVersionLocaleReviewType, must be smaller than or equal to 60.');
         }
-        if (strlen($id_version) < 1) {
+        if ((strlen($id_version) < 1)) {
             throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsLocalesReviewTypesApi.findProgramVersionLocaleReviewType, must be bigger than or equal to 1.');
         }
-
 
         // verify the required parameter 'id_locale' is set
         if ($id_locale === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_locale when calling findProgramVersionLocaleReviewType');
         }
-        if (strlen($id_locale) > 2) {
+        if ((strlen($id_locale) > 2)) {
             throw new \InvalidArgumentException('invalid length for "$id_locale" when calling ProgramsVersionsLocalesReviewTypesApi.findProgramVersionLocaleReviewType, must be smaller than or equal to 2.');
         }
-        if (strlen($id_locale) < 2) {
+        if ((strlen($id_locale) < 2)) {
             throw new \InvalidArgumentException('invalid length for "$id_locale" when calling ProgramsVersionsLocalesReviewTypesApi.findProgramVersionLocaleReviewType, must be bigger than or equal to 2.');
         }
-
 
         // parse inputs
         $resourcePath = "/programs/{id_program}/versions/{id_version}/locales/{id_locale}/review-types";
@@ -516,8 +490,6 @@ class ProgramsVersionsLocalesReviewTypesApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_program !== null) {
             $resourcePath = str_replace(
@@ -525,14 +497,16 @@ class ProgramsVersionsLocalesReviewTypesApi
                 $this->apiClient->getSerializer()->toPathValue($id_program),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_version !== null) {
             $resourcePath = str_replace(
                 "{" . "id_version" . "}",
                 $this->apiClient->getSerializer()->toPathValue($id_version),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_locale !== null) {
             $resourcePath = str_replace(
                 "{" . "id_locale" . "}",
@@ -544,30 +518,24 @@ class ProgramsVersionsLocalesReviewTypesApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-        
-
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -580,7 +548,8 @@ class ProgramsVersionsLocalesReviewTypesApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleReviewType[]'
+                '\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleReviewType[]',
+                '/programs/{id_program}/versions/{id_version}/locales/{id_locale}/review-types'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleReviewType[]', $httpHeader), $statusCode, $httpHeader);
@@ -595,16 +564,16 @@ class ProgramsVersionsLocalesReviewTypesApi
             throw $e;
         }
     }
+
     /**
      * Operation readProgramVersionLocaleReviewType
      *
-     * Fetches a single ProgramVersionLocaleReviewType.
+     * Fetches a single ProgramVersionLocaleReviewType
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_version Program version identifier (required)
      * @param string $id_locale Locale identifier (required)
      * @param string $id_review_type Review owner type (required)
-     *
      * @return \Softonic\CatalogApiSdk\Model\ProgramVersionLocaleReviewType
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -614,64 +583,57 @@ class ProgramsVersionsLocalesReviewTypesApi
         return $response;
     }
 
-
     /**
      * Operation readProgramVersionLocaleReviewTypeWithHttpInfo
      *
-     * Fetches a single ProgramVersionLocaleReviewType.
+     * Fetches a single ProgramVersionLocaleReviewType
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_version Program version identifier (required)
      * @param string $id_locale Locale identifier (required)
      * @param string $id_review_type Review owner type (required)
-     *
      * @return Array of \Softonic\CatalogApiSdk\Model\ProgramVersionLocaleReviewType, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function readProgramVersionLocaleReviewTypeWithHttpInfo($id_program, $id_version, $id_locale, $id_review_type)
     {
-        
         // verify the required parameter 'id_program' is set
         if ($id_program === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_program when calling readProgramVersionLocaleReviewType');
         }
-        if (strlen($id_program) > 36) {
+        if ((strlen($id_program) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsLocalesReviewTypesApi.readProgramVersionLocaleReviewType, must be smaller than or equal to 36.');
         }
-        if (strlen($id_program) < 36) {
+        if ((strlen($id_program) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsLocalesReviewTypesApi.readProgramVersionLocaleReviewType, must be bigger than or equal to 36.');
         }
-
 
         // verify the required parameter 'id_version' is set
         if ($id_version === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_version when calling readProgramVersionLocaleReviewType');
         }
-        if (strlen($id_version) > 60) {
+        if ((strlen($id_version) > 60)) {
             throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsLocalesReviewTypesApi.readProgramVersionLocaleReviewType, must be smaller than or equal to 60.');
         }
-        if (strlen($id_version) < 1) {
+        if ((strlen($id_version) < 1)) {
             throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsLocalesReviewTypesApi.readProgramVersionLocaleReviewType, must be bigger than or equal to 1.');
         }
-
 
         // verify the required parameter 'id_locale' is set
         if ($id_locale === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_locale when calling readProgramVersionLocaleReviewType');
         }
-        if (strlen($id_locale) > 2) {
+        if ((strlen($id_locale) > 2)) {
             throw new \InvalidArgumentException('invalid length for "$id_locale" when calling ProgramsVersionsLocalesReviewTypesApi.readProgramVersionLocaleReviewType, must be smaller than or equal to 2.');
         }
-        if (strlen($id_locale) < 2) {
+        if ((strlen($id_locale) < 2)) {
             throw new \InvalidArgumentException('invalid length for "$id_locale" when calling ProgramsVersionsLocalesReviewTypesApi.readProgramVersionLocaleReviewType, must be bigger than or equal to 2.');
         }
-
 
         // verify the required parameter 'id_review_type' is set
         if ($id_review_type === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_review_type when calling readProgramVersionLocaleReviewType');
         }
-
         // parse inputs
         $resourcePath = "/programs/{id_program}/versions/{id_version}/locales/{id_locale}/review-types/{id_review_type}";
         $httpBody = '';
@@ -684,8 +646,6 @@ class ProgramsVersionsLocalesReviewTypesApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_program !== null) {
             $resourcePath = str_replace(
@@ -693,21 +653,24 @@ class ProgramsVersionsLocalesReviewTypesApi
                 $this->apiClient->getSerializer()->toPathValue($id_program),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_version !== null) {
             $resourcePath = str_replace(
                 "{" . "id_version" . "}",
                 $this->apiClient->getSerializer()->toPathValue($id_version),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_locale !== null) {
             $resourcePath = str_replace(
                 "{" . "id_locale" . "}",
                 $this->apiClient->getSerializer()->toPathValue($id_locale),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_review_type !== null) {
             $resourcePath = str_replace(
                 "{" . "id_review_type" . "}",
@@ -719,30 +682,24 @@ class ProgramsVersionsLocalesReviewTypesApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-        
-
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -755,7 +712,8 @@ class ProgramsVersionsLocalesReviewTypesApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleReviewType'
+                '\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleReviewType',
+                '/programs/{id_program}/versions/{id_version}/locales/{id_locale}/review-types/{id_review_type}'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleReviewType', $httpHeader), $statusCode, $httpHeader);
@@ -770,17 +728,17 @@ class ProgramsVersionsLocalesReviewTypesApi
             throw $e;
         }
     }
+
     /**
      * Operation replaceProgramVersionLocaleReviewType
      *
-     * Entirely replaces a ProgramVersionLocaleReviewType.
+     * Entirely replaces a ProgramVersionLocaleReviewType
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_version Program version identifier (required)
      * @param string $id_locale Locale identifier (required)
      * @param string $id_review_type Review owner type (required)
      * @param \Softonic\CatalogApiSdk\Model\ProgramVersionLocaleReviewType $body  (optional)
-     *
      * @return void
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -790,65 +748,58 @@ class ProgramsVersionsLocalesReviewTypesApi
         return $response;
     }
 
-
     /**
      * Operation replaceProgramVersionLocaleReviewTypeWithHttpInfo
      *
-     * Entirely replaces a ProgramVersionLocaleReviewType.
+     * Entirely replaces a ProgramVersionLocaleReviewType
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_version Program version identifier (required)
      * @param string $id_locale Locale identifier (required)
      * @param string $id_review_type Review owner type (required)
      * @param \Softonic\CatalogApiSdk\Model\ProgramVersionLocaleReviewType $body  (optional)
-     *
      * @return Array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function replaceProgramVersionLocaleReviewTypeWithHttpInfo($id_program, $id_version, $id_locale, $id_review_type, $body = null)
     {
-        
         // verify the required parameter 'id_program' is set
         if ($id_program === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_program when calling replaceProgramVersionLocaleReviewType');
         }
-        if (strlen($id_program) > 36) {
+        if ((strlen($id_program) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsLocalesReviewTypesApi.replaceProgramVersionLocaleReviewType, must be smaller than or equal to 36.');
         }
-        if (strlen($id_program) < 36) {
+        if ((strlen($id_program) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsLocalesReviewTypesApi.replaceProgramVersionLocaleReviewType, must be bigger than or equal to 36.');
         }
-
 
         // verify the required parameter 'id_version' is set
         if ($id_version === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_version when calling replaceProgramVersionLocaleReviewType');
         }
-        if (strlen($id_version) > 60) {
+        if ((strlen($id_version) > 60)) {
             throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsLocalesReviewTypesApi.replaceProgramVersionLocaleReviewType, must be smaller than or equal to 60.');
         }
-        if (strlen($id_version) < 1) {
+        if ((strlen($id_version) < 1)) {
             throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsLocalesReviewTypesApi.replaceProgramVersionLocaleReviewType, must be bigger than or equal to 1.');
         }
-
 
         // verify the required parameter 'id_locale' is set
         if ($id_locale === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_locale when calling replaceProgramVersionLocaleReviewType');
         }
-        if (strlen($id_locale) > 2) {
+        if ((strlen($id_locale) > 2)) {
             throw new \InvalidArgumentException('invalid length for "$id_locale" when calling ProgramsVersionsLocalesReviewTypesApi.replaceProgramVersionLocaleReviewType, must be smaller than or equal to 2.');
         }
-        if (strlen($id_locale) < 2) {
+        if ((strlen($id_locale) < 2)) {
             throw new \InvalidArgumentException('invalid length for "$id_locale" when calling ProgramsVersionsLocalesReviewTypesApi.replaceProgramVersionLocaleReviewType, must be bigger than or equal to 2.');
         }
-
 
         // verify the required parameter 'id_review_type' is set
         if ($id_review_type === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_review_type when calling replaceProgramVersionLocaleReviewType');
         }
-
         // parse inputs
         $resourcePath = "/programs/{id_program}/versions/{id_version}/locales/{id_locale}/review-types/{id_review_type}";
         $httpBody = '';
@@ -861,8 +812,6 @@ class ProgramsVersionsLocalesReviewTypesApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_program !== null) {
             $resourcePath = str_replace(
@@ -870,21 +819,24 @@ class ProgramsVersionsLocalesReviewTypesApi
                 $this->apiClient->getSerializer()->toPathValue($id_program),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_version !== null) {
             $resourcePath = str_replace(
                 "{" . "id_version" . "}",
                 $this->apiClient->getSerializer()->toPathValue($id_version),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_locale !== null) {
             $resourcePath = str_replace(
                 "{" . "id_locale" . "}",
                 $this->apiClient->getSerializer()->toPathValue($id_locale),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_review_type !== null) {
             $resourcePath = str_replace(
                 "{" . "id_review_type" . "}",
@@ -895,7 +847,6 @@ class ProgramsVersionsLocalesReviewTypesApi
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
-        
         // body params
         $_tempBody = null;
         if (isset($body)) {
@@ -908,22 +859,18 @@ class ProgramsVersionsLocalesReviewTypesApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -935,7 +882,9 @@ class ProgramsVersionsLocalesReviewTypesApi
                 'PUT',
                 $queryParams,
                 $httpBody,
-                $headerParams
+                $headerParams,
+                null,
+                '/programs/{id_program}/versions/{id_version}/locales/{id_locale}/review-types/{id_review_type}'
             );
 
             return array(null, $statusCode, $httpHeader);
@@ -946,17 +895,17 @@ class ProgramsVersionsLocalesReviewTypesApi
             throw $e;
         }
     }
+
     /**
      * Operation updateProgramVersionLocaleReviewType
      *
-     * Partially updates a ProgramVersionLocaleReviewType.
+     * Partially updates a ProgramVersionLocaleReviewType
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_version Program version identifier (required)
      * @param string $id_locale Locale identifier (required)
      * @param string $id_review_type Review owner type (required)
      * @param \Softonic\CatalogApiSdk\Model\ProgramVersionLocaleReviewType $body  (optional)
-     *
      * @return void
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -966,65 +915,58 @@ class ProgramsVersionsLocalesReviewTypesApi
         return $response;
     }
 
-
     /**
      * Operation updateProgramVersionLocaleReviewTypeWithHttpInfo
      *
-     * Partially updates a ProgramVersionLocaleReviewType.
+     * Partially updates a ProgramVersionLocaleReviewType
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_version Program version identifier (required)
      * @param string $id_locale Locale identifier (required)
      * @param string $id_review_type Review owner type (required)
      * @param \Softonic\CatalogApiSdk\Model\ProgramVersionLocaleReviewType $body  (optional)
-     *
      * @return Array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function updateProgramVersionLocaleReviewTypeWithHttpInfo($id_program, $id_version, $id_locale, $id_review_type, $body = null)
     {
-        
         // verify the required parameter 'id_program' is set
         if ($id_program === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_program when calling updateProgramVersionLocaleReviewType');
         }
-        if (strlen($id_program) > 36) {
+        if ((strlen($id_program) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsLocalesReviewTypesApi.updateProgramVersionLocaleReviewType, must be smaller than or equal to 36.');
         }
-        if (strlen($id_program) < 36) {
+        if ((strlen($id_program) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsLocalesReviewTypesApi.updateProgramVersionLocaleReviewType, must be bigger than or equal to 36.');
         }
-
 
         // verify the required parameter 'id_version' is set
         if ($id_version === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_version when calling updateProgramVersionLocaleReviewType');
         }
-        if (strlen($id_version) > 60) {
+        if ((strlen($id_version) > 60)) {
             throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsLocalesReviewTypesApi.updateProgramVersionLocaleReviewType, must be smaller than or equal to 60.');
         }
-        if (strlen($id_version) < 1) {
+        if ((strlen($id_version) < 1)) {
             throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsLocalesReviewTypesApi.updateProgramVersionLocaleReviewType, must be bigger than or equal to 1.');
         }
-
 
         // verify the required parameter 'id_locale' is set
         if ($id_locale === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_locale when calling updateProgramVersionLocaleReviewType');
         }
-        if (strlen($id_locale) > 2) {
+        if ((strlen($id_locale) > 2)) {
             throw new \InvalidArgumentException('invalid length for "$id_locale" when calling ProgramsVersionsLocalesReviewTypesApi.updateProgramVersionLocaleReviewType, must be smaller than or equal to 2.');
         }
-        if (strlen($id_locale) < 2) {
+        if ((strlen($id_locale) < 2)) {
             throw new \InvalidArgumentException('invalid length for "$id_locale" when calling ProgramsVersionsLocalesReviewTypesApi.updateProgramVersionLocaleReviewType, must be bigger than or equal to 2.');
         }
-
 
         // verify the required parameter 'id_review_type' is set
         if ($id_review_type === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_review_type when calling updateProgramVersionLocaleReviewType');
         }
-
         // parse inputs
         $resourcePath = "/programs/{id_program}/versions/{id_version}/locales/{id_locale}/review-types/{id_review_type}";
         $httpBody = '';
@@ -1037,8 +979,6 @@ class ProgramsVersionsLocalesReviewTypesApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_program !== null) {
             $resourcePath = str_replace(
@@ -1046,21 +986,24 @@ class ProgramsVersionsLocalesReviewTypesApi
                 $this->apiClient->getSerializer()->toPathValue($id_program),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_version !== null) {
             $resourcePath = str_replace(
                 "{" . "id_version" . "}",
                 $this->apiClient->getSerializer()->toPathValue($id_version),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_locale !== null) {
             $resourcePath = str_replace(
                 "{" . "id_locale" . "}",
                 $this->apiClient->getSerializer()->toPathValue($id_locale),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_review_type !== null) {
             $resourcePath = str_replace(
                 "{" . "id_review_type" . "}",
@@ -1071,7 +1014,6 @@ class ProgramsVersionsLocalesReviewTypesApi
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
-        
         // body params
         $_tempBody = null;
         if (isset($body)) {
@@ -1084,22 +1026,18 @@ class ProgramsVersionsLocalesReviewTypesApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -1111,7 +1049,9 @@ class ProgramsVersionsLocalesReviewTypesApi
                 'PATCH',
                 $queryParams,
                 $httpBody,
-                $headerParams
+                $headerParams,
+                null,
+                '/programs/{id_program}/versions/{id_version}/locales/{id_locale}/review-types/{id_review_type}'
             );
 
             return array(null, $statusCode, $httpHeader);
@@ -1122,4 +1062,5 @@ class ProgramsVersionsLocalesReviewTypesApi
             throw $e;
         }
     }
+
 }

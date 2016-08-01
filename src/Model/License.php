@@ -46,7 +46,8 @@ use \ArrayAccess;
 /**
  * License Class Doc Comment
  *
- * @category    Class
+ * @category    Class */
+/** 
  * @package     Softonic\CatalogApiSdk
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -166,19 +167,19 @@ class License implements ArrayAccess
         if ($this->container['id_license'] === null) {
             $invalid_properties[] = "'id_license' can't be null";
         }
-        if (strlen($this->container['id_license']) > 3) {
+        if ((strlen($this->container['id_license']) > 3)) {
             $invalid_properties[] = "invalid value for 'id_license', the character length must be smaller than or equal to 3.";
         }
-        if (strlen($this->container['id_license']) < 1) {
+        if ((strlen($this->container['id_license']) < 1)) {
             $invalid_properties[] = "invalid value for 'id_license', the character length must be bigger than or equal to 1.";
         }
         if ($this->container['description'] === null) {
             $invalid_properties[] = "'description' can't be null";
         }
-        if (strlen($this->container['description']) > 20) {
+        if ((strlen($this->container['description']) > 20)) {
             $invalid_properties[] = "invalid value for 'description', the character length must be smaller than or equal to 20.";
         }
-        if (strlen($this->container['description']) < 1) {
+        if ((strlen($this->container['description']) < 1)) {
             $invalid_properties[] = "invalid value for 'description', the character length must be bigger than or equal to 1.";
         }
         if ($this->container['type'] === null) {
@@ -364,3 +365,5 @@ class License implements ArrayAccess
         return json_encode(\Softonic\CatalogApiSdk\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
+
+

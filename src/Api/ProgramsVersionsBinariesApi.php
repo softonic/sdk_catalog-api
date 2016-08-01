@@ -105,12 +105,11 @@ class ProgramsVersionsBinariesApi
     /**
      * Operation createProgramVersionBinary
      *
-     * Creates a new ProgramVersionBinary.
+     * Creates a new ProgramVersionBinary
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_version Version from program (required)
      * @param \Softonic\CatalogApiSdk\Model\ProgramVersionBinary $body  (optional)
-     *
      * @return void
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -120,45 +119,40 @@ class ProgramsVersionsBinariesApi
         return $response;
     }
 
-
     /**
      * Operation createProgramVersionBinaryWithHttpInfo
      *
-     * Creates a new ProgramVersionBinary.
+     * Creates a new ProgramVersionBinary
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_version Version from program (required)
      * @param \Softonic\CatalogApiSdk\Model\ProgramVersionBinary $body  (optional)
-     *
      * @return Array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function createProgramVersionBinaryWithHttpInfo($id_program, $id_version, $body = null)
     {
-        
         // verify the required parameter 'id_program' is set
         if ($id_program === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_program when calling createProgramVersionBinary');
         }
-        if (strlen($id_program) > 36) {
+        if ((strlen($id_program) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsBinariesApi.createProgramVersionBinary, must be smaller than or equal to 36.');
         }
-        if (strlen($id_program) < 36) {
+        if ((strlen($id_program) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsBinariesApi.createProgramVersionBinary, must be bigger than or equal to 36.');
         }
-
 
         // verify the required parameter 'id_version' is set
         if ($id_version === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_version when calling createProgramVersionBinary');
         }
-        if (strlen($id_version) > 60) {
+        if ((strlen($id_version) > 60)) {
             throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsBinariesApi.createProgramVersionBinary, must be smaller than or equal to 60.');
         }
-        if (strlen($id_version) < 1) {
+        if ((strlen($id_version) < 1)) {
             throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsBinariesApi.createProgramVersionBinary, must be bigger than or equal to 1.');
         }
-
 
         // parse inputs
         $resourcePath = "/programs/{id_program}/versions/{id_version}/binaries";
@@ -172,8 +166,6 @@ class ProgramsVersionsBinariesApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_program !== null) {
             $resourcePath = str_replace(
@@ -181,7 +173,8 @@ class ProgramsVersionsBinariesApi
                 $this->apiClient->getSerializer()->toPathValue($id_program),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_version !== null) {
             $resourcePath = str_replace(
                 "{" . "id_version" . "}",
@@ -192,7 +185,6 @@ class ProgramsVersionsBinariesApi
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
-        
         // body params
         $_tempBody = null;
         if (isset($body)) {
@@ -205,22 +197,18 @@ class ProgramsVersionsBinariesApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -232,7 +220,9 @@ class ProgramsVersionsBinariesApi
                 'POST',
                 $queryParams,
                 $httpBody,
-                $headerParams
+                $headerParams,
+                null,
+                '/programs/{id_program}/versions/{id_version}/binaries'
             );
 
             return array(null, $statusCode, $httpHeader);
@@ -243,15 +233,15 @@ class ProgramsVersionsBinariesApi
             throw $e;
         }
     }
+
     /**
      * Operation deleteProgramVersionBinary
      *
-     * Deletes a ProgramVersionBinary.
+     * Deletes a ProgramVersionBinary
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_version Version from program (required)
      * @param string $id_binary Binary identifier in SHA1-Hash format. (required)
-     *
      * @return void
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -261,57 +251,51 @@ class ProgramsVersionsBinariesApi
         return $response;
     }
 
-
     /**
      * Operation deleteProgramVersionBinaryWithHttpInfo
      *
-     * Deletes a ProgramVersionBinary.
+     * Deletes a ProgramVersionBinary
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_version Version from program (required)
      * @param string $id_binary Binary identifier in SHA1-Hash format. (required)
-     *
      * @return Array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function deleteProgramVersionBinaryWithHttpInfo($id_program, $id_version, $id_binary)
     {
-        
         // verify the required parameter 'id_program' is set
         if ($id_program === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_program when calling deleteProgramVersionBinary');
         }
-        if (strlen($id_program) > 36) {
+        if ((strlen($id_program) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsBinariesApi.deleteProgramVersionBinary, must be smaller than or equal to 36.');
         }
-        if (strlen($id_program) < 36) {
+        if ((strlen($id_program) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsBinariesApi.deleteProgramVersionBinary, must be bigger than or equal to 36.');
         }
-
 
         // verify the required parameter 'id_version' is set
         if ($id_version === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_version when calling deleteProgramVersionBinary');
         }
-        if (strlen($id_version) > 60) {
+        if ((strlen($id_version) > 60)) {
             throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsBinariesApi.deleteProgramVersionBinary, must be smaller than or equal to 60.');
         }
-        if (strlen($id_version) < 1) {
+        if ((strlen($id_version) < 1)) {
             throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsBinariesApi.deleteProgramVersionBinary, must be bigger than or equal to 1.');
         }
-
 
         // verify the required parameter 'id_binary' is set
         if ($id_binary === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_binary when calling deleteProgramVersionBinary');
         }
-        if (strlen($id_binary) > 40) {
+        if ((strlen($id_binary) > 40)) {
             throw new \InvalidArgumentException('invalid length for "$id_binary" when calling ProgramsVersionsBinariesApi.deleteProgramVersionBinary, must be smaller than or equal to 40.');
         }
-        if (strlen($id_binary) < 40) {
+        if ((strlen($id_binary) < 40)) {
             throw new \InvalidArgumentException('invalid length for "$id_binary" when calling ProgramsVersionsBinariesApi.deleteProgramVersionBinary, must be bigger than or equal to 40.');
         }
-
 
         // parse inputs
         $resourcePath = "/programs/{id_program}/versions/{id_version}/binaries/{id_binary}";
@@ -325,8 +309,6 @@ class ProgramsVersionsBinariesApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_program !== null) {
             $resourcePath = str_replace(
@@ -334,14 +316,16 @@ class ProgramsVersionsBinariesApi
                 $this->apiClient->getSerializer()->toPathValue($id_program),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_version !== null) {
             $resourcePath = str_replace(
                 "{" . "id_version" . "}",
                 $this->apiClient->getSerializer()->toPathValue($id_version),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_binary !== null) {
             $resourcePath = str_replace(
                 "{" . "id_binary" . "}",
@@ -353,30 +337,24 @@ class ProgramsVersionsBinariesApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-        
-
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -388,7 +366,9 @@ class ProgramsVersionsBinariesApi
                 'DELETE',
                 $queryParams,
                 $httpBody,
-                $headerParams
+                $headerParams,
+                null,
+                '/programs/{id_program}/versions/{id_version}/binaries/{id_binary}'
             );
 
             return array(null, $statusCode, $httpHeader);
@@ -399,14 +379,14 @@ class ProgramsVersionsBinariesApi
             throw $e;
         }
     }
+
     /**
      * Operation findProgramVersionBinary
      *
-     * List of ProgramVersionBinarys.
+     * List of ProgramVersionBinarys
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_version Version from program (required)
-     *
      * @return \Softonic\CatalogApiSdk\Model\ProgramVersionBinary[]
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -416,44 +396,39 @@ class ProgramsVersionsBinariesApi
         return $response;
     }
 
-
     /**
      * Operation findProgramVersionBinaryWithHttpInfo
      *
-     * List of ProgramVersionBinarys.
+     * List of ProgramVersionBinarys
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_version Version from program (required)
-     *
      * @return Array of \Softonic\CatalogApiSdk\Model\ProgramVersionBinary[], HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function findProgramVersionBinaryWithHttpInfo($id_program, $id_version)
     {
-        
         // verify the required parameter 'id_program' is set
         if ($id_program === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_program when calling findProgramVersionBinary');
         }
-        if (strlen($id_program) > 36) {
+        if ((strlen($id_program) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsBinariesApi.findProgramVersionBinary, must be smaller than or equal to 36.');
         }
-        if (strlen($id_program) < 36) {
+        if ((strlen($id_program) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsBinariesApi.findProgramVersionBinary, must be bigger than or equal to 36.');
         }
-
 
         // verify the required parameter 'id_version' is set
         if ($id_version === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_version when calling findProgramVersionBinary');
         }
-        if (strlen($id_version) > 60) {
+        if ((strlen($id_version) > 60)) {
             throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsBinariesApi.findProgramVersionBinary, must be smaller than or equal to 60.');
         }
-        if (strlen($id_version) < 1) {
+        if ((strlen($id_version) < 1)) {
             throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsBinariesApi.findProgramVersionBinary, must be bigger than or equal to 1.');
         }
-
 
         // parse inputs
         $resourcePath = "/programs/{id_program}/versions/{id_version}/binaries";
@@ -467,8 +442,6 @@ class ProgramsVersionsBinariesApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_program !== null) {
             $resourcePath = str_replace(
@@ -476,7 +449,8 @@ class ProgramsVersionsBinariesApi
                 $this->apiClient->getSerializer()->toPathValue($id_program),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_version !== null) {
             $resourcePath = str_replace(
                 "{" . "id_version" . "}",
@@ -488,30 +462,24 @@ class ProgramsVersionsBinariesApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-        
-
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -524,7 +492,8 @@ class ProgramsVersionsBinariesApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\CatalogApiSdk\Model\ProgramVersionBinary[]'
+                '\Softonic\CatalogApiSdk\Model\ProgramVersionBinary[]',
+                '/programs/{id_program}/versions/{id_version}/binaries'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Model\ProgramVersionBinary[]', $httpHeader), $statusCode, $httpHeader);
@@ -539,15 +508,15 @@ class ProgramsVersionsBinariesApi
             throw $e;
         }
     }
+
     /**
      * Operation readProgramVersionBinary
      *
-     * Fetches a single ProgramVersionBinary.
+     * Fetches a single ProgramVersionBinary
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_version Version from program (required)
      * @param string $id_binary Binary identifier in SHA1-Hash format. (required)
-     *
      * @return \Softonic\CatalogApiSdk\Model\ProgramVersionBinary
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -557,57 +526,51 @@ class ProgramsVersionsBinariesApi
         return $response;
     }
 
-
     /**
      * Operation readProgramVersionBinaryWithHttpInfo
      *
-     * Fetches a single ProgramVersionBinary.
+     * Fetches a single ProgramVersionBinary
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_version Version from program (required)
      * @param string $id_binary Binary identifier in SHA1-Hash format. (required)
-     *
      * @return Array of \Softonic\CatalogApiSdk\Model\ProgramVersionBinary, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function readProgramVersionBinaryWithHttpInfo($id_program, $id_version, $id_binary)
     {
-        
         // verify the required parameter 'id_program' is set
         if ($id_program === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_program when calling readProgramVersionBinary');
         }
-        if (strlen($id_program) > 36) {
+        if ((strlen($id_program) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsBinariesApi.readProgramVersionBinary, must be smaller than or equal to 36.');
         }
-        if (strlen($id_program) < 36) {
+        if ((strlen($id_program) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsBinariesApi.readProgramVersionBinary, must be bigger than or equal to 36.');
         }
-
 
         // verify the required parameter 'id_version' is set
         if ($id_version === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_version when calling readProgramVersionBinary');
         }
-        if (strlen($id_version) > 60) {
+        if ((strlen($id_version) > 60)) {
             throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsBinariesApi.readProgramVersionBinary, must be smaller than or equal to 60.');
         }
-        if (strlen($id_version) < 1) {
+        if ((strlen($id_version) < 1)) {
             throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsBinariesApi.readProgramVersionBinary, must be bigger than or equal to 1.');
         }
-
 
         // verify the required parameter 'id_binary' is set
         if ($id_binary === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_binary when calling readProgramVersionBinary');
         }
-        if (strlen($id_binary) > 40) {
+        if ((strlen($id_binary) > 40)) {
             throw new \InvalidArgumentException('invalid length for "$id_binary" when calling ProgramsVersionsBinariesApi.readProgramVersionBinary, must be smaller than or equal to 40.');
         }
-        if (strlen($id_binary) < 40) {
+        if ((strlen($id_binary) < 40)) {
             throw new \InvalidArgumentException('invalid length for "$id_binary" when calling ProgramsVersionsBinariesApi.readProgramVersionBinary, must be bigger than or equal to 40.');
         }
-
 
         // parse inputs
         $resourcePath = "/programs/{id_program}/versions/{id_version}/binaries/{id_binary}";
@@ -621,8 +584,6 @@ class ProgramsVersionsBinariesApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_program !== null) {
             $resourcePath = str_replace(
@@ -630,14 +591,16 @@ class ProgramsVersionsBinariesApi
                 $this->apiClient->getSerializer()->toPathValue($id_program),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_version !== null) {
             $resourcePath = str_replace(
                 "{" . "id_version" . "}",
                 $this->apiClient->getSerializer()->toPathValue($id_version),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_binary !== null) {
             $resourcePath = str_replace(
                 "{" . "id_binary" . "}",
@@ -649,30 +612,24 @@ class ProgramsVersionsBinariesApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-        
-
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -685,7 +642,8 @@ class ProgramsVersionsBinariesApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\CatalogApiSdk\Model\ProgramVersionBinary'
+                '\Softonic\CatalogApiSdk\Model\ProgramVersionBinary',
+                '/programs/{id_program}/versions/{id_version}/binaries/{id_binary}'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Model\ProgramVersionBinary', $httpHeader), $statusCode, $httpHeader);
@@ -700,16 +658,16 @@ class ProgramsVersionsBinariesApi
             throw $e;
         }
     }
+
     /**
      * Operation replaceProgramVersionBinary
      *
-     * Entirely replaces a ProgramVersionBinary.
+     * Entirely replaces a ProgramVersionBinary
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_version Version from program (required)
      * @param string $id_binary Binary identifier in SHA1-Hash format. (required)
      * @param \Softonic\CatalogApiSdk\Model\ProgramVersionBinary $body  (optional)
-     *
      * @return void
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -719,58 +677,52 @@ class ProgramsVersionsBinariesApi
         return $response;
     }
 
-
     /**
      * Operation replaceProgramVersionBinaryWithHttpInfo
      *
-     * Entirely replaces a ProgramVersionBinary.
+     * Entirely replaces a ProgramVersionBinary
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_version Version from program (required)
      * @param string $id_binary Binary identifier in SHA1-Hash format. (required)
      * @param \Softonic\CatalogApiSdk\Model\ProgramVersionBinary $body  (optional)
-     *
      * @return Array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function replaceProgramVersionBinaryWithHttpInfo($id_program, $id_version, $id_binary, $body = null)
     {
-        
         // verify the required parameter 'id_program' is set
         if ($id_program === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_program when calling replaceProgramVersionBinary');
         }
-        if (strlen($id_program) > 36) {
+        if ((strlen($id_program) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsBinariesApi.replaceProgramVersionBinary, must be smaller than or equal to 36.');
         }
-        if (strlen($id_program) < 36) {
+        if ((strlen($id_program) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsBinariesApi.replaceProgramVersionBinary, must be bigger than or equal to 36.');
         }
-
 
         // verify the required parameter 'id_version' is set
         if ($id_version === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_version when calling replaceProgramVersionBinary');
         }
-        if (strlen($id_version) > 60) {
+        if ((strlen($id_version) > 60)) {
             throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsBinariesApi.replaceProgramVersionBinary, must be smaller than or equal to 60.');
         }
-        if (strlen($id_version) < 1) {
+        if ((strlen($id_version) < 1)) {
             throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsBinariesApi.replaceProgramVersionBinary, must be bigger than or equal to 1.');
         }
-
 
         // verify the required parameter 'id_binary' is set
         if ($id_binary === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_binary when calling replaceProgramVersionBinary');
         }
-        if (strlen($id_binary) > 40) {
+        if ((strlen($id_binary) > 40)) {
             throw new \InvalidArgumentException('invalid length for "$id_binary" when calling ProgramsVersionsBinariesApi.replaceProgramVersionBinary, must be smaller than or equal to 40.');
         }
-        if (strlen($id_binary) < 40) {
+        if ((strlen($id_binary) < 40)) {
             throw new \InvalidArgumentException('invalid length for "$id_binary" when calling ProgramsVersionsBinariesApi.replaceProgramVersionBinary, must be bigger than or equal to 40.');
         }
-
 
         // parse inputs
         $resourcePath = "/programs/{id_program}/versions/{id_version}/binaries/{id_binary}";
@@ -784,8 +736,6 @@ class ProgramsVersionsBinariesApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_program !== null) {
             $resourcePath = str_replace(
@@ -793,14 +743,16 @@ class ProgramsVersionsBinariesApi
                 $this->apiClient->getSerializer()->toPathValue($id_program),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_version !== null) {
             $resourcePath = str_replace(
                 "{" . "id_version" . "}",
                 $this->apiClient->getSerializer()->toPathValue($id_version),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_binary !== null) {
             $resourcePath = str_replace(
                 "{" . "id_binary" . "}",
@@ -811,7 +763,6 @@ class ProgramsVersionsBinariesApi
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
-        
         // body params
         $_tempBody = null;
         if (isset($body)) {
@@ -824,22 +775,18 @@ class ProgramsVersionsBinariesApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -851,7 +798,9 @@ class ProgramsVersionsBinariesApi
                 'PUT',
                 $queryParams,
                 $httpBody,
-                $headerParams
+                $headerParams,
+                null,
+                '/programs/{id_program}/versions/{id_version}/binaries/{id_binary}'
             );
 
             return array(null, $statusCode, $httpHeader);
@@ -862,16 +811,16 @@ class ProgramsVersionsBinariesApi
             throw $e;
         }
     }
+
     /**
      * Operation updateProgramVersionBinary
      *
-     * Partially updates a ProgramVersionBinary.
+     * Partially updates a ProgramVersionBinary
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_version Version from program (required)
      * @param string $id_binary Binary identifier in SHA1-Hash format. (required)
      * @param \Softonic\CatalogApiSdk\Model\ProgramVersionBinary $body  (optional)
-     *
      * @return void
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -881,58 +830,52 @@ class ProgramsVersionsBinariesApi
         return $response;
     }
 
-
     /**
      * Operation updateProgramVersionBinaryWithHttpInfo
      *
-     * Partially updates a ProgramVersionBinary.
+     * Partially updates a ProgramVersionBinary
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_version Version from program (required)
      * @param string $id_binary Binary identifier in SHA1-Hash format. (required)
      * @param \Softonic\CatalogApiSdk\Model\ProgramVersionBinary $body  (optional)
-     *
      * @return Array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function updateProgramVersionBinaryWithHttpInfo($id_program, $id_version, $id_binary, $body = null)
     {
-        
         // verify the required parameter 'id_program' is set
         if ($id_program === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_program when calling updateProgramVersionBinary');
         }
-        if (strlen($id_program) > 36) {
+        if ((strlen($id_program) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsBinariesApi.updateProgramVersionBinary, must be smaller than or equal to 36.');
         }
-        if (strlen($id_program) < 36) {
+        if ((strlen($id_program) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsBinariesApi.updateProgramVersionBinary, must be bigger than or equal to 36.');
         }
-
 
         // verify the required parameter 'id_version' is set
         if ($id_version === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_version when calling updateProgramVersionBinary');
         }
-        if (strlen($id_version) > 60) {
+        if ((strlen($id_version) > 60)) {
             throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsBinariesApi.updateProgramVersionBinary, must be smaller than or equal to 60.');
         }
-        if (strlen($id_version) < 1) {
+        if ((strlen($id_version) < 1)) {
             throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsBinariesApi.updateProgramVersionBinary, must be bigger than or equal to 1.');
         }
-
 
         // verify the required parameter 'id_binary' is set
         if ($id_binary === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_binary when calling updateProgramVersionBinary');
         }
-        if (strlen($id_binary) > 40) {
+        if ((strlen($id_binary) > 40)) {
             throw new \InvalidArgumentException('invalid length for "$id_binary" when calling ProgramsVersionsBinariesApi.updateProgramVersionBinary, must be smaller than or equal to 40.');
         }
-        if (strlen($id_binary) < 40) {
+        if ((strlen($id_binary) < 40)) {
             throw new \InvalidArgumentException('invalid length for "$id_binary" when calling ProgramsVersionsBinariesApi.updateProgramVersionBinary, must be bigger than or equal to 40.');
         }
-
 
         // parse inputs
         $resourcePath = "/programs/{id_program}/versions/{id_version}/binaries/{id_binary}";
@@ -946,8 +889,6 @@ class ProgramsVersionsBinariesApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_program !== null) {
             $resourcePath = str_replace(
@@ -955,14 +896,16 @@ class ProgramsVersionsBinariesApi
                 $this->apiClient->getSerializer()->toPathValue($id_program),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_version !== null) {
             $resourcePath = str_replace(
                 "{" . "id_version" . "}",
                 $this->apiClient->getSerializer()->toPathValue($id_version),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_binary !== null) {
             $resourcePath = str_replace(
                 "{" . "id_binary" . "}",
@@ -973,7 +916,6 @@ class ProgramsVersionsBinariesApi
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
-        
         // body params
         $_tempBody = null;
         if (isset($body)) {
@@ -986,22 +928,18 @@ class ProgramsVersionsBinariesApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -1013,7 +951,9 @@ class ProgramsVersionsBinariesApi
                 'PATCH',
                 $queryParams,
                 $httpBody,
-                $headerParams
+                $headerParams,
+                null,
+                '/programs/{id_program}/versions/{id_version}/binaries/{id_binary}'
             );
 
             return array(null, $statusCode, $httpHeader);
@@ -1024,4 +964,5 @@ class ProgramsVersionsBinariesApi
             throw $e;
         }
     }
+
 }

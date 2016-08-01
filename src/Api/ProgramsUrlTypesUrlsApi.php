@@ -105,12 +105,11 @@ class ProgramsUrlTypesUrlsApi
     /**
      * Operation createProgramUrlTypeUrl
      *
-     * Creates a new ProgramUrlTypeUrl.
+     * Creates a new ProgramUrlTypeUrl
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_url_type URL types identifier. (required)
      * @param \Softonic\CatalogApiSdk\Model\ProgramUrlTypeUrl $body  (optional)
-     *
      * @return void
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -120,39 +119,34 @@ class ProgramsUrlTypesUrlsApi
         return $response;
     }
 
-
     /**
      * Operation createProgramUrlTypeUrlWithHttpInfo
      *
-     * Creates a new ProgramUrlTypeUrl.
+     * Creates a new ProgramUrlTypeUrl
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_url_type URL types identifier. (required)
      * @param \Softonic\CatalogApiSdk\Model\ProgramUrlTypeUrl $body  (optional)
-     *
      * @return Array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function createProgramUrlTypeUrlWithHttpInfo($id_program, $id_url_type, $body = null)
     {
-        
         // verify the required parameter 'id_program' is set
         if ($id_program === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_program when calling createProgramUrlTypeUrl');
         }
-        if (strlen($id_program) > 36) {
+        if ((strlen($id_program) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsUrlTypesUrlsApi.createProgramUrlTypeUrl, must be smaller than or equal to 36.');
         }
-        if (strlen($id_program) < 36) {
+        if ((strlen($id_program) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsUrlTypesUrlsApi.createProgramUrlTypeUrl, must be bigger than or equal to 36.');
         }
-
 
         // verify the required parameter 'id_url_type' is set
         if ($id_url_type === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_url_type when calling createProgramUrlTypeUrl');
         }
-
         // parse inputs
         $resourcePath = "/programs/{id_program}/url-types/{id_url_type}/urls";
         $httpBody = '';
@@ -165,8 +159,6 @@ class ProgramsUrlTypesUrlsApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_program !== null) {
             $resourcePath = str_replace(
@@ -174,7 +166,8 @@ class ProgramsUrlTypesUrlsApi
                 $this->apiClient->getSerializer()->toPathValue($id_program),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_url_type !== null) {
             $resourcePath = str_replace(
                 "{" . "id_url_type" . "}",
@@ -185,7 +178,6 @@ class ProgramsUrlTypesUrlsApi
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
-        
         // body params
         $_tempBody = null;
         if (isset($body)) {
@@ -198,22 +190,18 @@ class ProgramsUrlTypesUrlsApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -225,7 +213,9 @@ class ProgramsUrlTypesUrlsApi
                 'POST',
                 $queryParams,
                 $httpBody,
-                $headerParams
+                $headerParams,
+                null,
+                '/programs/{id_program}/url-types/{id_url_type}/urls'
             );
 
             return array(null, $statusCode, $httpHeader);
@@ -236,15 +226,15 @@ class ProgramsUrlTypesUrlsApi
             throw $e;
         }
     }
+
     /**
      * Operation deleteProgramUrlTypeUrl
      *
-     * Deletes a ProgramUrlTypeUrl.
+     * Deletes a ProgramUrlTypeUrl
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_url_type URL types identifier. (required)
      * @param string $id_url Url UUID (required)
-     *
      * @return void
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -254,50 +244,44 @@ class ProgramsUrlTypesUrlsApi
         return $response;
     }
 
-
     /**
      * Operation deleteProgramUrlTypeUrlWithHttpInfo
      *
-     * Deletes a ProgramUrlTypeUrl.
+     * Deletes a ProgramUrlTypeUrl
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_url_type URL types identifier. (required)
      * @param string $id_url Url UUID (required)
-     *
      * @return Array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function deleteProgramUrlTypeUrlWithHttpInfo($id_program, $id_url_type, $id_url)
     {
-        
         // verify the required parameter 'id_program' is set
         if ($id_program === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_program when calling deleteProgramUrlTypeUrl');
         }
-        if (strlen($id_program) > 36) {
+        if ((strlen($id_program) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsUrlTypesUrlsApi.deleteProgramUrlTypeUrl, must be smaller than or equal to 36.');
         }
-        if (strlen($id_program) < 36) {
+        if ((strlen($id_program) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsUrlTypesUrlsApi.deleteProgramUrlTypeUrl, must be bigger than or equal to 36.');
         }
-
 
         // verify the required parameter 'id_url_type' is set
         if ($id_url_type === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_url_type when calling deleteProgramUrlTypeUrl');
         }
-
         // verify the required parameter 'id_url' is set
         if ($id_url === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_url when calling deleteProgramUrlTypeUrl');
         }
-        if (strlen($id_url) > 36) {
+        if ((strlen($id_url) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_url" when calling ProgramsUrlTypesUrlsApi.deleteProgramUrlTypeUrl, must be smaller than or equal to 36.');
         }
-        if (strlen($id_url) < 36) {
+        if ((strlen($id_url) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_url" when calling ProgramsUrlTypesUrlsApi.deleteProgramUrlTypeUrl, must be bigger than or equal to 36.');
         }
-
 
         // parse inputs
         $resourcePath = "/programs/{id_program}/url-types/{id_url_type}/urls/{id_url}";
@@ -311,8 +295,6 @@ class ProgramsUrlTypesUrlsApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_program !== null) {
             $resourcePath = str_replace(
@@ -320,14 +302,16 @@ class ProgramsUrlTypesUrlsApi
                 $this->apiClient->getSerializer()->toPathValue($id_program),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_url_type !== null) {
             $resourcePath = str_replace(
                 "{" . "id_url_type" . "}",
                 $this->apiClient->getSerializer()->toPathValue($id_url_type),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_url !== null) {
             $resourcePath = str_replace(
                 "{" . "id_url" . "}",
@@ -339,30 +323,24 @@ class ProgramsUrlTypesUrlsApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-        
-
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -374,7 +352,9 @@ class ProgramsUrlTypesUrlsApi
                 'DELETE',
                 $queryParams,
                 $httpBody,
-                $headerParams
+                $headerParams,
+                null,
+                '/programs/{id_program}/url-types/{id_url_type}/urls/{id_url}'
             );
 
             return array(null, $statusCode, $httpHeader);
@@ -385,14 +365,14 @@ class ProgramsUrlTypesUrlsApi
             throw $e;
         }
     }
+
     /**
      * Operation findProgramUrlTypeUrl
      *
-     * List of ProgramUrlTypeUrls.
+     * List of ProgramUrlTypeUrls
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_url_type URL types identifier. (required)
-     *
      * @return \Softonic\CatalogApiSdk\Model\ProgramUrlTypeUrl[]
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -402,38 +382,33 @@ class ProgramsUrlTypesUrlsApi
         return $response;
     }
 
-
     /**
      * Operation findProgramUrlTypeUrlWithHttpInfo
      *
-     * List of ProgramUrlTypeUrls.
+     * List of ProgramUrlTypeUrls
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_url_type URL types identifier. (required)
-     *
      * @return Array of \Softonic\CatalogApiSdk\Model\ProgramUrlTypeUrl[], HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function findProgramUrlTypeUrlWithHttpInfo($id_program, $id_url_type)
     {
-        
         // verify the required parameter 'id_program' is set
         if ($id_program === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_program when calling findProgramUrlTypeUrl');
         }
-        if (strlen($id_program) > 36) {
+        if ((strlen($id_program) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsUrlTypesUrlsApi.findProgramUrlTypeUrl, must be smaller than or equal to 36.');
         }
-        if (strlen($id_program) < 36) {
+        if ((strlen($id_program) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsUrlTypesUrlsApi.findProgramUrlTypeUrl, must be bigger than or equal to 36.');
         }
-
 
         // verify the required parameter 'id_url_type' is set
         if ($id_url_type === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_url_type when calling findProgramUrlTypeUrl');
         }
-
         // parse inputs
         $resourcePath = "/programs/{id_program}/url-types/{id_url_type}/urls";
         $httpBody = '';
@@ -446,8 +421,6 @@ class ProgramsUrlTypesUrlsApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_program !== null) {
             $resourcePath = str_replace(
@@ -455,7 +428,8 @@ class ProgramsUrlTypesUrlsApi
                 $this->apiClient->getSerializer()->toPathValue($id_program),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_url_type !== null) {
             $resourcePath = str_replace(
                 "{" . "id_url_type" . "}",
@@ -467,30 +441,24 @@ class ProgramsUrlTypesUrlsApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-        
-
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -503,7 +471,8 @@ class ProgramsUrlTypesUrlsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\CatalogApiSdk\Model\ProgramUrlTypeUrl[]'
+                '\Softonic\CatalogApiSdk\Model\ProgramUrlTypeUrl[]',
+                '/programs/{id_program}/url-types/{id_url_type}/urls'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Model\ProgramUrlTypeUrl[]', $httpHeader), $statusCode, $httpHeader);
@@ -518,15 +487,15 @@ class ProgramsUrlTypesUrlsApi
             throw $e;
         }
     }
+
     /**
      * Operation readProgramUrlTypeUrl
      *
-     * Fetches a single ProgramUrlTypeUrl.
+     * Fetches a single ProgramUrlTypeUrl
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_url_type URL types identifier. (required)
      * @param string $id_url Url UUID (required)
-     *
      * @return \Softonic\CatalogApiSdk\Model\ProgramUrlTypeUrl
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -536,50 +505,44 @@ class ProgramsUrlTypesUrlsApi
         return $response;
     }
 
-
     /**
      * Operation readProgramUrlTypeUrlWithHttpInfo
      *
-     * Fetches a single ProgramUrlTypeUrl.
+     * Fetches a single ProgramUrlTypeUrl
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_url_type URL types identifier. (required)
      * @param string $id_url Url UUID (required)
-     *
      * @return Array of \Softonic\CatalogApiSdk\Model\ProgramUrlTypeUrl, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function readProgramUrlTypeUrlWithHttpInfo($id_program, $id_url_type, $id_url)
     {
-        
         // verify the required parameter 'id_program' is set
         if ($id_program === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_program when calling readProgramUrlTypeUrl');
         }
-        if (strlen($id_program) > 36) {
+        if ((strlen($id_program) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsUrlTypesUrlsApi.readProgramUrlTypeUrl, must be smaller than or equal to 36.');
         }
-        if (strlen($id_program) < 36) {
+        if ((strlen($id_program) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsUrlTypesUrlsApi.readProgramUrlTypeUrl, must be bigger than or equal to 36.');
         }
-
 
         // verify the required parameter 'id_url_type' is set
         if ($id_url_type === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_url_type when calling readProgramUrlTypeUrl');
         }
-
         // verify the required parameter 'id_url' is set
         if ($id_url === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_url when calling readProgramUrlTypeUrl');
         }
-        if (strlen($id_url) > 36) {
+        if ((strlen($id_url) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_url" when calling ProgramsUrlTypesUrlsApi.readProgramUrlTypeUrl, must be smaller than or equal to 36.');
         }
-        if (strlen($id_url) < 36) {
+        if ((strlen($id_url) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_url" when calling ProgramsUrlTypesUrlsApi.readProgramUrlTypeUrl, must be bigger than or equal to 36.');
         }
-
 
         // parse inputs
         $resourcePath = "/programs/{id_program}/url-types/{id_url_type}/urls/{id_url}";
@@ -593,8 +556,6 @@ class ProgramsUrlTypesUrlsApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_program !== null) {
             $resourcePath = str_replace(
@@ -602,14 +563,16 @@ class ProgramsUrlTypesUrlsApi
                 $this->apiClient->getSerializer()->toPathValue($id_program),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_url_type !== null) {
             $resourcePath = str_replace(
                 "{" . "id_url_type" . "}",
                 $this->apiClient->getSerializer()->toPathValue($id_url_type),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_url !== null) {
             $resourcePath = str_replace(
                 "{" . "id_url" . "}",
@@ -621,30 +584,24 @@ class ProgramsUrlTypesUrlsApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-        
-
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -657,7 +614,8 @@ class ProgramsUrlTypesUrlsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\CatalogApiSdk\Model\ProgramUrlTypeUrl'
+                '\Softonic\CatalogApiSdk\Model\ProgramUrlTypeUrl',
+                '/programs/{id_program}/url-types/{id_url_type}/urls/{id_url}'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Model\ProgramUrlTypeUrl', $httpHeader), $statusCode, $httpHeader);
@@ -672,16 +630,16 @@ class ProgramsUrlTypesUrlsApi
             throw $e;
         }
     }
+
     /**
      * Operation replaceProgramUrlTypeUrl
      *
-     * Entirely replaces a ProgramUrlTypeUrl.
+     * Entirely replaces a ProgramUrlTypeUrl
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_url_type URL types identifier. (required)
      * @param string $id_url Url UUID (required)
      * @param \Softonic\CatalogApiSdk\Model\ProgramUrlTypeUrl $body  (optional)
-     *
      * @return void
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -691,51 +649,45 @@ class ProgramsUrlTypesUrlsApi
         return $response;
     }
 
-
     /**
      * Operation replaceProgramUrlTypeUrlWithHttpInfo
      *
-     * Entirely replaces a ProgramUrlTypeUrl.
+     * Entirely replaces a ProgramUrlTypeUrl
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_url_type URL types identifier. (required)
      * @param string $id_url Url UUID (required)
      * @param \Softonic\CatalogApiSdk\Model\ProgramUrlTypeUrl $body  (optional)
-     *
      * @return Array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function replaceProgramUrlTypeUrlWithHttpInfo($id_program, $id_url_type, $id_url, $body = null)
     {
-        
         // verify the required parameter 'id_program' is set
         if ($id_program === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_program when calling replaceProgramUrlTypeUrl');
         }
-        if (strlen($id_program) > 36) {
+        if ((strlen($id_program) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsUrlTypesUrlsApi.replaceProgramUrlTypeUrl, must be smaller than or equal to 36.');
         }
-        if (strlen($id_program) < 36) {
+        if ((strlen($id_program) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsUrlTypesUrlsApi.replaceProgramUrlTypeUrl, must be bigger than or equal to 36.');
         }
-
 
         // verify the required parameter 'id_url_type' is set
         if ($id_url_type === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_url_type when calling replaceProgramUrlTypeUrl');
         }
-
         // verify the required parameter 'id_url' is set
         if ($id_url === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_url when calling replaceProgramUrlTypeUrl');
         }
-        if (strlen($id_url) > 36) {
+        if ((strlen($id_url) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_url" when calling ProgramsUrlTypesUrlsApi.replaceProgramUrlTypeUrl, must be smaller than or equal to 36.');
         }
-        if (strlen($id_url) < 36) {
+        if ((strlen($id_url) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_url" when calling ProgramsUrlTypesUrlsApi.replaceProgramUrlTypeUrl, must be bigger than or equal to 36.');
         }
-
 
         // parse inputs
         $resourcePath = "/programs/{id_program}/url-types/{id_url_type}/urls/{id_url}";
@@ -749,8 +701,6 @@ class ProgramsUrlTypesUrlsApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_program !== null) {
             $resourcePath = str_replace(
@@ -758,14 +708,16 @@ class ProgramsUrlTypesUrlsApi
                 $this->apiClient->getSerializer()->toPathValue($id_program),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_url_type !== null) {
             $resourcePath = str_replace(
                 "{" . "id_url_type" . "}",
                 $this->apiClient->getSerializer()->toPathValue($id_url_type),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_url !== null) {
             $resourcePath = str_replace(
                 "{" . "id_url" . "}",
@@ -776,7 +728,6 @@ class ProgramsUrlTypesUrlsApi
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
-        
         // body params
         $_tempBody = null;
         if (isset($body)) {
@@ -789,22 +740,18 @@ class ProgramsUrlTypesUrlsApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -816,7 +763,9 @@ class ProgramsUrlTypesUrlsApi
                 'PUT',
                 $queryParams,
                 $httpBody,
-                $headerParams
+                $headerParams,
+                null,
+                '/programs/{id_program}/url-types/{id_url_type}/urls/{id_url}'
             );
 
             return array(null, $statusCode, $httpHeader);
@@ -827,16 +776,16 @@ class ProgramsUrlTypesUrlsApi
             throw $e;
         }
     }
+
     /**
      * Operation updateProgramUrlTypeUrl
      *
-     * Partially updates a ProgramUrlTypeUrl.
+     * Partially updates a ProgramUrlTypeUrl
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_url_type URL types identifier. (required)
      * @param string $id_url Url UUID (required)
      * @param \Softonic\CatalogApiSdk\Model\ProgramUrlTypeUrl $body  (optional)
-     *
      * @return void
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -846,51 +795,45 @@ class ProgramsUrlTypesUrlsApi
         return $response;
     }
 
-
     /**
      * Operation updateProgramUrlTypeUrlWithHttpInfo
      *
-     * Partially updates a ProgramUrlTypeUrl.
+     * Partially updates a ProgramUrlTypeUrl
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_url_type URL types identifier. (required)
      * @param string $id_url Url UUID (required)
      * @param \Softonic\CatalogApiSdk\Model\ProgramUrlTypeUrl $body  (optional)
-     *
      * @return Array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function updateProgramUrlTypeUrlWithHttpInfo($id_program, $id_url_type, $id_url, $body = null)
     {
-        
         // verify the required parameter 'id_program' is set
         if ($id_program === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_program when calling updateProgramUrlTypeUrl');
         }
-        if (strlen($id_program) > 36) {
+        if ((strlen($id_program) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsUrlTypesUrlsApi.updateProgramUrlTypeUrl, must be smaller than or equal to 36.');
         }
-        if (strlen($id_program) < 36) {
+        if ((strlen($id_program) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsUrlTypesUrlsApi.updateProgramUrlTypeUrl, must be bigger than or equal to 36.');
         }
-
 
         // verify the required parameter 'id_url_type' is set
         if ($id_url_type === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_url_type when calling updateProgramUrlTypeUrl');
         }
-
         // verify the required parameter 'id_url' is set
         if ($id_url === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_url when calling updateProgramUrlTypeUrl');
         }
-        if (strlen($id_url) > 36) {
+        if ((strlen($id_url) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_url" when calling ProgramsUrlTypesUrlsApi.updateProgramUrlTypeUrl, must be smaller than or equal to 36.');
         }
-        if (strlen($id_url) < 36) {
+        if ((strlen($id_url) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_url" when calling ProgramsUrlTypesUrlsApi.updateProgramUrlTypeUrl, must be bigger than or equal to 36.');
         }
-
 
         // parse inputs
         $resourcePath = "/programs/{id_program}/url-types/{id_url_type}/urls/{id_url}";
@@ -904,8 +847,6 @@ class ProgramsUrlTypesUrlsApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_program !== null) {
             $resourcePath = str_replace(
@@ -913,14 +854,16 @@ class ProgramsUrlTypesUrlsApi
                 $this->apiClient->getSerializer()->toPathValue($id_program),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_url_type !== null) {
             $resourcePath = str_replace(
                 "{" . "id_url_type" . "}",
                 $this->apiClient->getSerializer()->toPathValue($id_url_type),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_url !== null) {
             $resourcePath = str_replace(
                 "{" . "id_url" . "}",
@@ -931,7 +874,6 @@ class ProgramsUrlTypesUrlsApi
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
-        
         // body params
         $_tempBody = null;
         if (isset($body)) {
@@ -944,22 +886,18 @@ class ProgramsUrlTypesUrlsApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -971,7 +909,9 @@ class ProgramsUrlTypesUrlsApi
                 'PATCH',
                 $queryParams,
                 $httpBody,
-                $headerParams
+                $headerParams,
+                null,
+                '/programs/{id_program}/url-types/{id_url_type}/urls/{id_url}'
             );
 
             return array(null, $statusCode, $httpHeader);
@@ -982,4 +922,5 @@ class ProgramsUrlTypesUrlsApi
             throw $e;
         }
     }
+
 }

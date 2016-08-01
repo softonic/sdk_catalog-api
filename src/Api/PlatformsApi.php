@@ -105,8 +105,7 @@ class PlatformsApi
     /**
      * Operation findPlatform
      *
-     * List of Platforms.
-     *
+     * List of Platforms
      *
      * @return \Softonic\CatalogApiSdk\Model\Platform[]
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
@@ -117,19 +116,16 @@ class PlatformsApi
         return $response;
     }
 
-
     /**
      * Operation findPlatformWithHttpInfo
      *
-     * List of Platforms.
-     *
+     * List of Platforms
      *
      * @return Array of \Softonic\CatalogApiSdk\Model\Platform[], HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function findPlatformWithHttpInfo()
     {
-        
         // parse inputs
         $resourcePath = "/platforms";
         $httpBody = '';
@@ -142,37 +138,28 @@ class PlatformsApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
-        
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-        
-
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -185,7 +172,8 @@ class PlatformsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\CatalogApiSdk\Model\Platform[]'
+                '\Softonic\CatalogApiSdk\Model\Platform[]',
+                '/platforms'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Model\Platform[]', $httpHeader), $statusCode, $httpHeader);
@@ -200,13 +188,13 @@ class PlatformsApi
             throw $e;
         }
     }
+
     /**
      * Operation readPlatform
      *
-     * Fetches a single Platform.
+     * Fetches a single Platform
      *
      * @param string $id_platform Platform ID (required)
-     *
      * @return \Softonic\CatalogApiSdk\Model\Platform
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -216,25 +204,21 @@ class PlatformsApi
         return $response;
     }
 
-
     /**
      * Operation readPlatformWithHttpInfo
      *
-     * Fetches a single Platform.
+     * Fetches a single Platform
      *
      * @param string $id_platform Platform ID (required)
-     *
      * @return Array of \Softonic\CatalogApiSdk\Model\Platform, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function readPlatformWithHttpInfo($id_platform)
     {
-        
         // verify the required parameter 'id_platform' is set
         if ($id_platform === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_platform when calling readPlatform');
         }
-
         // parse inputs
         $resourcePath = "/platforms/{id_platform}";
         $httpBody = '';
@@ -247,8 +231,6 @@ class PlatformsApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_platform !== null) {
             $resourcePath = str_replace(
@@ -261,30 +243,24 @@ class PlatformsApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-        
-
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -297,7 +273,8 @@ class PlatformsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\CatalogApiSdk\Model\Platform'
+                '\Softonic\CatalogApiSdk\Model\Platform',
+                '/platforms/{id_platform}'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Model\Platform', $httpHeader), $statusCode, $httpHeader);
@@ -312,4 +289,5 @@ class PlatformsApi
             throw $e;
         }
     }
+
 }

@@ -105,8 +105,7 @@ class OriginsApi
     /**
      * Operation findOrigin
      *
-     * List of Origins.
-     *
+     * List of Origins
      *
      * @return \Softonic\CatalogApiSdk\Model\Origin[]
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
@@ -117,19 +116,16 @@ class OriginsApi
         return $response;
     }
 
-
     /**
      * Operation findOriginWithHttpInfo
      *
-     * List of Origins.
-     *
+     * List of Origins
      *
      * @return Array of \Softonic\CatalogApiSdk\Model\Origin[], HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function findOriginWithHttpInfo()
     {
-        
         // parse inputs
         $resourcePath = "/origins";
         $httpBody = '';
@@ -142,37 +138,28 @@ class OriginsApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
-        
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-        
-
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -185,7 +172,8 @@ class OriginsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\CatalogApiSdk\Model\Origin[]'
+                '\Softonic\CatalogApiSdk\Model\Origin[]',
+                '/origins'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Model\Origin[]', $httpHeader), $statusCode, $httpHeader);
@@ -200,13 +188,13 @@ class OriginsApi
             throw $e;
         }
     }
+
     /**
      * Operation readOrigin
      *
-     * Fetches a single Origin.
+     * Fetches a single Origin
      *
      * @param string $id_origin Origin ID (required)
-     *
      * @return \Softonic\CatalogApiSdk\Model\Origin
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -216,31 +204,27 @@ class OriginsApi
         return $response;
     }
 
-
     /**
      * Operation readOriginWithHttpInfo
      *
-     * Fetches a single Origin.
+     * Fetches a single Origin
      *
      * @param string $id_origin Origin ID (required)
-     *
      * @return Array of \Softonic\CatalogApiSdk\Model\Origin, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function readOriginWithHttpInfo($id_origin)
     {
-        
         // verify the required parameter 'id_origin' is set
         if ($id_origin === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_origin when calling readOrigin');
         }
-        if (strlen($id_origin) > 40) {
+        if ((strlen($id_origin) > 40)) {
             throw new \InvalidArgumentException('invalid length for "$id_origin" when calling OriginsApi.readOrigin, must be smaller than or equal to 40.');
         }
-        if (strlen($id_origin) < 1) {
+        if ((strlen($id_origin) < 1)) {
             throw new \InvalidArgumentException('invalid length for "$id_origin" when calling OriginsApi.readOrigin, must be bigger than or equal to 1.');
         }
-
 
         // parse inputs
         $resourcePath = "/origins/{id_origin}";
@@ -254,8 +238,6 @@ class OriginsApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_origin !== null) {
             $resourcePath = str_replace(
@@ -268,30 +250,24 @@ class OriginsApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-        
-
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -304,7 +280,8 @@ class OriginsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\CatalogApiSdk\Model\Origin'
+                '\Softonic\CatalogApiSdk\Model\Origin',
+                '/origins/{id_origin}'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Model\Origin', $httpHeader), $statusCode, $httpHeader);
@@ -319,14 +296,14 @@ class OriginsApi
             throw $e;
         }
     }
+
     /**
      * Operation updateOrigin
      *
-     * Partially updates a Origin.
+     * Partially updates a Origin
      *
      * @param string $id_origin Origin ID (required)
      * @param \Softonic\CatalogApiSdk\Model\Origin $body  (optional)
-     *
      * @return void
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -336,32 +313,28 @@ class OriginsApi
         return $response;
     }
 
-
     /**
      * Operation updateOriginWithHttpInfo
      *
-     * Partially updates a Origin.
+     * Partially updates a Origin
      *
      * @param string $id_origin Origin ID (required)
      * @param \Softonic\CatalogApiSdk\Model\Origin $body  (optional)
-     *
      * @return Array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function updateOriginWithHttpInfo($id_origin, $body = null)
     {
-        
         // verify the required parameter 'id_origin' is set
         if ($id_origin === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_origin when calling updateOrigin');
         }
-        if (strlen($id_origin) > 40) {
+        if ((strlen($id_origin) > 40)) {
             throw new \InvalidArgumentException('invalid length for "$id_origin" when calling OriginsApi.updateOrigin, must be smaller than or equal to 40.');
         }
-        if (strlen($id_origin) < 1) {
+        if ((strlen($id_origin) < 1)) {
             throw new \InvalidArgumentException('invalid length for "$id_origin" when calling OriginsApi.updateOrigin, must be bigger than or equal to 1.');
         }
-
 
         // parse inputs
         $resourcePath = "/origins/{id_origin}";
@@ -375,8 +348,6 @@ class OriginsApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_origin !== null) {
             $resourcePath = str_replace(
@@ -388,7 +359,6 @@ class OriginsApi
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
-        
         // body params
         $_tempBody = null;
         if (isset($body)) {
@@ -401,22 +371,18 @@ class OriginsApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -428,7 +394,9 @@ class OriginsApi
                 'PATCH',
                 $queryParams,
                 $httpBody,
-                $headerParams
+                $headerParams,
+                null,
+                '/origins/{id_origin}'
             );
 
             return array(null, $statusCode, $httpHeader);
@@ -439,4 +407,5 @@ class OriginsApi
             throw $e;
         }
     }
+
 }

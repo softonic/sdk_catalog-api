@@ -105,10 +105,9 @@ class ProgramsReviewTypesApi
     /**
      * Operation findProgramReviewType
      *
-     * List of ProgramReviewTypes.
+     * List of ProgramReviewTypes
      *
      * @param string $id_program Program UUID (required)
-     *
      * @return \Softonic\CatalogApiSdk\Model\ProgramReviewType[]
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -118,31 +117,27 @@ class ProgramsReviewTypesApi
         return $response;
     }
 
-
     /**
      * Operation findProgramReviewTypeWithHttpInfo
      *
-     * List of ProgramReviewTypes.
+     * List of ProgramReviewTypes
      *
      * @param string $id_program Program UUID (required)
-     *
      * @return Array of \Softonic\CatalogApiSdk\Model\ProgramReviewType[], HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function findProgramReviewTypeWithHttpInfo($id_program)
     {
-        
         // verify the required parameter 'id_program' is set
         if ($id_program === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_program when calling findProgramReviewType');
         }
-        if (strlen($id_program) > 36) {
+        if ((strlen($id_program) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsReviewTypesApi.findProgramReviewType, must be smaller than or equal to 36.');
         }
-        if (strlen($id_program) < 36) {
+        if ((strlen($id_program) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsReviewTypesApi.findProgramReviewType, must be bigger than or equal to 36.');
         }
-
 
         // parse inputs
         $resourcePath = "/programs/{id_program}/review-types";
@@ -156,8 +151,6 @@ class ProgramsReviewTypesApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_program !== null) {
             $resourcePath = str_replace(
@@ -170,30 +163,24 @@ class ProgramsReviewTypesApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-        
-
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -206,7 +193,8 @@ class ProgramsReviewTypesApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\CatalogApiSdk\Model\ProgramReviewType[]'
+                '\Softonic\CatalogApiSdk\Model\ProgramReviewType[]',
+                '/programs/{id_program}/review-types'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Model\ProgramReviewType[]', $httpHeader), $statusCode, $httpHeader);
@@ -221,4 +209,5 @@ class ProgramsReviewTypesApi
             throw $e;
         }
     }
+
 }

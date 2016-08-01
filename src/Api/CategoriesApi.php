@@ -105,10 +105,9 @@ class CategoriesApi
     /**
      * Operation createCategory
      *
-     * Creates a new Category.
+     * Creates a new Category
      *
      * @param \Softonic\CatalogApiSdk\Model\Category $body  (optional)
-     *
      * @return void
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -118,20 +117,17 @@ class CategoriesApi
         return $response;
     }
 
-
     /**
      * Operation createCategoryWithHttpInfo
      *
-     * Creates a new Category.
+     * Creates a new Category
      *
      * @param \Softonic\CatalogApiSdk\Model\Category $body  (optional)
-     *
      * @return Array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function createCategoryWithHttpInfo($body = null)
     {
-        
         // parse inputs
         $resourcePath = "/categories";
         $httpBody = '';
@@ -144,13 +140,9 @@ class CategoriesApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
-        
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
-        
         // body params
         $_tempBody = null;
         if (isset($body)) {
@@ -163,22 +155,18 @@ class CategoriesApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -190,7 +178,9 @@ class CategoriesApi
                 'POST',
                 $queryParams,
                 $httpBody,
-                $headerParams
+                $headerParams,
+                null,
+                '/categories'
             );
 
             return array(null, $statusCode, $httpHeader);
@@ -201,13 +191,13 @@ class CategoriesApi
             throw $e;
         }
     }
+
     /**
      * Operation deleteCategory
      *
-     * Deletes a Category.
+     * Deletes a Category
      *
      * @param string $id_category Categories identifier (required)
-     *
      * @return void
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -217,31 +207,27 @@ class CategoriesApi
         return $response;
     }
 
-
     /**
      * Operation deleteCategoryWithHttpInfo
      *
-     * Deletes a Category.
+     * Deletes a Category
      *
      * @param string $id_category Categories identifier (required)
-     *
      * @return Array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function deleteCategoryWithHttpInfo($id_category)
     {
-        
         // verify the required parameter 'id_category' is set
         if ($id_category === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_category when calling deleteCategory');
         }
-        if (strlen($id_category) > 40) {
+        if ((strlen($id_category) > 40)) {
             throw new \InvalidArgumentException('invalid length for "$id_category" when calling CategoriesApi.deleteCategory, must be smaller than or equal to 40.');
         }
-        if (strlen($id_category) < 1) {
+        if ((strlen($id_category) < 1)) {
             throw new \InvalidArgumentException('invalid length for "$id_category" when calling CategoriesApi.deleteCategory, must be bigger than or equal to 1.');
         }
-
 
         // parse inputs
         $resourcePath = "/categories/{id_category}";
@@ -255,8 +241,6 @@ class CategoriesApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_category !== null) {
             $resourcePath = str_replace(
@@ -269,30 +253,24 @@ class CategoriesApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-        
-
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -304,7 +282,9 @@ class CategoriesApi
                 'DELETE',
                 $queryParams,
                 $httpBody,
-                $headerParams
+                $headerParams,
+                null,
+                '/categories/{id_category}'
             );
 
             return array(null, $statusCode, $httpHeader);
@@ -315,11 +295,11 @@ class CategoriesApi
             throw $e;
         }
     }
+
     /**
      * Operation findCategory
      *
-     * List of Categorys.
-     *
+     * List of Categorys
      *
      * @return \Softonic\CatalogApiSdk\Model\Category[]
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
@@ -330,19 +310,16 @@ class CategoriesApi
         return $response;
     }
 
-
     /**
      * Operation findCategoryWithHttpInfo
      *
-     * List of Categorys.
-     *
+     * List of Categorys
      *
      * @return Array of \Softonic\CatalogApiSdk\Model\Category[], HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function findCategoryWithHttpInfo()
     {
-        
         // parse inputs
         $resourcePath = "/categories";
         $httpBody = '';
@@ -355,37 +332,28 @@ class CategoriesApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
-        
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-        
-
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -398,7 +366,8 @@ class CategoriesApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\CatalogApiSdk\Model\Category[]'
+                '\Softonic\CatalogApiSdk\Model\Category[]',
+                '/categories'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Model\Category[]', $httpHeader), $statusCode, $httpHeader);
@@ -413,13 +382,13 @@ class CategoriesApi
             throw $e;
         }
     }
+
     /**
      * Operation readCategory
      *
-     * Fetches a single Category.
+     * Fetches a single Category
      *
      * @param string $id_category Categories identifier (required)
-     *
      * @return \Softonic\CatalogApiSdk\Model\Category
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -429,31 +398,27 @@ class CategoriesApi
         return $response;
     }
 
-
     /**
      * Operation readCategoryWithHttpInfo
      *
-     * Fetches a single Category.
+     * Fetches a single Category
      *
      * @param string $id_category Categories identifier (required)
-     *
      * @return Array of \Softonic\CatalogApiSdk\Model\Category, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function readCategoryWithHttpInfo($id_category)
     {
-        
         // verify the required parameter 'id_category' is set
         if ($id_category === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_category when calling readCategory');
         }
-        if (strlen($id_category) > 40) {
+        if ((strlen($id_category) > 40)) {
             throw new \InvalidArgumentException('invalid length for "$id_category" when calling CategoriesApi.readCategory, must be smaller than or equal to 40.');
         }
-        if (strlen($id_category) < 1) {
+        if ((strlen($id_category) < 1)) {
             throw new \InvalidArgumentException('invalid length for "$id_category" when calling CategoriesApi.readCategory, must be bigger than or equal to 1.');
         }
-
 
         // parse inputs
         $resourcePath = "/categories/{id_category}";
@@ -467,8 +432,6 @@ class CategoriesApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_category !== null) {
             $resourcePath = str_replace(
@@ -481,30 +444,24 @@ class CategoriesApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-        
-
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -517,7 +474,8 @@ class CategoriesApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\CatalogApiSdk\Model\Category'
+                '\Softonic\CatalogApiSdk\Model\Category',
+                '/categories/{id_category}'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Model\Category', $httpHeader), $statusCode, $httpHeader);
@@ -532,14 +490,14 @@ class CategoriesApi
             throw $e;
         }
     }
+
     /**
      * Operation replaceCategory
      *
-     * Entirely replaces a Category.
+     * Entirely replaces a Category
      *
      * @param string $id_category Categories identifier (required)
      * @param \Softonic\CatalogApiSdk\Model\Category $body  (optional)
-     *
      * @return void
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -549,32 +507,28 @@ class CategoriesApi
         return $response;
     }
 
-
     /**
      * Operation replaceCategoryWithHttpInfo
      *
-     * Entirely replaces a Category.
+     * Entirely replaces a Category
      *
      * @param string $id_category Categories identifier (required)
      * @param \Softonic\CatalogApiSdk\Model\Category $body  (optional)
-     *
      * @return Array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function replaceCategoryWithHttpInfo($id_category, $body = null)
     {
-        
         // verify the required parameter 'id_category' is set
         if ($id_category === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_category when calling replaceCategory');
         }
-        if (strlen($id_category) > 40) {
+        if ((strlen($id_category) > 40)) {
             throw new \InvalidArgumentException('invalid length for "$id_category" when calling CategoriesApi.replaceCategory, must be smaller than or equal to 40.');
         }
-        if (strlen($id_category) < 1) {
+        if ((strlen($id_category) < 1)) {
             throw new \InvalidArgumentException('invalid length for "$id_category" when calling CategoriesApi.replaceCategory, must be bigger than or equal to 1.');
         }
-
 
         // parse inputs
         $resourcePath = "/categories/{id_category}";
@@ -588,8 +542,6 @@ class CategoriesApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_category !== null) {
             $resourcePath = str_replace(
@@ -601,7 +553,6 @@ class CategoriesApi
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
-        
         // body params
         $_tempBody = null;
         if (isset($body)) {
@@ -614,22 +565,18 @@ class CategoriesApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -641,7 +588,9 @@ class CategoriesApi
                 'PUT',
                 $queryParams,
                 $httpBody,
-                $headerParams
+                $headerParams,
+                null,
+                '/categories/{id_category}'
             );
 
             return array(null, $statusCode, $httpHeader);
@@ -652,14 +601,14 @@ class CategoriesApi
             throw $e;
         }
     }
+
     /**
      * Operation updateCategory
      *
-     * Partially updates a Category.
+     * Partially updates a Category
      *
      * @param string $id_category Categories identifier (required)
      * @param \Softonic\CatalogApiSdk\Model\Category $body  (optional)
-     *
      * @return void
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -669,32 +618,28 @@ class CategoriesApi
         return $response;
     }
 
-
     /**
      * Operation updateCategoryWithHttpInfo
      *
-     * Partially updates a Category.
+     * Partially updates a Category
      *
      * @param string $id_category Categories identifier (required)
      * @param \Softonic\CatalogApiSdk\Model\Category $body  (optional)
-     *
      * @return Array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function updateCategoryWithHttpInfo($id_category, $body = null)
     {
-        
         // verify the required parameter 'id_category' is set
         if ($id_category === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_category when calling updateCategory');
         }
-        if (strlen($id_category) > 40) {
+        if ((strlen($id_category) > 40)) {
             throw new \InvalidArgumentException('invalid length for "$id_category" when calling CategoriesApi.updateCategory, must be smaller than or equal to 40.');
         }
-        if (strlen($id_category) < 1) {
+        if ((strlen($id_category) < 1)) {
             throw new \InvalidArgumentException('invalid length for "$id_category" when calling CategoriesApi.updateCategory, must be bigger than or equal to 1.');
         }
-
 
         // parse inputs
         $resourcePath = "/categories/{id_category}";
@@ -708,8 +653,6 @@ class CategoriesApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_category !== null) {
             $resourcePath = str_replace(
@@ -721,7 +664,6 @@ class CategoriesApi
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
-        
         // body params
         $_tempBody = null;
         if (isset($body)) {
@@ -734,22 +676,18 @@ class CategoriesApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -761,7 +699,9 @@ class CategoriesApi
                 'PATCH',
                 $queryParams,
                 $httpBody,
-                $headerParams
+                $headerParams,
+                null,
+                '/categories/{id_category}'
             );
 
             return array(null, $statusCode, $httpHeader);
@@ -772,4 +712,5 @@ class CategoriesApi
             throw $e;
         }
     }
+
 }

@@ -46,7 +46,8 @@ use \ArrayAccess;
 /**
  * ProgramVersion Class Doc Comment
  *
- * @category    Class
+ * @category    Class */
+/** 
  * @package     Softonic\CatalogApiSdk
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -187,70 +188,70 @@ class ProgramVersion implements ArrayAccess
         if ($this->container['id_program'] === null) {
             $invalid_properties[] = "'id_program' can't be null";
         }
-        if (strlen($this->container['id_program']) > 36) {
+        if ((strlen($this->container['id_program']) > 36)) {
             $invalid_properties[] = "invalid value for 'id_program', the character length must be smaller than or equal to 36.";
         }
-        if (strlen($this->container['id_program']) < 36) {
+        if ((strlen($this->container['id_program']) < 36)) {
             $invalid_properties[] = "invalid value for 'id_program', the character length must be bigger than or equal to 36.";
         }
         if ($this->container['id_version'] === null) {
             $invalid_properties[] = "'id_version' can't be null";
         }
-        if (strlen($this->container['id_version']) > 60) {
+        if ((strlen($this->container['id_version']) > 60)) {
             $invalid_properties[] = "invalid value for 'id_version', the character length must be smaller than or equal to 60.";
         }
-        if (strlen($this->container['id_version']) < 1) {
+        if ((strlen($this->container['id_version']) < 1)) {
             $invalid_properties[] = "invalid value for 'id_version', the character length must be bigger than or equal to 1.";
         }
         if ($this->container['name'] === null) {
             $invalid_properties[] = "'name' can't be null";
         }
-        if (strlen($this->container['name']) > 60) {
+        if ((strlen($this->container['name']) > 60)) {
             $invalid_properties[] = "invalid value for 'name', the character length must be smaller than or equal to 60.";
         }
-        if (strlen($this->container['name']) < 1) {
+        if ((strlen($this->container['name']) < 1)) {
             $invalid_properties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
         }
-        if (strlen($this->container['id_minimum_requirements_group']) > 36) {
+        if (!is_null(${{$this->container['id_minimum_requirements_group']}}) && (strlen($this->container['id_minimum_requirements_group']) > 36)) {
             $invalid_properties[] = "invalid value for 'id_minimum_requirements_group', the character length must be smaller than or equal to 36.";
         }
-        if (strlen($this->container['id_minimum_requirements_group']) < 36) {
+        if (!is_null(${{$this->container['id_minimum_requirements_group']}}) && (strlen($this->container['id_minimum_requirements_group']) < 36)) {
             $invalid_properties[] = "invalid value for 'id_minimum_requirements_group', the character length must be bigger than or equal to 36.";
         }
-        if (strlen($this->container['id_recommended_requirements_group']) > 36) {
+        if (!is_null(${{$this->container['id_recommended_requirements_group']}}) && (strlen($this->container['id_recommended_requirements_group']) > 36)) {
             $invalid_properties[] = "invalid value for 'id_recommended_requirements_group', the character length must be smaller than or equal to 36.";
         }
-        if (strlen($this->container['id_recommended_requirements_group']) < 36) {
+        if (!is_null(${{$this->container['id_recommended_requirements_group']}}) && (strlen($this->container['id_recommended_requirements_group']) < 36)) {
             $invalid_properties[] = "invalid value for 'id_recommended_requirements_group', the character length must be bigger than or equal to 36.";
         }
-        if (strlen($this->container['preversion']) > 255) {
+        if (!is_null(${{$this->container['preversion']}}) && (strlen($this->container['preversion']) > 255)) {
             $invalid_properties[] = "invalid value for 'preversion', the character length must be smaller than or equal to 255.";
         }
-        if (strlen($this->container['preversion']) < 1) {
+        if (!is_null(${{$this->container['preversion']}}) && (strlen($this->container['preversion']) < 1)) {
             $invalid_properties[] = "invalid value for 'preversion', the character length must be bigger than or equal to 1.";
         }
-        if (strlen($this->container['postversion']) > 255) {
+        if (!is_null(${{$this->container['postversion']}}) && (strlen($this->container['postversion']) > 255)) {
             $invalid_properties[] = "invalid value for 'postversion', the character length must be smaller than or equal to 255.";
         }
-        if (strlen($this->container['postversion']) < 1) {
+        if (!is_null(${{$this->container['postversion']}}) && (strlen($this->container['postversion']) < 1)) {
             $invalid_properties[] = "invalid value for 'postversion', the character length must be bigger than or equal to 1.";
         }
-        if (strlen($this->container['supported_formats']) > 1024) {
+        if (!is_null(${{$this->container['supported_formats']}}) && (strlen($this->container['supported_formats']) > 1024)) {
             $invalid_properties[] = "invalid value for 'supported_formats', the character length must be smaller than or equal to 1024.";
         }
-        if (strlen($this->container['supported_formats']) < 1) {
+        if (!is_null(${{$this->container['supported_formats']}}) && (strlen($this->container['supported_formats']) < 1)) {
             $invalid_properties[] = "invalid value for 'supported_formats', the character length must be bigger than or equal to 1.";
         }
-        if (strlen($this->container['id_license']) > 3) {
+        if (!is_null(${{$this->container['id_license']}}) && (strlen($this->container['id_license']) > 3)) {
             $invalid_properties[] = "invalid value for 'id_license', the character length must be smaller than or equal to 3.";
         }
-        if (strlen($this->container['id_license']) < 1) {
+        if (!is_null(${{$this->container['id_license']}}) && (strlen($this->container['id_license']) < 1)) {
             $invalid_properties[] = "invalid value for 'id_license', the character length must be bigger than or equal to 1.";
         }
-        if ($this->container['age'] > 21.0) {
+        if (!is_null(${{$this->container['age']}}) && ($this->container['age'] > 21.0)) {
             $invalid_properties[] = "invalid value for 'age', must be smaller than or equal to 21.0.";
         }
-        if ($this->container['age'] < 0.0) {
+        if (!is_null(${{$this->container['age']}}) && ($this->container['age'] < 0.0)) {
             $invalid_properties[] = "invalid value for 'age', must be bigger than or equal to 0.0.";
         }
         return $invalid_properties;
@@ -665,3 +666,5 @@ class ProgramVersion implements ArrayAccess
         return json_encode(\Softonic\CatalogApiSdk\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
+
+

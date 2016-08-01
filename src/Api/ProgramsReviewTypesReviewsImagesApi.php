@@ -105,13 +105,12 @@ class ProgramsReviewTypesReviewsImagesApi
     /**
      * Operation createProgramReviewTypeReviewImage
      *
-     * Creates a new ProgramReviewTypeReviewImage.
+     * Creates a new ProgramReviewTypeReviewImage
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_review_type Review owner type (required)
      * @param string $id_review Review identifier as UUID (required)
      * @param \Softonic\CatalogApiSdk\Model\ProgramReviewTypeReviewImage $body  (optional)
-     *
      * @return void
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -121,51 +120,45 @@ class ProgramsReviewTypesReviewsImagesApi
         return $response;
     }
 
-
     /**
      * Operation createProgramReviewTypeReviewImageWithHttpInfo
      *
-     * Creates a new ProgramReviewTypeReviewImage.
+     * Creates a new ProgramReviewTypeReviewImage
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_review_type Review owner type (required)
      * @param string $id_review Review identifier as UUID (required)
      * @param \Softonic\CatalogApiSdk\Model\ProgramReviewTypeReviewImage $body  (optional)
-     *
      * @return Array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function createProgramReviewTypeReviewImageWithHttpInfo($id_program, $id_review_type, $id_review, $body = null)
     {
-        
         // verify the required parameter 'id_program' is set
         if ($id_program === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_program when calling createProgramReviewTypeReviewImage');
         }
-        if (strlen($id_program) > 36) {
+        if ((strlen($id_program) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsReviewTypesReviewsImagesApi.createProgramReviewTypeReviewImage, must be smaller than or equal to 36.');
         }
-        if (strlen($id_program) < 36) {
+        if ((strlen($id_program) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsReviewTypesReviewsImagesApi.createProgramReviewTypeReviewImage, must be bigger than or equal to 36.');
         }
-
 
         // verify the required parameter 'id_review_type' is set
         if ($id_review_type === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_review_type when calling createProgramReviewTypeReviewImage');
         }
-
         // verify the required parameter 'id_review' is set
         if ($id_review === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_review when calling createProgramReviewTypeReviewImage');
         }
-        if (strlen($id_review) > 36) {
+        if ((strlen($id_review) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_review" when calling ProgramsReviewTypesReviewsImagesApi.createProgramReviewTypeReviewImage, must be smaller than or equal to 36.');
         }
-        if (strlen($id_review) < 36) {
+        if ((strlen($id_review) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_review" when calling ProgramsReviewTypesReviewsImagesApi.createProgramReviewTypeReviewImage, must be bigger than or equal to 36.');
         }
-
 
         // parse inputs
         $resourcePath = "/programs/{id_program}/review-types/{id_review_type}/reviews/{id_review}/images";
@@ -179,8 +172,6 @@ class ProgramsReviewTypesReviewsImagesApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_program !== null) {
             $resourcePath = str_replace(
@@ -188,14 +179,16 @@ class ProgramsReviewTypesReviewsImagesApi
                 $this->apiClient->getSerializer()->toPathValue($id_program),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_review_type !== null) {
             $resourcePath = str_replace(
                 "{" . "id_review_type" . "}",
                 $this->apiClient->getSerializer()->toPathValue($id_review_type),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_review !== null) {
             $resourcePath = str_replace(
                 "{" . "id_review" . "}",
@@ -206,7 +199,6 @@ class ProgramsReviewTypesReviewsImagesApi
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
-        
         // body params
         $_tempBody = null;
         if (isset($body)) {
@@ -219,22 +211,18 @@ class ProgramsReviewTypesReviewsImagesApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -246,7 +234,9 @@ class ProgramsReviewTypesReviewsImagesApi
                 'POST',
                 $queryParams,
                 $httpBody,
-                $headerParams
+                $headerParams,
+                null,
+                '/programs/{id_program}/review-types/{id_review_type}/reviews/{id_review}/images'
             );
 
             return array(null, $statusCode, $httpHeader);
@@ -257,16 +247,16 @@ class ProgramsReviewTypesReviewsImagesApi
             throw $e;
         }
     }
+
     /**
      * Operation deleteProgramReviewTypeReviewImage
      *
-     * Deletes a ProgramReviewTypeReviewImage.
+     * Deletes a ProgramReviewTypeReviewImage
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_review_type Review owner type (required)
      * @param string $id_review Review identifier as UUID (required)
      * @param string $id_image Image identifier in SHA1-Hash format (required)
-     *
      * @return void
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -276,63 +266,56 @@ class ProgramsReviewTypesReviewsImagesApi
         return $response;
     }
 
-
     /**
      * Operation deleteProgramReviewTypeReviewImageWithHttpInfo
      *
-     * Deletes a ProgramReviewTypeReviewImage.
+     * Deletes a ProgramReviewTypeReviewImage
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_review_type Review owner type (required)
      * @param string $id_review Review identifier as UUID (required)
      * @param string $id_image Image identifier in SHA1-Hash format (required)
-     *
      * @return Array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function deleteProgramReviewTypeReviewImageWithHttpInfo($id_program, $id_review_type, $id_review, $id_image)
     {
-        
         // verify the required parameter 'id_program' is set
         if ($id_program === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_program when calling deleteProgramReviewTypeReviewImage');
         }
-        if (strlen($id_program) > 36) {
+        if ((strlen($id_program) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsReviewTypesReviewsImagesApi.deleteProgramReviewTypeReviewImage, must be smaller than or equal to 36.');
         }
-        if (strlen($id_program) < 36) {
+        if ((strlen($id_program) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsReviewTypesReviewsImagesApi.deleteProgramReviewTypeReviewImage, must be bigger than or equal to 36.');
         }
-
 
         // verify the required parameter 'id_review_type' is set
         if ($id_review_type === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_review_type when calling deleteProgramReviewTypeReviewImage');
         }
-
         // verify the required parameter 'id_review' is set
         if ($id_review === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_review when calling deleteProgramReviewTypeReviewImage');
         }
-        if (strlen($id_review) > 36) {
+        if ((strlen($id_review) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_review" when calling ProgramsReviewTypesReviewsImagesApi.deleteProgramReviewTypeReviewImage, must be smaller than or equal to 36.');
         }
-        if (strlen($id_review) < 36) {
+        if ((strlen($id_review) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_review" when calling ProgramsReviewTypesReviewsImagesApi.deleteProgramReviewTypeReviewImage, must be bigger than or equal to 36.');
         }
-
 
         // verify the required parameter 'id_image' is set
         if ($id_image === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_image when calling deleteProgramReviewTypeReviewImage');
         }
-        if (strlen($id_image) > 40) {
+        if ((strlen($id_image) > 40)) {
             throw new \InvalidArgumentException('invalid length for "$id_image" when calling ProgramsReviewTypesReviewsImagesApi.deleteProgramReviewTypeReviewImage, must be smaller than or equal to 40.');
         }
-        if (strlen($id_image) < 40) {
+        if ((strlen($id_image) < 40)) {
             throw new \InvalidArgumentException('invalid length for "$id_image" when calling ProgramsReviewTypesReviewsImagesApi.deleteProgramReviewTypeReviewImage, must be bigger than or equal to 40.');
         }
-
 
         // parse inputs
         $resourcePath = "/programs/{id_program}/review-types/{id_review_type}/reviews/{id_review}/images/{id_image}";
@@ -346,8 +329,6 @@ class ProgramsReviewTypesReviewsImagesApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_program !== null) {
             $resourcePath = str_replace(
@@ -355,21 +336,24 @@ class ProgramsReviewTypesReviewsImagesApi
                 $this->apiClient->getSerializer()->toPathValue($id_program),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_review_type !== null) {
             $resourcePath = str_replace(
                 "{" . "id_review_type" . "}",
                 $this->apiClient->getSerializer()->toPathValue($id_review_type),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_review !== null) {
             $resourcePath = str_replace(
                 "{" . "id_review" . "}",
                 $this->apiClient->getSerializer()->toPathValue($id_review),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_image !== null) {
             $resourcePath = str_replace(
                 "{" . "id_image" . "}",
@@ -381,30 +365,24 @@ class ProgramsReviewTypesReviewsImagesApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-        
-
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -416,7 +394,9 @@ class ProgramsReviewTypesReviewsImagesApi
                 'DELETE',
                 $queryParams,
                 $httpBody,
-                $headerParams
+                $headerParams,
+                null,
+                '/programs/{id_program}/review-types/{id_review_type}/reviews/{id_review}/images/{id_image}'
             );
 
             return array(null, $statusCode, $httpHeader);
@@ -427,15 +407,15 @@ class ProgramsReviewTypesReviewsImagesApi
             throw $e;
         }
     }
+
     /**
      * Operation findProgramReviewTypeReviewImage
      *
-     * List of ProgramReviewTypeReviewImages.
+     * List of ProgramReviewTypeReviewImages
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_review_type Review owner type (required)
      * @param string $id_review Review identifier as UUID (required)
-     *
      * @return \Softonic\CatalogApiSdk\Model\ProgramReviewTypeReviewImage[]
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -445,50 +425,44 @@ class ProgramsReviewTypesReviewsImagesApi
         return $response;
     }
 
-
     /**
      * Operation findProgramReviewTypeReviewImageWithHttpInfo
      *
-     * List of ProgramReviewTypeReviewImages.
+     * List of ProgramReviewTypeReviewImages
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_review_type Review owner type (required)
      * @param string $id_review Review identifier as UUID (required)
-     *
      * @return Array of \Softonic\CatalogApiSdk\Model\ProgramReviewTypeReviewImage[], HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function findProgramReviewTypeReviewImageWithHttpInfo($id_program, $id_review_type, $id_review)
     {
-        
         // verify the required parameter 'id_program' is set
         if ($id_program === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_program when calling findProgramReviewTypeReviewImage');
         }
-        if (strlen($id_program) > 36) {
+        if ((strlen($id_program) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsReviewTypesReviewsImagesApi.findProgramReviewTypeReviewImage, must be smaller than or equal to 36.');
         }
-        if (strlen($id_program) < 36) {
+        if ((strlen($id_program) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsReviewTypesReviewsImagesApi.findProgramReviewTypeReviewImage, must be bigger than or equal to 36.');
         }
-
 
         // verify the required parameter 'id_review_type' is set
         if ($id_review_type === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_review_type when calling findProgramReviewTypeReviewImage');
         }
-
         // verify the required parameter 'id_review' is set
         if ($id_review === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_review when calling findProgramReviewTypeReviewImage');
         }
-        if (strlen($id_review) > 36) {
+        if ((strlen($id_review) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_review" when calling ProgramsReviewTypesReviewsImagesApi.findProgramReviewTypeReviewImage, must be smaller than or equal to 36.');
         }
-        if (strlen($id_review) < 36) {
+        if ((strlen($id_review) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_review" when calling ProgramsReviewTypesReviewsImagesApi.findProgramReviewTypeReviewImage, must be bigger than or equal to 36.');
         }
-
 
         // parse inputs
         $resourcePath = "/programs/{id_program}/review-types/{id_review_type}/reviews/{id_review}/images";
@@ -502,8 +476,6 @@ class ProgramsReviewTypesReviewsImagesApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_program !== null) {
             $resourcePath = str_replace(
@@ -511,14 +483,16 @@ class ProgramsReviewTypesReviewsImagesApi
                 $this->apiClient->getSerializer()->toPathValue($id_program),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_review_type !== null) {
             $resourcePath = str_replace(
                 "{" . "id_review_type" . "}",
                 $this->apiClient->getSerializer()->toPathValue($id_review_type),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_review !== null) {
             $resourcePath = str_replace(
                 "{" . "id_review" . "}",
@@ -530,30 +504,24 @@ class ProgramsReviewTypesReviewsImagesApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-        
-
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -566,7 +534,8 @@ class ProgramsReviewTypesReviewsImagesApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\CatalogApiSdk\Model\ProgramReviewTypeReviewImage[]'
+                '\Softonic\CatalogApiSdk\Model\ProgramReviewTypeReviewImage[]',
+                '/programs/{id_program}/review-types/{id_review_type}/reviews/{id_review}/images'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Model\ProgramReviewTypeReviewImage[]', $httpHeader), $statusCode, $httpHeader);
@@ -581,16 +550,16 @@ class ProgramsReviewTypesReviewsImagesApi
             throw $e;
         }
     }
+
     /**
      * Operation readProgramReviewTypeReviewImage
      *
-     * Fetches a single ProgramReviewTypeReviewImage.
+     * Fetches a single ProgramReviewTypeReviewImage
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_review_type Review owner type (required)
      * @param string $id_review Review identifier as UUID (required)
      * @param string $id_image Image identifier in SHA1-Hash format (required)
-     *
      * @return \Softonic\CatalogApiSdk\Model\ProgramReviewTypeReviewImage
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -600,63 +569,56 @@ class ProgramsReviewTypesReviewsImagesApi
         return $response;
     }
 
-
     /**
      * Operation readProgramReviewTypeReviewImageWithHttpInfo
      *
-     * Fetches a single ProgramReviewTypeReviewImage.
+     * Fetches a single ProgramReviewTypeReviewImage
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_review_type Review owner type (required)
      * @param string $id_review Review identifier as UUID (required)
      * @param string $id_image Image identifier in SHA1-Hash format (required)
-     *
      * @return Array of \Softonic\CatalogApiSdk\Model\ProgramReviewTypeReviewImage, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function readProgramReviewTypeReviewImageWithHttpInfo($id_program, $id_review_type, $id_review, $id_image)
     {
-        
         // verify the required parameter 'id_program' is set
         if ($id_program === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_program when calling readProgramReviewTypeReviewImage');
         }
-        if (strlen($id_program) > 36) {
+        if ((strlen($id_program) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsReviewTypesReviewsImagesApi.readProgramReviewTypeReviewImage, must be smaller than or equal to 36.');
         }
-        if (strlen($id_program) < 36) {
+        if ((strlen($id_program) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsReviewTypesReviewsImagesApi.readProgramReviewTypeReviewImage, must be bigger than or equal to 36.');
         }
-
 
         // verify the required parameter 'id_review_type' is set
         if ($id_review_type === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_review_type when calling readProgramReviewTypeReviewImage');
         }
-
         // verify the required parameter 'id_review' is set
         if ($id_review === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_review when calling readProgramReviewTypeReviewImage');
         }
-        if (strlen($id_review) > 36) {
+        if ((strlen($id_review) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_review" when calling ProgramsReviewTypesReviewsImagesApi.readProgramReviewTypeReviewImage, must be smaller than or equal to 36.');
         }
-        if (strlen($id_review) < 36) {
+        if ((strlen($id_review) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_review" when calling ProgramsReviewTypesReviewsImagesApi.readProgramReviewTypeReviewImage, must be bigger than or equal to 36.');
         }
-
 
         // verify the required parameter 'id_image' is set
         if ($id_image === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_image when calling readProgramReviewTypeReviewImage');
         }
-        if (strlen($id_image) > 40) {
+        if ((strlen($id_image) > 40)) {
             throw new \InvalidArgumentException('invalid length for "$id_image" when calling ProgramsReviewTypesReviewsImagesApi.readProgramReviewTypeReviewImage, must be smaller than or equal to 40.');
         }
-        if (strlen($id_image) < 40) {
+        if ((strlen($id_image) < 40)) {
             throw new \InvalidArgumentException('invalid length for "$id_image" when calling ProgramsReviewTypesReviewsImagesApi.readProgramReviewTypeReviewImage, must be bigger than or equal to 40.');
         }
-
 
         // parse inputs
         $resourcePath = "/programs/{id_program}/review-types/{id_review_type}/reviews/{id_review}/images/{id_image}";
@@ -670,8 +632,6 @@ class ProgramsReviewTypesReviewsImagesApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_program !== null) {
             $resourcePath = str_replace(
@@ -679,21 +639,24 @@ class ProgramsReviewTypesReviewsImagesApi
                 $this->apiClient->getSerializer()->toPathValue($id_program),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_review_type !== null) {
             $resourcePath = str_replace(
                 "{" . "id_review_type" . "}",
                 $this->apiClient->getSerializer()->toPathValue($id_review_type),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_review !== null) {
             $resourcePath = str_replace(
                 "{" . "id_review" . "}",
                 $this->apiClient->getSerializer()->toPathValue($id_review),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_image !== null) {
             $resourcePath = str_replace(
                 "{" . "id_image" . "}",
@@ -705,30 +668,24 @@ class ProgramsReviewTypesReviewsImagesApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-        
-
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -741,7 +698,8 @@ class ProgramsReviewTypesReviewsImagesApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\CatalogApiSdk\Model\ProgramReviewTypeReviewImage'
+                '\Softonic\CatalogApiSdk\Model\ProgramReviewTypeReviewImage',
+                '/programs/{id_program}/review-types/{id_review_type}/reviews/{id_review}/images/{id_image}'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Model\ProgramReviewTypeReviewImage', $httpHeader), $statusCode, $httpHeader);
@@ -756,17 +714,17 @@ class ProgramsReviewTypesReviewsImagesApi
             throw $e;
         }
     }
+
     /**
      * Operation replaceProgramReviewTypeReviewImage
      *
-     * Entirely replaces a ProgramReviewTypeReviewImage.
+     * Entirely replaces a ProgramReviewTypeReviewImage
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_review_type Review owner type (required)
      * @param string $id_review Review identifier as UUID (required)
      * @param string $id_image Image identifier in SHA1-Hash format (required)
      * @param \Softonic\CatalogApiSdk\Model\ProgramReviewTypeReviewImage $body  (optional)
-     *
      * @return void
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -776,64 +734,57 @@ class ProgramsReviewTypesReviewsImagesApi
         return $response;
     }
 
-
     /**
      * Operation replaceProgramReviewTypeReviewImageWithHttpInfo
      *
-     * Entirely replaces a ProgramReviewTypeReviewImage.
+     * Entirely replaces a ProgramReviewTypeReviewImage
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_review_type Review owner type (required)
      * @param string $id_review Review identifier as UUID (required)
      * @param string $id_image Image identifier in SHA1-Hash format (required)
      * @param \Softonic\CatalogApiSdk\Model\ProgramReviewTypeReviewImage $body  (optional)
-     *
      * @return Array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function replaceProgramReviewTypeReviewImageWithHttpInfo($id_program, $id_review_type, $id_review, $id_image, $body = null)
     {
-        
         // verify the required parameter 'id_program' is set
         if ($id_program === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_program when calling replaceProgramReviewTypeReviewImage');
         }
-        if (strlen($id_program) > 36) {
+        if ((strlen($id_program) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsReviewTypesReviewsImagesApi.replaceProgramReviewTypeReviewImage, must be smaller than or equal to 36.');
         }
-        if (strlen($id_program) < 36) {
+        if ((strlen($id_program) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsReviewTypesReviewsImagesApi.replaceProgramReviewTypeReviewImage, must be bigger than or equal to 36.');
         }
-
 
         // verify the required parameter 'id_review_type' is set
         if ($id_review_type === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_review_type when calling replaceProgramReviewTypeReviewImage');
         }
-
         // verify the required parameter 'id_review' is set
         if ($id_review === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_review when calling replaceProgramReviewTypeReviewImage');
         }
-        if (strlen($id_review) > 36) {
+        if ((strlen($id_review) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_review" when calling ProgramsReviewTypesReviewsImagesApi.replaceProgramReviewTypeReviewImage, must be smaller than or equal to 36.');
         }
-        if (strlen($id_review) < 36) {
+        if ((strlen($id_review) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_review" when calling ProgramsReviewTypesReviewsImagesApi.replaceProgramReviewTypeReviewImage, must be bigger than or equal to 36.');
         }
-
 
         // verify the required parameter 'id_image' is set
         if ($id_image === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_image when calling replaceProgramReviewTypeReviewImage');
         }
-        if (strlen($id_image) > 40) {
+        if ((strlen($id_image) > 40)) {
             throw new \InvalidArgumentException('invalid length for "$id_image" when calling ProgramsReviewTypesReviewsImagesApi.replaceProgramReviewTypeReviewImage, must be smaller than or equal to 40.');
         }
-        if (strlen($id_image) < 40) {
+        if ((strlen($id_image) < 40)) {
             throw new \InvalidArgumentException('invalid length for "$id_image" when calling ProgramsReviewTypesReviewsImagesApi.replaceProgramReviewTypeReviewImage, must be bigger than or equal to 40.');
         }
-
 
         // parse inputs
         $resourcePath = "/programs/{id_program}/review-types/{id_review_type}/reviews/{id_review}/images/{id_image}";
@@ -847,8 +798,6 @@ class ProgramsReviewTypesReviewsImagesApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_program !== null) {
             $resourcePath = str_replace(
@@ -856,21 +805,24 @@ class ProgramsReviewTypesReviewsImagesApi
                 $this->apiClient->getSerializer()->toPathValue($id_program),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_review_type !== null) {
             $resourcePath = str_replace(
                 "{" . "id_review_type" . "}",
                 $this->apiClient->getSerializer()->toPathValue($id_review_type),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_review !== null) {
             $resourcePath = str_replace(
                 "{" . "id_review" . "}",
                 $this->apiClient->getSerializer()->toPathValue($id_review),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_image !== null) {
             $resourcePath = str_replace(
                 "{" . "id_image" . "}",
@@ -881,7 +833,6 @@ class ProgramsReviewTypesReviewsImagesApi
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
-        
         // body params
         $_tempBody = null;
         if (isset($body)) {
@@ -894,22 +845,18 @@ class ProgramsReviewTypesReviewsImagesApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -921,7 +868,9 @@ class ProgramsReviewTypesReviewsImagesApi
                 'PUT',
                 $queryParams,
                 $httpBody,
-                $headerParams
+                $headerParams,
+                null,
+                '/programs/{id_program}/review-types/{id_review_type}/reviews/{id_review}/images/{id_image}'
             );
 
             return array(null, $statusCode, $httpHeader);
@@ -932,17 +881,17 @@ class ProgramsReviewTypesReviewsImagesApi
             throw $e;
         }
     }
+
     /**
      * Operation updateProgramReviewTypeReviewImage
      *
-     * Partially updates a ProgramReviewTypeReviewImage.
+     * Partially updates a ProgramReviewTypeReviewImage
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_review_type Review owner type (required)
      * @param string $id_review Review identifier as UUID (required)
      * @param string $id_image Image identifier in SHA1-Hash format (required)
      * @param \Softonic\CatalogApiSdk\Model\ProgramReviewTypeReviewImage $body  (optional)
-     *
      * @return void
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -952,64 +901,57 @@ class ProgramsReviewTypesReviewsImagesApi
         return $response;
     }
 
-
     /**
      * Operation updateProgramReviewTypeReviewImageWithHttpInfo
      *
-     * Partially updates a ProgramReviewTypeReviewImage.
+     * Partially updates a ProgramReviewTypeReviewImage
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_review_type Review owner type (required)
      * @param string $id_review Review identifier as UUID (required)
      * @param string $id_image Image identifier in SHA1-Hash format (required)
      * @param \Softonic\CatalogApiSdk\Model\ProgramReviewTypeReviewImage $body  (optional)
-     *
      * @return Array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function updateProgramReviewTypeReviewImageWithHttpInfo($id_program, $id_review_type, $id_review, $id_image, $body = null)
     {
-        
         // verify the required parameter 'id_program' is set
         if ($id_program === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_program when calling updateProgramReviewTypeReviewImage');
         }
-        if (strlen($id_program) > 36) {
+        if ((strlen($id_program) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsReviewTypesReviewsImagesApi.updateProgramReviewTypeReviewImage, must be smaller than or equal to 36.');
         }
-        if (strlen($id_program) < 36) {
+        if ((strlen($id_program) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsReviewTypesReviewsImagesApi.updateProgramReviewTypeReviewImage, must be bigger than or equal to 36.');
         }
-
 
         // verify the required parameter 'id_review_type' is set
         if ($id_review_type === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_review_type when calling updateProgramReviewTypeReviewImage');
         }
-
         // verify the required parameter 'id_review' is set
         if ($id_review === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_review when calling updateProgramReviewTypeReviewImage');
         }
-        if (strlen($id_review) > 36) {
+        if ((strlen($id_review) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_review" when calling ProgramsReviewTypesReviewsImagesApi.updateProgramReviewTypeReviewImage, must be smaller than or equal to 36.');
         }
-        if (strlen($id_review) < 36) {
+        if ((strlen($id_review) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_review" when calling ProgramsReviewTypesReviewsImagesApi.updateProgramReviewTypeReviewImage, must be bigger than or equal to 36.');
         }
-
 
         // verify the required parameter 'id_image' is set
         if ($id_image === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_image when calling updateProgramReviewTypeReviewImage');
         }
-        if (strlen($id_image) > 40) {
+        if ((strlen($id_image) > 40)) {
             throw new \InvalidArgumentException('invalid length for "$id_image" when calling ProgramsReviewTypesReviewsImagesApi.updateProgramReviewTypeReviewImage, must be smaller than or equal to 40.');
         }
-        if (strlen($id_image) < 40) {
+        if ((strlen($id_image) < 40)) {
             throw new \InvalidArgumentException('invalid length for "$id_image" when calling ProgramsReviewTypesReviewsImagesApi.updateProgramReviewTypeReviewImage, must be bigger than or equal to 40.');
         }
-
 
         // parse inputs
         $resourcePath = "/programs/{id_program}/review-types/{id_review_type}/reviews/{id_review}/images/{id_image}";
@@ -1023,8 +965,6 @@ class ProgramsReviewTypesReviewsImagesApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_program !== null) {
             $resourcePath = str_replace(
@@ -1032,21 +972,24 @@ class ProgramsReviewTypesReviewsImagesApi
                 $this->apiClient->getSerializer()->toPathValue($id_program),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_review_type !== null) {
             $resourcePath = str_replace(
                 "{" . "id_review_type" . "}",
                 $this->apiClient->getSerializer()->toPathValue($id_review_type),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_review !== null) {
             $resourcePath = str_replace(
                 "{" . "id_review" . "}",
                 $this->apiClient->getSerializer()->toPathValue($id_review),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_image !== null) {
             $resourcePath = str_replace(
                 "{" . "id_image" . "}",
@@ -1057,7 +1000,6 @@ class ProgramsReviewTypesReviewsImagesApi
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
-        
         // body params
         $_tempBody = null;
         if (isset($body)) {
@@ -1070,22 +1012,18 @@ class ProgramsReviewTypesReviewsImagesApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -1097,7 +1035,9 @@ class ProgramsReviewTypesReviewsImagesApi
                 'PATCH',
                 $queryParams,
                 $httpBody,
-                $headerParams
+                $headerParams,
+                null,
+                '/programs/{id_program}/review-types/{id_review_type}/reviews/{id_review}/images/{id_image}'
             );
 
             return array(null, $statusCode, $httpHeader);
@@ -1108,4 +1048,5 @@ class ProgramsReviewTypesReviewsImagesApi
             throw $e;
         }
     }
+
 }

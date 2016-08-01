@@ -39,13 +39,14 @@
  * Please update the test case below to test the model.
  */
 
-namespace Softonic\CatalogApiSdk\Model;
+namespace Softonic\CatalogApiSdk;
 
 /**
  * ProgramReviewTypeReviewImageTest Class Doc Comment
  *
- * @category    Class
- * @description ProgramReviewTypeReviewImage
+ * @category    Class */
+// * @description ProgramReviewTypeReviewImage
+/**
  * @package     Softonic\CatalogApiSdk
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -55,7 +56,7 @@ class ProgramReviewTypeReviewImageTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
-     * Setup before running each test case
+     * Setup before running any test case
      */
     public static function setUpBeforeClass()
     {
@@ -63,7 +64,23 @@ class ProgramReviewTypeReviewImageTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Setup before running each test case
+     */
+    public function setUp()
+    {
+
+    }
+
+    /**
      * Clean up after running each test case
+     */
+    public function tearDown()
+    {
+
+    }
+
+    /**
+     * Clean up after running all test cases
      */
     public static function tearDownAfterClass()
     {
@@ -77,4 +94,61 @@ class ProgramReviewTypeReviewImageTest extends \PHPUnit_Framework_TestCase
     {
 
     }
+
+    /**
+     * Test attribute "id_program"
+     */
+    public function testPropertyIdProgram()
+    {
+
+    }
+
+    /**
+     * Test attribute "id_review_type"
+     */
+    public function testPropertyIdReviewType()
+    {
+
+    }
+
+    /**
+     * Test attribute "id_review"
+     */
+    public function testPropertyIdReview()
+    {
+
+    }
+
+    /**
+     * Test attribute "id_image"
+     */
+    public function testPropertyIdImage()
+    {
+
+    }
+
+    /**
+     * Test attribute "type"
+     */
+    public function testPropertyType()
+    {
+
+    }
+
+    /**
+     * Test attribute "priority"
+     */
+    public function testPropertyPriority()
+    {
+
+    }
+
+    /**
+     * Test attribute "caption"
+     */
+    public function testPropertyCaption()
+    {
+
+    }
+
 }

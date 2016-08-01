@@ -46,7 +46,8 @@ use \ArrayAccess;
 /**
  * Requirement Class Doc Comment
  *
- * @category    Class
+ * @category    Class */
+/** 
  * @package     Softonic\CatalogApiSdk
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
@@ -152,22 +153,22 @@ class Requirement implements ArrayAccess
         if ($this->container['id_requirement'] === null) {
             $invalid_properties[] = "'id_requirement' can't be null";
         }
-        if (strlen($this->container['id_requirement']) > 40) {
+        if ((strlen($this->container['id_requirement']) > 40)) {
             $invalid_properties[] = "invalid value for 'id_requirement', the character length must be smaller than or equal to 40.";
         }
-        if (strlen($this->container['id_requirement']) < 1) {
+        if ((strlen($this->container['id_requirement']) < 1)) {
             $invalid_properties[] = "invalid value for 'id_requirement', the character length must be bigger than or equal to 1.";
         }
         if ($this->container['name'] === null) {
             $invalid_properties[] = "'name' can't be null";
         }
-        if (strlen($this->container['name']) > 60) {
+        if ((strlen($this->container['name']) > 60)) {
             $invalid_properties[] = "invalid value for 'name', the character length must be smaller than or equal to 60.";
         }
-        if (strlen($this->container['name']) < 1) {
+        if ((strlen($this->container['name']) < 1)) {
             $invalid_properties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
         }
-        if (strlen($this->container['description']) > 255) {
+        if (!is_null(${{$this->container['description']}}) && (strlen($this->container['description']) > 255)) {
             $invalid_properties[] = "invalid value for 'description', the character length must be smaller than or equal to 255.";
         }
         return $invalid_properties;
@@ -341,3 +342,5 @@ class Requirement implements ArrayAccess
         return json_encode(\Softonic\CatalogApiSdk\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
+
+

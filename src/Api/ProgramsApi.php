@@ -105,10 +105,9 @@ class ProgramsApi
     /**
      * Operation createProgram
      *
-     * Creates a new Program.
+     * Creates a new Program
      *
      * @param \Softonic\CatalogApiSdk\Model\Program $body  (optional)
-     *
      * @return void
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -118,20 +117,17 @@ class ProgramsApi
         return $response;
     }
 
-
     /**
      * Operation createProgramWithHttpInfo
      *
-     * Creates a new Program.
+     * Creates a new Program
      *
      * @param \Softonic\CatalogApiSdk\Model\Program $body  (optional)
-     *
      * @return Array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function createProgramWithHttpInfo($body = null)
     {
-        
         // parse inputs
         $resourcePath = "/programs";
         $httpBody = '';
@@ -144,13 +140,9 @@ class ProgramsApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
-        
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
-        
         // body params
         $_tempBody = null;
         if (isset($body)) {
@@ -163,22 +155,18 @@ class ProgramsApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -190,7 +178,9 @@ class ProgramsApi
                 'POST',
                 $queryParams,
                 $httpBody,
-                $headerParams
+                $headerParams,
+                null,
+                '/programs'
             );
 
             return array(null, $statusCode, $httpHeader);
@@ -201,13 +191,13 @@ class ProgramsApi
             throw $e;
         }
     }
+
     /**
      * Operation deleteProgram
      *
-     * Deletes a Program.
+     * Deletes a Program
      *
      * @param string $id_program Program UUID or numeric ID (required)
-     *
      * @return void
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -217,31 +207,27 @@ class ProgramsApi
         return $response;
     }
 
-
     /**
      * Operation deleteProgramWithHttpInfo
      *
-     * Deletes a Program.
+     * Deletes a Program
      *
      * @param string $id_program Program UUID or numeric ID (required)
-     *
      * @return Array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function deleteProgramWithHttpInfo($id_program)
     {
-        
         // verify the required parameter 'id_program' is set
         if ($id_program === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_program when calling deleteProgram');
         }
-        if (strlen($id_program) > 36) {
+        if ((strlen($id_program) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsApi.deleteProgram, must be smaller than or equal to 36.');
         }
-        if (strlen($id_program) < 1) {
+        if ((strlen($id_program) < 1)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsApi.deleteProgram, must be bigger than or equal to 1.');
         }
-
 
         // parse inputs
         $resourcePath = "/programs/{id_program}";
@@ -255,8 +241,6 @@ class ProgramsApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_program !== null) {
             $resourcePath = str_replace(
@@ -269,30 +253,24 @@ class ProgramsApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-        
-
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -304,7 +282,9 @@ class ProgramsApi
                 'DELETE',
                 $queryParams,
                 $httpBody,
-                $headerParams
+                $headerParams,
+                null,
+                '/programs/{id_program}'
             );
 
             return array(null, $statusCode, $httpHeader);
@@ -315,14 +295,14 @@ class ProgramsApi
             throw $e;
         }
     }
+
     /**
      * Operation findProgram
      *
-     * List of Programs.
+     * List of Programs
      *
      * @param int $page Page of the pagination when listing programs (optional)
      * @param int $limit Number of results per page when listing programs (optional)
-     *
      * @return \Softonic\CatalogApiSdk\Model\Program[]
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -332,31 +312,28 @@ class ProgramsApi
         return $response;
     }
 
-
     /**
      * Operation findProgramWithHttpInfo
      *
-     * List of Programs.
+     * List of Programs
      *
      * @param int $page Page of the pagination when listing programs (optional)
      * @param int $limit Number of results per page when listing programs (optional)
-     *
      * @return Array of \Softonic\CatalogApiSdk\Model\Program[], HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function findProgramWithHttpInfo($page = null, $limit = null)
     {
-                if ($page < 1.0) {
+        if (!is_null($page) && ($page < 1.0)) {
             throw new \InvalidArgumentException('invalid value for "$page" when calling ProgramsApi.findProgram, must be bigger than or equal to 1.0.');
         }
 
-        if ($limit > 50.0) {
+        if (!is_null($limit) && ($limit > 50.0)) {
             throw new \InvalidArgumentException('invalid value for "$limit" when calling ProgramsApi.findProgram, must be smaller than or equal to 50.0.');
         }
-        if ($limit < 1.0) {
+        if (!is_null($limit) && ($limit < 1.0)) {
             throw new \InvalidArgumentException('invalid value for "$limit" when calling ProgramsApi.findProgram, must be bigger than or equal to 1.0.');
         }
-
 
         // parse inputs
         $resourcePath = "/programs";
@@ -373,40 +350,33 @@ class ProgramsApi
         // query params
         if ($page !== null) {
             $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
-        }// query params
+        }
+        // query params
         if ($limit !== null) {
             $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
         }
-        
-        
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-        
-
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -419,7 +389,8 @@ class ProgramsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\CatalogApiSdk\Model\Program[]'
+                '\Softonic\CatalogApiSdk\Model\Program[]',
+                '/programs'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Model\Program[]', $httpHeader), $statusCode, $httpHeader);
@@ -434,13 +405,13 @@ class ProgramsApi
             throw $e;
         }
     }
+
     /**
      * Operation readProgram
      *
-     * Fetches a single Program.
+     * Fetches a single Program
      *
      * @param string $id_program Program UUID or numeric ID (required)
-     *
      * @return \Softonic\CatalogApiSdk\Model\Program
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -450,31 +421,27 @@ class ProgramsApi
         return $response;
     }
 
-
     /**
      * Operation readProgramWithHttpInfo
      *
-     * Fetches a single Program.
+     * Fetches a single Program
      *
      * @param string $id_program Program UUID or numeric ID (required)
-     *
      * @return Array of \Softonic\CatalogApiSdk\Model\Program, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function readProgramWithHttpInfo($id_program)
     {
-        
         // verify the required parameter 'id_program' is set
         if ($id_program === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_program when calling readProgram');
         }
-        if (strlen($id_program) > 36) {
+        if ((strlen($id_program) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsApi.readProgram, must be smaller than or equal to 36.');
         }
-        if (strlen($id_program) < 1) {
+        if ((strlen($id_program) < 1)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsApi.readProgram, must be bigger than or equal to 1.');
         }
-
 
         // parse inputs
         $resourcePath = "/programs/{id_program}";
@@ -488,8 +455,6 @@ class ProgramsApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_program !== null) {
             $resourcePath = str_replace(
@@ -502,30 +467,24 @@ class ProgramsApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-        
-
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -538,7 +497,8 @@ class ProgramsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\CatalogApiSdk\Model\Program'
+                '\Softonic\CatalogApiSdk\Model\Program',
+                '/programs/{id_program}'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Model\Program', $httpHeader), $statusCode, $httpHeader);
@@ -553,14 +513,14 @@ class ProgramsApi
             throw $e;
         }
     }
+
     /**
      * Operation replaceProgram
      *
-     * Entirely replaces a Program.
+     * Entirely replaces a Program
      *
      * @param string $id_program Program UUID or numeric ID (required)
      * @param \Softonic\CatalogApiSdk\Model\Program $body  (optional)
-     *
      * @return void
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -570,32 +530,28 @@ class ProgramsApi
         return $response;
     }
 
-
     /**
      * Operation replaceProgramWithHttpInfo
      *
-     * Entirely replaces a Program.
+     * Entirely replaces a Program
      *
      * @param string $id_program Program UUID or numeric ID (required)
      * @param \Softonic\CatalogApiSdk\Model\Program $body  (optional)
-     *
      * @return Array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function replaceProgramWithHttpInfo($id_program, $body = null)
     {
-        
         // verify the required parameter 'id_program' is set
         if ($id_program === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_program when calling replaceProgram');
         }
-        if (strlen($id_program) > 36) {
+        if ((strlen($id_program) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsApi.replaceProgram, must be smaller than or equal to 36.');
         }
-        if (strlen($id_program) < 1) {
+        if ((strlen($id_program) < 1)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsApi.replaceProgram, must be bigger than or equal to 1.');
         }
-
 
         // parse inputs
         $resourcePath = "/programs/{id_program}";
@@ -609,8 +565,6 @@ class ProgramsApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_program !== null) {
             $resourcePath = str_replace(
@@ -622,7 +576,6 @@ class ProgramsApi
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
-        
         // body params
         $_tempBody = null;
         if (isset($body)) {
@@ -635,22 +588,18 @@ class ProgramsApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -662,7 +611,9 @@ class ProgramsApi
                 'PUT',
                 $queryParams,
                 $httpBody,
-                $headerParams
+                $headerParams,
+                null,
+                '/programs/{id_program}'
             );
 
             return array(null, $statusCode, $httpHeader);
@@ -673,14 +624,14 @@ class ProgramsApi
             throw $e;
         }
     }
+
     /**
      * Operation updateProgram
      *
-     * Partially updates a Program.
+     * Partially updates a Program
      *
      * @param string $id_program Program UUID or numeric ID (required)
      * @param \Softonic\CatalogApiSdk\Model\Program $body  (optional)
-     *
      * @return void
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -690,32 +641,28 @@ class ProgramsApi
         return $response;
     }
 
-
     /**
      * Operation updateProgramWithHttpInfo
      *
-     * Partially updates a Program.
+     * Partially updates a Program
      *
      * @param string $id_program Program UUID or numeric ID (required)
      * @param \Softonic\CatalogApiSdk\Model\Program $body  (optional)
-     *
      * @return Array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function updateProgramWithHttpInfo($id_program, $body = null)
     {
-        
         // verify the required parameter 'id_program' is set
         if ($id_program === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_program when calling updateProgram');
         }
-        if (strlen($id_program) > 36) {
+        if ((strlen($id_program) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsApi.updateProgram, must be smaller than or equal to 36.');
         }
-        if (strlen($id_program) < 1) {
+        if ((strlen($id_program) < 1)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsApi.updateProgram, must be bigger than or equal to 1.');
         }
-
 
         // parse inputs
         $resourcePath = "/programs/{id_program}";
@@ -729,8 +676,6 @@ class ProgramsApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_program !== null) {
             $resourcePath = str_replace(
@@ -742,7 +687,6 @@ class ProgramsApi
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
-        
         // body params
         $_tempBody = null;
         if (isset($body)) {
@@ -755,22 +699,18 @@ class ProgramsApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -782,7 +722,9 @@ class ProgramsApi
                 'PATCH',
                 $queryParams,
                 $httpBody,
-                $headerParams
+                $headerParams,
+                null,
+                '/programs/{id_program}'
             );
 
             return array(null, $statusCode, $httpHeader);
@@ -793,4 +735,5 @@ class ProgramsApi
             throw $e;
         }
     }
+
 }

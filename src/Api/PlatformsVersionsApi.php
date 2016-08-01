@@ -105,10 +105,9 @@ class PlatformsVersionsApi
     /**
      * Operation findPlatformVersion
      *
-     * List of PlatformVersions.
+     * List of PlatformVersions
      *
      * @param string $id_platform Platform ID (required)
-     *
      * @return \Softonic\CatalogApiSdk\Model\PlatformVersion[]
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -118,25 +117,21 @@ class PlatformsVersionsApi
         return $response;
     }
 
-
     /**
      * Operation findPlatformVersionWithHttpInfo
      *
-     * List of PlatformVersions.
+     * List of PlatformVersions
      *
      * @param string $id_platform Platform ID (required)
-     *
      * @return Array of \Softonic\CatalogApiSdk\Model\PlatformVersion[], HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function findPlatformVersionWithHttpInfo($id_platform)
     {
-        
         // verify the required parameter 'id_platform' is set
         if ($id_platform === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_platform when calling findPlatformVersion');
         }
-
         // parse inputs
         $resourcePath = "/platforms/{id_platform}/versions";
         $httpBody = '';
@@ -149,8 +144,6 @@ class PlatformsVersionsApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_platform !== null) {
             $resourcePath = str_replace(
@@ -163,30 +156,24 @@ class PlatformsVersionsApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-        
-
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -199,7 +186,8 @@ class PlatformsVersionsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\CatalogApiSdk\Model\PlatformVersion[]'
+                '\Softonic\CatalogApiSdk\Model\PlatformVersion[]',
+                '/platforms/{id_platform}/versions'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Model\PlatformVersion[]', $httpHeader), $statusCode, $httpHeader);
@@ -214,14 +202,14 @@ class PlatformsVersionsApi
             throw $e;
         }
     }
+
     /**
      * Operation readPlatformVersion
      *
-     * Fetches a single PlatformVersion.
+     * Fetches a single PlatformVersion
      *
      * @param string $id_platform Platform ID (required)
      * @param string $id_version Platform version ID (required)
-     *
      * @return \Softonic\CatalogApiSdk\Model\PlatformVersion
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -231,31 +219,26 @@ class PlatformsVersionsApi
         return $response;
     }
 
-
     /**
      * Operation readPlatformVersionWithHttpInfo
      *
-     * Fetches a single PlatformVersion.
+     * Fetches a single PlatformVersion
      *
      * @param string $id_platform Platform ID (required)
      * @param string $id_version Platform version ID (required)
-     *
      * @return Array of \Softonic\CatalogApiSdk\Model\PlatformVersion, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function readPlatformVersionWithHttpInfo($id_platform, $id_version)
     {
-        
         // verify the required parameter 'id_platform' is set
         if ($id_platform === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_platform when calling readPlatformVersion');
         }
-
         // verify the required parameter 'id_version' is set
         if ($id_version === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_version when calling readPlatformVersion');
         }
-
         // parse inputs
         $resourcePath = "/platforms/{id_platform}/versions/{id_version}";
         $httpBody = '';
@@ -268,8 +251,6 @@ class PlatformsVersionsApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_platform !== null) {
             $resourcePath = str_replace(
@@ -277,7 +258,8 @@ class PlatformsVersionsApi
                 $this->apiClient->getSerializer()->toPathValue($id_platform),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_version !== null) {
             $resourcePath = str_replace(
                 "{" . "id_version" . "}",
@@ -289,30 +271,24 @@ class PlatformsVersionsApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-        
-
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -325,7 +301,8 @@ class PlatformsVersionsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\CatalogApiSdk\Model\PlatformVersion'
+                '\Softonic\CatalogApiSdk\Model\PlatformVersion',
+                '/platforms/{id_platform}/versions/{id_version}'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Model\PlatformVersion', $httpHeader), $statusCode, $httpHeader);
@@ -340,4 +317,5 @@ class PlatformsVersionsApi
             throw $e;
         }
     }
+
 }

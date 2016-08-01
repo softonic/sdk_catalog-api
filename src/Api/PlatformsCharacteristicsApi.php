@@ -105,10 +105,9 @@ class PlatformsCharacteristicsApi
     /**
      * Operation findPlatformCharacteristic
      *
-     * List of PlatformCharacteristics.
+     * List of PlatformCharacteristics
      *
      * @param string $id_platform Platform ID (required)
-     *
      * @return \Softonic\CatalogApiSdk\Model\PlatformCharacteristic[]
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -118,31 +117,27 @@ class PlatformsCharacteristicsApi
         return $response;
     }
 
-
     /**
      * Operation findPlatformCharacteristicWithHttpInfo
      *
-     * List of PlatformCharacteristics.
+     * List of PlatformCharacteristics
      *
      * @param string $id_platform Platform ID (required)
-     *
      * @return Array of \Softonic\CatalogApiSdk\Model\PlatformCharacteristic[], HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function findPlatformCharacteristicWithHttpInfo($id_platform)
     {
-        
         // verify the required parameter 'id_platform' is set
         if ($id_platform === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_platform when calling findPlatformCharacteristic');
         }
-        if (strlen($id_platform) > 20) {
+        if ((strlen($id_platform) > 20)) {
             throw new \InvalidArgumentException('invalid length for "$id_platform" when calling PlatformsCharacteristicsApi.findPlatformCharacteristic, must be smaller than or equal to 20.');
         }
-        if (strlen($id_platform) < 1) {
+        if ((strlen($id_platform) < 1)) {
             throw new \InvalidArgumentException('invalid length for "$id_platform" when calling PlatformsCharacteristicsApi.findPlatformCharacteristic, must be bigger than or equal to 1.');
         }
-
 
         // parse inputs
         $resourcePath = "/platforms/{id_platform}/characteristics";
@@ -156,8 +151,6 @@ class PlatformsCharacteristicsApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_platform !== null) {
             $resourcePath = str_replace(
@@ -170,30 +163,24 @@ class PlatformsCharacteristicsApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-        
-
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -206,7 +193,8 @@ class PlatformsCharacteristicsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\CatalogApiSdk\Model\PlatformCharacteristic[]'
+                '\Softonic\CatalogApiSdk\Model\PlatformCharacteristic[]',
+                '/platforms/{id_platform}/characteristics'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Model\PlatformCharacteristic[]', $httpHeader), $statusCode, $httpHeader);
@@ -221,14 +209,14 @@ class PlatformsCharacteristicsApi
             throw $e;
         }
     }
+
     /**
      * Operation readPlatformCharacteristic
      *
-     * Fetches a single PlatformCharacteristic.
+     * Fetches a single PlatformCharacteristic
      *
      * @param string $id_platform Platform ID (required)
      * @param string $id_characteristic Platform characteristic ID (required)
-     *
      * @return \Softonic\CatalogApiSdk\Model\PlatformCharacteristic
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -238,44 +226,39 @@ class PlatformsCharacteristicsApi
         return $response;
     }
 
-
     /**
      * Operation readPlatformCharacteristicWithHttpInfo
      *
-     * Fetches a single PlatformCharacteristic.
+     * Fetches a single PlatformCharacteristic
      *
      * @param string $id_platform Platform ID (required)
      * @param string $id_characteristic Platform characteristic ID (required)
-     *
      * @return Array of \Softonic\CatalogApiSdk\Model\PlatformCharacteristic, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function readPlatformCharacteristicWithHttpInfo($id_platform, $id_characteristic)
     {
-        
         // verify the required parameter 'id_platform' is set
         if ($id_platform === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_platform when calling readPlatformCharacteristic');
         }
-        if (strlen($id_platform) > 20) {
+        if ((strlen($id_platform) > 20)) {
             throw new \InvalidArgumentException('invalid length for "$id_platform" when calling PlatformsCharacteristicsApi.readPlatformCharacteristic, must be smaller than or equal to 20.');
         }
-        if (strlen($id_platform) < 1) {
+        if ((strlen($id_platform) < 1)) {
             throw new \InvalidArgumentException('invalid length for "$id_platform" when calling PlatformsCharacteristicsApi.readPlatformCharacteristic, must be bigger than or equal to 1.');
         }
-
 
         // verify the required parameter 'id_characteristic' is set
         if ($id_characteristic === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_characteristic when calling readPlatformCharacteristic');
         }
-        if (strlen($id_characteristic) > 40) {
+        if ((strlen($id_characteristic) > 40)) {
             throw new \InvalidArgumentException('invalid length for "$id_characteristic" when calling PlatformsCharacteristicsApi.readPlatformCharacteristic, must be smaller than or equal to 40.');
         }
-        if (strlen($id_characteristic) < 1) {
+        if ((strlen($id_characteristic) < 1)) {
             throw new \InvalidArgumentException('invalid length for "$id_characteristic" when calling PlatformsCharacteristicsApi.readPlatformCharacteristic, must be bigger than or equal to 1.');
         }
-
 
         // parse inputs
         $resourcePath = "/platforms/{id_platform}/characteristics/{id_characteristic}";
@@ -289,8 +272,6 @@ class PlatformsCharacteristicsApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_platform !== null) {
             $resourcePath = str_replace(
@@ -298,7 +279,8 @@ class PlatformsCharacteristicsApi
                 $this->apiClient->getSerializer()->toPathValue($id_platform),
                 $resourcePath
             );
-        }// path params
+        }
+        // path params
         if ($id_characteristic !== null) {
             $resourcePath = str_replace(
                 "{" . "id_characteristic" . "}",
@@ -310,30 +292,24 @@ class PlatformsCharacteristicsApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-        
-
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -346,7 +322,8 @@ class PlatformsCharacteristicsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\CatalogApiSdk\Model\PlatformCharacteristic'
+                '\Softonic\CatalogApiSdk\Model\PlatformCharacteristic',
+                '/platforms/{id_platform}/characteristics/{id_characteristic}'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Model\PlatformCharacteristic', $httpHeader), $statusCode, $httpHeader);
@@ -361,4 +338,5 @@ class PlatformsCharacteristicsApi
             throw $e;
         }
     }
+
 }

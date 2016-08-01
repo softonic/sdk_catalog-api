@@ -105,10 +105,9 @@ class ProgramsUrlTypesApi
     /**
      * Operation findProgramUrlType
      *
-     * List of ProgramUrlTypes.
+     * List of ProgramUrlTypes
      *
      * @param string $id_program Program UUID (required)
-     *
      * @return \Softonic\CatalogApiSdk\Model\ProgramUrlType[]
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
@@ -118,31 +117,27 @@ class ProgramsUrlTypesApi
         return $response;
     }
 
-
     /**
      * Operation findProgramUrlTypeWithHttpInfo
      *
-     * List of ProgramUrlTypes.
+     * List of ProgramUrlTypes
      *
      * @param string $id_program Program UUID (required)
-     *
      * @return Array of \Softonic\CatalogApiSdk\Model\ProgramUrlType[], HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
     public function findProgramUrlTypeWithHttpInfo($id_program)
     {
-        
         // verify the required parameter 'id_program' is set
         if ($id_program === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id_program when calling findProgramUrlType');
         }
-        if (strlen($id_program) > 36) {
+        if ((strlen($id_program) > 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsUrlTypesApi.findProgramUrlType, must be smaller than or equal to 36.');
         }
-        if (strlen($id_program) < 36) {
+        if ((strlen($id_program) < 36)) {
             throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsUrlTypesApi.findProgramUrlType, must be bigger than or equal to 36.');
         }
-
 
         // parse inputs
         $resourcePath = "/programs/{id_program}/url-types";
@@ -156,8 +151,6 @@ class ProgramsUrlTypesApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
-        
-        
         // path params
         if ($id_program !== null) {
             $resourcePath = str_replace(
@@ -170,30 +163,24 @@ class ProgramsUrlTypesApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         
-        
-
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
         }
-
         // this endpoint requires OAuth (access token)
         if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
             $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
@@ -206,7 +193,8 @@ class ProgramsUrlTypesApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\CatalogApiSdk\Model\ProgramUrlType[]'
+                '\Softonic\CatalogApiSdk\Model\ProgramUrlType[]',
+                '/programs/{id_program}/url-types'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Model\ProgramUrlType[]', $httpHeader), $statusCode, $httpHeader);
@@ -221,4 +209,5 @@ class ProgramsUrlTypesApi
             throw $e;
         }
     }
+
 }
