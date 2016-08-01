@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id_program** | **string** | Program UUID or numeric ID | 
+**id_program** | **string** | Program UUID | 
 **id_url_type** | **string** | URL types identifier. | 
 **id_url** | **string** | Url UUID | 
 **url** | **string** | Url | 

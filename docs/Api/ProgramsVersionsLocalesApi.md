@@ -34,7 +34,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesApi();
-$id_program = "id_program_example"; // string | Program UUID or numeric ID
+$id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Program version identifier
 $body = new \Softonic\CatalogApiSdk\Model\ProgramVersionLocale(); // \Softonic\CatalogApiSdk\Model\ProgramVersionLocale | 
 
@@ -50,7 +50,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID or numeric ID |
+ **id_program** | **string**| Program UUID |
  **id_version** | **string**| Program version identifier |
  **body** | [**\Softonic\CatalogApiSdk\Model\ProgramVersionLocale**](../Model/\Softonic\CatalogApiSdk\Model\ProgramVersionLocale.md)|  | [optional]
 
@@ -91,7 +91,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesApi();
-$id_program = "id_program_example"; // string | Program UUID or numeric ID
+$id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Program version identifier
 $id_locale = "id_locale_example"; // string | Locale identifier
 
@@ -107,7 +107,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID or numeric ID |
+ **id_program** | **string**| Program UUID |
  **id_version** | **string**| Program version identifier |
  **id_locale** | **string**| Locale identifier |
 
@@ -148,7 +148,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesApi();
-$id_program = "id_program_example"; // string | Program UUID or numeric ID
+$id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Program version identifier
 
 try {
@@ -164,7 +164,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID or numeric ID |
+ **id_program** | **string**| Program UUID |
  **id_version** | **string**| Program version identifier |
 
 ### Return type
@@ -204,7 +204,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesApi();
-$id_program = "id_program_example"; // string | Program UUID or numeric ID
+$id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Program version identifier
 $id_locale = "id_locale_example"; // string | Locale identifier
 
@@ -221,7 +221,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID or numeric ID |
+ **id_program** | **string**| Program UUID |
  **id_version** | **string**| Program version identifier |
  **id_locale** | **string**| Locale identifier |
 
@@ -262,7 +262,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesApi();
-$id_program = "id_program_example"; // string | Program UUID or numeric ID
+$id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Program version identifier
 $id_locale = "id_locale_example"; // string | Locale identifier
 $body = new \Softonic\CatalogApiSdk\Model\ProgramVersionLocale(); // \Softonic\CatalogApiSdk\Model\ProgramVersionLocale | 
@@ -279,7 +279,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID or numeric ID |
+ **id_program** | **string**| Program UUID |
  **id_version** | **string**| Program version identifier |
  **id_locale** | **string**| Locale identifier |
  **body** | [**\Softonic\CatalogApiSdk\Model\ProgramVersionLocale**](../Model/\Softonic\CatalogApiSdk\Model\ProgramVersionLocale.md)|  | [optional]
@@ -321,7 +321,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesApi();
-$id_program = "id_program_example"; // string | Program UUID or numeric ID
+$id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Program version identifier
 $id_locale = "id_locale_example"; // string | Locale identifier
 $body = new \Softonic\CatalogApiSdk\Model\ProgramVersionLocale(); // \Softonic\CatalogApiSdk\Model\ProgramVersionLocale | 
@@ -338,7 +338,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID or numeric ID |
+ **id_program** | **string**| Program UUID |
  **id_version** | **string**| Program version identifier |
  **id_locale** | **string**| Locale identifier |
  **body** | [**\Softonic\CatalogApiSdk\Model\ProgramVersionLocale**](../Model/\Softonic\CatalogApiSdk\Model\ProgramVersionLocale.md)|  | [optional]

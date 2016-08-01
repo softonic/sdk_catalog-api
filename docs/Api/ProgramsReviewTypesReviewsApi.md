@@ -34,7 +34,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsReviewTypesReviewsApi();
-$id_program = "id_program_example"; // string | Program UUID or numeric ID
+$id_program = "id_program_example"; // string | Program UUID
 $id_review_type = "id_review_type_example"; // string | Review owner type
 $body = new \Softonic\CatalogApiSdk\Model\ProgramReviewTypeReview(); // \Softonic\CatalogApiSdk\Model\ProgramReviewTypeReview | 
 
@@ -50,7 +50,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID or numeric ID |
+ **id_program** | **string**| Program UUID |
  **id_review_type** | **string**| Review owner type |
  **body** | [**\Softonic\CatalogApiSdk\Model\ProgramReviewTypeReview**](../Model/\Softonic\CatalogApiSdk\Model\ProgramReviewTypeReview.md)|  | [optional]
 
@@ -91,7 +91,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsReviewTypesReviewsApi();
-$id_program = "id_program_example"; // string | Program UUID or numeric ID
+$id_program = "id_program_example"; // string | Program UUID
 $id_review_type = "id_review_type_example"; // string | Review owner type
 $id_review = "id_review_example"; // string | Review identifier as UUID
 
@@ -107,7 +107,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID or numeric ID |
+ **id_program** | **string**| Program UUID |
  **id_review_type** | **string**| Review owner type |
  **id_review** | **string**| Review identifier as UUID |
 
@@ -148,7 +148,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsReviewTypesReviewsApi();
-$id_program = "id_program_example"; // string | Program UUID or numeric ID
+$id_program = "id_program_example"; // string | Program UUID
 $id_review_type = "id_review_type_example"; // string | Review owner type
 
 try {
@@ -164,7 +164,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID or numeric ID |
+ **id_program** | **string**| Program UUID |
  **id_review_type** | **string**| Review owner type |
 
 ### Return type
@@ -204,7 +204,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsReviewTypesReviewsApi();
-$id_program = "id_program_example"; // string | Program UUID or numeric ID
+$id_program = "id_program_example"; // string | Program UUID
 $id_review_type = "id_review_type_example"; // string | Review owner type
 $id_review = "id_review_example"; // string | Review identifier as UUID
 
@@ -221,7 +221,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID or numeric ID |
+ **id_program** | **string**| Program UUID |
  **id_review_type** | **string**| Review owner type |
  **id_review** | **string**| Review identifier as UUID |
 
@@ -262,7 +262,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsReviewTypesReviewsApi();
-$id_program = "id_program_example"; // string | Program UUID or numeric ID
+$id_program = "id_program_example"; // string | Program UUID
 $id_review_type = "id_review_type_example"; // string | Review owner type
 $id_review = "id_review_example"; // string | Review identifier as UUID
 $body = new \Softonic\CatalogApiSdk\Model\ProgramReviewTypeReview(); // \Softonic\CatalogApiSdk\Model\ProgramReviewTypeReview | 
@@ -279,7 +279,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID or numeric ID |
+ **id_program** | **string**| Program UUID |
  **id_review_type** | **string**| Review owner type |
  **id_review** | **string**| Review identifier as UUID |
  **body** | [**\Softonic\CatalogApiSdk\Model\ProgramReviewTypeReview**](../Model/\Softonic\CatalogApiSdk\Model\ProgramReviewTypeReview.md)|  | [optional]
@@ -321,7 +321,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsReviewTypesReviewsApi();
-$id_program = "id_program_example"; // string | Program UUID or numeric ID
+$id_program = "id_program_example"; // string | Program UUID
 $id_review_type = "id_review_type_example"; // string | Review owner type
 $id_review = "id_review_example"; // string | Review identifier as UUID
 $body = new \Softonic\CatalogApiSdk\Model\ProgramReviewTypeReview(); // \Softonic\CatalogApiSdk\Model\ProgramReviewTypeReview | 
@@ -338,7 +338,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID or numeric ID |
+ **id_program** | **string**| Program UUID |
  **id_review_type** | **string**| Review owner type |
  **id_review** | **string**| Review identifier as UUID |
  **body** | [**\Softonic\CatalogApiSdk\Model\ProgramReviewTypeReview**](../Model/\Softonic\CatalogApiSdk\Model\ProgramReviewTypeReview.md)|  | [optional]

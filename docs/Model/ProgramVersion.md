@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id_program** | **string** | Program UUID or numeric ID | 
+**id_program** | **string** | Program UUID | 
 **id_version** | **string** | Program version identifier | 
 **name** | **string** | Version name | 
 **id_minimum_requirements_group** | **string** | Minimum requirements group UUID | [optional] 

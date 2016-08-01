@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id_program** | **string** | Program UUID or numeric ID | 
+**id_program** | **string** | Program UUID | 
 **id_version** | **string** | Program version identifier | 
 **id_locale** | **string** | Locale identifier | 
 **program_name** | **string** | Program title localized. | 
@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **publish_date** | [**\DateTime**](Date.md) | Program publication date in this locale. | 
 **revision_date** | [**\DateTime**](Date.md) | Revision date | [optional] 
 **update_date** | [**\DateTime**](Date.md) | Update date | [optional] 
-**status** | **string** | Status | [optional] 
+**status** | **string** | Status | 
 **id_editor** | **int** | Editors identifier | [optional] 
 **id_binary** | **string** | Binaries identifier created with sha1 | [optional] 
 **about_license** | **string** | Extra information for program license. | [optional] 

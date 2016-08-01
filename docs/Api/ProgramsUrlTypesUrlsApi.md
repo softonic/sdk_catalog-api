@@ -34,7 +34,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsUrlTypesUrlsApi();
-$id_program = "id_program_example"; // string | Program UUID or numeric ID
+$id_program = "id_program_example"; // string | Program UUID
 $id_url_type = "id_url_type_example"; // string | URL types identifier.
 $body = new \Softonic\CatalogApiSdk\Model\ProgramUrlTypeUrl(); // \Softonic\CatalogApiSdk\Model\ProgramUrlTypeUrl | 
 
@@ -50,7 +50,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID or numeric ID |
+ **id_program** | **string**| Program UUID |
  **id_url_type** | **string**| URL types identifier. |
  **body** | [**\Softonic\CatalogApiSdk\Model\ProgramUrlTypeUrl**](../Model/\Softonic\CatalogApiSdk\Model\ProgramUrlTypeUrl.md)|  | [optional]
 
@@ -91,7 +91,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsUrlTypesUrlsApi();
-$id_program = "id_program_example"; // string | Program UUID or numeric ID
+$id_program = "id_program_example"; // string | Program UUID
 $id_url_type = "id_url_type_example"; // string | URL types identifier.
 $id_url = "id_url_example"; // string | Url UUID
 
@@ -107,7 +107,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID or numeric ID |
+ **id_program** | **string**| Program UUID |
  **id_url_type** | **string**| URL types identifier. |
  **id_url** | **string**| Url UUID |
 
@@ -148,7 +148,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsUrlTypesUrlsApi();
-$id_program = "id_program_example"; // string | Program UUID or numeric ID
+$id_program = "id_program_example"; // string | Program UUID
 $id_url_type = "id_url_type_example"; // string | URL types identifier.
 
 try {
@@ -164,7 +164,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID or numeric ID |
+ **id_program** | **string**| Program UUID |
  **id_url_type** | **string**| URL types identifier. |
 
 ### Return type
@@ -204,7 +204,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsUrlTypesUrlsApi();
-$id_program = "id_program_example"; // string | Program UUID or numeric ID
+$id_program = "id_program_example"; // string | Program UUID
 $id_url_type = "id_url_type_example"; // string | URL types identifier.
 $id_url = "id_url_example"; // string | Url UUID
 
@@ -221,7 +221,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID or numeric ID |
+ **id_program** | **string**| Program UUID |
  **id_url_type** | **string**| URL types identifier. |
  **id_url** | **string**| Url UUID |
 
@@ -262,7 +262,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsUrlTypesUrlsApi();
-$id_program = "id_program_example"; // string | Program UUID or numeric ID
+$id_program = "id_program_example"; // string | Program UUID
 $id_url_type = "id_url_type_example"; // string | URL types identifier.
 $id_url = "id_url_example"; // string | Url UUID
 $body = new \Softonic\CatalogApiSdk\Model\ProgramUrlTypeUrl(); // \Softonic\CatalogApiSdk\Model\ProgramUrlTypeUrl | 
@@ -279,7 +279,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID or numeric ID |
+ **id_program** | **string**| Program UUID |
  **id_url_type** | **string**| URL types identifier. |
  **id_url** | **string**| Url UUID |
  **body** | [**\Softonic\CatalogApiSdk\Model\ProgramUrlTypeUrl**](../Model/\Softonic\CatalogApiSdk\Model\ProgramUrlTypeUrl.md)|  | [optional]
@@ -321,7 +321,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsUrlTypesUrlsApi();
-$id_program = "id_program_example"; // string | Program UUID or numeric ID
+$id_program = "id_program_example"; // string | Program UUID
 $id_url_type = "id_url_type_example"; // string | URL types identifier.
 $id_url = "id_url_example"; // string | Url UUID
 $body = new \Softonic\CatalogApiSdk\Model\ProgramUrlTypeUrl(); // \Softonic\CatalogApiSdk\Model\ProgramUrlTypeUrl | 
@@ -338,7 +338,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID or numeric ID |
+ **id_program** | **string**| Program UUID |
  **id_url_type** | **string**| URL types identifier. |
  **id_url** | **string**| Url UUID |
  **body** | [**\Softonic\CatalogApiSdk\Model\ProgramUrlTypeUrl**](../Model/\Softonic\CatalogApiSdk\Model\ProgramUrlTypeUrl.md)|  | [optional]

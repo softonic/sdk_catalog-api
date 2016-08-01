@@ -34,7 +34,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsBinariesApi();
-$id_program = "id_program_example"; // string | Program UUID or numeric ID
+$id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Version from program
 $body = new \Softonic\CatalogApiSdk\Model\ProgramVersionBinary(); // \Softonic\CatalogApiSdk\Model\ProgramVersionBinary | 
 
@@ -50,7 +50,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID or numeric ID |
+ **id_program** | **string**| Program UUID |
  **id_version** | **string**| Version from program |
  **body** | [**\Softonic\CatalogApiSdk\Model\ProgramVersionBinary**](../Model/\Softonic\CatalogApiSdk\Model\ProgramVersionBinary.md)|  | [optional]
 
@@ -91,7 +91,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsBinariesApi();
-$id_program = "id_program_example"; // string | Program UUID or numeric ID
+$id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Version from program
 $id_binary = "id_binary_example"; // string | Binary identifier in SHA1-Hash format.
 
@@ -107,7 +107,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID or numeric ID |
+ **id_program** | **string**| Program UUID |
  **id_version** | **string**| Version from program |
  **id_binary** | **string**| Binary identifier in SHA1-Hash format. |
 
@@ -148,7 +148,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsBinariesApi();
-$id_program = "id_program_example"; // string | Program UUID or numeric ID
+$id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Version from program
 
 try {
@@ -164,7 +164,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID or numeric ID |
+ **id_program** | **string**| Program UUID |
  **id_version** | **string**| Version from program |
 
 ### Return type
@@ -204,7 +204,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsBinariesApi();
-$id_program = "id_program_example"; // string | Program UUID or numeric ID
+$id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Version from program
 $id_binary = "id_binary_example"; // string | Binary identifier in SHA1-Hash format.
 
@@ -221,7 +221,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID or numeric ID |
+ **id_program** | **string**| Program UUID |
  **id_version** | **string**| Version from program |
  **id_binary** | **string**| Binary identifier in SHA1-Hash format. |
 
@@ -262,7 +262,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsBinariesApi();
-$id_program = "id_program_example"; // string | Program UUID or numeric ID
+$id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Version from program
 $id_binary = "id_binary_example"; // string | Binary identifier in SHA1-Hash format.
 $body = new \Softonic\CatalogApiSdk\Model\ProgramVersionBinary(); // \Softonic\CatalogApiSdk\Model\ProgramVersionBinary | 
@@ -279,7 +279,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID or numeric ID |
+ **id_program** | **string**| Program UUID |
  **id_version** | **string**| Version from program |
  **id_binary** | **string**| Binary identifier in SHA1-Hash format. |
  **body** | [**\Softonic\CatalogApiSdk\Model\ProgramVersionBinary**](../Model/\Softonic\CatalogApiSdk\Model\ProgramVersionBinary.md)|  | [optional]
@@ -321,7 +321,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsBinariesApi();
-$id_program = "id_program_example"; // string | Program UUID or numeric ID
+$id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Version from program
 $id_binary = "id_binary_example"; // string | Binary identifier in SHA1-Hash format.
 $body = new \Softonic\CatalogApiSdk\Model\ProgramVersionBinary(); // \Softonic\CatalogApiSdk\Model\ProgramVersionBinary | 
@@ -338,7 +338,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID or numeric ID |
+ **id_program** | **string**| Program UUID |
  **id_version** | **string**| Version from program |
  **id_binary** | **string**| Binary identifier in SHA1-Hash format. |
  **body** | [**\Softonic\CatalogApiSdk\Model\ProgramVersionBinary**](../Model/\Softonic\CatalogApiSdk\Model\ProgramVersionBinary.md)|  | [optional]

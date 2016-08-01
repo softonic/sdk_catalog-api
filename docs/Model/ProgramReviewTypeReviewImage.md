@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id_program** | **string** | Program UUID or numeric ID | 
+**id_program** | **string** | Program UUID | 
 **id_review_type** | **string** | Review owner type | 
 **id_review** | **string** | Review identifier as UUID | 
 **id_image** | **string** | Image identifier in SHA1-Hash format | 
