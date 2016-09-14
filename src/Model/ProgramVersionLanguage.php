@@ -1,6 +1,6 @@
 <?php
 /**
- * ProgramVersionPlatformCharacteristic
+ * ProgramVersionLanguage
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace Softonic\CatalogApiSdk\Model;
 use \ArrayAccess;
 
 /**
- * ProgramVersionPlatformCharacteristic Class Doc Comment
+ * ProgramVersionLanguage Class Doc Comment
  *
  * @category    Class */
 /** 
@@ -53,13 +53,13 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ProgramVersionPlatformCharacteristic implements ArrayAccess
+class ProgramVersionLanguage implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'ProgramVersionPlatformCharacteristic';
+    protected static $swaggerModelName = 'ProgramVersionLanguage';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -68,7 +68,7 @@ class ProgramVersionPlatformCharacteristic implements ArrayAccess
     protected static $swaggerTypes = array(
         'id_program' => 'string',
         'id_version' => 'string',
-        'id_platform_characteristic' => 'string'
+        'id_language' => 'string'
     );
 
     public static function swaggerTypes()
@@ -83,7 +83,7 @@ class ProgramVersionPlatformCharacteristic implements ArrayAccess
     protected static $attributeMap = array(
         'id_program' => 'id_program',
         'id_version' => 'id_version',
-        'id_platform_characteristic' => 'id_platform_characteristic'
+        'id_language' => 'id_language'
     );
 
     public static function attributeMap()
@@ -98,7 +98,7 @@ class ProgramVersionPlatformCharacteristic implements ArrayAccess
     protected static $setters = array(
         'id_program' => 'setIdProgram',
         'id_version' => 'setIdVersion',
-        'id_platform_characteristic' => 'setIdPlatformCharacteristic'
+        'id_language' => 'setIdLanguage'
     );
 
     public static function setters()
@@ -113,7 +113,7 @@ class ProgramVersionPlatformCharacteristic implements ArrayAccess
     protected static $getters = array(
         'id_program' => 'getIdProgram',
         'id_version' => 'getIdVersion',
-        'id_platform_characteristic' => 'getIdPlatformCharacteristic'
+        'id_language' => 'getIdLanguage'
     );
 
     public static function getters()
@@ -121,8 +121,74 @@ class ProgramVersionPlatformCharacteristic implements ArrayAccess
         return self::$getters;
     }
 
+    const ID_LANGUAGE_EN_GB = 'en_GB';
+    const ID_LANGUAGE_ES_ES = 'es_ES';
+    const ID_LANGUAGE_CA_ES = 'ca_ES';
+    const ID_LANGUAGE_EU_ES = 'eu_ES';
+    const ID_LANGUAGE_DE_DE = 'de_DE';
+    const ID_LANGUAGE_FR_FR = 'fr_FR';
+    const ID_LANGUAGE_IT_IT = 'it_IT';
+    const ID_LANGUAGE_RU_RU = 'ru_RU';
+    const ID_LANGUAGE_ZH_TW = 'zh_TW';
+    const ID_LANGUAGE_ZH_CN = 'zh_CN';
+    const ID_LANGUAGE_PT_BR = 'pt_BR';
+    const ID_LANGUAGE_TR_TR = 'tr_TR';
+    const ID_LANGUAGE_GL_ES = 'gl_ES';
+    const ID_LANGUAGE_ES_AR = 'es_AR';
+    const ID_LANGUAGE_AR_SA = 'ar_SA';
+    const ID_LANGUAGE_CS_CZ = 'cs_CZ';
+    const ID_LANGUAGE_KO_KR = 'ko_KR';
+    const ID_LANGUAGE_DA_DK = 'da_DK';
+    const ID_LANGUAGE_FI_FI = 'fi_FI';
+    const ID_LANGUAGE_EL_GR = 'el_GR';
+    const ID_LANGUAGE_HI_IN = 'hi_IN';
+    const ID_LANGUAGE_NL_NL = 'nl_NL';
+    const ID_LANGUAGE_JA_JP = 'ja_JP';
+    const ID_LANGUAGE_NO_NO = 'no_NO';
+    const ID_LANGUAGE_PL_PL = 'pl_PL';
+    const ID_LANGUAGE_SV_SE = 'sv_SE';
+    const ID_LANGUAGE_PT_PT = 'pt_PT';
+    const ID_LANGUAGE_CN_CN = 'cn_CN';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getIdLanguageAllowableValues()
+    {
+        return [
+            self::ID_LANGUAGE_EN_GB,
+            self::ID_LANGUAGE_ES_ES,
+            self::ID_LANGUAGE_CA_ES,
+            self::ID_LANGUAGE_EU_ES,
+            self::ID_LANGUAGE_DE_DE,
+            self::ID_LANGUAGE_FR_FR,
+            self::ID_LANGUAGE_IT_IT,
+            self::ID_LANGUAGE_RU_RU,
+            self::ID_LANGUAGE_ZH_TW,
+            self::ID_LANGUAGE_ZH_CN,
+            self::ID_LANGUAGE_PT_BR,
+            self::ID_LANGUAGE_TR_TR,
+            self::ID_LANGUAGE_GL_ES,
+            self::ID_LANGUAGE_ES_AR,
+            self::ID_LANGUAGE_AR_SA,
+            self::ID_LANGUAGE_CS_CZ,
+            self::ID_LANGUAGE_KO_KR,
+            self::ID_LANGUAGE_DA_DK,
+            self::ID_LANGUAGE_FI_FI,
+            self::ID_LANGUAGE_EL_GR,
+            self::ID_LANGUAGE_HI_IN,
+            self::ID_LANGUAGE_NL_NL,
+            self::ID_LANGUAGE_JA_JP,
+            self::ID_LANGUAGE_NO_NO,
+            self::ID_LANGUAGE_PL_PL,
+            self::ID_LANGUAGE_SV_SE,
+            self::ID_LANGUAGE_PT_PT,
+            self::ID_LANGUAGE_CN_CN,
+        ];
+    }
     
 
     /**
@@ -139,7 +205,7 @@ class ProgramVersionPlatformCharacteristic implements ArrayAccess
     {
         $this->container['id_program'] = isset($data['id_program']) ? $data['id_program'] : null;
         $this->container['id_version'] = isset($data['id_version']) ? $data['id_version'] : null;
-        $this->container['id_platform_characteristic'] = isset($data['id_platform_characteristic']) ? $data['id_platform_characteristic'] : null;
+        $this->container['id_language'] = isset($data['id_language']) ? $data['id_language'] : null;
     }
 
     /**
@@ -172,15 +238,12 @@ class ProgramVersionPlatformCharacteristic implements ArrayAccess
             $invalid_properties[] = "invalid value for 'id_version', the character length must be bigger than or equal to 1.";
         }
 
-        if ($this->container['id_platform_characteristic'] === null) {
-            $invalid_properties[] = "'id_platform_characteristic' can't be null";
+        if ($this->container['id_language'] === null) {
+            $invalid_properties[] = "'id_language' can't be null";
         }
-        if ((strlen($this->container['id_platform_characteristic']) > 20)) {
-            $invalid_properties[] = "invalid value for 'id_platform_characteristic', the character length must be smaller than or equal to 20.";
-        }
-
-        if ((strlen($this->container['id_platform_characteristic']) < 1)) {
-            $invalid_properties[] = "invalid value for 'id_platform_characteristic', the character length must be bigger than or equal to 1.";
+        $allowed_values = array("en_GB", "es_ES", "ca_ES", "eu_ES", "de_DE", "fr_FR", "it_IT", "ru_RU", "zh_TW", "zh_CN", "pt_BR", "tr_TR", "gl_ES", "es_AR", "ar_SA", "cs_CZ", "ko_KR", "da_DK", "fi_FI", "el_GR", "hi_IN", "nl_NL", "ja_JP", "no_NO", "pl_PL", "sv_SE", "pt_PT", "cn_CN");
+        if (!in_array($this->container['id_language'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'id_language', must be one of #{allowed_values}.";
         }
 
         return $invalid_properties;
@@ -212,13 +275,11 @@ class ProgramVersionPlatformCharacteristic implements ArrayAccess
         if (strlen($this->container['id_version']) < 1) {
             return false;
         }
-        if ($this->container['id_platform_characteristic'] === null) {
+        if ($this->container['id_language'] === null) {
             return false;
         }
-        if (strlen($this->container['id_platform_characteristic']) > 20) {
-            return false;
-        }
-        if (strlen($this->container['id_platform_characteristic']) < 1) {
+        $allowed_values = array("en_GB", "es_ES", "ca_ES", "eu_ES", "de_DE", "fr_FR", "it_IT", "ru_RU", "zh_TW", "zh_CN", "pt_BR", "tr_TR", "gl_ES", "es_AR", "ar_SA", "cs_CZ", "ko_KR", "da_DK", "fi_FI", "el_GR", "hi_IN", "nl_NL", "ja_JP", "no_NO", "pl_PL", "sv_SE", "pt_PT", "cn_CN");
+        if (!in_array($this->container['id_language'], $allowed_values)) {
             return false;
         }
         return true;
@@ -242,10 +303,10 @@ class ProgramVersionPlatformCharacteristic implements ArrayAccess
     public function setIdProgram($id_program)
     {
         if (strlen($id_program) > 36) {
-            throw new \InvalidArgumentException('invalid length for $id_program when calling ProgramVersionPlatformCharacteristic., must be smaller than or equal to 36.');
+            throw new \InvalidArgumentException('invalid length for $id_program when calling ProgramVersionLanguage., must be smaller than or equal to 36.');
         }
         if (strlen($id_program) < 36) {
-            throw new \InvalidArgumentException('invalid length for $id_program when calling ProgramVersionPlatformCharacteristic., must be bigger than or equal to 36.');
+            throw new \InvalidArgumentException('invalid length for $id_program when calling ProgramVersionLanguage., must be bigger than or equal to 36.');
         }
         $this->container['id_program'] = $id_program;
 
@@ -263,16 +324,16 @@ class ProgramVersionPlatformCharacteristic implements ArrayAccess
 
     /**
      * Sets id_version
-     * @param string $id_version Program version ID
+     * @param string $id_version Program version identifier
      * @return $this
      */
     public function setIdVersion($id_version)
     {
         if (strlen($id_version) > 60) {
-            throw new \InvalidArgumentException('invalid length for $id_version when calling ProgramVersionPlatformCharacteristic., must be smaller than or equal to 60.');
+            throw new \InvalidArgumentException('invalid length for $id_version when calling ProgramVersionLanguage., must be smaller than or equal to 60.');
         }
         if (strlen($id_version) < 1) {
-            throw new \InvalidArgumentException('invalid length for $id_version when calling ProgramVersionPlatformCharacteristic., must be bigger than or equal to 1.');
+            throw new \InvalidArgumentException('invalid length for $id_version when calling ProgramVersionLanguage., must be bigger than or equal to 1.');
         }
         $this->container['id_version'] = $id_version;
 
@@ -280,28 +341,26 @@ class ProgramVersionPlatformCharacteristic implements ArrayAccess
     }
 
     /**
-     * Gets id_platform_characteristic
+     * Gets id_language
      * @return string
      */
-    public function getIdPlatformCharacteristic()
+    public function getIdLanguage()
     {
-        return $this->container['id_platform_characteristic'];
+        return $this->container['id_language'];
     }
 
     /**
-     * Sets id_platform_characteristic
-     * @param string $id_platform_characteristic Platform Characteristic ID
+     * Sets id_language
+     * @param string $id_language Language identifier
      * @return $this
      */
-    public function setIdPlatformCharacteristic($id_platform_characteristic)
+    public function setIdLanguage($id_language)
     {
-        if (strlen($id_platform_characteristic) > 20) {
-            throw new \InvalidArgumentException('invalid length for $id_platform_characteristic when calling ProgramVersionPlatformCharacteristic., must be smaller than or equal to 20.');
+        $allowed_values = array('en_GB', 'es_ES', 'ca_ES', 'eu_ES', 'de_DE', 'fr_FR', 'it_IT', 'ru_RU', 'zh_TW', 'zh_CN', 'pt_BR', 'tr_TR', 'gl_ES', 'es_AR', 'ar_SA', 'cs_CZ', 'ko_KR', 'da_DK', 'fi_FI', 'el_GR', 'hi_IN', 'nl_NL', 'ja_JP', 'no_NO', 'pl_PL', 'sv_SE', 'pt_PT', 'cn_CN');
+        if (!in_array($id_language, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'id_language', must be one of 'en_GB', 'es_ES', 'ca_ES', 'eu_ES', 'de_DE', 'fr_FR', 'it_IT', 'ru_RU', 'zh_TW', 'zh_CN', 'pt_BR', 'tr_TR', 'gl_ES', 'es_AR', 'ar_SA', 'cs_CZ', 'ko_KR', 'da_DK', 'fi_FI', 'el_GR', 'hi_IN', 'nl_NL', 'ja_JP', 'no_NO', 'pl_PL', 'sv_SE', 'pt_PT', 'cn_CN'");
         }
-        if (strlen($id_platform_characteristic) < 1) {
-            throw new \InvalidArgumentException('invalid length for $id_platform_characteristic when calling ProgramVersionPlatformCharacteristic., must be bigger than or equal to 1.');
-        }
-        $this->container['id_platform_characteristic'] = $id_platform_characteristic;
+        $this->container['id_language'] = $id_language;
 
         return $this;
     }

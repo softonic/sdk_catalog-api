@@ -1,6 +1,6 @@
 <?php
 /**
- * CategoryTest
+ * ProgramVersionLanguageTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Softonic\CatalogApiSdk;
 
 /**
- * CategoryTest Class Doc Comment
+ * ProgramVersionLanguageTest Class Doc Comment
  *
  * @category    Class */
-// * @description Category
+// * @description ProgramVersionLanguage
 /**
  * @package     Softonic\CatalogApiSdk
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class CategoryTest extends \PHPUnit_Framework_TestCase
+class ProgramVersionLanguageTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,25 +88,33 @@ class CategoryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "Category"
+     * Test "ProgramVersionLanguage"
      */
-    public function testCategory()
+    public function testProgramVersionLanguage()
     {
 
     }
 
     /**
-     * Test attribute "id_category"
+     * Test attribute "id_program"
      */
-    public function testPropertyIdCategory()
+    public function testPropertyIdProgram()
     {
 
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "id_version"
      */
-    public function testPropertyName()
+    public function testPropertyIdVersion()
+    {
+
+    }
+
+    /**
+     * Test attribute "id_language"
+     */
+    public function testPropertyIdLanguage()
     {
 
     }

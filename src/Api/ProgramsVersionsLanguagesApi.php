@@ -1,6 +1,6 @@
 <?php
 /**
- * ProgramsVersionsPlatformCharacteristicsApi
+ * ProgramsVersionsLanguagesApi
  * PHP version 5
  *
  * @category Class
@@ -46,7 +46,7 @@ use \Softonic\CatalogApiSdk\ApiException;
 use \Softonic\CatalogApiSdk\ObjectSerializer;
 
 /**
- * ProgramsVersionsPlatformCharacteristicsApi Class Doc Comment
+ * ProgramsVersionsLanguagesApi Class Doc Comment
  *
  * @category Class
  * @package  Softonic\CatalogApiSdk
@@ -54,7 +54,7 @@ use \Softonic\CatalogApiSdk\ObjectSerializer;
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ProgramsVersionsPlatformCharacteristicsApi
+class ProgramsVersionsLanguagesApi
 {
 
     /**
@@ -94,7 +94,7 @@ class ProgramsVersionsPlatformCharacteristicsApi
      *
      * @param \Softonic\CatalogApiSdk\ApiClient $apiClient set the API client
      *
-     * @return ProgramsVersionsPlatformCharacteristicsApi
+     * @return ProgramsVersionsLanguagesApi
      */
     public function setApiClient(\Softonic\CatalogApiSdk\ApiClient $apiClient)
     {
@@ -103,59 +103,59 @@ class ProgramsVersionsPlatformCharacteristicsApi
     }
 
     /**
-     * Operation createProgramVersionPlatformCharacteristic
+     * Operation createProgramVersionLanguage
      *
-     * Creates a new ProgramVersionPlatformCharacteristic
+     * Creates a new ProgramVersionLanguage
      *
      * @param string $id_program Program UUID (required)
-     * @param string $id_version Program version ID (required)
-     * @param \Softonic\CatalogApiSdk\Model\ProgramVersionPlatformCharacteristic $body  (optional)
+     * @param string $id_version Program version identifier (required)
+     * @param \Softonic\CatalogApiSdk\Model\ProgramVersionLanguage $body  (optional)
      * @return void
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
-    public function createProgramVersionPlatformCharacteristic($id_program, $id_version, $body = null)
+    public function createProgramVersionLanguage($id_program, $id_version, $body = null)
     {
-        list($response) = $this->createProgramVersionPlatformCharacteristicWithHttpInfo($id_program, $id_version, $body);
+        list($response) = $this->createProgramVersionLanguageWithHttpInfo($id_program, $id_version, $body);
         return $response;
     }
 
     /**
-     * Operation createProgramVersionPlatformCharacteristicWithHttpInfo
+     * Operation createProgramVersionLanguageWithHttpInfo
      *
-     * Creates a new ProgramVersionPlatformCharacteristic
+     * Creates a new ProgramVersionLanguage
      *
      * @param string $id_program Program UUID (required)
-     * @param string $id_version Program version ID (required)
-     * @param \Softonic\CatalogApiSdk\Model\ProgramVersionPlatformCharacteristic $body  (optional)
+     * @param string $id_version Program version identifier (required)
+     * @param \Softonic\CatalogApiSdk\Model\ProgramVersionLanguage $body  (optional)
      * @return Array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
-    public function createProgramVersionPlatformCharacteristicWithHttpInfo($id_program, $id_version, $body = null)
+    public function createProgramVersionLanguageWithHttpInfo($id_program, $id_version, $body = null)
     {
         // verify the required parameter 'id_program' is set
         if ($id_program === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_program when calling createProgramVersionPlatformCharacteristic');
+            throw new \InvalidArgumentException('Missing the required parameter $id_program when calling createProgramVersionLanguage');
         }
         if ((strlen($id_program) > 36)) {
-            throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsPlatformCharacteristicsApi.createProgramVersionPlatformCharacteristic, must be smaller than or equal to 36.');
+            throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsLanguagesApi.createProgramVersionLanguage, must be smaller than or equal to 36.');
         }
         if ((strlen($id_program) < 36)) {
-            throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsPlatformCharacteristicsApi.createProgramVersionPlatformCharacteristic, must be bigger than or equal to 36.');
+            throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsLanguagesApi.createProgramVersionLanguage, must be bigger than or equal to 36.');
         }
 
         // verify the required parameter 'id_version' is set
         if ($id_version === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_version when calling createProgramVersionPlatformCharacteristic');
+            throw new \InvalidArgumentException('Missing the required parameter $id_version when calling createProgramVersionLanguage');
         }
         if ((strlen($id_version) > 60)) {
-            throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsPlatformCharacteristicsApi.createProgramVersionPlatformCharacteristic, must be smaller than or equal to 60.');
+            throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsLanguagesApi.createProgramVersionLanguage, must be smaller than or equal to 60.');
         }
         if ((strlen($id_version) < 1)) {
-            throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsPlatformCharacteristicsApi.createProgramVersionPlatformCharacteristic, must be bigger than or equal to 1.');
+            throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsLanguagesApi.createProgramVersionLanguage, must be bigger than or equal to 1.');
         }
 
         // parse inputs
-        $resourcePath = "/programs/{id_program}/versions/{id_version}/platform-characteristics";
+        $resourcePath = "/programs/{id_program}/versions/{id_version}/languages";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -222,7 +222,7 @@ class ProgramsVersionsPlatformCharacteristicsApi
                 $httpBody,
                 $headerParams,
                 null,
-                '/programs/{id_program}/versions/{id_version}/platform-characteristics'
+                '/programs/{id_program}/versions/{id_version}/languages'
             );
 
             return array(null, $statusCode, $httpHeader);
@@ -235,70 +235,63 @@ class ProgramsVersionsPlatformCharacteristicsApi
     }
 
     /**
-     * Operation deleteProgramVersionPlatformCharacteristic
+     * Operation deleteProgramVersionLanguage
      *
-     * Deletes a ProgramVersionPlatformCharacteristic
+     * Deletes a ProgramVersionLanguage
      *
      * @param string $id_program Program UUID (required)
-     * @param string $id_version Program version ID (required)
-     * @param string $id_platform_characteristic Platform Characteristic ID (required)
+     * @param string $id_version Program version identifier (required)
+     * @param string $id_language Language identifier (required)
      * @return void
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
-    public function deleteProgramVersionPlatformCharacteristic($id_program, $id_version, $id_platform_characteristic)
+    public function deleteProgramVersionLanguage($id_program, $id_version, $id_language)
     {
-        list($response) = $this->deleteProgramVersionPlatformCharacteristicWithHttpInfo($id_program, $id_version, $id_platform_characteristic);
+        list($response) = $this->deleteProgramVersionLanguageWithHttpInfo($id_program, $id_version, $id_language);
         return $response;
     }
 
     /**
-     * Operation deleteProgramVersionPlatformCharacteristicWithHttpInfo
+     * Operation deleteProgramVersionLanguageWithHttpInfo
      *
-     * Deletes a ProgramVersionPlatformCharacteristic
+     * Deletes a ProgramVersionLanguage
      *
      * @param string $id_program Program UUID (required)
-     * @param string $id_version Program version ID (required)
-     * @param string $id_platform_characteristic Platform Characteristic ID (required)
+     * @param string $id_version Program version identifier (required)
+     * @param string $id_language Language identifier (required)
      * @return Array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
-    public function deleteProgramVersionPlatformCharacteristicWithHttpInfo($id_program, $id_version, $id_platform_characteristic)
+    public function deleteProgramVersionLanguageWithHttpInfo($id_program, $id_version, $id_language)
     {
         // verify the required parameter 'id_program' is set
         if ($id_program === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_program when calling deleteProgramVersionPlatformCharacteristic');
+            throw new \InvalidArgumentException('Missing the required parameter $id_program when calling deleteProgramVersionLanguage');
         }
         if ((strlen($id_program) > 36)) {
-            throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsPlatformCharacteristicsApi.deleteProgramVersionPlatformCharacteristic, must be smaller than or equal to 36.');
+            throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsLanguagesApi.deleteProgramVersionLanguage, must be smaller than or equal to 36.');
         }
         if ((strlen($id_program) < 36)) {
-            throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsPlatformCharacteristicsApi.deleteProgramVersionPlatformCharacteristic, must be bigger than or equal to 36.');
+            throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsLanguagesApi.deleteProgramVersionLanguage, must be bigger than or equal to 36.');
         }
 
         // verify the required parameter 'id_version' is set
         if ($id_version === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_version when calling deleteProgramVersionPlatformCharacteristic');
+            throw new \InvalidArgumentException('Missing the required parameter $id_version when calling deleteProgramVersionLanguage');
         }
         if ((strlen($id_version) > 60)) {
-            throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsPlatformCharacteristicsApi.deleteProgramVersionPlatformCharacteristic, must be smaller than or equal to 60.');
+            throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsLanguagesApi.deleteProgramVersionLanguage, must be smaller than or equal to 60.');
         }
         if ((strlen($id_version) < 1)) {
-            throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsPlatformCharacteristicsApi.deleteProgramVersionPlatformCharacteristic, must be bigger than or equal to 1.');
+            throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsLanguagesApi.deleteProgramVersionLanguage, must be bigger than or equal to 1.');
         }
 
-        // verify the required parameter 'id_platform_characteristic' is set
-        if ($id_platform_characteristic === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_platform_characteristic when calling deleteProgramVersionPlatformCharacteristic');
+        // verify the required parameter 'id_language' is set
+        if ($id_language === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id_language when calling deleteProgramVersionLanguage');
         }
-        if ((strlen($id_platform_characteristic) > 20)) {
-            throw new \InvalidArgumentException('invalid length for "$id_platform_characteristic" when calling ProgramsVersionsPlatformCharacteristicsApi.deleteProgramVersionPlatformCharacteristic, must be smaller than or equal to 20.');
-        }
-        if ((strlen($id_platform_characteristic) < 1)) {
-            throw new \InvalidArgumentException('invalid length for "$id_platform_characteristic" when calling ProgramsVersionsPlatformCharacteristicsApi.deleteProgramVersionPlatformCharacteristic, must be bigger than or equal to 1.');
-        }
-
         // parse inputs
-        $resourcePath = "/programs/{id_program}/versions/{id_version}/platform-characteristics/{id_platform_characteristic}";
+        $resourcePath = "/programs/{id_program}/versions/{id_version}/languages/{id_language}";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -326,10 +319,10 @@ class ProgramsVersionsPlatformCharacteristicsApi
             );
         }
         // path params
-        if ($id_platform_characteristic !== null) {
+        if ($id_language !== null) {
             $resourcePath = str_replace(
-                "{" . "id_platform_characteristic" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id_platform_characteristic),
+                "{" . "id_language" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id_language),
                 $resourcePath
             );
         }
@@ -368,7 +361,7 @@ class ProgramsVersionsPlatformCharacteristicsApi
                 $httpBody,
                 $headerParams,
                 null,
-                '/programs/{id_program}/versions/{id_version}/platform-characteristics/{id_platform_characteristic}'
+                '/programs/{id_program}/versions/{id_version}/languages/{id_language}'
             );
 
             return array(null, $statusCode, $httpHeader);
@@ -381,57 +374,57 @@ class ProgramsVersionsPlatformCharacteristicsApi
     }
 
     /**
-     * Operation findProgramVersionPlatformCharacteristic
+     * Operation findProgramVersionLanguage
      *
-     * List of ProgramVersionPlatformCharacteristics
+     * List of ProgramVersionLanguages
      *
      * @param string $id_program Program UUID (required)
-     * @param string $id_version Program version ID (required)
-     * @return \Softonic\CatalogApiSdk\Model\ProgramVersionPlatformCharacteristic[]
+     * @param string $id_version Program version identifier (required)
+     * @return \Softonic\CatalogApiSdk\Model\ProgramVersionLanguage[]
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
-    public function findProgramVersionPlatformCharacteristic($id_program, $id_version)
+    public function findProgramVersionLanguage($id_program, $id_version)
     {
-        list($response) = $this->findProgramVersionPlatformCharacteristicWithHttpInfo($id_program, $id_version);
+        list($response) = $this->findProgramVersionLanguageWithHttpInfo($id_program, $id_version);
         return $response;
     }
 
     /**
-     * Operation findProgramVersionPlatformCharacteristicWithHttpInfo
+     * Operation findProgramVersionLanguageWithHttpInfo
      *
-     * List of ProgramVersionPlatformCharacteristics
+     * List of ProgramVersionLanguages
      *
      * @param string $id_program Program UUID (required)
-     * @param string $id_version Program version ID (required)
-     * @return Array of \Softonic\CatalogApiSdk\Model\ProgramVersionPlatformCharacteristic[], HTTP status code, HTTP response headers (array of strings)
+     * @param string $id_version Program version identifier (required)
+     * @return Array of \Softonic\CatalogApiSdk\Model\ProgramVersionLanguage[], HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
-    public function findProgramVersionPlatformCharacteristicWithHttpInfo($id_program, $id_version)
+    public function findProgramVersionLanguageWithHttpInfo($id_program, $id_version)
     {
         // verify the required parameter 'id_program' is set
         if ($id_program === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_program when calling findProgramVersionPlatformCharacteristic');
+            throw new \InvalidArgumentException('Missing the required parameter $id_program when calling findProgramVersionLanguage');
         }
         if ((strlen($id_program) > 36)) {
-            throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsPlatformCharacteristicsApi.findProgramVersionPlatformCharacteristic, must be smaller than or equal to 36.');
+            throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsLanguagesApi.findProgramVersionLanguage, must be smaller than or equal to 36.');
         }
         if ((strlen($id_program) < 36)) {
-            throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsPlatformCharacteristicsApi.findProgramVersionPlatformCharacteristic, must be bigger than or equal to 36.');
+            throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsLanguagesApi.findProgramVersionLanguage, must be bigger than or equal to 36.');
         }
 
         // verify the required parameter 'id_version' is set
         if ($id_version === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_version when calling findProgramVersionPlatformCharacteristic');
+            throw new \InvalidArgumentException('Missing the required parameter $id_version when calling findProgramVersionLanguage');
         }
         if ((strlen($id_version) > 60)) {
-            throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsPlatformCharacteristicsApi.findProgramVersionPlatformCharacteristic, must be smaller than or equal to 60.');
+            throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsLanguagesApi.findProgramVersionLanguage, must be smaller than or equal to 60.');
         }
         if ((strlen($id_version) < 1)) {
-            throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsPlatformCharacteristicsApi.findProgramVersionPlatformCharacteristic, must be bigger than or equal to 1.');
+            throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsLanguagesApi.findProgramVersionLanguage, must be bigger than or equal to 1.');
         }
 
         // parse inputs
-        $resourcePath = "/programs/{id_program}/versions/{id_version}/platform-characteristics";
+        $resourcePath = "/programs/{id_program}/versions/{id_version}/languages";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -492,15 +485,15 @@ class ProgramsVersionsPlatformCharacteristicsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\CatalogApiSdk\Model\ProgramVersionPlatformCharacteristic[]',
-                '/programs/{id_program}/versions/{id_version}/platform-characteristics'
+                '\Softonic\CatalogApiSdk\Model\ProgramVersionLanguage[]',
+                '/programs/{id_program}/versions/{id_version}/languages'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Model\ProgramVersionPlatformCharacteristic[]', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Model\ProgramVersionLanguage[]', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Softonic\CatalogApiSdk\Model\ProgramVersionPlatformCharacteristic[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Softonic\CatalogApiSdk\Model\ProgramVersionLanguage[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -510,70 +503,63 @@ class ProgramsVersionsPlatformCharacteristicsApi
     }
 
     /**
-     * Operation readProgramVersionPlatformCharacteristic
+     * Operation readProgramVersionLanguage
      *
-     * Fetches a single ProgramVersionPlatformCharacteristic
+     * Fetches a single ProgramVersionLanguage
      *
      * @param string $id_program Program UUID (required)
-     * @param string $id_version Program version ID (required)
-     * @param string $id_platform_characteristic Platform Characteristic ID (required)
-     * @return \Softonic\CatalogApiSdk\Model\ProgramVersionPlatformCharacteristic
+     * @param string $id_version Program version identifier (required)
+     * @param string $id_language Language identifier (required)
+     * @return \Softonic\CatalogApiSdk\Model\ProgramVersionLanguage
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
-    public function readProgramVersionPlatformCharacteristic($id_program, $id_version, $id_platform_characteristic)
+    public function readProgramVersionLanguage($id_program, $id_version, $id_language)
     {
-        list($response) = $this->readProgramVersionPlatformCharacteristicWithHttpInfo($id_program, $id_version, $id_platform_characteristic);
+        list($response) = $this->readProgramVersionLanguageWithHttpInfo($id_program, $id_version, $id_language);
         return $response;
     }
 
     /**
-     * Operation readProgramVersionPlatformCharacteristicWithHttpInfo
+     * Operation readProgramVersionLanguageWithHttpInfo
      *
-     * Fetches a single ProgramVersionPlatformCharacteristic
+     * Fetches a single ProgramVersionLanguage
      *
      * @param string $id_program Program UUID (required)
-     * @param string $id_version Program version ID (required)
-     * @param string $id_platform_characteristic Platform Characteristic ID (required)
-     * @return Array of \Softonic\CatalogApiSdk\Model\ProgramVersionPlatformCharacteristic, HTTP status code, HTTP response headers (array of strings)
+     * @param string $id_version Program version identifier (required)
+     * @param string $id_language Language identifier (required)
+     * @return Array of \Softonic\CatalogApiSdk\Model\ProgramVersionLanguage, HTTP status code, HTTP response headers (array of strings)
      * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      */
-    public function readProgramVersionPlatformCharacteristicWithHttpInfo($id_program, $id_version, $id_platform_characteristic)
+    public function readProgramVersionLanguageWithHttpInfo($id_program, $id_version, $id_language)
     {
         // verify the required parameter 'id_program' is set
         if ($id_program === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_program when calling readProgramVersionPlatformCharacteristic');
+            throw new \InvalidArgumentException('Missing the required parameter $id_program when calling readProgramVersionLanguage');
         }
         if ((strlen($id_program) > 36)) {
-            throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsPlatformCharacteristicsApi.readProgramVersionPlatformCharacteristic, must be smaller than or equal to 36.');
+            throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsLanguagesApi.readProgramVersionLanguage, must be smaller than or equal to 36.');
         }
         if ((strlen($id_program) < 36)) {
-            throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsPlatformCharacteristicsApi.readProgramVersionPlatformCharacteristic, must be bigger than or equal to 36.');
+            throw new \InvalidArgumentException('invalid length for "$id_program" when calling ProgramsVersionsLanguagesApi.readProgramVersionLanguage, must be bigger than or equal to 36.');
         }
 
         // verify the required parameter 'id_version' is set
         if ($id_version === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_version when calling readProgramVersionPlatformCharacteristic');
+            throw new \InvalidArgumentException('Missing the required parameter $id_version when calling readProgramVersionLanguage');
         }
         if ((strlen($id_version) > 60)) {
-            throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsPlatformCharacteristicsApi.readProgramVersionPlatformCharacteristic, must be smaller than or equal to 60.');
+            throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsLanguagesApi.readProgramVersionLanguage, must be smaller than or equal to 60.');
         }
         if ((strlen($id_version) < 1)) {
-            throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsPlatformCharacteristicsApi.readProgramVersionPlatformCharacteristic, must be bigger than or equal to 1.');
+            throw new \InvalidArgumentException('invalid length for "$id_version" when calling ProgramsVersionsLanguagesApi.readProgramVersionLanguage, must be bigger than or equal to 1.');
         }
 
-        // verify the required parameter 'id_platform_characteristic' is set
-        if ($id_platform_characteristic === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id_platform_characteristic when calling readProgramVersionPlatformCharacteristic');
+        // verify the required parameter 'id_language' is set
+        if ($id_language === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id_language when calling readProgramVersionLanguage');
         }
-        if ((strlen($id_platform_characteristic) > 20)) {
-            throw new \InvalidArgumentException('invalid length for "$id_platform_characteristic" when calling ProgramsVersionsPlatformCharacteristicsApi.readProgramVersionPlatformCharacteristic, must be smaller than or equal to 20.');
-        }
-        if ((strlen($id_platform_characteristic) < 1)) {
-            throw new \InvalidArgumentException('invalid length for "$id_platform_characteristic" when calling ProgramsVersionsPlatformCharacteristicsApi.readProgramVersionPlatformCharacteristic, must be bigger than or equal to 1.');
-        }
-
         // parse inputs
-        $resourcePath = "/programs/{id_program}/versions/{id_version}/platform-characteristics/{id_platform_characteristic}";
+        $resourcePath = "/programs/{id_program}/versions/{id_version}/languages/{id_language}";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -601,10 +587,10 @@ class ProgramsVersionsPlatformCharacteristicsApi
             );
         }
         // path params
-        if ($id_platform_characteristic !== null) {
+        if ($id_language !== null) {
             $resourcePath = str_replace(
-                "{" . "id_platform_characteristic" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id_platform_characteristic),
+                "{" . "id_language" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id_language),
                 $resourcePath
             );
         }
@@ -642,15 +628,15 @@ class ProgramsVersionsPlatformCharacteristicsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\CatalogApiSdk\Model\ProgramVersionPlatformCharacteristic',
-                '/programs/{id_program}/versions/{id_version}/platform-characteristics/{id_platform_characteristic}'
+                '\Softonic\CatalogApiSdk\Model\ProgramVersionLanguage',
+                '/programs/{id_program}/versions/{id_version}/languages/{id_language}'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Model\ProgramVersionPlatformCharacteristic', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Model\ProgramVersionLanguage', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Softonic\CatalogApiSdk\Model\ProgramVersionPlatformCharacteristic', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Softonic\CatalogApiSdk\Model\ProgramVersionLanguage', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
