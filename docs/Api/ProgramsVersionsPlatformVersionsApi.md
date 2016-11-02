@@ -1,6 +1,6 @@
 # Softonic\CatalogApiSdk\ProgramsVersionsPlatformVersionsApi
 
-All URIs are relative to *http://v2.catalog.sftapi.com.sft-staging.com*
+All URIs are relative to *https://catalog.sftapi.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -35,7 +35,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsPlatformVersionsApi();
 $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Program version ID
-$body = new \Softonic\CatalogApiSdk\Model\ProgramVersionPlatformVersion(); // \Softonic\CatalogApiSdk\Model\ProgramVersionPlatformVersion | 
+$body = new \Softonic\CatalogApiSdk\Client\Model\ProgramVersionPlatformVersion(); // \Softonic\CatalogApiSdk\Client\Model\ProgramVersionPlatformVersion | 
 
 try {
     $api_instance->createProgramVersionPlatformVersion($id_program, $id_version, $body);
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_program** | **string**| Program UUID |
  **id_version** | **string**| Program version ID |
- **body** | [**\Softonic\CatalogApiSdk\Model\ProgramVersionPlatformVersion**](../Model/\Softonic\CatalogApiSdk\Model\ProgramVersionPlatformVersion.md)|  | [optional]
+ **body** | [**\Softonic\CatalogApiSdk\Client\Model\ProgramVersionPlatformVersion**](../Model/\Softonic\CatalogApiSdk\Client\Model\ProgramVersionPlatformVersion.md)|  | [optional]
 
 ### Return type
 
@@ -126,7 +126,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **findProgramVersionPlatformVersion**
-> \Softonic\CatalogApiSdk\Model\ProgramVersionPlatformVersion[] findProgramVersionPlatformVersion($id_program, $id_version)
+> \Softonic\CatalogApiSdk\Client\Model\ProgramVersionPlatformVersion[] findProgramVersionPlatformVersion($id_program, $id_version)
 
 List of ProgramVersionPlatformVersions
 
@@ -168,7 +168,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Model\ProgramVersionPlatformVersion[]**](../Model/ProgramVersionPlatformVersion.md)
+[**\Softonic\CatalogApiSdk\Client\Model\ProgramVersionPlatformVersion[]**](../Model/ProgramVersionPlatformVersion.md)
 
 ### Authorization
 
@@ -182,7 +182,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readProgramVersionPlatformVersion**
-> \Softonic\CatalogApiSdk\Model\ProgramVersionPlatformVersion readProgramVersionPlatformVersion($id_program, $id_version, $id_platform_version)
+> \Softonic\CatalogApiSdk\Client\Model\ProgramVersionPlatformVersion readProgramVersionPlatformVersion($id_program, $id_version, $id_platform_version)
 
 Fetches a single ProgramVersionPlatformVersion
 
@@ -226,7 +226,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Model\ProgramVersionPlatformVersion**](../Model/ProgramVersionPlatformVersion.md)
+[**\Softonic\CatalogApiSdk\Client\Model\ProgramVersionPlatformVersion**](../Model/ProgramVersionPlatformVersion.md)
 
 ### Authorization
 

@@ -1,6 +1,6 @@
 # Softonic\CatalogApiSdk\ProgramsUrlTypesApi
 
-All URIs are relative to *http://v2.catalog.sftapi.com.sft-staging.com*
+All URIs are relative to *https://catalog.sftapi.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **findProgramUrlType**
-> \Softonic\CatalogApiSdk\Model\ProgramUrlType[] findProgramUrlType($id_program)
+> \Softonic\CatalogApiSdk\Client\Model\ProgramUrlType[] findProgramUrlType($id_program)
 
 List of ProgramUrlTypes
 
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Model\ProgramUrlType[]**](../Model/ProgramUrlType.md)
+[**\Softonic\CatalogApiSdk\Client\Model\ProgramUrlType[]**](../Model/ProgramUrlType.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readProgramUrlType**
-> \Softonic\CatalogApiSdk\Model\ProgramUrlType readProgramUrlType($id_program, $id_url_type)
+> \Softonic\CatalogApiSdk\Client\Model\ProgramUrlType readProgramUrlType($id_program, $id_url_type)
 
 Fetches a single ProgramUrlType
 
@@ -105,7 +105,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Model\ProgramUrlType**](../Model/ProgramUrlType.md)
+[**\Softonic\CatalogApiSdk\Client\Model\ProgramUrlType**](../Model/ProgramUrlType.md)
 
 ### Authorization
 

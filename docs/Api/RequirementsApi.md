@@ -1,6 +1,6 @@
 # Softonic\CatalogApiSdk\RequirementsApi
 
-All URIs are relative to *http://v2.catalog.sftapi.com.sft-staging.com*
+All URIs are relative to *https://catalog.sftapi.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **findRequirement**
-> \Softonic\CatalogApiSdk\Model\Requirement[] findRequirement()
+> \Softonic\CatalogApiSdk\Client\Model\Requirement[] findRequirement()
 
 List of Requirements
 
@@ -45,7 +45,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Model\Requirement[]**](../Model/Requirement.md)
+[**\Softonic\CatalogApiSdk\Client\Model\Requirement[]**](../Model/Requirement.md)
 
 ### Authorization
 
@@ -59,7 +59,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readRequirement**
-> \Softonic\CatalogApiSdk\Model\Requirement readRequirement($id_requirement)
+> \Softonic\CatalogApiSdk\Client\Model\Requirement readRequirement($id_requirement)
 
 Fetches a single Requirement
 
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Model\Requirement**](../Model/Requirement.md)
+[**\Softonic\CatalogApiSdk\Client\Model\Requirement**](../Model/Requirement.md)
 
 ### Authorization
 

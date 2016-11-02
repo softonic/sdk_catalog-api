@@ -1,6 +1,6 @@
 # Softonic\CatalogApiSdk\ProgramsUrlTypesUrlsApi
 
-All URIs are relative to *http://v2.catalog.sftapi.com.sft-staging.com*
+All URIs are relative to *https://catalog.sftapi.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -36,7 +36,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsUrlTypesUrlsApi();
 $id_program = "id_program_example"; // string | Program UUID
 $id_url_type = "id_url_type_example"; // string | URL types identifier.
-$body = new \Softonic\CatalogApiSdk\Model\ProgramUrlTypeUrl(); // \Softonic\CatalogApiSdk\Model\ProgramUrlTypeUrl | 
+$body = new \Softonic\CatalogApiSdk\Client\Model\ProgramUrlTypeUrl(); // \Softonic\CatalogApiSdk\Client\Model\ProgramUrlTypeUrl | 
 
 try {
     $api_instance->createProgramUrlTypeUrl($id_program, $id_url_type, $body);
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_program** | **string**| Program UUID |
  **id_url_type** | **string**| URL types identifier. |
- **body** | [**\Softonic\CatalogApiSdk\Model\ProgramUrlTypeUrl**](../Model/\Softonic\CatalogApiSdk\Model\ProgramUrlTypeUrl.md)|  | [optional]
+ **body** | [**\Softonic\CatalogApiSdk\Client\Model\ProgramUrlTypeUrl**](../Model/\Softonic\CatalogApiSdk\Client\Model\ProgramUrlTypeUrl.md)|  | [optional]
 
 ### Return type
 
@@ -127,7 +127,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **findProgramUrlTypeUrl**
-> \Softonic\CatalogApiSdk\Model\ProgramUrlTypeUrl[] findProgramUrlTypeUrl($id_program, $id_url_type)
+> \Softonic\CatalogApiSdk\Client\Model\ProgramUrlTypeUrl[] findProgramUrlTypeUrl($id_program, $id_url_type)
 
 List of ProgramUrlTypeUrls
 
@@ -169,7 +169,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Model\ProgramUrlTypeUrl[]**](../Model/ProgramUrlTypeUrl.md)
+[**\Softonic\CatalogApiSdk\Client\Model\ProgramUrlTypeUrl[]**](../Model/ProgramUrlTypeUrl.md)
 
 ### Authorization
 
@@ -183,7 +183,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readProgramUrlTypeUrl**
-> \Softonic\CatalogApiSdk\Model\ProgramUrlTypeUrl readProgramUrlTypeUrl($id_program, $id_url_type, $id_url)
+> \Softonic\CatalogApiSdk\Client\Model\ProgramUrlTypeUrl readProgramUrlTypeUrl($id_program, $id_url_type, $id_url)
 
 Fetches a single ProgramUrlTypeUrl
 
@@ -227,7 +227,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Model\ProgramUrlTypeUrl**](../Model/ProgramUrlTypeUrl.md)
+[**\Softonic\CatalogApiSdk\Client\Model\ProgramUrlTypeUrl**](../Model/ProgramUrlTypeUrl.md)
 
 ### Authorization
 
@@ -265,7 +265,7 @@ $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsUrlTypesUrlsApi();
 $id_program = "id_program_example"; // string | Program UUID
 $id_url_type = "id_url_type_example"; // string | URL types identifier.
 $id_url = "id_url_example"; // string | Url UUID
-$body = new \Softonic\CatalogApiSdk\Model\ProgramUrlTypeUrl(); // \Softonic\CatalogApiSdk\Model\ProgramUrlTypeUrl | 
+$body = new \Softonic\CatalogApiSdk\Client\Model\ProgramUrlTypeUrl(); // \Softonic\CatalogApiSdk\Client\Model\ProgramUrlTypeUrl | 
 
 try {
     $api_instance->replaceProgramUrlTypeUrl($id_program, $id_url_type, $id_url, $body);
@@ -282,7 +282,7 @@ Name | Type | Description  | Notes
  **id_program** | **string**| Program UUID |
  **id_url_type** | **string**| URL types identifier. |
  **id_url** | **string**| Url UUID |
- **body** | [**\Softonic\CatalogApiSdk\Model\ProgramUrlTypeUrl**](../Model/\Softonic\CatalogApiSdk\Model\ProgramUrlTypeUrl.md)|  | [optional]
+ **body** | [**\Softonic\CatalogApiSdk\Client\Model\ProgramUrlTypeUrl**](../Model/\Softonic\CatalogApiSdk\Client\Model\ProgramUrlTypeUrl.md)|  | [optional]
 
 ### Return type
 
@@ -324,7 +324,7 @@ $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsUrlTypesUrlsApi();
 $id_program = "id_program_example"; // string | Program UUID
 $id_url_type = "id_url_type_example"; // string | URL types identifier.
 $id_url = "id_url_example"; // string | Url UUID
-$body = new \Softonic\CatalogApiSdk\Model\ProgramUrlTypeUrl(); // \Softonic\CatalogApiSdk\Model\ProgramUrlTypeUrl | 
+$body = new \Softonic\CatalogApiSdk\Client\Model\ProgramUrlTypeUrl(); // \Softonic\CatalogApiSdk\Client\Model\ProgramUrlTypeUrl | 
 
 try {
     $api_instance->updateProgramUrlTypeUrl($id_program, $id_url_type, $id_url, $body);
@@ -341,7 +341,7 @@ Name | Type | Description  | Notes
  **id_program** | **string**| Program UUID |
  **id_url_type** | **string**| URL types identifier. |
  **id_url** | **string**| Url UUID |
- **body** | [**\Softonic\CatalogApiSdk\Model\ProgramUrlTypeUrl**](../Model/\Softonic\CatalogApiSdk\Model\ProgramUrlTypeUrl.md)|  | [optional]
+ **body** | [**\Softonic\CatalogApiSdk\Client\Model\ProgramUrlTypeUrl**](../Model/\Softonic\CatalogApiSdk\Client\Model\ProgramUrlTypeUrl.md)|  | [optional]
 
 ### Return type
 

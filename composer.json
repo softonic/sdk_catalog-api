@@ -1,6 +1,6 @@
 {
     "name": "softonic/catalog_api_sdk",
-    "version": "v2.0.133",
+    "version": "2.0.210",
     "description": "",
     "keywords": [
         "swagger",
@@ -9,7 +9,7 @@
         "api"
     ],
     "homepage": "http://swagger.io",
-    "license": "Apache v2",
+    "license": "Apache-2.0",
     "authors": [
         {
             "name": "Swagger and contributors",
@@ -25,7 +25,8 @@
     "require-dev": {
         "phpunit/phpunit": "~4.8",
         "satooshi/php-coveralls": "~1.0",
-        "squizlabs/php_codesniffer": "~2.6"
+        "squizlabs/php_codesniffer": "~2.6",
+        "friendsofphp/php-cs-fixer": "~1.12"
     },
     "autoload": {
         "psr-4": { "Softonic\\CatalogApiSdk\\" : "src/" }

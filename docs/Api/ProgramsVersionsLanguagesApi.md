@@ -1,6 +1,6 @@
 # Softonic\CatalogApiSdk\ProgramsVersionsLanguagesApi
 
-All URIs are relative to *http://v2.catalog.sftapi.com.sft-staging.com*
+All URIs are relative to *https://catalog.sftapi.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**deleteProgramVersionLanguage**](ProgramsVersionsLanguagesApi.md#deleteProgramVersionLanguage) | **DELETE** /programs/{id_program}/versions/{id_version}/languages/{id_language} | Deletes a ProgramVersionLanguage
 [**findProgramVersionLanguage**](ProgramsVersionsLanguagesApi.md#findProgramVersionLanguage) | **GET** /programs/{id_program}/versions/{id_version}/languages | List of ProgramVersionLanguages
 [**readProgramVersionLanguage**](ProgramsVersionsLanguagesApi.md#readProgramVersionLanguage) | **GET** /programs/{id_program}/versions/{id_version}/languages/{id_language} | Fetches a single ProgramVersionLanguage
+[**replaceProgramVersionLanguage**](ProgramsVersionsLanguagesApi.md#replaceProgramVersionLanguage) | **PUT** /programs/{id_program}/versions/{id_version}/languages/{id_language} | Entirely replaces a ProgramVersionLanguage
 
 
 # **createProgramVersionLanguage**
@@ -34,7 +35,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLanguagesApi();
 $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Program version identifier
-$body = new \Softonic\CatalogApiSdk\Model\ProgramVersionLanguage(); // \Softonic\CatalogApiSdk\Model\ProgramVersionLanguage | 
+$body = new \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLanguage(); // \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLanguage | 
 
 try {
     $api_instance->createProgramVersionLanguage($id_program, $id_version, $body);
@@ -50,7 +51,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_program** | **string**| Program UUID |
  **id_version** | **string**| Program version identifier |
- **body** | [**\Softonic\CatalogApiSdk\Model\ProgramVersionLanguage**](../Model/\Softonic\CatalogApiSdk\Model\ProgramVersionLanguage.md)|  | [optional]
+ **body** | [**\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLanguage**](../Model/\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLanguage.md)|  | [optional]
 
 ### Return type
 
@@ -125,7 +126,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **findProgramVersionLanguage**
-> \Softonic\CatalogApiSdk\Model\ProgramVersionLanguage[] findProgramVersionLanguage($id_program, $id_version)
+> \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLanguage[] findProgramVersionLanguage($id_program, $id_version)
 
 List of ProgramVersionLanguages
 
@@ -167,7 +168,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Model\ProgramVersionLanguage[]**](../Model/ProgramVersionLanguage.md)
+[**\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLanguage[]**](../Model/ProgramVersionLanguage.md)
 
 ### Authorization
 
@@ -181,7 +182,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readProgramVersionLanguage**
-> \Softonic\CatalogApiSdk\Model\ProgramVersionLanguage readProgramVersionLanguage($id_program, $id_version, $id_language)
+> \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLanguage readProgramVersionLanguage($id_program, $id_version, $id_language)
 
 Fetches a single ProgramVersionLanguage
 
@@ -225,7 +226,64 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Model\ProgramVersionLanguage**](../Model/ProgramVersionLanguage.md)
+[**\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLanguage**](../Model/ProgramVersionLanguage.md)
+
+### Authorization
+
+[catalog_api_implicit](../../README.md#catalog_api_implicit), [catalog_api_access_code](../../README.md#catalog_api_access_code), [catalog_api_password](../../README.md#catalog_api_password), [catalog_api_application](../../README.md#catalog_api_application)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **replaceProgramVersionLanguage**
+> replaceProgramVersionLanguage($id_program, $id_version, $id_language)
+
+Entirely replaces a ProgramVersionLanguage
+
+Entirely replaces a ProgramVersionLanguage
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: catalog_api_implicit
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: catalog_api_access_code
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: catalog_api_password
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: catalog_api_application
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLanguagesApi();
+$id_program = "id_program_example"; // string | Program UUID
+$id_version = "id_version_example"; // string | Program version identifier
+$id_language = "id_language_example"; // string | Language identifier
+
+try {
+    $api_instance->replaceProgramVersionLanguage($id_program, $id_version, $id_language);
+} catch (Exception $e) {
+    echo 'Exception when calling ProgramsVersionsLanguagesApi->replaceProgramVersionLanguage: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id_program** | **string**| Program UUID |
+ **id_version** | **string**| Program version identifier |
+ **id_language** | **string**| Language identifier |
+
+### Return type
+
+void (empty response body)
 
 ### Authorization
 
