@@ -1,4 +1,4 @@
-# Softonic\CatalogApiSdk\CategoriesChildsApi
+# Softonic\\CatalogApiSdk\CategoriesChildsApi
 
 All URIs are relative to *https://catalog.sftapi.com*
 
@@ -22,17 +22,17 @@ Creates a new CategoryChild
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\CategoriesChildsApi();
+$api_instance = new Softonic\\CatalogApiSdk\Api\CategoriesChildsApi();
 $id_category = "id_category_example"; // string | Parent category identifier
-$body = new \Softonic\CatalogApiSdk\Client\Model\CategoryChild(); // \Softonic\CatalogApiSdk\Client\Model\CategoryChild | 
+$body = new \Softonic\\CatalogApiSdk\\Client\\Model\CategoryChild(); // \Softonic\\CatalogApiSdk\\Client\\Model\CategoryChild | 
 
 try {
     $api_instance->createCategoryChild($id_category, $body);
@@ -47,7 +47,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_category** | **string**| Parent category identifier |
- **body** | [**\Softonic\CatalogApiSdk\Client\Model\CategoryChild**](../Model/\Softonic\CatalogApiSdk\Client\Model\CategoryChild.md)|  | [optional]
+ **body** | [**\Softonic\\CatalogApiSdk\\Client\\Model\CategoryChild**](../Model/\Softonic\\CatalogApiSdk\\Client\\Model\CategoryChild.md)|  | [optional]
 
 ### Return type
 
@@ -65,7 +65,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **findCategoryChild**
-> \Softonic\CatalogApiSdk\Client\Model\CategoryChild[] findCategoryChild($id_category)
+> \Softonic\\CatalogApiSdk\\Client\\Model\CategoryChild[] findCategoryChild($id_category)
 
 List of CategoryChilds
 
@@ -77,15 +77,15 @@ List of CategoryChilds
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\CategoriesChildsApi();
+$api_instance = new Softonic\\CatalogApiSdk\Api\CategoriesChildsApi();
 $id_category = "id_category_example"; // string | Parent category identifier
 
 try {
@@ -105,7 +105,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Client\Model\CategoryChild[]**](../Model/CategoryChild.md)
+[**\Softonic\\CatalogApiSdk\\Client\\Model\CategoryChild[]**](../Model/CategoryChild.md)
 
 ### Authorization
 
@@ -119,7 +119,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readCategoryChild**
-> \Softonic\CatalogApiSdk\Client\Model\CategoryChild readCategoryChild($id_category, $id_child)
+> \Softonic\\CatalogApiSdk\\Client\\Model\CategoryChild readCategoryChild($id_category, $id_child)
 
 Fetches a single CategoryChild
 
@@ -131,15 +131,15 @@ Fetches a single CategoryChild
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\CategoriesChildsApi();
+$api_instance = new Softonic\\CatalogApiSdk\Api\CategoriesChildsApi();
 $id_category = "id_category_example"; // string | Parent category identifier
 $id_child = "id_child_example"; // string | Child category identifier
 
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Client\Model\CategoryChild**](../Model/CategoryChild.md)
+[**\Softonic\\CatalogApiSdk\\Client\\Model\CategoryChild**](../Model/CategoryChild.md)
 
 ### Authorization
 

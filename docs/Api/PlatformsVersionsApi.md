@@ -1,4 +1,4 @@
-# Softonic\CatalogApiSdk\PlatformsVersionsApi
+# Softonic\\CatalogApiSdk\PlatformsVersionsApi
 
 All URIs are relative to *https://catalog.sftapi.com*
 
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **findPlatformVersion**
-> \Softonic\CatalogApiSdk\Client\Model\PlatformVersion[] findPlatformVersion($id_platform)
+> \Softonic\\CatalogApiSdk\\Client\\Model\PlatformVersion[] findPlatformVersion($id_platform)
 
 List of PlatformVersions
 
@@ -21,15 +21,15 @@ List of PlatformVersions
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\PlatformsVersionsApi();
+$api_instance = new Softonic\\CatalogApiSdk\Api\PlatformsVersionsApi();
 $id_platform = "id_platform_example"; // string | Platform ID
 
 try {
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Client\Model\PlatformVersion[]**](../Model/PlatformVersion.md)
+[**\Softonic\\CatalogApiSdk\\Client\\Model\PlatformVersion[]**](../Model/PlatformVersion.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readPlatformVersion**
-> \Softonic\CatalogApiSdk\Client\Model\PlatformVersion readPlatformVersion($id_platform, $id_version)
+> \Softonic\\CatalogApiSdk\\Client\\Model\PlatformVersion readPlatformVersion($id_platform, $id_version)
 
 Fetches a single PlatformVersion
 
@@ -75,15 +75,15 @@ Fetches a single PlatformVersion
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\PlatformsVersionsApi();
+$api_instance = new Softonic\\CatalogApiSdk\Api\PlatformsVersionsApi();
 $id_platform = "id_platform_example"; // string | Platform ID
 $id_version = "id_version_example"; // string | Platform version ID
 
@@ -105,7 +105,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Client\Model\PlatformVersion**](../Model/PlatformVersion.md)
+[**\Softonic\\CatalogApiSdk\\Client\\Model\PlatformVersion**](../Model/PlatformVersion.md)
 
 ### Authorization
 

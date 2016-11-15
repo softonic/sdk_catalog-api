@@ -6,7 +6,8 @@ Name | Type | Description | Notes
 **id_program** | **string** | Program UUID | 
 **id_review_type** | **string** | Review owner type | 
 **id_review** | **string** | Review identifier as UUID | 
-**id_image** | **string** | Image identifier in SHA1-Hash format | 
+**id_image** | **string** | Image identifier in SHA1-Hash format derived from path | 
+**path** | **string** | Image path | 
 **filename** | **string** | Image filename | 
 **type** | **string** | Image type | 
 **priority** | **int** | Priority used to order the images | [optional] 

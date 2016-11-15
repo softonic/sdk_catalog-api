@@ -1,4 +1,4 @@
-# Softonic\CatalogApiSdk\ProgramsVersionsLocalesUrlTypesApi
+# Softonic\\CatalogApiSdk\ProgramsVersionsLocalesUrlTypesApi
 
 All URIs are relative to *https://catalog.sftapi.com*
 
@@ -25,19 +25,19 @@ Creates a new ProgramVersionLocaleUrlType
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesUrlTypesApi();
+$api_instance = new Softonic\\CatalogApiSdk\Api\ProgramsVersionsLocalesUrlTypesApi();
 $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Program version identifier
 $id_locale = "id_locale_example"; // string | Locale identifier
-$body = new \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleUrlType(); // \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleUrlType | 
+$body = new \Softonic\\CatalogApiSdk\\Client\\Model\ProgramVersionLocaleUrlType(); // \Softonic\\CatalogApiSdk\\Client\\Model\ProgramVersionLocaleUrlType | 
 
 try {
     $api_instance->createProgramVersionLocaleUrlType($id_program, $id_version, $id_locale, $body);
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
  **id_program** | **string**| Program UUID |
  **id_version** | **string**| Program version identifier |
  **id_locale** | **string**| Locale identifier |
- **body** | [**\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleUrlType**](../Model/\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleUrlType.md)|  | [optional]
+ **body** | [**\Softonic\\CatalogApiSdk\\Client\\Model\ProgramVersionLocaleUrlType**](../Model/\Softonic\\CatalogApiSdk\\Client\\Model\ProgramVersionLocaleUrlType.md)|  | [optional]
 
 ### Return type
 
@@ -84,15 +84,15 @@ Deletes a ProgramVersionLocaleUrlType
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesUrlTypesApi();
+$api_instance = new Softonic\\CatalogApiSdk\Api\ProgramsVersionsLocalesUrlTypesApi();
 $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Program version identifier
 $id_locale = "id_locale_example"; // string | Locale identifier
@@ -131,7 +131,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **findProgramVersionLocaleUrlType**
-> \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleUrlType[] findProgramVersionLocaleUrlType($id_program, $id_version, $id_locale)
+> \Softonic\\CatalogApiSdk\\Client\\Model\ProgramVersionLocaleUrlType[] findProgramVersionLocaleUrlType($id_program, $id_version, $id_locale)
 
 List of ProgramVersionLocaleUrlTypes
 
@@ -143,15 +143,15 @@ List of ProgramVersionLocaleUrlTypes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesUrlTypesApi();
+$api_instance = new Softonic\\CatalogApiSdk\Api\ProgramsVersionsLocalesUrlTypesApi();
 $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Program version identifier
 $id_locale = "id_locale_example"; // string | Locale identifier
@@ -175,7 +175,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleUrlType[]**](../Model/ProgramVersionLocaleUrlType.md)
+[**\Softonic\\CatalogApiSdk\\Client\\Model\ProgramVersionLocaleUrlType[]**](../Model/ProgramVersionLocaleUrlType.md)
 
 ### Authorization
 
@@ -189,7 +189,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readProgramVersionLocaleUrlType**
-> \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleUrlType readProgramVersionLocaleUrlType($id_program, $id_version, $id_locale, $id_url_type)
+> \Softonic\\CatalogApiSdk\\Client\\Model\ProgramVersionLocaleUrlType readProgramVersionLocaleUrlType($id_program, $id_version, $id_locale, $id_url_type)
 
 Fetches a single ProgramVersionLocaleUrlType
 
@@ -201,15 +201,15 @@ Fetches a single ProgramVersionLocaleUrlType
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesUrlTypesApi();
+$api_instance = new Softonic\\CatalogApiSdk\Api\ProgramsVersionsLocalesUrlTypesApi();
 $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Program version identifier
 $id_locale = "id_locale_example"; // string | Locale identifier
@@ -235,7 +235,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleUrlType**](../Model/ProgramVersionLocaleUrlType.md)
+[**\Softonic\\CatalogApiSdk\\Client\\Model\ProgramVersionLocaleUrlType**](../Model/ProgramVersionLocaleUrlType.md)
 
 ### Authorization
 
@@ -261,20 +261,20 @@ Entirely replaces a ProgramVersionLocaleUrlType
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesUrlTypesApi();
+$api_instance = new Softonic\\CatalogApiSdk\Api\ProgramsVersionsLocalesUrlTypesApi();
 $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Program version identifier
 $id_locale = "id_locale_example"; // string | Locale identifier
 $id_url_type = "id_url_type_example"; // string | URL types identifier
-$body = new \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleUrlType(); // \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleUrlType | 
+$body = new \Softonic\\CatalogApiSdk\\Client\\Model\ProgramVersionLocaleUrlType(); // \Softonic\\CatalogApiSdk\\Client\\Model\ProgramVersionLocaleUrlType | 
 
 try {
     $api_instance->replaceProgramVersionLocaleUrlType($id_program, $id_version, $id_locale, $id_url_type, $body);
@@ -292,7 +292,7 @@ Name | Type | Description  | Notes
  **id_version** | **string**| Program version identifier |
  **id_locale** | **string**| Locale identifier |
  **id_url_type** | **string**| URL types identifier |
- **body** | [**\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleUrlType**](../Model/\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleUrlType.md)|  | [optional]
+ **body** | [**\Softonic\\CatalogApiSdk\\Client\\Model\ProgramVersionLocaleUrlType**](../Model/\Softonic\\CatalogApiSdk\\Client\\Model\ProgramVersionLocaleUrlType.md)|  | [optional]
 
 ### Return type
 
@@ -322,20 +322,20 @@ Partially updates a ProgramVersionLocaleUrlType
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesUrlTypesApi();
+$api_instance = new Softonic\\CatalogApiSdk\Api\ProgramsVersionsLocalesUrlTypesApi();
 $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Program version identifier
 $id_locale = "id_locale_example"; // string | Locale identifier
 $id_url_type = "id_url_type_example"; // string | URL types identifier
-$body = new \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleUrlType(); // \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleUrlType | 
+$body = new \Softonic\\CatalogApiSdk\\Client\\Model\ProgramVersionLocaleUrlType(); // \Softonic\\CatalogApiSdk\\Client\\Model\ProgramVersionLocaleUrlType | 
 
 try {
     $api_instance->updateProgramVersionLocaleUrlType($id_program, $id_version, $id_locale, $id_url_type, $body);
@@ -353,7 +353,7 @@ Name | Type | Description  | Notes
  **id_version** | **string**| Program version identifier |
  **id_locale** | **string**| Locale identifier |
  **id_url_type** | **string**| URL types identifier |
- **body** | [**\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleUrlType**](../Model/\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleUrlType.md)|  | [optional]
+ **body** | [**\Softonic\\CatalogApiSdk\\Client\\Model\ProgramVersionLocaleUrlType**](../Model/\Softonic\\CatalogApiSdk\\Client\\Model\ProgramVersionLocaleUrlType.md)|  | [optional]
 
 ### Return type
 

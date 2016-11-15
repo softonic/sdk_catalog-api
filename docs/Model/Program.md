@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **id_origin** | **string** | Origins identifier | 
 **id_platform** | **string** | Platforms identifier | 
 **id_category** | **string** | Categories identifier | 
+**id_appstore** | **string** | App store identifier | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
