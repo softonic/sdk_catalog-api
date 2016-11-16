@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Softonic\\CatalogApiSdk
+ * @package  Softonic\CatalogApiSdk
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -38,18 +38,18 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace Softonic\\CatalogApiSdk;
+namespace Softonic\CatalogApiSdk;
 
-use \Softonic\\CatalogApiSdk\Configuration;
-use \Softonic\\CatalogApiSdk\ApiClient;
-use \Softonic\\CatalogApiSdk\ApiException;
-use \Softonic\\CatalogApiSdk\ObjectSerializer;
+use \Softonic\CatalogApiSdk\Configuration;
+use \Softonic\CatalogApiSdk\ApiClient;
+use \Softonic\CatalogApiSdk\ApiException;
+use \Softonic\CatalogApiSdk\ObjectSerializer;
 
 /**
  * ProgramsVersionsLocalesApiTest Class Doc Comment
  *
  * @category Class
- * @package  Softonic\\CatalogApiSdk
+ * @package  Softonic\CatalogApiSdk
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  * @link     https://github.com/swagger-api/swagger-codegen

@@ -1,4 +1,4 @@
-# Softonic\\CatalogApiSdk\ProgramsRequirementsGroupsRequirementsApi
+# Softonic\CatalogApiSdk\ProgramsRequirementsGroupsRequirementsApi
 
 All URIs are relative to *https://catalog.sftapi.com*
 
@@ -25,18 +25,18 @@ Creates a new ProgramRequirementGroupRequirement
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\\CatalogApiSdk\Api\ProgramsRequirementsGroupsRequirementsApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsRequirementsGroupsRequirementsApi();
 $id_program = "id_program_example"; // string | Program UUID
 $id_requirements_group = "id_requirements_group_example"; // string | Requirements group UUID
-$body = new \Softonic\\CatalogApiSdk\\Client\\Model\ProgramRequirementGroupRequirement(); // \Softonic\\CatalogApiSdk\\Client\\Model\ProgramRequirementGroupRequirement | 
+$body = new \Softonic\CatalogApiSdk\Client\Model\ProgramRequirementGroupRequirement(); // \Softonic\CatalogApiSdk\Client\Model\ProgramRequirementGroupRequirement | 
 
 try {
     $api_instance->createProgramRequirementGroupRequirement($id_program, $id_requirements_group, $body);
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_program** | **string**| Program UUID |
  **id_requirements_group** | **string**| Requirements group UUID |
- **body** | [**\Softonic\\CatalogApiSdk\\Client\\Model\ProgramRequirementGroupRequirement**](../Model/\Softonic\\CatalogApiSdk\\Client\\Model\ProgramRequirementGroupRequirement.md)|  | [optional]
+ **body** | [**\Softonic\CatalogApiSdk\Client\Model\ProgramRequirementGroupRequirement**](../Model/\Softonic\CatalogApiSdk\Client\Model\ProgramRequirementGroupRequirement.md)|  | [optional]
 
 ### Return type
 
@@ -82,15 +82,15 @@ Deletes a ProgramRequirementGroupRequirement
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\\CatalogApiSdk\Api\ProgramsRequirementsGroupsRequirementsApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsRequirementsGroupsRequirementsApi();
 $id_program = "id_program_example"; // string | Program UUID
 $id_requirements_group = "id_requirements_group_example"; // string | Requirements group UUID
 $id_requirement = "id_requirement_example"; // string | Requirement ID
@@ -127,7 +127,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **findProgramRequirementGroupRequirement**
-> \Softonic\\CatalogApiSdk\\Client\\Model\ProgramRequirementGroupRequirement[] findProgramRequirementGroupRequirement($id_program, $id_requirements_group)
+> \Softonic\CatalogApiSdk\Client\Model\ProgramRequirementGroupRequirement[] findProgramRequirementGroupRequirement($id_program, $id_requirements_group)
 
 List of ProgramRequirementGroupRequirements
 
@@ -139,15 +139,15 @@ List of ProgramRequirementGroupRequirements
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\\CatalogApiSdk\Api\ProgramsRequirementsGroupsRequirementsApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsRequirementsGroupsRequirementsApi();
 $id_program = "id_program_example"; // string | Program UUID
 $id_requirements_group = "id_requirements_group_example"; // string | Requirements group UUID
 
@@ -169,7 +169,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\\CatalogApiSdk\\Client\\Model\ProgramRequirementGroupRequirement[]**](../Model/ProgramRequirementGroupRequirement.md)
+[**\Softonic\CatalogApiSdk\Client\Model\ProgramRequirementGroupRequirement[]**](../Model/ProgramRequirementGroupRequirement.md)
 
 ### Authorization
 
@@ -183,7 +183,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readProgramRequirementGroupRequirement**
-> \Softonic\\CatalogApiSdk\\Client\\Model\ProgramRequirementGroupRequirement readProgramRequirementGroupRequirement($id_program, $id_requirements_group, $id_requirement)
+> \Softonic\CatalogApiSdk\Client\Model\ProgramRequirementGroupRequirement readProgramRequirementGroupRequirement($id_program, $id_requirements_group, $id_requirement)
 
 Fetches a single ProgramRequirementGroupRequirement
 
@@ -195,15 +195,15 @@ Fetches a single ProgramRequirementGroupRequirement
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\\CatalogApiSdk\Api\ProgramsRequirementsGroupsRequirementsApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsRequirementsGroupsRequirementsApi();
 $id_program = "id_program_example"; // string | Program UUID
 $id_requirements_group = "id_requirements_group_example"; // string | Requirements group UUID
 $id_requirement = "id_requirement_example"; // string | Requirement ID
@@ -227,7 +227,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\\CatalogApiSdk\\Client\\Model\ProgramRequirementGroupRequirement**](../Model/ProgramRequirementGroupRequirement.md)
+[**\Softonic\CatalogApiSdk\Client\Model\ProgramRequirementGroupRequirement**](../Model/ProgramRequirementGroupRequirement.md)
 
 ### Authorization
 
@@ -253,19 +253,19 @@ Entirely replaces a ProgramRequirementGroupRequirement
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\\CatalogApiSdk\Api\ProgramsRequirementsGroupsRequirementsApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsRequirementsGroupsRequirementsApi();
 $id_program = "id_program_example"; // string | Program UUID
 $id_requirements_group = "id_requirements_group_example"; // string | Requirements group UUID
 $id_requirement = "id_requirement_example"; // string | Requirement ID
-$body = new \Softonic\\CatalogApiSdk\\Client\\Model\ProgramRequirementGroupRequirement(); // \Softonic\\CatalogApiSdk\\Client\\Model\ProgramRequirementGroupRequirement | 
+$body = new \Softonic\CatalogApiSdk\Client\Model\ProgramRequirementGroupRequirement(); // \Softonic\CatalogApiSdk\Client\Model\ProgramRequirementGroupRequirement | 
 
 try {
     $api_instance->replaceProgramRequirementGroupRequirement($id_program, $id_requirements_group, $id_requirement, $body);
@@ -282,7 +282,7 @@ Name | Type | Description  | Notes
  **id_program** | **string**| Program UUID |
  **id_requirements_group** | **string**| Requirements group UUID |
  **id_requirement** | **string**| Requirement ID |
- **body** | [**\Softonic\\CatalogApiSdk\\Client\\Model\ProgramRequirementGroupRequirement**](../Model/\Softonic\\CatalogApiSdk\\Client\\Model\ProgramRequirementGroupRequirement.md)|  | [optional]
+ **body** | [**\Softonic\CatalogApiSdk\Client\Model\ProgramRequirementGroupRequirement**](../Model/\Softonic\CatalogApiSdk\Client\Model\ProgramRequirementGroupRequirement.md)|  | [optional]
 
 ### Return type
 
@@ -312,19 +312,19 @@ Partially updates a ProgramRequirementGroupRequirement
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\\CatalogApiSdk\Api\ProgramsRequirementsGroupsRequirementsApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsRequirementsGroupsRequirementsApi();
 $id_program = "id_program_example"; // string | Program UUID
 $id_requirements_group = "id_requirements_group_example"; // string | Requirements group UUID
 $id_requirement = "id_requirement_example"; // string | Requirement ID
-$body = new \Softonic\\CatalogApiSdk\\Client\\Model\ProgramRequirementGroupRequirement(); // \Softonic\\CatalogApiSdk\\Client\\Model\ProgramRequirementGroupRequirement | 
+$body = new \Softonic\CatalogApiSdk\Client\Model\ProgramRequirementGroupRequirement(); // \Softonic\CatalogApiSdk\Client\Model\ProgramRequirementGroupRequirement | 
 
 try {
     $api_instance->updateProgramRequirementGroupRequirement($id_program, $id_requirements_group, $id_requirement, $body);
@@ -341,7 +341,7 @@ Name | Type | Description  | Notes
  **id_program** | **string**| Program UUID |
  **id_requirements_group** | **string**| Requirements group UUID |
  **id_requirement** | **string**| Requirement ID |
- **body** | [**\Softonic\\CatalogApiSdk\\Client\\Model\ProgramRequirementGroupRequirement**](../Model/\Softonic\\CatalogApiSdk\\Client\\Model\ProgramRequirementGroupRequirement.md)|  | [optional]
+ **body** | [**\Softonic\CatalogApiSdk\Client\Model\ProgramRequirementGroupRequirement**](../Model/\Softonic\CatalogApiSdk\Client\Model\ProgramRequirementGroupRequirement.md)|  | [optional]
 
 ### Return type
 

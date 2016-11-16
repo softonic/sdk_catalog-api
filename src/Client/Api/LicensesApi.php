@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Softonic\\CatalogApiSdk
+ * @package  Softonic\CatalogApiSdk
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -38,18 +38,18 @@
  * Do not edit the class manually.
  */
 
-namespace Softonic\\CatalogApiSdk\\Client\\Api;
+namespace Softonic\CatalogApiSdk\Client\Api;
 
-use \Softonic\\CatalogApiSdk\ApiClient;
-use \Softonic\\CatalogApiSdk\ApiException;
-use \Softonic\\CatalogApiSdk\Configuration;
-use \Softonic\\CatalogApiSdk\ObjectSerializer;
+use \Softonic\CatalogApiSdk\ApiClient;
+use \Softonic\CatalogApiSdk\ApiException;
+use \Softonic\CatalogApiSdk\Configuration;
+use \Softonic\CatalogApiSdk\ObjectSerializer;
 
 /**
  * LicensesApi Class Doc Comment
  *
  * @category Class
- * @package  Softonic\\CatalogApiSdk
+ * @package  Softonic\CatalogApiSdk
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -59,16 +59,16 @@ class LicensesApi
     /**
      * API Client
      *
-     * @var \Softonic\\CatalogApiSdk\ApiClient instance of the ApiClient
+     * @var \Softonic\CatalogApiSdk\ApiClient instance of the ApiClient
      */
     protected $apiClient;
 
     /**
      * Constructor
      *
-     * @param \Softonic\\CatalogApiSdk\ApiClient|null $apiClient The api client to use
+     * @param \Softonic\CatalogApiSdk\ApiClient|null $apiClient The api client to use
      */
-    public function __construct(\Softonic\\CatalogApiSdk\ApiClient $apiClient = null)
+    public function __construct(\Softonic\CatalogApiSdk\ApiClient $apiClient = null)
     {
         if ($apiClient === null) {
             $apiClient = new ApiClient();
@@ -81,7 +81,7 @@ class LicensesApi
     /**
      * Get API client
      *
-     * @return \Softonic\\CatalogApiSdk\ApiClient get the API client
+     * @return \Softonic\CatalogApiSdk\ApiClient get the API client
      */
     public function getApiClient()
     {
@@ -91,11 +91,11 @@ class LicensesApi
     /**
      * Set the API client
      *
-     * @param \Softonic\\CatalogApiSdk\ApiClient $apiClient set the API client
+     * @param \Softonic\CatalogApiSdk\ApiClient $apiClient set the API client
      *
      * @return LicensesApi
      */
-    public function setApiClient(\Softonic\\CatalogApiSdk\ApiClient $apiClient)
+    public function setApiClient(\Softonic\CatalogApiSdk\ApiClient $apiClient)
     {
         $this->apiClient = $apiClient;
         return $this;
@@ -106,8 +106,8 @@ class LicensesApi
      *
      * Creates a new License
      *
-     * @param \Softonic\\CatalogApiSdk\\Client\\Model\License $body  (optional)
-     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
+     * @param \Softonic\CatalogApiSdk\Client\Model\License $body  (optional)
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      * @return void
      */
     public function createLicense($body = null)
@@ -121,8 +121,8 @@ class LicensesApi
      *
      * Creates a new License
      *
-     * @param \Softonic\\CatalogApiSdk\\Client\\Model\License $body  (optional)
-     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
+     * @param \Softonic\CatalogApiSdk\Client\Model\License $body  (optional)
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function createLicenseWithHttpInfo($body = null)
@@ -197,7 +197,7 @@ class LicensesApi
      * Deletes a License
      *
      * @param string $id_license License acronym. (required)
-     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      * @return void
      */
     public function deleteLicense($id_license)
@@ -212,7 +212,7 @@ class LicensesApi
      * Deletes a License
      *
      * @param string $id_license License acronym. (required)
-     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteLicenseWithHttpInfo($id_license)
@@ -300,8 +300,8 @@ class LicensesApi
      *
      * List of Licenses
      *
-     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
-     * @return \Softonic\\CatalogApiSdk\\Client\\Model\License[]
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @return \Softonic\CatalogApiSdk\Client\Model\License[]
      */
     public function findLicense()
     {
@@ -314,8 +314,8 @@ class LicensesApi
      *
      * List of Licenses
      *
-     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
-     * @return array of \Softonic\\CatalogApiSdk\\Client\\Model\License[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @return array of \Softonic\CatalogApiSdk\Client\Model\License[], HTTP status code, HTTP response headers (array of strings)
      */
     public function findLicenseWithHttpInfo()
     {
@@ -365,15 +365,15 @@ class LicensesApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\\CatalogApiSdk\\Client\\Model\License[]',
+                '\Softonic\CatalogApiSdk\Client\Model\License[]',
                 '/licenses'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Softonic\\CatalogApiSdk\\Client\\Model\License[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Client\Model\License[]', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Softonic\\CatalogApiSdk\\Client\\Model\License[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Softonic\CatalogApiSdk\Client\Model\License[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -388,8 +388,8 @@ class LicensesApi
      * Fetches a single License
      *
      * @param string $id_license License acronym. (required)
-     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
-     * @return \Softonic\\CatalogApiSdk\\Client\\Model\License
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @return \Softonic\CatalogApiSdk\Client\Model\License
      */
     public function readLicense($id_license)
     {
@@ -403,8 +403,8 @@ class LicensesApi
      * Fetches a single License
      *
      * @param string $id_license License acronym. (required)
-     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
-     * @return array of \Softonic\\CatalogApiSdk\\Client\\Model\License, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @return array of \Softonic\CatalogApiSdk\Client\Model\License, HTTP status code, HTTP response headers (array of strings)
      */
     public function readLicenseWithHttpInfo($id_license)
     {
@@ -473,15 +473,15 @@ class LicensesApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\\CatalogApiSdk\\Client\\Model\License',
+                '\Softonic\CatalogApiSdk\Client\Model\License',
                 '/licenses/{id_license}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Softonic\\CatalogApiSdk\\Client\\Model\License', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Client\Model\License', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Softonic\\CatalogApiSdk\\Client\\Model\License', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Softonic\CatalogApiSdk\Client\Model\License', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -496,8 +496,8 @@ class LicensesApi
      * Entirely replaces a License
      *
      * @param string $id_license License acronym. (required)
-     * @param \Softonic\\CatalogApiSdk\\Client\\Model\License $body  (optional)
-     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
+     * @param \Softonic\CatalogApiSdk\Client\Model\License $body  (optional)
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      * @return void
      */
     public function replaceLicense($id_license, $body = null)
@@ -512,8 +512,8 @@ class LicensesApi
      * Entirely replaces a License
      *
      * @param string $id_license License acronym. (required)
-     * @param \Softonic\\CatalogApiSdk\\Client\\Model\License $body  (optional)
-     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
+     * @param \Softonic\CatalogApiSdk\Client\Model\License $body  (optional)
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function replaceLicenseWithHttpInfo($id_license, $body = null)
@@ -607,8 +607,8 @@ class LicensesApi
      * Partially updates a License
      *
      * @param string $id_license License acronym. (required)
-     * @param \Softonic\\CatalogApiSdk\\Client\\Model\License $body  (optional)
-     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
+     * @param \Softonic\CatalogApiSdk\Client\Model\License $body  (optional)
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      * @return void
      */
     public function updateLicense($id_license, $body = null)
@@ -623,8 +623,8 @@ class LicensesApi
      * Partially updates a License
      *
      * @param string $id_license License acronym. (required)
-     * @param \Softonic\\CatalogApiSdk\\Client\\Model\License $body  (optional)
-     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
+     * @param \Softonic\CatalogApiSdk\Client\Model\License $body  (optional)
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateLicenseWithHttpInfo($id_license, $body = null)

@@ -1,4 +1,4 @@
-# Softonic\\CatalogApiSdk\PlatformsApi
+# Softonic\CatalogApiSdk\PlatformsApi
 
 All URIs are relative to *https://catalog.sftapi.com*
 
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **findPlatform**
-> \Softonic\\CatalogApiSdk\\Client\\Model\Platform[] findPlatform()
+> \Softonic\CatalogApiSdk\Client\Model\Platform[] findPlatform()
 
 List of Platforms
 
@@ -21,15 +21,15 @@ List of Platforms
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\\CatalogApiSdk\Api\PlatformsApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\PlatformsApi();
 
 try {
     $result = $api_instance->findPlatform();
@@ -45,7 +45,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Softonic\\CatalogApiSdk\\Client\\Model\Platform[]**](../Model/Platform.md)
+[**\Softonic\CatalogApiSdk\Client\Model\Platform[]**](../Model/Platform.md)
 
 ### Authorization
 
@@ -59,7 +59,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readPlatform**
-> \Softonic\\CatalogApiSdk\\Client\\Model\Platform readPlatform($id_platform)
+> \Softonic\CatalogApiSdk\Client\Model\Platform readPlatform($id_platform)
 
 Fetches a single Platform
 
@@ -71,15 +71,15 @@ Fetches a single Platform
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\\CatalogApiSdk\Api\PlatformsApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\PlatformsApi();
 $id_platform = "id_platform_example"; // string | Platform ID
 
 try {
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\\CatalogApiSdk\\Client\\Model\Platform**](../Model/Platform.md)
+[**\Softonic\CatalogApiSdk\Client\Model\Platform**](../Model/Platform.md)
 
 ### Authorization
 

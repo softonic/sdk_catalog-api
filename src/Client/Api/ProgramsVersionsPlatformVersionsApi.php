@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Softonic\\CatalogApiSdk
+ * @package  Softonic\CatalogApiSdk
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -38,18 +38,18 @@
  * Do not edit the class manually.
  */
 
-namespace Softonic\\CatalogApiSdk\\Client\\Api;
+namespace Softonic\CatalogApiSdk\Client\Api;
 
-use \Softonic\\CatalogApiSdk\ApiClient;
-use \Softonic\\CatalogApiSdk\ApiException;
-use \Softonic\\CatalogApiSdk\Configuration;
-use \Softonic\\CatalogApiSdk\ObjectSerializer;
+use \Softonic\CatalogApiSdk\ApiClient;
+use \Softonic\CatalogApiSdk\ApiException;
+use \Softonic\CatalogApiSdk\Configuration;
+use \Softonic\CatalogApiSdk\ObjectSerializer;
 
 /**
  * ProgramsVersionsPlatformVersionsApi Class Doc Comment
  *
  * @category Class
- * @package  Softonic\\CatalogApiSdk
+ * @package  Softonic\CatalogApiSdk
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -59,16 +59,16 @@ class ProgramsVersionsPlatformVersionsApi
     /**
      * API Client
      *
-     * @var \Softonic\\CatalogApiSdk\ApiClient instance of the ApiClient
+     * @var \Softonic\CatalogApiSdk\ApiClient instance of the ApiClient
      */
     protected $apiClient;
 
     /**
      * Constructor
      *
-     * @param \Softonic\\CatalogApiSdk\ApiClient|null $apiClient The api client to use
+     * @param \Softonic\CatalogApiSdk\ApiClient|null $apiClient The api client to use
      */
-    public function __construct(\Softonic\\CatalogApiSdk\ApiClient $apiClient = null)
+    public function __construct(\Softonic\CatalogApiSdk\ApiClient $apiClient = null)
     {
         if ($apiClient === null) {
             $apiClient = new ApiClient();
@@ -81,7 +81,7 @@ class ProgramsVersionsPlatformVersionsApi
     /**
      * Get API client
      *
-     * @return \Softonic\\CatalogApiSdk\ApiClient get the API client
+     * @return \Softonic\CatalogApiSdk\ApiClient get the API client
      */
     public function getApiClient()
     {
@@ -91,11 +91,11 @@ class ProgramsVersionsPlatformVersionsApi
     /**
      * Set the API client
      *
-     * @param \Softonic\\CatalogApiSdk\ApiClient $apiClient set the API client
+     * @param \Softonic\CatalogApiSdk\ApiClient $apiClient set the API client
      *
      * @return ProgramsVersionsPlatformVersionsApi
      */
-    public function setApiClient(\Softonic\\CatalogApiSdk\ApiClient $apiClient)
+    public function setApiClient(\Softonic\CatalogApiSdk\ApiClient $apiClient)
     {
         $this->apiClient = $apiClient;
         return $this;
@@ -108,8 +108,8 @@ class ProgramsVersionsPlatformVersionsApi
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_version Program version ID (required)
-     * @param \Softonic\\CatalogApiSdk\\Client\\Model\ProgramVersionPlatformVersion $body  (optional)
-     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
+     * @param \Softonic\CatalogApiSdk\Client\Model\ProgramVersionPlatformVersion $body  (optional)
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      * @return void
      */
     public function createProgramVersionPlatformVersion($id_program, $id_version, $body = null)
@@ -125,8 +125,8 @@ class ProgramsVersionsPlatformVersionsApi
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_version Program version ID (required)
-     * @param \Softonic\\CatalogApiSdk\\Client\\Model\ProgramVersionPlatformVersion $body  (optional)
-     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
+     * @param \Softonic\CatalogApiSdk\Client\Model\ProgramVersionPlatformVersion $body  (optional)
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function createProgramVersionPlatformVersionWithHttpInfo($id_program, $id_version, $body = null)
@@ -241,7 +241,7 @@ class ProgramsVersionsPlatformVersionsApi
      * @param string $id_program Program UUID (required)
      * @param string $id_version Program version ID (required)
      * @param string $id_platform_version Platform Version ID (required)
-     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      * @return void
      */
     public function deleteProgramVersionPlatformVersion($id_program, $id_version, $id_platform_version)
@@ -258,7 +258,7 @@ class ProgramsVersionsPlatformVersionsApi
      * @param string $id_program Program UUID (required)
      * @param string $id_version Program version ID (required)
      * @param string $id_platform_version Platform Version ID (required)
-     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteProgramVersionPlatformVersionWithHttpInfo($id_program, $id_version, $id_platform_version)
@@ -386,8 +386,8 @@ class ProgramsVersionsPlatformVersionsApi
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_version Program version ID (required)
-     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
-     * @return \Softonic\\CatalogApiSdk\\Client\\Model\ProgramVersionPlatformVersion[]
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @return \Softonic\CatalogApiSdk\Client\Model\ProgramVersionPlatformVersion[]
      */
     public function findProgramVersionPlatformVersion($id_program, $id_version)
     {
@@ -402,8 +402,8 @@ class ProgramsVersionsPlatformVersionsApi
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_version Program version ID (required)
-     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
-     * @return array of \Softonic\\CatalogApiSdk\\Client\\Model\ProgramVersionPlatformVersion[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @return array of \Softonic\CatalogApiSdk\Client\Model\ProgramVersionPlatformVersion[], HTTP status code, HTTP response headers (array of strings)
      */
     public function findProgramVersionPlatformVersionWithHttpInfo($id_program, $id_version)
     {
@@ -491,15 +491,15 @@ class ProgramsVersionsPlatformVersionsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\\CatalogApiSdk\\Client\\Model\ProgramVersionPlatformVersion[]',
+                '\Softonic\CatalogApiSdk\Client\Model\ProgramVersionPlatformVersion[]',
                 '/programs/{id_program}/versions/{id_version}/platform-versions'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Softonic\\CatalogApiSdk\\Client\\Model\ProgramVersionPlatformVersion[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Client\Model\ProgramVersionPlatformVersion[]', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Softonic\\CatalogApiSdk\\Client\\Model\ProgramVersionPlatformVersion[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Softonic\CatalogApiSdk\Client\Model\ProgramVersionPlatformVersion[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -516,8 +516,8 @@ class ProgramsVersionsPlatformVersionsApi
      * @param string $id_program Program UUID (required)
      * @param string $id_version Program version ID (required)
      * @param string $id_platform_version Platform Version ID (required)
-     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
-     * @return \Softonic\\CatalogApiSdk\\Client\\Model\ProgramVersionPlatformVersion
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @return \Softonic\CatalogApiSdk\Client\Model\ProgramVersionPlatformVersion
      */
     public function readProgramVersionPlatformVersion($id_program, $id_version, $id_platform_version)
     {
@@ -533,8 +533,8 @@ class ProgramsVersionsPlatformVersionsApi
      * @param string $id_program Program UUID (required)
      * @param string $id_version Program version ID (required)
      * @param string $id_platform_version Platform Version ID (required)
-     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
-     * @return array of \Softonic\\CatalogApiSdk\\Client\\Model\ProgramVersionPlatformVersion, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @return array of \Softonic\CatalogApiSdk\Client\Model\ProgramVersionPlatformVersion, HTTP status code, HTTP response headers (array of strings)
      */
     public function readProgramVersionPlatformVersionWithHttpInfo($id_program, $id_version, $id_platform_version)
     {
@@ -641,15 +641,15 @@ class ProgramsVersionsPlatformVersionsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\\CatalogApiSdk\\Client\\Model\ProgramVersionPlatformVersion',
+                '\Softonic\CatalogApiSdk\Client\Model\ProgramVersionPlatformVersion',
                 '/programs/{id_program}/versions/{id_version}/platform-versions/{id_platform_version}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Softonic\\CatalogApiSdk\\Client\\Model\ProgramVersionPlatformVersion', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Client\Model\ProgramVersionPlatformVersion', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Softonic\\CatalogApiSdk\\Client\\Model\ProgramVersionPlatformVersion', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Softonic\CatalogApiSdk\Client\Model\ProgramVersionPlatformVersion', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -666,7 +666,7 @@ class ProgramsVersionsPlatformVersionsApi
      * @param string $id_program Program UUID (required)
      * @param string $id_version Program version ID (required)
      * @param string $id_platform_version Platform Version ID (required)
-     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      * @return void
      */
     public function replaceProgramVersionPlatformVersion($id_program, $id_version, $id_platform_version)
@@ -683,7 +683,7 @@ class ProgramsVersionsPlatformVersionsApi
      * @param string $id_program Program UUID (required)
      * @param string $id_version Program version ID (required)
      * @param string $id_platform_version Platform Version ID (required)
-     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function replaceProgramVersionPlatformVersionWithHttpInfo($id_program, $id_version, $id_platform_version)

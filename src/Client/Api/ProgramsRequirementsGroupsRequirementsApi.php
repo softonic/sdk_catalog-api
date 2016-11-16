@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Softonic\\CatalogApiSdk
+ * @package  Softonic\CatalogApiSdk
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -38,18 +38,18 @@
  * Do not edit the class manually.
  */
 
-namespace Softonic\\CatalogApiSdk\\Client\\Api;
+namespace Softonic\CatalogApiSdk\Client\Api;
 
-use \Softonic\\CatalogApiSdk\ApiClient;
-use \Softonic\\CatalogApiSdk\ApiException;
-use \Softonic\\CatalogApiSdk\Configuration;
-use \Softonic\\CatalogApiSdk\ObjectSerializer;
+use \Softonic\CatalogApiSdk\ApiClient;
+use \Softonic\CatalogApiSdk\ApiException;
+use \Softonic\CatalogApiSdk\Configuration;
+use \Softonic\CatalogApiSdk\ObjectSerializer;
 
 /**
  * ProgramsRequirementsGroupsRequirementsApi Class Doc Comment
  *
  * @category Class
- * @package  Softonic\\CatalogApiSdk
+ * @package  Softonic\CatalogApiSdk
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -59,16 +59,16 @@ class ProgramsRequirementsGroupsRequirementsApi
     /**
      * API Client
      *
-     * @var \Softonic\\CatalogApiSdk\ApiClient instance of the ApiClient
+     * @var \Softonic\CatalogApiSdk\ApiClient instance of the ApiClient
      */
     protected $apiClient;
 
     /**
      * Constructor
      *
-     * @param \Softonic\\CatalogApiSdk\ApiClient|null $apiClient The api client to use
+     * @param \Softonic\CatalogApiSdk\ApiClient|null $apiClient The api client to use
      */
-    public function __construct(\Softonic\\CatalogApiSdk\ApiClient $apiClient = null)
+    public function __construct(\Softonic\CatalogApiSdk\ApiClient $apiClient = null)
     {
         if ($apiClient === null) {
             $apiClient = new ApiClient();
@@ -81,7 +81,7 @@ class ProgramsRequirementsGroupsRequirementsApi
     /**
      * Get API client
      *
-     * @return \Softonic\\CatalogApiSdk\ApiClient get the API client
+     * @return \Softonic\CatalogApiSdk\ApiClient get the API client
      */
     public function getApiClient()
     {
@@ -91,11 +91,11 @@ class ProgramsRequirementsGroupsRequirementsApi
     /**
      * Set the API client
      *
-     * @param \Softonic\\CatalogApiSdk\ApiClient $apiClient set the API client
+     * @param \Softonic\CatalogApiSdk\ApiClient $apiClient set the API client
      *
      * @return ProgramsRequirementsGroupsRequirementsApi
      */
-    public function setApiClient(\Softonic\\CatalogApiSdk\ApiClient $apiClient)
+    public function setApiClient(\Softonic\CatalogApiSdk\ApiClient $apiClient)
     {
         $this->apiClient = $apiClient;
         return $this;
@@ -108,8 +108,8 @@ class ProgramsRequirementsGroupsRequirementsApi
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_requirements_group Requirements group UUID (required)
-     * @param \Softonic\\CatalogApiSdk\\Client\\Model\ProgramRequirementGroupRequirement $body  (optional)
-     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
+     * @param \Softonic\CatalogApiSdk\Client\Model\ProgramRequirementGroupRequirement $body  (optional)
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      * @return void
      */
     public function createProgramRequirementGroupRequirement($id_program, $id_requirements_group, $body = null)
@@ -125,8 +125,8 @@ class ProgramsRequirementsGroupsRequirementsApi
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_requirements_group Requirements group UUID (required)
-     * @param \Softonic\\CatalogApiSdk\\Client\\Model\ProgramRequirementGroupRequirement $body  (optional)
-     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
+     * @param \Softonic\CatalogApiSdk\Client\Model\ProgramRequirementGroupRequirement $body  (optional)
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function createProgramRequirementGroupRequirementWithHttpInfo($id_program, $id_requirements_group, $body = null)
@@ -241,7 +241,7 @@ class ProgramsRequirementsGroupsRequirementsApi
      * @param string $id_program Program UUID (required)
      * @param string $id_requirements_group Requirements group UUID (required)
      * @param string $id_requirement Requirement ID (required)
-     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      * @return void
      */
     public function deleteProgramRequirementGroupRequirement($id_program, $id_requirements_group, $id_requirement)
@@ -258,7 +258,7 @@ class ProgramsRequirementsGroupsRequirementsApi
      * @param string $id_program Program UUID (required)
      * @param string $id_requirements_group Requirements group UUID (required)
      * @param string $id_requirement Requirement ID (required)
-     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteProgramRequirementGroupRequirementWithHttpInfo($id_program, $id_requirements_group, $id_requirement)
@@ -386,8 +386,8 @@ class ProgramsRequirementsGroupsRequirementsApi
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_requirements_group Requirements group UUID (required)
-     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
-     * @return \Softonic\\CatalogApiSdk\\Client\\Model\ProgramRequirementGroupRequirement[]
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @return \Softonic\CatalogApiSdk\Client\Model\ProgramRequirementGroupRequirement[]
      */
     public function findProgramRequirementGroupRequirement($id_program, $id_requirements_group)
     {
@@ -402,8 +402,8 @@ class ProgramsRequirementsGroupsRequirementsApi
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_requirements_group Requirements group UUID (required)
-     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
-     * @return array of \Softonic\\CatalogApiSdk\\Client\\Model\ProgramRequirementGroupRequirement[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @return array of \Softonic\CatalogApiSdk\Client\Model\ProgramRequirementGroupRequirement[], HTTP status code, HTTP response headers (array of strings)
      */
     public function findProgramRequirementGroupRequirementWithHttpInfo($id_program, $id_requirements_group)
     {
@@ -491,15 +491,15 @@ class ProgramsRequirementsGroupsRequirementsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\\CatalogApiSdk\\Client\\Model\ProgramRequirementGroupRequirement[]',
+                '\Softonic\CatalogApiSdk\Client\Model\ProgramRequirementGroupRequirement[]',
                 '/programs/{id_program}/requirements-groups/{id_requirements_group}/requirements'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Softonic\\CatalogApiSdk\\Client\\Model\ProgramRequirementGroupRequirement[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Client\Model\ProgramRequirementGroupRequirement[]', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Softonic\\CatalogApiSdk\\Client\\Model\ProgramRequirementGroupRequirement[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Softonic\CatalogApiSdk\Client\Model\ProgramRequirementGroupRequirement[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -516,8 +516,8 @@ class ProgramsRequirementsGroupsRequirementsApi
      * @param string $id_program Program UUID (required)
      * @param string $id_requirements_group Requirements group UUID (required)
      * @param string $id_requirement Requirement ID (required)
-     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
-     * @return \Softonic\\CatalogApiSdk\\Client\\Model\ProgramRequirementGroupRequirement
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @return \Softonic\CatalogApiSdk\Client\Model\ProgramRequirementGroupRequirement
      */
     public function readProgramRequirementGroupRequirement($id_program, $id_requirements_group, $id_requirement)
     {
@@ -533,8 +533,8 @@ class ProgramsRequirementsGroupsRequirementsApi
      * @param string $id_program Program UUID (required)
      * @param string $id_requirements_group Requirements group UUID (required)
      * @param string $id_requirement Requirement ID (required)
-     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
-     * @return array of \Softonic\\CatalogApiSdk\\Client\\Model\ProgramRequirementGroupRequirement, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @return array of \Softonic\CatalogApiSdk\Client\Model\ProgramRequirementGroupRequirement, HTTP status code, HTTP response headers (array of strings)
      */
     public function readProgramRequirementGroupRequirementWithHttpInfo($id_program, $id_requirements_group, $id_requirement)
     {
@@ -641,15 +641,15 @@ class ProgramsRequirementsGroupsRequirementsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\\CatalogApiSdk\\Client\\Model\ProgramRequirementGroupRequirement',
+                '\Softonic\CatalogApiSdk\Client\Model\ProgramRequirementGroupRequirement',
                 '/programs/{id_program}/requirements-groups/{id_requirements_group}/requirements/{id_requirement}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Softonic\\CatalogApiSdk\\Client\\Model\ProgramRequirementGroupRequirement', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Client\Model\ProgramRequirementGroupRequirement', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Softonic\\CatalogApiSdk\\Client\\Model\ProgramRequirementGroupRequirement', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Softonic\CatalogApiSdk\Client\Model\ProgramRequirementGroupRequirement', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -666,8 +666,8 @@ class ProgramsRequirementsGroupsRequirementsApi
      * @param string $id_program Program UUID (required)
      * @param string $id_requirements_group Requirements group UUID (required)
      * @param string $id_requirement Requirement ID (required)
-     * @param \Softonic\\CatalogApiSdk\\Client\\Model\ProgramRequirementGroupRequirement $body  (optional)
-     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
+     * @param \Softonic\CatalogApiSdk\Client\Model\ProgramRequirementGroupRequirement $body  (optional)
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      * @return void
      */
     public function replaceProgramRequirementGroupRequirement($id_program, $id_requirements_group, $id_requirement, $body = null)
@@ -684,8 +684,8 @@ class ProgramsRequirementsGroupsRequirementsApi
      * @param string $id_program Program UUID (required)
      * @param string $id_requirements_group Requirements group UUID (required)
      * @param string $id_requirement Requirement ID (required)
-     * @param \Softonic\\CatalogApiSdk\\Client\\Model\ProgramRequirementGroupRequirement $body  (optional)
-     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
+     * @param \Softonic\CatalogApiSdk\Client\Model\ProgramRequirementGroupRequirement $body  (optional)
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function replaceProgramRequirementGroupRequirementWithHttpInfo($id_program, $id_requirements_group, $id_requirement, $body = null)
@@ -819,8 +819,8 @@ class ProgramsRequirementsGroupsRequirementsApi
      * @param string $id_program Program UUID (required)
      * @param string $id_requirements_group Requirements group UUID (required)
      * @param string $id_requirement Requirement ID (required)
-     * @param \Softonic\\CatalogApiSdk\\Client\\Model\ProgramRequirementGroupRequirement $body  (optional)
-     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
+     * @param \Softonic\CatalogApiSdk\Client\Model\ProgramRequirementGroupRequirement $body  (optional)
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      * @return void
      */
     public function updateProgramRequirementGroupRequirement($id_program, $id_requirements_group, $id_requirement, $body = null)
@@ -837,8 +837,8 @@ class ProgramsRequirementsGroupsRequirementsApi
      * @param string $id_program Program UUID (required)
      * @param string $id_requirements_group Requirements group UUID (required)
      * @param string $id_requirement Requirement ID (required)
-     * @param \Softonic\\CatalogApiSdk\\Client\\Model\ProgramRequirementGroupRequirement $body  (optional)
-     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
+     * @param \Softonic\CatalogApiSdk\Client\Model\ProgramRequirementGroupRequirement $body  (optional)
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateProgramRequirementGroupRequirementWithHttpInfo($id_program, $id_requirements_group, $id_requirement, $body = null)

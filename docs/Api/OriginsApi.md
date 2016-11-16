@@ -1,4 +1,4 @@
-# Softonic\\CatalogApiSdk\OriginsApi
+# Softonic\CatalogApiSdk\OriginsApi
 
 All URIs are relative to *https://catalog.sftapi.com*
 
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **findOrigin**
-> \Softonic\\CatalogApiSdk\\Client\\Model\Origin[] findOrigin()
+> \Softonic\CatalogApiSdk\Client\Model\Origin[] findOrigin()
 
 List of Origins
 
@@ -22,15 +22,15 @@ List of Origins
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\\CatalogApiSdk\Api\OriginsApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\OriginsApi();
 
 try {
     $result = $api_instance->findOrigin();
@@ -46,7 +46,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Softonic\\CatalogApiSdk\\Client\\Model\Origin[]**](../Model/Origin.md)
+[**\Softonic\CatalogApiSdk\Client\Model\Origin[]**](../Model/Origin.md)
 
 ### Authorization
 
@@ -60,7 +60,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readOrigin**
-> \Softonic\\CatalogApiSdk\\Client\\Model\Origin readOrigin($id_origin)
+> \Softonic\CatalogApiSdk\Client\Model\Origin readOrigin($id_origin)
 
 Fetches a single Origin
 
@@ -72,15 +72,15 @@ Fetches a single Origin
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\\CatalogApiSdk\Api\OriginsApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\OriginsApi();
 $id_origin = "id_origin_example"; // string | Origin ID
 
 try {
@@ -100,7 +100,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\\CatalogApiSdk\\Client\\Model\Origin**](../Model/Origin.md)
+[**\Softonic\CatalogApiSdk\Client\Model\Origin**](../Model/Origin.md)
 
 ### Authorization
 
@@ -126,17 +126,17 @@ Partially updates a Origin
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\\CatalogApiSdk\Api\OriginsApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\OriginsApi();
 $id_origin = "id_origin_example"; // string | Origin ID
-$body = new \Softonic\\CatalogApiSdk\\Client\\Model\Origin(); // \Softonic\\CatalogApiSdk\\Client\\Model\Origin | 
+$body = new \Softonic\CatalogApiSdk\Client\Model\Origin(); // \Softonic\CatalogApiSdk\Client\Model\Origin | 
 
 try {
     $api_instance->updateOrigin($id_origin, $body);
@@ -151,7 +151,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_origin** | **string**| Origin ID |
- **body** | [**\Softonic\\CatalogApiSdk\\Client\\Model\Origin**](../Model/\Softonic\\CatalogApiSdk\\Client\\Model\Origin.md)|  | [optional]
+ **body** | [**\Softonic\CatalogApiSdk\Client\Model\Origin**](../Model/\Softonic\CatalogApiSdk\Client\Model\Origin.md)|  | [optional]
 
 ### Return type
 

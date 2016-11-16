@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Softonic\\CatalogApiSdk
+ * @package  Softonic\CatalogApiSdk
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -38,7 +38,7 @@
  * Do not edit the class manually.
  */
 
-namespace Softonic\\CatalogApiSdk;
+namespace Softonic\CatalogApiSdk;
 
 use \Exception;
 
@@ -46,7 +46,7 @@ use \Exception;
  * ApiException Class Doc Comment
  *
  * @category Class
- * @package  Softonic\\CatalogApiSdk
+ * @package  Softonic\CatalogApiSdk
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  * @link     https://github.com/swagger-api/swagger-codegen

@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Softonic\\CatalogApiSdk
+ * @package  Softonic\CatalogApiSdk
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -38,14 +38,14 @@
  * Do not edit the class manually.
  */
 
-namespace Softonic\\CatalogApiSdk;
+namespace Softonic\CatalogApiSdk;
 
 /**
  * Configuration Class Doc Comment
  * PHP version 5
  *
  * @category Class
- * @package  Softonic\\CatalogApiSdk
+ * @package  Softonic\CatalogApiSdk
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -115,7 +115,7 @@ class Configuration
      *
      * @var string
      */
-    protected $userAgent = "Swagger-Codegen/v2.0.219/php";
+    protected $userAgent = "Swagger-Codegen/v2.0.220/php";
 
     /**
      * Debug switch (default set to false)
@@ -518,11 +518,11 @@ class Configuration
      */
     public static function toDebugReport()
     {
-        $report  = 'PHP SDK (Softonic\\CatalogApiSdk) Debug Report:' . PHP_EOL;
+        $report  = 'PHP SDK (Softonic\CatalogApiSdk) Debug Report:' . PHP_EOL;
         $report .= '    OS: ' . php_uname() . PHP_EOL;
         $report .= '    PHP Version: ' . phpversion() . PHP_EOL;
         $report .= '    OpenAPI Spec Version: 2.0.219-1380' . PHP_EOL;
-        $report .= '    SDK Package Version: v2.0.219' . PHP_EOL;
+        $report .= '    SDK Package Version: v2.0.220' . PHP_EOL;
         $report .= '    Temp Folder Path: ' . self::getDefaultConfiguration()->getTempFolderPath() . PHP_EOL;
 
         return $report;

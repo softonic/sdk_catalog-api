@@ -1,4 +1,4 @@
-# Softonic\\CatalogApiSdk\RequirementsApi
+# Softonic\CatalogApiSdk\RequirementsApi
 
 All URIs are relative to *https://catalog.sftapi.com*
 
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **findRequirement**
-> \Softonic\\CatalogApiSdk\\Client\\Model\Requirement[] findRequirement()
+> \Softonic\CatalogApiSdk\Client\Model\Requirement[] findRequirement()
 
 List of Requirements
 
@@ -21,15 +21,15 @@ List of Requirements
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\\CatalogApiSdk\Api\RequirementsApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\RequirementsApi();
 
 try {
     $result = $api_instance->findRequirement();
@@ -45,7 +45,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Softonic\\CatalogApiSdk\\Client\\Model\Requirement[]**](../Model/Requirement.md)
+[**\Softonic\CatalogApiSdk\Client\Model\Requirement[]**](../Model/Requirement.md)
 
 ### Authorization
 
@@ -59,7 +59,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readRequirement**
-> \Softonic\\CatalogApiSdk\\Client\\Model\Requirement readRequirement($id_requirement)
+> \Softonic\CatalogApiSdk\Client\Model\Requirement readRequirement($id_requirement)
 
 Fetches a single Requirement
 
@@ -71,15 +71,15 @@ Fetches a single Requirement
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\\CatalogApiSdk\Api\RequirementsApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\RequirementsApi();
 $id_requirement = "id_requirement_example"; // string | Requirement ID
 
 try {
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\\CatalogApiSdk\\Client\\Model\Requirement**](../Model/Requirement.md)
+[**\Softonic\CatalogApiSdk\Client\Model\Requirement**](../Model/Requirement.md)
 
 ### Authorization
 

@@ -1,4 +1,4 @@
-# Softonic\\CatalogApiSdk\PlatformsCharacteristicsApi
+# Softonic\CatalogApiSdk\PlatformsCharacteristicsApi
 
 All URIs are relative to *https://catalog.sftapi.com*
 
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **findPlatformCharacteristic**
-> \Softonic\\CatalogApiSdk\\Client\\Model\PlatformCharacteristic[] findPlatformCharacteristic($id_platform)
+> \Softonic\CatalogApiSdk\Client\Model\PlatformCharacteristic[] findPlatformCharacteristic($id_platform)
 
 List of PlatformCharacteristics
 
@@ -21,15 +21,15 @@ List of PlatformCharacteristics
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\\CatalogApiSdk\Api\PlatformsCharacteristicsApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\PlatformsCharacteristicsApi();
 $id_platform = "id_platform_example"; // string | Platform ID
 
 try {
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\\CatalogApiSdk\\Client\\Model\PlatformCharacteristic[]**](../Model/PlatformCharacteristic.md)
+[**\Softonic\CatalogApiSdk\Client\Model\PlatformCharacteristic[]**](../Model/PlatformCharacteristic.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readPlatformCharacteristic**
-> \Softonic\\CatalogApiSdk\\Client\\Model\PlatformCharacteristic readPlatformCharacteristic($id_platform, $id_characteristic)
+> \Softonic\CatalogApiSdk\Client\Model\PlatformCharacteristic readPlatformCharacteristic($id_platform, $id_characteristic)
 
 Fetches a single PlatformCharacteristic
 
@@ -75,15 +75,15 @@ Fetches a single PlatformCharacteristic
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\\CatalogApiSdk\Api\PlatformsCharacteristicsApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\PlatformsCharacteristicsApi();
 $id_platform = "id_platform_example"; // string | Platform ID
 $id_characteristic = "id_characteristic_example"; // string | Platform characteristic ID
 
@@ -105,7 +105,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\\CatalogApiSdk\\Client\\Model\PlatformCharacteristic**](../Model/PlatformCharacteristic.md)
+[**\Softonic\CatalogApiSdk\Client\Model\PlatformCharacteristic**](../Model/PlatformCharacteristic.md)
 
 ### Authorization
 
