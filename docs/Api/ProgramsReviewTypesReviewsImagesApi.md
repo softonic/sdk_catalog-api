@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **createProgramReviewTypeReviewImage**
-> createProgramReviewTypeReviewImage($id_program, $id_review_type, $id_review, $id_image, $body)
+> createProgramReviewTypeReviewImage($id_program, $id_review_type, $id_review, $body)
 
 Creates a new ProgramReviewTypeReviewImage
 
@@ -37,11 +37,10 @@ $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsReviewTypesReviewsImagesA
 $id_program = "id_program_example"; // string | Program UUID
 $id_review_type = "id_review_type_example"; // string | Review owner type
 $id_review = "id_review_example"; // string | Review identifier as UUID
-$id_image = "id_image_example"; // string | Image identifier in SHA1-Hash format derived from path
 $body = new \Softonic\CatalogApiSdk\Client\Model\ProgramReviewTypeReviewImage(); // \Softonic\CatalogApiSdk\Client\Model\ProgramReviewTypeReviewImage | 
 
 try {
-    $api_instance->createProgramReviewTypeReviewImage($id_program, $id_review_type, $id_review, $id_image, $body);
+    $api_instance->createProgramReviewTypeReviewImage($id_program, $id_review_type, $id_review, $body);
 } catch (Exception $e) {
     echo 'Exception when calling ProgramsReviewTypesReviewsImagesApi->createProgramReviewTypeReviewImage: ', $e->getMessage(), PHP_EOL;
 }
@@ -55,7 +54,6 @@ Name | Type | Description  | Notes
  **id_program** | **string**| Program UUID |
  **id_review_type** | **string**| Review owner type |
  **id_review** | **string**| Review identifier as UUID |
- **id_image** | **string**| Image identifier in SHA1-Hash format derived from path |
  **body** | [**\Softonic\CatalogApiSdk\Client\Model\ProgramReviewTypeReviewImage**](../Model/\Softonic\CatalogApiSdk\Client\Model\ProgramReviewTypeReviewImage.md)|  | [optional]
 
 ### Return type
