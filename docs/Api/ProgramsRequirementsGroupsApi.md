@@ -34,7 +34,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsRequirementsGroupsApi();
 $id_program = "id_program_example"; // string | Program UUID
-$body = new \Softonic\CatalogApiSdk\Client\Model\ProgramRequirementGroup(); // \Softonic\CatalogApiSdk\Client\Model\ProgramRequirementGroup | 
+$body = new \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\ProgramRequirementGroup(); // \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\ProgramRequirementGroup | 
 
 try {
     $api_instance->createProgramRequirementGroup($id_program, $body);
@@ -49,7 +49,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_program** | **string**| Program UUID |
- **body** | [**\Softonic\CatalogApiSdk\Client\Model\ProgramRequirementGroup**](../Model/\Softonic\CatalogApiSdk\Client\Model\ProgramRequirementGroup.md)|  | [optional]
+ **body** | [**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\ProgramRequirementGroup**](../Model/\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\ProgramRequirementGroup.md)|  | [optional]
 
 ### Return type
 
@@ -122,7 +122,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **findProgramRequirementGroup**
-> \Softonic\CatalogApiSdk\Client\Model\ProgramRequirementGroup[] findProgramRequirementGroup($id_program)
+> \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\ProgramRequirementGroup[] findProgramRequirementGroup($id_program)
 
 List of ProgramRequirementGroups
 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Client\Model\ProgramRequirementGroup[]**](../Model/ProgramRequirementGroup.md)
+[**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\ProgramRequirementGroup[]**](../Model/ProgramRequirementGroup.md)
 
 ### Authorization
 
@@ -176,7 +176,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readProgramRequirementGroup**
-> \Softonic\CatalogApiSdk\Client\Model\ProgramRequirementGroup readProgramRequirementGroup($id_program, $id_requirements_group)
+> \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\ProgramRequirementGroup readProgramRequirementGroup($id_program, $id_requirements_group)
 
 Fetches a single ProgramRequirementGroup
 
@@ -218,7 +218,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Client\Model\ProgramRequirementGroup**](../Model/ProgramRequirementGroup.md)
+[**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\ProgramRequirementGroup**](../Model/ProgramRequirementGroup.md)
 
 ### Authorization
 

@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **findProgramReviewType**
-> \Softonic\CatalogApiSdk\Client\Model\ProgramReviewType[] findProgramReviewType($id_program)
+> \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\ProgramReviewType[] findProgramReviewType($id_program)
 
 List of ProgramReviewTypes
 
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Client\Model\ProgramReviewType[]**](../Model/ProgramReviewType.md)
+[**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\ProgramReviewType[]**](../Model/ProgramReviewType.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readProgramReviewType**
-> \Softonic\CatalogApiSdk\Client\Model\ProgramReviewType readProgramReviewType($id_program, $id_review_type)
+> \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\ProgramReviewType readProgramReviewType($id_program, $id_review_type)
 
 Fetches a single ProgramReviewType
 
@@ -105,7 +105,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Client\Model\ProgramReviewType**](../Model/ProgramReviewType.md)
+[**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\ProgramReviewType**](../Model/ProgramReviewType.md)
 
 ### Authorization
 

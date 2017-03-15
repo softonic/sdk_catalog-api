@@ -34,7 +34,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsApi();
-$body = new \Softonic\CatalogApiSdk\Client\Model\Program(); // \Softonic\CatalogApiSdk\Client\Model\Program | 
+$body = new \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\Program(); // \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\Program | 
 
 try {
     $api_instance->createProgram($body);
@@ -48,7 +48,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Softonic\CatalogApiSdk\Client\Model\Program**](../Model/\Softonic\CatalogApiSdk\Client\Model\Program.md)|  | [optional]
+ **body** | [**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\Program**](../Model/\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\Program.md)|  | [optional]
 
 ### Return type
 
@@ -119,7 +119,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **findProgram**
-> \Softonic\CatalogApiSdk\Client\Model\Program[] findProgram($page, $limit, $search)
+> \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\Program[] findProgram($page, $limit, $search)
 
 List of Programs
 
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Client\Model\Program[]**](../Model/Program.md)
+[**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\Program[]**](../Model/Program.md)
 
 ### Authorization
 
@@ -177,7 +177,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readProgram**
-> \Softonic\CatalogApiSdk\Client\Model\Program readProgram($id_program)
+> \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\Program readProgram($id_program)
 
 Fetches a single Program
 
@@ -217,7 +217,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Client\Model\Program**](../Model/Program.md)
+[**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\Program**](../Model/Program.md)
 
 ### Authorization
 
@@ -253,7 +253,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsApi();
 $id_program = "id_program_example"; // string | Program UUID or numeric ID
-$body = new \Softonic\CatalogApiSdk\Client\Model\Program(); // \Softonic\CatalogApiSdk\Client\Model\Program | 
+$body = new \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\Program(); // \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\Program | 
 
 try {
     $api_instance->replaceProgram($id_program, $body);
@@ -268,7 +268,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_program** | **string**| Program UUID or numeric ID |
- **body** | [**\Softonic\CatalogApiSdk\Client\Model\Program**](../Model/\Softonic\CatalogApiSdk\Client\Model\Program.md)|  | [optional]
+ **body** | [**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\Program**](../Model/\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\Program.md)|  | [optional]
 
 ### Return type
 
@@ -308,7 +308,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsApi();
 $id_program = "id_program_example"; // string | Program UUID or numeric ID
-$body = new \Softonic\CatalogApiSdk\Client\Model\Program(); // \Softonic\CatalogApiSdk\Client\Model\Program | 
+$body = new \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\Program(); // \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\Program | 
 
 try {
     $api_instance->updateProgram($id_program, $body);
@@ -323,7 +323,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_program** | **string**| Program UUID or numeric ID |
- **body** | [**\Softonic\CatalogApiSdk\Client\Model\Program**](../Model/\Softonic\CatalogApiSdk\Client\Model\Program.md)|  | [optional]
+ **body** | [**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\Program**](../Model/\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\Program.md)|  | [optional]
 
 ### Return type
 

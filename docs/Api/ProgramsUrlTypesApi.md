@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **findProgramUrlType**
-> \Softonic\CatalogApiSdk\Client\Model\ProgramUrlType[] findProgramUrlType($id_program)
+> \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\ProgramUrlType[] findProgramUrlType($id_program)
 
 List of ProgramUrlTypes
 
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Client\Model\ProgramUrlType[]**](../Model/ProgramUrlType.md)
+[**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\ProgramUrlType[]**](../Model/ProgramUrlType.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readProgramUrlType**
-> \Softonic\CatalogApiSdk\Client\Model\ProgramUrlType readProgramUrlType($id_program, $id_url_type)
+> \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\ProgramUrlType readProgramUrlType($id_program, $id_url_type)
 
 Fetches a single ProgramUrlType
 
@@ -105,7 +105,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Client\Model\ProgramUrlType**](../Model/ProgramUrlType.md)
+[**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\ProgramUrlType**](../Model/ProgramUrlType.md)
 
 ### Authorization
 
