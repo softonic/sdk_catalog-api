@@ -1,6 +1,6 @@
 <?php
 /**
- * ProgramVersionPlatformVersion
+ * ProgramPlatformLocaleAlias
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Softonic\CatalogApiSdk\Client\Model;
 use \ArrayAccess;
 
 /**
- * ProgramVersionPlatformVersion Class Doc Comment
+ * ProgramPlatformLocaleAlias Class Doc Comment
  *
  * @category    Class
  * @package     Softonic\CatalogApiSdk
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ProgramVersionPlatformVersion implements ArrayAccess
+class ProgramPlatformLocaleAlias implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,7 +47,7 @@ class ProgramVersionPlatformVersion implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'ProgramVersionPlatformVersion';
+    protected static $swaggerModelName = 'ProgramPlatformLocaleAlias';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -55,8 +55,9 @@ class ProgramVersionPlatformVersion implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id_program' => 'string',
-        'id_version' => 'string',
-        'id_platform_version' => 'string'
+        'id_platform' => 'string',
+        'id_locale' => 'string',
+        'id_alias' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -70,8 +71,9 @@ class ProgramVersionPlatformVersion implements ArrayAccess
      */
     protected static $attributeMap = [
         'id_program' => 'id_program',
-        'id_version' => 'id_version',
-        'id_platform_version' => 'id_platform_version'
+        'id_platform' => 'id_platform',
+        'id_locale' => 'id_locale',
+        'id_alias' => 'id_alias'
     ];
 
 
@@ -81,8 +83,9 @@ class ProgramVersionPlatformVersion implements ArrayAccess
      */
     protected static $setters = [
         'id_program' => 'setIdProgram',
-        'id_version' => 'setIdVersion',
-        'id_platform_version' => 'setIdPlatformVersion'
+        'id_platform' => 'setIdPlatform',
+        'id_locale' => 'setIdLocale',
+        'id_alias' => 'setIdAlias'
     ];
 
 
@@ -92,8 +95,9 @@ class ProgramVersionPlatformVersion implements ArrayAccess
      */
     protected static $getters = [
         'id_program' => 'getIdProgram',
-        'id_version' => 'getIdVersion',
-        'id_platform_version' => 'getIdPlatformVersion'
+        'id_platform' => 'getIdPlatform',
+        'id_locale' => 'getIdLocale',
+        'id_alias' => 'getIdAlias'
     ];
 
     public static function attributeMap()
@@ -128,8 +132,9 @@ class ProgramVersionPlatformVersion implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id_program'] = isset($data['id_program']) ? $data['id_program'] : null;
-        $this->container['id_version'] = isset($data['id_version']) ? $data['id_version'] : null;
-        $this->container['id_platform_version'] = isset($data['id_platform_version']) ? $data['id_platform_version'] : null;
+        $this->container['id_platform'] = isset($data['id_platform']) ? $data['id_platform'] : null;
+        $this->container['id_locale'] = isset($data['id_locale']) ? $data['id_locale'] : null;
+        $this->container['id_alias'] = isset($data['id_alias']) ? $data['id_alias'] : null;
     }
 
     /**
@@ -152,26 +157,37 @@ class ProgramVersionPlatformVersion implements ArrayAccess
             $invalid_properties[] = "invalid value for 'id_program', the character length must be bigger than or equal to 36.";
         }
 
-        if ($this->container['id_version'] === null) {
-            $invalid_properties[] = "'id_version' can't be null";
+        if ($this->container['id_platform'] === null) {
+            $invalid_properties[] = "'id_platform' can't be null";
         }
-        if ((strlen($this->container['id_version']) > 60)) {
-            $invalid_properties[] = "invalid value for 'id_version', the character length must be smaller than or equal to 60.";
-        }
-
-        if ((strlen($this->container['id_version']) < 1)) {
-            $invalid_properties[] = "invalid value for 'id_version', the character length must be bigger than or equal to 1.";
+        if ((strlen($this->container['id_platform']) > 20)) {
+            $invalid_properties[] = "invalid value for 'id_platform', the character length must be smaller than or equal to 20.";
         }
 
-        if ($this->container['id_platform_version'] === null) {
-            $invalid_properties[] = "'id_platform_version' can't be null";
-        }
-        if ((strlen($this->container['id_platform_version']) > 40)) {
-            $invalid_properties[] = "invalid value for 'id_platform_version', the character length must be smaller than or equal to 40.";
+        if ((strlen($this->container['id_platform']) < 1)) {
+            $invalid_properties[] = "invalid value for 'id_platform', the character length must be bigger than or equal to 1.";
         }
 
-        if ((strlen($this->container['id_platform_version']) < 1)) {
-            $invalid_properties[] = "invalid value for 'id_platform_version', the character length must be bigger than or equal to 1.";
+        if ($this->container['id_locale'] === null) {
+            $invalid_properties[] = "'id_locale' can't be null";
+        }
+        if ((strlen($this->container['id_locale']) > 2)) {
+            $invalid_properties[] = "invalid value for 'id_locale', the character length must be smaller than or equal to 2.";
+        }
+
+        if ((strlen($this->container['id_locale']) < 2)) {
+            $invalid_properties[] = "invalid value for 'id_locale', the character length must be bigger than or equal to 2.";
+        }
+
+        if ($this->container['id_alias'] === null) {
+            $invalid_properties[] = "'id_alias' can't be null";
+        }
+        if ((strlen($this->container['id_alias']) > 60)) {
+            $invalid_properties[] = "invalid value for 'id_alias', the character length must be smaller than or equal to 60.";
+        }
+
+        if ((strlen($this->container['id_alias']) < 1)) {
+            $invalid_properties[] = "invalid value for 'id_alias', the character length must be bigger than or equal to 1.";
         }
 
         return $invalid_properties;
@@ -195,22 +211,31 @@ class ProgramVersionPlatformVersion implements ArrayAccess
         if (strlen($this->container['id_program']) < 36) {
             return false;
         }
-        if ($this->container['id_version'] === null) {
+        if ($this->container['id_platform'] === null) {
             return false;
         }
-        if (strlen($this->container['id_version']) > 60) {
+        if (strlen($this->container['id_platform']) > 20) {
             return false;
         }
-        if (strlen($this->container['id_version']) < 1) {
+        if (strlen($this->container['id_platform']) < 1) {
             return false;
         }
-        if ($this->container['id_platform_version'] === null) {
+        if ($this->container['id_locale'] === null) {
             return false;
         }
-        if (strlen($this->container['id_platform_version']) > 40) {
+        if (strlen($this->container['id_locale']) > 2) {
             return false;
         }
-        if (strlen($this->container['id_platform_version']) < 1) {
+        if (strlen($this->container['id_locale']) < 2) {
+            return false;
+        }
+        if ($this->container['id_alias'] === null) {
+            return false;
+        }
+        if (strlen($this->container['id_alias']) > 60) {
+            return false;
+        }
+        if (strlen($this->container['id_alias']) < 1) {
             return false;
         }
         return true;
@@ -234,10 +259,10 @@ class ProgramVersionPlatformVersion implements ArrayAccess
     public function setIdProgram($id_program)
     {
         if ((strlen($id_program) > 36)) {
-            throw new \InvalidArgumentException('invalid length for $id_program when calling ProgramVersionPlatformVersion., must be smaller than or equal to 36.');
+            throw new \InvalidArgumentException('invalid length for $id_program when calling ProgramPlatformLocaleAlias., must be smaller than or equal to 36.');
         }
         if ((strlen($id_program) < 36)) {
-            throw new \InvalidArgumentException('invalid length for $id_program when calling ProgramVersionPlatformVersion., must be bigger than or equal to 36.');
+            throw new \InvalidArgumentException('invalid length for $id_program when calling ProgramPlatformLocaleAlias., must be bigger than or equal to 36.');
         }
 
         $this->container['id_program'] = $id_program;
@@ -246,57 +271,85 @@ class ProgramVersionPlatformVersion implements ArrayAccess
     }
 
     /**
-     * Gets id_version
+     * Gets id_platform
      * @return string
      */
-    public function getIdVersion()
+    public function getIdPlatform()
     {
-        return $this->container['id_version'];
+        return $this->container['id_platform'];
     }
 
     /**
-     * Sets id_version
-     * @param string $id_version Program version ID
+     * Sets id_platform
+     * @param string $id_platform Platform identifier
      * @return $this
      */
-    public function setIdVersion($id_version)
+    public function setIdPlatform($id_platform)
     {
-        if ((strlen($id_version) > 60)) {
-            throw new \InvalidArgumentException('invalid length for $id_version when calling ProgramVersionPlatformVersion., must be smaller than or equal to 60.');
+        if ((strlen($id_platform) > 20)) {
+            throw new \InvalidArgumentException('invalid length for $id_platform when calling ProgramPlatformLocaleAlias., must be smaller than or equal to 20.');
         }
-        if ((strlen($id_version) < 1)) {
-            throw new \InvalidArgumentException('invalid length for $id_version when calling ProgramVersionPlatformVersion., must be bigger than or equal to 1.');
+        if ((strlen($id_platform) < 1)) {
+            throw new \InvalidArgumentException('invalid length for $id_platform when calling ProgramPlatformLocaleAlias., must be bigger than or equal to 1.');
         }
 
-        $this->container['id_version'] = $id_version;
+        $this->container['id_platform'] = $id_platform;
 
         return $this;
     }
 
     /**
-     * Gets id_platform_version
+     * Gets id_locale
      * @return string
      */
-    public function getIdPlatformVersion()
+    public function getIdLocale()
     {
-        return $this->container['id_platform_version'];
+        return $this->container['id_locale'];
     }
 
     /**
-     * Sets id_platform_version
-     * @param string $id_platform_version Platform Version ID
+     * Sets id_locale
+     * @param string $id_locale Locale identifier
      * @return $this
      */
-    public function setIdPlatformVersion($id_platform_version)
+    public function setIdLocale($id_locale)
     {
-        if ((strlen($id_platform_version) > 40)) {
-            throw new \InvalidArgumentException('invalid length for $id_platform_version when calling ProgramVersionPlatformVersion., must be smaller than or equal to 40.');
+        if ((strlen($id_locale) > 2)) {
+            throw new \InvalidArgumentException('invalid length for $id_locale when calling ProgramPlatformLocaleAlias., must be smaller than or equal to 2.');
         }
-        if ((strlen($id_platform_version) < 1)) {
-            throw new \InvalidArgumentException('invalid length for $id_platform_version when calling ProgramVersionPlatformVersion., must be bigger than or equal to 1.');
+        if ((strlen($id_locale) < 2)) {
+            throw new \InvalidArgumentException('invalid length for $id_locale when calling ProgramPlatformLocaleAlias., must be bigger than or equal to 2.');
         }
 
-        $this->container['id_platform_version'] = $id_platform_version;
+        $this->container['id_locale'] = $id_locale;
+
+        return $this;
+    }
+
+    /**
+     * Gets id_alias
+     * @return string
+     */
+    public function getIdAlias()
+    {
+        return $this->container['id_alias'];
+    }
+
+    /**
+     * Sets id_alias
+     * @param string $id_alias Program alias
+     * @return $this
+     */
+    public function setIdAlias($id_alias)
+    {
+        if ((strlen($id_alias) > 60)) {
+            throw new \InvalidArgumentException('invalid length for $id_alias when calling ProgramPlatformLocaleAlias., must be smaller than or equal to 60.');
+        }
+        if ((strlen($id_alias) < 1)) {
+            throw new \InvalidArgumentException('invalid length for $id_alias when calling ProgramPlatformLocaleAlias., must be bigger than or equal to 1.');
+        }
+
+        $this->container['id_alias'] = $id_alias;
 
         return $this;
     }

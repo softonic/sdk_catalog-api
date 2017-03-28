@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **findPlatform**
-> \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\Platform[] findPlatform()
+> \Softonic\CatalogApiSdk\Client\Model\Platform[] findPlatform()
 
 List of Platforms
 
@@ -45,7 +45,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\Platform[]**](../Model/Platform.md)
+[**\Softonic\CatalogApiSdk\Client\Model\Platform[]**](../Model/Platform.md)
 
 ### Authorization
 
@@ -59,7 +59,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readPlatform**
-> \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\Platform readPlatform($id_platform)
+> \Softonic\CatalogApiSdk\Client\Model\Platform readPlatform($id_platform)
 
 Fetches a single Platform
 
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\Platform**](../Model/Platform.md)
+[**\Softonic\CatalogApiSdk\Client\Model\Platform**](../Model/Platform.md)
 
 ### Authorization
 

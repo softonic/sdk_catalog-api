@@ -1,6 +1,6 @@
 <?php
 /**
- * ProgramsVersionsApiTest
+ * ProgramsPlatformsLocalesAliasesApiTest
  * PHP version 5
  *
  * @category Class
@@ -34,14 +34,14 @@ use \Softonic\CatalogApiSdk\ApiException;
 use \Softonic\CatalogApiSdk\ObjectSerializer;
 
 /**
- * ProgramsVersionsApiTest Class Doc Comment
+ * ProgramsPlatformsLocalesAliasesApiTest Class Doc Comment
  *
  * @category Class
  * @package  Softonic\CatalogApiSdk
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ProgramsVersionsApiTest extends \PHPUnit_Framework_TestCase
+class ProgramsPlatformsLocalesAliasesApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -77,67 +77,34 @@ class ProgramsVersionsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for createProgramVersion
+     * Test case for deleteProgramPlatformLocaleAlias
      *
-     * Creates a new ProgramVersion.
+     * Deletes a ProgramPlatformLocaleAlias.
      *
      */
-    public function testCreateProgramVersion()
+    public function testDeleteProgramPlatformLocaleAlias()
     {
 
     }
 
     /**
-     * Test case for deleteProgramVersion
+     * Test case for findProgramPlatformLocaleAlias
      *
-     * Deletes a ProgramVersion.
+     * List of ProgramPlatformLocaleAliass.
      *
      */
-    public function testDeleteProgramVersion()
+    public function testFindProgramPlatformLocaleAlias()
     {
 
     }
 
     /**
-     * Test case for findProgramVersion
+     * Test case for replaceProgramPlatformLocaleAlias
      *
-     * List of ProgramVersions.
-     *
-     */
-    public function testFindProgramVersion()
-    {
-
-    }
-
-    /**
-     * Test case for readProgramVersion
-     *
-     * Fetches a single ProgramVersion.
+     * Entirely replaces a ProgramPlatformLocaleAlias.
      *
      */
-    public function testReadProgramVersion()
-    {
-
-    }
-
-    /**
-     * Test case for replaceProgramVersion
-     *
-     * Entirely replaces a ProgramVersion.
-     *
-     */
-    public function testReplaceProgramVersion()
-    {
-
-    }
-
-    /**
-     * Test case for updateProgramVersion
-     *
-     * Partially updates a ProgramVersion.
-     *
-     */
-    public function testUpdateProgramVersion()
+    public function testReplaceProgramPlatformLocaleAlias()
     {
 
     }

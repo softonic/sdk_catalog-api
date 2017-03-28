@@ -1,20 +1,20 @@
-# Softonic\CatalogApiSdk\CategoriesChildsApi
+# Softonic\CatalogApiSdk\ProgramsPlatformsLocalesAliasesApi
 
 All URIs are relative to *https://catalog.sftapi.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createCategoryChild**](CategoriesChildsApi.md#createCategoryChild) | **POST** /categories/{id_category}/childs | Creates a new CategoryChild
-[**findCategoryChild**](CategoriesChildsApi.md#findCategoryChild) | **GET** /categories/{id_category}/childs | List of CategoryChilds
-[**readCategoryChild**](CategoriesChildsApi.md#readCategoryChild) | **GET** /categories/{id_category}/childs/{id_child} | Fetches a single CategoryChild
+[**deleteProgramPlatformLocaleAlias**](ProgramsPlatformsLocalesAliasesApi.md#deleteProgramPlatformLocaleAlias) | **DELETE** /programs/{id_program}/platforms/{id_platform}/locales/{id_locale}/aliases/{id_alias} | Deletes a ProgramPlatformLocaleAlias
+[**findProgramPlatformLocaleAlias**](ProgramsPlatformsLocalesAliasesApi.md#findProgramPlatformLocaleAlias) | **GET** /programs/{id_program}/platforms/{id_platform}/locales/{id_locale}/aliases | List of ProgramPlatformLocaleAliass
+[**replaceProgramPlatformLocaleAlias**](ProgramsPlatformsLocalesAliasesApi.md#replaceProgramPlatformLocaleAlias) | **PUT** /programs/{id_program}/platforms/{id_platform}/locales/{id_locale}/aliases/{id_alias} | Entirely replaces a ProgramPlatformLocaleAlias
 
 
-# **createCategoryChild**
-> createCategoryChild($id_category, $body)
+# **deleteProgramPlatformLocaleAlias**
+> deleteProgramPlatformLocaleAlias($id_program, $id_platform, $id_locale, $id_alias)
 
-Creates a new CategoryChild
+Deletes a ProgramPlatformLocaleAlias
 
-Creates a new CategoryChild
+Deletes a ProgramPlatformLocaleAlias
 
 ### Example
 ```php
@@ -30,14 +30,16 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_application
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\CategoriesChildsApi();
-$id_category = "id_category_example"; // string | Parent category identifier
-$body = new \Softonic\CatalogApiSdk\Client\Model\CategoryChild(); // \Softonic\CatalogApiSdk\Client\Model\CategoryChild | 
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsPlatformsLocalesAliasesApi();
+$id_program = "id_program_example"; // string | Program UUID
+$id_platform = "id_platform_example"; // string | Platform identifier
+$id_locale = "id_locale_example"; // string | Locale identifier
+$id_alias = "id_alias_example"; // string | Program alias
 
 try {
-    $api_instance->createCategoryChild($id_category, $body);
+    $api_instance->deleteProgramPlatformLocaleAlias($id_program, $id_platform, $id_locale, $id_alias);
 } catch (Exception $e) {
-    echo 'Exception when calling CategoriesChildsApi->createCategoryChild: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProgramsPlatformsLocalesAliasesApi->deleteProgramPlatformLocaleAlias: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -46,8 +48,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_category** | **string**| Parent category identifier |
- **body** | [**\Softonic\CatalogApiSdk\Client\Model\CategoryChild**](../Model/\Softonic\CatalogApiSdk\Client\Model\CategoryChild.md)|  | [optional]
+ **id_program** | **string**| Program UUID |
+ **id_platform** | **string**| Platform identifier |
+ **id_locale** | **string**| Locale identifier |
+ **id_alias** | **string**| Program alias |
 
 ### Return type
 
@@ -64,12 +68,12 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **findCategoryChild**
-> \Softonic\CatalogApiSdk\Client\Model\CategoryChild[] findCategoryChild($id_category)
+# **findProgramPlatformLocaleAlias**
+> \Softonic\CatalogApiSdk\Client\Model\ProgramPlatformLocaleAlias[] findProgramPlatformLocaleAlias($id_program, $id_platform, $id_locale, $last_updated)
 
-List of CategoryChilds
+List of ProgramPlatformLocaleAliass
 
-List of CategoryChilds
+List of ProgramPlatformLocaleAliass
 
 ### Example
 ```php
@@ -85,14 +89,17 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_application
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\CategoriesChildsApi();
-$id_category = "id_category_example"; // string | Parent category identifier
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsPlatformsLocalesAliasesApi();
+$id_program = "id_program_example"; // string | Program UUID
+$id_platform = "id_platform_example"; // string | Platform identifier
+$id_locale = "id_locale_example"; // string | Locale identifier
+$last_updated = 56; // int | Use it to return just the active program alias
 
 try {
-    $result = $api_instance->findCategoryChild($id_category);
+    $result = $api_instance->findProgramPlatformLocaleAlias($id_program, $id_platform, $id_locale, $last_updated);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CategoriesChildsApi->findCategoryChild: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProgramsPlatformsLocalesAliasesApi->findProgramPlatformLocaleAlias: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -101,11 +108,14 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_category** | **string**| Parent category identifier |
+ **id_program** | **string**| Program UUID |
+ **id_platform** | **string**| Platform identifier |
+ **id_locale** | **string**| Locale identifier |
+ **last_updated** | **int**| Use it to return just the active program alias | [optional]
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Client\Model\CategoryChild[]**](../Model/CategoryChild.md)
+[**\Softonic\CatalogApiSdk\Client\Model\ProgramPlatformLocaleAlias[]**](../Model/ProgramPlatformLocaleAlias.md)
 
 ### Authorization
 
@@ -118,12 +128,12 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **readCategoryChild**
-> \Softonic\CatalogApiSdk\Client\Model\CategoryChild readCategoryChild($id_category, $id_child)
+# **replaceProgramPlatformLocaleAlias**
+> replaceProgramPlatformLocaleAlias($id_program, $id_platform, $id_locale, $id_alias)
 
-Fetches a single CategoryChild
+Entirely replaces a ProgramPlatformLocaleAlias
 
-Fetches a single CategoryChild
+Entirely replaces a ProgramPlatformLocaleAlias
 
 ### Example
 ```php
@@ -139,15 +149,16 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_application
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\CategoriesChildsApi();
-$id_category = "id_category_example"; // string | Parent category identifier
-$id_child = "id_child_example"; // string | Child category identifier
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsPlatformsLocalesAliasesApi();
+$id_program = "id_program_example"; // string | Program UUID
+$id_platform = "id_platform_example"; // string | Platform identifier
+$id_locale = "id_locale_example"; // string | Locale identifier
+$id_alias = "id_alias_example"; // string | Program alias
 
 try {
-    $result = $api_instance->readCategoryChild($id_category, $id_child);
-    print_r($result);
+    $api_instance->replaceProgramPlatformLocaleAlias($id_program, $id_platform, $id_locale, $id_alias);
 } catch (Exception $e) {
-    echo 'Exception when calling CategoriesChildsApi->readCategoryChild: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProgramsPlatformsLocalesAliasesApi->replaceProgramPlatformLocaleAlias: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -156,12 +167,14 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_category** | **string**| Parent category identifier |
- **id_child** | **string**| Child category identifier |
+ **id_program** | **string**| Program UUID |
+ **id_platform** | **string**| Platform identifier |
+ **id_locale** | **string**| Locale identifier |
+ **id_alias** | **string**| Program alias |
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Client\Model\CategoryChild**](../Model/CategoryChild.md)
+void (empty response body)
 
 ### Authorization
 

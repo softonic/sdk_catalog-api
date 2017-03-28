@@ -37,7 +37,7 @@ $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesReviewType
 $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Program version identifier
 $id_locale = "id_locale_example"; // string | Locale identifier
-$body = new \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType(); // \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType | 
+$body = new \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType(); // \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType | 
 
 try {
     $api_instance->createProgramVersionLocaleReviewType($id_program, $id_version, $id_locale, $body);
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
  **id_program** | **string**| Program UUID |
  **id_version** | **string**| Program version identifier |
  **id_locale** | **string**| Locale identifier |
- **body** | [**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType**](../Model/\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType.md)|  | [optional]
+ **body** | [**\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType**](../Model/\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType.md)|  | [optional]
 
 ### Return type
 
@@ -131,7 +131,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **findProgramVersionLocaleReviewType**
-> \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType[] findProgramVersionLocaleReviewType($id_program, $id_version, $id_locale)
+> \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType[] findProgramVersionLocaleReviewType($id_program, $id_version, $id_locale)
 
 List of ProgramVersionLocaleReviewTypes
 
@@ -175,7 +175,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType[]**](../Model/ProgramVersionLocaleReviewType.md)
+[**\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType[]**](../Model/ProgramVersionLocaleReviewType.md)
 
 ### Authorization
 
@@ -189,7 +189,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readProgramVersionLocaleReviewType**
-> \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType readProgramVersionLocaleReviewType($id_program, $id_version, $id_locale, $id_review_type)
+> \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType readProgramVersionLocaleReviewType($id_program, $id_version, $id_locale, $id_review_type)
 
 Fetches a single ProgramVersionLocaleReviewType
 
@@ -235,7 +235,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType**](../Model/ProgramVersionLocaleReviewType.md)
+[**\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType**](../Model/ProgramVersionLocaleReviewType.md)
 
 ### Authorization
 
@@ -274,7 +274,7 @@ $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Program version identifier
 $id_locale = "id_locale_example"; // string | Locale identifier
 $id_review_type = "id_review_type_example"; // string | Review owner type
-$body = new \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType(); // \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType | 
+$body = new \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType(); // \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType | 
 
 try {
     $api_instance->replaceProgramVersionLocaleReviewType($id_program, $id_version, $id_locale, $id_review_type, $body);
@@ -292,7 +292,7 @@ Name | Type | Description  | Notes
  **id_version** | **string**| Program version identifier |
  **id_locale** | **string**| Locale identifier |
  **id_review_type** | **string**| Review owner type |
- **body** | [**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType**](../Model/\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType.md)|  | [optional]
+ **body** | [**\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType**](../Model/\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType.md)|  | [optional]
 
 ### Return type
 
@@ -335,7 +335,7 @@ $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Program version identifier
 $id_locale = "id_locale_example"; // string | Locale identifier
 $id_review_type = "id_review_type_example"; // string | Review owner type
-$body = new \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType(); // \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType | 
+$body = new \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType(); // \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType | 
 
 try {
     $api_instance->updateProgramVersionLocaleReviewType($id_program, $id_version, $id_locale, $id_review_type, $body);
@@ -353,7 +353,7 @@ Name | Type | Description  | Notes
  **id_version** | **string**| Program version identifier |
  **id_locale** | **string**| Locale identifier |
  **id_review_type** | **string**| Review owner type |
- **body** | [**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType**](../Model/\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType.md)|  | [optional]
+ **body** | [**\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType**](../Model/\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType.md)|  | [optional]
 
 ### Return type
 

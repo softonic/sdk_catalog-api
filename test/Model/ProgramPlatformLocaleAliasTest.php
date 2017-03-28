@@ -1,6 +1,6 @@
 <?php
 /**
- * ProgramVersionLocaleTest
+ * ProgramPlatformLocaleAliasTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Softonic\CatalogApiSdk;
 
 /**
- * ProgramVersionLocaleTest Class Doc Comment
+ * ProgramPlatformLocaleAliasTest Class Doc Comment
  *
  * @category    Class */
-// * @description ProgramVersionLocale
+// * @description ProgramPlatformLocaleAlias
 /**
  * @package     Softonic\CatalogApiSdk
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ProgramVersionLocaleTest extends \PHPUnit_Framework_TestCase
+class ProgramPlatformLocaleAliasTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,9 +75,9 @@ class ProgramVersionLocaleTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "ProgramVersionLocale"
+     * Test "ProgramPlatformLocaleAlias"
      */
-    public function testProgramVersionLocale()
+    public function testProgramPlatformLocaleAlias()
     {
 
     }
@@ -91,9 +91,9 @@ class ProgramVersionLocaleTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "id_version"
+     * Test attribute "id_platform"
      */
-    public function testPropertyIdVersion()
+    public function testPropertyIdPlatform()
     {
 
     }
@@ -107,73 +107,9 @@ class ProgramVersionLocaleTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "program_name"
+     * Test attribute "id_alias"
      */
-    public function testPropertyProgramName()
-    {
-
-    }
-
-    /**
-     * Test attribute "program_alias"
-     */
-    public function testPropertyProgramAlias()
-    {
-
-    }
-
-    /**
-     * Test attribute "publish_date"
-     */
-    public function testPropertyPublishDate()
-    {
-
-    }
-
-    /**
-     * Test attribute "revision_date"
-     */
-    public function testPropertyRevisionDate()
-    {
-
-    }
-
-    /**
-     * Test attribute "update_date"
-     */
-    public function testPropertyUpdateDate()
-    {
-
-    }
-
-    /**
-     * Test attribute "status"
-     */
-    public function testPropertyStatus()
-    {
-
-    }
-
-    /**
-     * Test attribute "id_editor"
-     */
-    public function testPropertyIdEditor()
-    {
-
-    }
-
-    /**
-     * Test attribute "id_binary"
-     */
-    public function testPropertyIdBinary()
-    {
-
-    }
-
-    /**
-     * Test attribute "about_license"
-     */
-    public function testPropertyAboutLicense()
+    public function testPropertyIdAlias()
     {
 
     }

@@ -36,7 +36,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsBinariesApi();
 $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Version from program
-$body = new \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\ProgramVersionBinary(); // \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\ProgramVersionBinary | 
+$body = new \Softonic\CatalogApiSdk\Client\Model\ProgramVersionBinary(); // \Softonic\CatalogApiSdk\Client\Model\ProgramVersionBinary | 
 
 try {
     $api_instance->createProgramVersionBinary($id_program, $id_version, $body);
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_program** | **string**| Program UUID |
  **id_version** | **string**| Version from program |
- **body** | [**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\ProgramVersionBinary**](../Model/\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\ProgramVersionBinary.md)|  | [optional]
+ **body** | [**\Softonic\CatalogApiSdk\Client\Model\ProgramVersionBinary**](../Model/\Softonic\CatalogApiSdk\Client\Model\ProgramVersionBinary.md)|  | [optional]
 
 ### Return type
 
@@ -127,7 +127,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **findProgramVersionBinary**
-> \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\ProgramVersionBinary[] findProgramVersionBinary($id_program, $id_version)
+> \Softonic\CatalogApiSdk\Client\Model\ProgramVersionBinary[] findProgramVersionBinary($id_program, $id_version)
 
 List of ProgramVersionBinarys
 
@@ -169,7 +169,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\ProgramVersionBinary[]**](../Model/ProgramVersionBinary.md)
+[**\Softonic\CatalogApiSdk\Client\Model\ProgramVersionBinary[]**](../Model/ProgramVersionBinary.md)
 
 ### Authorization
 
@@ -183,7 +183,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readProgramVersionBinary**
-> \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\ProgramVersionBinary readProgramVersionBinary($id_program, $id_version, $id_binary)
+> \Softonic\CatalogApiSdk\Client\Model\ProgramVersionBinary readProgramVersionBinary($id_program, $id_version, $id_binary)
 
 Fetches a single ProgramVersionBinary
 
@@ -227,7 +227,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\ProgramVersionBinary**](../Model/ProgramVersionBinary.md)
+[**\Softonic\CatalogApiSdk\Client\Model\ProgramVersionBinary**](../Model/ProgramVersionBinary.md)
 
 ### Authorization
 
@@ -265,7 +265,7 @@ $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsBinariesApi();
 $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Version from program
 $id_binary = "id_binary_example"; // string | Binary identifier in SHA1-Hash format.
-$body = new \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\ProgramVersionBinary(); // \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\ProgramVersionBinary | 
+$body = new \Softonic\CatalogApiSdk\Client\Model\ProgramVersionBinary(); // \Softonic\CatalogApiSdk\Client\Model\ProgramVersionBinary | 
 
 try {
     $api_instance->replaceProgramVersionBinary($id_program, $id_version, $id_binary, $body);
@@ -282,7 +282,7 @@ Name | Type | Description  | Notes
  **id_program** | **string**| Program UUID |
  **id_version** | **string**| Version from program |
  **id_binary** | **string**| Binary identifier in SHA1-Hash format. |
- **body** | [**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\ProgramVersionBinary**](../Model/\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\ProgramVersionBinary.md)|  | [optional]
+ **body** | [**\Softonic\CatalogApiSdk\Client\Model\ProgramVersionBinary**](../Model/\Softonic\CatalogApiSdk\Client\Model\ProgramVersionBinary.md)|  | [optional]
 
 ### Return type
 
@@ -324,7 +324,7 @@ $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsBinariesApi();
 $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Version from program
 $id_binary = "id_binary_example"; // string | Binary identifier in SHA1-Hash format.
-$body = new \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\ProgramVersionBinary(); // \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\ProgramVersionBinary | 
+$body = new \Softonic\CatalogApiSdk\Client\Model\ProgramVersionBinary(); // \Softonic\CatalogApiSdk\Client\Model\ProgramVersionBinary | 
 
 try {
     $api_instance->updateProgramVersionBinary($id_program, $id_version, $id_binary, $body);
@@ -341,7 +341,7 @@ Name | Type | Description  | Notes
  **id_program** | **string**| Program UUID |
  **id_version** | **string**| Version from program |
  **id_binary** | **string**| Binary identifier in SHA1-Hash format. |
- **body** | [**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\ProgramVersionBinary**](../Model/\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\ProgramVersionBinary.md)|  | [optional]
+ **body** | [**\Softonic\CatalogApiSdk\Client\Model\ProgramVersionBinary**](../Model/\Softonic\CatalogApiSdk\Client\Model\ProgramVersionBinary.md)|  | [optional]
 
 ### Return type
 

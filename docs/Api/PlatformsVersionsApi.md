@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **findPlatformVersion**
-> \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\PlatformVersion[] findPlatformVersion($id_platform)
+> \Softonic\CatalogApiSdk\Client\Model\PlatformVersion[] findPlatformVersion($id_platform)
 
 List of PlatformVersions
 
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\PlatformVersion[]**](../Model/PlatformVersion.md)
+[**\Softonic\CatalogApiSdk\Client\Model\PlatformVersion[]**](../Model/PlatformVersion.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readPlatformVersion**
-> \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\PlatformVersion readPlatformVersion($id_platform, $id_version)
+> \Softonic\CatalogApiSdk\Client\Model\PlatformVersion readPlatformVersion($id_platform, $id_version)
 
 Fetches a single PlatformVersion
 
@@ -105,7 +105,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Client\Model\PlatformVersion**](../Model/PlatformVersion.md)
+[**\Softonic\CatalogApiSdk\Client\Model\PlatformVersion**](../Model/PlatformVersion.md)
 
 ### Authorization
 
