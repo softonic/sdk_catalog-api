@@ -6,8 +6,6 @@ Name | Type | Description | Notes
 **id_program** | **string** | Program UUID | 
 **id_version** | **string** | Program version identifier | 
 **name** | **string** | Version name | 
-**id_minimum_requirements_group** | **string** | Minimum requirements group UUID | [optional] 
-**id_recommended_requirements_group** | **string** | Recommended requirements group UUID | [optional] 
 **preversion** | **string** | Preversion | [optional] 
 **postversion** | **string** | Postversion | [optional] 
 **supported_formats** | **string** | Supported formats | [optional] 
