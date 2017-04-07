@@ -7,7 +7,6 @@ Name | Type | Description | Notes
 **id_version** | **string** | Program version identifier | 
 **id_locale** | **string** | Locale identifier | 
 **program_name** | **string** | Program title localized. | 
-**program_alias** | **string** | Program alias compatible with softonic standard. | 
 **publish_date** | [**\DateTime**](Date.md) | Program publication date in this locale. | [optional] 
 **revision_date** | [**\DateTime**](Date.md) | Revision date | [optional] 
 **update_date** | [**\DateTime**](Date.md) | Update date | [optional] 
