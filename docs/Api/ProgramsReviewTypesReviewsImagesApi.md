@@ -1,6 +1,6 @@
 # Softonic\CatalogApiSdk\ProgramsReviewTypesReviewsImagesApi
 
-All URIs are relative to *https://catalog.sftapi.com*
+All URIs are relative to *https://v2.catalog.sftapi.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -37,7 +37,7 @@ $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsReviewTypesReviewsImagesA
 $id_program = "id_program_example"; // string | Program UUID
 $id_review_type = "id_review_type_example"; // string | Review owner type
 $id_review = "id_review_example"; // string | Review identifier as UUID
-$body = new \Softonic\CatalogApiSdk\Client\Model\ProgramReviewTypeReviewImage(); // \Softonic\CatalogApiSdk\Client\Model\ProgramReviewTypeReviewImage | 
+$body = new \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramReviewTypeReviewImage(); // \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramReviewTypeReviewImage | 
 
 try {
     $api_instance->createProgramReviewTypeReviewImage($id_program, $id_review_type, $id_review, $body);
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
  **id_program** | **string**| Program UUID |
  **id_review_type** | **string**| Review owner type |
  **id_review** | **string**| Review identifier as UUID |
- **body** | [**\Softonic\CatalogApiSdk\Client\Model\ProgramReviewTypeReviewImage**](../Model/\Softonic\CatalogApiSdk\Client\Model\ProgramReviewTypeReviewImage.md)|  | [optional]
+ **body** | [**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramReviewTypeReviewImage**](../Model/\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramReviewTypeReviewImage.md)|  | [optional]
 
 ### Return type
 
@@ -131,7 +131,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **findProgramReviewTypeReviewImage**
-> \Softonic\CatalogApiSdk\Client\Model\ProgramReviewTypeReviewImage[] findProgramReviewTypeReviewImage($id_program, $id_review_type, $id_review)
+> \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramReviewTypeReviewImage[] findProgramReviewTypeReviewImage($id_program, $id_review_type, $id_review)
 
 List of ProgramReviewTypeReviewImages
 
@@ -175,7 +175,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Client\Model\ProgramReviewTypeReviewImage[]**](../Model/ProgramReviewTypeReviewImage.md)
+[**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramReviewTypeReviewImage[]**](../Model/ProgramReviewTypeReviewImage.md)
 
 ### Authorization
 
@@ -189,7 +189,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readProgramReviewTypeReviewImage**
-> \Softonic\CatalogApiSdk\Client\Model\ProgramReviewTypeReviewImage readProgramReviewTypeReviewImage($id_program, $id_review_type, $id_review, $id_image)
+> \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramReviewTypeReviewImage readProgramReviewTypeReviewImage($id_program, $id_review_type, $id_review, $id_image)
 
 Fetches a single ProgramReviewTypeReviewImage
 
@@ -235,7 +235,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Client\Model\ProgramReviewTypeReviewImage**](../Model/ProgramReviewTypeReviewImage.md)
+[**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramReviewTypeReviewImage**](../Model/ProgramReviewTypeReviewImage.md)
 
 ### Authorization
 
@@ -274,7 +274,7 @@ $id_program = "id_program_example"; // string | Program UUID
 $id_review_type = "id_review_type_example"; // string | Review owner type
 $id_review = "id_review_example"; // string | Review identifier as UUID
 $id_image = "id_image_example"; // string | Image identifier in SHA1-Hash format derived from path
-$body = new \Softonic\CatalogApiSdk\Client\Model\ProgramReviewTypeReviewImage(); // \Softonic\CatalogApiSdk\Client\Model\ProgramReviewTypeReviewImage | 
+$body = new \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramReviewTypeReviewImage(); // \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramReviewTypeReviewImage | 
 
 try {
     $api_instance->replaceProgramReviewTypeReviewImage($id_program, $id_review_type, $id_review, $id_image, $body);
@@ -292,7 +292,7 @@ Name | Type | Description  | Notes
  **id_review_type** | **string**| Review owner type |
  **id_review** | **string**| Review identifier as UUID |
  **id_image** | **string**| Image identifier in SHA1-Hash format derived from path |
- **body** | [**\Softonic\CatalogApiSdk\Client\Model\ProgramReviewTypeReviewImage**](../Model/\Softonic\CatalogApiSdk\Client\Model\ProgramReviewTypeReviewImage.md)|  | [optional]
+ **body** | [**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramReviewTypeReviewImage**](../Model/\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramReviewTypeReviewImage.md)|  | [optional]
 
 ### Return type
 
@@ -335,7 +335,7 @@ $id_program = "id_program_example"; // string | Program UUID
 $id_review_type = "id_review_type_example"; // string | Review owner type
 $id_review = "id_review_example"; // string | Review identifier as UUID
 $id_image = "id_image_example"; // string | Image identifier in SHA1-Hash format derived from path
-$body = new \Softonic\CatalogApiSdk\Client\Model\ProgramReviewTypeReviewImage(); // \Softonic\CatalogApiSdk\Client\Model\ProgramReviewTypeReviewImage | 
+$body = new \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramReviewTypeReviewImage(); // \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramReviewTypeReviewImage | 
 
 try {
     $api_instance->updateProgramReviewTypeReviewImage($id_program, $id_review_type, $id_review, $id_image, $body);
@@ -353,7 +353,7 @@ Name | Type | Description  | Notes
  **id_review_type** | **string**| Review owner type |
  **id_review** | **string**| Review identifier as UUID |
  **id_image** | **string**| Image identifier in SHA1-Hash format derived from path |
- **body** | [**\Softonic\CatalogApiSdk\Client\Model\ProgramReviewTypeReviewImage**](../Model/\Softonic\CatalogApiSdk\Client\Model\ProgramReviewTypeReviewImage.md)|  | [optional]
+ **body** | [**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramReviewTypeReviewImage**](../Model/\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramReviewTypeReviewImage.md)|  | [optional]
 
 ### Return type
 

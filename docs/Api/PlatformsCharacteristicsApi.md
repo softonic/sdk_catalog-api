@@ -1,6 +1,6 @@
 # Softonic\CatalogApiSdk\PlatformsCharacteristicsApi
 
-All URIs are relative to *https://catalog.sftapi.com*
+All URIs are relative to *https://v2.catalog.sftapi.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **findPlatformCharacteristic**
-> \Softonic\CatalogApiSdk\Client\Model\PlatformCharacteristic[] findPlatformCharacteristic($id_platform)
+> \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\PlatformCharacteristic[] findPlatformCharacteristic($id_platform)
 
 List of PlatformCharacteristics
 
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Client\Model\PlatformCharacteristic[]**](../Model/PlatformCharacteristic.md)
+[**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\PlatformCharacteristic[]**](../Model/PlatformCharacteristic.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readPlatformCharacteristic**
-> \Softonic\CatalogApiSdk\Client\Model\PlatformCharacteristic readPlatformCharacteristic($id_platform, $id_characteristic)
+> \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\PlatformCharacteristic readPlatformCharacteristic($id_platform, $id_characteristic)
 
 Fetches a single PlatformCharacteristic
 
@@ -105,7 +105,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Client\Model\PlatformCharacteristic**](../Model/PlatformCharacteristic.md)
+[**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\PlatformCharacteristic**](../Model/PlatformCharacteristic.md)
 
 ### Authorization
 

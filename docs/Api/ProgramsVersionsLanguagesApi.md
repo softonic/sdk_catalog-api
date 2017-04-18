@@ -1,6 +1,6 @@
 # Softonic\CatalogApiSdk\ProgramsVersionsLanguagesApi
 
-All URIs are relative to *https://catalog.sftapi.com*
+All URIs are relative to *https://v2.catalog.sftapi.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -35,7 +35,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLanguagesApi();
 $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Program version identifier
-$body = new \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLanguage(); // \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLanguage | 
+$body = new \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramVersionLanguage(); // \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramVersionLanguage | 
 
 try {
     $api_instance->createProgramVersionLanguage($id_program, $id_version, $body);
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_program** | **string**| Program UUID |
  **id_version** | **string**| Program version identifier |
- **body** | [**\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLanguage**](../Model/\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLanguage.md)|  | [optional]
+ **body** | [**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramVersionLanguage**](../Model/\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramVersionLanguage.md)|  | [optional]
 
 ### Return type
 
@@ -126,7 +126,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **findProgramVersionLanguage**
-> \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLanguage[] findProgramVersionLanguage($id_program, $id_version)
+> \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramVersionLanguage[] findProgramVersionLanguage($id_program, $id_version)
 
 List of ProgramVersionLanguages
 
@@ -168,7 +168,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLanguage[]**](../Model/ProgramVersionLanguage.md)
+[**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramVersionLanguage[]**](../Model/ProgramVersionLanguage.md)
 
 ### Authorization
 
@@ -182,7 +182,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readProgramVersionLanguage**
-> \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLanguage readProgramVersionLanguage($id_program, $id_version, $id_language)
+> \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramVersionLanguage readProgramVersionLanguage($id_program, $id_version, $id_language)
 
 Fetches a single ProgramVersionLanguage
 
@@ -226,7 +226,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLanguage**](../Model/ProgramVersionLanguage.md)
+[**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramVersionLanguage**](../Model/ProgramVersionLanguage.md)
 
 ### Authorization
 

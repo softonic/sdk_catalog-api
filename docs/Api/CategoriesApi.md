@@ -1,6 +1,6 @@
 # Softonic\CatalogApiSdk\CategoriesApi
 
-All URIs are relative to *https://catalog.sftapi.com*
+All URIs are relative to *https://v2.catalog.sftapi.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -34,7 +34,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Softonic\CatalogApiSdk\Api\CategoriesApi();
-$body = new \Softonic\CatalogApiSdk\Client\Model\Category(); // \Softonic\CatalogApiSdk\Client\Model\Category | 
+$body = new \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\Category(); // \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\Category | 
 
 try {
     $api_instance->createCategory($body);
@@ -48,7 +48,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Softonic\CatalogApiSdk\Client\Model\Category**](../Model/\Softonic\CatalogApiSdk\Client\Model\Category.md)|  | [optional]
+ **body** | [**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\Category**](../Model/\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\Category.md)|  | [optional]
 
 ### Return type
 
@@ -119,7 +119,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **findCategory**
-> \Softonic\CatalogApiSdk\Client\Model\Category[] findCategory()
+> \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\Category[] findCategory()
 
 List of Categorys
 
@@ -155,7 +155,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Client\Model\Category[]**](../Model/Category.md)
+[**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\Category[]**](../Model/Category.md)
 
 ### Authorization
 
@@ -169,7 +169,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readCategory**
-> \Softonic\CatalogApiSdk\Client\Model\Category readCategory($id_category)
+> \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\Category readCategory($id_category)
 
 Fetches a single Category
 
@@ -209,7 +209,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Client\Model\Category**](../Model/Category.md)
+[**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\Category**](../Model/Category.md)
 
 ### Authorization
 
@@ -245,7 +245,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 
 $api_instance = new Softonic\CatalogApiSdk\Api\CategoriesApi();
 $id_category = "id_category_example"; // string | Categories identifier
-$body = new \Softonic\CatalogApiSdk\Client\Model\Category(); // \Softonic\CatalogApiSdk\Client\Model\Category | 
+$body = new \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\Category(); // \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\Category | 
 
 try {
     $api_instance->replaceCategory($id_category, $body);
@@ -260,7 +260,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_category** | **string**| Categories identifier |
- **body** | [**\Softonic\CatalogApiSdk\Client\Model\Category**](../Model/\Softonic\CatalogApiSdk\Client\Model\Category.md)|  | [optional]
+ **body** | [**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\Category**](../Model/\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\Category.md)|  | [optional]
 
 ### Return type
 
@@ -300,7 +300,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 
 $api_instance = new Softonic\CatalogApiSdk\Api\CategoriesApi();
 $id_category = "id_category_example"; // string | Categories identifier
-$body = new \Softonic\CatalogApiSdk\Client\Model\Category(); // \Softonic\CatalogApiSdk\Client\Model\Category | 
+$body = new \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\Category(); // \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\Category | 
 
 try {
     $api_instance->updateCategory($id_category, $body);
@@ -315,7 +315,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_category** | **string**| Categories identifier |
- **body** | [**\Softonic\CatalogApiSdk\Client\Model\Category**](../Model/\Softonic\CatalogApiSdk\Client\Model\Category.md)|  | [optional]
+ **body** | [**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\Category**](../Model/\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\Category.md)|  | [optional]
 
 ### Return type
 
