@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Softonic\CatalogApiSdk
+ * @package  Softonic\\CatalogApiSdk
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,18 +26,18 @@
  * Do not edit the class manually.
  */
 
-namespace Softonic\CatalogApiSdk\Client\Api;
+namespace Softonic\\CatalogApiSdk\Client\\Api;
 
-use \Softonic\CatalogApiSdk\ApiClient;
-use \Softonic\CatalogApiSdk\ApiException;
-use \Softonic\CatalogApiSdk\Configuration;
-use \Softonic\CatalogApiSdk\ObjectSerializer;
+use \Softonic\\CatalogApiSdk\ApiClient;
+use \Softonic\\CatalogApiSdk\ApiException;
+use \Softonic\\CatalogApiSdk\Configuration;
+use \Softonic\\CatalogApiSdk\ObjectSerializer;
 
 /**
  * ProgramsUrlTypesUrlsApi Class Doc Comment
  *
  * @category Class
- * @package  Softonic\CatalogApiSdk
+ * @package  Softonic\\CatalogApiSdk
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -46,16 +46,16 @@ class ProgramsUrlTypesUrlsApi
     /**
      * API Client
      *
-     * @var \Softonic\CatalogApiSdk\ApiClient instance of the ApiClient
+     * @var \Softonic\\CatalogApiSdk\ApiClient instance of the ApiClient
      */
     protected $apiClient;
 
     /**
      * Constructor
      *
-     * @param \Softonic\CatalogApiSdk\ApiClient|null $apiClient The api client to use
+     * @param \Softonic\\CatalogApiSdk\ApiClient|null $apiClient The api client to use
      */
-    public function __construct(\Softonic\CatalogApiSdk\ApiClient $apiClient = null)
+    public function __construct(\Softonic\\CatalogApiSdk\ApiClient $apiClient = null)
     {
         if ($apiClient === null) {
             $apiClient = new ApiClient();
@@ -67,7 +67,7 @@ class ProgramsUrlTypesUrlsApi
     /**
      * Get API client
      *
-     * @return \Softonic\CatalogApiSdk\ApiClient get the API client
+     * @return \Softonic\\CatalogApiSdk\ApiClient get the API client
      */
     public function getApiClient()
     {
@@ -77,11 +77,11 @@ class ProgramsUrlTypesUrlsApi
     /**
      * Set the API client
      *
-     * @param \Softonic\CatalogApiSdk\ApiClient $apiClient set the API client
+     * @param \Softonic\\CatalogApiSdk\ApiClient $apiClient set the API client
      *
      * @return ProgramsUrlTypesUrlsApi
      */
-    public function setApiClient(\Softonic\CatalogApiSdk\ApiClient $apiClient)
+    public function setApiClient(\Softonic\\CatalogApiSdk\ApiClient $apiClient)
     {
         $this->apiClient = $apiClient;
         return $this;
@@ -94,8 +94,8 @@ class ProgramsUrlTypesUrlsApi
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_url_type URL types identifier. (required)
-     * @param \Softonic\CatalogApiSdk\Client\Model\ProgramUrlTypeUrl $body  (optional)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @param \Softonic\\CatalogApiSdk\Client\\Model\ProgramUrlTypeUrl $body  (optional)
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
      * @return void
      */
     public function createProgramUrlTypeUrl($id_program, $id_url_type, $body = null)
@@ -111,8 +111,8 @@ class ProgramsUrlTypesUrlsApi
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_url_type URL types identifier. (required)
-     * @param \Softonic\CatalogApiSdk\Client\Model\ProgramUrlTypeUrl $body  (optional)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @param \Softonic\\CatalogApiSdk\Client\\Model\ProgramUrlTypeUrl $body  (optional)
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function createProgramUrlTypeUrlWithHttpInfo($id_program, $id_url_type, $body = null)
@@ -217,7 +217,7 @@ class ProgramsUrlTypesUrlsApi
      * @param string $id_program Program UUID (required)
      * @param string $id_url_type URL types identifier. (required)
      * @param string $id_url Url UUID (required)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
      * @return void
      */
     public function deleteProgramUrlTypeUrl($id_program, $id_url_type, $id_url)
@@ -234,7 +234,7 @@ class ProgramsUrlTypesUrlsApi
      * @param string $id_program Program UUID (required)
      * @param string $id_url_type URL types identifier. (required)
      * @param string $id_url Url UUID (required)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteProgramUrlTypeUrlWithHttpInfo($id_program, $id_url_type, $id_url)
@@ -352,8 +352,8 @@ class ProgramsUrlTypesUrlsApi
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_url_type URL types identifier. (required)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
-     * @return \Softonic\CatalogApiSdk\Client\Model\ProgramUrlTypeUrl[]
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
+     * @return \Softonic\\CatalogApiSdk\Client\\Model\ProgramUrlTypeUrl[]
      */
     public function findProgramUrlTypeUrl($id_program, $id_url_type)
     {
@@ -368,8 +368,8 @@ class ProgramsUrlTypesUrlsApi
      *
      * @param string $id_program Program UUID (required)
      * @param string $id_url_type URL types identifier. (required)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
-     * @return array of \Softonic\CatalogApiSdk\Client\Model\ProgramUrlTypeUrl[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
+     * @return array of \Softonic\\CatalogApiSdk\Client\\Model\ProgramUrlTypeUrl[], HTTP status code, HTTP response headers (array of strings)
      */
     public function findProgramUrlTypeUrlWithHttpInfo($id_program, $id_url_type)
     {
@@ -447,15 +447,15 @@ class ProgramsUrlTypesUrlsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\CatalogApiSdk\Client\Model\ProgramUrlTypeUrl[]',
+                '\Softonic\\CatalogApiSdk\Client\\Model\ProgramUrlTypeUrl[]',
                 '/programs/{id_program}/url-types/{id_url_type}/urls'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Client\Model\ProgramUrlTypeUrl[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Softonic\\CatalogApiSdk\Client\\Model\ProgramUrlTypeUrl[]', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Softonic\CatalogApiSdk\Client\Model\ProgramUrlTypeUrl[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Softonic\\CatalogApiSdk\Client\\Model\ProgramUrlTypeUrl[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -472,8 +472,8 @@ class ProgramsUrlTypesUrlsApi
      * @param string $id_program Program UUID (required)
      * @param string $id_url_type URL types identifier. (required)
      * @param string $id_url Url UUID (required)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
-     * @return \Softonic\CatalogApiSdk\Client\Model\ProgramUrlTypeUrl
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
+     * @return \Softonic\\CatalogApiSdk\Client\\Model\ProgramUrlTypeUrl
      */
     public function readProgramUrlTypeUrl($id_program, $id_url_type, $id_url)
     {
@@ -489,8 +489,8 @@ class ProgramsUrlTypesUrlsApi
      * @param string $id_program Program UUID (required)
      * @param string $id_url_type URL types identifier. (required)
      * @param string $id_url Url UUID (required)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
-     * @return array of \Softonic\CatalogApiSdk\Client\Model\ProgramUrlTypeUrl, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
+     * @return array of \Softonic\\CatalogApiSdk\Client\\Model\ProgramUrlTypeUrl, HTTP status code, HTTP response headers (array of strings)
      */
     public function readProgramUrlTypeUrlWithHttpInfo($id_program, $id_url_type, $id_url)
     {
@@ -587,15 +587,15 @@ class ProgramsUrlTypesUrlsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\CatalogApiSdk\Client\Model\ProgramUrlTypeUrl',
+                '\Softonic\\CatalogApiSdk\Client\\Model\ProgramUrlTypeUrl',
                 '/programs/{id_program}/url-types/{id_url_type}/urls/{id_url}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Client\Model\ProgramUrlTypeUrl', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Softonic\\CatalogApiSdk\Client\\Model\ProgramUrlTypeUrl', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Softonic\CatalogApiSdk\Client\Model\ProgramUrlTypeUrl', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Softonic\\CatalogApiSdk\Client\\Model\ProgramUrlTypeUrl', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -612,8 +612,8 @@ class ProgramsUrlTypesUrlsApi
      * @param string $id_program Program UUID (required)
      * @param string $id_url_type URL types identifier. (required)
      * @param string $id_url Url UUID (required)
-     * @param \Softonic\CatalogApiSdk\Client\Model\ProgramUrlTypeUrl $body  (optional)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @param \Softonic\\CatalogApiSdk\Client\\Model\ProgramUrlTypeUrl $body  (optional)
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
      * @return void
      */
     public function replaceProgramUrlTypeUrl($id_program, $id_url_type, $id_url, $body = null)
@@ -630,8 +630,8 @@ class ProgramsUrlTypesUrlsApi
      * @param string $id_program Program UUID (required)
      * @param string $id_url_type URL types identifier. (required)
      * @param string $id_url Url UUID (required)
-     * @param \Softonic\CatalogApiSdk\Client\Model\ProgramUrlTypeUrl $body  (optional)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @param \Softonic\\CatalogApiSdk\Client\\Model\ProgramUrlTypeUrl $body  (optional)
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function replaceProgramUrlTypeUrlWithHttpInfo($id_program, $id_url_type, $id_url, $body = null)
@@ -755,8 +755,8 @@ class ProgramsUrlTypesUrlsApi
      * @param string $id_program Program UUID (required)
      * @param string $id_url_type URL types identifier. (required)
      * @param string $id_url Url UUID (required)
-     * @param \Softonic\CatalogApiSdk\Client\Model\ProgramUrlTypeUrl $body  (optional)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @param \Softonic\\CatalogApiSdk\Client\\Model\ProgramUrlTypeUrl $body  (optional)
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
      * @return void
      */
     public function updateProgramUrlTypeUrl($id_program, $id_url_type, $id_url, $body = null)
@@ -773,8 +773,8 @@ class ProgramsUrlTypesUrlsApi
      * @param string $id_program Program UUID (required)
      * @param string $id_url_type URL types identifier. (required)
      * @param string $id_url Url UUID (required)
-     * @param \Softonic\CatalogApiSdk\Client\Model\ProgramUrlTypeUrl $body  (optional)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @param \Softonic\\CatalogApiSdk\Client\\Model\ProgramUrlTypeUrl $body  (optional)
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateProgramUrlTypeUrlWithHttpInfo($id_program, $id_url_type, $id_url, $body = null)

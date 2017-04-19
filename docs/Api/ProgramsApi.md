@@ -1,4 +1,4 @@
-# Softonic\CatalogApiSdk\ProgramsApi
+# Softonic\\CatalogApiSdk\ProgramsApi
 
 All URIs are relative to *https://catalog.sftapi.com*
 
@@ -25,16 +25,16 @@ Creates a new Program
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsApi();
-$body = new \Softonic\CatalogApiSdk\Client\Model\Program(); // \Softonic\CatalogApiSdk\Client\Model\Program | 
+$api_instance = new Softonic\\CatalogApiSdk\Api\ProgramsApi();
+$body = new \Softonic\\CatalogApiSdk\Client\\Model\Program(); // \Softonic\\CatalogApiSdk\Client\\Model\Program | 
 
 try {
     $api_instance->createProgram($body);
@@ -48,7 +48,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Softonic\CatalogApiSdk\Client\Model\Program**](../Model/\Softonic\CatalogApiSdk\Client\Model\Program.md)|  | [optional]
+ **body** | [**\Softonic\\CatalogApiSdk\Client\\Model\Program**](../Model/\Softonic\\CatalogApiSdk\Client\\Model\Program.md)|  | [optional]
 
 ### Return type
 
@@ -78,15 +78,15 @@ Deletes a Program
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsApi();
+$api_instance = new Softonic\\CatalogApiSdk\Api\ProgramsApi();
 $id_program = "id_program_example"; // string | Program UUID or numeric ID
 
 try {
@@ -119,7 +119,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **findProgram**
-> \Softonic\CatalogApiSdk\Client\Model\Program[] findProgram($page, $limit, $search)
+> \Softonic\\CatalogApiSdk\Client\\Model\Program[] findProgram($page, $limit, $search)
 
 List of Programs
 
@@ -131,15 +131,15 @@ List of Programs
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsApi();
+$api_instance = new Softonic\\CatalogApiSdk\Api\ProgramsApi();
 $page = 56; // int | Page of the pagination when listing programs
 $limit = 56; // int | Number of results per page when listing programs
 $search = "search_example"; // string | Field to search for
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Client\Model\Program[]**](../Model/Program.md)
+[**\Softonic\\CatalogApiSdk\Client\\Model\Program[]**](../Model/Program.md)
 
 ### Authorization
 
@@ -177,7 +177,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readProgram**
-> \Softonic\CatalogApiSdk\Client\Model\Program readProgram($id_program)
+> \Softonic\\CatalogApiSdk\Client\\Model\Program readProgram($id_program)
 
 Fetches a single Program
 
@@ -189,15 +189,15 @@ Fetches a single Program
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsApi();
+$api_instance = new Softonic\\CatalogApiSdk\Api\ProgramsApi();
 $id_program = "id_program_example"; // string | Program UUID or numeric ID
 
 try {
@@ -217,7 +217,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Client\Model\Program**](../Model/Program.md)
+[**\Softonic\\CatalogApiSdk\Client\\Model\Program**](../Model/Program.md)
 
 ### Authorization
 
@@ -243,17 +243,17 @@ Entirely replaces a Program
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsApi();
+$api_instance = new Softonic\\CatalogApiSdk\Api\ProgramsApi();
 $id_program = "id_program_example"; // string | Program UUID or numeric ID
-$body = new \Softonic\CatalogApiSdk\Client\Model\Program(); // \Softonic\CatalogApiSdk\Client\Model\Program | 
+$body = new \Softonic\\CatalogApiSdk\Client\\Model\Program(); // \Softonic\\CatalogApiSdk\Client\\Model\Program | 
 
 try {
     $api_instance->replaceProgram($id_program, $body);
@@ -268,7 +268,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_program** | **string**| Program UUID or numeric ID |
- **body** | [**\Softonic\CatalogApiSdk\Client\Model\Program**](../Model/\Softonic\CatalogApiSdk\Client\Model\Program.md)|  | [optional]
+ **body** | [**\Softonic\\CatalogApiSdk\Client\\Model\Program**](../Model/\Softonic\\CatalogApiSdk\Client\\Model\Program.md)|  | [optional]
 
 ### Return type
 
@@ -298,17 +298,17 @@ Partially updates a Program
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsApi();
+$api_instance = new Softonic\\CatalogApiSdk\Api\ProgramsApi();
 $id_program = "id_program_example"; // string | Program UUID or numeric ID
-$body = new \Softonic\CatalogApiSdk\Client\Model\Program(); // \Softonic\CatalogApiSdk\Client\Model\Program | 
+$body = new \Softonic\\CatalogApiSdk\Client\\Model\Program(); // \Softonic\\CatalogApiSdk\Client\\Model\Program | 
 
 try {
     $api_instance->updateProgram($id_program, $body);
@@ -323,7 +323,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_program** | **string**| Program UUID or numeric ID |
- **body** | [**\Softonic\CatalogApiSdk\Client\Model\Program**](../Model/\Softonic\CatalogApiSdk\Client\Model\Program.md)|  | [optional]
+ **body** | [**\Softonic\\CatalogApiSdk\Client\\Model\Program**](../Model/\Softonic\\CatalogApiSdk\Client\\Model\Program.md)|  | [optional]
 
 ### Return type
 

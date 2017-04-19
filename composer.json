@@ -1,6 +1,6 @@
 {
     "name": "softonic/catalog_api_sdk",
-    "version": "2.4.0",
+    "version": "2.5.0",
     "description": "",
     "keywords": [
         "swagger",
@@ -29,9 +29,9 @@
         "friendsofphp/php-cs-fixer": "~1.12"
     },
     "autoload": {
-        "psr-4": { "Softonic\\CatalogApiSdk\\" : "src/" }
+        "psr-4": { "Softonic\\\\CatalogApiSdk\\" : "src/" }
     },
     "autoload-dev": {
-        "psr-4": { "Softonic\\CatalogApiSdk\\" : "test/" }
+        "psr-4": { "Softonic\\\\CatalogApiSdk\\" : "test/" }
     }
 }

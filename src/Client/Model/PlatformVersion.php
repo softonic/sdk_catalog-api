@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Softonic\CatalogApiSdk
+ * @package  Softonic\\CatalogApiSdk
  * @author   Swaagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace Softonic\CatalogApiSdk\Client\Model;
+namespace Softonic\\CatalogApiSdk\Client\\Model;
 
 use \ArrayAccess;
 
@@ -35,7 +35,7 @@ use \ArrayAccess;
  * PlatformVersion Class Doc Comment
  *
  * @category    Class
- * @package     Softonic\CatalogApiSdk
+ * @package     Softonic\\CatalogApiSdk
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -352,10 +352,10 @@ class PlatformVersion implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Softonic\CatalogApiSdk\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\Softonic\\CatalogApiSdk\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Softonic\CatalogApiSdk\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\Softonic\\CatalogApiSdk\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

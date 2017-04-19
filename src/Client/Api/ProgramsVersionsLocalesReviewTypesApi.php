@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Softonic\CatalogApiSdk
+ * @package  Softonic\\CatalogApiSdk
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,18 +26,18 @@
  * Do not edit the class manually.
  */
 
-namespace Softonic\CatalogApiSdk\Client\Api;
+namespace Softonic\\CatalogApiSdk\Client\\Api;
 
-use \Softonic\CatalogApiSdk\ApiClient;
-use \Softonic\CatalogApiSdk\ApiException;
-use \Softonic\CatalogApiSdk\Configuration;
-use \Softonic\CatalogApiSdk\ObjectSerializer;
+use \Softonic\\CatalogApiSdk\ApiClient;
+use \Softonic\\CatalogApiSdk\ApiException;
+use \Softonic\\CatalogApiSdk\Configuration;
+use \Softonic\\CatalogApiSdk\ObjectSerializer;
 
 /**
  * ProgramsVersionsLocalesReviewTypesApi Class Doc Comment
  *
  * @category Class
- * @package  Softonic\CatalogApiSdk
+ * @package  Softonic\\CatalogApiSdk
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -46,16 +46,16 @@ class ProgramsVersionsLocalesReviewTypesApi
     /**
      * API Client
      *
-     * @var \Softonic\CatalogApiSdk\ApiClient instance of the ApiClient
+     * @var \Softonic\\CatalogApiSdk\ApiClient instance of the ApiClient
      */
     protected $apiClient;
 
     /**
      * Constructor
      *
-     * @param \Softonic\CatalogApiSdk\ApiClient|null $apiClient The api client to use
+     * @param \Softonic\\CatalogApiSdk\ApiClient|null $apiClient The api client to use
      */
-    public function __construct(\Softonic\CatalogApiSdk\ApiClient $apiClient = null)
+    public function __construct(\Softonic\\CatalogApiSdk\ApiClient $apiClient = null)
     {
         if ($apiClient === null) {
             $apiClient = new ApiClient();
@@ -67,7 +67,7 @@ class ProgramsVersionsLocalesReviewTypesApi
     /**
      * Get API client
      *
-     * @return \Softonic\CatalogApiSdk\ApiClient get the API client
+     * @return \Softonic\\CatalogApiSdk\ApiClient get the API client
      */
     public function getApiClient()
     {
@@ -77,11 +77,11 @@ class ProgramsVersionsLocalesReviewTypesApi
     /**
      * Set the API client
      *
-     * @param \Softonic\CatalogApiSdk\ApiClient $apiClient set the API client
+     * @param \Softonic\\CatalogApiSdk\ApiClient $apiClient set the API client
      *
      * @return ProgramsVersionsLocalesReviewTypesApi
      */
-    public function setApiClient(\Softonic\CatalogApiSdk\ApiClient $apiClient)
+    public function setApiClient(\Softonic\\CatalogApiSdk\ApiClient $apiClient)
     {
         $this->apiClient = $apiClient;
         return $this;
@@ -95,8 +95,8 @@ class ProgramsVersionsLocalesReviewTypesApi
      * @param string $id_program Program UUID (required)
      * @param string $id_version Program version identifier (required)
      * @param string $id_locale Locale identifier (required)
-     * @param \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType $body  (optional)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @param \Softonic\\CatalogApiSdk\Client\\Model\ProgramVersionLocaleReviewType $body  (optional)
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
      * @return void
      */
     public function createProgramVersionLocaleReviewType($id_program, $id_version, $id_locale, $body = null)
@@ -113,8 +113,8 @@ class ProgramsVersionsLocalesReviewTypesApi
      * @param string $id_program Program UUID (required)
      * @param string $id_version Program version identifier (required)
      * @param string $id_locale Locale identifier (required)
-     * @param \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType $body  (optional)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @param \Softonic\\CatalogApiSdk\Client\\Model\ProgramVersionLocaleReviewType $body  (optional)
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function createProgramVersionLocaleReviewTypeWithHttpInfo($id_program, $id_version, $id_locale, $body = null)
@@ -246,7 +246,7 @@ class ProgramsVersionsLocalesReviewTypesApi
      * @param string $id_version Program version identifier (required)
      * @param string $id_locale Locale identifier (required)
      * @param string $id_review_type Review owner type (required)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
      * @return void
      */
     public function deleteProgramVersionLocaleReviewType($id_program, $id_version, $id_locale, $id_review_type)
@@ -264,7 +264,7 @@ class ProgramsVersionsLocalesReviewTypesApi
      * @param string $id_version Program version identifier (required)
      * @param string $id_locale Locale identifier (required)
      * @param string $id_review_type Review owner type (required)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteProgramVersionLocaleReviewTypeWithHttpInfo($id_program, $id_version, $id_locale, $id_review_type)
@@ -402,8 +402,8 @@ class ProgramsVersionsLocalesReviewTypesApi
      * @param string $id_program Program UUID (required)
      * @param string $id_version Program version identifier (required)
      * @param string $id_locale Locale identifier (required)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
-     * @return \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType[]
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
+     * @return \Softonic\\CatalogApiSdk\Client\\Model\ProgramVersionLocaleReviewType[]
      */
     public function findProgramVersionLocaleReviewType($id_program, $id_version, $id_locale)
     {
@@ -419,8 +419,8 @@ class ProgramsVersionsLocalesReviewTypesApi
      * @param string $id_program Program UUID (required)
      * @param string $id_version Program version identifier (required)
      * @param string $id_locale Locale identifier (required)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
-     * @return array of \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
+     * @return array of \Softonic\\CatalogApiSdk\Client\\Model\ProgramVersionLocaleReviewType[], HTTP status code, HTTP response headers (array of strings)
      */
     public function findProgramVersionLocaleReviewTypeWithHttpInfo($id_program, $id_version, $id_locale)
     {
@@ -524,15 +524,15 @@ class ProgramsVersionsLocalesReviewTypesApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType[]',
+                '\Softonic\\CatalogApiSdk\Client\\Model\ProgramVersionLocaleReviewType[]',
                 '/programs/{id_program}/versions/{id_version}/locales/{id_locale}/review-types'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Softonic\\CatalogApiSdk\Client\\Model\ProgramVersionLocaleReviewType[]', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Softonic\\CatalogApiSdk\Client\\Model\ProgramVersionLocaleReviewType[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -550,8 +550,8 @@ class ProgramsVersionsLocalesReviewTypesApi
      * @param string $id_version Program version identifier (required)
      * @param string $id_locale Locale identifier (required)
      * @param string $id_review_type Review owner type (required)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
-     * @return \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
+     * @return \Softonic\\CatalogApiSdk\Client\\Model\ProgramVersionLocaleReviewType
      */
     public function readProgramVersionLocaleReviewType($id_program, $id_version, $id_locale, $id_review_type)
     {
@@ -568,8 +568,8 @@ class ProgramsVersionsLocalesReviewTypesApi
      * @param string $id_version Program version identifier (required)
      * @param string $id_locale Locale identifier (required)
      * @param string $id_review_type Review owner type (required)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
-     * @return array of \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
+     * @return array of \Softonic\\CatalogApiSdk\Client\\Model\ProgramVersionLocaleReviewType, HTTP status code, HTTP response headers (array of strings)
      */
     public function readProgramVersionLocaleReviewTypeWithHttpInfo($id_program, $id_version, $id_locale, $id_review_type)
     {
@@ -685,15 +685,15 @@ class ProgramsVersionsLocalesReviewTypesApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType',
+                '\Softonic\\CatalogApiSdk\Client\\Model\ProgramVersionLocaleReviewType',
                 '/programs/{id_program}/versions/{id_version}/locales/{id_locale}/review-types/{id_review_type}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Softonic\\CatalogApiSdk\Client\\Model\ProgramVersionLocaleReviewType', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Softonic\\CatalogApiSdk\Client\\Model\ProgramVersionLocaleReviewType', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -711,8 +711,8 @@ class ProgramsVersionsLocalesReviewTypesApi
      * @param string $id_version Program version identifier (required)
      * @param string $id_locale Locale identifier (required)
      * @param string $id_review_type Review owner type (required)
-     * @param \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType $body  (optional)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @param \Softonic\\CatalogApiSdk\Client\\Model\ProgramVersionLocaleReviewType $body  (optional)
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
      * @return void
      */
     public function replaceProgramVersionLocaleReviewType($id_program, $id_version, $id_locale, $id_review_type, $body = null)
@@ -730,8 +730,8 @@ class ProgramsVersionsLocalesReviewTypesApi
      * @param string $id_version Program version identifier (required)
      * @param string $id_locale Locale identifier (required)
      * @param string $id_review_type Review owner type (required)
-     * @param \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType $body  (optional)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @param \Softonic\\CatalogApiSdk\Client\\Model\ProgramVersionLocaleReviewType $body  (optional)
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function replaceProgramVersionLocaleReviewTypeWithHttpInfo($id_program, $id_version, $id_locale, $id_review_type, $body = null)
@@ -875,8 +875,8 @@ class ProgramsVersionsLocalesReviewTypesApi
      * @param string $id_version Program version identifier (required)
      * @param string $id_locale Locale identifier (required)
      * @param string $id_review_type Review owner type (required)
-     * @param \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType $body  (optional)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @param \Softonic\\CatalogApiSdk\Client\\Model\ProgramVersionLocaleReviewType $body  (optional)
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
      * @return void
      */
     public function updateProgramVersionLocaleReviewType($id_program, $id_version, $id_locale, $id_review_type, $body = null)
@@ -894,8 +894,8 @@ class ProgramsVersionsLocalesReviewTypesApi
      * @param string $id_version Program version identifier (required)
      * @param string $id_locale Locale identifier (required)
      * @param string $id_review_type Review owner type (required)
-     * @param \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType $body  (optional)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @param \Softonic\\CatalogApiSdk\Client\\Model\ProgramVersionLocaleReviewType $body  (optional)
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateProgramVersionLocaleReviewTypeWithHttpInfo($id_program, $id_version, $id_locale, $id_review_type, $body = null)

@@ -1,4 +1,4 @@
-# Softonic\CatalogApiSdk\ProgramsReviewTypesReviewsImagesApi
+# Softonic\\CatalogApiSdk\ProgramsReviewTypesReviewsImagesApi
 
 All URIs are relative to *https://catalog.sftapi.com*
 
@@ -25,19 +25,19 @@ Creates a new ProgramReviewTypeReviewImage
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsReviewTypesReviewsImagesApi();
+$api_instance = new Softonic\\CatalogApiSdk\Api\ProgramsReviewTypesReviewsImagesApi();
 $id_program = "id_program_example"; // string | Program UUID
 $id_review_type = "id_review_type_example"; // string | Review owner type
 $id_review = "id_review_example"; // string | Review identifier as UUID
-$body = new \Softonic\CatalogApiSdk\Client\Model\ProgramReviewTypeReviewImage(); // \Softonic\CatalogApiSdk\Client\Model\ProgramReviewTypeReviewImage | 
+$body = new \Softonic\\CatalogApiSdk\Client\\Model\ProgramReviewTypeReviewImage(); // \Softonic\\CatalogApiSdk\Client\\Model\ProgramReviewTypeReviewImage | 
 
 try {
     $api_instance->createProgramReviewTypeReviewImage($id_program, $id_review_type, $id_review, $body);
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
  **id_program** | **string**| Program UUID |
  **id_review_type** | **string**| Review owner type |
  **id_review** | **string**| Review identifier as UUID |
- **body** | [**\Softonic\CatalogApiSdk\Client\Model\ProgramReviewTypeReviewImage**](../Model/\Softonic\CatalogApiSdk\Client\Model\ProgramReviewTypeReviewImage.md)|  | [optional]
+ **body** | [**\Softonic\\CatalogApiSdk\Client\\Model\ProgramReviewTypeReviewImage**](../Model/\Softonic\\CatalogApiSdk\Client\\Model\ProgramReviewTypeReviewImage.md)|  | [optional]
 
 ### Return type
 
@@ -84,15 +84,15 @@ Deletes a ProgramReviewTypeReviewImage
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsReviewTypesReviewsImagesApi();
+$api_instance = new Softonic\\CatalogApiSdk\Api\ProgramsReviewTypesReviewsImagesApi();
 $id_program = "id_program_example"; // string | Program UUID
 $id_review_type = "id_review_type_example"; // string | Review owner type
 $id_review = "id_review_example"; // string | Review identifier as UUID
@@ -131,7 +131,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **findProgramReviewTypeReviewImage**
-> \Softonic\CatalogApiSdk\Client\Model\ProgramReviewTypeReviewImage[] findProgramReviewTypeReviewImage($id_program, $id_review_type, $id_review)
+> \Softonic\\CatalogApiSdk\Client\\Model\ProgramReviewTypeReviewImage[] findProgramReviewTypeReviewImage($id_program, $id_review_type, $id_review)
 
 List of ProgramReviewTypeReviewImages
 
@@ -143,15 +143,15 @@ List of ProgramReviewTypeReviewImages
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsReviewTypesReviewsImagesApi();
+$api_instance = new Softonic\\CatalogApiSdk\Api\ProgramsReviewTypesReviewsImagesApi();
 $id_program = "id_program_example"; // string | Program UUID
 $id_review_type = "id_review_type_example"; // string | Review owner type
 $id_review = "id_review_example"; // string | Review identifier as UUID
@@ -175,7 +175,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Client\Model\ProgramReviewTypeReviewImage[]**](../Model/ProgramReviewTypeReviewImage.md)
+[**\Softonic\\CatalogApiSdk\Client\\Model\ProgramReviewTypeReviewImage[]**](../Model/ProgramReviewTypeReviewImage.md)
 
 ### Authorization
 
@@ -189,7 +189,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readProgramReviewTypeReviewImage**
-> \Softonic\CatalogApiSdk\Client\Model\ProgramReviewTypeReviewImage readProgramReviewTypeReviewImage($id_program, $id_review_type, $id_review, $id_image)
+> \Softonic\\CatalogApiSdk\Client\\Model\ProgramReviewTypeReviewImage readProgramReviewTypeReviewImage($id_program, $id_review_type, $id_review, $id_image)
 
 Fetches a single ProgramReviewTypeReviewImage
 
@@ -201,15 +201,15 @@ Fetches a single ProgramReviewTypeReviewImage
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsReviewTypesReviewsImagesApi();
+$api_instance = new Softonic\\CatalogApiSdk\Api\ProgramsReviewTypesReviewsImagesApi();
 $id_program = "id_program_example"; // string | Program UUID
 $id_review_type = "id_review_type_example"; // string | Review owner type
 $id_review = "id_review_example"; // string | Review identifier as UUID
@@ -235,7 +235,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Client\Model\ProgramReviewTypeReviewImage**](../Model/ProgramReviewTypeReviewImage.md)
+[**\Softonic\\CatalogApiSdk\Client\\Model\ProgramReviewTypeReviewImage**](../Model/ProgramReviewTypeReviewImage.md)
 
 ### Authorization
 
@@ -261,20 +261,20 @@ Entirely replaces a ProgramReviewTypeReviewImage
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsReviewTypesReviewsImagesApi();
+$api_instance = new Softonic\\CatalogApiSdk\Api\ProgramsReviewTypesReviewsImagesApi();
 $id_program = "id_program_example"; // string | Program UUID
 $id_review_type = "id_review_type_example"; // string | Review owner type
 $id_review = "id_review_example"; // string | Review identifier as UUID
 $id_image = "id_image_example"; // string | Image identifier in SHA1-Hash format derived from path
-$body = new \Softonic\CatalogApiSdk\Client\Model\ProgramReviewTypeReviewImage(); // \Softonic\CatalogApiSdk\Client\Model\ProgramReviewTypeReviewImage | 
+$body = new \Softonic\\CatalogApiSdk\Client\\Model\ProgramReviewTypeReviewImage(); // \Softonic\\CatalogApiSdk\Client\\Model\ProgramReviewTypeReviewImage | 
 
 try {
     $api_instance->replaceProgramReviewTypeReviewImage($id_program, $id_review_type, $id_review, $id_image, $body);
@@ -292,7 +292,7 @@ Name | Type | Description  | Notes
  **id_review_type** | **string**| Review owner type |
  **id_review** | **string**| Review identifier as UUID |
  **id_image** | **string**| Image identifier in SHA1-Hash format derived from path |
- **body** | [**\Softonic\CatalogApiSdk\Client\Model\ProgramReviewTypeReviewImage**](../Model/\Softonic\CatalogApiSdk\Client\Model\ProgramReviewTypeReviewImage.md)|  | [optional]
+ **body** | [**\Softonic\\CatalogApiSdk\Client\\Model\ProgramReviewTypeReviewImage**](../Model/\Softonic\\CatalogApiSdk\Client\\Model\ProgramReviewTypeReviewImage.md)|  | [optional]
 
 ### Return type
 
@@ -322,20 +322,20 @@ Partially updates a ProgramReviewTypeReviewImage
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsReviewTypesReviewsImagesApi();
+$api_instance = new Softonic\\CatalogApiSdk\Api\ProgramsReviewTypesReviewsImagesApi();
 $id_program = "id_program_example"; // string | Program UUID
 $id_review_type = "id_review_type_example"; // string | Review owner type
 $id_review = "id_review_example"; // string | Review identifier as UUID
 $id_image = "id_image_example"; // string | Image identifier in SHA1-Hash format derived from path
-$body = new \Softonic\CatalogApiSdk\Client\Model\ProgramReviewTypeReviewImage(); // \Softonic\CatalogApiSdk\Client\Model\ProgramReviewTypeReviewImage | 
+$body = new \Softonic\\CatalogApiSdk\Client\\Model\ProgramReviewTypeReviewImage(); // \Softonic\\CatalogApiSdk\Client\\Model\ProgramReviewTypeReviewImage | 
 
 try {
     $api_instance->updateProgramReviewTypeReviewImage($id_program, $id_review_type, $id_review, $id_image, $body);
@@ -353,7 +353,7 @@ Name | Type | Description  | Notes
  **id_review_type** | **string**| Review owner type |
  **id_review** | **string**| Review identifier as UUID |
  **id_image** | **string**| Image identifier in SHA1-Hash format derived from path |
- **body** | [**\Softonic\CatalogApiSdk\Client\Model\ProgramReviewTypeReviewImage**](../Model/\Softonic\CatalogApiSdk\Client\Model\ProgramReviewTypeReviewImage.md)|  | [optional]
+ **body** | [**\Softonic\\CatalogApiSdk\Client\\Model\ProgramReviewTypeReviewImage**](../Model/\Softonic\\CatalogApiSdk\Client\\Model\ProgramReviewTypeReviewImage.md)|  | [optional]
 
 ### Return type
 

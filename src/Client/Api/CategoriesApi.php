@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Softonic\CatalogApiSdk
+ * @package  Softonic\\CatalogApiSdk
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,18 +26,18 @@
  * Do not edit the class manually.
  */
 
-namespace Softonic\CatalogApiSdk\Client\Api;
+namespace Softonic\\CatalogApiSdk\Client\\Api;
 
-use \Softonic\CatalogApiSdk\ApiClient;
-use \Softonic\CatalogApiSdk\ApiException;
-use \Softonic\CatalogApiSdk\Configuration;
-use \Softonic\CatalogApiSdk\ObjectSerializer;
+use \Softonic\\CatalogApiSdk\ApiClient;
+use \Softonic\\CatalogApiSdk\ApiException;
+use \Softonic\\CatalogApiSdk\Configuration;
+use \Softonic\\CatalogApiSdk\ObjectSerializer;
 
 /**
  * CategoriesApi Class Doc Comment
  *
  * @category Class
- * @package  Softonic\CatalogApiSdk
+ * @package  Softonic\\CatalogApiSdk
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -46,16 +46,16 @@ class CategoriesApi
     /**
      * API Client
      *
-     * @var \Softonic\CatalogApiSdk\ApiClient instance of the ApiClient
+     * @var \Softonic\\CatalogApiSdk\ApiClient instance of the ApiClient
      */
     protected $apiClient;
 
     /**
      * Constructor
      *
-     * @param \Softonic\CatalogApiSdk\ApiClient|null $apiClient The api client to use
+     * @param \Softonic\\CatalogApiSdk\ApiClient|null $apiClient The api client to use
      */
-    public function __construct(\Softonic\CatalogApiSdk\ApiClient $apiClient = null)
+    public function __construct(\Softonic\\CatalogApiSdk\ApiClient $apiClient = null)
     {
         if ($apiClient === null) {
             $apiClient = new ApiClient();
@@ -67,7 +67,7 @@ class CategoriesApi
     /**
      * Get API client
      *
-     * @return \Softonic\CatalogApiSdk\ApiClient get the API client
+     * @return \Softonic\\CatalogApiSdk\ApiClient get the API client
      */
     public function getApiClient()
     {
@@ -77,11 +77,11 @@ class CategoriesApi
     /**
      * Set the API client
      *
-     * @param \Softonic\CatalogApiSdk\ApiClient $apiClient set the API client
+     * @param \Softonic\\CatalogApiSdk\ApiClient $apiClient set the API client
      *
      * @return CategoriesApi
      */
-    public function setApiClient(\Softonic\CatalogApiSdk\ApiClient $apiClient)
+    public function setApiClient(\Softonic\\CatalogApiSdk\ApiClient $apiClient)
     {
         $this->apiClient = $apiClient;
         return $this;
@@ -92,8 +92,8 @@ class CategoriesApi
      *
      * Creates a new Category
      *
-     * @param \Softonic\CatalogApiSdk\Client\Model\Category $body  (optional)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @param \Softonic\\CatalogApiSdk\Client\\Model\Category $body  (optional)
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
      * @return void
      */
     public function createCategory($body = null)
@@ -107,8 +107,8 @@ class CategoriesApi
      *
      * Creates a new Category
      *
-     * @param \Softonic\CatalogApiSdk\Client\Model\Category $body  (optional)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @param \Softonic\\CatalogApiSdk\Client\\Model\Category $body  (optional)
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function createCategoryWithHttpInfo($body = null)
@@ -180,7 +180,7 @@ class CategoriesApi
      * Deletes a Category
      *
      * @param string $id_category Categories identifier (required)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
      * @return void
      */
     public function deleteCategory($id_category)
@@ -195,7 +195,7 @@ class CategoriesApi
      * Deletes a Category
      *
      * @param string $id_category Categories identifier (required)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteCategoryWithHttpInfo($id_category)
@@ -280,8 +280,8 @@ class CategoriesApi
      *
      * List of Categorys
      *
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
-     * @return \Softonic\CatalogApiSdk\Client\Model\Category[]
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
+     * @return \Softonic\\CatalogApiSdk\Client\\Model\Category[]
      */
     public function findCategory()
     {
@@ -294,8 +294,8 @@ class CategoriesApi
      *
      * List of Categorys
      *
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
-     * @return array of \Softonic\CatalogApiSdk\Client\Model\Category[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
+     * @return array of \Softonic\\CatalogApiSdk\Client\\Model\Category[], HTTP status code, HTTP response headers (array of strings)
      */
     public function findCategoryWithHttpInfo()
     {
@@ -342,15 +342,15 @@ class CategoriesApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\CatalogApiSdk\Client\Model\Category[]',
+                '\Softonic\\CatalogApiSdk\Client\\Model\Category[]',
                 '/categories'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Client\Model\Category[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Softonic\\CatalogApiSdk\Client\\Model\Category[]', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Softonic\CatalogApiSdk\Client\Model\Category[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Softonic\\CatalogApiSdk\Client\\Model\Category[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -365,8 +365,8 @@ class CategoriesApi
      * Fetches a single Category
      *
      * @param string $id_category Categories identifier (required)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
-     * @return \Softonic\CatalogApiSdk\Client\Model\Category
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
+     * @return \Softonic\\CatalogApiSdk\Client\\Model\Category
      */
     public function readCategory($id_category)
     {
@@ -380,8 +380,8 @@ class CategoriesApi
      * Fetches a single Category
      *
      * @param string $id_category Categories identifier (required)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
-     * @return array of \Softonic\CatalogApiSdk\Client\Model\Category, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
+     * @return array of \Softonic\\CatalogApiSdk\Client\\Model\Category, HTTP status code, HTTP response headers (array of strings)
      */
     public function readCategoryWithHttpInfo($id_category)
     {
@@ -447,15 +447,15 @@ class CategoriesApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\CatalogApiSdk\Client\Model\Category',
+                '\Softonic\\CatalogApiSdk\Client\\Model\Category',
                 '/categories/{id_category}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Client\Model\Category', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Softonic\\CatalogApiSdk\Client\\Model\Category', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Softonic\CatalogApiSdk\Client\Model\Category', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Softonic\\CatalogApiSdk\Client\\Model\Category', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -470,8 +470,8 @@ class CategoriesApi
      * Entirely replaces a Category
      *
      * @param string $id_category Categories identifier (required)
-     * @param \Softonic\CatalogApiSdk\Client\Model\Category $body  (optional)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @param \Softonic\\CatalogApiSdk\Client\\Model\Category $body  (optional)
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
      * @return void
      */
     public function replaceCategory($id_category, $body = null)
@@ -486,8 +486,8 @@ class CategoriesApi
      * Entirely replaces a Category
      *
      * @param string $id_category Categories identifier (required)
-     * @param \Softonic\CatalogApiSdk\Client\Model\Category $body  (optional)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @param \Softonic\\CatalogApiSdk\Client\\Model\Category $body  (optional)
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function replaceCategoryWithHttpInfo($id_category, $body = null)
@@ -578,8 +578,8 @@ class CategoriesApi
      * Partially updates a Category
      *
      * @param string $id_category Categories identifier (required)
-     * @param \Softonic\CatalogApiSdk\Client\Model\Category $body  (optional)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @param \Softonic\\CatalogApiSdk\Client\\Model\Category $body  (optional)
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
      * @return void
      */
     public function updateCategory($id_category, $body = null)
@@ -594,8 +594,8 @@ class CategoriesApi
      * Partially updates a Category
      *
      * @param string $id_category Categories identifier (required)
-     * @param \Softonic\CatalogApiSdk\Client\Model\Category $body  (optional)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @param \Softonic\\CatalogApiSdk\Client\\Model\Category $body  (optional)
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateCategoryWithHttpInfo($id_category, $body = null)

@@ -1,4 +1,4 @@
-# Softonic\CatalogApiSdk\ProgramsVersionsLocalesReviewTypesApi
+# Softonic\\CatalogApiSdk\ProgramsVersionsLocalesReviewTypesApi
 
 All URIs are relative to *https://catalog.sftapi.com*
 
@@ -25,19 +25,19 @@ Creates a new ProgramVersionLocaleReviewType
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesReviewTypesApi();
+$api_instance = new Softonic\\CatalogApiSdk\Api\ProgramsVersionsLocalesReviewTypesApi();
 $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Program version identifier
 $id_locale = "id_locale_example"; // string | Locale identifier
-$body = new \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType(); // \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType | 
+$body = new \Softonic\\CatalogApiSdk\Client\\Model\ProgramVersionLocaleReviewType(); // \Softonic\\CatalogApiSdk\Client\\Model\ProgramVersionLocaleReviewType | 
 
 try {
     $api_instance->createProgramVersionLocaleReviewType($id_program, $id_version, $id_locale, $body);
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
  **id_program** | **string**| Program UUID |
  **id_version** | **string**| Program version identifier |
  **id_locale** | **string**| Locale identifier |
- **body** | [**\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType**](../Model/\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType.md)|  | [optional]
+ **body** | [**\Softonic\\CatalogApiSdk\Client\\Model\ProgramVersionLocaleReviewType**](../Model/\Softonic\\CatalogApiSdk\Client\\Model\ProgramVersionLocaleReviewType.md)|  | [optional]
 
 ### Return type
 
@@ -84,15 +84,15 @@ Deletes a ProgramVersionLocaleReviewType
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesReviewTypesApi();
+$api_instance = new Softonic\\CatalogApiSdk\Api\ProgramsVersionsLocalesReviewTypesApi();
 $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Program version identifier
 $id_locale = "id_locale_example"; // string | Locale identifier
@@ -131,7 +131,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **findProgramVersionLocaleReviewType**
-> \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType[] findProgramVersionLocaleReviewType($id_program, $id_version, $id_locale)
+> \Softonic\\CatalogApiSdk\Client\\Model\ProgramVersionLocaleReviewType[] findProgramVersionLocaleReviewType($id_program, $id_version, $id_locale)
 
 List of ProgramVersionLocaleReviewTypes
 
@@ -143,15 +143,15 @@ List of ProgramVersionLocaleReviewTypes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesReviewTypesApi();
+$api_instance = new Softonic\\CatalogApiSdk\Api\ProgramsVersionsLocalesReviewTypesApi();
 $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Program version identifier
 $id_locale = "id_locale_example"; // string | Locale identifier
@@ -175,7 +175,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType[]**](../Model/ProgramVersionLocaleReviewType.md)
+[**\Softonic\\CatalogApiSdk\Client\\Model\ProgramVersionLocaleReviewType[]**](../Model/ProgramVersionLocaleReviewType.md)
 
 ### Authorization
 
@@ -189,7 +189,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readProgramVersionLocaleReviewType**
-> \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType readProgramVersionLocaleReviewType($id_program, $id_version, $id_locale, $id_review_type)
+> \Softonic\\CatalogApiSdk\Client\\Model\ProgramVersionLocaleReviewType readProgramVersionLocaleReviewType($id_program, $id_version, $id_locale, $id_review_type)
 
 Fetches a single ProgramVersionLocaleReviewType
 
@@ -201,15 +201,15 @@ Fetches a single ProgramVersionLocaleReviewType
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesReviewTypesApi();
+$api_instance = new Softonic\\CatalogApiSdk\Api\ProgramsVersionsLocalesReviewTypesApi();
 $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Program version identifier
 $id_locale = "id_locale_example"; // string | Locale identifier
@@ -235,7 +235,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType**](../Model/ProgramVersionLocaleReviewType.md)
+[**\Softonic\\CatalogApiSdk\Client\\Model\ProgramVersionLocaleReviewType**](../Model/ProgramVersionLocaleReviewType.md)
 
 ### Authorization
 
@@ -261,20 +261,20 @@ Entirely replaces a ProgramVersionLocaleReviewType
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesReviewTypesApi();
+$api_instance = new Softonic\\CatalogApiSdk\Api\ProgramsVersionsLocalesReviewTypesApi();
 $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Program version identifier
 $id_locale = "id_locale_example"; // string | Locale identifier
 $id_review_type = "id_review_type_example"; // string | Review owner type
-$body = new \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType(); // \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType | 
+$body = new \Softonic\\CatalogApiSdk\Client\\Model\ProgramVersionLocaleReviewType(); // \Softonic\\CatalogApiSdk\Client\\Model\ProgramVersionLocaleReviewType | 
 
 try {
     $api_instance->replaceProgramVersionLocaleReviewType($id_program, $id_version, $id_locale, $id_review_type, $body);
@@ -292,7 +292,7 @@ Name | Type | Description  | Notes
  **id_version** | **string**| Program version identifier |
  **id_locale** | **string**| Locale identifier |
  **id_review_type** | **string**| Review owner type |
- **body** | [**\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType**](../Model/\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType.md)|  | [optional]
+ **body** | [**\Softonic\\CatalogApiSdk\Client\\Model\ProgramVersionLocaleReviewType**](../Model/\Softonic\\CatalogApiSdk\Client\\Model\ProgramVersionLocaleReviewType.md)|  | [optional]
 
 ### Return type
 
@@ -322,20 +322,20 @@ Partially updates a ProgramVersionLocaleReviewType
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesReviewTypesApi();
+$api_instance = new Softonic\\CatalogApiSdk\Api\ProgramsVersionsLocalesReviewTypesApi();
 $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Program version identifier
 $id_locale = "id_locale_example"; // string | Locale identifier
 $id_review_type = "id_review_type_example"; // string | Review owner type
-$body = new \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType(); // \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType | 
+$body = new \Softonic\\CatalogApiSdk\Client\\Model\ProgramVersionLocaleReviewType(); // \Softonic\\CatalogApiSdk\Client\\Model\ProgramVersionLocaleReviewType | 
 
 try {
     $api_instance->updateProgramVersionLocaleReviewType($id_program, $id_version, $id_locale, $id_review_type, $body);
@@ -353,7 +353,7 @@ Name | Type | Description  | Notes
  **id_version** | **string**| Program version identifier |
  **id_locale** | **string**| Locale identifier |
  **id_review_type** | **string**| Review owner type |
- **body** | [**\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType**](../Model/\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType.md)|  | [optional]
+ **body** | [**\Softonic\\CatalogApiSdk\Client\\Model\ProgramVersionLocaleReviewType**](../Model/\Softonic\\CatalogApiSdk\Client\\Model\ProgramVersionLocaleReviewType.md)|  | [optional]
 
 ### Return type
 

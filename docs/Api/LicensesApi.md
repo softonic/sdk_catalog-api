@@ -1,4 +1,4 @@
-# Softonic\CatalogApiSdk\LicensesApi
+# Softonic\\CatalogApiSdk\LicensesApi
 
 All URIs are relative to *https://catalog.sftapi.com*
 
@@ -25,16 +25,16 @@ Creates a new License
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\LicensesApi();
-$body = new \Softonic\CatalogApiSdk\Client\Model\License(); // \Softonic\CatalogApiSdk\Client\Model\License | 
+$api_instance = new Softonic\\CatalogApiSdk\Api\LicensesApi();
+$body = new \Softonic\\CatalogApiSdk\Client\\Model\License(); // \Softonic\\CatalogApiSdk\Client\\Model\License | 
 
 try {
     $api_instance->createLicense($body);
@@ -48,7 +48,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Softonic\CatalogApiSdk\Client\Model\License**](../Model/\Softonic\CatalogApiSdk\Client\Model\License.md)|  | [optional]
+ **body** | [**\Softonic\\CatalogApiSdk\Client\\Model\License**](../Model/\Softonic\\CatalogApiSdk\Client\\Model\License.md)|  | [optional]
 
 ### Return type
 
@@ -78,15 +78,15 @@ Deletes a License
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\LicensesApi();
+$api_instance = new Softonic\\CatalogApiSdk\Api\LicensesApi();
 $id_license = "id_license_example"; // string | License acronym.
 
 try {
@@ -119,7 +119,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **findLicense**
-> \Softonic\CatalogApiSdk\Client\Model\License[] findLicense()
+> \Softonic\\CatalogApiSdk\Client\\Model\License[] findLicense()
 
 List of Licenses
 
@@ -131,15 +131,15 @@ List of Licenses
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\LicensesApi();
+$api_instance = new Softonic\\CatalogApiSdk\Api\LicensesApi();
 
 try {
     $result = $api_instance->findLicense();
@@ -155,7 +155,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Client\Model\License[]**](../Model/License.md)
+[**\Softonic\\CatalogApiSdk\Client\\Model\License[]**](../Model/License.md)
 
 ### Authorization
 
@@ -169,7 +169,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readLicense**
-> \Softonic\CatalogApiSdk\Client\Model\License readLicense($id_license)
+> \Softonic\\CatalogApiSdk\Client\\Model\License readLicense($id_license)
 
 Fetches a single License
 
@@ -181,15 +181,15 @@ Fetches a single License
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\LicensesApi();
+$api_instance = new Softonic\\CatalogApiSdk\Api\LicensesApi();
 $id_license = "id_license_example"; // string | License acronym.
 
 try {
@@ -209,7 +209,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Client\Model\License**](../Model/License.md)
+[**\Softonic\\CatalogApiSdk\Client\\Model\License**](../Model/License.md)
 
 ### Authorization
 
@@ -235,17 +235,17 @@ Entirely replaces a License
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\LicensesApi();
+$api_instance = new Softonic\\CatalogApiSdk\Api\LicensesApi();
 $id_license = "id_license_example"; // string | License acronym.
-$body = new \Softonic\CatalogApiSdk\Client\Model\License(); // \Softonic\CatalogApiSdk\Client\Model\License | 
+$body = new \Softonic\\CatalogApiSdk\Client\\Model\License(); // \Softonic\\CatalogApiSdk\Client\\Model\License | 
 
 try {
     $api_instance->replaceLicense($id_license, $body);
@@ -260,7 +260,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_license** | **string**| License acronym. |
- **body** | [**\Softonic\CatalogApiSdk\Client\Model\License**](../Model/\Softonic\CatalogApiSdk\Client\Model\License.md)|  | [optional]
+ **body** | [**\Softonic\\CatalogApiSdk\Client\\Model\License**](../Model/\Softonic\\CatalogApiSdk\Client\\Model\License.md)|  | [optional]
 
 ### Return type
 
@@ -290,17 +290,17 @@ Partially updates a License
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\LicensesApi();
+$api_instance = new Softonic\\CatalogApiSdk\Api\LicensesApi();
 $id_license = "id_license_example"; // string | License acronym.
-$body = new \Softonic\CatalogApiSdk\Client\Model\License(); // \Softonic\CatalogApiSdk\Client\Model\License | 
+$body = new \Softonic\\CatalogApiSdk\Client\\Model\License(); // \Softonic\\CatalogApiSdk\Client\\Model\License | 
 
 try {
     $api_instance->updateLicense($id_license, $body);
@@ -315,7 +315,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_license** | **string**| License acronym. |
- **body** | [**\Softonic\CatalogApiSdk\Client\Model\License**](../Model/\Softonic\CatalogApiSdk\Client\Model\License.md)|  | [optional]
+ **body** | [**\Softonic\\CatalogApiSdk\Client\\Model\License**](../Model/\Softonic\\CatalogApiSdk\Client\\Model\License.md)|  | [optional]
 
 ### Return type
 

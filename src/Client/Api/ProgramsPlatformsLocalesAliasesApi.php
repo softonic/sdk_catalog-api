@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Softonic\CatalogApiSdk
+ * @package  Softonic\\CatalogApiSdk
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,18 +26,18 @@
  * Do not edit the class manually.
  */
 
-namespace Softonic\CatalogApiSdk\Client\Api;
+namespace Softonic\\CatalogApiSdk\Client\\Api;
 
-use \Softonic\CatalogApiSdk\ApiClient;
-use \Softonic\CatalogApiSdk\ApiException;
-use \Softonic\CatalogApiSdk\Configuration;
-use \Softonic\CatalogApiSdk\ObjectSerializer;
+use \Softonic\\CatalogApiSdk\ApiClient;
+use \Softonic\\CatalogApiSdk\ApiException;
+use \Softonic\\CatalogApiSdk\Configuration;
+use \Softonic\\CatalogApiSdk\ObjectSerializer;
 
 /**
  * ProgramsPlatformsLocalesAliasesApi Class Doc Comment
  *
  * @category Class
- * @package  Softonic\CatalogApiSdk
+ * @package  Softonic\\CatalogApiSdk
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -46,16 +46,16 @@ class ProgramsPlatformsLocalesAliasesApi
     /**
      * API Client
      *
-     * @var \Softonic\CatalogApiSdk\ApiClient instance of the ApiClient
+     * @var \Softonic\\CatalogApiSdk\ApiClient instance of the ApiClient
      */
     protected $apiClient;
 
     /**
      * Constructor
      *
-     * @param \Softonic\CatalogApiSdk\ApiClient|null $apiClient The api client to use
+     * @param \Softonic\\CatalogApiSdk\ApiClient|null $apiClient The api client to use
      */
-    public function __construct(\Softonic\CatalogApiSdk\ApiClient $apiClient = null)
+    public function __construct(\Softonic\\CatalogApiSdk\ApiClient $apiClient = null)
     {
         if ($apiClient === null) {
             $apiClient = new ApiClient();
@@ -67,7 +67,7 @@ class ProgramsPlatformsLocalesAliasesApi
     /**
      * Get API client
      *
-     * @return \Softonic\CatalogApiSdk\ApiClient get the API client
+     * @return \Softonic\\CatalogApiSdk\ApiClient get the API client
      */
     public function getApiClient()
     {
@@ -77,11 +77,11 @@ class ProgramsPlatformsLocalesAliasesApi
     /**
      * Set the API client
      *
-     * @param \Softonic\CatalogApiSdk\ApiClient $apiClient set the API client
+     * @param \Softonic\\CatalogApiSdk\ApiClient $apiClient set the API client
      *
      * @return ProgramsPlatformsLocalesAliasesApi
      */
-    public function setApiClient(\Softonic\CatalogApiSdk\ApiClient $apiClient)
+    public function setApiClient(\Softonic\\CatalogApiSdk\ApiClient $apiClient)
     {
         $this->apiClient = $apiClient;
         return $this;
@@ -96,7 +96,7 @@ class ProgramsPlatformsLocalesAliasesApi
      * @param string $id_platform Platform identifier (required)
      * @param string $id_locale Locale identifier (required)
      * @param string $id_alias Program alias (required)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
      * @return void
      */
     public function deleteProgramPlatformLocaleAlias($id_program, $id_platform, $id_locale, $id_alias)
@@ -114,7 +114,7 @@ class ProgramsPlatformsLocalesAliasesApi
      * @param string $id_platform Platform identifier (required)
      * @param string $id_locale Locale identifier (required)
      * @param string $id_alias Program alias (required)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteProgramPlatformLocaleAliasWithHttpInfo($id_program, $id_platform, $id_locale, $id_alias)
@@ -260,8 +260,8 @@ class ProgramsPlatformsLocalesAliasesApi
      * @param string $id_platform Platform identifier (required)
      * @param string $id_locale Locale identifier (required)
      * @param int $last_updated Use it to return just the active program alias (optional)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
-     * @return \Softonic\CatalogApiSdk\Client\Model\ProgramPlatformLocaleAlias[]
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
+     * @return \Softonic\\CatalogApiSdk\Client\\Model\ProgramPlatformLocaleAlias[]
      */
     public function findProgramPlatformLocaleAlias($id_program, $id_platform, $id_locale, $last_updated = null)
     {
@@ -278,8 +278,8 @@ class ProgramsPlatformsLocalesAliasesApi
      * @param string $id_platform Platform identifier (required)
      * @param string $id_locale Locale identifier (required)
      * @param int $last_updated Use it to return just the active program alias (optional)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
-     * @return array of \Softonic\CatalogApiSdk\Client\Model\ProgramPlatformLocaleAlias[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
+     * @return array of \Softonic\\CatalogApiSdk\Client\\Model\ProgramPlatformLocaleAlias[], HTTP status code, HTTP response headers (array of strings)
      */
     public function findProgramPlatformLocaleAliasWithHttpInfo($id_program, $id_platform, $id_locale, $last_updated = null)
     {
@@ -387,15 +387,15 @@ class ProgramsPlatformsLocalesAliasesApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\CatalogApiSdk\Client\Model\ProgramPlatformLocaleAlias[]',
+                '\Softonic\\CatalogApiSdk\Client\\Model\ProgramPlatformLocaleAlias[]',
                 '/programs/{id_program}/platforms/{id_platform}/locales/{id_locale}/aliases'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Client\Model\ProgramPlatformLocaleAlias[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Softonic\\CatalogApiSdk\Client\\Model\ProgramPlatformLocaleAlias[]', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Softonic\CatalogApiSdk\Client\Model\ProgramPlatformLocaleAlias[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Softonic\\CatalogApiSdk\Client\\Model\ProgramPlatformLocaleAlias[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -413,7 +413,7 @@ class ProgramsPlatformsLocalesAliasesApi
      * @param string $id_platform Platform identifier (required)
      * @param string $id_locale Locale identifier (required)
      * @param string $id_alias Program alias (required)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
      * @return void
      */
     public function replaceProgramPlatformLocaleAlias($id_program, $id_platform, $id_locale, $id_alias)
@@ -431,7 +431,7 @@ class ProgramsPlatformsLocalesAliasesApi
      * @param string $id_platform Platform identifier (required)
      * @param string $id_locale Locale identifier (required)
      * @param string $id_alias Program alias (required)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function replaceProgramPlatformLocaleAliasWithHttpInfo($id_program, $id_platform, $id_locale, $id_alias)

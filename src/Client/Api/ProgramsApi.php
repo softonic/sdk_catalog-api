@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Softonic\CatalogApiSdk
+ * @package  Softonic\\CatalogApiSdk
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,18 +26,18 @@
  * Do not edit the class manually.
  */
 
-namespace Softonic\CatalogApiSdk\Client\Api;
+namespace Softonic\\CatalogApiSdk\Client\\Api;
 
-use \Softonic\CatalogApiSdk\ApiClient;
-use \Softonic\CatalogApiSdk\ApiException;
-use \Softonic\CatalogApiSdk\Configuration;
-use \Softonic\CatalogApiSdk\ObjectSerializer;
+use \Softonic\\CatalogApiSdk\ApiClient;
+use \Softonic\\CatalogApiSdk\ApiException;
+use \Softonic\\CatalogApiSdk\Configuration;
+use \Softonic\\CatalogApiSdk\ObjectSerializer;
 
 /**
  * ProgramsApi Class Doc Comment
  *
  * @category Class
- * @package  Softonic\CatalogApiSdk
+ * @package  Softonic\\CatalogApiSdk
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -46,16 +46,16 @@ class ProgramsApi
     /**
      * API Client
      *
-     * @var \Softonic\CatalogApiSdk\ApiClient instance of the ApiClient
+     * @var \Softonic\\CatalogApiSdk\ApiClient instance of the ApiClient
      */
     protected $apiClient;
 
     /**
      * Constructor
      *
-     * @param \Softonic\CatalogApiSdk\ApiClient|null $apiClient The api client to use
+     * @param \Softonic\\CatalogApiSdk\ApiClient|null $apiClient The api client to use
      */
-    public function __construct(\Softonic\CatalogApiSdk\ApiClient $apiClient = null)
+    public function __construct(\Softonic\\CatalogApiSdk\ApiClient $apiClient = null)
     {
         if ($apiClient === null) {
             $apiClient = new ApiClient();
@@ -67,7 +67,7 @@ class ProgramsApi
     /**
      * Get API client
      *
-     * @return \Softonic\CatalogApiSdk\ApiClient get the API client
+     * @return \Softonic\\CatalogApiSdk\ApiClient get the API client
      */
     public function getApiClient()
     {
@@ -77,11 +77,11 @@ class ProgramsApi
     /**
      * Set the API client
      *
-     * @param \Softonic\CatalogApiSdk\ApiClient $apiClient set the API client
+     * @param \Softonic\\CatalogApiSdk\ApiClient $apiClient set the API client
      *
      * @return ProgramsApi
      */
-    public function setApiClient(\Softonic\CatalogApiSdk\ApiClient $apiClient)
+    public function setApiClient(\Softonic\\CatalogApiSdk\ApiClient $apiClient)
     {
         $this->apiClient = $apiClient;
         return $this;
@@ -92,8 +92,8 @@ class ProgramsApi
      *
      * Creates a new Program
      *
-     * @param \Softonic\CatalogApiSdk\Client\Model\Program $body  (optional)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @param \Softonic\\CatalogApiSdk\Client\\Model\Program $body  (optional)
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
      * @return void
      */
     public function createProgram($body = null)
@@ -107,8 +107,8 @@ class ProgramsApi
      *
      * Creates a new Program
      *
-     * @param \Softonic\CatalogApiSdk\Client\Model\Program $body  (optional)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @param \Softonic\\CatalogApiSdk\Client\\Model\Program $body  (optional)
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function createProgramWithHttpInfo($body = null)
@@ -180,7 +180,7 @@ class ProgramsApi
      * Deletes a Program
      *
      * @param string $id_program Program UUID or numeric ID (required)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
      * @return void
      */
     public function deleteProgram($id_program)
@@ -195,7 +195,7 @@ class ProgramsApi
      * Deletes a Program
      *
      * @param string $id_program Program UUID or numeric ID (required)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteProgramWithHttpInfo($id_program)
@@ -283,8 +283,8 @@ class ProgramsApi
      * @param int $page Page of the pagination when listing programs (optional)
      * @param int $limit Number of results per page when listing programs (optional)
      * @param string $search Field to search for (optional)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
-     * @return \Softonic\CatalogApiSdk\Client\Model\Program[]
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
+     * @return \Softonic\\CatalogApiSdk\Client\\Model\Program[]
      */
     public function findProgram($page = null, $limit = null, $search = null)
     {
@@ -300,8 +300,8 @@ class ProgramsApi
      * @param int $page Page of the pagination when listing programs (optional)
      * @param int $limit Number of results per page when listing programs (optional)
      * @param string $search Field to search for (optional)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
-     * @return array of \Softonic\CatalogApiSdk\Client\Model\Program[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
+     * @return array of \Softonic\\CatalogApiSdk\Client\\Model\Program[], HTTP status code, HTTP response headers (array of strings)
      */
     public function findProgramWithHttpInfo($page = null, $limit = null, $search = null)
     {
@@ -375,15 +375,15 @@ class ProgramsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\CatalogApiSdk\Client\Model\Program[]',
+                '\Softonic\\CatalogApiSdk\Client\\Model\Program[]',
                 '/programs'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Client\Model\Program[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Softonic\\CatalogApiSdk\Client\\Model\Program[]', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Softonic\CatalogApiSdk\Client\Model\Program[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Softonic\\CatalogApiSdk\Client\\Model\Program[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -398,8 +398,8 @@ class ProgramsApi
      * Fetches a single Program
      *
      * @param string $id_program Program UUID or numeric ID (required)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
-     * @return \Softonic\CatalogApiSdk\Client\Model\Program
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
+     * @return \Softonic\\CatalogApiSdk\Client\\Model\Program
      */
     public function readProgram($id_program)
     {
@@ -413,8 +413,8 @@ class ProgramsApi
      * Fetches a single Program
      *
      * @param string $id_program Program UUID or numeric ID (required)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
-     * @return array of \Softonic\CatalogApiSdk\Client\Model\Program, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
+     * @return array of \Softonic\\CatalogApiSdk\Client\\Model\Program, HTTP status code, HTTP response headers (array of strings)
      */
     public function readProgramWithHttpInfo($id_program)
     {
@@ -480,15 +480,15 @@ class ProgramsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\CatalogApiSdk\Client\Model\Program',
+                '\Softonic\\CatalogApiSdk\Client\\Model\Program',
                 '/programs/{id_program}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Client\Model\Program', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Softonic\\CatalogApiSdk\Client\\Model\Program', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Softonic\CatalogApiSdk\Client\Model\Program', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Softonic\\CatalogApiSdk\Client\\Model\Program', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -503,8 +503,8 @@ class ProgramsApi
      * Entirely replaces a Program
      *
      * @param string $id_program Program UUID or numeric ID (required)
-     * @param \Softonic\CatalogApiSdk\Client\Model\Program $body  (optional)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @param \Softonic\\CatalogApiSdk\Client\\Model\Program $body  (optional)
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
      * @return void
      */
     public function replaceProgram($id_program, $body = null)
@@ -519,8 +519,8 @@ class ProgramsApi
      * Entirely replaces a Program
      *
      * @param string $id_program Program UUID or numeric ID (required)
-     * @param \Softonic\CatalogApiSdk\Client\Model\Program $body  (optional)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @param \Softonic\\CatalogApiSdk\Client\\Model\Program $body  (optional)
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function replaceProgramWithHttpInfo($id_program, $body = null)
@@ -611,8 +611,8 @@ class ProgramsApi
      * Partially updates a Program
      *
      * @param string $id_program Program UUID or numeric ID (required)
-     * @param \Softonic\CatalogApiSdk\Client\Model\Program $body  (optional)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @param \Softonic\\CatalogApiSdk\Client\\Model\Program $body  (optional)
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
      * @return void
      */
     public function updateProgram($id_program, $body = null)
@@ -627,8 +627,8 @@ class ProgramsApi
      * Partially updates a Program
      *
      * @param string $id_program Program UUID or numeric ID (required)
-     * @param \Softonic\CatalogApiSdk\Client\Model\Program $body  (optional)
-     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @param \Softonic\\CatalogApiSdk\Client\\Model\Program $body  (optional)
+     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateProgramWithHttpInfo($id_program, $body = null)
