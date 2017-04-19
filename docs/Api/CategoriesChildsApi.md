@@ -1,6 +1,6 @@
 # Softonic\CatalogApiSdk\CategoriesChildsApi
 
-All URIs are relative to *https://v2.catalog.sftapi.com*
+All URIs are relative to *https://catalog.sftapi.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -32,7 +32,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 
 $api_instance = new Softonic\CatalogApiSdk\Api\CategoriesChildsApi();
 $id_category = "id_category_example"; // string | Parent category identifier
-$body = new \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\CategoryChild(); // \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\CategoryChild | 
+$body = new \Softonic\CatalogApiSdk\Client\Model\CategoryChild(); // \Softonic\CatalogApiSdk\Client\Model\CategoryChild | 
 
 try {
     $api_instance->createCategoryChild($id_category, $body);
@@ -47,7 +47,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_category** | **string**| Parent category identifier |
- **body** | [**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\CategoryChild**](../Model/\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\CategoryChild.md)|  | [optional]
+ **body** | [**\Softonic\CatalogApiSdk\Client\Model\CategoryChild**](../Model/\Softonic\CatalogApiSdk\Client\Model\CategoryChild.md)|  | [optional]
 
 ### Return type
 
@@ -65,7 +65,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **findCategoryChild**
-> \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\CategoryChild[] findCategoryChild($id_category)
+> \Softonic\CatalogApiSdk\Client\Model\CategoryChild[] findCategoryChild($id_category)
 
 List of CategoryChilds
 
@@ -105,7 +105,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\CategoryChild[]**](../Model/CategoryChild.md)
+[**\Softonic\CatalogApiSdk\Client\Model\CategoryChild[]**](../Model/CategoryChild.md)
 
 ### Authorization
 
@@ -119,7 +119,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readCategoryChild**
-> \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\CategoryChild readCategoryChild($id_category, $id_child)
+> \Softonic\CatalogApiSdk\Client\Model\CategoryChild readCategoryChild($id_category, $id_child)
 
 Fetches a single CategoryChild
 
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\CategoryChild**](../Model/CategoryChild.md)
+[**\Softonic\CatalogApiSdk\Client\Model\CategoryChild**](../Model/CategoryChild.md)
 
 ### Authorization
 

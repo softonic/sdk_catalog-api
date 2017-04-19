@@ -1,6 +1,6 @@
 # Softonic\CatalogApiSdk\ProgramsVersionsApi
 
-All URIs are relative to *https://v2.catalog.sftapi.com*
+All URIs are relative to *https://catalog.sftapi.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -35,7 +35,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsApi();
 $id_program = "id_program_example"; // string | Program UUID
-$body = new \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramVersion(); // \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramVersion | 
+$body = new \Softonic\CatalogApiSdk\Client\Model\ProgramVersion(); // \Softonic\CatalogApiSdk\Client\Model\ProgramVersion | 
 
 try {
     $api_instance->createProgramVersion($id_program, $body);
@@ -50,7 +50,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_program** | **string**| Program UUID |
- **body** | [**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramVersion**](../Model/\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramVersion.md)|  | [optional]
+ **body** | [**\Softonic\CatalogApiSdk\Client\Model\ProgramVersion**](../Model/\Softonic\CatalogApiSdk\Client\Model\ProgramVersion.md)|  | [optional]
 
 ### Return type
 
@@ -123,7 +123,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **findProgramVersion**
-> \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramVersion[] findProgramVersion($id_program)
+> \Softonic\CatalogApiSdk\Client\Model\ProgramVersion[] findProgramVersion($id_program)
 
 List of ProgramVersions
 
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramVersion[]**](../Model/ProgramVersion.md)
+[**\Softonic\CatalogApiSdk\Client\Model\ProgramVersion[]**](../Model/ProgramVersion.md)
 
 ### Authorization
 
@@ -177,7 +177,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readProgramVersion**
-> \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramVersion readProgramVersion($id_program, $id_version)
+> \Softonic\CatalogApiSdk\Client\Model\ProgramVersion readProgramVersion($id_program, $id_version)
 
 Fetches a single ProgramVersion
 
@@ -219,7 +219,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramVersion**](../Model/ProgramVersion.md)
+[**\Softonic\CatalogApiSdk\Client\Model\ProgramVersion**](../Model/ProgramVersion.md)
 
 ### Authorization
 
@@ -256,7 +256,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsApi();
 $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Program version identifier
-$body = new \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramVersion(); // \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramVersion | 
+$body = new \Softonic\CatalogApiSdk\Client\Model\ProgramVersion(); // \Softonic\CatalogApiSdk\Client\Model\ProgramVersion | 
 
 try {
     $api_instance->replaceProgramVersion($id_program, $id_version, $body);
@@ -272,7 +272,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_program** | **string**| Program UUID |
  **id_version** | **string**| Program version identifier |
- **body** | [**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramVersion**](../Model/\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramVersion.md)|  | [optional]
+ **body** | [**\Softonic\CatalogApiSdk\Client\Model\ProgramVersion**](../Model/\Softonic\CatalogApiSdk\Client\Model\ProgramVersion.md)|  | [optional]
 
 ### Return type
 
@@ -313,7 +313,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsApi();
 $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Program version identifier
-$body = new \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramVersion(); // \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramVersion | 
+$body = new \Softonic\CatalogApiSdk\Client\Model\ProgramVersion(); // \Softonic\CatalogApiSdk\Client\Model\ProgramVersion | 
 
 try {
     $api_instance->updateProgramVersion($id_program, $id_version, $body);
@@ -329,7 +329,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_program** | **string**| Program UUID |
  **id_version** | **string**| Program version identifier |
- **body** | [**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramVersion**](../Model/\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramVersion.md)|  | [optional]
+ **body** | [**\Softonic\CatalogApiSdk\Client\Model\ProgramVersion**](../Model/\Softonic\CatalogApiSdk\Client\Model\ProgramVersion.md)|  | [optional]
 
 ### Return type
 

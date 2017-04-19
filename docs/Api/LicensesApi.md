@@ -1,6 +1,6 @@
 # Softonic\CatalogApiSdk\LicensesApi
 
-All URIs are relative to *https://v2.catalog.sftapi.com*
+All URIs are relative to *https://catalog.sftapi.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -34,7 +34,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Softonic\CatalogApiSdk\Api\LicensesApi();
-$body = new \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\License(); // \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\License | 
+$body = new \Softonic\CatalogApiSdk\Client\Model\License(); // \Softonic\CatalogApiSdk\Client\Model\License | 
 
 try {
     $api_instance->createLicense($body);
@@ -48,7 +48,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\License**](../Model/\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\License.md)|  | [optional]
+ **body** | [**\Softonic\CatalogApiSdk\Client\Model\License**](../Model/\Softonic\CatalogApiSdk\Client\Model\License.md)|  | [optional]
 
 ### Return type
 
@@ -119,7 +119,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **findLicense**
-> \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\License[] findLicense()
+> \Softonic\CatalogApiSdk\Client\Model\License[] findLicense()
 
 List of Licenses
 
@@ -155,7 +155,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\License[]**](../Model/License.md)
+[**\Softonic\CatalogApiSdk\Client\Model\License[]**](../Model/License.md)
 
 ### Authorization
 
@@ -169,7 +169,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readLicense**
-> \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\License readLicense($id_license)
+> \Softonic\CatalogApiSdk\Client\Model\License readLicense($id_license)
 
 Fetches a single License
 
@@ -209,7 +209,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\License**](../Model/License.md)
+[**\Softonic\CatalogApiSdk\Client\Model\License**](../Model/License.md)
 
 ### Authorization
 
@@ -245,7 +245,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 
 $api_instance = new Softonic\CatalogApiSdk\Api\LicensesApi();
 $id_license = "id_license_example"; // string | License acronym.
-$body = new \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\License(); // \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\License | 
+$body = new \Softonic\CatalogApiSdk\Client\Model\License(); // \Softonic\CatalogApiSdk\Client\Model\License | 
 
 try {
     $api_instance->replaceLicense($id_license, $body);
@@ -260,7 +260,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_license** | **string**| License acronym. |
- **body** | [**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\License**](../Model/\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\License.md)|  | [optional]
+ **body** | [**\Softonic\CatalogApiSdk\Client\Model\License**](../Model/\Softonic\CatalogApiSdk\Client\Model\License.md)|  | [optional]
 
 ### Return type
 
@@ -300,7 +300,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 
 $api_instance = new Softonic\CatalogApiSdk\Api\LicensesApi();
 $id_license = "id_license_example"; // string | License acronym.
-$body = new \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\License(); // \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\License | 
+$body = new \Softonic\CatalogApiSdk\Client\Model\License(); // \Softonic\CatalogApiSdk\Client\Model\License | 
 
 try {
     $api_instance->updateLicense($id_license, $body);
@@ -315,7 +315,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_license** | **string**| License acronym. |
- **body** | [**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\License**](../Model/\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\License.md)|  | [optional]
+ **body** | [**\Softonic\CatalogApiSdk\Client\Model\License**](../Model/\Softonic\CatalogApiSdk\Client\Model\License.md)|  | [optional]
 
 ### Return type
 

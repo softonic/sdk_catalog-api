@@ -1,6 +1,6 @@
 # Softonic\CatalogApiSdk\ProgramsPlatformsLocalesAliasesApi
 
-All URIs are relative to *https://v2.catalog.sftapi.com*
+All URIs are relative to *https://catalog.sftapi.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -69,7 +69,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **findProgramPlatformLocaleAlias**
-> \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramPlatformLocaleAlias[] findProgramPlatformLocaleAlias($id_program, $id_platform, $id_locale, $last_updated)
+> \Softonic\CatalogApiSdk\Client\Model\ProgramPlatformLocaleAlias[] findProgramPlatformLocaleAlias($id_program, $id_platform, $id_locale, $last_updated)
 
 List of ProgramPlatformLocaleAliass
 
@@ -115,7 +115,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramPlatformLocaleAlias[]**](../Model/ProgramPlatformLocaleAlias.md)
+[**\Softonic\CatalogApiSdk\Client\Model\ProgramPlatformLocaleAlias[]**](../Model/ProgramPlatformLocaleAlias.md)
 
 ### Authorization
 

@@ -1,6 +1,6 @@
 # Softonic\CatalogApiSdk\OriginsApi
 
-All URIs are relative to *https://v2.catalog.sftapi.com*
+All URIs are relative to *https://catalog.sftapi.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **findOrigin**
-> \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\Origin[] findOrigin()
+> \Softonic\CatalogApiSdk\Client\Model\Origin[] findOrigin()
 
 List of Origins
 
@@ -46,7 +46,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\Origin[]**](../Model/Origin.md)
+[**\Softonic\CatalogApiSdk\Client\Model\Origin[]**](../Model/Origin.md)
 
 ### Authorization
 
@@ -60,7 +60,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readOrigin**
-> \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\Origin readOrigin($id_origin)
+> \Softonic\CatalogApiSdk\Client\Model\Origin readOrigin($id_origin)
 
 Fetches a single Origin
 
@@ -100,7 +100,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\Origin**](../Model/Origin.md)
+[**\Softonic\CatalogApiSdk\Client\Model\Origin**](../Model/Origin.md)
 
 ### Authorization
 
@@ -136,7 +136,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 
 $api_instance = new Softonic\CatalogApiSdk\Api\OriginsApi();
 $id_origin = "id_origin_example"; // string | Origin ID
-$body = new \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\Origin(); // \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\Origin | 
+$body = new \Softonic\CatalogApiSdk\Client\Model\Origin(); // \Softonic\CatalogApiSdk\Client\Model\Origin | 
 
 try {
     $api_instance->updateOrigin($id_origin, $body);
@@ -151,7 +151,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_origin** | **string**| Origin ID |
- **body** | [**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\Origin**](../Model/\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\Origin.md)|  | [optional]
+ **body** | [**\Softonic\CatalogApiSdk\Client\Model\Origin**](../Model/\Softonic\CatalogApiSdk\Client\Model\Origin.md)|  | [optional]
 
 ### Return type
 

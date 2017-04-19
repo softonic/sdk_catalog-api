@@ -1,6 +1,6 @@
 # Softonic\CatalogApiSdk\ProgramsVersionsLocalesUrlTypesApi
 
-All URIs are relative to *https://v2.catalog.sftapi.com*
+All URIs are relative to *https://catalog.sftapi.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -37,7 +37,7 @@ $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesUrlTypesAp
 $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Program version identifier
 $id_locale = "id_locale_example"; // string | Locale identifier
-$body = new \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleUrlType(); // \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleUrlType | 
+$body = new \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleUrlType(); // \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleUrlType | 
 
 try {
     $api_instance->createProgramVersionLocaleUrlType($id_program, $id_version, $id_locale, $body);
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
  **id_program** | **string**| Program UUID |
  **id_version** | **string**| Program version identifier |
  **id_locale** | **string**| Locale identifier |
- **body** | [**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleUrlType**](../Model/\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleUrlType.md)|  | [optional]
+ **body** | [**\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleUrlType**](../Model/\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleUrlType.md)|  | [optional]
 
 ### Return type
 
@@ -131,7 +131,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **findProgramVersionLocaleUrlType**
-> \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleUrlType[] findProgramVersionLocaleUrlType($id_program, $id_version, $id_locale)
+> \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleUrlType[] findProgramVersionLocaleUrlType($id_program, $id_version, $id_locale)
 
 List of ProgramVersionLocaleUrlTypes
 
@@ -175,7 +175,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleUrlType[]**](../Model/ProgramVersionLocaleUrlType.md)
+[**\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleUrlType[]**](../Model/ProgramVersionLocaleUrlType.md)
 
 ### Authorization
 
@@ -189,7 +189,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readProgramVersionLocaleUrlType**
-> \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleUrlType readProgramVersionLocaleUrlType($id_program, $id_version, $id_locale, $id_url_type)
+> \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleUrlType readProgramVersionLocaleUrlType($id_program, $id_version, $id_locale, $id_url_type)
 
 Fetches a single ProgramVersionLocaleUrlType
 
@@ -235,7 +235,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleUrlType**](../Model/ProgramVersionLocaleUrlType.md)
+[**\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleUrlType**](../Model/ProgramVersionLocaleUrlType.md)
 
 ### Authorization
 
@@ -274,7 +274,7 @@ $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Program version identifier
 $id_locale = "id_locale_example"; // string | Locale identifier
 $id_url_type = "id_url_type_example"; // string | URL types identifier
-$body = new \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleUrlType(); // \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleUrlType | 
+$body = new \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleUrlType(); // \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleUrlType | 
 
 try {
     $api_instance->replaceProgramVersionLocaleUrlType($id_program, $id_version, $id_locale, $id_url_type, $body);
@@ -292,7 +292,7 @@ Name | Type | Description  | Notes
  **id_version** | **string**| Program version identifier |
  **id_locale** | **string**| Locale identifier |
  **id_url_type** | **string**| URL types identifier |
- **body** | [**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleUrlType**](../Model/\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleUrlType.md)|  | [optional]
+ **body** | [**\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleUrlType**](../Model/\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleUrlType.md)|  | [optional]
 
 ### Return type
 
@@ -335,7 +335,7 @@ $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Program version identifier
 $id_locale = "id_locale_example"; // string | Locale identifier
 $id_url_type = "id_url_type_example"; // string | URL types identifier
-$body = new \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleUrlType(); // \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleUrlType | 
+$body = new \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleUrlType(); // \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleUrlType | 
 
 try {
     $api_instance->updateProgramVersionLocaleUrlType($id_program, $id_version, $id_locale, $id_url_type, $body);
@@ -353,7 +353,7 @@ Name | Type | Description  | Notes
  **id_version** | **string**| Program version identifier |
  **id_locale** | **string**| Locale identifier |
  **id_url_type** | **string**| URL types identifier |
- **body** | [**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleUrlType**](../Model/\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramVersionLocaleUrlType.md)|  | [optional]
+ **body** | [**\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleUrlType**](../Model/\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleUrlType.md)|  | [optional]
 
 ### Return type
 

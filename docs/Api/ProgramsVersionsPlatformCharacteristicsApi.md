@@ -1,6 +1,6 @@
 # Softonic\CatalogApiSdk\ProgramsVersionsPlatformCharacteristicsApi
 
-All URIs are relative to *https://v2.catalog.sftapi.com*
+All URIs are relative to *https://catalog.sftapi.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -35,7 +35,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 $api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsPlatformCharacteristicsApi();
 $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Program version ID
-$body = new \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramVersionPlatformCharacteristic(); // \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramVersionPlatformCharacteristic | 
+$body = new \Softonic\CatalogApiSdk\Client\Model\ProgramVersionPlatformCharacteristic(); // \Softonic\CatalogApiSdk\Client\Model\ProgramVersionPlatformCharacteristic | 
 
 try {
     $api_instance->createProgramVersionPlatformCharacteristic($id_program, $id_version, $body);
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id_program** | **string**| Program UUID |
  **id_version** | **string**| Program version ID |
- **body** | [**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramVersionPlatformCharacteristic**](../Model/\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramVersionPlatformCharacteristic.md)|  | [optional]
+ **body** | [**\Softonic\CatalogApiSdk\Client\Model\ProgramVersionPlatformCharacteristic**](../Model/\Softonic\CatalogApiSdk\Client\Model\ProgramVersionPlatformCharacteristic.md)|  | [optional]
 
 ### Return type
 
@@ -126,7 +126,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **findProgramVersionPlatformCharacteristic**
-> \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramVersionPlatformCharacteristic[] findProgramVersionPlatformCharacteristic($id_program, $id_version)
+> \Softonic\CatalogApiSdk\Client\Model\ProgramVersionPlatformCharacteristic[] findProgramVersionPlatformCharacteristic($id_program, $id_version)
 
 List of ProgramVersionPlatformCharacteristics
 
@@ -168,7 +168,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramVersionPlatformCharacteristic[]**](../Model/ProgramVersionPlatformCharacteristic.md)
+[**\Softonic\CatalogApiSdk\Client\Model\ProgramVersionPlatformCharacteristic[]**](../Model/ProgramVersionPlatformCharacteristic.md)
 
 ### Authorization
 
@@ -182,7 +182,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readProgramVersionPlatformCharacteristic**
-> \Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramVersionPlatformCharacteristic readProgramVersionPlatformCharacteristic($id_program, $id_version, $id_platform_characteristic)
+> \Softonic\CatalogApiSdk\Client\Model\ProgramVersionPlatformCharacteristic readProgramVersionPlatformCharacteristic($id_program, $id_version, $id_platform_characteristic)
 
 Fetches a single ProgramVersionPlatformCharacteristic
 
@@ -226,7 +226,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Softonic\CatalogApiSdk\Model\ProgramVersionPlatformCharacteristic**](../Model/ProgramVersionPlatformCharacteristic.md)
+[**\Softonic\CatalogApiSdk\Client\Model\ProgramVersionPlatformCharacteristic**](../Model/ProgramVersionPlatformCharacteristic.md)
 
 ### Authorization
 
