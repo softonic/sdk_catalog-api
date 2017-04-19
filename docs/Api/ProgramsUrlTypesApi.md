@@ -1,4 +1,4 @@
-# Softonic\\CatalogApiSdk\ProgramsUrlTypesApi
+# Softonic\CatalogApiSdk\ProgramsUrlTypesApi
 
 All URIs are relative to *https://catalog.sftapi.com*
 
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **findProgramUrlType**
-> \Softonic\\CatalogApiSdk\Client\\Model\ProgramUrlType[] findProgramUrlType($id_program)
+> \Softonic\CatalogApiSdk\Client\Model\ProgramUrlType[] findProgramUrlType($id_program)
 
 List of ProgramUrlTypes
 
@@ -21,15 +21,15 @@ List of ProgramUrlTypes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\\CatalogApiSdk\Api\ProgramsUrlTypesApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsUrlTypesApi();
 $id_program = "id_program_example"; // string | Program UUID
 
 try {
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\\CatalogApiSdk\Client\\Model\ProgramUrlType[]**](../Model/ProgramUrlType.md)
+[**\Softonic\CatalogApiSdk\Client\Model\ProgramUrlType[]**](../Model/ProgramUrlType.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readProgramUrlType**
-> \Softonic\\CatalogApiSdk\Client\\Model\ProgramUrlType readProgramUrlType($id_program, $id_url_type)
+> \Softonic\CatalogApiSdk\Client\Model\ProgramUrlType readProgramUrlType($id_program, $id_url_type)
 
 Fetches a single ProgramUrlType
 
@@ -75,15 +75,15 @@ Fetches a single ProgramUrlType
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\\CatalogApiSdk\Api\ProgramsUrlTypesApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsUrlTypesApi();
 $id_program = "id_program_example"; // string | Program UUID
 $id_url_type = "id_url_type_example"; // string | URL types identifier.
 
@@ -105,7 +105,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\\CatalogApiSdk\Client\\Model\ProgramUrlType**](../Model/ProgramUrlType.md)
+[**\Softonic\CatalogApiSdk\Client\Model\ProgramUrlType**](../Model/ProgramUrlType.md)
 
 ### Authorization
 

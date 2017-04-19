@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Softonic\\CatalogApiSdk
+ * @package  Softonic\CatalogApiSdk
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,7 +27,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Softonic\\CatalogApiSdk;
+namespace Softonic\CatalogApiSdk;
 
 /**
  * ProgramVersionTest Class Doc Comment
@@ -35,7 +35,7 @@ namespace Softonic\\CatalogApiSdk;
  * @category    Class */
 // * @description ProgramVersion
 /**
- * @package     Softonic\\CatalogApiSdk
+ * @package     Softonic\CatalogApiSdk
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */

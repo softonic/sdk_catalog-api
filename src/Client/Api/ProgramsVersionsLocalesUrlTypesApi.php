@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Softonic\\CatalogApiSdk
+ * @package  Softonic\CatalogApiSdk
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,18 +26,18 @@
  * Do not edit the class manually.
  */
 
-namespace Softonic\\CatalogApiSdk\Client\\Api;
+namespace Softonic\CatalogApiSdk\Client\Api;
 
-use \Softonic\\CatalogApiSdk\ApiClient;
-use \Softonic\\CatalogApiSdk\ApiException;
-use \Softonic\\CatalogApiSdk\Configuration;
-use \Softonic\\CatalogApiSdk\ObjectSerializer;
+use \Softonic\CatalogApiSdk\ApiClient;
+use \Softonic\CatalogApiSdk\ApiException;
+use \Softonic\CatalogApiSdk\Configuration;
+use \Softonic\CatalogApiSdk\ObjectSerializer;
 
 /**
  * ProgramsVersionsLocalesUrlTypesApi Class Doc Comment
  *
  * @category Class
- * @package  Softonic\\CatalogApiSdk
+ * @package  Softonic\CatalogApiSdk
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -46,16 +46,16 @@ class ProgramsVersionsLocalesUrlTypesApi
     /**
      * API Client
      *
-     * @var \Softonic\\CatalogApiSdk\ApiClient instance of the ApiClient
+     * @var \Softonic\CatalogApiSdk\ApiClient instance of the ApiClient
      */
     protected $apiClient;
 
     /**
      * Constructor
      *
-     * @param \Softonic\\CatalogApiSdk\ApiClient|null $apiClient The api client to use
+     * @param \Softonic\CatalogApiSdk\ApiClient|null $apiClient The api client to use
      */
-    public function __construct(\Softonic\\CatalogApiSdk\ApiClient $apiClient = null)
+    public function __construct(\Softonic\CatalogApiSdk\ApiClient $apiClient = null)
     {
         if ($apiClient === null) {
             $apiClient = new ApiClient();
@@ -67,7 +67,7 @@ class ProgramsVersionsLocalesUrlTypesApi
     /**
      * Get API client
      *
-     * @return \Softonic\\CatalogApiSdk\ApiClient get the API client
+     * @return \Softonic\CatalogApiSdk\ApiClient get the API client
      */
     public function getApiClient()
     {
@@ -77,11 +77,11 @@ class ProgramsVersionsLocalesUrlTypesApi
     /**
      * Set the API client
      *
-     * @param \Softonic\\CatalogApiSdk\ApiClient $apiClient set the API client
+     * @param \Softonic\CatalogApiSdk\ApiClient $apiClient set the API client
      *
      * @return ProgramsVersionsLocalesUrlTypesApi
      */
-    public function setApiClient(\Softonic\\CatalogApiSdk\ApiClient $apiClient)
+    public function setApiClient(\Softonic\CatalogApiSdk\ApiClient $apiClient)
     {
         $this->apiClient = $apiClient;
         return $this;
@@ -95,8 +95,8 @@ class ProgramsVersionsLocalesUrlTypesApi
      * @param string $id_program Program UUID (required)
      * @param string $id_version Program version identifier (required)
      * @param string $id_locale Locale identifier (required)
-     * @param \Softonic\\CatalogApiSdk\Client\\Model\ProgramVersionLocaleUrlType $body  (optional)
-     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
+     * @param \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleUrlType $body  (optional)
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      * @return void
      */
     public function createProgramVersionLocaleUrlType($id_program, $id_version, $id_locale, $body = null)
@@ -113,8 +113,8 @@ class ProgramsVersionsLocalesUrlTypesApi
      * @param string $id_program Program UUID (required)
      * @param string $id_version Program version identifier (required)
      * @param string $id_locale Locale identifier (required)
-     * @param \Softonic\\CatalogApiSdk\Client\\Model\ProgramVersionLocaleUrlType $body  (optional)
-     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
+     * @param \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleUrlType $body  (optional)
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function createProgramVersionLocaleUrlTypeWithHttpInfo($id_program, $id_version, $id_locale, $body = null)
@@ -246,7 +246,7 @@ class ProgramsVersionsLocalesUrlTypesApi
      * @param string $id_version Program version identifier (required)
      * @param string $id_locale Locale identifier (required)
      * @param string $id_url_type URL types identifier (required)
-     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      * @return void
      */
     public function deleteProgramVersionLocaleUrlType($id_program, $id_version, $id_locale, $id_url_type)
@@ -264,7 +264,7 @@ class ProgramsVersionsLocalesUrlTypesApi
      * @param string $id_version Program version identifier (required)
      * @param string $id_locale Locale identifier (required)
      * @param string $id_url_type URL types identifier (required)
-     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteProgramVersionLocaleUrlTypeWithHttpInfo($id_program, $id_version, $id_locale, $id_url_type)
@@ -402,8 +402,8 @@ class ProgramsVersionsLocalesUrlTypesApi
      * @param string $id_program Program UUID (required)
      * @param string $id_version Program version identifier (required)
      * @param string $id_locale Locale identifier (required)
-     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
-     * @return \Softonic\\CatalogApiSdk\Client\\Model\ProgramVersionLocaleUrlType[]
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @return \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleUrlType[]
      */
     public function findProgramVersionLocaleUrlType($id_program, $id_version, $id_locale)
     {
@@ -419,8 +419,8 @@ class ProgramsVersionsLocalesUrlTypesApi
      * @param string $id_program Program UUID (required)
      * @param string $id_version Program version identifier (required)
      * @param string $id_locale Locale identifier (required)
-     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
-     * @return array of \Softonic\\CatalogApiSdk\Client\\Model\ProgramVersionLocaleUrlType[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @return array of \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleUrlType[], HTTP status code, HTTP response headers (array of strings)
      */
     public function findProgramVersionLocaleUrlTypeWithHttpInfo($id_program, $id_version, $id_locale)
     {
@@ -524,15 +524,15 @@ class ProgramsVersionsLocalesUrlTypesApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\\CatalogApiSdk\Client\\Model\ProgramVersionLocaleUrlType[]',
+                '\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleUrlType[]',
                 '/programs/{id_program}/versions/{id_version}/locales/{id_locale}/url-types'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Softonic\\CatalogApiSdk\Client\\Model\ProgramVersionLocaleUrlType[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleUrlType[]', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Softonic\\CatalogApiSdk\Client\\Model\ProgramVersionLocaleUrlType[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleUrlType[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -550,8 +550,8 @@ class ProgramsVersionsLocalesUrlTypesApi
      * @param string $id_version Program version identifier (required)
      * @param string $id_locale Locale identifier (required)
      * @param string $id_url_type URL types identifier (required)
-     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
-     * @return \Softonic\\CatalogApiSdk\Client\\Model\ProgramVersionLocaleUrlType
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @return \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleUrlType
      */
     public function readProgramVersionLocaleUrlType($id_program, $id_version, $id_locale, $id_url_type)
     {
@@ -568,8 +568,8 @@ class ProgramsVersionsLocalesUrlTypesApi
      * @param string $id_version Program version identifier (required)
      * @param string $id_locale Locale identifier (required)
      * @param string $id_url_type URL types identifier (required)
-     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
-     * @return array of \Softonic\\CatalogApiSdk\Client\\Model\ProgramVersionLocaleUrlType, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @return array of \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleUrlType, HTTP status code, HTTP response headers (array of strings)
      */
     public function readProgramVersionLocaleUrlTypeWithHttpInfo($id_program, $id_version, $id_locale, $id_url_type)
     {
@@ -685,15 +685,15 @@ class ProgramsVersionsLocalesUrlTypesApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Softonic\\CatalogApiSdk\Client\\Model\ProgramVersionLocaleUrlType',
+                '\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleUrlType',
                 '/programs/{id_program}/versions/{id_version}/locales/{id_locale}/url-types/{id_url_type}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Softonic\\CatalogApiSdk\Client\\Model\ProgramVersionLocaleUrlType', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleUrlType', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Softonic\\CatalogApiSdk\Client\\Model\ProgramVersionLocaleUrlType', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleUrlType', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -711,8 +711,8 @@ class ProgramsVersionsLocalesUrlTypesApi
      * @param string $id_version Program version identifier (required)
      * @param string $id_locale Locale identifier (required)
      * @param string $id_url_type URL types identifier (required)
-     * @param \Softonic\\CatalogApiSdk\Client\\Model\ProgramVersionLocaleUrlType $body  (optional)
-     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
+     * @param \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleUrlType $body  (optional)
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      * @return void
      */
     public function replaceProgramVersionLocaleUrlType($id_program, $id_version, $id_locale, $id_url_type, $body = null)
@@ -730,8 +730,8 @@ class ProgramsVersionsLocalesUrlTypesApi
      * @param string $id_version Program version identifier (required)
      * @param string $id_locale Locale identifier (required)
      * @param string $id_url_type URL types identifier (required)
-     * @param \Softonic\\CatalogApiSdk\Client\\Model\ProgramVersionLocaleUrlType $body  (optional)
-     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
+     * @param \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleUrlType $body  (optional)
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function replaceProgramVersionLocaleUrlTypeWithHttpInfo($id_program, $id_version, $id_locale, $id_url_type, $body = null)
@@ -875,8 +875,8 @@ class ProgramsVersionsLocalesUrlTypesApi
      * @param string $id_version Program version identifier (required)
      * @param string $id_locale Locale identifier (required)
      * @param string $id_url_type URL types identifier (required)
-     * @param \Softonic\\CatalogApiSdk\Client\\Model\ProgramVersionLocaleUrlType $body  (optional)
-     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
+     * @param \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleUrlType $body  (optional)
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      * @return void
      */
     public function updateProgramVersionLocaleUrlType($id_program, $id_version, $id_locale, $id_url_type, $body = null)
@@ -894,8 +894,8 @@ class ProgramsVersionsLocalesUrlTypesApi
      * @param string $id_version Program version identifier (required)
      * @param string $id_locale Locale identifier (required)
      * @param string $id_url_type URL types identifier (required)
-     * @param \Softonic\\CatalogApiSdk\Client\\Model\ProgramVersionLocaleUrlType $body  (optional)
-     * @throws \Softonic\\CatalogApiSdk\ApiException on non-2xx response
+     * @param \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleUrlType $body  (optional)
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateProgramVersionLocaleUrlTypeWithHttpInfo($id_program, $id_version, $id_locale, $id_url_type, $body = null)
