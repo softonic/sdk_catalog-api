@@ -109,7 +109,7 @@ class Configuration
      *
      * @var string
      */
-    protected $userAgent = 'Swagger-Codegen/v3.9.0/php';
+    protected $userAgent = 'Swagger-Codegen/v2.0.308/php';
 
     /**
      * Debug switch (default set to false)
@@ -728,7 +728,7 @@ class Configuration
         $report .= '    OS: ' . php_uname() . PHP_EOL;
         $report .= '    PHP Version: ' . PHP_VERSION . PHP_EOL;
         $report .= '    OpenAPI Spec Version: 2.0.307-1917' . PHP_EOL;
-        $report .= '    SDK Package Version: v3.9.0' . PHP_EOL;
+        $report .= '    SDK Package Version: v2.0.308' . PHP_EOL;
         $report .= '    Temp Folder Path: ' . self::getDefaultConfiguration()->getTempFolderPath() . PHP_EOL;
 
         return $report;
