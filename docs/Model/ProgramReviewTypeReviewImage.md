@@ -10,6 +10,8 @@ Name | Type | Description | Notes
 **path** | **string** | Image path | 
 **filename** | **string** | Image filename | 
 **type** | **string** | Image type | 
+**width** | **int** | Image width | [optional] 
+**height** | **int** | Image width | [optional] 
 **priority** | **int** | Priority used to order the images | [optional] 
 **caption** | **string** | Small text shown usually below the image | [optional] 
 
