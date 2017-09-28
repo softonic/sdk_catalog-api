@@ -33,7 +33,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_password
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\CategoriesApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\CategoriesApi(new \Http\Adapter\Guzzle6\Client());
 $body = new \Softonic\CatalogApiSdk\Client\Model\Category(); // \Softonic\CatalogApiSdk\Client\Model\Category | 
 
 try {
@@ -86,7 +86,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_password
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\CategoriesApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\CategoriesApi(new \Http\Adapter\Guzzle6\Client());
 $id_category = "id_category_example"; // string | Categories identifier
 
 try {
@@ -139,7 +139,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_password
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\CategoriesApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\CategoriesApi(new \Http\Adapter\Guzzle6\Client());
 
 try {
     $result = $api_instance->findCategory();
@@ -189,7 +189,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_password
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\CategoriesApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\CategoriesApi(new \Http\Adapter\Guzzle6\Client());
 $id_category = "id_category_example"; // string | Categories identifier
 
 try {
@@ -243,7 +243,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_password
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\CategoriesApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\CategoriesApi(new \Http\Adapter\Guzzle6\Client());
 $id_category = "id_category_example"; // string | Categories identifier
 $body = new \Softonic\CatalogApiSdk\Client\Model\Category(); // \Softonic\CatalogApiSdk\Client\Model\Category | 
 
@@ -298,7 +298,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_password
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\CategoriesApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\CategoriesApi(new \Http\Adapter\Guzzle6\Client());
 $id_category = "id_category_example"; // string | Categories identifier
 $body = new \Softonic\CatalogApiSdk\Client\Model\Category(); // \Softonic\CatalogApiSdk\Client\Model\Category | 
 

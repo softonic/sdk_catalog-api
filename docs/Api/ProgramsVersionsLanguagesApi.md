@@ -32,7 +32,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_password
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLanguagesApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLanguagesApi(new \Http\Adapter\Guzzle6\Client());
 $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Program version identifier
 $body = new \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLanguage(); // \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLanguage | 
@@ -89,7 +89,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_password
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLanguagesApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLanguagesApi(new \Http\Adapter\Guzzle6\Client());
 $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Program version identifier
 $id_language = "id_language_example"; // string | Language identifier
@@ -146,7 +146,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_password
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLanguagesApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLanguagesApi(new \Http\Adapter\Guzzle6\Client());
 $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Program version identifier
 
@@ -202,7 +202,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_password
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLanguagesApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLanguagesApi(new \Http\Adapter\Guzzle6\Client());
 $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Program version identifier
 $id_language = "id_language_example"; // string | Language identifier
@@ -260,7 +260,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_password
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLanguagesApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLanguagesApi(new \Http\Adapter\Guzzle6\Client());
 $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Program version identifier
 $id_language = "id_language_example"; // string | Language identifier

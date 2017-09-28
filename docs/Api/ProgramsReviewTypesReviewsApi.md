@@ -33,7 +33,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_password
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsReviewTypesReviewsApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsReviewTypesReviewsApi(new \Http\Adapter\Guzzle6\Client());
 $id_program = "id_program_example"; // string | Program UUID
 $id_review_type = "id_review_type_example"; // string | Review owner type
 $body = new \Softonic\CatalogApiSdk\Client\Model\ProgramReviewTypeReview(); // \Softonic\CatalogApiSdk\Client\Model\ProgramReviewTypeReview | 
@@ -90,7 +90,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_password
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsReviewTypesReviewsApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsReviewTypesReviewsApi(new \Http\Adapter\Guzzle6\Client());
 $id_program = "id_program_example"; // string | Program UUID
 $id_review_type = "id_review_type_example"; // string | Review owner type
 $id_review = "id_review_example"; // string | Review identifier as UUID
@@ -147,7 +147,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_password
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsReviewTypesReviewsApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsReviewTypesReviewsApi(new \Http\Adapter\Guzzle6\Client());
 $id_program = "id_program_example"; // string | Program UUID
 $id_review_type = "id_review_type_example"; // string | Review owner type
 
@@ -203,7 +203,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_password
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsReviewTypesReviewsApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsReviewTypesReviewsApi(new \Http\Adapter\Guzzle6\Client());
 $id_program = "id_program_example"; // string | Program UUID
 $id_review_type = "id_review_type_example"; // string | Review owner type
 $id_review = "id_review_example"; // string | Review identifier as UUID
@@ -261,7 +261,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_password
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsReviewTypesReviewsApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsReviewTypesReviewsApi(new \Http\Adapter\Guzzle6\Client());
 $id_program = "id_program_example"; // string | Program UUID
 $id_review_type = "id_review_type_example"; // string | Review owner type
 $id_review = "id_review_example"; // string | Review identifier as UUID
@@ -320,7 +320,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_password
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsReviewTypesReviewsApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsReviewTypesReviewsApi(new \Http\Adapter\Guzzle6\Client());
 $id_program = "id_program_example"; // string | Program UUID
 $id_review_type = "id_review_type_example"; // string | Review owner type
 $id_review = "id_review_example"; // string | Review identifier as UUID

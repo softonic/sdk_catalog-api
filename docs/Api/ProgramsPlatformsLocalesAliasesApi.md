@@ -30,7 +30,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_password
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsPlatformsLocalesAliasesApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsPlatformsLocalesAliasesApi(new \Http\Adapter\Guzzle6\Client());
 $id_program = "id_program_example"; // string | Program UUID
 $id_platform = "id_platform_example"; // string | Platform identifier
 $id_locale = "id_locale_example"; // string | Locale identifier
@@ -69,7 +69,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **findProgramPlatformLocaleAlias**
-> \Softonic\CatalogApiSdk\Client\Model\ProgramPlatformLocaleAlias[] findProgramPlatformLocaleAlias($id_program, $id_platform, $id_locale, $last_updated)
+> \Softonic\CatalogApiSdk\Client\Model\ProgramPlatformLocaleAlias[] findProgramPlatformLocaleAlias($id_program, $id_platform, $id_locale, $active, $last_updated)
 
 List of ProgramPlatformLocaleAliass
 
@@ -89,14 +89,15 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_password
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsPlatformsLocalesAliasesApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsPlatformsLocalesAliasesApi(new \Http\Adapter\Guzzle6\Client());
 $id_program = "id_program_example"; // string | Program UUID
 $id_platform = "id_platform_example"; // string | Platform identifier
 $id_locale = "id_locale_example"; // string | Locale identifier
+$active = 56; // int | Use it to return just the active program alias
 $last_updated = 56; // int | Use it to return just the active program alias
 
 try {
-    $result = $api_instance->findProgramPlatformLocaleAlias($id_program, $id_platform, $id_locale, $last_updated);
+    $result = $api_instance->findProgramPlatformLocaleAlias($id_program, $id_platform, $id_locale, $active, $last_updated);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProgramsPlatformsLocalesAliasesApi->findProgramPlatformLocaleAlias: ', $e->getMessage(), PHP_EOL;
@@ -111,6 +112,7 @@ Name | Type | Description  | Notes
  **id_program** | **string**| Program UUID |
  **id_platform** | **string**| Platform identifier |
  **id_locale** | **string**| Locale identifier |
+ **active** | **int**| Use it to return just the active program alias | [optional]
  **last_updated** | **int**| Use it to return just the active program alias | [optional]
 
 ### Return type
@@ -149,7 +151,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_password
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsPlatformsLocalesAliasesApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsPlatformsLocalesAliasesApi(new \Http\Adapter\Guzzle6\Client());
 $id_program = "id_program_example"; // string | Program UUID
 $id_platform = "id_platform_example"; // string | Platform identifier
 $id_locale = "id_locale_example"; // string | Locale identifier

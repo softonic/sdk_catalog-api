@@ -29,7 +29,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_password
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\PlatformsApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\PlatformsApi(new \Http\Adapter\Guzzle6\Client());
 
 try {
     $result = $api_instance->findPlatform();
@@ -79,7 +79,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_password
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\PlatformsApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\PlatformsApi(new \Http\Adapter\Guzzle6\Client());
 $id_platform = "id_platform_example"; // string | Platform ID
 
 try {

@@ -33,7 +33,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_password
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsUrlTypesUrlsApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsUrlTypesUrlsApi(new \Http\Adapter\Guzzle6\Client());
 $id_program = "id_program_example"; // string | Program UUID
 $id_url_type = "id_url_type_example"; // string | URL types identifier.
 $body = new \Softonic\CatalogApiSdk\Client\Model\ProgramUrlTypeUrl(); // \Softonic\CatalogApiSdk\Client\Model\ProgramUrlTypeUrl | 
@@ -90,7 +90,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_password
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsUrlTypesUrlsApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsUrlTypesUrlsApi(new \Http\Adapter\Guzzle6\Client());
 $id_program = "id_program_example"; // string | Program UUID
 $id_url_type = "id_url_type_example"; // string | URL types identifier.
 $id_url = "id_url_example"; // string | Url UUID
@@ -147,7 +147,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_password
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsUrlTypesUrlsApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsUrlTypesUrlsApi(new \Http\Adapter\Guzzle6\Client());
 $id_program = "id_program_example"; // string | Program UUID
 $id_url_type = "id_url_type_example"; // string | URL types identifier.
 
@@ -203,7 +203,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_password
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsUrlTypesUrlsApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsUrlTypesUrlsApi(new \Http\Adapter\Guzzle6\Client());
 $id_program = "id_program_example"; // string | Program UUID
 $id_url_type = "id_url_type_example"; // string | URL types identifier.
 $id_url = "id_url_example"; // string | Url UUID
@@ -261,7 +261,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_password
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsUrlTypesUrlsApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsUrlTypesUrlsApi(new \Http\Adapter\Guzzle6\Client());
 $id_program = "id_program_example"; // string | Program UUID
 $id_url_type = "id_url_type_example"; // string | URL types identifier.
 $id_url = "id_url_example"; // string | Url UUID
@@ -320,7 +320,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_password
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsUrlTypesUrlsApi();
+$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsUrlTypesUrlsApi(new \Http\Adapter\Guzzle6\Client());
 $id_program = "id_program_example"; // string | Program UUID
 $id_url_type = "id_url_type_example"; // string | URL types identifier.
 $id_url = "id_url_example"; // string | Url UUID
