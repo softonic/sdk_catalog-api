@@ -33,7 +33,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_password
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\SourcesApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Softonic\CatalogApiSdk\Api\SourcesApi();
 $body = new \Softonic\CatalogApiSdk\Client\Model\Source(); // \Softonic\CatalogApiSdk\Client\Model\Source | 
 
 try {
@@ -86,7 +86,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_password
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\SourcesApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Softonic\CatalogApiSdk\Api\SourcesApi();
 $id_source = "id_source_example"; // string | Source ID
 
 try {
@@ -139,7 +139,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_password
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\SourcesApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Softonic\CatalogApiSdk\Api\SourcesApi();
 
 try {
     $result = $api_instance->findSource();
@@ -189,7 +189,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_password
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\SourcesApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Softonic\CatalogApiSdk\Api\SourcesApi();
 $id_source = "id_source_example"; // string | Source ID
 
 try {
@@ -243,7 +243,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_password
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\SourcesApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Softonic\CatalogApiSdk\Api\SourcesApi();
 $id_source = "id_source_example"; // string | Source ID
 $body = new \Softonic\CatalogApiSdk\Client\Model\Source(); // \Softonic\CatalogApiSdk\Client\Model\Source | 
 
@@ -298,7 +298,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_password
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\SourcesApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Softonic\CatalogApiSdk\Api\SourcesApi();
 $id_source = "id_source_example"; // string | Source ID
 $body = new \Softonic\CatalogApiSdk\Client\Model\Source(); // \Softonic\CatalogApiSdk\Client\Model\Source | 
 

@@ -33,7 +33,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_password
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\LicensesApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Softonic\CatalogApiSdk\Api\LicensesApi();
 $body = new \Softonic\CatalogApiSdk\Client\Model\License(); // \Softonic\CatalogApiSdk\Client\Model\License | 
 
 try {
@@ -86,7 +86,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_password
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\LicensesApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Softonic\CatalogApiSdk\Api\LicensesApi();
 $id_license = "id_license_example"; // string | License acronym.
 
 try {
@@ -139,7 +139,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_password
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\LicensesApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Softonic\CatalogApiSdk\Api\LicensesApi();
 
 try {
     $result = $api_instance->findLicense();
@@ -189,7 +189,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_password
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\LicensesApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Softonic\CatalogApiSdk\Api\LicensesApi();
 $id_license = "id_license_example"; // string | License acronym.
 
 try {
@@ -243,7 +243,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_password
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\LicensesApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Softonic\CatalogApiSdk\Api\LicensesApi();
 $id_license = "id_license_example"; // string | License acronym.
 $body = new \Softonic\CatalogApiSdk\Client\Model\License(); // \Softonic\CatalogApiSdk\Client\Model\License | 
 
@@ -298,7 +298,7 @@ Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken(
 // Configure OAuth2 access token for authorization: catalog_api_password
 Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\LicensesApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Softonic\CatalogApiSdk\Api\LicensesApi();
 $id_license = "id_license_example"; // string | License acronym.
 $body = new \Softonic\CatalogApiSdk\Client\Model\License(); // \Softonic\CatalogApiSdk\Client\Model\License | 
 

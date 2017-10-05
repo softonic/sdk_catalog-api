@@ -7,9 +7,9 @@ Name | Type | Description | Notes
 **id_version** | **string** | Program version identifier | 
 **id_locale** | **string** | Locale identifier | 
 **program_name** | **string** | Program title localized. | 
-**publish_date** | [**\DateTime**](\DateTime.md) | Program publication date in this locale. | [optional] 
-**revision_date** | [**\DateTime**](\DateTime.md) | Revision date | [optional] 
-**update_date** | [**\DateTime**](\DateTime.md) | Update date | [optional] 
+**publish_date** | [**\DateTime**](Date.md) | Program publication date in this locale. | [optional] 
+**revision_date** | [**\DateTime**](Date.md) | Revision date | [optional] 
+**update_date** | [**\DateTime**](Date.md) | Update date | [optional] 
 **status** | **string** | Status | 
 **id_editor** | **int** | Editors identifier | [optional] 
 **id_binary** | **string** | Binaries identifier created with sha1 | [optional] 

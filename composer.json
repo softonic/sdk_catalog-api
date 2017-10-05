@@ -1,6 +1,6 @@
 {
     "name": "softonic/catalog_api_sdk",
-    "version": "v2.0.327",
+    "version": "v2.0.330",
     "description": "",
     "keywords": [
         "swagger",
@@ -17,14 +17,14 @@
         }
     ],
     "require": {
-        "php": ">=5.5",
+        "php": ">=5.4",
         "ext-curl": "*",
         "ext-json": "*",
-        "ext-mbstring": "*",
-        "guzzlehttp/guzzle": "^6.2"
+        "ext-mbstring": "*"
     },
     "require-dev": {
-        "phpunit/phpunit": "^4.8",
+        "phpunit/phpunit": "~4.8",
+        "satooshi/php-coveralls": "~1.0",
         "squizlabs/php_codesniffer": "~2.6",
         "friendsofphp/php-cs-fixer": "~1.12"
     },
