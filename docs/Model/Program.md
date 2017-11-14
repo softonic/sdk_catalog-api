@@ -9,7 +9,6 @@ Name | Type | Description | Notes
 **id_platform** | **string** | Platforms identifier | 
 **id_category** | **string** | Categories identifier | 
 **google_compliant** | **bool** | Google compliant flag | [optional] 
-**id_appstore** | **string** | App store identifier | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
