@@ -25,21 +25,26 @@ Creates a new ProgramVersionBinary
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsBinariesApi();
+$apiInstance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsBinariesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Version from program
 $body = new \Softonic\CatalogApiSdk\Client\Model\ProgramVersionBinary(); // \Softonic\CatalogApiSdk\Client\Model\ProgramVersionBinary | 
 
 try {
-    $api_instance->createProgramVersionBinary($id_program, $id_version, $body);
+    $apiInstance->createProgramVersionBinary($id_program, $id_version, $body);
 } catch (Exception $e) {
     echo 'Exception when calling ProgramsVersionsBinariesApi->createProgramVersionBinary: ', $e->getMessage(), PHP_EOL;
 }
@@ -82,21 +87,26 @@ Deletes a ProgramVersionBinary
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsBinariesApi();
+$apiInstance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsBinariesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Version from program
 $id_binary = "id_binary_example"; // string | Binary identifier in SHA1-Hash format.
 
 try {
-    $api_instance->deleteProgramVersionBinary($id_program, $id_version, $id_binary);
+    $apiInstance->deleteProgramVersionBinary($id_program, $id_version, $id_binary);
 } catch (Exception $e) {
     echo 'Exception when calling ProgramsVersionsBinariesApi->deleteProgramVersionBinary: ', $e->getMessage(), PHP_EOL;
 }
@@ -139,20 +149,25 @@ List of ProgramVersionBinarys
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsBinariesApi();
+$apiInstance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsBinariesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Version from program
 
 try {
-    $result = $api_instance->findProgramVersionBinary($id_program, $id_version);
+    $result = $apiInstance->findProgramVersionBinary($id_program, $id_version);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProgramsVersionsBinariesApi->findProgramVersionBinary: ', $e->getMessage(), PHP_EOL;
@@ -195,21 +210,26 @@ Fetches a single ProgramVersionBinary
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsBinariesApi();
+$apiInstance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsBinariesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Version from program
 $id_binary = "id_binary_example"; // string | Binary identifier in SHA1-Hash format.
 
 try {
-    $result = $api_instance->readProgramVersionBinary($id_program, $id_version, $id_binary);
+    $result = $apiInstance->readProgramVersionBinary($id_program, $id_version, $id_binary);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProgramsVersionsBinariesApi->readProgramVersionBinary: ', $e->getMessage(), PHP_EOL;
@@ -253,22 +273,27 @@ Entirely replaces a ProgramVersionBinary
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsBinariesApi();
+$apiInstance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsBinariesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Version from program
 $id_binary = "id_binary_example"; // string | Binary identifier in SHA1-Hash format.
 $body = new \Softonic\CatalogApiSdk\Client\Model\ProgramVersionBinary(); // \Softonic\CatalogApiSdk\Client\Model\ProgramVersionBinary | 
 
 try {
-    $api_instance->replaceProgramVersionBinary($id_program, $id_version, $id_binary, $body);
+    $apiInstance->replaceProgramVersionBinary($id_program, $id_version, $id_binary, $body);
 } catch (Exception $e) {
     echo 'Exception when calling ProgramsVersionsBinariesApi->replaceProgramVersionBinary: ', $e->getMessage(), PHP_EOL;
 }
@@ -312,22 +337,27 @@ Partially updates a ProgramVersionBinary
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsBinariesApi();
+$apiInstance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsBinariesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Version from program
 $id_binary = "id_binary_example"; // string | Binary identifier in SHA1-Hash format.
 $body = new \Softonic\CatalogApiSdk\Client\Model\ProgramVersionBinary(); // \Softonic\CatalogApiSdk\Client\Model\ProgramVersionBinary | 
 
 try {
-    $api_instance->updateProgramVersionBinary($id_program, $id_version, $id_binary, $body);
+    $apiInstance->updateProgramVersionBinary($id_program, $id_version, $id_binary, $body);
 } catch (Exception $e) {
     echo 'Exception when calling ProgramsVersionsBinariesApi->updateProgramVersionBinary: ', $e->getMessage(), PHP_EOL;
 }

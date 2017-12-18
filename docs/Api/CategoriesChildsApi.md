@@ -22,20 +22,25 @@ Creates a new CategoryChild
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\CategoriesChildsApi();
+$apiInstance = new Softonic\CatalogApiSdk\Api\CategoriesChildsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $id_category = "id_category_example"; // string | Parent category identifier
 $body = new \Softonic\CatalogApiSdk\Client\Model\CategoryChild(); // \Softonic\CatalogApiSdk\Client\Model\CategoryChild | 
 
 try {
-    $api_instance->createCategoryChild($id_category, $body);
+    $apiInstance->createCategoryChild($id_category, $body);
 } catch (Exception $e) {
     echo 'Exception when calling CategoriesChildsApi->createCategoryChild: ', $e->getMessage(), PHP_EOL;
 }
@@ -77,19 +82,24 @@ List of CategoryChilds
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\CategoriesChildsApi();
+$apiInstance = new Softonic\CatalogApiSdk\Api\CategoriesChildsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $id_category = "id_category_example"; // string | Parent category identifier
 
 try {
-    $result = $api_instance->findCategoryChild($id_category);
+    $result = $apiInstance->findCategoryChild($id_category);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CategoriesChildsApi->findCategoryChild: ', $e->getMessage(), PHP_EOL;
@@ -131,20 +141,25 @@ Fetches a single CategoryChild
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\CategoriesChildsApi();
+$apiInstance = new Softonic\CatalogApiSdk\Api\CategoriesChildsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $id_category = "id_category_example"; // string | Parent category identifier
 $id_child = "id_child_example"; // string | Child category identifier
 
 try {
-    $result = $api_instance->readCategoryChild($id_category, $id_child);
+    $result = $apiInstance->readCategoryChild($id_category, $id_child);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CategoriesChildsApi->readCategoryChild: ', $e->getMessage(), PHP_EOL;

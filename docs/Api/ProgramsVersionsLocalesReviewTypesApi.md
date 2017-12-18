@@ -25,22 +25,27 @@ Creates a new ProgramVersionLocaleReviewType
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesReviewTypesApi();
+$apiInstance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesReviewTypesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Program version identifier
 $id_locale = "id_locale_example"; // string | Locale identifier
 $body = new \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType(); // \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType | 
 
 try {
-    $api_instance->createProgramVersionLocaleReviewType($id_program, $id_version, $id_locale, $body);
+    $apiInstance->createProgramVersionLocaleReviewType($id_program, $id_version, $id_locale, $body);
 } catch (Exception $e) {
     echo 'Exception when calling ProgramsVersionsLocalesReviewTypesApi->createProgramVersionLocaleReviewType: ', $e->getMessage(), PHP_EOL;
 }
@@ -84,22 +89,27 @@ Deletes a ProgramVersionLocaleReviewType
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesReviewTypesApi();
+$apiInstance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesReviewTypesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Program version identifier
 $id_locale = "id_locale_example"; // string | Locale identifier
 $id_review_type = "id_review_type_example"; // string | Review owner type
 
 try {
-    $api_instance->deleteProgramVersionLocaleReviewType($id_program, $id_version, $id_locale, $id_review_type);
+    $apiInstance->deleteProgramVersionLocaleReviewType($id_program, $id_version, $id_locale, $id_review_type);
 } catch (Exception $e) {
     echo 'Exception when calling ProgramsVersionsLocalesReviewTypesApi->deleteProgramVersionLocaleReviewType: ', $e->getMessage(), PHP_EOL;
 }
@@ -143,21 +153,26 @@ List of ProgramVersionLocaleReviewTypes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesReviewTypesApi();
+$apiInstance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesReviewTypesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Program version identifier
 $id_locale = "id_locale_example"; // string | Locale identifier
 
 try {
-    $result = $api_instance->findProgramVersionLocaleReviewType($id_program, $id_version, $id_locale);
+    $result = $apiInstance->findProgramVersionLocaleReviewType($id_program, $id_version, $id_locale);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProgramsVersionsLocalesReviewTypesApi->findProgramVersionLocaleReviewType: ', $e->getMessage(), PHP_EOL;
@@ -201,22 +216,27 @@ Fetches a single ProgramVersionLocaleReviewType
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesReviewTypesApi();
+$apiInstance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesReviewTypesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Program version identifier
 $id_locale = "id_locale_example"; // string | Locale identifier
 $id_review_type = "id_review_type_example"; // string | Review owner type
 
 try {
-    $result = $api_instance->readProgramVersionLocaleReviewType($id_program, $id_version, $id_locale, $id_review_type);
+    $result = $apiInstance->readProgramVersionLocaleReviewType($id_program, $id_version, $id_locale, $id_review_type);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProgramsVersionsLocalesReviewTypesApi->readProgramVersionLocaleReviewType: ', $e->getMessage(), PHP_EOL;
@@ -261,15 +281,20 @@ Entirely replaces a ProgramVersionLocaleReviewType
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesReviewTypesApi();
+$apiInstance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesReviewTypesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Program version identifier
 $id_locale = "id_locale_example"; // string | Locale identifier
@@ -277,7 +302,7 @@ $id_review_type = "id_review_type_example"; // string | Review owner type
 $body = new \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType(); // \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType | 
 
 try {
-    $api_instance->replaceProgramVersionLocaleReviewType($id_program, $id_version, $id_locale, $id_review_type, $body);
+    $apiInstance->replaceProgramVersionLocaleReviewType($id_program, $id_version, $id_locale, $id_review_type, $body);
 } catch (Exception $e) {
     echo 'Exception when calling ProgramsVersionsLocalesReviewTypesApi->replaceProgramVersionLocaleReviewType: ', $e->getMessage(), PHP_EOL;
 }
@@ -322,15 +347,20 @@ Partially updates a ProgramVersionLocaleReviewType
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesReviewTypesApi();
+$apiInstance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsLocalesReviewTypesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Program version identifier
 $id_locale = "id_locale_example"; // string | Locale identifier
@@ -338,7 +368,7 @@ $id_review_type = "id_review_type_example"; // string | Review owner type
 $body = new \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType(); // \Softonic\CatalogApiSdk\Client\Model\ProgramVersionLocaleReviewType | 
 
 try {
-    $api_instance->updateProgramVersionLocaleReviewType($id_program, $id_version, $id_locale, $id_review_type, $body);
+    $apiInstance->updateProgramVersionLocaleReviewType($id_program, $id_version, $id_locale, $id_review_type, $body);
 } catch (Exception $e) {
     echo 'Exception when calling ProgramsVersionsLocalesReviewTypesApi->updateProgramVersionLocaleReviewType: ', $e->getMessage(), PHP_EOL;
 }

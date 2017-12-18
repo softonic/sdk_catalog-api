@@ -25,21 +25,26 @@ Creates a new ProgramUrlTypeUrl
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsUrlTypesUrlsApi();
+$apiInstance = new Softonic\CatalogApiSdk\Api\ProgramsUrlTypesUrlsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $id_program = "id_program_example"; // string | Program UUID
 $id_url_type = "id_url_type_example"; // string | URL types identifier.
 $body = new \Softonic\CatalogApiSdk\Client\Model\ProgramUrlTypeUrl(); // \Softonic\CatalogApiSdk\Client\Model\ProgramUrlTypeUrl | 
 
 try {
-    $api_instance->createProgramUrlTypeUrl($id_program, $id_url_type, $body);
+    $apiInstance->createProgramUrlTypeUrl($id_program, $id_url_type, $body);
 } catch (Exception $e) {
     echo 'Exception when calling ProgramsUrlTypesUrlsApi->createProgramUrlTypeUrl: ', $e->getMessage(), PHP_EOL;
 }
@@ -82,21 +87,26 @@ Deletes a ProgramUrlTypeUrl
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsUrlTypesUrlsApi();
+$apiInstance = new Softonic\CatalogApiSdk\Api\ProgramsUrlTypesUrlsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $id_program = "id_program_example"; // string | Program UUID
 $id_url_type = "id_url_type_example"; // string | URL types identifier.
 $id_url = "id_url_example"; // string | Url UUID
 
 try {
-    $api_instance->deleteProgramUrlTypeUrl($id_program, $id_url_type, $id_url);
+    $apiInstance->deleteProgramUrlTypeUrl($id_program, $id_url_type, $id_url);
 } catch (Exception $e) {
     echo 'Exception when calling ProgramsUrlTypesUrlsApi->deleteProgramUrlTypeUrl: ', $e->getMessage(), PHP_EOL;
 }
@@ -139,20 +149,25 @@ List of ProgramUrlTypeUrls
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsUrlTypesUrlsApi();
+$apiInstance = new Softonic\CatalogApiSdk\Api\ProgramsUrlTypesUrlsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $id_program = "id_program_example"; // string | Program UUID
 $id_url_type = "id_url_type_example"; // string | URL types identifier.
 
 try {
-    $result = $api_instance->findProgramUrlTypeUrl($id_program, $id_url_type);
+    $result = $apiInstance->findProgramUrlTypeUrl($id_program, $id_url_type);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProgramsUrlTypesUrlsApi->findProgramUrlTypeUrl: ', $e->getMessage(), PHP_EOL;
@@ -195,21 +210,26 @@ Fetches a single ProgramUrlTypeUrl
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsUrlTypesUrlsApi();
+$apiInstance = new Softonic\CatalogApiSdk\Api\ProgramsUrlTypesUrlsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $id_program = "id_program_example"; // string | Program UUID
 $id_url_type = "id_url_type_example"; // string | URL types identifier.
 $id_url = "id_url_example"; // string | Url UUID
 
 try {
-    $result = $api_instance->readProgramUrlTypeUrl($id_program, $id_url_type, $id_url);
+    $result = $apiInstance->readProgramUrlTypeUrl($id_program, $id_url_type, $id_url);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProgramsUrlTypesUrlsApi->readProgramUrlTypeUrl: ', $e->getMessage(), PHP_EOL;
@@ -253,22 +273,27 @@ Entirely replaces a ProgramUrlTypeUrl
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsUrlTypesUrlsApi();
+$apiInstance = new Softonic\CatalogApiSdk\Api\ProgramsUrlTypesUrlsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $id_program = "id_program_example"; // string | Program UUID
 $id_url_type = "id_url_type_example"; // string | URL types identifier.
 $id_url = "id_url_example"; // string | Url UUID
 $body = new \Softonic\CatalogApiSdk\Client\Model\ProgramUrlTypeUrl(); // \Softonic\CatalogApiSdk\Client\Model\ProgramUrlTypeUrl | 
 
 try {
-    $api_instance->replaceProgramUrlTypeUrl($id_program, $id_url_type, $id_url, $body);
+    $apiInstance->replaceProgramUrlTypeUrl($id_program, $id_url_type, $id_url, $body);
 } catch (Exception $e) {
     echo 'Exception when calling ProgramsUrlTypesUrlsApi->replaceProgramUrlTypeUrl: ', $e->getMessage(), PHP_EOL;
 }
@@ -312,22 +337,27 @@ Partially updates a ProgramUrlTypeUrl
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsUrlTypesUrlsApi();
+$apiInstance = new Softonic\CatalogApiSdk\Api\ProgramsUrlTypesUrlsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $id_program = "id_program_example"; // string | Program UUID
 $id_url_type = "id_url_type_example"; // string | URL types identifier.
 $id_url = "id_url_example"; // string | Url UUID
 $body = new \Softonic\CatalogApiSdk\Client\Model\ProgramUrlTypeUrl(); // \Softonic\CatalogApiSdk\Client\Model\ProgramUrlTypeUrl | 
 
 try {
-    $api_instance->updateProgramUrlTypeUrl($id_program, $id_url_type, $id_url, $body);
+    $apiInstance->updateProgramUrlTypeUrl($id_program, $id_url_type, $id_url, $body);
 } catch (Exception $e) {
     echo 'Exception when calling ProgramsUrlTypesUrlsApi->updateProgramUrlTypeUrl: ', $e->getMessage(), PHP_EOL;
 }

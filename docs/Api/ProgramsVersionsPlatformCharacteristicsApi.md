@@ -24,21 +24,26 @@ Creates a new ProgramVersionPlatformCharacteristic
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsPlatformCharacteristicsApi();
+$apiInstance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsPlatformCharacteristicsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Program version ID
 $body = new \Softonic\CatalogApiSdk\Client\Model\ProgramVersionPlatformCharacteristic(); // \Softonic\CatalogApiSdk\Client\Model\ProgramVersionPlatformCharacteristic | 
 
 try {
-    $api_instance->createProgramVersionPlatformCharacteristic($id_program, $id_version, $body);
+    $apiInstance->createProgramVersionPlatformCharacteristic($id_program, $id_version, $body);
 } catch (Exception $e) {
     echo 'Exception when calling ProgramsVersionsPlatformCharacteristicsApi->createProgramVersionPlatformCharacteristic: ', $e->getMessage(), PHP_EOL;
 }
@@ -81,21 +86,26 @@ Deletes a ProgramVersionPlatformCharacteristic
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsPlatformCharacteristicsApi();
+$apiInstance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsPlatformCharacteristicsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Program version ID
 $id_platform_characteristic = "id_platform_characteristic_example"; // string | Platform Characteristic ID
 
 try {
-    $api_instance->deleteProgramVersionPlatformCharacteristic($id_program, $id_version, $id_platform_characteristic);
+    $apiInstance->deleteProgramVersionPlatformCharacteristic($id_program, $id_version, $id_platform_characteristic);
 } catch (Exception $e) {
     echo 'Exception when calling ProgramsVersionsPlatformCharacteristicsApi->deleteProgramVersionPlatformCharacteristic: ', $e->getMessage(), PHP_EOL;
 }
@@ -138,20 +148,25 @@ List of ProgramVersionPlatformCharacteristics
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsPlatformCharacteristicsApi();
+$apiInstance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsPlatformCharacteristicsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Program version ID
 
 try {
-    $result = $api_instance->findProgramVersionPlatformCharacteristic($id_program, $id_version);
+    $result = $apiInstance->findProgramVersionPlatformCharacteristic($id_program, $id_version);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProgramsVersionsPlatformCharacteristicsApi->findProgramVersionPlatformCharacteristic: ', $e->getMessage(), PHP_EOL;
@@ -194,21 +209,26 @@ Fetches a single ProgramVersionPlatformCharacteristic
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsPlatformCharacteristicsApi();
+$apiInstance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsPlatformCharacteristicsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Program version ID
 $id_platform_characteristic = "id_platform_characteristic_example"; // string | Platform Characteristic ID
 
 try {
-    $result = $api_instance->readProgramVersionPlatformCharacteristic($id_program, $id_version, $id_platform_characteristic);
+    $result = $apiInstance->readProgramVersionPlatformCharacteristic($id_program, $id_version, $id_platform_characteristic);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProgramsVersionsPlatformCharacteristicsApi->readProgramVersionPlatformCharacteristic: ', $e->getMessage(), PHP_EOL;
@@ -252,21 +272,26 @@ Entirely replaces a ProgramVersionPlatformCharacteristic
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsPlatformCharacteristicsApi();
+$apiInstance = new Softonic\CatalogApiSdk\Api\ProgramsVersionsPlatformCharacteristicsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $id_program = "id_program_example"; // string | Program UUID
 $id_version = "id_version_example"; // string | Program version ID
 $id_platform_characteristic = "id_platform_characteristic_example"; // string | Platform Characteristic ID
 
 try {
-    $api_instance->replaceProgramVersionPlatformCharacteristic($id_program, $id_version, $id_platform_characteristic);
+    $apiInstance->replaceProgramVersionPlatformCharacteristic($id_program, $id_version, $id_platform_characteristic);
 } catch (Exception $e) {
     echo 'Exception when calling ProgramsVersionsPlatformCharacteristicsApi->replaceProgramVersionPlatformCharacteristic: ', $e->getMessage(), PHP_EOL;
 }

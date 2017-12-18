@@ -25,22 +25,27 @@ Creates a new ProgramReviewTypeReviewImage
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsReviewTypesReviewsImagesApi();
+$apiInstance = new Softonic\CatalogApiSdk\Api\ProgramsReviewTypesReviewsImagesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $id_program = "id_program_example"; // string | Program UUID
 $id_review_type = "id_review_type_example"; // string | Review owner type
 $id_review = "id_review_example"; // string | Review identifier as UUID
 $body = new \Softonic\CatalogApiSdk\Client\Model\ProgramReviewTypeReviewImage(); // \Softonic\CatalogApiSdk\Client\Model\ProgramReviewTypeReviewImage | 
 
 try {
-    $api_instance->createProgramReviewTypeReviewImage($id_program, $id_review_type, $id_review, $body);
+    $apiInstance->createProgramReviewTypeReviewImage($id_program, $id_review_type, $id_review, $body);
 } catch (Exception $e) {
     echo 'Exception when calling ProgramsReviewTypesReviewsImagesApi->createProgramReviewTypeReviewImage: ', $e->getMessage(), PHP_EOL;
 }
@@ -84,22 +89,27 @@ Deletes a ProgramReviewTypeReviewImage
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsReviewTypesReviewsImagesApi();
+$apiInstance = new Softonic\CatalogApiSdk\Api\ProgramsReviewTypesReviewsImagesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $id_program = "id_program_example"; // string | Program UUID
 $id_review_type = "id_review_type_example"; // string | Review owner type
 $id_review = "id_review_example"; // string | Review identifier as UUID
 $id_image = "id_image_example"; // string | Image identifier in SHA1-Hash format derived from path
 
 try {
-    $api_instance->deleteProgramReviewTypeReviewImage($id_program, $id_review_type, $id_review, $id_image);
+    $apiInstance->deleteProgramReviewTypeReviewImage($id_program, $id_review_type, $id_review, $id_image);
 } catch (Exception $e) {
     echo 'Exception when calling ProgramsReviewTypesReviewsImagesApi->deleteProgramReviewTypeReviewImage: ', $e->getMessage(), PHP_EOL;
 }
@@ -143,21 +153,26 @@ List of ProgramReviewTypeReviewImages
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsReviewTypesReviewsImagesApi();
+$apiInstance = new Softonic\CatalogApiSdk\Api\ProgramsReviewTypesReviewsImagesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $id_program = "id_program_example"; // string | Program UUID
 $id_review_type = "id_review_type_example"; // string | Review owner type
 $id_review = "id_review_example"; // string | Review identifier as UUID
 
 try {
-    $result = $api_instance->findProgramReviewTypeReviewImage($id_program, $id_review_type, $id_review);
+    $result = $apiInstance->findProgramReviewTypeReviewImage($id_program, $id_review_type, $id_review);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProgramsReviewTypesReviewsImagesApi->findProgramReviewTypeReviewImage: ', $e->getMessage(), PHP_EOL;
@@ -201,22 +216,27 @@ Fetches a single ProgramReviewTypeReviewImage
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsReviewTypesReviewsImagesApi();
+$apiInstance = new Softonic\CatalogApiSdk\Api\ProgramsReviewTypesReviewsImagesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $id_program = "id_program_example"; // string | Program UUID
 $id_review_type = "id_review_type_example"; // string | Review owner type
 $id_review = "id_review_example"; // string | Review identifier as UUID
 $id_image = "id_image_example"; // string | Image identifier in SHA1-Hash format derived from path
 
 try {
-    $result = $api_instance->readProgramReviewTypeReviewImage($id_program, $id_review_type, $id_review, $id_image);
+    $result = $apiInstance->readProgramReviewTypeReviewImage($id_program, $id_review_type, $id_review, $id_image);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProgramsReviewTypesReviewsImagesApi->readProgramReviewTypeReviewImage: ', $e->getMessage(), PHP_EOL;
@@ -261,15 +281,20 @@ Entirely replaces a ProgramReviewTypeReviewImage
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsReviewTypesReviewsImagesApi();
+$apiInstance = new Softonic\CatalogApiSdk\Api\ProgramsReviewTypesReviewsImagesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $id_program = "id_program_example"; // string | Program UUID
 $id_review_type = "id_review_type_example"; // string | Review owner type
 $id_review = "id_review_example"; // string | Review identifier as UUID
@@ -277,7 +302,7 @@ $id_image = "id_image_example"; // string | Image identifier in SHA1-Hash format
 $body = new \Softonic\CatalogApiSdk\Client\Model\ProgramReviewTypeReviewImage(); // \Softonic\CatalogApiSdk\Client\Model\ProgramReviewTypeReviewImage | 
 
 try {
-    $api_instance->replaceProgramReviewTypeReviewImage($id_program, $id_review_type, $id_review, $id_image, $body);
+    $apiInstance->replaceProgramReviewTypeReviewImage($id_program, $id_review_type, $id_review, $id_image, $body);
 } catch (Exception $e) {
     echo 'Exception when calling ProgramsReviewTypesReviewsImagesApi->replaceProgramReviewTypeReviewImage: ', $e->getMessage(), PHP_EOL;
 }
@@ -322,15 +347,20 @@ Partially updates a ProgramReviewTypeReviewImage
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: catalog_api_access_code
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_application
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_implicit
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 // Configure OAuth2 access token for authorization: catalog_api_password
-Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Softonic\CatalogApiSdk\Api\ProgramsReviewTypesReviewsImagesApi();
+$apiInstance = new Softonic\CatalogApiSdk\Api\ProgramsReviewTypesReviewsImagesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $id_program = "id_program_example"; // string | Program UUID
 $id_review_type = "id_review_type_example"; // string | Review owner type
 $id_review = "id_review_example"; // string | Review identifier as UUID
@@ -338,7 +368,7 @@ $id_image = "id_image_example"; // string | Image identifier in SHA1-Hash format
 $body = new \Softonic\CatalogApiSdk\Client\Model\ProgramReviewTypeReviewImage(); // \Softonic\CatalogApiSdk\Client\Model\ProgramReviewTypeReviewImage | 
 
 try {
-    $api_instance->updateProgramReviewTypeReviewImage($id_program, $id_review_type, $id_review, $id_image, $body);
+    $apiInstance->updateProgramReviewTypeReviewImage($id_program, $id_review_type, $id_review, $id_image, $body);
 } catch (Exception $e) {
     echo 'Exception when calling ProgramsReviewTypesReviewsImagesApi->updateProgramReviewTypeReviewImage: ', $e->getMessage(), PHP_EOL;
 }
