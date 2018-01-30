@@ -235,6 +235,7 @@ class ProgramReviewTypeReview implements ModelInterface, ArrayAccess
     const TYPE_PREVIEW = 'preview';
     const TYPE_CORE = 'core';
     const TYPE_TRANSLATED = 'translated';
+    const TYPE_ROBOTINA = 'robotina';
     
 
     
@@ -269,6 +270,7 @@ class ProgramReviewTypeReview implements ModelInterface, ArrayAccess
             self::TYPE_PREVIEW,
             self::TYPE_CORE,
             self::TYPE_TRANSLATED,
+            self::TYPE_ROBOTINA,
         ];
     }
     

@@ -92,6 +92,16 @@ class OriginsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for replaceOrigin
+     *
+     * Entirely replaces a Origin.
+     *
+     */
+    public function testReplaceOrigin()
+    {
+    }
+
+    /**
      * Test case for updateOrigin
      *
      * Partially updates a Origin.

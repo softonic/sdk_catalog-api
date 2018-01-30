@@ -90,4 +90,14 @@ class PlatformsVersionsApiTest extends \PHPUnit_Framework_TestCase
     public function testReadPlatformVersion()
     {
     }
+
+    /**
+     * Test case for replacePlatformVersion
+     *
+     * Entirely replaces a PlatformVersion.
+     *
+     */
+    public function testReplacePlatformVersion()
+    {
+    }
 }

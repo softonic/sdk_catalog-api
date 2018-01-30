@@ -90,4 +90,14 @@ class PlatformsApiTest extends \PHPUnit_Framework_TestCase
     public function testReadPlatform()
     {
     }
+
+    /**
+     * Test case for replacePlatform
+     *
+     * Entirely replaces a Platform.
+     *
+     */
+    public function testReplacePlatform()
+    {
+    }
 }

@@ -627,6 +627,262 @@ class OriginsApi
     }
 
     /**
+     * Operation replaceOrigin
+     *
+     * Entirely replaces a Origin
+     *
+     * @param  string $id_origin Origin ID (required)
+     * @param  \Softonic\CatalogApiSdk\Client\Model\Origin $body body (optional)
+     *
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function replaceOrigin($id_origin, $body = null)
+    {
+        $this->replaceOriginWithHttpInfo($id_origin, $body);
+    }
+
+    /**
+     * Operation replaceOriginWithHttpInfo
+     *
+     * Entirely replaces a Origin
+     *
+     * @param  string $id_origin Origin ID (required)
+     * @param  \Softonic\CatalogApiSdk\Client\Model\Origin $body (optional)
+     *
+     * @throws \Softonic\CatalogApiSdk\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function replaceOriginWithHttpInfo($id_origin, $body = null)
+    {
+        $returnType = '';
+        $request = $this->replaceOriginRequest($id_origin, $body);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation replaceOriginAsync
+     *
+     * Entirely replaces a Origin
+     *
+     * @param  string $id_origin Origin ID (required)
+     * @param  \Softonic\CatalogApiSdk\Client\Model\Origin $body (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function replaceOriginAsync($id_origin, $body = null)
+    {
+        return $this->replaceOriginAsyncWithHttpInfo($id_origin, $body)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation replaceOriginAsyncWithHttpInfo
+     *
+     * Entirely replaces a Origin
+     *
+     * @param  string $id_origin Origin ID (required)
+     * @param  \Softonic\CatalogApiSdk\Client\Model\Origin $body (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function replaceOriginAsyncWithHttpInfo($id_origin, $body = null)
+    {
+        $returnType = '';
+        $request = $this->replaceOriginRequest($id_origin, $body);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'replaceOrigin'
+     *
+     * @param  string $id_origin Origin ID (required)
+     * @param  \Softonic\CatalogApiSdk\Client\Model\Origin $body (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function replaceOriginRequest($id_origin, $body = null)
+    {
+        // verify the required parameter 'id_origin' is set
+        if ($id_origin === null) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $id_origin when calling replaceOrigin'
+            );
+        }
+        if (strlen($id_origin) > 40) {
+            throw new \InvalidArgumentException('invalid length for "$id_origin" when calling OriginsApi.replaceOrigin, must be smaller than or equal to 40.');
+        }
+        if (strlen($id_origin) < 1) {
+            throw new \InvalidArgumentException('invalid length for "$id_origin" when calling OriginsApi.replaceOrigin, must be bigger than or equal to 1.');
+        }
+
+
+        $resourcePath = '/origins/{id_origin}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+        // path params
+        if ($id_origin !== null) {
+            $resourcePath = str_replace(
+                '{' . 'id_origin' . '}',
+                ObjectSerializer::toPathValue($id_origin),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+        if (isset($body)) {
+            $_tempBody = $body;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+        // this endpoint requires OAuth (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+        // this endpoint requires OAuth (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+        // this endpoint requires OAuth (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'PUT',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
      * Operation updateOrigin
      *
      * Partially updates a Origin

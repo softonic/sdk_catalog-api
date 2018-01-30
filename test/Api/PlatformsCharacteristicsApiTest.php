@@ -90,4 +90,14 @@ class PlatformsCharacteristicsApiTest extends \PHPUnit_Framework_TestCase
     public function testReadPlatformCharacteristic()
     {
     }
+
+    /**
+     * Test case for replacePlatformCharacteristic
+     *
+     * Entirely replaces a PlatformCharacteristic.
+     *
+     */
+    public function testReplacePlatformCharacteristic()
+    {
+    }
 }
