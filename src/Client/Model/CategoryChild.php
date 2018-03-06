@@ -186,7 +186,7 @@ class CategoryChild implements ModelInterface, ArrayAccess, JsonSerializable
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(array $data = [])
     {
         if (array_key_exists('id_category', $data)) $this->container['id_category'] = $data['id_category'];
         if (array_key_exists('id_child', $data)) $this->container['id_child'] = $data['id_child'];

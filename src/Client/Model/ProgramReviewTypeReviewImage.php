@@ -256,7 +256,7 @@ class ProgramReviewTypeReviewImage implements ModelInterface, ArrayAccess, JsonS
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(array $data = [])
     {
         if (array_key_exists('id_program', $data)) $this->container['id_program'] = $data['id_program'];
         if (array_key_exists('id_review_type', $data)) $this->container['id_review_type'] = $data['id_review_type'];

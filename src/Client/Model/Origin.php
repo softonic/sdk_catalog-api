@@ -181,7 +181,7 @@ class Origin implements ModelInterface, ArrayAccess, JsonSerializable
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(array $data = [])
     {
         if (array_key_exists('id_origin', $data)) $this->container['id_origin'] = $data['id_origin'];
         if (array_key_exists('name', $data)) $this->container['name'] = $data['name'];

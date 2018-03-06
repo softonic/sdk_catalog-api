@@ -253,7 +253,7 @@ class ProgramVersionLanguage implements ModelInterface, ArrayAccess, JsonSeriali
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(array $data = [])
     {
         if (array_key_exists('id_program', $data)) $this->container['id_program'] = $data['id_program'];
         if (array_key_exists('id_version', $data)) $this->container['id_version'] = $data['id_version'];

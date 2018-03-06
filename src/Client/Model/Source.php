@@ -181,7 +181,7 @@ class Source implements ModelInterface, ArrayAccess, JsonSerializable
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(array $data = [])
     {
         if (array_key_exists('id_source', $data)) $this->container['id_source'] = $data['id_source'];
         if (array_key_exists('name', $data)) $this->container['name'] = $data['name'];

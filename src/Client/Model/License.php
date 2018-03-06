@@ -201,7 +201,7 @@ class License implements ModelInterface, ArrayAccess, JsonSerializable
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(array $data = [])
     {
         if (array_key_exists('id_license', $data)) $this->container['id_license'] = $data['id_license'];
         if (array_key_exists('description', $data)) $this->container['description'] = $data['description'];

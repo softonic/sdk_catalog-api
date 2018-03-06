@@ -186,7 +186,7 @@ class PlatformCharacteristic implements ModelInterface, ArrayAccess, JsonSeriali
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(array $data = [])
     {
         if (array_key_exists('id_platform', $data)) $this->container['id_platform'] = $data['id_platform'];
         if (array_key_exists('id_characteristic', $data)) $this->container['id_characteristic'] = $data['id_characteristic'];
