@@ -61,6 +61,7 @@ class ProgramReviewTypeReview implements ModelInterface, ArrayAccess, JsonSerial
         'id_program' => 'string',
         'id_review_type' => 'string',
         'id_review' => 'string',
+        'source' => 'string',
         'public_note' => 'string',
         'type' => 'string',
         'rating' => 'int',
@@ -83,6 +84,7 @@ class ProgramReviewTypeReview implements ModelInterface, ArrayAccess, JsonSerial
         'id_program' => null,
         'id_review_type' => null,
         'id_review' => null,
+        'source' => null,
         'public_note' => null,
         'type' => null,
         'rating' => 'int32',
@@ -126,6 +128,7 @@ class ProgramReviewTypeReview implements ModelInterface, ArrayAccess, JsonSerial
         'id_program' => 'id_program',
         'id_review_type' => 'id_review_type',
         'id_review' => 'id_review',
+        'source' => 'source',
         'public_note' => 'public_note',
         'type' => 'type',
         'rating' => 'rating',
@@ -148,6 +151,7 @@ class ProgramReviewTypeReview implements ModelInterface, ArrayAccess, JsonSerial
         'id_program' => 'setIdProgram',
         'id_review_type' => 'setIdReviewType',
         'id_review' => 'setIdReview',
+        'source' => 'setSource',
         'public_note' => 'setPublicNote',
         'type' => 'setType',
         'rating' => 'setRating',
@@ -170,6 +174,7 @@ class ProgramReviewTypeReview implements ModelInterface, ArrayAccess, JsonSerial
         'id_program' => 'getIdProgram',
         'id_review_type' => 'getIdReviewType',
         'id_review' => 'getIdReview',
+        'source' => 'getSource',
         'public_note' => 'getPublicNote',
         'type' => 'getType',
         'rating' => 'getRating',
@@ -294,6 +299,7 @@ class ProgramReviewTypeReview implements ModelInterface, ArrayAccess, JsonSerial
         $this->container['id_program'] = isset($data['id_program']) ? $data['id_program'] : null;
         $this->container['id_review_type'] = isset($data['id_review_type']) ? $data['id_review_type'] : null;
         $this->container['id_review'] = isset($data['id_review']) ? $data['id_review'] : null;
+        $this->container['source'] = isset($data['source']) ? $data['source'] : null;
         $this->container['public_note'] = isset($data['public_note']) ? $data['public_note'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['rating'] = isset($data['rating']) ? $data['rating'] : null;
@@ -347,6 +353,14 @@ class ProgramReviewTypeReview implements ModelInterface, ArrayAccess, JsonSerial
 
         if ((strlen($this->container['id_review']) < 36)) {
             $invalidProperties[] = "invalid value for 'id_review', the character length must be bigger than or equal to 36.";
+        }
+
+        if (!is_null($this->container['source']) && (strlen($this->container['source']) > 36)) {
+            $invalidProperties[] = "invalid value for 'source', the character length must be smaller than or equal to 36.";
+        }
+
+        if (!is_null($this->container['source']) && (strlen($this->container['source']) < 1)) {
+            $invalidProperties[] = "invalid value for 'source', the character length must be bigger than or equal to 1.";
         }
 
         if (!is_null($this->container['public_note']) && (strlen($this->container['public_note']) > 3500)) {
@@ -456,6 +470,12 @@ class ProgramReviewTypeReview implements ModelInterface, ArrayAccess, JsonSerial
             return false;
         }
         if ((strlen($this->container['id_review']) < 36)) {
+            return false;
+        }
+        if (!is_null($this->container['source']) && (strlen($this->container['source']) > 36)) {
+            return false;
+        }
+        if (!is_null($this->container['source']) && (strlen($this->container['source']) < 1)) {
             return false;
         }
         if (!is_null($this->container['public_note']) && (strlen($this->container['public_note']) > 3500)) {
@@ -605,6 +625,37 @@ class ProgramReviewTypeReview implements ModelInterface, ArrayAccess, JsonSerial
         }
 
         $this->container['id_review'] = $id_review;
+
+        return $this;
+    }
+
+    /**
+     * Gets source
+     *
+     * @return string
+     */
+    public function getSource()
+    {
+        return $this->container['source'];
+    }
+
+    /**
+     * Sets source
+     *
+     * @param string $source Who created the review
+     *
+     * @return $this
+     */
+    public function setSource($source)
+    {
+        if (!is_null($source) && (strlen($source) > 36)) {
+            throw new \InvalidArgumentException('invalid length for $source when calling ProgramReviewTypeReview., must be smaller than or equal to 36.');
+        }
+        if (!is_null($source) && (strlen($source) < 1)) {
+            throw new \InvalidArgumentException('invalid length for $source when calling ProgramReviewTypeReview., must be bigger than or equal to 1.');
+        }
+
+        $this->container['source'] = $source;
 
         return $this;
     }

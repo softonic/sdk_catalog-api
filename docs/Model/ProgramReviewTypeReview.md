@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **id_program** | **string** | Program UUID | 
 **id_review_type** | **string** | Review owner type | 
 **id_review** | **string** | Review identifier as UUID | 
+**source** | **string** | Who created the review | [optional] 
 **public_note** | **string** | Public note. | [optional] 
 **type** | **string** | Review type. This field is used for tracking purposes. Ex: core | [optional] 
 **rating** | **int** | Program rating. | [optional] 

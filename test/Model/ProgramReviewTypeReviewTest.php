@@ -99,6 +99,13 @@ class ProgramReviewTypeReviewTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "source"
+     */
+    public function testPropertySource()
+    {
+    }
+
+    /**
      * Test attribute "public_note"
      */
     public function testPropertyPublicNote()
