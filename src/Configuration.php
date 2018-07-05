@@ -81,7 +81,7 @@ class Configuration
      *
      * @var string
      */
-    protected $host = 'https://catalog.sftapi.com';
+    protected $host = 'https://catalog-v2.sftapi.com';
 
     /**
      * User agent of the HTTP request, set to "PHP-Swagger" by default
