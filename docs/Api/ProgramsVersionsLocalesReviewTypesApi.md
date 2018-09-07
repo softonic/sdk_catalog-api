@@ -1,6 +1,6 @@
 # Softonic\CatalogApiSdk\ProgramsVersionsLocalesReviewTypesApi
 
-All URIs are relative to *http://catalog-v2.eu-west.sftapi.com*
+All URIs are relative to *https://catalog-v2.eu-west.sftapi.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
