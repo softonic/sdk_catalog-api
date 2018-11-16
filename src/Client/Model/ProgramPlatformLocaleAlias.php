@@ -45,6 +45,10 @@ class ProgramPlatformLocaleAlias implements ModelInterface, ArrayAccess, JsonSer
 {
     const DISCRIMINATOR = null;
 
+    const GET_ALL_ATTRIBUTES = true;
+
+    const GET_SET_ATTRIBUTES = false;
+
     /**
       * The original name of the model.
       *
@@ -191,12 +195,12 @@ class ProgramPlatformLocaleAlias implements ModelInterface, ArrayAccess, JsonSer
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(array $data = [])
     {
-        $this->container['id_program'] = isset($data['id_program']) ? $data['id_program'] : null;
-        $this->container['id_platform'] = isset($data['id_platform']) ? $data['id_platform'] : null;
-        $this->container['id_locale'] = isset($data['id_locale']) ? $data['id_locale'] : null;
-        $this->container['id_alias'] = isset($data['id_alias']) ? $data['id_alias'] : null;
+        array_key_exists('id_program', $data) && $this->container['id_program'] = $data['id_program'];
+        array_key_exists('id_platform', $data) && $this->container['id_platform'] = $data['id_platform'];
+        array_key_exists('id_locale', $data) && $this->container['id_locale'] = $data['id_locale'];
+        array_key_exists('id_alias', $data) && $this->container['id_alias'] = $data['id_alias'];
     }
 
     /**
@@ -208,47 +212,47 @@ class ProgramPlatformLocaleAlias implements ModelInterface, ArrayAccess, JsonSer
     {
         $invalidProperties = [];
 
-        if ($this->container['id_program'] === null) {
+        if (array_key_exists('id_program', $this->container) && $this->container['id_program'] === null) {
             $invalidProperties[] = "'id_program' can't be null";
         }
-        if ((strlen($this->container['id_program']) > 36)) {
+        if (array_key_exists('id_program', $this->container) && (strlen($this->container['id_program']) > 36)) {
             $invalidProperties[] = "invalid value for 'id_program', the character length must be smaller than or equal to 36.";
         }
 
-        if ((strlen($this->container['id_program']) < 36)) {
+        if (array_key_exists('id_program', $this->container) && (strlen($this->container['id_program']) < 36)) {
             $invalidProperties[] = "invalid value for 'id_program', the character length must be bigger than or equal to 36.";
         }
 
-        if ($this->container['id_platform'] === null) {
+        if (array_key_exists('id_platform', $this->container) && $this->container['id_platform'] === null) {
             $invalidProperties[] = "'id_platform' can't be null";
         }
-        if ((strlen($this->container['id_platform']) > 20)) {
+        if (array_key_exists('id_platform', $this->container) && (strlen($this->container['id_platform']) > 20)) {
             $invalidProperties[] = "invalid value for 'id_platform', the character length must be smaller than or equal to 20.";
         }
 
-        if ((strlen($this->container['id_platform']) < 1)) {
+        if (array_key_exists('id_platform', $this->container) && (strlen($this->container['id_platform']) < 1)) {
             $invalidProperties[] = "invalid value for 'id_platform', the character length must be bigger than or equal to 1.";
         }
 
-        if ($this->container['id_locale'] === null) {
+        if (array_key_exists('id_locale', $this->container) && $this->container['id_locale'] === null) {
             $invalidProperties[] = "'id_locale' can't be null";
         }
-        if ((strlen($this->container['id_locale']) > 2)) {
+        if (array_key_exists('id_locale', $this->container) && (strlen($this->container['id_locale']) > 2)) {
             $invalidProperties[] = "invalid value for 'id_locale', the character length must be smaller than or equal to 2.";
         }
 
-        if ((strlen($this->container['id_locale']) < 2)) {
+        if (array_key_exists('id_locale', $this->container) && (strlen($this->container['id_locale']) < 2)) {
             $invalidProperties[] = "invalid value for 'id_locale', the character length must be bigger than or equal to 2.";
         }
 
-        if ($this->container['id_alias'] === null) {
+        if (array_key_exists('id_alias', $this->container) && $this->container['id_alias'] === null) {
             $invalidProperties[] = "'id_alias' can't be null";
         }
-        if ((strlen($this->container['id_alias']) > 60)) {
+        if (array_key_exists('id_alias', $this->container) && (strlen($this->container['id_alias']) > 60)) {
             $invalidProperties[] = "invalid value for 'id_alias', the character length must be smaller than or equal to 60.";
         }
 
-        if (!preg_match("/^[a-z0-9](?:[a-z0-9\\-]{0,58}[a-z0-9])?$/", $this->container['id_alias'])) {
+        if (array_key_exists('id_alias', $this->container) && !preg_match("/^[a-z0-9](?:[a-z0-9\\-]{0,58}[a-z0-9])?$/", $this->container['id_alias'])) {
             $invalidProperties[] = "invalid value for 'id_alias', must be conform to the pattern /^[a-z0-9](?:[a-z0-9\\-]{0,58}[a-z0-9])?$/.";
         }
 
@@ -264,40 +268,40 @@ class ProgramPlatformLocaleAlias implements ModelInterface, ArrayAccess, JsonSer
     public function valid()
     {
 
-        if ($this->container['id_program'] === null) {
+        if (array_key_exists('id_program', $this->container) && $this->container['id_program'] === null) {
             return false;
         }
-        if ((strlen($this->container['id_program']) > 36)) {
+        if (array_key_exists('id_program', $this->container) && (strlen($this->container['id_program']) > 36)) {
             return false;
         }
-        if ((strlen($this->container['id_program']) < 36)) {
+        if (array_key_exists('id_program', $this->container) && (strlen($this->container['id_program']) < 36)) {
             return false;
         }
-        if ($this->container['id_platform'] === null) {
+        if (array_key_exists('id_platform', $this->container) && $this->container['id_platform'] === null) {
             return false;
         }
-        if ((strlen($this->container['id_platform']) > 20)) {
+        if (array_key_exists('id_platform', $this->container) && (strlen($this->container['id_platform']) > 20)) {
             return false;
         }
-        if ((strlen($this->container['id_platform']) < 1)) {
+        if (array_key_exists('id_platform', $this->container) && (strlen($this->container['id_platform']) < 1)) {
             return false;
         }
-        if ($this->container['id_locale'] === null) {
+        if (array_key_exists('id_locale', $this->container) && $this->container['id_locale'] === null) {
             return false;
         }
-        if ((strlen($this->container['id_locale']) > 2)) {
+        if (array_key_exists('id_locale', $this->container) && (strlen($this->container['id_locale']) > 2)) {
             return false;
         }
-        if ((strlen($this->container['id_locale']) < 2)) {
+        if (array_key_exists('id_locale', $this->container) && (strlen($this->container['id_locale']) < 2)) {
             return false;
         }
-        if ($this->container['id_alias'] === null) {
+        if (array_key_exists('id_alias', $this->container) && $this->container['id_alias'] === null) {
             return false;
         }
-        if ((strlen($this->container['id_alias']) > 60)) {
+        if (array_key_exists('id_alias', $this->container) && (strlen($this->container['id_alias']) > 60)) {
             return false;
         }
-        if (!preg_match("/^[a-z0-9](?:[a-z0-9\\-]{0,58}[a-z0-9])?$/", $this->container['id_alias'])) {
+        if (array_key_exists('id_alias', $this->container) && !preg_match("/^[a-z0-9](?:[a-z0-9\\-]{0,58}[a-z0-9])?$/", $this->container['id_alias'])) {
             return false;
         }
         return true;
@@ -436,7 +440,7 @@ class ProgramPlatformLocaleAlias implements ModelInterface, ArrayAccess, JsonSer
      */
     public function offsetExists($offset)
     {
-        return isset($this->container[$offset]);
+        return array_key_exists($offset, $this->container);
     }
 
     /**
@@ -505,6 +509,26 @@ class ProgramPlatformLocaleAlias implements ModelInterface, ArrayAccess, JsonSer
     public function jsonSerialize()
     {
         return $this->container;
+    }
+
+    /**
+     * Returns data as array.
+     *
+     * @param bool $getAllAttributes Should convert with all attributes or just the set ones?
+     *
+     * @return array
+     */
+    public function toArray($getAllAttributes = self::GET_ALL_ATTRIBUTES)
+    {
+        if (!$getAllAttributes) {
+            return $this->container;
+        }
+
+        foreach (self::$attributeMap as $attribute) {
+            $data[$attribute] = $this->container[$attribute] ?? null;
+        }
+
+        return $data;
     }
 }
 

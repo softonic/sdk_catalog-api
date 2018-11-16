@@ -45,6 +45,10 @@ class License implements ModelInterface, ArrayAccess, JsonSerializable
 {
     const DISCRIMINATOR = null;
 
+    const GET_ALL_ATTRIBUTES = true;
+
+    const GET_SET_ATTRIBUTES = false;
+
     /**
       * The original name of the model.
       *
@@ -201,11 +205,11 @@ class License implements ModelInterface, ArrayAccess, JsonSerializable
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(array $data = [])
     {
-        $this->container['id_license'] = isset($data['id_license']) ? $data['id_license'] : null;
-        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        array_key_exists('id_license', $data) && $this->container['id_license'] = $data['id_license'];
+        array_key_exists('description', $data) && $this->container['description'] = $data['description'];
+        array_key_exists('type', $data) && $this->container['type'] = $data['type'];
     }
 
     /**
@@ -217,33 +221,33 @@ class License implements ModelInterface, ArrayAccess, JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['id_license'] === null) {
+        if (array_key_exists('id_license', $this->container) && $this->container['id_license'] === null) {
             $invalidProperties[] = "'id_license' can't be null";
         }
-        if ((strlen($this->container['id_license']) > 3)) {
+        if (array_key_exists('id_license', $this->container) && (strlen($this->container['id_license']) > 3)) {
             $invalidProperties[] = "invalid value for 'id_license', the character length must be smaller than or equal to 3.";
         }
 
-        if ((strlen($this->container['id_license']) < 1)) {
+        if (array_key_exists('id_license', $this->container) && (strlen($this->container['id_license']) < 1)) {
             $invalidProperties[] = "invalid value for 'id_license', the character length must be bigger than or equal to 1.";
         }
 
-        if ($this->container['description'] === null) {
+        if (array_key_exists('description', $this->container) && $this->container['description'] === null) {
             $invalidProperties[] = "'description' can't be null";
         }
-        if ((strlen($this->container['description']) > 20)) {
+        if (array_key_exists('description', $this->container) && (strlen($this->container['description']) > 20)) {
             $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 20.";
         }
 
-        if ((strlen($this->container['description']) < 1)) {
+        if (array_key_exists('description', $this->container) && (strlen($this->container['description']) < 1)) {
             $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 1.";
         }
 
-        if ($this->container['type'] === null) {
+        if (array_key_exists('type', $this->container) && $this->container['type'] === null) {
             $invalidProperties[] = "'type' can't be null";
         }
         $allowedValues = $this->getTypeAllowableValues();
-        if (!in_array($this->container['type'], $allowedValues)) {
+        if (array_key_exists('type', $this->container) && !in_array($this->container['type'], $allowedValues)) {
             $invalidProperties[] = sprintf(
                 "invalid value for 'type', must be one of '%s'",
                 implode("', '", $allowedValues)
@@ -262,29 +266,29 @@ class License implements ModelInterface, ArrayAccess, JsonSerializable
     public function valid()
     {
 
-        if ($this->container['id_license'] === null) {
+        if (array_key_exists('id_license', $this->container) && $this->container['id_license'] === null) {
             return false;
         }
-        if ((strlen($this->container['id_license']) > 3)) {
+        if (array_key_exists('id_license', $this->container) && (strlen($this->container['id_license']) > 3)) {
             return false;
         }
-        if ((strlen($this->container['id_license']) < 1)) {
+        if (array_key_exists('id_license', $this->container) && (strlen($this->container['id_license']) < 1)) {
             return false;
         }
-        if ($this->container['description'] === null) {
+        if (array_key_exists('description', $this->container) && $this->container['description'] === null) {
             return false;
         }
-        if ((strlen($this->container['description']) > 20)) {
+        if (array_key_exists('description', $this->container) && (strlen($this->container['description']) > 20)) {
             return false;
         }
-        if ((strlen($this->container['description']) < 1)) {
+        if (array_key_exists('description', $this->container) && (strlen($this->container['description']) < 1)) {
             return false;
         }
-        if ($this->container['type'] === null) {
+        if (array_key_exists('type', $this->container) && $this->container['type'] === null) {
             return false;
         }
         $allowedValues = $this->getTypeAllowableValues();
-        if (!in_array($this->container['type'], $allowedValues)) {
+        if (array_key_exists('type', $this->container) && !in_array($this->container['type'], $allowedValues)) {
             return false;
         }
         return true;
@@ -394,7 +398,7 @@ class License implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function offsetExists($offset)
     {
-        return isset($this->container[$offset]);
+        return array_key_exists($offset, $this->container);
     }
 
     /**
@@ -463,6 +467,26 @@ class License implements ModelInterface, ArrayAccess, JsonSerializable
     public function jsonSerialize()
     {
         return $this->container;
+    }
+
+    /**
+     * Returns data as array.
+     *
+     * @param bool $getAllAttributes Should convert with all attributes or just the set ones?
+     *
+     * @return array
+     */
+    public function toArray($getAllAttributes = self::GET_ALL_ATTRIBUTES)
+    {
+        if (!$getAllAttributes) {
+            return $this->container;
+        }
+
+        foreach (self::$attributeMap as $attribute) {
+            $data[$attribute] = $this->container[$attribute] ?? null;
+        }
+
+        return $data;
     }
 }
 

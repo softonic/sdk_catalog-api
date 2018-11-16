@@ -45,6 +45,10 @@ class ProgramVersionLocaleUrlType implements ModelInterface, ArrayAccess, JsonSe
 {
     const DISCRIMINATOR = null;
 
+    const GET_ALL_ATTRIBUTES = true;
+
+    const GET_SET_ATTRIBUTES = false;
+
     /**
       * The original name of the model.
       *
@@ -211,13 +215,13 @@ class ProgramVersionLocaleUrlType implements ModelInterface, ArrayAccess, JsonSe
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(array $data = [])
     {
-        $this->container['id_program'] = isset($data['id_program']) ? $data['id_program'] : null;
-        $this->container['id_version'] = isset($data['id_version']) ? $data['id_version'] : null;
-        $this->container['id_locale'] = isset($data['id_locale']) ? $data['id_locale'] : null;
-        $this->container['id_url_type'] = isset($data['id_url_type']) ? $data['id_url_type'] : null;
-        $this->container['id_url'] = isset($data['id_url']) ? $data['id_url'] : null;
+        array_key_exists('id_program', $data) && $this->container['id_program'] = $data['id_program'];
+        array_key_exists('id_version', $data) && $this->container['id_version'] = $data['id_version'];
+        array_key_exists('id_locale', $data) && $this->container['id_locale'] = $data['id_locale'];
+        array_key_exists('id_url_type', $data) && $this->container['id_url_type'] = $data['id_url_type'];
+        array_key_exists('id_url', $data) && $this->container['id_url'] = $data['id_url'];
     }
 
     /**
@@ -229,58 +233,58 @@ class ProgramVersionLocaleUrlType implements ModelInterface, ArrayAccess, JsonSe
     {
         $invalidProperties = [];
 
-        if ($this->container['id_program'] === null) {
+        if (array_key_exists('id_program', $this->container) && $this->container['id_program'] === null) {
             $invalidProperties[] = "'id_program' can't be null";
         }
-        if ((strlen($this->container['id_program']) > 36)) {
+        if (array_key_exists('id_program', $this->container) && (strlen($this->container['id_program']) > 36)) {
             $invalidProperties[] = "invalid value for 'id_program', the character length must be smaller than or equal to 36.";
         }
 
-        if ((strlen($this->container['id_program']) < 36)) {
+        if (array_key_exists('id_program', $this->container) && (strlen($this->container['id_program']) < 36)) {
             $invalidProperties[] = "invalid value for 'id_program', the character length must be bigger than or equal to 36.";
         }
 
-        if ($this->container['id_version'] === null) {
+        if (array_key_exists('id_version', $this->container) && $this->container['id_version'] === null) {
             $invalidProperties[] = "'id_version' can't be null";
         }
-        if ((strlen($this->container['id_version']) > 60)) {
+        if (array_key_exists('id_version', $this->container) && (strlen($this->container['id_version']) > 60)) {
             $invalidProperties[] = "invalid value for 'id_version', the character length must be smaller than or equal to 60.";
         }
 
-        if ((strlen($this->container['id_version']) < 1)) {
+        if (array_key_exists('id_version', $this->container) && (strlen($this->container['id_version']) < 1)) {
             $invalidProperties[] = "invalid value for 'id_version', the character length must be bigger than or equal to 1.";
         }
 
-        if ($this->container['id_locale'] === null) {
+        if (array_key_exists('id_locale', $this->container) && $this->container['id_locale'] === null) {
             $invalidProperties[] = "'id_locale' can't be null";
         }
-        if ((strlen($this->container['id_locale']) > 2)) {
+        if (array_key_exists('id_locale', $this->container) && (strlen($this->container['id_locale']) > 2)) {
             $invalidProperties[] = "invalid value for 'id_locale', the character length must be smaller than or equal to 2.";
         }
 
-        if ((strlen($this->container['id_locale']) < 2)) {
+        if (array_key_exists('id_locale', $this->container) && (strlen($this->container['id_locale']) < 2)) {
             $invalidProperties[] = "invalid value for 'id_locale', the character length must be bigger than or equal to 2.";
         }
 
-        if ($this->container['id_url_type'] === null) {
+        if (array_key_exists('id_url_type', $this->container) && $this->container['id_url_type'] === null) {
             $invalidProperties[] = "'id_url_type' can't be null";
         }
         $allowedValues = $this->getIdUrlTypeAllowableValues();
-        if (!in_array($this->container['id_url_type'], $allowedValues)) {
+        if (array_key_exists('id_url_type', $this->container) && !in_array($this->container['id_url_type'], $allowedValues)) {
             $invalidProperties[] = sprintf(
                 "invalid value for 'id_url_type', must be one of '%s'",
                 implode("', '", $allowedValues)
             );
         }
 
-        if ($this->container['id_url'] === null) {
+        if (array_key_exists('id_url', $this->container) && $this->container['id_url'] === null) {
             $invalidProperties[] = "'id_url' can't be null";
         }
-        if ((strlen($this->container['id_url']) > 36)) {
+        if (array_key_exists('id_url', $this->container) && (strlen($this->container['id_url']) > 36)) {
             $invalidProperties[] = "invalid value for 'id_url', the character length must be smaller than or equal to 36.";
         }
 
-        if ((strlen($this->container['id_url']) < 36)) {
+        if (array_key_exists('id_url', $this->container) && (strlen($this->container['id_url']) < 36)) {
             $invalidProperties[] = "invalid value for 'id_url', the character length must be bigger than or equal to 36.";
         }
 
@@ -296,47 +300,47 @@ class ProgramVersionLocaleUrlType implements ModelInterface, ArrayAccess, JsonSe
     public function valid()
     {
 
-        if ($this->container['id_program'] === null) {
+        if (array_key_exists('id_program', $this->container) && $this->container['id_program'] === null) {
             return false;
         }
-        if ((strlen($this->container['id_program']) > 36)) {
+        if (array_key_exists('id_program', $this->container) && (strlen($this->container['id_program']) > 36)) {
             return false;
         }
-        if ((strlen($this->container['id_program']) < 36)) {
+        if (array_key_exists('id_program', $this->container) && (strlen($this->container['id_program']) < 36)) {
             return false;
         }
-        if ($this->container['id_version'] === null) {
+        if (array_key_exists('id_version', $this->container) && $this->container['id_version'] === null) {
             return false;
         }
-        if ((strlen($this->container['id_version']) > 60)) {
+        if (array_key_exists('id_version', $this->container) && (strlen($this->container['id_version']) > 60)) {
             return false;
         }
-        if ((strlen($this->container['id_version']) < 1)) {
+        if (array_key_exists('id_version', $this->container) && (strlen($this->container['id_version']) < 1)) {
             return false;
         }
-        if ($this->container['id_locale'] === null) {
+        if (array_key_exists('id_locale', $this->container) && $this->container['id_locale'] === null) {
             return false;
         }
-        if ((strlen($this->container['id_locale']) > 2)) {
+        if (array_key_exists('id_locale', $this->container) && (strlen($this->container['id_locale']) > 2)) {
             return false;
         }
-        if ((strlen($this->container['id_locale']) < 2)) {
+        if (array_key_exists('id_locale', $this->container) && (strlen($this->container['id_locale']) < 2)) {
             return false;
         }
-        if ($this->container['id_url_type'] === null) {
+        if (array_key_exists('id_url_type', $this->container) && $this->container['id_url_type'] === null) {
             return false;
         }
         $allowedValues = $this->getIdUrlTypeAllowableValues();
-        if (!in_array($this->container['id_url_type'], $allowedValues)) {
+        if (array_key_exists('id_url_type', $this->container) && !in_array($this->container['id_url_type'], $allowedValues)) {
             return false;
         }
-        if ($this->container['id_url'] === null) {
+        if (array_key_exists('id_url', $this->container) && $this->container['id_url'] === null) {
             return false;
         }
-        if ((strlen($this->container['id_url']) > 36)) {
+        if (array_key_exists('id_url', $this->container) && (strlen($this->container['id_url']) > 36)) {
             return false;
         }
-        if ((strlen($this->container['id_url']) < 36)) {
+        if (array_key_exists('id_url', $this->container) && (strlen($this->container['id_url']) < 36)) {
             return false;
         }
         return true;
@@ -508,7 +512,7 @@ class ProgramVersionLocaleUrlType implements ModelInterface, ArrayAccess, JsonSe
      */
     public function offsetExists($offset)
     {
-        return isset($this->container[$offset]);
+        return array_key_exists($offset, $this->container);
     }
 
     /**
@@ -577,6 +581,26 @@ class ProgramVersionLocaleUrlType implements ModelInterface, ArrayAccess, JsonSe
     public function jsonSerialize()
     {
         return $this->container;
+    }
+
+    /**
+     * Returns data as array.
+     *
+     * @param bool $getAllAttributes Should convert with all attributes or just the set ones?
+     *
+     * @return array
+     */
+    public function toArray($getAllAttributes = self::GET_ALL_ATTRIBUTES)
+    {
+        if (!$getAllAttributes) {
+            return $this->container;
+        }
+
+        foreach (self::$attributeMap as $attribute) {
+            $data[$attribute] = $this->container[$attribute] ?? null;
+        }
+
+        return $data;
     }
 }
 

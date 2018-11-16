@@ -45,6 +45,10 @@ class ProgramUrlTypeUrl implements ModelInterface, ArrayAccess, JsonSerializable
 {
     const DISCRIMINATOR = null;
 
+    const GET_ALL_ATTRIBUTES = true;
+
+    const GET_SET_ATTRIBUTES = false;
+
     /**
       * The original name of the model.
       *
@@ -237,14 +241,14 @@ class ProgramUrlTypeUrl implements ModelInterface, ArrayAccess, JsonSerializable
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(array $data = [])
     {
-        $this->container['id_program'] = isset($data['id_program']) ? $data['id_program'] : null;
-        $this->container['id_url_type'] = isset($data['id_url_type']) ? $data['id_url_type'] : null;
-        $this->container['id_url'] = isset($data['id_url']) ? $data['id_url'] : null;
-        $this->container['url'] = isset($data['url']) ? $data['url'] : null;
-        $this->container['id_compliance_scan'] = isset($data['id_compliance_scan']) ? $data['id_compliance_scan'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        array_key_exists('id_program', $data) && $this->container['id_program'] = $data['id_program'];
+        array_key_exists('id_url_type', $data) && $this->container['id_url_type'] = $data['id_url_type'];
+        array_key_exists('id_url', $data) && $this->container['id_url'] = $data['id_url'];
+        array_key_exists('url', $data) && $this->container['url'] = $data['url'];
+        array_key_exists('id_compliance_scan', $data) && $this->container['id_compliance_scan'] = $data['id_compliance_scan'];
+        array_key_exists('status', $data) && $this->container['status'] = $data['status'];
     }
 
     /**
@@ -256,60 +260,60 @@ class ProgramUrlTypeUrl implements ModelInterface, ArrayAccess, JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['id_program'] === null) {
+        if (array_key_exists('id_program', $this->container) && $this->container['id_program'] === null) {
             $invalidProperties[] = "'id_program' can't be null";
         }
-        if ((strlen($this->container['id_program']) > 36)) {
+        if (array_key_exists('id_program', $this->container) && (strlen($this->container['id_program']) > 36)) {
             $invalidProperties[] = "invalid value for 'id_program', the character length must be smaller than or equal to 36.";
         }
 
-        if ((strlen($this->container['id_program']) < 36)) {
+        if (array_key_exists('id_program', $this->container) && (strlen($this->container['id_program']) < 36)) {
             $invalidProperties[] = "invalid value for 'id_program', the character length must be bigger than or equal to 36.";
         }
 
-        if ($this->container['id_url_type'] === null) {
+        if (array_key_exists('id_url_type', $this->container) && $this->container['id_url_type'] === null) {
             $invalidProperties[] = "'id_url_type' can't be null";
         }
         $allowedValues = $this->getIdUrlTypeAllowableValues();
-        if (!in_array($this->container['id_url_type'], $allowedValues)) {
+        if (array_key_exists('id_url_type', $this->container) && !in_array($this->container['id_url_type'], $allowedValues)) {
             $invalidProperties[] = sprintf(
                 "invalid value for 'id_url_type', must be one of '%s'",
                 implode("', '", $allowedValues)
             );
         }
 
-        if ($this->container['id_url'] === null) {
+        if (array_key_exists('id_url', $this->container) && $this->container['id_url'] === null) {
             $invalidProperties[] = "'id_url' can't be null";
         }
-        if ((strlen($this->container['id_url']) > 36)) {
+        if (array_key_exists('id_url', $this->container) && (strlen($this->container['id_url']) > 36)) {
             $invalidProperties[] = "invalid value for 'id_url', the character length must be smaller than or equal to 36.";
         }
 
-        if ((strlen($this->container['id_url']) < 36)) {
+        if (array_key_exists('id_url', $this->container) && (strlen($this->container['id_url']) < 36)) {
             $invalidProperties[] = "invalid value for 'id_url', the character length must be bigger than or equal to 36.";
         }
 
-        if ($this->container['url'] === null) {
+        if (array_key_exists('url', $this->container) && $this->container['url'] === null) {
             $invalidProperties[] = "'url' can't be null";
         }
-        if ((strlen($this->container['url']) > 2083)) {
+        if (array_key_exists('url', $this->container) && (strlen($this->container['url']) > 2083)) {
             $invalidProperties[] = "invalid value for 'url', the character length must be smaller than or equal to 2083.";
         }
 
-        if ((strlen($this->container['url']) < 1)) {
+        if (array_key_exists('url', $this->container) && (strlen($this->container['url']) < 1)) {
             $invalidProperties[] = "invalid value for 'url', the character length must be bigger than or equal to 1.";
         }
 
-        if (!is_null($this->container['id_compliance_scan']) && (strlen($this->container['id_compliance_scan']) > 36)) {
+        if (array_key_exists('id_compliance_scan', $this->container) && ($this->container['id_compliance_scan'] !== null) && (strlen($this->container['id_compliance_scan']) > 36)) {
             $invalidProperties[] = "invalid value for 'id_compliance_scan', the character length must be smaller than or equal to 36.";
         }
 
-        if (!is_null($this->container['id_compliance_scan']) && (strlen($this->container['id_compliance_scan']) < 36)) {
+        if (array_key_exists('id_compliance_scan', $this->container) && ($this->container['id_compliance_scan'] !== null) && (strlen($this->container['id_compliance_scan']) < 36)) {
             $invalidProperties[] = "invalid value for 'id_compliance_scan', the character length must be bigger than or equal to 36.";
         }
 
         $allowedValues = $this->getStatusAllowableValues();
-        if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues)) {
+        if (array_key_exists('status', $this->container) && ($this->container['status'] !== null) && !in_array($this->container['status'], $allowedValues)) {
             $invalidProperties[] = sprintf(
                 "invalid value for 'status', must be one of '%s'",
                 implode("', '", $allowedValues)
@@ -328,48 +332,48 @@ class ProgramUrlTypeUrl implements ModelInterface, ArrayAccess, JsonSerializable
     public function valid()
     {
 
-        if ($this->container['id_program'] === null) {
+        if (array_key_exists('id_program', $this->container) && $this->container['id_program'] === null) {
             return false;
         }
-        if ((strlen($this->container['id_program']) > 36)) {
+        if (array_key_exists('id_program', $this->container) && (strlen($this->container['id_program']) > 36)) {
             return false;
         }
-        if ((strlen($this->container['id_program']) < 36)) {
+        if (array_key_exists('id_program', $this->container) && (strlen($this->container['id_program']) < 36)) {
             return false;
         }
-        if ($this->container['id_url_type'] === null) {
+        if (array_key_exists('id_url_type', $this->container) && $this->container['id_url_type'] === null) {
             return false;
         }
         $allowedValues = $this->getIdUrlTypeAllowableValues();
-        if (!in_array($this->container['id_url_type'], $allowedValues)) {
+        if (array_key_exists('id_url_type', $this->container) && !in_array($this->container['id_url_type'], $allowedValues)) {
             return false;
         }
-        if ($this->container['id_url'] === null) {
+        if (array_key_exists('id_url', $this->container) && $this->container['id_url'] === null) {
             return false;
         }
-        if ((strlen($this->container['id_url']) > 36)) {
+        if (array_key_exists('id_url', $this->container) && (strlen($this->container['id_url']) > 36)) {
             return false;
         }
-        if ((strlen($this->container['id_url']) < 36)) {
+        if (array_key_exists('id_url', $this->container) && (strlen($this->container['id_url']) < 36)) {
             return false;
         }
-        if ($this->container['url'] === null) {
+        if (array_key_exists('url', $this->container) && $this->container['url'] === null) {
             return false;
         }
-        if ((strlen($this->container['url']) > 2083)) {
+        if (array_key_exists('url', $this->container) && (strlen($this->container['url']) > 2083)) {
             return false;
         }
-        if ((strlen($this->container['url']) < 1)) {
+        if (array_key_exists('url', $this->container) && (strlen($this->container['url']) < 1)) {
             return false;
         }
-        if (!is_null($this->container['id_compliance_scan']) && (strlen($this->container['id_compliance_scan']) > 36)) {
+        if (array_key_exists('id_compliance_scan', $this->container) && ($this->container['id_compliance_scan'] !== null) && (strlen($this->container['id_compliance_scan']) > 36)) {
             return false;
         }
-        if (!is_null($this->container['id_compliance_scan']) && (strlen($this->container['id_compliance_scan']) < 36)) {
+        if (array_key_exists('id_compliance_scan', $this->container) && ($this->container['id_compliance_scan'] !== null) && (strlen($this->container['id_compliance_scan']) < 36)) {
             return false;
         }
         $allowedValues = $this->getStatusAllowableValues();
-        if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues)) {
+        if (array_key_exists('status', $this->container) && ($this->container['status'] !== null) && !in_array($this->container['status'], $allowedValues)) {
             return false;
         }
         return true;
@@ -574,7 +578,7 @@ class ProgramUrlTypeUrl implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function offsetExists($offset)
     {
-        return isset($this->container[$offset]);
+        return array_key_exists($offset, $this->container);
     }
 
     /**
@@ -643,6 +647,26 @@ class ProgramUrlTypeUrl implements ModelInterface, ArrayAccess, JsonSerializable
     public function jsonSerialize()
     {
         return $this->container;
+    }
+
+    /**
+     * Returns data as array.
+     *
+     * @param bool $getAllAttributes Should convert with all attributes or just the set ones?
+     *
+     * @return array
+     */
+    public function toArray($getAllAttributes = self::GET_ALL_ATTRIBUTES)
+    {
+        if (!$getAllAttributes) {
+            return $this->container;
+        }
+
+        foreach (self::$attributeMap as $attribute) {
+            $data[$attribute] = $this->container[$attribute] ?? null;
+        }
+
+        return $data;
     }
 }
 

@@ -45,6 +45,10 @@ class Source implements ModelInterface, ArrayAccess, JsonSerializable
 {
     const DISCRIMINATOR = null;
 
+    const GET_ALL_ATTRIBUTES = true;
+
+    const GET_SET_ATTRIBUTES = false;
+
     /**
       * The original name of the model.
       *
@@ -181,10 +185,10 @@ class Source implements ModelInterface, ArrayAccess, JsonSerializable
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(array $data = [])
     {
-        $this->container['id_source'] = isset($data['id_source']) ? $data['id_source'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        array_key_exists('id_source', $data) && $this->container['id_source'] = $data['id_source'];
+        array_key_exists('name', $data) && $this->container['name'] = $data['name'];
     }
 
     /**
@@ -196,25 +200,25 @@ class Source implements ModelInterface, ArrayAccess, JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['id_source'] === null) {
+        if (array_key_exists('id_source', $this->container) && $this->container['id_source'] === null) {
             $invalidProperties[] = "'id_source' can't be null";
         }
-        if ((strlen($this->container['id_source']) > 20)) {
+        if (array_key_exists('id_source', $this->container) && (strlen($this->container['id_source']) > 20)) {
             $invalidProperties[] = "invalid value for 'id_source', the character length must be smaller than or equal to 20.";
         }
 
-        if ((strlen($this->container['id_source']) < 1)) {
+        if (array_key_exists('id_source', $this->container) && (strlen($this->container['id_source']) < 1)) {
             $invalidProperties[] = "invalid value for 'id_source', the character length must be bigger than or equal to 1.";
         }
 
-        if ($this->container['name'] === null) {
+        if (array_key_exists('name', $this->container) && $this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
-        if ((strlen($this->container['name']) > 20)) {
+        if (array_key_exists('name', $this->container) && (strlen($this->container['name']) > 20)) {
             $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 20.";
         }
 
-        if ((strlen($this->container['name']) < 1)) {
+        if (array_key_exists('name', $this->container) && (strlen($this->container['name']) < 1)) {
             $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
         }
 
@@ -230,22 +234,22 @@ class Source implements ModelInterface, ArrayAccess, JsonSerializable
     public function valid()
     {
 
-        if ($this->container['id_source'] === null) {
+        if (array_key_exists('id_source', $this->container) && $this->container['id_source'] === null) {
             return false;
         }
-        if ((strlen($this->container['id_source']) > 20)) {
+        if (array_key_exists('id_source', $this->container) && (strlen($this->container['id_source']) > 20)) {
             return false;
         }
-        if ((strlen($this->container['id_source']) < 1)) {
+        if (array_key_exists('id_source', $this->container) && (strlen($this->container['id_source']) < 1)) {
             return false;
         }
-        if ($this->container['name'] === null) {
+        if (array_key_exists('name', $this->container) && $this->container['name'] === null) {
             return false;
         }
-        if ((strlen($this->container['name']) > 20)) {
+        if (array_key_exists('name', $this->container) && (strlen($this->container['name']) > 20)) {
             return false;
         }
-        if ((strlen($this->container['name']) < 1)) {
+        if (array_key_exists('name', $this->container) && (strlen($this->container['name']) < 1)) {
             return false;
         }
         return true;
@@ -322,7 +326,7 @@ class Source implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function offsetExists($offset)
     {
-        return isset($this->container[$offset]);
+        return array_key_exists($offset, $this->container);
     }
 
     /**
@@ -391,6 +395,26 @@ class Source implements ModelInterface, ArrayAccess, JsonSerializable
     public function jsonSerialize()
     {
         return $this->container;
+    }
+
+    /**
+     * Returns data as array.
+     *
+     * @param bool $getAllAttributes Should convert with all attributes or just the set ones?
+     *
+     * @return array
+     */
+    public function toArray($getAllAttributes = self::GET_ALL_ATTRIBUTES)
+    {
+        if (!$getAllAttributes) {
+            return $this->container;
+        }
+
+        foreach (self::$attributeMap as $attribute) {
+            $data[$attribute] = $this->container[$attribute] ?? null;
+        }
+
+        return $data;
     }
 }
 

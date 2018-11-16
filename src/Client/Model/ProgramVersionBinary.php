@@ -45,6 +45,10 @@ class ProgramVersionBinary implements ModelInterface, ArrayAccess, JsonSerializa
 {
     const DISCRIMINATOR = null;
 
+    const GET_ALL_ATTRIBUTES = true;
+
+    const GET_SET_ATTRIBUTES = false;
+
     /**
       * The original name of the model.
       *
@@ -222,14 +226,14 @@ class ProgramVersionBinary implements ModelInterface, ArrayAccess, JsonSerializa
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(array $data = [])
     {
-        $this->container['id_program'] = isset($data['id_program']) ? $data['id_program'] : null;
-        $this->container['id_version'] = isset($data['id_version']) ? $data['id_version'] : null;
-        $this->container['id_binary'] = isset($data['id_binary']) ? $data['id_binary'] : null;
-        $this->container['id_compliance_scan'] = isset($data['id_compliance_scan']) ? $data['id_compliance_scan'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
+        array_key_exists('id_program', $data) && $this->container['id_program'] = $data['id_program'];
+        array_key_exists('id_version', $data) && $this->container['id_version'] = $data['id_version'];
+        array_key_exists('id_binary', $data) && $this->container['id_binary'] = $data['id_binary'];
+        array_key_exists('id_compliance_scan', $data) && $this->container['id_compliance_scan'] = $data['id_compliance_scan'];
+        array_key_exists('status', $data) && $this->container['status'] = $data['status'];
+        array_key_exists('created_at', $data) && $this->container['created_at'] = $data['created_at'];
     }
 
     /**
@@ -241,49 +245,49 @@ class ProgramVersionBinary implements ModelInterface, ArrayAccess, JsonSerializa
     {
         $invalidProperties = [];
 
-        if ($this->container['id_program'] === null) {
+        if (array_key_exists('id_program', $this->container) && $this->container['id_program'] === null) {
             $invalidProperties[] = "'id_program' can't be null";
         }
-        if ((strlen($this->container['id_program']) > 36)) {
+        if (array_key_exists('id_program', $this->container) && (strlen($this->container['id_program']) > 36)) {
             $invalidProperties[] = "invalid value for 'id_program', the character length must be smaller than or equal to 36.";
         }
 
-        if ((strlen($this->container['id_program']) < 36)) {
+        if (array_key_exists('id_program', $this->container) && (strlen($this->container['id_program']) < 36)) {
             $invalidProperties[] = "invalid value for 'id_program', the character length must be bigger than or equal to 36.";
         }
 
-        if ($this->container['id_version'] === null) {
+        if (array_key_exists('id_version', $this->container) && $this->container['id_version'] === null) {
             $invalidProperties[] = "'id_version' can't be null";
         }
-        if ((strlen($this->container['id_version']) > 60)) {
+        if (array_key_exists('id_version', $this->container) && (strlen($this->container['id_version']) > 60)) {
             $invalidProperties[] = "invalid value for 'id_version', the character length must be smaller than or equal to 60.";
         }
 
-        if ((strlen($this->container['id_version']) < 1)) {
+        if (array_key_exists('id_version', $this->container) && (strlen($this->container['id_version']) < 1)) {
             $invalidProperties[] = "invalid value for 'id_version', the character length must be bigger than or equal to 1.";
         }
 
-        if ($this->container['id_binary'] === null) {
+        if (array_key_exists('id_binary', $this->container) && $this->container['id_binary'] === null) {
             $invalidProperties[] = "'id_binary' can't be null";
         }
-        if ((strlen($this->container['id_binary']) > 40)) {
+        if (array_key_exists('id_binary', $this->container) && (strlen($this->container['id_binary']) > 40)) {
             $invalidProperties[] = "invalid value for 'id_binary', the character length must be smaller than or equal to 40.";
         }
 
-        if ((strlen($this->container['id_binary']) < 40)) {
+        if (array_key_exists('id_binary', $this->container) && (strlen($this->container['id_binary']) < 40)) {
             $invalidProperties[] = "invalid value for 'id_binary', the character length must be bigger than or equal to 40.";
         }
 
-        if (!is_null($this->container['id_compliance_scan']) && (strlen($this->container['id_compliance_scan']) > 36)) {
+        if (array_key_exists('id_compliance_scan', $this->container) && ($this->container['id_compliance_scan'] !== null) && (strlen($this->container['id_compliance_scan']) > 36)) {
             $invalidProperties[] = "invalid value for 'id_compliance_scan', the character length must be smaller than or equal to 36.";
         }
 
-        if (!is_null($this->container['id_compliance_scan']) && (strlen($this->container['id_compliance_scan']) < 36)) {
+        if (array_key_exists('id_compliance_scan', $this->container) && ($this->container['id_compliance_scan'] !== null) && (strlen($this->container['id_compliance_scan']) < 36)) {
             $invalidProperties[] = "invalid value for 'id_compliance_scan', the character length must be bigger than or equal to 36.";
         }
 
         $allowedValues = $this->getStatusAllowableValues();
-        if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues)) {
+        if (array_key_exists('status', $this->container) && ($this->container['status'] !== null) && !in_array($this->container['status'], $allowedValues)) {
             $invalidProperties[] = sprintf(
                 "invalid value for 'status', must be one of '%s'",
                 implode("', '", $allowedValues)
@@ -302,41 +306,41 @@ class ProgramVersionBinary implements ModelInterface, ArrayAccess, JsonSerializa
     public function valid()
     {
 
-        if ($this->container['id_program'] === null) {
+        if (array_key_exists('id_program', $this->container) && $this->container['id_program'] === null) {
             return false;
         }
-        if ((strlen($this->container['id_program']) > 36)) {
+        if (array_key_exists('id_program', $this->container) && (strlen($this->container['id_program']) > 36)) {
             return false;
         }
-        if ((strlen($this->container['id_program']) < 36)) {
+        if (array_key_exists('id_program', $this->container) && (strlen($this->container['id_program']) < 36)) {
             return false;
         }
-        if ($this->container['id_version'] === null) {
+        if (array_key_exists('id_version', $this->container) && $this->container['id_version'] === null) {
             return false;
         }
-        if ((strlen($this->container['id_version']) > 60)) {
+        if (array_key_exists('id_version', $this->container) && (strlen($this->container['id_version']) > 60)) {
             return false;
         }
-        if ((strlen($this->container['id_version']) < 1)) {
+        if (array_key_exists('id_version', $this->container) && (strlen($this->container['id_version']) < 1)) {
             return false;
         }
-        if ($this->container['id_binary'] === null) {
+        if (array_key_exists('id_binary', $this->container) && $this->container['id_binary'] === null) {
             return false;
         }
-        if ((strlen($this->container['id_binary']) > 40)) {
+        if (array_key_exists('id_binary', $this->container) && (strlen($this->container['id_binary']) > 40)) {
             return false;
         }
-        if ((strlen($this->container['id_binary']) < 40)) {
+        if (array_key_exists('id_binary', $this->container) && (strlen($this->container['id_binary']) < 40)) {
             return false;
         }
-        if (!is_null($this->container['id_compliance_scan']) && (strlen($this->container['id_compliance_scan']) > 36)) {
+        if (array_key_exists('id_compliance_scan', $this->container) && ($this->container['id_compliance_scan'] !== null) && (strlen($this->container['id_compliance_scan']) > 36)) {
             return false;
         }
-        if (!is_null($this->container['id_compliance_scan']) && (strlen($this->container['id_compliance_scan']) < 36)) {
+        if (array_key_exists('id_compliance_scan', $this->container) && ($this->container['id_compliance_scan'] !== null) && (strlen($this->container['id_compliance_scan']) < 36)) {
             return false;
         }
         $allowedValues = $this->getStatusAllowableValues();
-        if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues)) {
+        if (array_key_exists('status', $this->container) && ($this->container['status'] !== null) && !in_array($this->container['status'], $allowedValues)) {
             return false;
         }
         return true;
@@ -532,7 +536,7 @@ class ProgramVersionBinary implements ModelInterface, ArrayAccess, JsonSerializa
      */
     public function offsetExists($offset)
     {
-        return isset($this->container[$offset]);
+        return array_key_exists($offset, $this->container);
     }
 
     /**
@@ -601,6 +605,26 @@ class ProgramVersionBinary implements ModelInterface, ArrayAccess, JsonSerializa
     public function jsonSerialize()
     {
         return $this->container;
+    }
+
+    /**
+     * Returns data as array.
+     *
+     * @param bool $getAllAttributes Should convert with all attributes or just the set ones?
+     *
+     * @return array
+     */
+    public function toArray($getAllAttributes = self::GET_ALL_ATTRIBUTES)
+    {
+        if (!$getAllAttributes) {
+            return $this->container;
+        }
+
+        foreach (self::$attributeMap as $attribute) {
+            $data[$attribute] = $this->container[$attribute] ?? null;
+        }
+
+        return $data;
     }
 }
 

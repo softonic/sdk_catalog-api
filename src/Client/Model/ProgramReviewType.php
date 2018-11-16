@@ -45,6 +45,10 @@ class ProgramReviewType implements ModelInterface, ArrayAccess, JsonSerializable
 {
     const DISCRIMINATOR = null;
 
+    const GET_ALL_ATTRIBUTES = true;
+
+    const GET_SET_ATTRIBUTES = false;
+
     /**
       * The original name of the model.
       *
@@ -196,10 +200,10 @@ class ProgramReviewType implements ModelInterface, ArrayAccess, JsonSerializable
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(array $data = [])
     {
-        $this->container['id_program'] = isset($data['id_program']) ? $data['id_program'] : null;
-        $this->container['id_review_type'] = isset($data['id_review_type']) ? $data['id_review_type'] : null;
+        array_key_exists('id_program', $data) && $this->container['id_program'] = $data['id_program'];
+        array_key_exists('id_review_type', $data) && $this->container['id_review_type'] = $data['id_review_type'];
     }
 
     /**
@@ -211,22 +215,22 @@ class ProgramReviewType implements ModelInterface, ArrayAccess, JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['id_program'] === null) {
+        if (array_key_exists('id_program', $this->container) && $this->container['id_program'] === null) {
             $invalidProperties[] = "'id_program' can't be null";
         }
-        if ((strlen($this->container['id_program']) > 36)) {
+        if (array_key_exists('id_program', $this->container) && (strlen($this->container['id_program']) > 36)) {
             $invalidProperties[] = "invalid value for 'id_program', the character length must be smaller than or equal to 36.";
         }
 
-        if ((strlen($this->container['id_program']) < 36)) {
+        if (array_key_exists('id_program', $this->container) && (strlen($this->container['id_program']) < 36)) {
             $invalidProperties[] = "invalid value for 'id_program', the character length must be bigger than or equal to 36.";
         }
 
-        if ($this->container['id_review_type'] === null) {
+        if (array_key_exists('id_review_type', $this->container) && $this->container['id_review_type'] === null) {
             $invalidProperties[] = "'id_review_type' can't be null";
         }
         $allowedValues = $this->getIdReviewTypeAllowableValues();
-        if (!in_array($this->container['id_review_type'], $allowedValues)) {
+        if (array_key_exists('id_review_type', $this->container) && !in_array($this->container['id_review_type'], $allowedValues)) {
             $invalidProperties[] = sprintf(
                 "invalid value for 'id_review_type', must be one of '%s'",
                 implode("', '", $allowedValues)
@@ -245,20 +249,20 @@ class ProgramReviewType implements ModelInterface, ArrayAccess, JsonSerializable
     public function valid()
     {
 
-        if ($this->container['id_program'] === null) {
+        if (array_key_exists('id_program', $this->container) && $this->container['id_program'] === null) {
             return false;
         }
-        if ((strlen($this->container['id_program']) > 36)) {
+        if (array_key_exists('id_program', $this->container) && (strlen($this->container['id_program']) > 36)) {
             return false;
         }
-        if ((strlen($this->container['id_program']) < 36)) {
+        if (array_key_exists('id_program', $this->container) && (strlen($this->container['id_program']) < 36)) {
             return false;
         }
-        if ($this->container['id_review_type'] === null) {
+        if (array_key_exists('id_review_type', $this->container) && $this->container['id_review_type'] === null) {
             return false;
         }
         $allowedValues = $this->getIdReviewTypeAllowableValues();
-        if (!in_array($this->container['id_review_type'], $allowedValues)) {
+        if (array_key_exists('id_review_type', $this->container) && !in_array($this->container['id_review_type'], $allowedValues)) {
             return false;
         }
         return true;
@@ -337,7 +341,7 @@ class ProgramReviewType implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function offsetExists($offset)
     {
-        return isset($this->container[$offset]);
+        return array_key_exists($offset, $this->container);
     }
 
     /**
@@ -406,6 +410,26 @@ class ProgramReviewType implements ModelInterface, ArrayAccess, JsonSerializable
     public function jsonSerialize()
     {
         return $this->container;
+    }
+
+    /**
+     * Returns data as array.
+     *
+     * @param bool $getAllAttributes Should convert with all attributes or just the set ones?
+     *
+     * @return array
+     */
+    public function toArray($getAllAttributes = self::GET_ALL_ATTRIBUTES)
+    {
+        if (!$getAllAttributes) {
+            return $this->container;
+        }
+
+        foreach (self::$attributeMap as $attribute) {
+            $data[$attribute] = $this->container[$attribute] ?? null;
+        }
+
+        return $data;
     }
 }
 

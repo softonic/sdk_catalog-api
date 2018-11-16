@@ -45,6 +45,10 @@ class PlatformCharacteristic implements ModelInterface, ArrayAccess, JsonSeriali
 {
     const DISCRIMINATOR = null;
 
+    const GET_ALL_ATTRIBUTES = true;
+
+    const GET_SET_ATTRIBUTES = false;
+
     /**
       * The original name of the model.
       *
@@ -186,11 +190,11 @@ class PlatformCharacteristic implements ModelInterface, ArrayAccess, JsonSeriali
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(array $data = [])
     {
-        $this->container['id_platform'] = isset($data['id_platform']) ? $data['id_platform'] : null;
-        $this->container['id_characteristic'] = isset($data['id_characteristic']) ? $data['id_characteristic'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        array_key_exists('id_platform', $data) && $this->container['id_platform'] = $data['id_platform'];
+        array_key_exists('id_characteristic', $data) && $this->container['id_characteristic'] = $data['id_characteristic'];
+        array_key_exists('name', $data) && $this->container['name'] = $data['name'];
     }
 
     /**
@@ -202,36 +206,36 @@ class PlatformCharacteristic implements ModelInterface, ArrayAccess, JsonSeriali
     {
         $invalidProperties = [];
 
-        if ($this->container['id_platform'] === null) {
+        if (array_key_exists('id_platform', $this->container) && $this->container['id_platform'] === null) {
             $invalidProperties[] = "'id_platform' can't be null";
         }
-        if ((strlen($this->container['id_platform']) > 20)) {
+        if (array_key_exists('id_platform', $this->container) && (strlen($this->container['id_platform']) > 20)) {
             $invalidProperties[] = "invalid value for 'id_platform', the character length must be smaller than or equal to 20.";
         }
 
-        if ((strlen($this->container['id_platform']) < 1)) {
+        if (array_key_exists('id_platform', $this->container) && (strlen($this->container['id_platform']) < 1)) {
             $invalidProperties[] = "invalid value for 'id_platform', the character length must be bigger than or equal to 1.";
         }
 
-        if ($this->container['id_characteristic'] === null) {
+        if (array_key_exists('id_characteristic', $this->container) && $this->container['id_characteristic'] === null) {
             $invalidProperties[] = "'id_characteristic' can't be null";
         }
-        if ((strlen($this->container['id_characteristic']) > 40)) {
+        if (array_key_exists('id_characteristic', $this->container) && (strlen($this->container['id_characteristic']) > 40)) {
             $invalidProperties[] = "invalid value for 'id_characteristic', the character length must be smaller than or equal to 40.";
         }
 
-        if ((strlen($this->container['id_characteristic']) < 1)) {
+        if (array_key_exists('id_characteristic', $this->container) && (strlen($this->container['id_characteristic']) < 1)) {
             $invalidProperties[] = "invalid value for 'id_characteristic', the character length must be bigger than or equal to 1.";
         }
 
-        if ($this->container['name'] === null) {
+        if (array_key_exists('name', $this->container) && $this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
-        if ((strlen($this->container['name']) > 40)) {
+        if (array_key_exists('name', $this->container) && (strlen($this->container['name']) > 40)) {
             $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 40.";
         }
 
-        if ((strlen($this->container['name']) < 1)) {
+        if (array_key_exists('name', $this->container) && (strlen($this->container['name']) < 1)) {
             $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
         }
 
@@ -247,31 +251,31 @@ class PlatformCharacteristic implements ModelInterface, ArrayAccess, JsonSeriali
     public function valid()
     {
 
-        if ($this->container['id_platform'] === null) {
+        if (array_key_exists('id_platform', $this->container) && $this->container['id_platform'] === null) {
             return false;
         }
-        if ((strlen($this->container['id_platform']) > 20)) {
+        if (array_key_exists('id_platform', $this->container) && (strlen($this->container['id_platform']) > 20)) {
             return false;
         }
-        if ((strlen($this->container['id_platform']) < 1)) {
+        if (array_key_exists('id_platform', $this->container) && (strlen($this->container['id_platform']) < 1)) {
             return false;
         }
-        if ($this->container['id_characteristic'] === null) {
+        if (array_key_exists('id_characteristic', $this->container) && $this->container['id_characteristic'] === null) {
             return false;
         }
-        if ((strlen($this->container['id_characteristic']) > 40)) {
+        if (array_key_exists('id_characteristic', $this->container) && (strlen($this->container['id_characteristic']) > 40)) {
             return false;
         }
-        if ((strlen($this->container['id_characteristic']) < 1)) {
+        if (array_key_exists('id_characteristic', $this->container) && (strlen($this->container['id_characteristic']) < 1)) {
             return false;
         }
-        if ($this->container['name'] === null) {
+        if (array_key_exists('name', $this->container) && $this->container['name'] === null) {
             return false;
         }
-        if ((strlen($this->container['name']) > 40)) {
+        if (array_key_exists('name', $this->container) && (strlen($this->container['name']) > 40)) {
             return false;
         }
-        if ((strlen($this->container['name']) < 1)) {
+        if (array_key_exists('name', $this->container) && (strlen($this->container['name']) < 1)) {
             return false;
         }
         return true;
@@ -379,7 +383,7 @@ class PlatformCharacteristic implements ModelInterface, ArrayAccess, JsonSeriali
      */
     public function offsetExists($offset)
     {
-        return isset($this->container[$offset]);
+        return array_key_exists($offset, $this->container);
     }
 
     /**
@@ -448,6 +452,26 @@ class PlatformCharacteristic implements ModelInterface, ArrayAccess, JsonSeriali
     public function jsonSerialize()
     {
         return $this->container;
+    }
+
+    /**
+     * Returns data as array.
+     *
+     * @param bool $getAllAttributes Should convert with all attributes or just the set ones?
+     *
+     * @return array
+     */
+    public function toArray($getAllAttributes = self::GET_ALL_ATTRIBUTES)
+    {
+        if (!$getAllAttributes) {
+            return $this->container;
+        }
+
+        foreach (self::$attributeMap as $attribute) {
+            $data[$attribute] = $this->container[$attribute] ?? null;
+        }
+
+        return $data;
     }
 }
 

@@ -45,6 +45,10 @@ class ProgramReviewTypeReviewImage implements ModelInterface, ArrayAccess, JsonS
 {
     const DISCRIMINATOR = null;
 
+    const GET_ALL_ATTRIBUTES = true;
+
+    const GET_SET_ATTRIBUTES = false;
+
     /**
       * The original name of the model.
       *
@@ -256,19 +260,19 @@ class ProgramReviewTypeReviewImage implements ModelInterface, ArrayAccess, JsonS
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(array $data = [])
     {
-        $this->container['id_program'] = isset($data['id_program']) ? $data['id_program'] : null;
-        $this->container['id_review_type'] = isset($data['id_review_type']) ? $data['id_review_type'] : null;
-        $this->container['id_review'] = isset($data['id_review']) ? $data['id_review'] : null;
-        $this->container['id_image'] = isset($data['id_image']) ? $data['id_image'] : null;
-        $this->container['path'] = isset($data['path']) ? $data['path'] : null;
-        $this->container['filename'] = isset($data['filename']) ? $data['filename'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['width'] = isset($data['width']) ? $data['width'] : null;
-        $this->container['height'] = isset($data['height']) ? $data['height'] : null;
-        $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
-        $this->container['caption'] = isset($data['caption']) ? $data['caption'] : null;
+        array_key_exists('id_program', $data) && $this->container['id_program'] = $data['id_program'];
+        array_key_exists('id_review_type', $data) && $this->container['id_review_type'] = $data['id_review_type'];
+        array_key_exists('id_review', $data) && $this->container['id_review'] = $data['id_review'];
+        array_key_exists('id_image', $data) && $this->container['id_image'] = $data['id_image'];
+        array_key_exists('path', $data) && $this->container['path'] = $data['path'];
+        array_key_exists('filename', $data) && $this->container['filename'] = $data['filename'];
+        array_key_exists('type', $data) && $this->container['type'] = $data['type'];
+        array_key_exists('width', $data) && $this->container['width'] = $data['width'];
+        array_key_exists('height', $data) && $this->container['height'] = $data['height'];
+        array_key_exists('priority', $data) && $this->container['priority'] = $data['priority'];
+        array_key_exists('caption', $data) && $this->container['caption'] = $data['caption'];
     }
 
     /**
@@ -280,96 +284,96 @@ class ProgramReviewTypeReviewImage implements ModelInterface, ArrayAccess, JsonS
     {
         $invalidProperties = [];
 
-        if ($this->container['id_program'] === null) {
+        if (array_key_exists('id_program', $this->container) && $this->container['id_program'] === null) {
             $invalidProperties[] = "'id_program' can't be null";
         }
-        if ((strlen($this->container['id_program']) > 36)) {
+        if (array_key_exists('id_program', $this->container) && (strlen($this->container['id_program']) > 36)) {
             $invalidProperties[] = "invalid value for 'id_program', the character length must be smaller than or equal to 36.";
         }
 
-        if ((strlen($this->container['id_program']) < 36)) {
+        if (array_key_exists('id_program', $this->container) && (strlen($this->container['id_program']) < 36)) {
             $invalidProperties[] = "invalid value for 'id_program', the character length must be bigger than or equal to 36.";
         }
 
-        if ($this->container['id_review_type'] === null) {
+        if (array_key_exists('id_review_type', $this->container) && $this->container['id_review_type'] === null) {
             $invalidProperties[] = "'id_review_type' can't be null";
         }
         $allowedValues = $this->getIdReviewTypeAllowableValues();
-        if (!in_array($this->container['id_review_type'], $allowedValues)) {
+        if (array_key_exists('id_review_type', $this->container) && !in_array($this->container['id_review_type'], $allowedValues)) {
             $invalidProperties[] = sprintf(
                 "invalid value for 'id_review_type', must be one of '%s'",
                 implode("', '", $allowedValues)
             );
         }
 
-        if ($this->container['id_review'] === null) {
+        if (array_key_exists('id_review', $this->container) && $this->container['id_review'] === null) {
             $invalidProperties[] = "'id_review' can't be null";
         }
-        if ((strlen($this->container['id_review']) > 36)) {
+        if (array_key_exists('id_review', $this->container) && (strlen($this->container['id_review']) > 36)) {
             $invalidProperties[] = "invalid value for 'id_review', the character length must be smaller than or equal to 36.";
         }
 
-        if ((strlen($this->container['id_review']) < 36)) {
+        if (array_key_exists('id_review', $this->container) && (strlen($this->container['id_review']) < 36)) {
             $invalidProperties[] = "invalid value for 'id_review', the character length must be bigger than or equal to 36.";
         }
 
-        if ($this->container['id_image'] === null) {
+        if (array_key_exists('id_image', $this->container) && $this->container['id_image'] === null) {
             $invalidProperties[] = "'id_image' can't be null";
         }
-        if ((strlen($this->container['id_image']) > 40)) {
+        if (array_key_exists('id_image', $this->container) && (strlen($this->container['id_image']) > 40)) {
             $invalidProperties[] = "invalid value for 'id_image', the character length must be smaller than or equal to 40.";
         }
 
-        if ((strlen($this->container['id_image']) < 40)) {
+        if (array_key_exists('id_image', $this->container) && (strlen($this->container['id_image']) < 40)) {
             $invalidProperties[] = "invalid value for 'id_image', the character length must be bigger than or equal to 40.";
         }
 
-        if ($this->container['path'] === null) {
+        if (array_key_exists('path', $this->container) && $this->container['path'] === null) {
             $invalidProperties[] = "'path' can't be null";
         }
-        if ((strlen($this->container['path']) > 255)) {
+        if (array_key_exists('path', $this->container) && (strlen($this->container['path']) > 255)) {
             $invalidProperties[] = "invalid value for 'path', the character length must be smaller than or equal to 255.";
         }
 
-        if ((strlen($this->container['path']) < 1)) {
+        if (array_key_exists('path', $this->container) && (strlen($this->container['path']) < 1)) {
             $invalidProperties[] = "invalid value for 'path', the character length must be bigger than or equal to 1.";
         }
 
-        if ($this->container['filename'] === null) {
+        if (array_key_exists('filename', $this->container) && $this->container['filename'] === null) {
             $invalidProperties[] = "'filename' can't be null";
         }
-        if ((strlen($this->container['filename']) > 255)) {
+        if (array_key_exists('filename', $this->container) && (strlen($this->container['filename']) > 255)) {
             $invalidProperties[] = "invalid value for 'filename', the character length must be smaller than or equal to 255.";
         }
 
-        if ((strlen($this->container['filename']) < 1)) {
+        if (array_key_exists('filename', $this->container) && (strlen($this->container['filename']) < 1)) {
             $invalidProperties[] = "invalid value for 'filename', the character length must be bigger than or equal to 1.";
         }
 
-        if ($this->container['type'] === null) {
+        if (array_key_exists('type', $this->container) && $this->container['type'] === null) {
             $invalidProperties[] = "'type' can't be null";
         }
         $allowedValues = $this->getTypeAllowableValues();
-        if (!in_array($this->container['type'], $allowedValues)) {
+        if (array_key_exists('type', $this->container) && !in_array($this->container['type'], $allowedValues)) {
             $invalidProperties[] = sprintf(
                 "invalid value for 'type', must be one of '%s'",
                 implode("', '", $allowedValues)
             );
         }
 
-        if (!is_null($this->container['priority']) && ($this->container['priority'] > 255)) {
+        if (array_key_exists('priority', $this->container) && ($this->container['priority'] !== null) && ($this->container['priority'] > 255)) {
             $invalidProperties[] = "invalid value for 'priority', must be smaller than or equal to 255.";
         }
 
-        if (!is_null($this->container['priority']) && ($this->container['priority'] < 0)) {
+        if (array_key_exists('priority', $this->container) && ($this->container['priority'] !== null) && ($this->container['priority'] < 0)) {
             $invalidProperties[] = "invalid value for 'priority', must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['caption']) && (strlen($this->container['caption']) > 200)) {
+        if (array_key_exists('caption', $this->container) && ($this->container['caption'] !== null) && (strlen($this->container['caption']) > 200)) {
             $invalidProperties[] = "invalid value for 'caption', the character length must be smaller than or equal to 200.";
         }
 
-        if (!is_null($this->container['caption']) && (strlen($this->container['caption']) < 1)) {
+        if (array_key_exists('caption', $this->container) && ($this->container['caption'] !== null) && (strlen($this->container['caption']) < 1)) {
             $invalidProperties[] = "invalid value for 'caption', the character length must be bigger than or equal to 1.";
         }
 
@@ -385,75 +389,75 @@ class ProgramReviewTypeReviewImage implements ModelInterface, ArrayAccess, JsonS
     public function valid()
     {
 
-        if ($this->container['id_program'] === null) {
+        if (array_key_exists('id_program', $this->container) && $this->container['id_program'] === null) {
             return false;
         }
-        if ((strlen($this->container['id_program']) > 36)) {
+        if (array_key_exists('id_program', $this->container) && (strlen($this->container['id_program']) > 36)) {
             return false;
         }
-        if ((strlen($this->container['id_program']) < 36)) {
+        if (array_key_exists('id_program', $this->container) && (strlen($this->container['id_program']) < 36)) {
             return false;
         }
-        if ($this->container['id_review_type'] === null) {
+        if (array_key_exists('id_review_type', $this->container) && $this->container['id_review_type'] === null) {
             return false;
         }
         $allowedValues = $this->getIdReviewTypeAllowableValues();
-        if (!in_array($this->container['id_review_type'], $allowedValues)) {
+        if (array_key_exists('id_review_type', $this->container) && !in_array($this->container['id_review_type'], $allowedValues)) {
             return false;
         }
-        if ($this->container['id_review'] === null) {
+        if (array_key_exists('id_review', $this->container) && $this->container['id_review'] === null) {
             return false;
         }
-        if ((strlen($this->container['id_review']) > 36)) {
+        if (array_key_exists('id_review', $this->container) && (strlen($this->container['id_review']) > 36)) {
             return false;
         }
-        if ((strlen($this->container['id_review']) < 36)) {
+        if (array_key_exists('id_review', $this->container) && (strlen($this->container['id_review']) < 36)) {
             return false;
         }
-        if ($this->container['id_image'] === null) {
+        if (array_key_exists('id_image', $this->container) && $this->container['id_image'] === null) {
             return false;
         }
-        if ((strlen($this->container['id_image']) > 40)) {
+        if (array_key_exists('id_image', $this->container) && (strlen($this->container['id_image']) > 40)) {
             return false;
         }
-        if ((strlen($this->container['id_image']) < 40)) {
+        if (array_key_exists('id_image', $this->container) && (strlen($this->container['id_image']) < 40)) {
             return false;
         }
-        if ($this->container['path'] === null) {
+        if (array_key_exists('path', $this->container) && $this->container['path'] === null) {
             return false;
         }
-        if ((strlen($this->container['path']) > 255)) {
+        if (array_key_exists('path', $this->container) && (strlen($this->container['path']) > 255)) {
             return false;
         }
-        if ((strlen($this->container['path']) < 1)) {
+        if (array_key_exists('path', $this->container) && (strlen($this->container['path']) < 1)) {
             return false;
         }
-        if ($this->container['filename'] === null) {
+        if (array_key_exists('filename', $this->container) && $this->container['filename'] === null) {
             return false;
         }
-        if ((strlen($this->container['filename']) > 255)) {
+        if (array_key_exists('filename', $this->container) && (strlen($this->container['filename']) > 255)) {
             return false;
         }
-        if ((strlen($this->container['filename']) < 1)) {
+        if (array_key_exists('filename', $this->container) && (strlen($this->container['filename']) < 1)) {
             return false;
         }
-        if ($this->container['type'] === null) {
+        if (array_key_exists('type', $this->container) && $this->container['type'] === null) {
             return false;
         }
         $allowedValues = $this->getTypeAllowableValues();
-        if (!in_array($this->container['type'], $allowedValues)) {
+        if (array_key_exists('type', $this->container) && !in_array($this->container['type'], $allowedValues)) {
             return false;
         }
-        if (!is_null($this->container['priority']) && ($this->container['priority'] > 255)) {
+        if (array_key_exists('priority', $this->container) && ($this->container['priority'] !== null) && ($this->container['priority'] > 255)) {
             return false;
         }
-        if (!is_null($this->container['priority']) && ($this->container['priority'] < 0)) {
+        if (array_key_exists('priority', $this->container) && ($this->container['priority'] !== null) && ($this->container['priority'] < 0)) {
             return false;
         }
-        if (!is_null($this->container['caption']) && (strlen($this->container['caption']) > 200)) {
+        if (array_key_exists('caption', $this->container) && ($this->container['caption'] !== null) && (strlen($this->container['caption']) > 200)) {
             return false;
         }
-        if (!is_null($this->container['caption']) && (strlen($this->container['caption']) < 1)) {
+        if (array_key_exists('caption', $this->container) && ($this->container['caption'] !== null) && (strlen($this->container['caption']) < 1)) {
             return false;
         }
         return true;
@@ -800,7 +804,7 @@ class ProgramReviewTypeReviewImage implements ModelInterface, ArrayAccess, JsonS
      */
     public function offsetExists($offset)
     {
-        return isset($this->container[$offset]);
+        return array_key_exists($offset, $this->container);
     }
 
     /**
@@ -869,6 +873,26 @@ class ProgramReviewTypeReviewImage implements ModelInterface, ArrayAccess, JsonS
     public function jsonSerialize()
     {
         return $this->container;
+    }
+
+    /**
+     * Returns data as array.
+     *
+     * @param bool $getAllAttributes Should convert with all attributes or just the set ones?
+     *
+     * @return array
+     */
+    public function toArray($getAllAttributes = self::GET_ALL_ATTRIBUTES)
+    {
+        if (!$getAllAttributes) {
+            return $this->container;
+        }
+
+        foreach (self::$attributeMap as $attribute) {
+            $data[$attribute] = $this->container[$attribute] ?? null;
+        }
+
+        return $data;
     }
 }
 

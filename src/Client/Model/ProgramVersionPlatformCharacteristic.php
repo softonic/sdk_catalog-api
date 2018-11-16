@@ -45,6 +45,10 @@ class ProgramVersionPlatformCharacteristic implements ModelInterface, ArrayAcces
 {
     const DISCRIMINATOR = null;
 
+    const GET_ALL_ATTRIBUTES = true;
+
+    const GET_SET_ATTRIBUTES = false;
+
     /**
       * The original name of the model.
       *
@@ -186,11 +190,11 @@ class ProgramVersionPlatformCharacteristic implements ModelInterface, ArrayAcces
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(array $data = [])
     {
-        $this->container['id_program'] = isset($data['id_program']) ? $data['id_program'] : null;
-        $this->container['id_version'] = isset($data['id_version']) ? $data['id_version'] : null;
-        $this->container['id_platform_characteristic'] = isset($data['id_platform_characteristic']) ? $data['id_platform_characteristic'] : null;
+        array_key_exists('id_program', $data) && $this->container['id_program'] = $data['id_program'];
+        array_key_exists('id_version', $data) && $this->container['id_version'] = $data['id_version'];
+        array_key_exists('id_platform_characteristic', $data) && $this->container['id_platform_characteristic'] = $data['id_platform_characteristic'];
     }
 
     /**
@@ -202,36 +206,36 @@ class ProgramVersionPlatformCharacteristic implements ModelInterface, ArrayAcces
     {
         $invalidProperties = [];
 
-        if ($this->container['id_program'] === null) {
+        if (array_key_exists('id_program', $this->container) && $this->container['id_program'] === null) {
             $invalidProperties[] = "'id_program' can't be null";
         }
-        if ((strlen($this->container['id_program']) > 36)) {
+        if (array_key_exists('id_program', $this->container) && (strlen($this->container['id_program']) > 36)) {
             $invalidProperties[] = "invalid value for 'id_program', the character length must be smaller than or equal to 36.";
         }
 
-        if ((strlen($this->container['id_program']) < 36)) {
+        if (array_key_exists('id_program', $this->container) && (strlen($this->container['id_program']) < 36)) {
             $invalidProperties[] = "invalid value for 'id_program', the character length must be bigger than or equal to 36.";
         }
 
-        if ($this->container['id_version'] === null) {
+        if (array_key_exists('id_version', $this->container) && $this->container['id_version'] === null) {
             $invalidProperties[] = "'id_version' can't be null";
         }
-        if ((strlen($this->container['id_version']) > 60)) {
+        if (array_key_exists('id_version', $this->container) && (strlen($this->container['id_version']) > 60)) {
             $invalidProperties[] = "invalid value for 'id_version', the character length must be smaller than or equal to 60.";
         }
 
-        if ((strlen($this->container['id_version']) < 1)) {
+        if (array_key_exists('id_version', $this->container) && (strlen($this->container['id_version']) < 1)) {
             $invalidProperties[] = "invalid value for 'id_version', the character length must be bigger than or equal to 1.";
         }
 
-        if ($this->container['id_platform_characteristic'] === null) {
+        if (array_key_exists('id_platform_characteristic', $this->container) && $this->container['id_platform_characteristic'] === null) {
             $invalidProperties[] = "'id_platform_characteristic' can't be null";
         }
-        if ((strlen($this->container['id_platform_characteristic']) > 20)) {
+        if (array_key_exists('id_platform_characteristic', $this->container) && (strlen($this->container['id_platform_characteristic']) > 20)) {
             $invalidProperties[] = "invalid value for 'id_platform_characteristic', the character length must be smaller than or equal to 20.";
         }
 
-        if ((strlen($this->container['id_platform_characteristic']) < 1)) {
+        if (array_key_exists('id_platform_characteristic', $this->container) && (strlen($this->container['id_platform_characteristic']) < 1)) {
             $invalidProperties[] = "invalid value for 'id_platform_characteristic', the character length must be bigger than or equal to 1.";
         }
 
@@ -247,31 +251,31 @@ class ProgramVersionPlatformCharacteristic implements ModelInterface, ArrayAcces
     public function valid()
     {
 
-        if ($this->container['id_program'] === null) {
+        if (array_key_exists('id_program', $this->container) && $this->container['id_program'] === null) {
             return false;
         }
-        if ((strlen($this->container['id_program']) > 36)) {
+        if (array_key_exists('id_program', $this->container) && (strlen($this->container['id_program']) > 36)) {
             return false;
         }
-        if ((strlen($this->container['id_program']) < 36)) {
+        if (array_key_exists('id_program', $this->container) && (strlen($this->container['id_program']) < 36)) {
             return false;
         }
-        if ($this->container['id_version'] === null) {
+        if (array_key_exists('id_version', $this->container) && $this->container['id_version'] === null) {
             return false;
         }
-        if ((strlen($this->container['id_version']) > 60)) {
+        if (array_key_exists('id_version', $this->container) && (strlen($this->container['id_version']) > 60)) {
             return false;
         }
-        if ((strlen($this->container['id_version']) < 1)) {
+        if (array_key_exists('id_version', $this->container) && (strlen($this->container['id_version']) < 1)) {
             return false;
         }
-        if ($this->container['id_platform_characteristic'] === null) {
+        if (array_key_exists('id_platform_characteristic', $this->container) && $this->container['id_platform_characteristic'] === null) {
             return false;
         }
-        if ((strlen($this->container['id_platform_characteristic']) > 20)) {
+        if (array_key_exists('id_platform_characteristic', $this->container) && (strlen($this->container['id_platform_characteristic']) > 20)) {
             return false;
         }
-        if ((strlen($this->container['id_platform_characteristic']) < 1)) {
+        if (array_key_exists('id_platform_characteristic', $this->container) && (strlen($this->container['id_platform_characteristic']) < 1)) {
             return false;
         }
         return true;
@@ -379,7 +383,7 @@ class ProgramVersionPlatformCharacteristic implements ModelInterface, ArrayAcces
      */
     public function offsetExists($offset)
     {
-        return isset($this->container[$offset]);
+        return array_key_exists($offset, $this->container);
     }
 
     /**
@@ -448,6 +452,26 @@ class ProgramVersionPlatformCharacteristic implements ModelInterface, ArrayAcces
     public function jsonSerialize()
     {
         return $this->container;
+    }
+
+    /**
+     * Returns data as array.
+     *
+     * @param bool $getAllAttributes Should convert with all attributes or just the set ones?
+     *
+     * @return array
+     */
+    public function toArray($getAllAttributes = self::GET_ALL_ATTRIBUTES)
+    {
+        if (!$getAllAttributes) {
+            return $this->container;
+        }
+
+        foreach (self::$attributeMap as $attribute) {
+            $data[$attribute] = $this->container[$attribute] ?? null;
+        }
+
+        return $data;
     }
 }
 

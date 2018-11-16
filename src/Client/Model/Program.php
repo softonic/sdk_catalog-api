@@ -45,6 +45,10 @@ class Program implements ModelInterface, ArrayAccess, JsonSerializable
 {
     const DISCRIMINATOR = null;
 
+    const GET_ALL_ATTRIBUTES = true;
+
+    const GET_SET_ATTRIBUTES = false;
+
     /**
       * The original name of the model.
       *
@@ -201,14 +205,14 @@ class Program implements ModelInterface, ArrayAccess, JsonSerializable
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(array $data = [])
     {
-        $this->container['id_program'] = isset($data['id_program']) ? $data['id_program'] : null;
-        $this->container['id_developer'] = isset($data['id_developer']) ? $data['id_developer'] : null;
-        $this->container['id_origin'] = isset($data['id_origin']) ? $data['id_origin'] : null;
-        $this->container['id_platform'] = isset($data['id_platform']) ? $data['id_platform'] : null;
-        $this->container['id_category'] = isset($data['id_category']) ? $data['id_category'] : null;
-        $this->container['google_compliant'] = isset($data['google_compliant']) ? $data['google_compliant'] : null;
+        array_key_exists('id_program', $data) && $this->container['id_program'] = $data['id_program'];
+        array_key_exists('id_developer', $data) && $this->container['id_developer'] = $data['id_developer'];
+        array_key_exists('id_origin', $data) && $this->container['id_origin'] = $data['id_origin'];
+        array_key_exists('id_platform', $data) && $this->container['id_platform'] = $data['id_platform'];
+        array_key_exists('id_category', $data) && $this->container['id_category'] = $data['id_category'];
+        array_key_exists('google_compliant', $data) && $this->container['google_compliant'] = $data['google_compliant'];
     }
 
     /**
@@ -220,51 +224,51 @@ class Program implements ModelInterface, ArrayAccess, JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['id_program'] === null) {
+        if (array_key_exists('id_program', $this->container) && $this->container['id_program'] === null) {
             $invalidProperties[] = "'id_program' can't be null";
         }
-        if ((strlen($this->container['id_program']) > 36)) {
+        if (array_key_exists('id_program', $this->container) && (strlen($this->container['id_program']) > 36)) {
             $invalidProperties[] = "invalid value for 'id_program', the character length must be smaller than or equal to 36.";
         }
 
-        if ((strlen($this->container['id_program']) < 1)) {
+        if (array_key_exists('id_program', $this->container) && (strlen($this->container['id_program']) < 1)) {
             $invalidProperties[] = "invalid value for 'id_program', the character length must be bigger than or equal to 1.";
         }
 
-        if (!is_null($this->container['id_developer']) && !preg_match("/^[a-z0-9]+(?:-[a-z0-9]+)*$/", $this->container['id_developer'])) {
+        if (array_key_exists('id_developer', $this->container) && ($this->container['id_developer'] !== null) && !preg_match("/^[a-z0-9]+(?:-[a-z0-9]+)*$/", $this->container['id_developer'])) {
             $invalidProperties[] = "invalid value for 'id_developer', must be conform to the pattern /^[a-z0-9]+(?:-[a-z0-9]+)*$/.";
         }
 
-        if ($this->container['id_origin'] === null) {
+        if (array_key_exists('id_origin', $this->container) && $this->container['id_origin'] === null) {
             $invalidProperties[] = "'id_origin' can't be null";
         }
-        if ((strlen($this->container['id_origin']) > 40)) {
+        if (array_key_exists('id_origin', $this->container) && (strlen($this->container['id_origin']) > 40)) {
             $invalidProperties[] = "invalid value for 'id_origin', the character length must be smaller than or equal to 40.";
         }
 
-        if ((strlen($this->container['id_origin']) < 1)) {
+        if (array_key_exists('id_origin', $this->container) && (strlen($this->container['id_origin']) < 1)) {
             $invalidProperties[] = "invalid value for 'id_origin', the character length must be bigger than or equal to 1.";
         }
 
-        if ($this->container['id_platform'] === null) {
+        if (array_key_exists('id_platform', $this->container) && $this->container['id_platform'] === null) {
             $invalidProperties[] = "'id_platform' can't be null";
         }
-        if ((strlen($this->container['id_platform']) > 20)) {
+        if (array_key_exists('id_platform', $this->container) && (strlen($this->container['id_platform']) > 20)) {
             $invalidProperties[] = "invalid value for 'id_platform', the character length must be smaller than or equal to 20.";
         }
 
-        if ((strlen($this->container['id_platform']) < 1)) {
+        if (array_key_exists('id_platform', $this->container) && (strlen($this->container['id_platform']) < 1)) {
             $invalidProperties[] = "invalid value for 'id_platform', the character length must be bigger than or equal to 1.";
         }
 
-        if ($this->container['id_category'] === null) {
+        if (array_key_exists('id_category', $this->container) && $this->container['id_category'] === null) {
             $invalidProperties[] = "'id_category' can't be null";
         }
-        if ((strlen($this->container['id_category']) > 40)) {
+        if (array_key_exists('id_category', $this->container) && (strlen($this->container['id_category']) > 40)) {
             $invalidProperties[] = "invalid value for 'id_category', the character length must be smaller than or equal to 40.";
         }
 
-        if ((strlen($this->container['id_category']) < 1)) {
+        if (array_key_exists('id_category', $this->container) && (strlen($this->container['id_category']) < 1)) {
             $invalidProperties[] = "invalid value for 'id_category', the character length must be bigger than or equal to 1.";
         }
 
@@ -280,43 +284,43 @@ class Program implements ModelInterface, ArrayAccess, JsonSerializable
     public function valid()
     {
 
-        if ($this->container['id_program'] === null) {
+        if (array_key_exists('id_program', $this->container) && $this->container['id_program'] === null) {
             return false;
         }
-        if ((strlen($this->container['id_program']) > 36)) {
+        if (array_key_exists('id_program', $this->container) && (strlen($this->container['id_program']) > 36)) {
             return false;
         }
-        if ((strlen($this->container['id_program']) < 1)) {
+        if (array_key_exists('id_program', $this->container) && (strlen($this->container['id_program']) < 1)) {
             return false;
         }
-        if (!is_null($this->container['id_developer']) && !preg_match("/^[a-z0-9]+(?:-[a-z0-9]+)*$/", $this->container['id_developer'])) {
+        if (array_key_exists('id_developer', $this->container) && ($this->container['id_developer'] !== null) && !preg_match("/^[a-z0-9]+(?:-[a-z0-9]+)*$/", $this->container['id_developer'])) {
             return false;
         }
-        if ($this->container['id_origin'] === null) {
+        if (array_key_exists('id_origin', $this->container) && $this->container['id_origin'] === null) {
             return false;
         }
-        if ((strlen($this->container['id_origin']) > 40)) {
+        if (array_key_exists('id_origin', $this->container) && (strlen($this->container['id_origin']) > 40)) {
             return false;
         }
-        if ((strlen($this->container['id_origin']) < 1)) {
+        if (array_key_exists('id_origin', $this->container) && (strlen($this->container['id_origin']) < 1)) {
             return false;
         }
-        if ($this->container['id_platform'] === null) {
+        if (array_key_exists('id_platform', $this->container) && $this->container['id_platform'] === null) {
             return false;
         }
-        if ((strlen($this->container['id_platform']) > 20)) {
+        if (array_key_exists('id_platform', $this->container) && (strlen($this->container['id_platform']) > 20)) {
             return false;
         }
-        if ((strlen($this->container['id_platform']) < 1)) {
+        if (array_key_exists('id_platform', $this->container) && (strlen($this->container['id_platform']) < 1)) {
             return false;
         }
-        if ($this->container['id_category'] === null) {
+        if (array_key_exists('id_category', $this->container) && $this->container['id_category'] === null) {
             return false;
         }
-        if ((strlen($this->container['id_category']) > 40)) {
+        if (array_key_exists('id_category', $this->container) && (strlen($this->container['id_category']) > 40)) {
             return false;
         }
-        if ((strlen($this->container['id_category']) < 1)) {
+        if (array_key_exists('id_category', $this->container) && (strlen($this->container['id_category']) < 1)) {
             return false;
         }
         return true;
@@ -508,7 +512,7 @@ class Program implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function offsetExists($offset)
     {
-        return isset($this->container[$offset]);
+        return array_key_exists($offset, $this->container);
     }
 
     /**
@@ -577,6 +581,26 @@ class Program implements ModelInterface, ArrayAccess, JsonSerializable
     public function jsonSerialize()
     {
         return $this->container;
+    }
+
+    /**
+     * Returns data as array.
+     *
+     * @param bool $getAllAttributes Should convert with all attributes or just the set ones?
+     *
+     * @return array
+     */
+    public function toArray($getAllAttributes = self::GET_ALL_ATTRIBUTES)
+    {
+        if (!$getAllAttributes) {
+            return $this->container;
+        }
+
+        foreach (self::$attributeMap as $attribute) {
+            $data[$attribute] = $this->container[$attribute] ?? null;
+        }
+
+        return $data;
     }
 }
 
