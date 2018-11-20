@@ -63,8 +63,7 @@ class ObjectSerializer
             $values = [];
             $formats = $data::swaggerFormats();
             foreach ($data::swaggerTypes() as $property => $swaggerType) {
-                $getter = $data::getters()[$property];
-                $value = $data->$getter();
+                $value = $data->offsetGet($property);
                 if ($value !== null
                     && !in_array($swaggerType, ['DateTime', 'bool', 'boolean', 'byte', 'double', 'float', 'int', 'integer', 'mixed', 'number', 'object', 'string', 'void'], true)
                     && method_exists($swaggerType, 'getAllowableEnumValues')
@@ -72,7 +71,7 @@ class ObjectSerializer
                     $imploded = implode("', '", $swaggerType::getAllowableEnumValues());
                     throw new \InvalidArgumentException("Invalid value for enum '$swaggerType', must be one of: '$imploded'");
                 }
-                if ($value !== null) {
+                if ($data->offsetExists($property)) {
                     $values[$data::attributeMap()[$property]] = self::sanitizeForSerialization($value, $swaggerType, $formats[$property]);
                 }
             }
