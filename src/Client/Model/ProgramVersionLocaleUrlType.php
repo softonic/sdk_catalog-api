@@ -225,6 +225,16 @@ class ProgramVersionLocaleUrlType implements ModelInterface, ArrayAccess, JsonSe
     }
 
     /**
+     * Returns true if all attributes are set. False otherwise.
+     *
+     * @return boolean
+     */
+    public function hasAllAttributesSet()
+    {
+        return count($this->container) === count(self::$attributeMap);
+    }
+
+    /**
      * Show all the invalid properties with reasons.
      *
      * @return array invalid properties with reasons
@@ -236,33 +246,33 @@ class ProgramVersionLocaleUrlType implements ModelInterface, ArrayAccess, JsonSe
         if (array_key_exists('id_program', $this->container) && $this->container['id_program'] === null) {
             $invalidProperties[] = "'id_program' can't be null";
         }
-        if (array_key_exists('id_program', $this->container) && (strlen($this->container['id_program']) > 36)) {
+        if ((strlen($this->container['id_program']) > 36)) {
             $invalidProperties[] = "invalid value for 'id_program', the character length must be smaller than or equal to 36.";
         }
 
-        if (array_key_exists('id_program', $this->container) && (strlen($this->container['id_program']) < 36)) {
+        if ((strlen($this->container['id_program']) < 36)) {
             $invalidProperties[] = "invalid value for 'id_program', the character length must be bigger than or equal to 36.";
         }
 
         if (array_key_exists('id_version', $this->container) && $this->container['id_version'] === null) {
             $invalidProperties[] = "'id_version' can't be null";
         }
-        if (array_key_exists('id_version', $this->container) && (strlen($this->container['id_version']) > 60)) {
+        if ((strlen($this->container['id_version']) > 60)) {
             $invalidProperties[] = "invalid value for 'id_version', the character length must be smaller than or equal to 60.";
         }
 
-        if (array_key_exists('id_version', $this->container) && (strlen($this->container['id_version']) < 1)) {
+        if ((strlen($this->container['id_version']) < 1)) {
             $invalidProperties[] = "invalid value for 'id_version', the character length must be bigger than or equal to 1.";
         }
 
         if (array_key_exists('id_locale', $this->container) && $this->container['id_locale'] === null) {
             $invalidProperties[] = "'id_locale' can't be null";
         }
-        if (array_key_exists('id_locale', $this->container) && (strlen($this->container['id_locale']) > 2)) {
+        if ((strlen($this->container['id_locale']) > 2)) {
             $invalidProperties[] = "invalid value for 'id_locale', the character length must be smaller than or equal to 2.";
         }
 
-        if (array_key_exists('id_locale', $this->container) && (strlen($this->container['id_locale']) < 2)) {
+        if ((strlen($this->container['id_locale']) < 2)) {
             $invalidProperties[] = "invalid value for 'id_locale', the character length must be bigger than or equal to 2.";
         }
 
@@ -270,7 +280,7 @@ class ProgramVersionLocaleUrlType implements ModelInterface, ArrayAccess, JsonSe
             $invalidProperties[] = "'id_url_type' can't be null";
         }
         $allowedValues = $this->getIdUrlTypeAllowableValues();
-        if (array_key_exists('id_url_type', $this->container) && !in_array($this->container['id_url_type'], $allowedValues)) {
+        if (!in_array($this->container['id_url_type'], $allowedValues)) {
             $invalidProperties[] = sprintf(
                 "invalid value for 'id_url_type', must be one of '%s'",
                 implode("', '", $allowedValues)
@@ -280,15 +290,43 @@ class ProgramVersionLocaleUrlType implements ModelInterface, ArrayAccess, JsonSe
         if (array_key_exists('id_url', $this->container) && $this->container['id_url'] === null) {
             $invalidProperties[] = "'id_url' can't be null";
         }
-        if (array_key_exists('id_url', $this->container) && (strlen($this->container['id_url']) > 36)) {
+        if ((strlen($this->container['id_url']) > 36)) {
             $invalidProperties[] = "invalid value for 'id_url', the character length must be smaller than or equal to 36.";
         }
 
-        if (array_key_exists('id_url', $this->container) && (strlen($this->container['id_url']) < 36)) {
+        if ((strlen($this->container['id_url']) < 36)) {
             $invalidProperties[] = "invalid value for 'id_url', the character length must be bigger than or equal to 36.";
         }
 
         return $invalidProperties;
+    }
+
+    /**
+     * Validate all the properties in the model ensuring the required ones are set
+     * return true if all passed
+     *
+     * @return bool True if all properties are valid
+     */
+    public function valid()
+    {
+
+        if ($this->offsetGet('id_program') === null) {
+            return false;
+        }
+        if ($this->offsetGet('id_version') === null) {
+            return false;
+        }
+        if ($this->offsetGet('id_locale') === null) {
+            return false;
+        }
+        if ($this->offsetGet('id_url_type') === null) {
+            return false;
+        }
+        if ($this->offsetGet('id_url') === null) {
+            return false;
+        }
+
+        return $this->validProperties();
     }
 
     /**
@@ -297,7 +335,7 @@ class ProgramVersionLocaleUrlType implements ModelInterface, ArrayAccess, JsonSe
      *
      * @return bool True if all properties are valid
      */
-    public function valid()
+    public function validProperties()
     {
 
         if (array_key_exists('id_program', $this->container) && $this->container['id_program'] === null) {

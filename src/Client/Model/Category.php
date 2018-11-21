@@ -198,6 +198,16 @@ class Category implements ModelInterface, ArrayAccess, JsonSerializable
     }
 
     /**
+     * Returns true if all attributes are set. False otherwise.
+     *
+     * @return boolean
+     */
+    public function hasAllAttributesSet()
+    {
+        return count($this->container) === count(self::$attributeMap);
+    }
+
+    /**
      * Show all the invalid properties with reasons.
      *
      * @return array invalid properties with reasons
@@ -209,34 +219,53 @@ class Category implements ModelInterface, ArrayAccess, JsonSerializable
         if (array_key_exists('id_category', $this->container) && $this->container['id_category'] === null) {
             $invalidProperties[] = "'id_category' can't be null";
         }
-        if (array_key_exists('id_category', $this->container) && (strlen($this->container['id_category']) > 40)) {
+        if ((strlen($this->container['id_category']) > 40)) {
             $invalidProperties[] = "invalid value for 'id_category', the character length must be smaller than or equal to 40.";
         }
 
-        if (array_key_exists('id_category', $this->container) && (strlen($this->container['id_category']) < 1)) {
+        if ((strlen($this->container['id_category']) < 1)) {
             $invalidProperties[] = "invalid value for 'id_category', the character length must be bigger than or equal to 1.";
         }
 
         if (array_key_exists('name', $this->container) && $this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
-        if (array_key_exists('name', $this->container) && (strlen($this->container['name']) > 255)) {
+        if ((strlen($this->container['name']) > 255)) {
             $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 255.";
         }
 
-        if (array_key_exists('name', $this->container) && (strlen($this->container['name']) < 1)) {
+        if ((strlen($this->container['name']) < 1)) {
             $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
         }
 
-        if (array_key_exists('id_parent', $this->container) && ($this->container['id_parent'] !== null) && (strlen($this->container['id_parent']) > 40)) {
+        if (($this->container['id_parent'] !== null) && (strlen($this->container['id_parent']) > 40)) {
             $invalidProperties[] = "invalid value for 'id_parent', the character length must be smaller than or equal to 40.";
         }
 
-        if (array_key_exists('id_parent', $this->container) && ($this->container['id_parent'] !== null) && (strlen($this->container['id_parent']) < 1)) {
+        if (($this->container['id_parent'] !== null) && (strlen($this->container['id_parent']) < 1)) {
             $invalidProperties[] = "invalid value for 'id_parent', the character length must be bigger than or equal to 1.";
         }
 
         return $invalidProperties;
+    }
+
+    /**
+     * Validate all the properties in the model ensuring the required ones are set
+     * return true if all passed
+     *
+     * @return bool True if all properties are valid
+     */
+    public function valid()
+    {
+
+        if ($this->offsetGet('id_category') === null) {
+            return false;
+        }
+        if ($this->offsetGet('name') === null) {
+            return false;
+        }
+
+        return $this->validProperties();
     }
 
     /**
@@ -245,7 +274,7 @@ class Category implements ModelInterface, ArrayAccess, JsonSerializable
      *
      * @return bool True if all properties are valid
      */
-    public function valid()
+    public function validProperties()
     {
 
         if (array_key_exists('id_category', $this->container) && $this->container['id_category'] === null) {

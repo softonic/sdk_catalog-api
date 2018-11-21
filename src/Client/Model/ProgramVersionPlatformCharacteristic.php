@@ -198,6 +198,16 @@ class ProgramVersionPlatformCharacteristic implements ModelInterface, ArrayAcces
     }
 
     /**
+     * Returns true if all attributes are set. False otherwise.
+     *
+     * @return boolean
+     */
+    public function hasAllAttributesSet()
+    {
+        return count($this->container) === count(self::$attributeMap);
+    }
+
+    /**
      * Show all the invalid properties with reasons.
      *
      * @return array invalid properties with reasons
@@ -209,37 +219,59 @@ class ProgramVersionPlatformCharacteristic implements ModelInterface, ArrayAcces
         if (array_key_exists('id_program', $this->container) && $this->container['id_program'] === null) {
             $invalidProperties[] = "'id_program' can't be null";
         }
-        if (array_key_exists('id_program', $this->container) && (strlen($this->container['id_program']) > 36)) {
+        if ((strlen($this->container['id_program']) > 36)) {
             $invalidProperties[] = "invalid value for 'id_program', the character length must be smaller than or equal to 36.";
         }
 
-        if (array_key_exists('id_program', $this->container) && (strlen($this->container['id_program']) < 36)) {
+        if ((strlen($this->container['id_program']) < 36)) {
             $invalidProperties[] = "invalid value for 'id_program', the character length must be bigger than or equal to 36.";
         }
 
         if (array_key_exists('id_version', $this->container) && $this->container['id_version'] === null) {
             $invalidProperties[] = "'id_version' can't be null";
         }
-        if (array_key_exists('id_version', $this->container) && (strlen($this->container['id_version']) > 60)) {
+        if ((strlen($this->container['id_version']) > 60)) {
             $invalidProperties[] = "invalid value for 'id_version', the character length must be smaller than or equal to 60.";
         }
 
-        if (array_key_exists('id_version', $this->container) && (strlen($this->container['id_version']) < 1)) {
+        if ((strlen($this->container['id_version']) < 1)) {
             $invalidProperties[] = "invalid value for 'id_version', the character length must be bigger than or equal to 1.";
         }
 
         if (array_key_exists('id_platform_characteristic', $this->container) && $this->container['id_platform_characteristic'] === null) {
             $invalidProperties[] = "'id_platform_characteristic' can't be null";
         }
-        if (array_key_exists('id_platform_characteristic', $this->container) && (strlen($this->container['id_platform_characteristic']) > 20)) {
+        if ((strlen($this->container['id_platform_characteristic']) > 20)) {
             $invalidProperties[] = "invalid value for 'id_platform_characteristic', the character length must be smaller than or equal to 20.";
         }
 
-        if (array_key_exists('id_platform_characteristic', $this->container) && (strlen($this->container['id_platform_characteristic']) < 1)) {
+        if ((strlen($this->container['id_platform_characteristic']) < 1)) {
             $invalidProperties[] = "invalid value for 'id_platform_characteristic', the character length must be bigger than or equal to 1.";
         }
 
         return $invalidProperties;
+    }
+
+    /**
+     * Validate all the properties in the model ensuring the required ones are set
+     * return true if all passed
+     *
+     * @return bool True if all properties are valid
+     */
+    public function valid()
+    {
+
+        if ($this->offsetGet('id_program') === null) {
+            return false;
+        }
+        if ($this->offsetGet('id_version') === null) {
+            return false;
+        }
+        if ($this->offsetGet('id_platform_characteristic') === null) {
+            return false;
+        }
+
+        return $this->validProperties();
     }
 
     /**
@@ -248,7 +280,7 @@ class ProgramVersionPlatformCharacteristic implements ModelInterface, ArrayAcces
      *
      * @return bool True if all properties are valid
      */
-    public function valid()
+    public function validProperties()
     {
 
         if (array_key_exists('id_program', $this->container) && $this->container['id_program'] === null) {

@@ -213,6 +213,16 @@ class License implements ModelInterface, ArrayAccess, JsonSerializable
     }
 
     /**
+     * Returns true if all attributes are set. False otherwise.
+     *
+     * @return boolean
+     */
+    public function hasAllAttributesSet()
+    {
+        return count($this->container) === count(self::$attributeMap);
+    }
+
+    /**
      * Show all the invalid properties with reasons.
      *
      * @return array invalid properties with reasons
@@ -224,22 +234,22 @@ class License implements ModelInterface, ArrayAccess, JsonSerializable
         if (array_key_exists('id_license', $this->container) && $this->container['id_license'] === null) {
             $invalidProperties[] = "'id_license' can't be null";
         }
-        if (array_key_exists('id_license', $this->container) && (strlen($this->container['id_license']) > 3)) {
+        if ((strlen($this->container['id_license']) > 3)) {
             $invalidProperties[] = "invalid value for 'id_license', the character length must be smaller than or equal to 3.";
         }
 
-        if (array_key_exists('id_license', $this->container) && (strlen($this->container['id_license']) < 1)) {
+        if ((strlen($this->container['id_license']) < 1)) {
             $invalidProperties[] = "invalid value for 'id_license', the character length must be bigger than or equal to 1.";
         }
 
         if (array_key_exists('description', $this->container) && $this->container['description'] === null) {
             $invalidProperties[] = "'description' can't be null";
         }
-        if (array_key_exists('description', $this->container) && (strlen($this->container['description']) > 20)) {
+        if ((strlen($this->container['description']) > 20)) {
             $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 20.";
         }
 
-        if (array_key_exists('description', $this->container) && (strlen($this->container['description']) < 1)) {
+        if ((strlen($this->container['description']) < 1)) {
             $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 1.";
         }
 
@@ -247,7 +257,7 @@ class License implements ModelInterface, ArrayAccess, JsonSerializable
             $invalidProperties[] = "'type' can't be null";
         }
         $allowedValues = $this->getTypeAllowableValues();
-        if (array_key_exists('type', $this->container) && !in_array($this->container['type'], $allowedValues)) {
+        if (!in_array($this->container['type'], $allowedValues)) {
             $invalidProperties[] = sprintf(
                 "invalid value for 'type', must be one of '%s'",
                 implode("', '", $allowedValues)
@@ -258,12 +268,34 @@ class License implements ModelInterface, ArrayAccess, JsonSerializable
     }
 
     /**
-     * Validate all the properties in the model
+     * Validate all the properties in the model ensuring the required ones are set
      * return true if all passed
      *
      * @return bool True if all properties are valid
      */
     public function valid()
+    {
+
+        if ($this->offsetGet('id_license') === null) {
+            return false;
+        }
+        if ($this->offsetGet('description') === null) {
+            return false;
+        }
+        if ($this->offsetGet('type') === null) {
+            return false;
+        }
+
+        return $this->validProperties();
+    }
+
+    /**
+     * Validate all the properties in the model
+     * return true if all passed
+     *
+     * @return bool True if all properties are valid
+     */
+    public function validProperties()
     {
 
         if (array_key_exists('id_license', $this->container) && $this->container['id_license'] === null) {

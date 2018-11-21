@@ -225,6 +225,16 @@ class ProgramVersionLocaleReviewType implements ModelInterface, ArrayAccess, Jso
     }
 
     /**
+     * Returns true if all attributes are set. False otherwise.
+     *
+     * @return boolean
+     */
+    public function hasAllAttributesSet()
+    {
+        return count($this->container) === count(self::$attributeMap);
+    }
+
+    /**
      * Show all the invalid properties with reasons.
      *
      * @return array invalid properties with reasons
@@ -236,33 +246,33 @@ class ProgramVersionLocaleReviewType implements ModelInterface, ArrayAccess, Jso
         if (array_key_exists('id_program', $this->container) && $this->container['id_program'] === null) {
             $invalidProperties[] = "'id_program' can't be null";
         }
-        if (array_key_exists('id_program', $this->container) && (strlen($this->container['id_program']) > 36)) {
+        if ((strlen($this->container['id_program']) > 36)) {
             $invalidProperties[] = "invalid value for 'id_program', the character length must be smaller than or equal to 36.";
         }
 
-        if (array_key_exists('id_program', $this->container) && (strlen($this->container['id_program']) < 36)) {
+        if ((strlen($this->container['id_program']) < 36)) {
             $invalidProperties[] = "invalid value for 'id_program', the character length must be bigger than or equal to 36.";
         }
 
         if (array_key_exists('id_version', $this->container) && $this->container['id_version'] === null) {
             $invalidProperties[] = "'id_version' can't be null";
         }
-        if (array_key_exists('id_version', $this->container) && (strlen($this->container['id_version']) > 60)) {
+        if ((strlen($this->container['id_version']) > 60)) {
             $invalidProperties[] = "invalid value for 'id_version', the character length must be smaller than or equal to 60.";
         }
 
-        if (array_key_exists('id_version', $this->container) && (strlen($this->container['id_version']) < 1)) {
+        if ((strlen($this->container['id_version']) < 1)) {
             $invalidProperties[] = "invalid value for 'id_version', the character length must be bigger than or equal to 1.";
         }
 
         if (array_key_exists('id_locale', $this->container) && $this->container['id_locale'] === null) {
             $invalidProperties[] = "'id_locale' can't be null";
         }
-        if (array_key_exists('id_locale', $this->container) && (strlen($this->container['id_locale']) > 2)) {
+        if ((strlen($this->container['id_locale']) > 2)) {
             $invalidProperties[] = "invalid value for 'id_locale', the character length must be smaller than or equal to 2.";
         }
 
-        if (array_key_exists('id_locale', $this->container) && (strlen($this->container['id_locale']) < 2)) {
+        if ((strlen($this->container['id_locale']) < 2)) {
             $invalidProperties[] = "invalid value for 'id_locale', the character length must be bigger than or equal to 2.";
         }
 
@@ -270,7 +280,7 @@ class ProgramVersionLocaleReviewType implements ModelInterface, ArrayAccess, Jso
             $invalidProperties[] = "'id_review_type' can't be null";
         }
         $allowedValues = $this->getIdReviewTypeAllowableValues();
-        if (array_key_exists('id_review_type', $this->container) && !in_array($this->container['id_review_type'], $allowedValues)) {
+        if (!in_array($this->container['id_review_type'], $allowedValues)) {
             $invalidProperties[] = sprintf(
                 "invalid value for 'id_review_type', must be one of '%s'",
                 implode("', '", $allowedValues)
@@ -280,15 +290,43 @@ class ProgramVersionLocaleReviewType implements ModelInterface, ArrayAccess, Jso
         if (array_key_exists('id_review', $this->container) && $this->container['id_review'] === null) {
             $invalidProperties[] = "'id_review' can't be null";
         }
-        if (array_key_exists('id_review', $this->container) && (strlen($this->container['id_review']) > 36)) {
+        if ((strlen($this->container['id_review']) > 36)) {
             $invalidProperties[] = "invalid value for 'id_review', the character length must be smaller than or equal to 36.";
         }
 
-        if (array_key_exists('id_review', $this->container) && (strlen($this->container['id_review']) < 36)) {
+        if ((strlen($this->container['id_review']) < 36)) {
             $invalidProperties[] = "invalid value for 'id_review', the character length must be bigger than or equal to 36.";
         }
 
         return $invalidProperties;
+    }
+
+    /**
+     * Validate all the properties in the model ensuring the required ones are set
+     * return true if all passed
+     *
+     * @return bool True if all properties are valid
+     */
+    public function valid()
+    {
+
+        if ($this->offsetGet('id_program') === null) {
+            return false;
+        }
+        if ($this->offsetGet('id_version') === null) {
+            return false;
+        }
+        if ($this->offsetGet('id_locale') === null) {
+            return false;
+        }
+        if ($this->offsetGet('id_review_type') === null) {
+            return false;
+        }
+        if ($this->offsetGet('id_review') === null) {
+            return false;
+        }
+
+        return $this->validProperties();
     }
 
     /**
@@ -297,7 +335,7 @@ class ProgramVersionLocaleReviewType implements ModelInterface, ArrayAccess, Jso
      *
      * @return bool True if all properties are valid
      */
-    public function valid()
+    public function validProperties()
     {
 
         if (array_key_exists('id_program', $this->container) && $this->container['id_program'] === null) {

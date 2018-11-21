@@ -204,6 +204,16 @@ class ProgramPlatformSource implements ModelInterface, ArrayAccess, JsonSerializ
     }
 
     /**
+     * Returns true if all attributes are set. False otherwise.
+     *
+     * @return boolean
+     */
+    public function hasAllAttributesSet()
+    {
+        return count($this->container) === count(self::$attributeMap);
+    }
+
+    /**
      * Show all the invalid properties with reasons.
      *
      * @return array invalid properties with reasons
@@ -215,48 +225,73 @@ class ProgramPlatformSource implements ModelInterface, ArrayAccess, JsonSerializ
         if (array_key_exists('id_program', $this->container) && $this->container['id_program'] === null) {
             $invalidProperties[] = "'id_program' can't be null";
         }
-        if (array_key_exists('id_program', $this->container) && (strlen($this->container['id_program']) > 36)) {
+        if ((strlen($this->container['id_program']) > 36)) {
             $invalidProperties[] = "invalid value for 'id_program', the character length must be smaller than or equal to 36.";
         }
 
-        if (array_key_exists('id_program', $this->container) && (strlen($this->container['id_program']) < 36)) {
+        if ((strlen($this->container['id_program']) < 36)) {
             $invalidProperties[] = "invalid value for 'id_program', the character length must be bigger than or equal to 36.";
         }
 
         if (array_key_exists('id_platform', $this->container) && $this->container['id_platform'] === null) {
             $invalidProperties[] = "'id_platform' can't be null";
         }
-        if (array_key_exists('id_platform', $this->container) && (strlen($this->container['id_platform']) > 20)) {
+        if ((strlen($this->container['id_platform']) > 20)) {
             $invalidProperties[] = "invalid value for 'id_platform', the character length must be smaller than or equal to 20.";
         }
 
-        if (array_key_exists('id_platform', $this->container) && (strlen($this->container['id_platform']) < 1)) {
+        if ((strlen($this->container['id_platform']) < 1)) {
             $invalidProperties[] = "invalid value for 'id_platform', the character length must be bigger than or equal to 1.";
         }
 
         if (array_key_exists('id_source', $this->container) && $this->container['id_source'] === null) {
             $invalidProperties[] = "'id_source' can't be null";
         }
-        if (array_key_exists('id_source', $this->container) && (strlen($this->container['id_source']) > 20)) {
+        if ((strlen($this->container['id_source']) > 20)) {
             $invalidProperties[] = "invalid value for 'id_source', the character length must be smaller than or equal to 20.";
         }
 
-        if (array_key_exists('id_source', $this->container) && (strlen($this->container['id_source']) < 1)) {
+        if ((strlen($this->container['id_source']) < 1)) {
             $invalidProperties[] = "invalid value for 'id_source', the character length must be bigger than or equal to 1.";
         }
 
         if (array_key_exists('id_store', $this->container) && $this->container['id_store'] === null) {
             $invalidProperties[] = "'id_store' can't be null";
         }
-        if (array_key_exists('id_store', $this->container) && (strlen($this->container['id_store']) > 255)) {
+        if ((strlen($this->container['id_store']) > 255)) {
             $invalidProperties[] = "invalid value for 'id_store', the character length must be smaller than or equal to 255.";
         }
 
-        if (array_key_exists('id_store', $this->container) && (strlen($this->container['id_store']) < 1)) {
+        if ((strlen($this->container['id_store']) < 1)) {
             $invalidProperties[] = "invalid value for 'id_store', the character length must be bigger than or equal to 1.";
         }
 
         return $invalidProperties;
+    }
+
+    /**
+     * Validate all the properties in the model ensuring the required ones are set
+     * return true if all passed
+     *
+     * @return bool True if all properties are valid
+     */
+    public function valid()
+    {
+
+        if ($this->offsetGet('id_program') === null) {
+            return false;
+        }
+        if ($this->offsetGet('id_platform') === null) {
+            return false;
+        }
+        if ($this->offsetGet('id_source') === null) {
+            return false;
+        }
+        if ($this->offsetGet('id_store') === null) {
+            return false;
+        }
+
+        return $this->validProperties();
     }
 
     /**
@@ -265,7 +300,7 @@ class ProgramPlatformSource implements ModelInterface, ArrayAccess, JsonSerializ
      *
      * @return bool True if all properties are valid
      */
-    public function valid()
+    public function validProperties()
     {
 
         if (array_key_exists('id_program', $this->container) && $this->container['id_program'] === null) {

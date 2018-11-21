@@ -192,6 +192,16 @@ class Platform implements ModelInterface, ArrayAccess, JsonSerializable
     }
 
     /**
+     * Returns true if all attributes are set. False otherwise.
+     *
+     * @return boolean
+     */
+    public function hasAllAttributesSet()
+    {
+        return count($this->container) === count(self::$attributeMap);
+    }
+
+    /**
      * Show all the invalid properties with reasons.
      *
      * @return array invalid properties with reasons
@@ -203,26 +213,45 @@ class Platform implements ModelInterface, ArrayAccess, JsonSerializable
         if (array_key_exists('id_platform', $this->container) && $this->container['id_platform'] === null) {
             $invalidProperties[] = "'id_platform' can't be null";
         }
-        if (array_key_exists('id_platform', $this->container) && (strlen($this->container['id_platform']) > 20)) {
+        if ((strlen($this->container['id_platform']) > 20)) {
             $invalidProperties[] = "invalid value for 'id_platform', the character length must be smaller than or equal to 20.";
         }
 
-        if (array_key_exists('id_platform', $this->container) && (strlen($this->container['id_platform']) < 1)) {
+        if ((strlen($this->container['id_platform']) < 1)) {
             $invalidProperties[] = "invalid value for 'id_platform', the character length must be bigger than or equal to 1.";
         }
 
         if (array_key_exists('name', $this->container) && $this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
-        if (array_key_exists('name', $this->container) && (strlen($this->container['name']) > 40)) {
+        if ((strlen($this->container['name']) > 40)) {
             $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 40.";
         }
 
-        if (array_key_exists('name', $this->container) && (strlen($this->container['name']) < 1)) {
+        if ((strlen($this->container['name']) < 1)) {
             $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
         }
 
         return $invalidProperties;
+    }
+
+    /**
+     * Validate all the properties in the model ensuring the required ones are set
+     * return true if all passed
+     *
+     * @return bool True if all properties are valid
+     */
+    public function valid()
+    {
+
+        if ($this->offsetGet('id_platform') === null) {
+            return false;
+        }
+        if ($this->offsetGet('name') === null) {
+            return false;
+        }
+
+        return $this->validProperties();
     }
 
     /**
@@ -231,7 +260,7 @@ class Platform implements ModelInterface, ArrayAccess, JsonSerializable
      *
      * @return bool True if all properties are valid
      */
-    public function valid()
+    public function validProperties()
     {
 
         if (array_key_exists('id_platform', $this->container) && $this->container['id_platform'] === null) {

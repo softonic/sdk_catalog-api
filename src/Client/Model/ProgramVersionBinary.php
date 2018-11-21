@@ -237,6 +237,16 @@ class ProgramVersionBinary implements ModelInterface, ArrayAccess, JsonSerializa
     }
 
     /**
+     * Returns true if all attributes are set. False otherwise.
+     *
+     * @return boolean
+     */
+    public function hasAllAttributesSet()
+    {
+        return count($this->container) === count(self::$attributeMap);
+    }
+
+    /**
      * Show all the invalid properties with reasons.
      *
      * @return array invalid properties with reasons
@@ -248,46 +258,46 @@ class ProgramVersionBinary implements ModelInterface, ArrayAccess, JsonSerializa
         if (array_key_exists('id_program', $this->container) && $this->container['id_program'] === null) {
             $invalidProperties[] = "'id_program' can't be null";
         }
-        if (array_key_exists('id_program', $this->container) && (strlen($this->container['id_program']) > 36)) {
+        if ((strlen($this->container['id_program']) > 36)) {
             $invalidProperties[] = "invalid value for 'id_program', the character length must be smaller than or equal to 36.";
         }
 
-        if (array_key_exists('id_program', $this->container) && (strlen($this->container['id_program']) < 36)) {
+        if ((strlen($this->container['id_program']) < 36)) {
             $invalidProperties[] = "invalid value for 'id_program', the character length must be bigger than or equal to 36.";
         }
 
         if (array_key_exists('id_version', $this->container) && $this->container['id_version'] === null) {
             $invalidProperties[] = "'id_version' can't be null";
         }
-        if (array_key_exists('id_version', $this->container) && (strlen($this->container['id_version']) > 60)) {
+        if ((strlen($this->container['id_version']) > 60)) {
             $invalidProperties[] = "invalid value for 'id_version', the character length must be smaller than or equal to 60.";
         }
 
-        if (array_key_exists('id_version', $this->container) && (strlen($this->container['id_version']) < 1)) {
+        if ((strlen($this->container['id_version']) < 1)) {
             $invalidProperties[] = "invalid value for 'id_version', the character length must be bigger than or equal to 1.";
         }
 
         if (array_key_exists('id_binary', $this->container) && $this->container['id_binary'] === null) {
             $invalidProperties[] = "'id_binary' can't be null";
         }
-        if (array_key_exists('id_binary', $this->container) && (strlen($this->container['id_binary']) > 40)) {
+        if ((strlen($this->container['id_binary']) > 40)) {
             $invalidProperties[] = "invalid value for 'id_binary', the character length must be smaller than or equal to 40.";
         }
 
-        if (array_key_exists('id_binary', $this->container) && (strlen($this->container['id_binary']) < 40)) {
+        if ((strlen($this->container['id_binary']) < 40)) {
             $invalidProperties[] = "invalid value for 'id_binary', the character length must be bigger than or equal to 40.";
         }
 
-        if (array_key_exists('id_compliance_scan', $this->container) && ($this->container['id_compliance_scan'] !== null) && (strlen($this->container['id_compliance_scan']) > 36)) {
+        if (($this->container['id_compliance_scan'] !== null) && (strlen($this->container['id_compliance_scan']) > 36)) {
             $invalidProperties[] = "invalid value for 'id_compliance_scan', the character length must be smaller than or equal to 36.";
         }
 
-        if (array_key_exists('id_compliance_scan', $this->container) && ($this->container['id_compliance_scan'] !== null) && (strlen($this->container['id_compliance_scan']) < 36)) {
+        if (($this->container['id_compliance_scan'] !== null) && (strlen($this->container['id_compliance_scan']) < 36)) {
             $invalidProperties[] = "invalid value for 'id_compliance_scan', the character length must be bigger than or equal to 36.";
         }
 
         $allowedValues = $this->getStatusAllowableValues();
-        if (array_key_exists('status', $this->container) && ($this->container['status'] !== null) && !in_array($this->container['status'], $allowedValues)) {
+        if (($this->container['status'] !== null) && !in_array($this->container['status'], $allowedValues)) {
             $invalidProperties[] = sprintf(
                 "invalid value for 'status', must be one of '%s'",
                 implode("', '", $allowedValues)
@@ -298,12 +308,34 @@ class ProgramVersionBinary implements ModelInterface, ArrayAccess, JsonSerializa
     }
 
     /**
-     * Validate all the properties in the model
+     * Validate all the properties in the model ensuring the required ones are set
      * return true if all passed
      *
      * @return bool True if all properties are valid
      */
     public function valid()
+    {
+
+        if ($this->offsetGet('id_program') === null) {
+            return false;
+        }
+        if ($this->offsetGet('id_version') === null) {
+            return false;
+        }
+        if ($this->offsetGet('id_binary') === null) {
+            return false;
+        }
+
+        return $this->validProperties();
+    }
+
+    /**
+     * Validate all the properties in the model
+     * return true if all passed
+     *
+     * @return bool True if all properties are valid
+     */
+    public function validProperties()
     {
 
         if (array_key_exists('id_program', $this->container) && $this->container['id_program'] === null) {

@@ -228,6 +228,16 @@ class ProgramVersion implements ModelInterface, ArrayAccess, JsonSerializable
     }
 
     /**
+     * Returns true if all attributes are set. False otherwise.
+     *
+     * @return boolean
+     */
+    public function hasAllAttributesSet()
+    {
+        return count($this->container) === count(self::$attributeMap);
+    }
+
+    /**
      * Show all the invalid properties with reasons.
      *
      * @return array invalid properties with reasons
@@ -239,73 +249,95 @@ class ProgramVersion implements ModelInterface, ArrayAccess, JsonSerializable
         if (array_key_exists('id_program', $this->container) && $this->container['id_program'] === null) {
             $invalidProperties[] = "'id_program' can't be null";
         }
-        if (array_key_exists('id_program', $this->container) && (strlen($this->container['id_program']) > 36)) {
+        if ((strlen($this->container['id_program']) > 36)) {
             $invalidProperties[] = "invalid value for 'id_program', the character length must be smaller than or equal to 36.";
         }
 
-        if (array_key_exists('id_program', $this->container) && (strlen($this->container['id_program']) < 36)) {
+        if ((strlen($this->container['id_program']) < 36)) {
             $invalidProperties[] = "invalid value for 'id_program', the character length must be bigger than or equal to 36.";
         }
 
         if (array_key_exists('id_version', $this->container) && $this->container['id_version'] === null) {
             $invalidProperties[] = "'id_version' can't be null";
         }
-        if (array_key_exists('id_version', $this->container) && !preg_match("/^[A-Za-z0-9.-]{1,60}$/", $this->container['id_version'])) {
+        if (!preg_match("/^[A-Za-z0-9.-]{1,60}$/", $this->container['id_version'])) {
             $invalidProperties[] = "invalid value for 'id_version', must be conform to the pattern /^[A-Za-z0-9.-]{1,60}$/.";
         }
 
         if (array_key_exists('name', $this->container) && $this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
-        if (array_key_exists('name', $this->container) && (strlen($this->container['name']) > 60)) {
+        if ((strlen($this->container['name']) > 60)) {
             $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 60.";
         }
 
-        if (array_key_exists('name', $this->container) && (strlen($this->container['name']) < 1)) {
+        if ((strlen($this->container['name']) < 1)) {
             $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
         }
 
-        if (array_key_exists('preversion', $this->container) && ($this->container['preversion'] !== null) && (strlen($this->container['preversion']) > 255)) {
+        if (($this->container['preversion'] !== null) && (strlen($this->container['preversion']) > 255)) {
             $invalidProperties[] = "invalid value for 'preversion', the character length must be smaller than or equal to 255.";
         }
 
-        if (array_key_exists('preversion', $this->container) && ($this->container['preversion'] !== null) && (strlen($this->container['preversion']) < 1)) {
+        if (($this->container['preversion'] !== null) && (strlen($this->container['preversion']) < 1)) {
             $invalidProperties[] = "invalid value for 'preversion', the character length must be bigger than or equal to 1.";
         }
 
-        if (array_key_exists('postversion', $this->container) && ($this->container['postversion'] !== null) && (strlen($this->container['postversion']) > 255)) {
+        if (($this->container['postversion'] !== null) && (strlen($this->container['postversion']) > 255)) {
             $invalidProperties[] = "invalid value for 'postversion', the character length must be smaller than or equal to 255.";
         }
 
-        if (array_key_exists('postversion', $this->container) && ($this->container['postversion'] !== null) && (strlen($this->container['postversion']) < 1)) {
+        if (($this->container['postversion'] !== null) && (strlen($this->container['postversion']) < 1)) {
             $invalidProperties[] = "invalid value for 'postversion', the character length must be bigger than or equal to 1.";
         }
 
-        if (array_key_exists('supported_formats', $this->container) && ($this->container['supported_formats'] !== null) && (strlen($this->container['supported_formats']) > 1340)) {
+        if (($this->container['supported_formats'] !== null) && (strlen($this->container['supported_formats']) > 1340)) {
             $invalidProperties[] = "invalid value for 'supported_formats', the character length must be smaller than or equal to 1340.";
         }
 
-        if (array_key_exists('supported_formats', $this->container) && ($this->container['supported_formats'] !== null) && (strlen($this->container['supported_formats']) < 1)) {
+        if (($this->container['supported_formats'] !== null) && (strlen($this->container['supported_formats']) < 1)) {
             $invalidProperties[] = "invalid value for 'supported_formats', the character length must be bigger than or equal to 1.";
         }
 
-        if (array_key_exists('id_license', $this->container) && ($this->container['id_license'] !== null) && (strlen($this->container['id_license']) > 3)) {
+        if (($this->container['id_license'] !== null) && (strlen($this->container['id_license']) > 3)) {
             $invalidProperties[] = "invalid value for 'id_license', the character length must be smaller than or equal to 3.";
         }
 
-        if (array_key_exists('id_license', $this->container) && ($this->container['id_license'] !== null) && (strlen($this->container['id_license']) < 1)) {
+        if (($this->container['id_license'] !== null) && (strlen($this->container['id_license']) < 1)) {
             $invalidProperties[] = "invalid value for 'id_license', the character length must be bigger than or equal to 1.";
         }
 
-        if (array_key_exists('age', $this->container) && ($this->container['age'] !== null) && ($this->container['age'] > 22)) {
+        if (($this->container['age'] !== null) && ($this->container['age'] > 22)) {
             $invalidProperties[] = "invalid value for 'age', must be smaller than or equal to 22.";
         }
 
-        if (array_key_exists('age', $this->container) && ($this->container['age'] !== null) && ($this->container['age'] < 0)) {
+        if (($this->container['age'] !== null) && ($this->container['age'] < 0)) {
             $invalidProperties[] = "invalid value for 'age', must be bigger than or equal to 0.";
         }
 
         return $invalidProperties;
+    }
+
+    /**
+     * Validate all the properties in the model ensuring the required ones are set
+     * return true if all passed
+     *
+     * @return bool True if all properties are valid
+     */
+    public function valid()
+    {
+
+        if ($this->offsetGet('id_program') === null) {
+            return false;
+        }
+        if ($this->offsetGet('id_version') === null) {
+            return false;
+        }
+        if ($this->offsetGet('name') === null) {
+            return false;
+        }
+
+        return $this->validProperties();
     }
 
     /**
@@ -314,7 +346,7 @@ class ProgramVersion implements ModelInterface, ArrayAccess, JsonSerializable
      *
      * @return bool True if all properties are valid
      */
-    public function valid()
+    public function validProperties()
     {
 
         if (array_key_exists('id_program', $this->container) && $this->container['id_program'] === null) {
