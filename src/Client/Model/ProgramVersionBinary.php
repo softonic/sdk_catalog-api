@@ -239,7 +239,7 @@ class ProgramVersionBinary implements ModelInterface, ArrayAccess, JsonSerializa
     /**
      * Returns true if all attributes are set. False otherwise.
      *
-     * @return boolean
+     * @return bool
      */
     public function hasAllAttributesSet()
     {
@@ -255,7 +255,7 @@ class ProgramVersionBinary implements ModelInterface, ArrayAccess, JsonSerializa
     {
         $invalidProperties = [];
 
-        if (array_key_exists('id_program', $this->container) && $this->container['id_program'] === null) {
+        if ($this->container['id_program'] === null) {
             $invalidProperties[] = "'id_program' can't be null";
         }
         if ((strlen($this->container['id_program']) > 36)) {
@@ -266,7 +266,7 @@ class ProgramVersionBinary implements ModelInterface, ArrayAccess, JsonSerializa
             $invalidProperties[] = "invalid value for 'id_program', the character length must be bigger than or equal to 36.";
         }
 
-        if (array_key_exists('id_version', $this->container) && $this->container['id_version'] === null) {
+        if ($this->container['id_version'] === null) {
             $invalidProperties[] = "'id_version' can't be null";
         }
         if ((strlen($this->container['id_version']) > 60)) {
@@ -277,7 +277,7 @@ class ProgramVersionBinary implements ModelInterface, ArrayAccess, JsonSerializa
             $invalidProperties[] = "invalid value for 'id_version', the character length must be bigger than or equal to 1.";
         }
 
-        if (array_key_exists('id_binary', $this->container) && $this->container['id_binary'] === null) {
+        if ($this->container['id_binary'] === null) {
             $invalidProperties[] = "'id_binary' can't be null";
         }
         if ((strlen($this->container['id_binary']) > 40)) {
@@ -491,10 +491,10 @@ class ProgramVersionBinary implements ModelInterface, ArrayAccess, JsonSerializa
      */
     public function setIdComplianceScan($id_compliance_scan)
     {
-        if (!is_null($id_compliance_scan) && (strlen($id_compliance_scan) > 36)) {
+        if (($id_compliance_scan !== null) && (strlen($id_compliance_scan) > 36)) {
             throw new \InvalidArgumentException('invalid length for $id_compliance_scan when calling ProgramVersionBinary., must be smaller than or equal to 36.');
         }
-        if (!is_null($id_compliance_scan) && (strlen($id_compliance_scan) < 36)) {
+        if (($id_compliance_scan !== null) && (strlen($id_compliance_scan) < 36)) {
             throw new \InvalidArgumentException('invalid length for $id_compliance_scan when calling ProgramVersionBinary., must be bigger than or equal to 36.');
         }
 
@@ -523,7 +523,7 @@ class ProgramVersionBinary implements ModelInterface, ArrayAccess, JsonSerializa
     public function setStatus($status)
     {
         $allowedValues = $this->getStatusAllowableValues();
-        if (!is_null($status) && !in_array($status, $allowedValues)) {
+        if (($status !== null) && !in_array($status, $allowedValues)) {
             throw new \InvalidArgumentException(
                 sprintf(
                     "Invalid value for 'status', must be one of '%s'",
@@ -564,7 +564,7 @@ class ProgramVersionBinary implements ModelInterface, ArrayAccess, JsonSerializa
      *
      * @param integer $offset Offset
      *
-     * @return boolean
+     * @return bool
      */
     public function offsetExists($offset)
     {
@@ -580,7 +580,7 @@ class ProgramVersionBinary implements ModelInterface, ArrayAccess, JsonSerializa
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -593,7 +593,7 @@ class ProgramVersionBinary implements ModelInterface, ArrayAccess, JsonSerializa
      */
     public function offsetSet($offset, $value)
     {
-        if (is_null($offset)) {
+        if (null === $offset) {
             $this->container[] = $value;
         } else {
             $this->container[$offset] = $value;

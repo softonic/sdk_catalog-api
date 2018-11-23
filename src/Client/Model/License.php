@@ -215,7 +215,7 @@ class License implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Returns true if all attributes are set. False otherwise.
      *
-     * @return boolean
+     * @return bool
      */
     public function hasAllAttributesSet()
     {
@@ -231,7 +231,7 @@ class License implements ModelInterface, ArrayAccess, JsonSerializable
     {
         $invalidProperties = [];
 
-        if (array_key_exists('id_license', $this->container) && $this->container['id_license'] === null) {
+        if ($this->container['id_license'] === null) {
             $invalidProperties[] = "'id_license' can't be null";
         }
         if ((strlen($this->container['id_license']) > 3)) {
@@ -242,7 +242,7 @@ class License implements ModelInterface, ArrayAccess, JsonSerializable
             $invalidProperties[] = "invalid value for 'id_license', the character length must be bigger than or equal to 1.";
         }
 
-        if (array_key_exists('description', $this->container) && $this->container['description'] === null) {
+        if ($this->container['description'] === null) {
             $invalidProperties[] = "'description' can't be null";
         }
         if ((strlen($this->container['description']) > 20)) {
@@ -253,7 +253,7 @@ class License implements ModelInterface, ArrayAccess, JsonSerializable
             $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 1.";
         }
 
-        if (array_key_exists('type', $this->container) && $this->container['type'] === null) {
+        if ($this->container['type'] === null) {
             $invalidProperties[] = "'type' can't be null";
         }
         $allowedValues = $this->getTypeAllowableValues();
@@ -426,7 +426,7 @@ class License implements ModelInterface, ArrayAccess, JsonSerializable
      *
      * @param integer $offset Offset
      *
-     * @return boolean
+     * @return bool
      */
     public function offsetExists($offset)
     {
@@ -442,7 +442,7 @@ class License implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -455,7 +455,7 @@ class License implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function offsetSet($offset, $value)
     {
-        if (is_null($offset)) {
+        if (null === $offset) {
             $this->container[] = $value;
         } else {
             $this->container[$offset] = $value;

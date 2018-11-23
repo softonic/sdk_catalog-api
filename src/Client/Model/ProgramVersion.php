@@ -230,7 +230,7 @@ class ProgramVersion implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Returns true if all attributes are set. False otherwise.
      *
-     * @return boolean
+     * @return bool
      */
     public function hasAllAttributesSet()
     {
@@ -246,7 +246,7 @@ class ProgramVersion implements ModelInterface, ArrayAccess, JsonSerializable
     {
         $invalidProperties = [];
 
-        if (array_key_exists('id_program', $this->container) && $this->container['id_program'] === null) {
+        if ($this->container['id_program'] === null) {
             $invalidProperties[] = "'id_program' can't be null";
         }
         if ((strlen($this->container['id_program']) > 36)) {
@@ -257,14 +257,14 @@ class ProgramVersion implements ModelInterface, ArrayAccess, JsonSerializable
             $invalidProperties[] = "invalid value for 'id_program', the character length must be bigger than or equal to 36.";
         }
 
-        if (array_key_exists('id_version', $this->container) && $this->container['id_version'] === null) {
+        if ($this->container['id_version'] === null) {
             $invalidProperties[] = "'id_version' can't be null";
         }
         if (!preg_match("/^[A-Za-z0-9.-]{1,60}$/", $this->container['id_version'])) {
             $invalidProperties[] = "invalid value for 'id_version', must be conform to the pattern /^[A-Za-z0-9.-]{1,60}$/.";
         }
 
-        if (array_key_exists('name', $this->container) && $this->container['name'] === null) {
+        if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
         if ((strlen($this->container['name']) > 60)) {
@@ -517,10 +517,10 @@ class ProgramVersion implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function setPreversion($preversion)
     {
-        if (!is_null($preversion) && (strlen($preversion) > 255)) {
+        if (($preversion !== null) && (strlen($preversion) > 255)) {
             throw new \InvalidArgumentException('invalid length for $preversion when calling ProgramVersion., must be smaller than or equal to 255.');
         }
-        if (!is_null($preversion) && (strlen($preversion) < 1)) {
+        if (($preversion !== null) && (strlen($preversion) < 1)) {
             throw new \InvalidArgumentException('invalid length for $preversion when calling ProgramVersion., must be bigger than or equal to 1.');
         }
 
@@ -548,10 +548,10 @@ class ProgramVersion implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function setPostversion($postversion)
     {
-        if (!is_null($postversion) && (strlen($postversion) > 255)) {
+        if (($postversion !== null) && (strlen($postversion) > 255)) {
             throw new \InvalidArgumentException('invalid length for $postversion when calling ProgramVersion., must be smaller than or equal to 255.');
         }
-        if (!is_null($postversion) && (strlen($postversion) < 1)) {
+        if (($postversion !== null) && (strlen($postversion) < 1)) {
             throw new \InvalidArgumentException('invalid length for $postversion when calling ProgramVersion., must be bigger than or equal to 1.');
         }
 
@@ -579,10 +579,10 @@ class ProgramVersion implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function setSupportedFormats($supported_formats)
     {
-        if (!is_null($supported_formats) && (strlen($supported_formats) > 1340)) {
+        if (($supported_formats !== null) && (strlen($supported_formats) > 1340)) {
             throw new \InvalidArgumentException('invalid length for $supported_formats when calling ProgramVersion., must be smaller than or equal to 1340.');
         }
-        if (!is_null($supported_formats) && (strlen($supported_formats) < 1)) {
+        if (($supported_formats !== null) && (strlen($supported_formats) < 1)) {
             throw new \InvalidArgumentException('invalid length for $supported_formats when calling ProgramVersion., must be bigger than or equal to 1.');
         }
 
@@ -610,10 +610,10 @@ class ProgramVersion implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function setIdLicense($id_license)
     {
-        if (!is_null($id_license) && (strlen($id_license) > 3)) {
+        if (($id_license !== null) && (strlen($id_license) > 3)) {
             throw new \InvalidArgumentException('invalid length for $id_license when calling ProgramVersion., must be smaller than or equal to 3.');
         }
-        if (!is_null($id_license) && (strlen($id_license) < 1)) {
+        if (($id_license !== null) && (strlen($id_license) < 1)) {
             throw new \InvalidArgumentException('invalid length for $id_license when calling ProgramVersion., must be bigger than or equal to 1.');
         }
 
@@ -642,10 +642,10 @@ class ProgramVersion implements ModelInterface, ArrayAccess, JsonSerializable
     public function setAge($age)
     {
 
-        if (!is_null($age) && ($age > 22)) {
+        if (($age !== null) && ($age > 22)) {
             throw new \InvalidArgumentException('invalid value for $age when calling ProgramVersion., must be smaller than or equal to 22.');
         }
-        if (!is_null($age) && ($age < 0)) {
+        if (($age !== null) && ($age < 0)) {
             throw new \InvalidArgumentException('invalid value for $age when calling ProgramVersion., must be bigger than or equal to 0.');
         }
 
@@ -658,7 +658,7 @@ class ProgramVersion implements ModelInterface, ArrayAccess, JsonSerializable
      *
      * @param integer $offset Offset
      *
-     * @return boolean
+     * @return bool
      */
     public function offsetExists($offset)
     {
@@ -674,7 +674,7 @@ class ProgramVersion implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -687,7 +687,7 @@ class ProgramVersion implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function offsetSet($offset, $value)
     {
-        if (is_null($offset)) {
+        if (null === $offset) {
             $this->container[] = $value;
         } else {
             $this->container[$offset] = $value;

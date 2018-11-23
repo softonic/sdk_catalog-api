@@ -209,7 +209,7 @@ class ProgramUrlType implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Returns true if all attributes are set. False otherwise.
      *
-     * @return boolean
+     * @return bool
      */
     public function hasAllAttributesSet()
     {
@@ -225,7 +225,7 @@ class ProgramUrlType implements ModelInterface, ArrayAccess, JsonSerializable
     {
         $invalidProperties = [];
 
-        if (array_key_exists('id_program', $this->container) && $this->container['id_program'] === null) {
+        if ($this->container['id_program'] === null) {
             $invalidProperties[] = "'id_program' can't be null";
         }
         if ((strlen($this->container['id_program']) > 36)) {
@@ -236,7 +236,7 @@ class ProgramUrlType implements ModelInterface, ArrayAccess, JsonSerializable
             $invalidProperties[] = "invalid value for 'id_program', the character length must be bigger than or equal to 36.";
         }
 
-        if (array_key_exists('id_url_type', $this->container) && $this->container['id_url_type'] === null) {
+        if ($this->container['id_url_type'] === null) {
             $invalidProperties[] = "'id_url_type' can't be null";
         }
         $allowedValues = $this->getIdUrlTypeAllowableValues();
@@ -366,7 +366,7 @@ class ProgramUrlType implements ModelInterface, ArrayAccess, JsonSerializable
      *
      * @param integer $offset Offset
      *
-     * @return boolean
+     * @return bool
      */
     public function offsetExists($offset)
     {
@@ -382,7 +382,7 @@ class ProgramUrlType implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -395,7 +395,7 @@ class ProgramUrlType implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function offsetSet($offset, $value)
     {
-        if (is_null($offset)) {
+        if (null === $offset) {
             $this->container[] = $value;
         } else {
             $this->container[$offset] = $value;

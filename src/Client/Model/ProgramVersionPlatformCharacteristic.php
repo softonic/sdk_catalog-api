@@ -200,7 +200,7 @@ class ProgramVersionPlatformCharacteristic implements ModelInterface, ArrayAcces
     /**
      * Returns true if all attributes are set. False otherwise.
      *
-     * @return boolean
+     * @return bool
      */
     public function hasAllAttributesSet()
     {
@@ -216,7 +216,7 @@ class ProgramVersionPlatformCharacteristic implements ModelInterface, ArrayAcces
     {
         $invalidProperties = [];
 
-        if (array_key_exists('id_program', $this->container) && $this->container['id_program'] === null) {
+        if ($this->container['id_program'] === null) {
             $invalidProperties[] = "'id_program' can't be null";
         }
         if ((strlen($this->container['id_program']) > 36)) {
@@ -227,7 +227,7 @@ class ProgramVersionPlatformCharacteristic implements ModelInterface, ArrayAcces
             $invalidProperties[] = "invalid value for 'id_program', the character length must be bigger than or equal to 36.";
         }
 
-        if (array_key_exists('id_version', $this->container) && $this->container['id_version'] === null) {
+        if ($this->container['id_version'] === null) {
             $invalidProperties[] = "'id_version' can't be null";
         }
         if ((strlen($this->container['id_version']) > 60)) {
@@ -238,7 +238,7 @@ class ProgramVersionPlatformCharacteristic implements ModelInterface, ArrayAcces
             $invalidProperties[] = "invalid value for 'id_version', the character length must be bigger than or equal to 1.";
         }
 
-        if (array_key_exists('id_platform_characteristic', $this->container) && $this->container['id_platform_characteristic'] === null) {
+        if ($this->container['id_platform_characteristic'] === null) {
             $invalidProperties[] = "'id_platform_characteristic' can't be null";
         }
         if ((strlen($this->container['id_platform_characteristic']) > 20)) {
@@ -411,7 +411,7 @@ class ProgramVersionPlatformCharacteristic implements ModelInterface, ArrayAcces
      *
      * @param integer $offset Offset
      *
-     * @return boolean
+     * @return bool
      */
     public function offsetExists($offset)
     {
@@ -427,7 +427,7 @@ class ProgramVersionPlatformCharacteristic implements ModelInterface, ArrayAcces
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -440,7 +440,7 @@ class ProgramVersionPlatformCharacteristic implements ModelInterface, ArrayAcces
      */
     public function offsetSet($offset, $value)
     {
-        if (is_null($offset)) {
+        if (null === $offset) {
             $this->container[] = $value;
         } else {
             $this->container[$offset] = $value;

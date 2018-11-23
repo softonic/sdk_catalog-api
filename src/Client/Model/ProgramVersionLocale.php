@@ -267,7 +267,7 @@ class ProgramVersionLocale implements ModelInterface, ArrayAccess, JsonSerializa
     /**
      * Returns true if all attributes are set. False otherwise.
      *
-     * @return boolean
+     * @return bool
      */
     public function hasAllAttributesSet()
     {
@@ -283,7 +283,7 @@ class ProgramVersionLocale implements ModelInterface, ArrayAccess, JsonSerializa
     {
         $invalidProperties = [];
 
-        if (array_key_exists('id_program', $this->container) && $this->container['id_program'] === null) {
+        if ($this->container['id_program'] === null) {
             $invalidProperties[] = "'id_program' can't be null";
         }
         if ((strlen($this->container['id_program']) > 36)) {
@@ -294,7 +294,7 @@ class ProgramVersionLocale implements ModelInterface, ArrayAccess, JsonSerializa
             $invalidProperties[] = "invalid value for 'id_program', the character length must be bigger than or equal to 36.";
         }
 
-        if (array_key_exists('id_version', $this->container) && $this->container['id_version'] === null) {
+        if ($this->container['id_version'] === null) {
             $invalidProperties[] = "'id_version' can't be null";
         }
         if ((strlen($this->container['id_version']) > 60)) {
@@ -305,7 +305,7 @@ class ProgramVersionLocale implements ModelInterface, ArrayAccess, JsonSerializa
             $invalidProperties[] = "invalid value for 'id_version', the character length must be bigger than or equal to 1.";
         }
 
-        if (array_key_exists('id_locale', $this->container) && $this->container['id_locale'] === null) {
+        if ($this->container['id_locale'] === null) {
             $invalidProperties[] = "'id_locale' can't be null";
         }
         if ((strlen($this->container['id_locale']) > 2)) {
@@ -316,7 +316,7 @@ class ProgramVersionLocale implements ModelInterface, ArrayAccess, JsonSerializa
             $invalidProperties[] = "invalid value for 'id_locale', the character length must be bigger than or equal to 2.";
         }
 
-        if (array_key_exists('program_name', $this->container) && $this->container['program_name'] === null) {
+        if ($this->container['program_name'] === null) {
             $invalidProperties[] = "'program_name' can't be null";
         }
         if ((strlen($this->container['program_name']) > 130)) {
@@ -327,7 +327,7 @@ class ProgramVersionLocale implements ModelInterface, ArrayAccess, JsonSerializa
             $invalidProperties[] = "invalid value for 'program_name', the character length must be bigger than or equal to 1.";
         }
 
-        if (array_key_exists('status', $this->container) && $this->container['status'] === null) {
+        if ($this->container['status'] === null) {
             $invalidProperties[] = "'status' can't be null";
         }
         $allowedValues = $this->getStatusAllowableValues();
@@ -709,7 +709,7 @@ class ProgramVersionLocale implements ModelInterface, ArrayAccess, JsonSerializa
     public function setIdEditor($id_editor)
     {
 
-        if (!is_null($id_editor) && ($id_editor < 0)) {
+        if (($id_editor !== null) && ($id_editor < 0)) {
             throw new \InvalidArgumentException('invalid value for $id_editor when calling ProgramVersionLocale., must be bigger than or equal to 0.');
         }
 
@@ -737,10 +737,10 @@ class ProgramVersionLocale implements ModelInterface, ArrayAccess, JsonSerializa
      */
     public function setIdBinary($id_binary)
     {
-        if (!is_null($id_binary) && (strlen($id_binary) > 40)) {
+        if (($id_binary !== null) && (strlen($id_binary) > 40)) {
             throw new \InvalidArgumentException('invalid length for $id_binary when calling ProgramVersionLocale., must be smaller than or equal to 40.');
         }
-        if (!is_null($id_binary) && (strlen($id_binary) < 40)) {
+        if (($id_binary !== null) && (strlen($id_binary) < 40)) {
             throw new \InvalidArgumentException('invalid length for $id_binary when calling ProgramVersionLocale., must be bigger than or equal to 40.');
         }
 
@@ -768,10 +768,10 @@ class ProgramVersionLocale implements ModelInterface, ArrayAccess, JsonSerializa
      */
     public function setAboutLicense($about_license)
     {
-        if (!is_null($about_license) && (strlen($about_license) > 1200)) {
+        if (($about_license !== null) && (strlen($about_license) > 1200)) {
             throw new \InvalidArgumentException('invalid length for $about_license when calling ProgramVersionLocale., must be smaller than or equal to 1200.');
         }
-        if (!is_null($about_license) && (strlen($about_license) < 1)) {
+        if (($about_license !== null) && (strlen($about_license) < 1)) {
             throw new \InvalidArgumentException('invalid length for $about_license when calling ProgramVersionLocale., must be bigger than or equal to 1.');
         }
 
@@ -784,7 +784,7 @@ class ProgramVersionLocale implements ModelInterface, ArrayAccess, JsonSerializa
      *
      * @param integer $offset Offset
      *
-     * @return boolean
+     * @return bool
      */
     public function offsetExists($offset)
     {
@@ -800,7 +800,7 @@ class ProgramVersionLocale implements ModelInterface, ArrayAccess, JsonSerializa
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -813,7 +813,7 @@ class ProgramVersionLocale implements ModelInterface, ArrayAccess, JsonSerializa
      */
     public function offsetSet($offset, $value)
     {
-        if (is_null($offset)) {
+        if (null === $offset) {
             $this->container[] = $value;
         } else {
             $this->container[$offset] = $value;

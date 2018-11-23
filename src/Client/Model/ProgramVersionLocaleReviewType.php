@@ -227,7 +227,7 @@ class ProgramVersionLocaleReviewType implements ModelInterface, ArrayAccess, Jso
     /**
      * Returns true if all attributes are set. False otherwise.
      *
-     * @return boolean
+     * @return bool
      */
     public function hasAllAttributesSet()
     {
@@ -243,7 +243,7 @@ class ProgramVersionLocaleReviewType implements ModelInterface, ArrayAccess, Jso
     {
         $invalidProperties = [];
 
-        if (array_key_exists('id_program', $this->container) && $this->container['id_program'] === null) {
+        if ($this->container['id_program'] === null) {
             $invalidProperties[] = "'id_program' can't be null";
         }
         if ((strlen($this->container['id_program']) > 36)) {
@@ -254,7 +254,7 @@ class ProgramVersionLocaleReviewType implements ModelInterface, ArrayAccess, Jso
             $invalidProperties[] = "invalid value for 'id_program', the character length must be bigger than or equal to 36.";
         }
 
-        if (array_key_exists('id_version', $this->container) && $this->container['id_version'] === null) {
+        if ($this->container['id_version'] === null) {
             $invalidProperties[] = "'id_version' can't be null";
         }
         if ((strlen($this->container['id_version']) > 60)) {
@@ -265,7 +265,7 @@ class ProgramVersionLocaleReviewType implements ModelInterface, ArrayAccess, Jso
             $invalidProperties[] = "invalid value for 'id_version', the character length must be bigger than or equal to 1.";
         }
 
-        if (array_key_exists('id_locale', $this->container) && $this->container['id_locale'] === null) {
+        if ($this->container['id_locale'] === null) {
             $invalidProperties[] = "'id_locale' can't be null";
         }
         if ((strlen($this->container['id_locale']) > 2)) {
@@ -276,7 +276,7 @@ class ProgramVersionLocaleReviewType implements ModelInterface, ArrayAccess, Jso
             $invalidProperties[] = "invalid value for 'id_locale', the character length must be bigger than or equal to 2.";
         }
 
-        if (array_key_exists('id_review_type', $this->container) && $this->container['id_review_type'] === null) {
+        if ($this->container['id_review_type'] === null) {
             $invalidProperties[] = "'id_review_type' can't be null";
         }
         $allowedValues = $this->getIdReviewTypeAllowableValues();
@@ -287,7 +287,7 @@ class ProgramVersionLocaleReviewType implements ModelInterface, ArrayAccess, Jso
             );
         }
 
-        if (array_key_exists('id_review', $this->container) && $this->container['id_review'] === null) {
+        if ($this->container['id_review'] === null) {
             $invalidProperties[] = "'id_review' can't be null";
         }
         if ((strlen($this->container['id_review']) > 36)) {
@@ -546,7 +546,7 @@ class ProgramVersionLocaleReviewType implements ModelInterface, ArrayAccess, Jso
      *
      * @param integer $offset Offset
      *
-     * @return boolean
+     * @return bool
      */
     public function offsetExists($offset)
     {
@@ -562,7 +562,7 @@ class ProgramVersionLocaleReviewType implements ModelInterface, ArrayAccess, Jso
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -575,7 +575,7 @@ class ProgramVersionLocaleReviewType implements ModelInterface, ArrayAccess, Jso
      */
     public function offsetSet($offset, $value)
     {
-        if (is_null($offset)) {
+        if (null === $offset) {
             $this->container[] = $value;
         } else {
             $this->container[$offset] = $value;

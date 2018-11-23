@@ -218,7 +218,7 @@ class Program implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Returns true if all attributes are set. False otherwise.
      *
-     * @return boolean
+     * @return bool
      */
     public function hasAllAttributesSet()
     {
@@ -234,7 +234,7 @@ class Program implements ModelInterface, ArrayAccess, JsonSerializable
     {
         $invalidProperties = [];
 
-        if (array_key_exists('id_program', $this->container) && $this->container['id_program'] === null) {
+        if ($this->container['id_program'] === null) {
             $invalidProperties[] = "'id_program' can't be null";
         }
         if ((strlen($this->container['id_program']) > 36)) {
@@ -249,7 +249,7 @@ class Program implements ModelInterface, ArrayAccess, JsonSerializable
             $invalidProperties[] = "invalid value for 'id_developer', must be conform to the pattern /^[a-z0-9]+(?:-[a-z0-9]+)*$/.";
         }
 
-        if (array_key_exists('id_origin', $this->container) && $this->container['id_origin'] === null) {
+        if ($this->container['id_origin'] === null) {
             $invalidProperties[] = "'id_origin' can't be null";
         }
         if ((strlen($this->container['id_origin']) > 40)) {
@@ -260,7 +260,7 @@ class Program implements ModelInterface, ArrayAccess, JsonSerializable
             $invalidProperties[] = "invalid value for 'id_origin', the character length must be bigger than or equal to 1.";
         }
 
-        if (array_key_exists('id_platform', $this->container) && $this->container['id_platform'] === null) {
+        if ($this->container['id_platform'] === null) {
             $invalidProperties[] = "'id_platform' can't be null";
         }
         if ((strlen($this->container['id_platform']) > 20)) {
@@ -271,7 +271,7 @@ class Program implements ModelInterface, ArrayAccess, JsonSerializable
             $invalidProperties[] = "invalid value for 'id_platform', the character length must be bigger than or equal to 1.";
         }
 
-        if (array_key_exists('id_category', $this->container) && $this->container['id_category'] === null) {
+        if ($this->container['id_category'] === null) {
             $invalidProperties[] = "'id_category' can't be null";
         }
         if ((strlen($this->container['id_category']) > 40)) {
@@ -413,7 +413,7 @@ class Program implements ModelInterface, ArrayAccess, JsonSerializable
     public function setIdDeveloper($id_developer)
     {
 
-        if (!is_null($id_developer) && (!preg_match("/^[a-z0-9]+(?:-[a-z0-9]+)*$/", $id_developer))) {
+        if (($id_developer !== null) && (!preg_match("/^[a-z0-9]+(?:-[a-z0-9]+)*$/", $id_developer))) {
             throw new \InvalidArgumentException("invalid value for $id_developer when calling Program., must conform to the pattern /^[a-z0-9]+(?:-[a-z0-9]+)*$/.");
         }
 
@@ -543,7 +543,7 @@ class Program implements ModelInterface, ArrayAccess, JsonSerializable
      *
      * @param integer $offset Offset
      *
-     * @return boolean
+     * @return bool
      */
     public function offsetExists($offset)
     {
@@ -559,7 +559,7 @@ class Program implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -572,7 +572,7 @@ class Program implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function offsetSet($offset, $value)
     {
-        if (is_null($offset)) {
+        if (null === $offset) {
             $this->container[] = $value;
         } else {
             $this->container[$offset] = $value;

@@ -320,7 +320,7 @@ class ProgramReviewTypeReview implements ModelInterface, ArrayAccess, JsonSerial
     /**
      * Returns true if all attributes are set. False otherwise.
      *
-     * @return boolean
+     * @return bool
      */
     public function hasAllAttributesSet()
     {
@@ -336,7 +336,7 @@ class ProgramReviewTypeReview implements ModelInterface, ArrayAccess, JsonSerial
     {
         $invalidProperties = [];
 
-        if (array_key_exists('id_program', $this->container) && $this->container['id_program'] === null) {
+        if ($this->container['id_program'] === null) {
             $invalidProperties[] = "'id_program' can't be null";
         }
         if ((strlen($this->container['id_program']) > 36)) {
@@ -347,7 +347,7 @@ class ProgramReviewTypeReview implements ModelInterface, ArrayAccess, JsonSerial
             $invalidProperties[] = "invalid value for 'id_program', the character length must be bigger than or equal to 36.";
         }
 
-        if (array_key_exists('id_review_type', $this->container) && $this->container['id_review_type'] === null) {
+        if ($this->container['id_review_type'] === null) {
             $invalidProperties[] = "'id_review_type' can't be null";
         }
         $allowedValues = $this->getIdReviewTypeAllowableValues();
@@ -358,7 +358,7 @@ class ProgramReviewTypeReview implements ModelInterface, ArrayAccess, JsonSerial
             );
         }
 
-        if (array_key_exists('id_review', $this->container) && $this->container['id_review'] === null) {
+        if ($this->container['id_review'] === null) {
             $invalidProperties[] = "'id_review' can't be null";
         }
         if ((strlen($this->container['id_review']) > 36)) {
@@ -684,10 +684,10 @@ class ProgramReviewTypeReview implements ModelInterface, ArrayAccess, JsonSerial
      */
     public function setSource($source)
     {
-        if (!is_null($source) && (strlen($source) > 36)) {
+        if (($source !== null) && (strlen($source) > 36)) {
             throw new \InvalidArgumentException('invalid length for $source when calling ProgramReviewTypeReview., must be smaller than or equal to 36.');
         }
-        if (!is_null($source) && (strlen($source) < 1)) {
+        if (($source !== null) && (strlen($source) < 1)) {
             throw new \InvalidArgumentException('invalid length for $source when calling ProgramReviewTypeReview., must be bigger than or equal to 1.');
         }
 
@@ -715,10 +715,10 @@ class ProgramReviewTypeReview implements ModelInterface, ArrayAccess, JsonSerial
      */
     public function setPublicNote($public_note)
     {
-        if (!is_null($public_note) && (strlen($public_note) > 3500)) {
+        if (($public_note !== null) && (strlen($public_note) > 3500)) {
             throw new \InvalidArgumentException('invalid length for $public_note when calling ProgramReviewTypeReview., must be smaller than or equal to 3500.');
         }
-        if (!is_null($public_note) && (strlen($public_note) < 1)) {
+        if (($public_note !== null) && (strlen($public_note) < 1)) {
             throw new \InvalidArgumentException('invalid length for $public_note when calling ProgramReviewTypeReview., must be bigger than or equal to 1.');
         }
 
@@ -747,7 +747,7 @@ class ProgramReviewTypeReview implements ModelInterface, ArrayAccess, JsonSerial
     public function setType($type)
     {
         $allowedValues = $this->getTypeAllowableValues();
-        if (!is_null($type) && !in_array($type, $allowedValues)) {
+        if (($type !== null) && !in_array($type, $allowedValues)) {
             throw new \InvalidArgumentException(
                 sprintf(
                     "Invalid value for 'type', must be one of '%s'",
@@ -780,10 +780,10 @@ class ProgramReviewTypeReview implements ModelInterface, ArrayAccess, JsonSerial
     public function setRating($rating)
     {
 
-        if (!is_null($rating) && ($rating > 10)) {
+        if (($rating !== null) && ($rating > 10)) {
             throw new \InvalidArgumentException('invalid value for $rating when calling ProgramReviewTypeReview., must be smaller than or equal to 10.');
         }
-        if (!is_null($rating) && ($rating < 0)) {
+        if (($rating !== null) && ($rating < 0)) {
             throw new \InvalidArgumentException('invalid value for $rating when calling ProgramReviewTypeReview., must be bigger than or equal to 0.');
         }
 
@@ -811,10 +811,10 @@ class ProgramReviewTypeReview implements ModelInterface, ArrayAccess, JsonSerial
      */
     public function setHeadline($headline)
     {
-        if (!is_null($headline) && (strlen($headline) > 2000)) {
+        if (($headline !== null) && (strlen($headline) > 2000)) {
             throw new \InvalidArgumentException('invalid length for $headline when calling ProgramReviewTypeReview., must be smaller than or equal to 2000.');
         }
-        if (!is_null($headline) && (strlen($headline) < 1)) {
+        if (($headline !== null) && (strlen($headline) < 1)) {
             throw new \InvalidArgumentException('invalid length for $headline when calling ProgramReviewTypeReview., must be bigger than or equal to 1.');
         }
 
@@ -842,10 +842,10 @@ class ProgramReviewTypeReview implements ModelInterface, ArrayAccess, JsonSerial
      */
     public function setLead($lead)
     {
-        if (!is_null($lead) && (strlen($lead) > 2000)) {
+        if (($lead !== null) && (strlen($lead) > 2000)) {
             throw new \InvalidArgumentException('invalid length for $lead when calling ProgramReviewTypeReview., must be smaller than or equal to 2000.');
         }
-        if (!is_null($lead) && (strlen($lead) < 1)) {
+        if (($lead !== null) && (strlen($lead) < 1)) {
             throw new \InvalidArgumentException('invalid length for $lead when calling ProgramReviewTypeReview., must be bigger than or equal to 1.');
         }
 
@@ -873,10 +873,10 @@ class ProgramReviewTypeReview implements ModelInterface, ArrayAccess, JsonSerial
      */
     public function setBody($body)
     {
-        if (!is_null($body) && (strlen($body) > 65535)) {
+        if (($body !== null) && (strlen($body) > 65535)) {
             throw new \InvalidArgumentException('invalid length for $body when calling ProgramReviewTypeReview., must be smaller than or equal to 65535.');
         }
-        if (!is_null($body) && (strlen($body) < 1)) {
+        if (($body !== null) && (strlen($body) < 1)) {
             throw new \InvalidArgumentException('invalid length for $body when calling ProgramReviewTypeReview., must be bigger than or equal to 1.');
         }
 
@@ -904,10 +904,10 @@ class ProgramReviewTypeReview implements ModelInterface, ArrayAccess, JsonSerial
      */
     public function setConclusion($conclusion)
     {
-        if (!is_null($conclusion) && (strlen($conclusion) > 4000)) {
+        if (($conclusion !== null) && (strlen($conclusion) > 4000)) {
             throw new \InvalidArgumentException('invalid length for $conclusion when calling ProgramReviewTypeReview., must be smaller than or equal to 4000.');
         }
-        if (!is_null($conclusion) && (strlen($conclusion) < 1)) {
+        if (($conclusion !== null) && (strlen($conclusion) < 1)) {
             throw new \InvalidArgumentException('invalid length for $conclusion when calling ProgramReviewTypeReview., must be bigger than or equal to 1.');
         }
 
@@ -935,10 +935,10 @@ class ProgramReviewTypeReview implements ModelInterface, ArrayAccess, JsonSerial
      */
     public function setChanges($changes)
     {
-        if (!is_null($changes) && (strlen($changes) > 10500)) {
+        if (($changes !== null) && (strlen($changes) > 10500)) {
             throw new \InvalidArgumentException('invalid length for $changes when calling ProgramReviewTypeReview., must be smaller than or equal to 10500.');
         }
-        if (!is_null($changes) && (strlen($changes) < 1)) {
+        if (($changes !== null) && (strlen($changes) < 1)) {
             throw new \InvalidArgumentException('invalid length for $changes when calling ProgramReviewTypeReview., must be bigger than or equal to 1.');
         }
 
@@ -966,10 +966,10 @@ class ProgramReviewTypeReview implements ModelInterface, ArrayAccess, JsonSerial
      */
     public function setExtra($extra)
     {
-        if (!is_null($extra) && (strlen($extra) > 65535)) {
+        if (($extra !== null) && (strlen($extra) > 65535)) {
             throw new \InvalidArgumentException('invalid length for $extra when calling ProgramReviewTypeReview., must be smaller than or equal to 65535.');
         }
-        if (!is_null($extra) && (strlen($extra) < 1)) {
+        if (($extra !== null) && (strlen($extra) < 1)) {
             throw new \InvalidArgumentException('invalid length for $extra when calling ProgramReviewTypeReview., must be bigger than or equal to 1.');
         }
 
@@ -1030,7 +1030,7 @@ class ProgramReviewTypeReview implements ModelInterface, ArrayAccess, JsonSerial
      *
      * @param integer $offset Offset
      *
-     * @return boolean
+     * @return bool
      */
     public function offsetExists($offset)
     {
@@ -1046,7 +1046,7 @@ class ProgramReviewTypeReview implements ModelInterface, ArrayAccess, JsonSerial
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -1059,7 +1059,7 @@ class ProgramReviewTypeReview implements ModelInterface, ArrayAccess, JsonSerial
      */
     public function offsetSet($offset, $value)
     {
-        if (is_null($offset)) {
+        if (null === $offset) {
             $this->container[] = $value;
         } else {
             $this->container[$offset] = $value;

@@ -194,7 +194,7 @@ class Source implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Returns true if all attributes are set. False otherwise.
      *
-     * @return boolean
+     * @return bool
      */
     public function hasAllAttributesSet()
     {
@@ -210,7 +210,7 @@ class Source implements ModelInterface, ArrayAccess, JsonSerializable
     {
         $invalidProperties = [];
 
-        if (array_key_exists('id_source', $this->container) && $this->container['id_source'] === null) {
+        if ($this->container['id_source'] === null) {
             $invalidProperties[] = "'id_source' can't be null";
         }
         if ((strlen($this->container['id_source']) > 20)) {
@@ -221,7 +221,7 @@ class Source implements ModelInterface, ArrayAccess, JsonSerializable
             $invalidProperties[] = "invalid value for 'id_source', the character length must be bigger than or equal to 1.";
         }
 
-        if (array_key_exists('name', $this->container) && $this->container['name'] === null) {
+        if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
         if ((strlen($this->container['name']) > 20)) {
@@ -351,7 +351,7 @@ class Source implements ModelInterface, ArrayAccess, JsonSerializable
      *
      * @param integer $offset Offset
      *
-     * @return boolean
+     * @return bool
      */
     public function offsetExists($offset)
     {
@@ -367,7 +367,7 @@ class Source implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -380,7 +380,7 @@ class Source implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function offsetSet($offset, $value)
     {
-        if (is_null($offset)) {
+        if (null === $offset) {
             $this->container[] = $value;
         } else {
             $this->container[$offset] = $value;

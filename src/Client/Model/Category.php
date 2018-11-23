@@ -200,7 +200,7 @@ class Category implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Returns true if all attributes are set. False otherwise.
      *
-     * @return boolean
+     * @return bool
      */
     public function hasAllAttributesSet()
     {
@@ -216,7 +216,7 @@ class Category implements ModelInterface, ArrayAccess, JsonSerializable
     {
         $invalidProperties = [];
 
-        if (array_key_exists('id_category', $this->container) && $this->container['id_category'] === null) {
+        if ($this->container['id_category'] === null) {
             $invalidProperties[] = "'id_category' can't be null";
         }
         if ((strlen($this->container['id_category']) > 40)) {
@@ -227,7 +227,7 @@ class Category implements ModelInterface, ArrayAccess, JsonSerializable
             $invalidProperties[] = "invalid value for 'id_category', the character length must be bigger than or equal to 1.";
         }
 
-        if (array_key_exists('name', $this->container) && $this->container['name'] === null) {
+        if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
         if ((strlen($this->container['name']) > 255)) {
@@ -386,10 +386,10 @@ class Category implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function setIdParent($id_parent)
     {
-        if (!is_null($id_parent) && (strlen($id_parent) > 40)) {
+        if (($id_parent !== null) && (strlen($id_parent) > 40)) {
             throw new \InvalidArgumentException('invalid length for $id_parent when calling Category., must be smaller than or equal to 40.');
         }
-        if (!is_null($id_parent) && (strlen($id_parent) < 1)) {
+        if (($id_parent !== null) && (strlen($id_parent) < 1)) {
             throw new \InvalidArgumentException('invalid length for $id_parent when calling Category., must be bigger than or equal to 1.');
         }
 
@@ -402,7 +402,7 @@ class Category implements ModelInterface, ArrayAccess, JsonSerializable
      *
      * @param integer $offset Offset
      *
-     * @return boolean
+     * @return bool
      */
     public function offsetExists($offset)
     {
@@ -418,7 +418,7 @@ class Category implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -431,7 +431,7 @@ class Category implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function offsetSet($offset, $value)
     {
-        if (is_null($offset)) {
+        if (null === $offset) {
             $this->container[] = $value;
         } else {
             $this->container[$offset] = $value;

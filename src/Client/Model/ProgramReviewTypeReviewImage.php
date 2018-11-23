@@ -278,7 +278,7 @@ class ProgramReviewTypeReviewImage implements ModelInterface, ArrayAccess, JsonS
     /**
      * Returns true if all attributes are set. False otherwise.
      *
-     * @return boolean
+     * @return bool
      */
     public function hasAllAttributesSet()
     {
@@ -294,7 +294,7 @@ class ProgramReviewTypeReviewImage implements ModelInterface, ArrayAccess, JsonS
     {
         $invalidProperties = [];
 
-        if (array_key_exists('id_program', $this->container) && $this->container['id_program'] === null) {
+        if ($this->container['id_program'] === null) {
             $invalidProperties[] = "'id_program' can't be null";
         }
         if ((strlen($this->container['id_program']) > 36)) {
@@ -305,7 +305,7 @@ class ProgramReviewTypeReviewImage implements ModelInterface, ArrayAccess, JsonS
             $invalidProperties[] = "invalid value for 'id_program', the character length must be bigger than or equal to 36.";
         }
 
-        if (array_key_exists('id_review_type', $this->container) && $this->container['id_review_type'] === null) {
+        if ($this->container['id_review_type'] === null) {
             $invalidProperties[] = "'id_review_type' can't be null";
         }
         $allowedValues = $this->getIdReviewTypeAllowableValues();
@@ -316,7 +316,7 @@ class ProgramReviewTypeReviewImage implements ModelInterface, ArrayAccess, JsonS
             );
         }
 
-        if (array_key_exists('id_review', $this->container) && $this->container['id_review'] === null) {
+        if ($this->container['id_review'] === null) {
             $invalidProperties[] = "'id_review' can't be null";
         }
         if ((strlen($this->container['id_review']) > 36)) {
@@ -327,7 +327,7 @@ class ProgramReviewTypeReviewImage implements ModelInterface, ArrayAccess, JsonS
             $invalidProperties[] = "invalid value for 'id_review', the character length must be bigger than or equal to 36.";
         }
 
-        if (array_key_exists('id_image', $this->container) && $this->container['id_image'] === null) {
+        if ($this->container['id_image'] === null) {
             $invalidProperties[] = "'id_image' can't be null";
         }
         if ((strlen($this->container['id_image']) > 40)) {
@@ -338,7 +338,7 @@ class ProgramReviewTypeReviewImage implements ModelInterface, ArrayAccess, JsonS
             $invalidProperties[] = "invalid value for 'id_image', the character length must be bigger than or equal to 40.";
         }
 
-        if (array_key_exists('path', $this->container) && $this->container['path'] === null) {
+        if ($this->container['path'] === null) {
             $invalidProperties[] = "'path' can't be null";
         }
         if ((strlen($this->container['path']) > 255)) {
@@ -349,7 +349,7 @@ class ProgramReviewTypeReviewImage implements ModelInterface, ArrayAccess, JsonS
             $invalidProperties[] = "invalid value for 'path', the character length must be bigger than or equal to 1.";
         }
 
-        if (array_key_exists('filename', $this->container) && $this->container['filename'] === null) {
+        if ($this->container['filename'] === null) {
             $invalidProperties[] = "'filename' can't be null";
         }
         if ((strlen($this->container['filename']) > 255)) {
@@ -360,7 +360,7 @@ class ProgramReviewTypeReviewImage implements ModelInterface, ArrayAccess, JsonS
             $invalidProperties[] = "invalid value for 'filename', the character length must be bigger than or equal to 1.";
         }
 
-        if (array_key_exists('type', $this->container) && $this->container['type'] === null) {
+        if ($this->container['type'] === null) {
             $invalidProperties[] = "'type' can't be null";
         }
         $allowedValues = $this->getTypeAllowableValues();
@@ -797,10 +797,10 @@ class ProgramReviewTypeReviewImage implements ModelInterface, ArrayAccess, JsonS
     public function setPriority($priority)
     {
 
-        if (!is_null($priority) && ($priority > 255)) {
+        if (($priority !== null) && ($priority > 255)) {
             throw new \InvalidArgumentException('invalid value for $priority when calling ProgramReviewTypeReviewImage., must be smaller than or equal to 255.');
         }
-        if (!is_null($priority) && ($priority < 0)) {
+        if (($priority !== null) && ($priority < 0)) {
             throw new \InvalidArgumentException('invalid value for $priority when calling ProgramReviewTypeReviewImage., must be bigger than or equal to 0.');
         }
 
@@ -828,10 +828,10 @@ class ProgramReviewTypeReviewImage implements ModelInterface, ArrayAccess, JsonS
      */
     public function setCaption($caption)
     {
-        if (!is_null($caption) && (strlen($caption) > 200)) {
+        if (($caption !== null) && (strlen($caption) > 200)) {
             throw new \InvalidArgumentException('invalid length for $caption when calling ProgramReviewTypeReviewImage., must be smaller than or equal to 200.');
         }
-        if (!is_null($caption) && (strlen($caption) < 1)) {
+        if (($caption !== null) && (strlen($caption) < 1)) {
             throw new \InvalidArgumentException('invalid length for $caption when calling ProgramReviewTypeReviewImage., must be bigger than or equal to 1.');
         }
 
@@ -844,7 +844,7 @@ class ProgramReviewTypeReviewImage implements ModelInterface, ArrayAccess, JsonS
      *
      * @param integer $offset Offset
      *
-     * @return boolean
+     * @return bool
      */
     public function offsetExists($offset)
     {
@@ -860,7 +860,7 @@ class ProgramReviewTypeReviewImage implements ModelInterface, ArrayAccess, JsonS
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -873,7 +873,7 @@ class ProgramReviewTypeReviewImage implements ModelInterface, ArrayAccess, JsonS
      */
     public function offsetSet($offset, $value)
     {
-        if (is_null($offset)) {
+        if (null === $offset) {
             $this->container[] = $value;
         } else {
             $this->container[$offset] = $value;

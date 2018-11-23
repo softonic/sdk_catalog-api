@@ -206,7 +206,7 @@ class ProgramPlatformSource implements ModelInterface, ArrayAccess, JsonSerializ
     /**
      * Returns true if all attributes are set. False otherwise.
      *
-     * @return boolean
+     * @return bool
      */
     public function hasAllAttributesSet()
     {
@@ -222,7 +222,7 @@ class ProgramPlatformSource implements ModelInterface, ArrayAccess, JsonSerializ
     {
         $invalidProperties = [];
 
-        if (array_key_exists('id_program', $this->container) && $this->container['id_program'] === null) {
+        if ($this->container['id_program'] === null) {
             $invalidProperties[] = "'id_program' can't be null";
         }
         if ((strlen($this->container['id_program']) > 36)) {
@@ -233,7 +233,7 @@ class ProgramPlatformSource implements ModelInterface, ArrayAccess, JsonSerializ
             $invalidProperties[] = "invalid value for 'id_program', the character length must be bigger than or equal to 36.";
         }
 
-        if (array_key_exists('id_platform', $this->container) && $this->container['id_platform'] === null) {
+        if ($this->container['id_platform'] === null) {
             $invalidProperties[] = "'id_platform' can't be null";
         }
         if ((strlen($this->container['id_platform']) > 20)) {
@@ -244,7 +244,7 @@ class ProgramPlatformSource implements ModelInterface, ArrayAccess, JsonSerializ
             $invalidProperties[] = "invalid value for 'id_platform', the character length must be bigger than or equal to 1.";
         }
 
-        if (array_key_exists('id_source', $this->container) && $this->container['id_source'] === null) {
+        if ($this->container['id_source'] === null) {
             $invalidProperties[] = "'id_source' can't be null";
         }
         if ((strlen($this->container['id_source']) > 20)) {
@@ -255,7 +255,7 @@ class ProgramPlatformSource implements ModelInterface, ArrayAccess, JsonSerializ
             $invalidProperties[] = "invalid value for 'id_source', the character length must be bigger than or equal to 1.";
         }
 
-        if (array_key_exists('id_store', $this->container) && $this->container['id_store'] === null) {
+        if ($this->container['id_store'] === null) {
             $invalidProperties[] = "'id_store' can't be null";
         }
         if ((strlen($this->container['id_store']) > 255)) {
@@ -471,7 +471,7 @@ class ProgramPlatformSource implements ModelInterface, ArrayAccess, JsonSerializ
      *
      * @param integer $offset Offset
      *
-     * @return boolean
+     * @return bool
      */
     public function offsetExists($offset)
     {
@@ -487,7 +487,7 @@ class ProgramPlatformSource implements ModelInterface, ArrayAccess, JsonSerializ
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -500,7 +500,7 @@ class ProgramPlatformSource implements ModelInterface, ArrayAccess, JsonSerializ
      */
     public function offsetSet($offset, $value)
     {
-        if (is_null($offset)) {
+        if (null === $offset) {
             $this->container[] = $value;
         } else {
             $this->container[$offset] = $value;

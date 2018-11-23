@@ -254,7 +254,7 @@ class ProgramUrlTypeUrl implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Returns true if all attributes are set. False otherwise.
      *
-     * @return boolean
+     * @return bool
      */
     public function hasAllAttributesSet()
     {
@@ -270,7 +270,7 @@ class ProgramUrlTypeUrl implements ModelInterface, ArrayAccess, JsonSerializable
     {
         $invalidProperties = [];
 
-        if (array_key_exists('id_program', $this->container) && $this->container['id_program'] === null) {
+        if ($this->container['id_program'] === null) {
             $invalidProperties[] = "'id_program' can't be null";
         }
         if ((strlen($this->container['id_program']) > 36)) {
@@ -281,7 +281,7 @@ class ProgramUrlTypeUrl implements ModelInterface, ArrayAccess, JsonSerializable
             $invalidProperties[] = "invalid value for 'id_program', the character length must be bigger than or equal to 36.";
         }
 
-        if (array_key_exists('id_url_type', $this->container) && $this->container['id_url_type'] === null) {
+        if ($this->container['id_url_type'] === null) {
             $invalidProperties[] = "'id_url_type' can't be null";
         }
         $allowedValues = $this->getIdUrlTypeAllowableValues();
@@ -292,7 +292,7 @@ class ProgramUrlTypeUrl implements ModelInterface, ArrayAccess, JsonSerializable
             );
         }
 
-        if (array_key_exists('id_url', $this->container) && $this->container['id_url'] === null) {
+        if ($this->container['id_url'] === null) {
             $invalidProperties[] = "'id_url' can't be null";
         }
         if ((strlen($this->container['id_url']) > 36)) {
@@ -303,7 +303,7 @@ class ProgramUrlTypeUrl implements ModelInterface, ArrayAccess, JsonSerializable
             $invalidProperties[] = "invalid value for 'id_url', the character length must be bigger than or equal to 36.";
         }
 
-        if (array_key_exists('url', $this->container) && $this->container['url'] === null) {
+        if ($this->container['url'] === null) {
             $invalidProperties[] = "'url' can't be null";
         }
         if ((strlen($this->container['url']) > 2083)) {
@@ -560,10 +560,10 @@ class ProgramUrlTypeUrl implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function setIdComplianceScan($id_compliance_scan)
     {
-        if (!is_null($id_compliance_scan) && (strlen($id_compliance_scan) > 36)) {
+        if (($id_compliance_scan !== null) && (strlen($id_compliance_scan) > 36)) {
             throw new \InvalidArgumentException('invalid length for $id_compliance_scan when calling ProgramUrlTypeUrl., must be smaller than or equal to 36.');
         }
-        if (!is_null($id_compliance_scan) && (strlen($id_compliance_scan) < 36)) {
+        if (($id_compliance_scan !== null) && (strlen($id_compliance_scan) < 36)) {
             throw new \InvalidArgumentException('invalid length for $id_compliance_scan when calling ProgramUrlTypeUrl., must be bigger than or equal to 36.');
         }
 
@@ -592,7 +592,7 @@ class ProgramUrlTypeUrl implements ModelInterface, ArrayAccess, JsonSerializable
     public function setStatus($status)
     {
         $allowedValues = $this->getStatusAllowableValues();
-        if (!is_null($status) && !in_array($status, $allowedValues)) {
+        if (($status !== null) && !in_array($status, $allowedValues)) {
             throw new \InvalidArgumentException(
                 sprintf(
                     "Invalid value for 'status', must be one of '%s'",
@@ -609,7 +609,7 @@ class ProgramUrlTypeUrl implements ModelInterface, ArrayAccess, JsonSerializable
      *
      * @param integer $offset Offset
      *
-     * @return boolean
+     * @return bool
      */
     public function offsetExists($offset)
     {
@@ -625,7 +625,7 @@ class ProgramUrlTypeUrl implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
@@ -638,7 +638,7 @@ class ProgramUrlTypeUrl implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function offsetSet($offset, $value)
     {
-        if (is_null($offset)) {
+        if (null === $offset) {
             $this->container[] = $value;
         } else {
             $this->container[$offset] = $value;
