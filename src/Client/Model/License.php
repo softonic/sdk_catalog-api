@@ -334,7 +334,7 @@ class License implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function getIdLicense()
     {
-        return $this->container['id_license'];
+        return array_key_exists('id_license', $this->container) ? $this->container['id_license'] : null;
     }
 
     /**
@@ -365,7 +365,7 @@ class License implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function getDescription()
     {
-        return $this->container['description'];
+        return array_key_exists('description', $this->container) ? $this->container['description'] : null;
     }
 
     /**
@@ -396,7 +396,7 @@ class License implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function getType()
     {
-        return $this->container['type'];
+        return array_key_exists('type', $this->container) ? $this->container['type'] : null;
     }
 
     /**
@@ -508,15 +508,16 @@ class License implements ModelInterface, ArrayAccess, JsonSerializable
      *
      * @return array
      */
-    public function toArray($getAllAttributes = self::GET_ALL_ATTRIBUTES)
+    public function toArray($getAllAttributes = self::GET_SET_ATTRIBUTES)
     {
         if (!$getAllAttributes) {
             return $this->container;
         }
 
-        foreach (self::$attributeMap as $attribute) {
-            $data[$attribute] = $this->container[$attribute] ?? null;
-        }
+        $data = [];
+        $data['id_license'] = $this->getIdLicense();
+        $data['description'] = $this->getDescription();
+        $data['type'] = $this->getType();
 
         return $data;
     }

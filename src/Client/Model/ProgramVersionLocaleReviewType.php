@@ -392,7 +392,7 @@ class ProgramVersionLocaleReviewType implements ModelInterface, ArrayAccess, Jso
      */
     public function getIdProgram()
     {
-        return $this->container['id_program'];
+        return array_key_exists('id_program', $this->container) ? $this->container['id_program'] : null;
     }
 
     /**
@@ -423,7 +423,7 @@ class ProgramVersionLocaleReviewType implements ModelInterface, ArrayAccess, Jso
      */
     public function getIdVersion()
     {
-        return $this->container['id_version'];
+        return array_key_exists('id_version', $this->container) ? $this->container['id_version'] : null;
     }
 
     /**
@@ -454,7 +454,7 @@ class ProgramVersionLocaleReviewType implements ModelInterface, ArrayAccess, Jso
      */
     public function getIdLocale()
     {
-        return $this->container['id_locale'];
+        return array_key_exists('id_locale', $this->container) ? $this->container['id_locale'] : null;
     }
 
     /**
@@ -485,7 +485,7 @@ class ProgramVersionLocaleReviewType implements ModelInterface, ArrayAccess, Jso
      */
     public function getIdReviewType()
     {
-        return $this->container['id_review_type'];
+        return array_key_exists('id_review_type', $this->container) ? $this->container['id_review_type'] : null;
     }
 
     /**
@@ -518,7 +518,7 @@ class ProgramVersionLocaleReviewType implements ModelInterface, ArrayAccess, Jso
      */
     public function getIdReview()
     {
-        return $this->container['id_review'];
+        return array_key_exists('id_review', $this->container) ? $this->container['id_review'] : null;
     }
 
     /**
@@ -628,15 +628,18 @@ class ProgramVersionLocaleReviewType implements ModelInterface, ArrayAccess, Jso
      *
      * @return array
      */
-    public function toArray($getAllAttributes = self::GET_ALL_ATTRIBUTES)
+    public function toArray($getAllAttributes = self::GET_SET_ATTRIBUTES)
     {
         if (!$getAllAttributes) {
             return $this->container;
         }
 
-        foreach (self::$attributeMap as $attribute) {
-            $data[$attribute] = $this->container[$attribute] ?? null;
-        }
+        $data = [];
+        $data['id_program'] = $this->getIdProgram();
+        $data['id_version'] = $this->getIdVersion();
+        $data['id_locale'] = $this->getIdLocale();
+        $data['id_review_type'] = $this->getIdReviewType();
+        $data['id_review'] = $this->getIdReview();
 
         return $data;
     }

@@ -292,7 +292,7 @@ class Origin implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function getIdOrigin()
     {
-        return $this->container['id_origin'];
+        return array_key_exists('id_origin', $this->container) ? $this->container['id_origin'] : null;
     }
 
     /**
@@ -323,7 +323,7 @@ class Origin implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function getName()
     {
-        return $this->container['name'];
+        return array_key_exists('name', $this->container) ? $this->container['name'] : null;
     }
 
     /**
@@ -433,15 +433,15 @@ class Origin implements ModelInterface, ArrayAccess, JsonSerializable
      *
      * @return array
      */
-    public function toArray($getAllAttributes = self::GET_ALL_ATTRIBUTES)
+    public function toArray($getAllAttributes = self::GET_SET_ATTRIBUTES)
     {
         if (!$getAllAttributes) {
             return $this->container;
         }
 
-        foreach (self::$attributeMap as $attribute) {
-            $data[$attribute] = $this->container[$attribute] ?? null;
-        }
+        $data = [];
+        $data['id_origin'] = $this->getIdOrigin();
+        $data['name'] = $this->getName();
 
         return $data;
     }

@@ -369,7 +369,7 @@ class Program implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function getIdProgram()
     {
-        return $this->container['id_program'];
+        return array_key_exists('id_program', $this->container) ? $this->container['id_program'] : null;
     }
 
     /**
@@ -400,7 +400,7 @@ class Program implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function getIdDeveloper()
     {
-        return $this->container['id_developer'];
+        return array_key_exists('id_developer', $this->container) ? $this->container['id_developer'] : null;
     }
 
     /**
@@ -429,7 +429,7 @@ class Program implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function getIdOrigin()
     {
-        return $this->container['id_origin'];
+        return array_key_exists('id_origin', $this->container) ? $this->container['id_origin'] : null;
     }
 
     /**
@@ -460,7 +460,7 @@ class Program implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function getIdPlatform()
     {
-        return $this->container['id_platform'];
+        return array_key_exists('id_platform', $this->container) ? $this->container['id_platform'] : null;
     }
 
     /**
@@ -491,7 +491,7 @@ class Program implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function getIdCategory()
     {
-        return $this->container['id_category'];
+        return array_key_exists('id_category', $this->container) ? $this->container['id_category'] : null;
     }
 
     /**
@@ -522,7 +522,7 @@ class Program implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function getGoogleCompliant()
     {
-        return $this->container['google_compliant'];
+        return array_key_exists('google_compliant', $this->container) ? $this->container['google_compliant'] : null;
     }
 
     /**
@@ -625,15 +625,19 @@ class Program implements ModelInterface, ArrayAccess, JsonSerializable
      *
      * @return array
      */
-    public function toArray($getAllAttributes = self::GET_ALL_ATTRIBUTES)
+    public function toArray($getAllAttributes = self::GET_SET_ATTRIBUTES)
     {
         if (!$getAllAttributes) {
             return $this->container;
         }
 
-        foreach (self::$attributeMap as $attribute) {
-            $data[$attribute] = $this->container[$attribute] ?? null;
-        }
+        $data = [];
+        $data['id_program'] = $this->getIdProgram();
+        $data['id_developer'] = $this->getIdDeveloper();
+        $data['id_origin'] = $this->getIdOrigin();
+        $data['id_platform'] = $this->getIdPlatform();
+        $data['id_category'] = $this->getIdCategory();
+        $data['google_compliant'] = $this->getGoogleCompliant();
 
         return $data;
     }

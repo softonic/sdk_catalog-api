@@ -386,7 +386,7 @@ class ProgramVersionBinary implements ModelInterface, ArrayAccess, JsonSerializa
      */
     public function getIdProgram()
     {
-        return $this->container['id_program'];
+        return array_key_exists('id_program', $this->container) ? $this->container['id_program'] : null;
     }
 
     /**
@@ -417,7 +417,7 @@ class ProgramVersionBinary implements ModelInterface, ArrayAccess, JsonSerializa
      */
     public function getIdVersion()
     {
-        return $this->container['id_version'];
+        return array_key_exists('id_version', $this->container) ? $this->container['id_version'] : null;
     }
 
     /**
@@ -448,7 +448,7 @@ class ProgramVersionBinary implements ModelInterface, ArrayAccess, JsonSerializa
      */
     public function getIdBinary()
     {
-        return $this->container['id_binary'];
+        return array_key_exists('id_binary', $this->container) ? $this->container['id_binary'] : null;
     }
 
     /**
@@ -479,7 +479,7 @@ class ProgramVersionBinary implements ModelInterface, ArrayAccess, JsonSerializa
      */
     public function getIdComplianceScan()
     {
-        return $this->container['id_compliance_scan'];
+        return array_key_exists('id_compliance_scan', $this->container) ? $this->container['id_compliance_scan'] : null;
     }
 
     /**
@@ -510,7 +510,7 @@ class ProgramVersionBinary implements ModelInterface, ArrayAccess, JsonSerializa
      */
     public function getStatus()
     {
-        return $this->container['status'];
+        return array_key_exists('status', $this->container) ? $this->container['status'] : null;
     }
 
     /**
@@ -543,7 +543,7 @@ class ProgramVersionBinary implements ModelInterface, ArrayAccess, JsonSerializa
      */
     public function getCreatedAt()
     {
-        return $this->container['created_at'];
+        return array_key_exists('created_at', $this->container) ? $this->container['created_at'] : null;
     }
 
     /**
@@ -646,15 +646,19 @@ class ProgramVersionBinary implements ModelInterface, ArrayAccess, JsonSerializa
      *
      * @return array
      */
-    public function toArray($getAllAttributes = self::GET_ALL_ATTRIBUTES)
+    public function toArray($getAllAttributes = self::GET_SET_ATTRIBUTES)
     {
         if (!$getAllAttributes) {
             return $this->container;
         }
 
-        foreach (self::$attributeMap as $attribute) {
-            $data[$attribute] = $this->container[$attribute] ?? null;
-        }
+        $data = [];
+        $data['id_program'] = $this->getIdProgram();
+        $data['id_version'] = $this->getIdVersion();
+        $data['id_binary'] = $this->getIdBinary();
+        $data['id_compliance_scan'] = $this->getIdComplianceScan();
+        $data['status'] = $this->getStatus();
+        $data['created_at'] = $this->getCreatedAt();
 
         return $data;
     }

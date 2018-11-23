@@ -577,7 +577,7 @@ class ProgramReviewTypeReview implements ModelInterface, ArrayAccess, JsonSerial
      */
     public function getIdProgram()
     {
-        return $this->container['id_program'];
+        return array_key_exists('id_program', $this->container) ? $this->container['id_program'] : null;
     }
 
     /**
@@ -608,7 +608,7 @@ class ProgramReviewTypeReview implements ModelInterface, ArrayAccess, JsonSerial
      */
     public function getIdReviewType()
     {
-        return $this->container['id_review_type'];
+        return array_key_exists('id_review_type', $this->container) ? $this->container['id_review_type'] : null;
     }
 
     /**
@@ -641,7 +641,7 @@ class ProgramReviewTypeReview implements ModelInterface, ArrayAccess, JsonSerial
      */
     public function getIdReview()
     {
-        return $this->container['id_review'];
+        return array_key_exists('id_review', $this->container) ? $this->container['id_review'] : null;
     }
 
     /**
@@ -672,7 +672,7 @@ class ProgramReviewTypeReview implements ModelInterface, ArrayAccess, JsonSerial
      */
     public function getSource()
     {
-        return $this->container['source'];
+        return array_key_exists('source', $this->container) ? $this->container['source'] : null;
     }
 
     /**
@@ -703,7 +703,7 @@ class ProgramReviewTypeReview implements ModelInterface, ArrayAccess, JsonSerial
      */
     public function getPublicNote()
     {
-        return $this->container['public_note'];
+        return array_key_exists('public_note', $this->container) ? $this->container['public_note'] : null;
     }
 
     /**
@@ -734,7 +734,7 @@ class ProgramReviewTypeReview implements ModelInterface, ArrayAccess, JsonSerial
      */
     public function getType()
     {
-        return $this->container['type'];
+        return array_key_exists('type', $this->container) ? $this->container['type'] : null;
     }
 
     /**
@@ -767,7 +767,7 @@ class ProgramReviewTypeReview implements ModelInterface, ArrayAccess, JsonSerial
      */
     public function getRating()
     {
-        return $this->container['rating'];
+        return array_key_exists('rating', $this->container) ? $this->container['rating'] : null;
     }
 
     /**
@@ -799,7 +799,7 @@ class ProgramReviewTypeReview implements ModelInterface, ArrayAccess, JsonSerial
      */
     public function getHeadline()
     {
-        return $this->container['headline'];
+        return array_key_exists('headline', $this->container) ? $this->container['headline'] : null;
     }
 
     /**
@@ -830,7 +830,7 @@ class ProgramReviewTypeReview implements ModelInterface, ArrayAccess, JsonSerial
      */
     public function getLead()
     {
-        return $this->container['lead'];
+        return array_key_exists('lead', $this->container) ? $this->container['lead'] : null;
     }
 
     /**
@@ -861,7 +861,7 @@ class ProgramReviewTypeReview implements ModelInterface, ArrayAccess, JsonSerial
      */
     public function getBody()
     {
-        return $this->container['body'];
+        return array_key_exists('body', $this->container) ? $this->container['body'] : null;
     }
 
     /**
@@ -892,7 +892,7 @@ class ProgramReviewTypeReview implements ModelInterface, ArrayAccess, JsonSerial
      */
     public function getConclusion()
     {
-        return $this->container['conclusion'];
+        return array_key_exists('conclusion', $this->container) ? $this->container['conclusion'] : null;
     }
 
     /**
@@ -923,7 +923,7 @@ class ProgramReviewTypeReview implements ModelInterface, ArrayAccess, JsonSerial
      */
     public function getChanges()
     {
-        return $this->container['changes'];
+        return array_key_exists('changes', $this->container) ? $this->container['changes'] : null;
     }
 
     /**
@@ -954,7 +954,7 @@ class ProgramReviewTypeReview implements ModelInterface, ArrayAccess, JsonSerial
      */
     public function getExtra()
     {
-        return $this->container['extra'];
+        return array_key_exists('extra', $this->container) ? $this->container['extra'] : null;
     }
 
     /**
@@ -985,7 +985,7 @@ class ProgramReviewTypeReview implements ModelInterface, ArrayAccess, JsonSerial
      */
     public function getPros()
     {
-        return $this->container['pros'];
+        return array_key_exists('pros', $this->container) ? $this->container['pros'] : null;
     }
 
     /**
@@ -1009,7 +1009,7 @@ class ProgramReviewTypeReview implements ModelInterface, ArrayAccess, JsonSerial
      */
     public function getCons()
     {
-        return $this->container['cons'];
+        return array_key_exists('cons', $this->container) ? $this->container['cons'] : null;
     }
 
     /**
@@ -1112,15 +1112,28 @@ class ProgramReviewTypeReview implements ModelInterface, ArrayAccess, JsonSerial
      *
      * @return array
      */
-    public function toArray($getAllAttributes = self::GET_ALL_ATTRIBUTES)
+    public function toArray($getAllAttributes = self::GET_SET_ATTRIBUTES)
     {
         if (!$getAllAttributes) {
             return $this->container;
         }
 
-        foreach (self::$attributeMap as $attribute) {
-            $data[$attribute] = $this->container[$attribute] ?? null;
-        }
+        $data = [];
+        $data['id_program'] = $this->getIdProgram();
+        $data['id_review_type'] = $this->getIdReviewType();
+        $data['id_review'] = $this->getIdReview();
+        $data['source'] = $this->getSource();
+        $data['public_note'] = $this->getPublicNote();
+        $data['type'] = $this->getType();
+        $data['rating'] = $this->getRating();
+        $data['headline'] = $this->getHeadline();
+        $data['lead'] = $this->getLead();
+        $data['body'] = $this->getBody();
+        $data['conclusion'] = $this->getConclusion();
+        $data['changes'] = $this->getChanges();
+        $data['extra'] = $this->getExtra();
+        $data['pros'] = $this->getPros();
+        $data['cons'] = $this->getCons();
 
         return $data;
     }

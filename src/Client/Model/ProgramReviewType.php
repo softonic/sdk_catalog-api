@@ -305,7 +305,7 @@ class ProgramReviewType implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function getIdProgram()
     {
-        return $this->container['id_program'];
+        return array_key_exists('id_program', $this->container) ? $this->container['id_program'] : null;
     }
 
     /**
@@ -336,7 +336,7 @@ class ProgramReviewType implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function getIdReviewType()
     {
-        return $this->container['id_review_type'];
+        return array_key_exists('id_review_type', $this->container) ? $this->container['id_review_type'] : null;
     }
 
     /**
@@ -448,15 +448,15 @@ class ProgramReviewType implements ModelInterface, ArrayAccess, JsonSerializable
      *
      * @return array
      */
-    public function toArray($getAllAttributes = self::GET_ALL_ATTRIBUTES)
+    public function toArray($getAllAttributes = self::GET_SET_ATTRIBUTES)
     {
         if (!$getAllAttributes) {
             return $this->container;
         }
 
-        foreach (self::$attributeMap as $attribute) {
-            $data[$attribute] = $this->container[$attribute] ?? null;
-        }
+        $data = [];
+        $data['id_program'] = $this->getIdProgram();
+        $data['id_review_type'] = $this->getIdReviewType();
 
         return $data;
     }

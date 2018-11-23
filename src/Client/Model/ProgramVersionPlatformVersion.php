@@ -321,7 +321,7 @@ class ProgramVersionPlatformVersion implements ModelInterface, ArrayAccess, Json
      */
     public function getIdProgram()
     {
-        return $this->container['id_program'];
+        return array_key_exists('id_program', $this->container) ? $this->container['id_program'] : null;
     }
 
     /**
@@ -352,7 +352,7 @@ class ProgramVersionPlatformVersion implements ModelInterface, ArrayAccess, Json
      */
     public function getIdVersion()
     {
-        return $this->container['id_version'];
+        return array_key_exists('id_version', $this->container) ? $this->container['id_version'] : null;
     }
 
     /**
@@ -383,7 +383,7 @@ class ProgramVersionPlatformVersion implements ModelInterface, ArrayAccess, Json
      */
     public function getIdPlatformVersion()
     {
-        return $this->container['id_platform_version'];
+        return array_key_exists('id_platform_version', $this->container) ? $this->container['id_platform_version'] : null;
     }
 
     /**
@@ -493,15 +493,16 @@ class ProgramVersionPlatformVersion implements ModelInterface, ArrayAccess, Json
      *
      * @return array
      */
-    public function toArray($getAllAttributes = self::GET_ALL_ATTRIBUTES)
+    public function toArray($getAllAttributes = self::GET_SET_ATTRIBUTES)
     {
         if (!$getAllAttributes) {
             return $this->container;
         }
 
-        foreach (self::$attributeMap as $attribute) {
-            $data[$attribute] = $this->container[$attribute] ?? null;
-        }
+        $data = [];
+        $data['id_program'] = $this->getIdProgram();
+        $data['id_version'] = $this->getIdVersion();
+        $data['id_platform_version'] = $this->getIdPlatformVersion();
 
         return $data;
     }

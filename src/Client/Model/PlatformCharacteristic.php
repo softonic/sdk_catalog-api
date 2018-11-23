@@ -321,7 +321,7 @@ class PlatformCharacteristic implements ModelInterface, ArrayAccess, JsonSeriali
      */
     public function getIdPlatform()
     {
-        return $this->container['id_platform'];
+        return array_key_exists('id_platform', $this->container) ? $this->container['id_platform'] : null;
     }
 
     /**
@@ -352,7 +352,7 @@ class PlatformCharacteristic implements ModelInterface, ArrayAccess, JsonSeriali
      */
     public function getIdCharacteristic()
     {
-        return $this->container['id_characteristic'];
+        return array_key_exists('id_characteristic', $this->container) ? $this->container['id_characteristic'] : null;
     }
 
     /**
@@ -383,7 +383,7 @@ class PlatformCharacteristic implements ModelInterface, ArrayAccess, JsonSeriali
      */
     public function getName()
     {
-        return $this->container['name'];
+        return array_key_exists('name', $this->container) ? $this->container['name'] : null;
     }
 
     /**
@@ -493,15 +493,16 @@ class PlatformCharacteristic implements ModelInterface, ArrayAccess, JsonSeriali
      *
      * @return array
      */
-    public function toArray($getAllAttributes = self::GET_ALL_ATTRIBUTES)
+    public function toArray($getAllAttributes = self::GET_SET_ATTRIBUTES)
     {
         if (!$getAllAttributes) {
             return $this->container;
         }
 
-        foreach (self::$attributeMap as $attribute) {
-            $data[$attribute] = $this->container[$attribute] ?? null;
-        }
+        $data = [];
+        $data['id_platform'] = $this->getIdPlatform();
+        $data['id_characteristic'] = $this->getIdCharacteristic();
+        $data['name'] = $this->getName();
 
         return $data;
     }

@@ -80,6 +80,13 @@ interface ModelInterface
     public static function getters();
 
     /**
+     * Returns true if all attributes are set. False otherwise.
+     *
+     * @return boolean
+     */
+    public function hasAllAttributesSet();
+
+    /**
      * Show all the invalid properties with reasons.
      *
      * @return array
@@ -87,10 +94,27 @@ interface ModelInterface
     public function listInvalidProperties();
 
     /**
+     * Validate all the properties in the model ensuring the required ones are set
+     * return true if all passed
+     *
+     * @return bool True if all properties are valid
+     */
+    public function valid();
+
+    /**
      * Validate all the properties in the model
      * return true if all passed
      *
-     * @return bool
+     * @return bool True if all properties are valid
      */
-    public function valid();
+    public function validProperties();
+
+    /**
+     * Returns data as array.
+     *
+     * @param bool $getAllAttributes Should convert with all attributes or just the set ones?
+     *
+     * @return array
+     */
+    public function toArray($getAllAttributes);
 }

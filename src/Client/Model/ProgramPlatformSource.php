@@ -350,7 +350,7 @@ class ProgramPlatformSource implements ModelInterface, ArrayAccess, JsonSerializ
      */
     public function getIdProgram()
     {
-        return $this->container['id_program'];
+        return array_key_exists('id_program', $this->container) ? $this->container['id_program'] : null;
     }
 
     /**
@@ -381,7 +381,7 @@ class ProgramPlatformSource implements ModelInterface, ArrayAccess, JsonSerializ
      */
     public function getIdPlatform()
     {
-        return $this->container['id_platform'];
+        return array_key_exists('id_platform', $this->container) ? $this->container['id_platform'] : null;
     }
 
     /**
@@ -412,7 +412,7 @@ class ProgramPlatformSource implements ModelInterface, ArrayAccess, JsonSerializ
      */
     public function getIdSource()
     {
-        return $this->container['id_source'];
+        return array_key_exists('id_source', $this->container) ? $this->container['id_source'] : null;
     }
 
     /**
@@ -443,7 +443,7 @@ class ProgramPlatformSource implements ModelInterface, ArrayAccess, JsonSerializ
      */
     public function getIdStore()
     {
-        return $this->container['id_store'];
+        return array_key_exists('id_store', $this->container) ? $this->container['id_store'] : null;
     }
 
     /**
@@ -553,15 +553,17 @@ class ProgramPlatformSource implements ModelInterface, ArrayAccess, JsonSerializ
      *
      * @return array
      */
-    public function toArray($getAllAttributes = self::GET_ALL_ATTRIBUTES)
+    public function toArray($getAllAttributes = self::GET_SET_ATTRIBUTES)
     {
         if (!$getAllAttributes) {
             return $this->container;
         }
 
-        foreach (self::$attributeMap as $attribute) {
-            $data[$attribute] = $this->container[$attribute] ?? null;
-        }
+        $data = [];
+        $data['id_program'] = $this->getIdProgram();
+        $data['id_platform'] = $this->getIdPlatform();
+        $data['id_source'] = $this->getIdSource();
+        $data['id_store'] = $this->getIdStore();
 
         return $data;
     }

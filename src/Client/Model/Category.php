@@ -312,7 +312,7 @@ class Category implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function getIdCategory()
     {
-        return $this->container['id_category'];
+        return array_key_exists('id_category', $this->container) ? $this->container['id_category'] : null;
     }
 
     /**
@@ -343,7 +343,7 @@ class Category implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function getName()
     {
-        return $this->container['name'];
+        return array_key_exists('name', $this->container) ? $this->container['name'] : null;
     }
 
     /**
@@ -374,7 +374,7 @@ class Category implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function getIdParent()
     {
-        return $this->container['id_parent'];
+        return array_key_exists('id_parent', $this->container) ? $this->container['id_parent'] : null;
     }
 
     /**
@@ -484,15 +484,16 @@ class Category implements ModelInterface, ArrayAccess, JsonSerializable
      *
      * @return array
      */
-    public function toArray($getAllAttributes = self::GET_ALL_ATTRIBUTES)
+    public function toArray($getAllAttributes = self::GET_SET_ATTRIBUTES)
     {
         if (!$getAllAttributes) {
             return $this->container;
         }
 
-        foreach (self::$attributeMap as $attribute) {
-            $data[$attribute] = $this->container[$attribute] ?? null;
-        }
+        $data = [];
+        $data['id_category'] = $this->getIdCategory();
+        $data['name'] = $this->getName();
+        $data['id_parent'] = $this->getIdParent();
 
         return $data;
     }

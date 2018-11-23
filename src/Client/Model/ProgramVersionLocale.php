@@ -467,7 +467,7 @@ class ProgramVersionLocale implements ModelInterface, ArrayAccess, JsonSerializa
      */
     public function getIdProgram()
     {
-        return $this->container['id_program'];
+        return array_key_exists('id_program', $this->container) ? $this->container['id_program'] : null;
     }
 
     /**
@@ -498,7 +498,7 @@ class ProgramVersionLocale implements ModelInterface, ArrayAccess, JsonSerializa
      */
     public function getIdVersion()
     {
-        return $this->container['id_version'];
+        return array_key_exists('id_version', $this->container) ? $this->container['id_version'] : null;
     }
 
     /**
@@ -529,7 +529,7 @@ class ProgramVersionLocale implements ModelInterface, ArrayAccess, JsonSerializa
      */
     public function getIdLocale()
     {
-        return $this->container['id_locale'];
+        return array_key_exists('id_locale', $this->container) ? $this->container['id_locale'] : null;
     }
 
     /**
@@ -560,7 +560,7 @@ class ProgramVersionLocale implements ModelInterface, ArrayAccess, JsonSerializa
      */
     public function getProgramName()
     {
-        return $this->container['program_name'];
+        return array_key_exists('program_name', $this->container) ? $this->container['program_name'] : null;
     }
 
     /**
@@ -591,7 +591,7 @@ class ProgramVersionLocale implements ModelInterface, ArrayAccess, JsonSerializa
      */
     public function getPublishDate()
     {
-        return $this->container['publish_date'];
+        return array_key_exists('publish_date', $this->container) ? $this->container['publish_date'] : null;
     }
 
     /**
@@ -615,7 +615,7 @@ class ProgramVersionLocale implements ModelInterface, ArrayAccess, JsonSerializa
      */
     public function getRevisionDate()
     {
-        return $this->container['revision_date'];
+        return array_key_exists('revision_date', $this->container) ? $this->container['revision_date'] : null;
     }
 
     /**
@@ -639,7 +639,7 @@ class ProgramVersionLocale implements ModelInterface, ArrayAccess, JsonSerializa
      */
     public function getUpdateDate()
     {
-        return $this->container['update_date'];
+        return array_key_exists('update_date', $this->container) ? $this->container['update_date'] : null;
     }
 
     /**
@@ -663,7 +663,7 @@ class ProgramVersionLocale implements ModelInterface, ArrayAccess, JsonSerializa
      */
     public function getStatus()
     {
-        return $this->container['status'];
+        return array_key_exists('status', $this->container) ? $this->container['status'] : null;
     }
 
     /**
@@ -696,7 +696,7 @@ class ProgramVersionLocale implements ModelInterface, ArrayAccess, JsonSerializa
      */
     public function getIdEditor()
     {
-        return $this->container['id_editor'];
+        return array_key_exists('id_editor', $this->container) ? $this->container['id_editor'] : null;
     }
 
     /**
@@ -725,7 +725,7 @@ class ProgramVersionLocale implements ModelInterface, ArrayAccess, JsonSerializa
      */
     public function getIdBinary()
     {
-        return $this->container['id_binary'];
+        return array_key_exists('id_binary', $this->container) ? $this->container['id_binary'] : null;
     }
 
     /**
@@ -756,7 +756,7 @@ class ProgramVersionLocale implements ModelInterface, ArrayAccess, JsonSerializa
      */
     public function getAboutLicense()
     {
-        return $this->container['about_license'];
+        return array_key_exists('about_license', $this->container) ? $this->container['about_license'] : null;
     }
 
     /**
@@ -866,15 +866,24 @@ class ProgramVersionLocale implements ModelInterface, ArrayAccess, JsonSerializa
      *
      * @return array
      */
-    public function toArray($getAllAttributes = self::GET_ALL_ATTRIBUTES)
+    public function toArray($getAllAttributes = self::GET_SET_ATTRIBUTES)
     {
         if (!$getAllAttributes) {
             return $this->container;
         }
 
-        foreach (self::$attributeMap as $attribute) {
-            $data[$attribute] = $this->container[$attribute] ?? null;
-        }
+        $data = [];
+        $data['id_program'] = $this->getIdProgram();
+        $data['id_version'] = $this->getIdVersion();
+        $data['id_locale'] = $this->getIdLocale();
+        $data['program_name'] = $this->getProgramName();
+        $data['publish_date'] = $this->getPublishDate();
+        $data['revision_date'] = $this->getRevisionDate();
+        $data['update_date'] = $this->getUpdateDate();
+        $data['status'] = $this->getStatus();
+        $data['id_editor'] = $this->getIdEditor();
+        $data['id_binary'] = $this->getIdBinary();
+        $data['about_license'] = $this->getAboutLicense();
 
         return $data;
     }

@@ -386,7 +386,7 @@ class ProgramVersionLanguage implements ModelInterface, ArrayAccess, JsonSeriali
      */
     public function getIdProgram()
     {
-        return $this->container['id_program'];
+        return array_key_exists('id_program', $this->container) ? $this->container['id_program'] : null;
     }
 
     /**
@@ -417,7 +417,7 @@ class ProgramVersionLanguage implements ModelInterface, ArrayAccess, JsonSeriali
      */
     public function getIdVersion()
     {
-        return $this->container['id_version'];
+        return array_key_exists('id_version', $this->container) ? $this->container['id_version'] : null;
     }
 
     /**
@@ -448,7 +448,7 @@ class ProgramVersionLanguage implements ModelInterface, ArrayAccess, JsonSeriali
      */
     public function getIdLanguage()
     {
-        return $this->container['id_language'];
+        return array_key_exists('id_language', $this->container) ? $this->container['id_language'] : null;
     }
 
     /**
@@ -560,15 +560,16 @@ class ProgramVersionLanguage implements ModelInterface, ArrayAccess, JsonSeriali
      *
      * @return array
      */
-    public function toArray($getAllAttributes = self::GET_ALL_ATTRIBUTES)
+    public function toArray($getAllAttributes = self::GET_SET_ATTRIBUTES)
     {
         if (!$getAllAttributes) {
             return $this->container;
         }
 
-        foreach (self::$attributeMap as $attribute) {
-            $data[$attribute] = $this->container[$attribute] ?? null;
-        }
+        $data = [];
+        $data['id_program'] = $this->getIdProgram();
+        $data['id_version'] = $this->getIdVersion();
+        $data['id_language'] = $this->getIdLanguage();
 
         return $data;
     }

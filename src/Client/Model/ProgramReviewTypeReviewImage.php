@@ -515,7 +515,7 @@ class ProgramReviewTypeReviewImage implements ModelInterface, ArrayAccess, JsonS
      */
     public function getIdProgram()
     {
-        return $this->container['id_program'];
+        return array_key_exists('id_program', $this->container) ? $this->container['id_program'] : null;
     }
 
     /**
@@ -546,7 +546,7 @@ class ProgramReviewTypeReviewImage implements ModelInterface, ArrayAccess, JsonS
      */
     public function getIdReviewType()
     {
-        return $this->container['id_review_type'];
+        return array_key_exists('id_review_type', $this->container) ? $this->container['id_review_type'] : null;
     }
 
     /**
@@ -579,7 +579,7 @@ class ProgramReviewTypeReviewImage implements ModelInterface, ArrayAccess, JsonS
      */
     public function getIdReview()
     {
-        return $this->container['id_review'];
+        return array_key_exists('id_review', $this->container) ? $this->container['id_review'] : null;
     }
 
     /**
@@ -610,7 +610,7 @@ class ProgramReviewTypeReviewImage implements ModelInterface, ArrayAccess, JsonS
      */
     public function getIdImage()
     {
-        return $this->container['id_image'];
+        return array_key_exists('id_image', $this->container) ? $this->container['id_image'] : null;
     }
 
     /**
@@ -641,7 +641,7 @@ class ProgramReviewTypeReviewImage implements ModelInterface, ArrayAccess, JsonS
      */
     public function getPath()
     {
-        return $this->container['path'];
+        return array_key_exists('path', $this->container) ? $this->container['path'] : null;
     }
 
     /**
@@ -672,7 +672,7 @@ class ProgramReviewTypeReviewImage implements ModelInterface, ArrayAccess, JsonS
      */
     public function getFilename()
     {
-        return $this->container['filename'];
+        return array_key_exists('filename', $this->container) ? $this->container['filename'] : null;
     }
 
     /**
@@ -703,7 +703,7 @@ class ProgramReviewTypeReviewImage implements ModelInterface, ArrayAccess, JsonS
      */
     public function getType()
     {
-        return $this->container['type'];
+        return array_key_exists('type', $this->container) ? $this->container['type'] : null;
     }
 
     /**
@@ -736,7 +736,7 @@ class ProgramReviewTypeReviewImage implements ModelInterface, ArrayAccess, JsonS
      */
     public function getWidth()
     {
-        return $this->container['width'];
+        return array_key_exists('width', $this->container) ? $this->container['width'] : null;
     }
 
     /**
@@ -760,7 +760,7 @@ class ProgramReviewTypeReviewImage implements ModelInterface, ArrayAccess, JsonS
      */
     public function getHeight()
     {
-        return $this->container['height'];
+        return array_key_exists('height', $this->container) ? $this->container['height'] : null;
     }
 
     /**
@@ -784,7 +784,7 @@ class ProgramReviewTypeReviewImage implements ModelInterface, ArrayAccess, JsonS
      */
     public function getPriority()
     {
-        return $this->container['priority'];
+        return array_key_exists('priority', $this->container) ? $this->container['priority'] : null;
     }
 
     /**
@@ -816,7 +816,7 @@ class ProgramReviewTypeReviewImage implements ModelInterface, ArrayAccess, JsonS
      */
     public function getCaption()
     {
-        return $this->container['caption'];
+        return array_key_exists('caption', $this->container) ? $this->container['caption'] : null;
     }
 
     /**
@@ -926,15 +926,24 @@ class ProgramReviewTypeReviewImage implements ModelInterface, ArrayAccess, JsonS
      *
      * @return array
      */
-    public function toArray($getAllAttributes = self::GET_ALL_ATTRIBUTES)
+    public function toArray($getAllAttributes = self::GET_SET_ATTRIBUTES)
     {
         if (!$getAllAttributes) {
             return $this->container;
         }
 
-        foreach (self::$attributeMap as $attribute) {
-            $data[$attribute] = $this->container[$attribute] ?? null;
-        }
+        $data = [];
+        $data['id_program'] = $this->getIdProgram();
+        $data['id_review_type'] = $this->getIdReviewType();
+        $data['id_review'] = $this->getIdReview();
+        $data['id_image'] = $this->getIdImage();
+        $data['path'] = $this->getPath();
+        $data['filename'] = $this->getFilename();
+        $data['type'] = $this->getType();
+        $data['width'] = $this->getWidth();
+        $data['height'] = $this->getHeight();
+        $data['priority'] = $this->getPriority();
+        $data['caption'] = $this->getCaption();
 
         return $data;
     }

@@ -392,7 +392,7 @@ class ProgramVersionLocaleUrlType implements ModelInterface, ArrayAccess, JsonSe
      */
     public function getIdProgram()
     {
-        return $this->container['id_program'];
+        return array_key_exists('id_program', $this->container) ? $this->container['id_program'] : null;
     }
 
     /**
@@ -423,7 +423,7 @@ class ProgramVersionLocaleUrlType implements ModelInterface, ArrayAccess, JsonSe
      */
     public function getIdVersion()
     {
-        return $this->container['id_version'];
+        return array_key_exists('id_version', $this->container) ? $this->container['id_version'] : null;
     }
 
     /**
@@ -454,7 +454,7 @@ class ProgramVersionLocaleUrlType implements ModelInterface, ArrayAccess, JsonSe
      */
     public function getIdLocale()
     {
-        return $this->container['id_locale'];
+        return array_key_exists('id_locale', $this->container) ? $this->container['id_locale'] : null;
     }
 
     /**
@@ -485,7 +485,7 @@ class ProgramVersionLocaleUrlType implements ModelInterface, ArrayAccess, JsonSe
      */
     public function getIdUrlType()
     {
-        return $this->container['id_url_type'];
+        return array_key_exists('id_url_type', $this->container) ? $this->container['id_url_type'] : null;
     }
 
     /**
@@ -518,7 +518,7 @@ class ProgramVersionLocaleUrlType implements ModelInterface, ArrayAccess, JsonSe
      */
     public function getIdUrl()
     {
-        return $this->container['id_url'];
+        return array_key_exists('id_url', $this->container) ? $this->container['id_url'] : null;
     }
 
     /**
@@ -628,15 +628,18 @@ class ProgramVersionLocaleUrlType implements ModelInterface, ArrayAccess, JsonSe
      *
      * @return array
      */
-    public function toArray($getAllAttributes = self::GET_ALL_ATTRIBUTES)
+    public function toArray($getAllAttributes = self::GET_SET_ATTRIBUTES)
     {
         if (!$getAllAttributes) {
             return $this->container;
         }
 
-        foreach (self::$attributeMap as $attribute) {
-            $data[$attribute] = $this->container[$attribute] ?? null;
-        }
+        $data = [];
+        $data['id_program'] = $this->getIdProgram();
+        $data['id_version'] = $this->getIdVersion();
+        $data['id_locale'] = $this->getIdLocale();
+        $data['id_url_type'] = $this->getIdUrlType();
+        $data['id_url'] = $this->getIdUrl();
 
         return $data;
     }

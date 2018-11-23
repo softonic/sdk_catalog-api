@@ -414,7 +414,7 @@ class ProgramVersion implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function getIdProgram()
     {
-        return $this->container['id_program'];
+        return array_key_exists('id_program', $this->container) ? $this->container['id_program'] : null;
     }
 
     /**
@@ -445,7 +445,7 @@ class ProgramVersion implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function getIdVersion()
     {
-        return $this->container['id_version'];
+        return array_key_exists('id_version', $this->container) ? $this->container['id_version'] : null;
     }
 
     /**
@@ -474,7 +474,7 @@ class ProgramVersion implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function getName()
     {
-        return $this->container['name'];
+        return array_key_exists('name', $this->container) ? $this->container['name'] : null;
     }
 
     /**
@@ -505,7 +505,7 @@ class ProgramVersion implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function getPreversion()
     {
-        return $this->container['preversion'];
+        return array_key_exists('preversion', $this->container) ? $this->container['preversion'] : null;
     }
 
     /**
@@ -536,7 +536,7 @@ class ProgramVersion implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function getPostversion()
     {
-        return $this->container['postversion'];
+        return array_key_exists('postversion', $this->container) ? $this->container['postversion'] : null;
     }
 
     /**
@@ -567,7 +567,7 @@ class ProgramVersion implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function getSupportedFormats()
     {
-        return $this->container['supported_formats'];
+        return array_key_exists('supported_formats', $this->container) ? $this->container['supported_formats'] : null;
     }
 
     /**
@@ -598,7 +598,7 @@ class ProgramVersion implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function getIdLicense()
     {
-        return $this->container['id_license'];
+        return array_key_exists('id_license', $this->container) ? $this->container['id_license'] : null;
     }
 
     /**
@@ -629,7 +629,7 @@ class ProgramVersion implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function getAge()
     {
-        return $this->container['age'];
+        return array_key_exists('age', $this->container) ? $this->container['age'] : null;
     }
 
     /**
@@ -740,15 +740,21 @@ class ProgramVersion implements ModelInterface, ArrayAccess, JsonSerializable
      *
      * @return array
      */
-    public function toArray($getAllAttributes = self::GET_ALL_ATTRIBUTES)
+    public function toArray($getAllAttributes = self::GET_SET_ATTRIBUTES)
     {
         if (!$getAllAttributes) {
             return $this->container;
         }
 
-        foreach (self::$attributeMap as $attribute) {
-            $data[$attribute] = $this->container[$attribute] ?? null;
-        }
+        $data = [];
+        $data['id_program'] = $this->getIdProgram();
+        $data['id_version'] = $this->getIdVersion();
+        $data['name'] = $this->getName();
+        $data['preversion'] = $this->getPreversion();
+        $data['postversion'] = $this->getPostversion();
+        $data['supported_formats'] = $this->getSupportedFormats();
+        $data['id_license'] = $this->getIdLicense();
+        $data['age'] = $this->getAge();
 
         return $data;
     }

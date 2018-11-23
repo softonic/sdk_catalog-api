@@ -321,7 +321,7 @@ class PlatformVersion implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function getIdPlatform()
     {
-        return $this->container['id_platform'];
+        return array_key_exists('id_platform', $this->container) ? $this->container['id_platform'] : null;
     }
 
     /**
@@ -352,7 +352,7 @@ class PlatformVersion implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function getIdVersion()
     {
-        return $this->container['id_version'];
+        return array_key_exists('id_version', $this->container) ? $this->container['id_version'] : null;
     }
 
     /**
@@ -383,7 +383,7 @@ class PlatformVersion implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function getName()
     {
-        return $this->container['name'];
+        return array_key_exists('name', $this->container) ? $this->container['name'] : null;
     }
 
     /**
@@ -493,15 +493,16 @@ class PlatformVersion implements ModelInterface, ArrayAccess, JsonSerializable
      *
      * @return array
      */
-    public function toArray($getAllAttributes = self::GET_ALL_ATTRIBUTES)
+    public function toArray($getAllAttributes = self::GET_SET_ATTRIBUTES)
     {
         if (!$getAllAttributes) {
             return $this->container;
         }
 
-        foreach (self::$attributeMap as $attribute) {
-            $data[$attribute] = $this->container[$attribute] ?? null;
-        }
+        $data = [];
+        $data['id_platform'] = $this->getIdPlatform();
+        $data['id_version'] = $this->getIdVersion();
+        $data['name'] = $this->getName();
 
         return $data;
     }

@@ -35,6 +35,7 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Softonic\CatalogApiSdk\ApiException;
+use Softonic\CatalogApiSdk\Client\Model\ModelInterface;
 use Softonic\CatalogApiSdk\Configuration;
 use Softonic\CatalogApiSdk\HeaderSelector;
 use Softonic\CatalogApiSdk\ObjectSerializer;
@@ -324,6 +325,9 @@ class ProgramsReviewTypesReviewsImagesApi
             // \stdClass has no __toString(), so we should encode it manually
             if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
                 $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+            elseif ($httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
+                $httpBody = $httpBody->toArray(true);
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1656,6 +1660,9 @@ class ProgramsReviewTypesReviewsImagesApi
             // \stdClass has no __toString(), so we should encode it manually
             if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
                 $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+            elseif ($httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
+                $httpBody = $httpBody->toArray(true);
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
