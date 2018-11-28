@@ -308,7 +308,7 @@ class ProgramsVersionsLanguagesApi
                 $httpBody = \GuzzleHttp\json_encode($httpBody);
             }
             elseif ($httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
-                $httpBody = $httpBody->toArray(true);
+                $httpBody = json_encode($httpBody->toArray(true));
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1538,7 +1538,7 @@ class ProgramsVersionsLanguagesApi
                 $httpBody = \GuzzleHttp\json_encode($httpBody);
             }
             elseif ($httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
-                $httpBody = $httpBody->toArray(true);
+                $httpBody = json_encode($httpBody->toArray(true));
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

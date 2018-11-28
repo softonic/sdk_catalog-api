@@ -82,7 +82,7 @@ interface ModelInterface
     /**
      * Returns true if all attributes are set. False otherwise.
      *
-     * @return boolean
+     * @return bool
      */
     public function hasAllAttributesSet();
 
