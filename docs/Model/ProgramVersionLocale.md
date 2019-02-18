@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **id_editor** | **int** | Editors identifier | [optional] 
 **id_binary** | **string** | Binaries identifier created with sha1 | [optional] 
 **about_license** | **string** | Extra information for program license. | [optional] 
+**active** | **bool** | Is active version for this locale? | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
