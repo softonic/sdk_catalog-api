@@ -64,7 +64,8 @@ class ProgramVersionLocale implements ArrayAccess
         'status' => 'string',
         'id_editor' => 'int',
         'id_binary' => 'string',
-        'about_license' => 'string'
+        'about_license' => 'string',
+        'active' => 'bool',
     ];
 
     public static function swaggerTypes()
@@ -87,7 +88,8 @@ class ProgramVersionLocale implements ArrayAccess
         'status' => 'status',
         'id_editor' => 'id_editor',
         'id_binary' => 'id_binary',
-        'about_license' => 'about_license'
+        'about_license' => 'about_license',
+        'active' => 'bool',
     ];
 
 
@@ -106,7 +108,8 @@ class ProgramVersionLocale implements ArrayAccess
         'status' => 'setStatus',
         'id_editor' => 'setIdEditor',
         'id_binary' => 'setIdBinary',
-        'about_license' => 'setAboutLicense'
+        'about_license' => 'setAboutLicense',
+        'active' => 'setActive',
     ];
 
 
@@ -125,7 +128,8 @@ class ProgramVersionLocale implements ArrayAccess
         'status' => 'getStatus',
         'id_editor' => 'getIdEditor',
         'id_binary' => 'getIdBinary',
-        'about_license' => 'getAboutLicense'
+        'about_license' => 'getAboutLicense',
+        'active' => 'getActive',
     ];
 
     public static function attributeMap()
@@ -188,6 +192,7 @@ class ProgramVersionLocale implements ArrayAccess
         $this->container['id_editor'] = isset($data['id_editor']) ? $data['id_editor'] : null;
         $this->container['id_binary'] = isset($data['id_binary']) ? $data['id_binary'] : null;
         $this->container['about_license'] = isset($data['about_license']) ? $data['about_license'] : null;
+        $this->container['active'] = isset($data['active']) ? $data['active'] : null;
     }
 
     /**
@@ -626,6 +631,28 @@ class ProgramVersionLocale implements ArrayAccess
 
         return $this;
     }
+
+    /**
+     * Gets active
+     * @return bool
+     */
+    public function getActive()
+    {
+        return $this->container['active'];
+    }
+
+    /**
+     * Sets active
+     * @param bool $active Is active version for this locale?.
+     * @return $this
+     */
+    public function setActive($active)
+    {
+        $this->container['active'] = $active;
+
+        return $this;
+    }
+
     /**
      * Returns true if offset exists. False otherwise.
      * @param  integer $offset Offset
