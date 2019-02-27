@@ -113,7 +113,7 @@ class ProgramVersionLocale implements ArrayAccess
         'id_editor' => 'id_editor',
         'id_binary' => 'id_binary',
         'about_license' => 'about_license',
-        'active' => 'bool',
+        'active' => 'active',
     ];
 
 
