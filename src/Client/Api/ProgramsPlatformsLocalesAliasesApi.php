@@ -283,8 +283,8 @@ class ProgramsPlatformsLocalesAliasesApi
         if (strlen($id_alias) > 60) {
             throw new \InvalidArgumentException('invalid length for "$id_alias" when calling ProgramsPlatformsLocalesAliasesApi.deleteProgramPlatformLocaleAlias, must be smaller than or equal to 60.');
         }
-        if (!preg_match("/^[a-z0-9](?:[a-z0-9\\-_]{0,58}[a-z0-9])?$/", $id_alias)) {
-            throw new \InvalidArgumentException("invalid value for \"id_alias\" when calling ProgramsPlatformsLocalesAliasesApi.deleteProgramPlatformLocaleAlias, must conform to the pattern /^[a-z0-9](?:[a-z0-9\\-_]{0,58}[a-z0-9])?$/.");
+        if (!preg_match("/^[a-z0-9](?:[a-z0-9\\-_\\.]{0,58}[a-z0-9])?$/", $id_alias)) {
+            throw new \InvalidArgumentException("invalid value for \"id_alias\" when calling ProgramsPlatformsLocalesAliasesApi.deleteProgramPlatformLocaleAlias, must conform to the pattern /^[a-z0-9](?:[a-z0-9\\-_\\.]{0,58}[a-z0-9])?$/.");
         }
 
 
@@ -964,8 +964,8 @@ class ProgramsPlatformsLocalesAliasesApi
         if (strlen($id_alias) > 60) {
             throw new \InvalidArgumentException('invalid length for "$id_alias" when calling ProgramsPlatformsLocalesAliasesApi.replaceProgramPlatformLocaleAlias, must be smaller than or equal to 60.');
         }
-        if (!preg_match("/^[a-z0-9](?:[a-z0-9\\-_]{0,58}[a-z0-9])?$/", $id_alias)) {
-            throw new \InvalidArgumentException("invalid value for \"id_alias\" when calling ProgramsPlatformsLocalesAliasesApi.replaceProgramPlatformLocaleAlias, must conform to the pattern /^[a-z0-9](?:[a-z0-9\\-_]{0,58}[a-z0-9])?$/.");
+        if (!preg_match("/^[a-z0-9](?:[a-z0-9\\-_\\.]{0,58}[a-z0-9])?$/", $id_alias)) {
+            throw new \InvalidArgumentException("invalid value for \"id_alias\" when calling ProgramsPlatformsLocalesAliasesApi.replaceProgramPlatformLocaleAlias, must conform to the pattern /^[a-z0-9](?:[a-z0-9\\-_\\.]{0,58}[a-z0-9])?$/.");
         }
 
 
