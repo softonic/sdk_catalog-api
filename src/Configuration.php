@@ -81,14 +81,14 @@ class Configuration
      *
      * @var string
      */
-    protected $host = 'https://catalog-v2.sftapi.com';
+    protected $host = 'https://catalog-v2.eu-west.sftapi.com';
 
     /**
      * User agent of the HTTP request, set to "PHP-Swagger" by default
      *
      * @var string
      */
-    protected $userAgent = 'Swagger-Codegen/2.52.0/php';
+    protected $userAgent = 'Swagger-Codegen/2.53.0/php';
 
     /**
      * Debug switch (default set to false)
@@ -397,7 +397,7 @@ class Configuration
         $report .= '    OS: ' . php_uname() . PHP_EOL;
         $report .= '    PHP Version: ' . PHP_VERSION . PHP_EOL;
         $report .= '    OpenAPI Spec Version: ' . PHP_EOL;
-        $report .= '    SDK Package Version: 2.52.0' . PHP_EOL;
+        $report .= '    SDK Package Version: 2.53.0' . PHP_EOL;
         $report .= '    Temp Folder Path: ' . self::getDefaultConfiguration()->getTempFolderPath() . PHP_EOL;
 
         return $report;

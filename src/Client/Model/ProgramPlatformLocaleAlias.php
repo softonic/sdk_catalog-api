@@ -258,12 +258,12 @@ class ProgramPlatformLocaleAlias implements ModelInterface, ArrayAccess, JsonSer
         if ($this->container['id_alias'] === null) {
             $invalidProperties[] = "'id_alias' can't be null";
         }
-        if ((strlen($this->container['id_alias']) > 60)) {
-            $invalidProperties[] = "invalid value for 'id_alias', the character length must be smaller than or equal to 60.";
+        if ((strlen($this->container['id_alias']) > 250)) {
+            $invalidProperties[] = "invalid value for 'id_alias', the character length must be smaller than or equal to 250.";
         }
 
-        if (!preg_match("/^[a-z0-9](?:[a-z0-9\\-_\\.]{0,58}[a-z0-9])?$/", $this->container['id_alias'])) {
-            $invalidProperties[] = "invalid value for 'id_alias', must be conform to the pattern /^[a-z0-9](?:[a-z0-9\\-_\\.]{0,58}[a-z0-9])?$/.";
+        if (!preg_match("/^[a-z0-9](?:[a-z0-9\\-_\\.]{0,250}[a-z0-9])?$/", $this->container['id_alias'])) {
+            $invalidProperties[] = "invalid value for 'id_alias', must be conform to the pattern /^[a-z0-9](?:[a-z0-9\\-_\\.]{0,250}[a-z0-9])?$/.";
         }
 
         return $invalidProperties;
@@ -333,10 +333,10 @@ class ProgramPlatformLocaleAlias implements ModelInterface, ArrayAccess, JsonSer
         if (array_key_exists('id_alias', $this->container) && $this->container['id_alias'] === null) {
             return false;
         }
-        if (array_key_exists('id_alias', $this->container) && (strlen($this->container['id_alias']) > 60)) {
+        if (array_key_exists('id_alias', $this->container) && (strlen($this->container['id_alias']) > 250)) {
             return false;
         }
-        if (array_key_exists('id_alias', $this->container) && !preg_match("/^[a-z0-9](?:[a-z0-9\\-_\\.]{0,58}[a-z0-9])?$/", $this->container['id_alias'])) {
+        if (array_key_exists('id_alias', $this->container) && !preg_match("/^[a-z0-9](?:[a-z0-9\\-_\\.]{0,250}[a-z0-9])?$/", $this->container['id_alias'])) {
             return false;
         }
         return true;
@@ -455,11 +455,11 @@ class ProgramPlatformLocaleAlias implements ModelInterface, ArrayAccess, JsonSer
      */
     public function setIdAlias($id_alias)
     {
-        if ((strlen($id_alias) > 60)) {
-            throw new \InvalidArgumentException('invalid length for $id_alias when calling ProgramPlatformLocaleAlias., must be smaller than or equal to 60.');
+        if ((strlen($id_alias) > 250)) {
+            throw new \InvalidArgumentException('invalid length for $id_alias when calling ProgramPlatformLocaleAlias., must be smaller than or equal to 250.');
         }
-        if ((!preg_match("/^[a-z0-9](?:[a-z0-9\\-_\\.]{0,58}[a-z0-9])?$/", $id_alias))) {
-            throw new \InvalidArgumentException("invalid value for $id_alias when calling ProgramPlatformLocaleAlias., must conform to the pattern /^[a-z0-9](?:[a-z0-9\\-_\\.]{0,58}[a-z0-9])?$/.");
+        if ((!preg_match("/^[a-z0-9](?:[a-z0-9\\-_\\.]{0,250}[a-z0-9])?$/", $id_alias))) {
+            throw new \InvalidArgumentException("invalid value for $id_alias when calling ProgramPlatformLocaleAlias., must conform to the pattern /^[a-z0-9](?:[a-z0-9\\-_\\.]{0,250}[a-z0-9])?$/.");
         }
 
         $this->container['id_alias'] = $id_alias;
