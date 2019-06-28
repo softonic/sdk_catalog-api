@@ -1,48 +1,42 @@
-# Softonic\CatalogApiSdk\ProgramsApi
+# Swagger\Client\ProgramsApi
 
-All URIs are relative to *https://catalog-v2.sftapi.com*
+All URIs are relative to *http://my-default-host.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createProgram**](ProgramsApi.md#createProgram) | **POST** /programs | Creates a new Program
+[**createProgram**](ProgramsApi.md#createProgram) | **POST** /programs | Creates a Program
 [**deleteProgram**](ProgramsApi.md#deleteProgram) | **DELETE** /programs/{id_program} | Deletes a Program
-[**findProgram**](ProgramsApi.md#findProgram) | **GET** /programs | List of Programs
+[**findProgram**](ProgramsApi.md#findProgram) | **GET** /programs | Gets a Program list
 [**readProgram**](ProgramsApi.md#readProgram) | **GET** /programs/{id_program} | Fetches a single Program
 [**replaceProgram**](ProgramsApi.md#replaceProgram) | **PUT** /programs/{id_program} | Entirely replaces a Program
 [**updateProgram**](ProgramsApi.md#updateProgram) | **PATCH** /programs/{id_program} | Partially updates a Program
 
-
 # **createProgram**
-> createProgram($body)
+> \Swagger\Client\Model\InlineResponse201 createProgram($body)
 
-Creates a new Program
+Creates a Program
 
-Creates a new Program
+Creates a Program
 
 ### Example
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: catalog_api_access_code
-$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-// Configure OAuth2 access token for authorization: catalog_api_application
-$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-// Configure OAuth2 access token for authorization: catalog_api_implicit
-$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-// Configure OAuth2 access token for authorization: catalog_api_password
-$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: softonic_auth
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Softonic\CatalogApiSdk\Api\ProgramsApi(
+$apiInstance = new Swagger\Client\Api\ProgramsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Softonic\CatalogApiSdk\Client\Model\Program(); // \Softonic\CatalogApiSdk\Client\Model\Program | 
+$body = new \Swagger\Client\Model\null(); //  | Program to be created
 
 try {
-    $apiInstance->createProgram($body);
+    $result = $apiInstance->createProgram($body);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProgramsApi->createProgram: ', $e->getMessage(), PHP_EOL;
 }
@@ -53,15 +47,15 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Softonic\CatalogApiSdk\Client\Model\Program**](../Model/Program.md)|  | [optional]
+ **body** | [****](../Model/.md)| Program to be created |
 
 ### Return type
 
-void (empty response body)
+[**\Swagger\Client\Model\InlineResponse201**](../Model/InlineResponse201.md)
 
 ### Authorization
 
-[catalog_api_access_code](../../README.md#catalog_api_access_code), [catalog_api_application](../../README.md#catalog_api_application), [catalog_api_implicit](../../README.md#catalog_api_implicit), [catalog_api_password](../../README.md#catalog_api_password)
+[softonic_auth](../../README.md#softonic_auth)
 
 ### HTTP request headers
 
@@ -71,7 +65,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteProgram**
-> deleteProgram($id_program)
+> \Swagger\Client\Model\InlineResponse2001 deleteProgram($id_program)
 
 Deletes a Program
 
@@ -82,25 +76,20 @@ Deletes a Program
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: catalog_api_access_code
-$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-// Configure OAuth2 access token for authorization: catalog_api_application
-$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-// Configure OAuth2 access token for authorization: catalog_api_implicit
-$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-// Configure OAuth2 access token for authorization: catalog_api_password
-$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: softonic_auth
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Softonic\CatalogApiSdk\Api\ProgramsApi(
+$apiInstance = new Swagger\Client\Api\ProgramsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$id_program = "id_program_example"; // string | Program UUID or numeric ID
+$id_program = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Program ID
 
 try {
-    $apiInstance->deleteProgram($id_program);
+    $result = $apiInstance->deleteProgram($id_program);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProgramsApi->deleteProgram: ', $e->getMessage(), PHP_EOL;
 }
@@ -111,45 +100,39 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID or numeric ID |
+ **id_program** | [**string**](../Model/.md)| Program ID |
 
 ### Return type
 
-void (empty response body)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
-[catalog_api_access_code](../../README.md#catalog_api_access_code), [catalog_api_application](../../README.md#catalog_api_application), [catalog_api_implicit](../../README.md#catalog_api_implicit), [catalog_api_password](../../README.md#catalog_api_password)
+[softonic_auth](../../README.md#softonic_auth)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **findProgram**
-> \Softonic\CatalogApiSdk\Client\Model\Program[] findProgram($page, $limit, $search)
+> \Swagger\Client\Model\Program[] findProgram($page, $limit)
 
-List of Programs
+Gets a Program list
 
-List of Programs
+Gets a Program list
 
 ### Example
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: catalog_api_access_code
-$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-// Configure OAuth2 access token for authorization: catalog_api_application
-$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-// Configure OAuth2 access token for authorization: catalog_api_implicit
-$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-// Configure OAuth2 access token for authorization: catalog_api_password
-$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: softonic_auth
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Softonic\CatalogApiSdk\Api\ProgramsApi(
+$apiInstance = new Swagger\Client\Api\ProgramsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -157,10 +140,9 @@ $apiInstance = new Softonic\CatalogApiSdk\Api\ProgramsApi(
 );
 $page = 56; // int | Page of the pagination when listing programs
 $limit = 56; // int | Number of results per page when listing programs
-$search = "search_example"; // string | Field to search for
 
 try {
-    $result = $apiInstance->findProgram($page, $limit, $search);
+    $result = $apiInstance->findProgram($page, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProgramsApi->findProgram: ', $e->getMessage(), PHP_EOL;
@@ -174,25 +156,24 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| Page of the pagination when listing programs | [optional]
  **limit** | **int**| Number of results per page when listing programs | [optional]
- **search** | **string**| Field to search for | [optional]
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Client\Model\Program[]**](../Model/Program.md)
+[**\Swagger\Client\Model\Program[]**](../Model/Program.md)
 
 ### Authorization
 
-[catalog_api_access_code](../../README.md#catalog_api_access_code), [catalog_api_application](../../README.md#catalog_api_application), [catalog_api_implicit](../../README.md#catalog_api_implicit), [catalog_api_password](../../README.md#catalog_api_password)
+[softonic_auth](../../README.md#softonic_auth)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readProgram**
-> \Softonic\CatalogApiSdk\Client\Model\Program readProgram($id_program)
+> \Swagger\Client\Model\Program readProgram($id_program)
 
 Fetches a single Program
 
@@ -203,22 +184,16 @@ Fetches a single Program
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: catalog_api_access_code
-$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-// Configure OAuth2 access token for authorization: catalog_api_application
-$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-// Configure OAuth2 access token for authorization: catalog_api_implicit
-$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-// Configure OAuth2 access token for authorization: catalog_api_password
-$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: softonic_auth
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Softonic\CatalogApiSdk\Api\ProgramsApi(
+$apiInstance = new Swagger\Client\Api\ProgramsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$id_program = "id_program_example"; // string | Program UUID or numeric ID
+$id_program = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Program ID
 
 try {
     $result = $apiInstance->readProgram($id_program);
@@ -233,25 +208,25 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID or numeric ID |
+ **id_program** | [**string**](../Model/.md)| Program ID |
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Client\Model\Program**](../Model/Program.md)
+[**\Swagger\Client\Model\Program**](../Model/Program.md)
 
 ### Authorization
 
-[catalog_api_access_code](../../README.md#catalog_api_access_code), [catalog_api_application](../../README.md#catalog_api_application), [catalog_api_implicit](../../README.md#catalog_api_implicit), [catalog_api_password](../../README.md#catalog_api_password)
+[softonic_auth](../../README.md#softonic_auth)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **replaceProgram**
-> replaceProgram($id_program, $body)
+> \Swagger\Client\Model\InlineResponse200 replaceProgram($body, $id_program)
 
 Entirely replaces a Program
 
@@ -262,26 +237,21 @@ Entirely replaces a Program
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: catalog_api_access_code
-$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-// Configure OAuth2 access token for authorization: catalog_api_application
-$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-// Configure OAuth2 access token for authorization: catalog_api_implicit
-$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-// Configure OAuth2 access token for authorization: catalog_api_password
-$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: softonic_auth
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Softonic\CatalogApiSdk\Api\ProgramsApi(
+$apiInstance = new Swagger\Client\Api\ProgramsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$id_program = "id_program_example"; // string | Program UUID or numeric ID
-$body = new \Softonic\CatalogApiSdk\Client\Model\Program(); // \Softonic\CatalogApiSdk\Client\Model\Program | 
+$body = new \Swagger\Client\Model\null(); //  | Program to be replaced
+$id_program = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Program ID
 
 try {
-    $apiInstance->replaceProgram($id_program, $body);
+    $result = $apiInstance->replaceProgram($body, $id_program);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProgramsApi->replaceProgram: ', $e->getMessage(), PHP_EOL;
 }
@@ -292,16 +262,16 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID or numeric ID |
- **body** | [**\Softonic\CatalogApiSdk\Client\Model\Program**](../Model/Program.md)|  | [optional]
+ **body** | [****](../Model/.md)| Program to be replaced |
+ **id_program** | [**string**](../Model/.md)| Program ID |
 
 ### Return type
 
-void (empty response body)
+[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
 
 ### Authorization
 
-[catalog_api_access_code](../../README.md#catalog_api_access_code), [catalog_api_application](../../README.md#catalog_api_application), [catalog_api_implicit](../../README.md#catalog_api_implicit), [catalog_api_password](../../README.md#catalog_api_password)
+[softonic_auth](../../README.md#softonic_auth)
 
 ### HTTP request headers
 
@@ -311,7 +281,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateProgram**
-> updateProgram($id_program, $body)
+> \Swagger\Client\Model\InlineResponse2002 updateProgram($body, $id_program)
 
 Partially updates a Program
 
@@ -322,26 +292,21 @@ Partially updates a Program
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: catalog_api_access_code
-$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-// Configure OAuth2 access token for authorization: catalog_api_application
-$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-// Configure OAuth2 access token for authorization: catalog_api_implicit
-$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-// Configure OAuth2 access token for authorization: catalog_api_password
-$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: softonic_auth
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Softonic\CatalogApiSdk\Api\ProgramsApi(
+$apiInstance = new Swagger\Client\Api\ProgramsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$id_program = "id_program_example"; // string | Program UUID or numeric ID
-$body = new \Softonic\CatalogApiSdk\Client\Model\Program(); // \Softonic\CatalogApiSdk\Client\Model\Program | 
+$body = new \Swagger\Client\Model\Program(); // \Swagger\Client\Model\Program | Program to be updated
+$id_program = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Program ID
 
 try {
-    $apiInstance->updateProgram($id_program, $body);
+    $result = $apiInstance->updateProgram($body, $id_program);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProgramsApi->updateProgram: ', $e->getMessage(), PHP_EOL;
 }
@@ -352,16 +317,16 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_program** | **string**| Program UUID or numeric ID |
- **body** | [**\Softonic\CatalogApiSdk\Client\Model\Program**](../Model/Program.md)|  | [optional]
+ **body** | [**\Swagger\Client\Model\Program**](../Model/Program.md)| Program to be updated |
+ **id_program** | [**string**](../Model/.md)| Program ID |
 
 ### Return type
 
-void (empty response body)
+[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
-[catalog_api_access_code](../../README.md#catalog_api_access_code), [catalog_api_application](../../README.md#catalog_api_application), [catalog_api_implicit](../../README.md#catalog_api_implicit), [catalog_api_password](../../README.md#catalog_api_password)
+[softonic_auth](../../README.md#softonic_auth)
 
 ### HTTP request headers
 

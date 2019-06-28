@@ -1,48 +1,42 @@
-# Softonic\CatalogApiSdk\SourcesApi
+# Swagger\Client\SourcesApi
 
-All URIs are relative to *https://catalog-v2.sftapi.com*
+All URIs are relative to *http://my-default-host.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createSource**](SourcesApi.md#createSource) | **POST** /sources | Creates a new Source
+[**createSource**](SourcesApi.md#createSource) | **POST** /sources | Creates a Source
 [**deleteSource**](SourcesApi.md#deleteSource) | **DELETE** /sources/{id_source} | Deletes a Source
-[**findSource**](SourcesApi.md#findSource) | **GET** /sources | List of Sources
+[**findSource**](SourcesApi.md#findSource) | **GET** /sources | Gets a Source list
 [**readSource**](SourcesApi.md#readSource) | **GET** /sources/{id_source} | Fetches a single Source
 [**replaceSource**](SourcesApi.md#replaceSource) | **PUT** /sources/{id_source} | Entirely replaces a Source
 [**updateSource**](SourcesApi.md#updateSource) | **PATCH** /sources/{id_source} | Partially updates a Source
 
-
 # **createSource**
-> createSource($body)
+> \Swagger\Client\Model\InlineResponse201 createSource($body)
 
-Creates a new Source
+Creates a Source
 
-Creates a new Source
+Creates a Source
 
 ### Example
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: catalog_api_access_code
-$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-// Configure OAuth2 access token for authorization: catalog_api_application
-$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-// Configure OAuth2 access token for authorization: catalog_api_implicit
-$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-// Configure OAuth2 access token for authorization: catalog_api_password
-$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: softonic_auth
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Softonic\CatalogApiSdk\Api\SourcesApi(
+$apiInstance = new Swagger\Client\Api\SourcesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Softonic\CatalogApiSdk\Client\Model\Source(); // \Softonic\CatalogApiSdk\Client\Model\Source | 
+$body = new \Swagger\Client\Model\null(); //  | Source to be created
 
 try {
-    $apiInstance->createSource($body);
+    $result = $apiInstance->createSource($body);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SourcesApi->createSource: ', $e->getMessage(), PHP_EOL;
 }
@@ -53,15 +47,15 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Softonic\CatalogApiSdk\Client\Model\Source**](../Model/Source.md)|  | [optional]
+ **body** | [****](../Model/.md)| Source to be created |
 
 ### Return type
 
-void (empty response body)
+[**\Swagger\Client\Model\InlineResponse201**](../Model/InlineResponse201.md)
 
 ### Authorization
 
-[catalog_api_access_code](../../README.md#catalog_api_access_code), [catalog_api_application](../../README.md#catalog_api_application), [catalog_api_implicit](../../README.md#catalog_api_implicit), [catalog_api_password](../../README.md#catalog_api_password)
+[softonic_auth](../../README.md#softonic_auth)
 
 ### HTTP request headers
 
@@ -71,7 +65,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteSource**
-> deleteSource($id_source)
+> \Swagger\Client\Model\InlineResponse2001 deleteSource($id_source)
 
 Deletes a Source
 
@@ -82,16 +76,10 @@ Deletes a Source
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: catalog_api_access_code
-$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-// Configure OAuth2 access token for authorization: catalog_api_application
-$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-// Configure OAuth2 access token for authorization: catalog_api_implicit
-$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-// Configure OAuth2 access token for authorization: catalog_api_password
-$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: softonic_auth
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Softonic\CatalogApiSdk\Api\SourcesApi(
+$apiInstance = new Swagger\Client\Api\SourcesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -100,7 +88,8 @@ $apiInstance = new Softonic\CatalogApiSdk\Api\SourcesApi(
 $id_source = "id_source_example"; // string | Source ID
 
 try {
-    $apiInstance->deleteSource($id_source);
+    $result = $apiInstance->deleteSource($id_source);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SourcesApi->deleteSource: ', $e->getMessage(), PHP_EOL;
 }
@@ -115,41 +104,35 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
-[catalog_api_access_code](../../README.md#catalog_api_access_code), [catalog_api_application](../../README.md#catalog_api_application), [catalog_api_implicit](../../README.md#catalog_api_implicit), [catalog_api_password](../../README.md#catalog_api_password)
+[softonic_auth](../../README.md#softonic_auth)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **findSource**
-> \Softonic\CatalogApiSdk\Client\Model\Source[] findSource()
+> \Swagger\Client\Model\Source[] findSource()
 
-List of Sources
+Gets a Source list
 
-List of Sources
+Gets a Source list
 
 ### Example
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: catalog_api_access_code
-$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-// Configure OAuth2 access token for authorization: catalog_api_application
-$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-// Configure OAuth2 access token for authorization: catalog_api_implicit
-$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-// Configure OAuth2 access token for authorization: catalog_api_password
-$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: softonic_auth
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Softonic\CatalogApiSdk\Api\SourcesApi(
+$apiInstance = new Swagger\Client\Api\SourcesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -170,21 +153,21 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Client\Model\Source[]**](../Model/Source.md)
+[**\Swagger\Client\Model\Source[]**](../Model/Source.md)
 
 ### Authorization
 
-[catalog_api_access_code](../../README.md#catalog_api_access_code), [catalog_api_application](../../README.md#catalog_api_application), [catalog_api_implicit](../../README.md#catalog_api_implicit), [catalog_api_password](../../README.md#catalog_api_password)
+[softonic_auth](../../README.md#softonic_auth)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readSource**
-> \Softonic\CatalogApiSdk\Client\Model\Source readSource($id_source)
+> \Swagger\Client\Model\Source readSource($id_source)
 
 Fetches a single Source
 
@@ -195,16 +178,10 @@ Fetches a single Source
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: catalog_api_access_code
-$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-// Configure OAuth2 access token for authorization: catalog_api_application
-$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-// Configure OAuth2 access token for authorization: catalog_api_implicit
-$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-// Configure OAuth2 access token for authorization: catalog_api_password
-$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: softonic_auth
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Softonic\CatalogApiSdk\Api\SourcesApi(
+$apiInstance = new Swagger\Client\Api\SourcesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -229,21 +206,21 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Softonic\CatalogApiSdk\Client\Model\Source**](../Model/Source.md)
+[**\Swagger\Client\Model\Source**](../Model/Source.md)
 
 ### Authorization
 
-[catalog_api_access_code](../../README.md#catalog_api_access_code), [catalog_api_application](../../README.md#catalog_api_application), [catalog_api_implicit](../../README.md#catalog_api_implicit), [catalog_api_password](../../README.md#catalog_api_password)
+[softonic_auth](../../README.md#softonic_auth)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **replaceSource**
-> replaceSource($id_source, $body)
+> \Swagger\Client\Model\InlineResponse200 replaceSource($body, $id_source)
 
 Entirely replaces a Source
 
@@ -254,26 +231,21 @@ Entirely replaces a Source
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: catalog_api_access_code
-$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-// Configure OAuth2 access token for authorization: catalog_api_application
-$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-// Configure OAuth2 access token for authorization: catalog_api_implicit
-$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-// Configure OAuth2 access token for authorization: catalog_api_password
-$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: softonic_auth
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Softonic\CatalogApiSdk\Api\SourcesApi(
+$apiInstance = new Swagger\Client\Api\SourcesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
+$body = new \Swagger\Client\Model\null(); //  | Source to be replaced
 $id_source = "id_source_example"; // string | Source ID
-$body = new \Softonic\CatalogApiSdk\Client\Model\Source(); // \Softonic\CatalogApiSdk\Client\Model\Source | 
 
 try {
-    $apiInstance->replaceSource($id_source, $body);
+    $result = $apiInstance->replaceSource($body, $id_source);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SourcesApi->replaceSource: ', $e->getMessage(), PHP_EOL;
 }
@@ -284,16 +256,16 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **body** | [****](../Model/.md)| Source to be replaced |
  **id_source** | **string**| Source ID |
- **body** | [**\Softonic\CatalogApiSdk\Client\Model\Source**](../Model/Source.md)|  | [optional]
 
 ### Return type
 
-void (empty response body)
+[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
 
 ### Authorization
 
-[catalog_api_access_code](../../README.md#catalog_api_access_code), [catalog_api_application](../../README.md#catalog_api_application), [catalog_api_implicit](../../README.md#catalog_api_implicit), [catalog_api_password](../../README.md#catalog_api_password)
+[softonic_auth](../../README.md#softonic_auth)
 
 ### HTTP request headers
 
@@ -303,7 +275,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateSource**
-> updateSource($id_source, $body)
+> \Swagger\Client\Model\InlineResponse2002 updateSource($body, $id_source)
 
 Partially updates a Source
 
@@ -314,26 +286,21 @@ Partially updates a Source
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: catalog_api_access_code
-$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-// Configure OAuth2 access token for authorization: catalog_api_application
-$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-// Configure OAuth2 access token for authorization: catalog_api_implicit
-$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-// Configure OAuth2 access token for authorization: catalog_api_password
-$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: softonic_auth
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Softonic\CatalogApiSdk\Api\SourcesApi(
+$apiInstance = new Swagger\Client\Api\SourcesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
+$body = new \Swagger\Client\Model\Source(); // \Swagger\Client\Model\Source | Source to be updated
 $id_source = "id_source_example"; // string | Source ID
-$body = new \Softonic\CatalogApiSdk\Client\Model\Source(); // \Softonic\CatalogApiSdk\Client\Model\Source | 
 
 try {
-    $apiInstance->updateSource($id_source, $body);
+    $result = $apiInstance->updateSource($body, $id_source);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SourcesApi->updateSource: ', $e->getMessage(), PHP_EOL;
 }
@@ -344,16 +311,16 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **body** | [**\Swagger\Client\Model\Source**](../Model/Source.md)| Source to be updated |
  **id_source** | **string**| Source ID |
- **body** | [**\Softonic\CatalogApiSdk\Client\Model\Source**](../Model/Source.md)|  | [optional]
 
 ### Return type
 
-void (empty response body)
+[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
-[catalog_api_access_code](../../README.md#catalog_api_access_code), [catalog_api_application](../../README.md#catalog_api_application), [catalog_api_implicit](../../README.md#catalog_api_implicit), [catalog_api_password](../../README.md#catalog_api_password)
+[softonic_auth](../../README.md#softonic_auth)
 
 ### HTTP request headers
 
