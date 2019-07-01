@@ -21,5 +21,5 @@ Name | Type | Description | Notes
 **cons** | **string[]** | Cons | [optional] 
 **updated_at** | **string** | Updated date in format Y-m-d H:i:s | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

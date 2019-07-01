@@ -1,17 +1,17 @@
-# Swagger\Client\ProgramsPlatformsUrltypesUrlsApi
+# Softonic\CatalogApiSdk\ProgramsPlatformsUrltypesUrlsApi
 
-All URIs are relative to *http://my-default-host.com*
+All URIs are relative to *https://catalog-v4.sft.eu-west.sftapi.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createProgramPlatformUrltypeUrl**](ProgramsPlatformsUrltypesUrlsApi.md#createProgramPlatformUrltypeUrl) | **POST** /programs/{id_program}/platforms/{id_platform}/urltypes/{id_urltype}/urls | Creates a ProgramPlatformUrltypeUrl
-[**deleteProgramPlatformUrltypeUrl**](ProgramsPlatformsUrltypesUrlsApi.md#deleteProgramPlatformUrltypeUrl) | **DELETE** /programs/{id_program}/platforms/{id_platform}/urltypes/{id_urltype}/urls/{id_url} | Deletes a ProgramPlatformUrltypeUrl
-[**findProgramPlatformUrltypeUrl**](ProgramsPlatformsUrltypesUrlsApi.md#findProgramPlatformUrltypeUrl) | **GET** /programs/{id_program}/platforms/{id_platform}/urltypes/{id_urltype}/urls | Gets a ProgramPlatformUrltypeUrl list
-[**readProgramPlatformUrltypeUrl**](ProgramsPlatformsUrltypesUrlsApi.md#readProgramPlatformUrltypeUrl) | **GET** /programs/{id_program}/platforms/{id_platform}/urltypes/{id_urltype}/urls/{id_url} | Fetches a single ProgramPlatformUrltypeUrl
-[**replaceProgramPlatformUrltypeUrl**](ProgramsPlatformsUrltypesUrlsApi.md#replaceProgramPlatformUrltypeUrl) | **PUT** /programs/{id_program}/platforms/{id_platform}/urltypes/{id_urltype}/urls/{id_url} | Entirely replaces a ProgramPlatformUrltypeUrl
+[**createProgramPlatformUrltypeUrl**](ProgramsPlatformsUrltypesUrlsApi.md#createprogramplatformurltypeurl) | **POST** /programs/{id_program}/platforms/{id_platform}/urltypes/{id_urltype}/urls | Creates a ProgramPlatformUrltypeUrl
+[**deleteProgramPlatformUrltypeUrl**](ProgramsPlatformsUrltypesUrlsApi.md#deleteprogramplatformurltypeurl) | **DELETE** /programs/{id_program}/platforms/{id_platform}/urltypes/{id_urltype}/urls/{id_url} | Deletes a ProgramPlatformUrltypeUrl
+[**findProgramPlatformUrltypeUrl**](ProgramsPlatformsUrltypesUrlsApi.md#findprogramplatformurltypeurl) | **GET** /programs/{id_program}/platforms/{id_platform}/urltypes/{id_urltype}/urls | Gets a ProgramPlatformUrltypeUrl list
+[**readProgramPlatformUrltypeUrl**](ProgramsPlatformsUrltypesUrlsApi.md#readprogramplatformurltypeurl) | **GET** /programs/{id_program}/platforms/{id_platform}/urltypes/{id_urltype}/urls/{id_url} | Fetches a single ProgramPlatformUrltypeUrl
+[**replaceProgramPlatformUrltypeUrl**](ProgramsPlatformsUrltypesUrlsApi.md#replaceprogramplatformurltypeurl) | **PUT** /programs/{id_program}/platforms/{id_platform}/urltypes/{id_urltype}/urls/{id_url} | Entirely replaces a ProgramPlatformUrltypeUrl
 
 # **createProgramPlatformUrltypeUrl**
-> \Swagger\Client\Model\InlineResponse201 createProgramPlatformUrltypeUrl($body, $id_program, $id_platform, $id_urltype)
+> \Softonic\CatalogApiSdk\Client\Model\InlineResponse201 createProgramPlatformUrltypeUrl($body, $id_program, $id_platform, $id_urltype)
 
 Creates a ProgramPlatformUrltypeUrl
 
@@ -23,15 +23,15 @@ Creates a ProgramPlatformUrltypeUrl
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: softonic_auth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ProgramsPlatformsUrltypesUrlsApi(
+$apiInstance = new Softonic\CatalogApiSdk\Client\Api\ProgramsPlatformsUrltypesUrlsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\null(); //  | ProgramPlatformUrltypeUrl to be created
+$body = new \Softonic\CatalogApiSdk\Client\Model\null(); //  | ProgramPlatformUrltypeUrl to be created
 $id_program = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Program ID
 $id_platform = "id_platform_example"; // string | Platform ID
 $id_urltype = "id_urltype_example"; // string | Url type ID
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse201**](../Model/InlineResponse201.md)
+[**\Softonic\CatalogApiSdk\Client\Model\InlineResponse201**](../Model/InlineResponse201.md)
 
 ### Authorization
 
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteProgramPlatformUrltypeUrl**
-> \Swagger\Client\Model\InlineResponse2001 deleteProgramPlatformUrltypeUrl($id_program, $id_platform, $id_urltype, $id_url)
+> \Softonic\CatalogApiSdk\Client\Model\InlineResponse2001 deleteProgramPlatformUrltypeUrl($id_program, $id_platform, $id_urltype, $id_url)
 
 Deletes a ProgramPlatformUrltypeUrl
 
@@ -82,9 +82,9 @@ Deletes a ProgramPlatformUrltypeUrl
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: softonic_auth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ProgramsPlatformsUrltypesUrlsApi(
+$apiInstance = new Softonic\CatalogApiSdk\Client\Api\ProgramsPlatformsUrltypesUrlsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -115,7 +115,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Softonic\CatalogApiSdk\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -129,7 +129,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **findProgramPlatformUrltypeUrl**
-> \Swagger\Client\Model\ProgramPlatformUrltypeUrl[] findProgramPlatformUrltypeUrl($id_program, $id_platform, $id_urltype)
+> \Softonic\CatalogApiSdk\Client\Model\ProgramPlatformUrltypeUrl[] findProgramPlatformUrltypeUrl($id_program, $id_platform, $id_urltype)
 
 Gets a ProgramPlatformUrltypeUrl list
 
@@ -141,9 +141,9 @@ Gets a ProgramPlatformUrltypeUrl list
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: softonic_auth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ProgramsPlatformsUrltypesUrlsApi(
+$apiInstance = new Softonic\CatalogApiSdk\Client\Api\ProgramsPlatformsUrltypesUrlsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -172,7 +172,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ProgramPlatformUrltypeUrl[]**](../Model/ProgramPlatformUrltypeUrl.md)
+[**\Softonic\CatalogApiSdk\Client\Model\ProgramPlatformUrltypeUrl[]**](../Model/ProgramPlatformUrltypeUrl.md)
 
 ### Authorization
 
@@ -186,7 +186,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readProgramPlatformUrltypeUrl**
-> \Swagger\Client\Model\ProgramPlatformUrltypeUrl readProgramPlatformUrltypeUrl($id_program, $id_platform, $id_urltype, $id_url)
+> \Softonic\CatalogApiSdk\Client\Model\ProgramPlatformUrltypeUrl readProgramPlatformUrltypeUrl($id_program, $id_platform, $id_urltype, $id_url)
 
 Fetches a single ProgramPlatformUrltypeUrl
 
@@ -198,9 +198,9 @@ Fetches a single ProgramPlatformUrltypeUrl
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: softonic_auth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ProgramsPlatformsUrltypesUrlsApi(
+$apiInstance = new Softonic\CatalogApiSdk\Client\Api\ProgramsPlatformsUrltypesUrlsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -231,7 +231,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ProgramPlatformUrltypeUrl**](../Model/ProgramPlatformUrltypeUrl.md)
+[**\Softonic\CatalogApiSdk\Client\Model\ProgramPlatformUrltypeUrl**](../Model/ProgramPlatformUrltypeUrl.md)
 
 ### Authorization
 
@@ -245,7 +245,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **replaceProgramPlatformUrltypeUrl**
-> \Swagger\Client\Model\InlineResponse200 replaceProgramPlatformUrltypeUrl($body, $id_program, $id_platform, $id_urltype, $id_url)
+> \Softonic\CatalogApiSdk\Client\Model\InlineResponse200 replaceProgramPlatformUrltypeUrl($body, $id_program, $id_platform, $id_urltype, $id_url)
 
 Entirely replaces a ProgramPlatformUrltypeUrl
 
@@ -257,15 +257,15 @@ Entirely replaces a ProgramPlatformUrltypeUrl
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: softonic_auth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ProgramsPlatformsUrltypesUrlsApi(
+$apiInstance = new Softonic\CatalogApiSdk\Client\Api\ProgramsPlatformsUrltypesUrlsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\null(); //  | ProgramPlatformUrltypeUrl to be replaced
+$body = new \Softonic\CatalogApiSdk\Client\Model\null(); //  | ProgramPlatformUrltypeUrl to be replaced
 $id_program = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Program ID
 $id_platform = "id_platform_example"; // string | Platform ID
 $id_urltype = "id_urltype_example"; // string | Url type ID
@@ -292,7 +292,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Softonic\CatalogApiSdk\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
 
 ### Authorization
 

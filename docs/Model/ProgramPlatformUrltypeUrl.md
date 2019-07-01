@@ -9,5 +9,5 @@ Name | Type | Description | Notes
 **id_url** | **string** | Url ID in SHA1-Hash format | [optional] 
 **url** | **string** | Url | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

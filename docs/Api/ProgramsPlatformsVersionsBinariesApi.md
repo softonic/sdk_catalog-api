@@ -1,18 +1,18 @@
-# Swagger\Client\ProgramsPlatformsVersionsBinariesApi
+# Softonic\CatalogApiSdk\ProgramsPlatformsVersionsBinariesApi
 
-All URIs are relative to *http://my-default-host.com*
+All URIs are relative to *https://catalog-v4.sft.eu-west.sftapi.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createProgramPlatformVersionBinary**](ProgramsPlatformsVersionsBinariesApi.md#createProgramPlatformVersionBinary) | **POST** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/binaries | Creates a ProgramPlatformVersionBinary
-[**deleteProgramPlatformVersionBinary**](ProgramsPlatformsVersionsBinariesApi.md#deleteProgramPlatformVersionBinary) | **DELETE** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/binaries/{id_binary} | Deletes a ProgramPlatformVersionBinary
-[**findProgramPlatformVersionBinary**](ProgramsPlatformsVersionsBinariesApi.md#findProgramPlatformVersionBinary) | **GET** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/binaries | Gets a ProgramPlatformVersionBinary list
-[**readProgramPlatformVersionBinary**](ProgramsPlatformsVersionsBinariesApi.md#readProgramPlatformVersionBinary) | **GET** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/binaries/{id_binary} | Fetches a single ProgramPlatformVersionBinary
-[**replaceProgramPlatformVersionBinary**](ProgramsPlatformsVersionsBinariesApi.md#replaceProgramPlatformVersionBinary) | **PUT** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/binaries/{id_binary} | Entirely replaces a ProgramPlatformVersionBinary
-[**updateProgramPlatformVersionBinary**](ProgramsPlatformsVersionsBinariesApi.md#updateProgramPlatformVersionBinary) | **PATCH** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/binaries/{id_binary} | Partially updates a ProgramPlatformVersionBinary
+[**createProgramPlatformVersionBinary**](ProgramsPlatformsVersionsBinariesApi.md#createprogramplatformversionbinary) | **POST** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/binaries | Creates a ProgramPlatformVersionBinary
+[**deleteProgramPlatformVersionBinary**](ProgramsPlatformsVersionsBinariesApi.md#deleteprogramplatformversionbinary) | **DELETE** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/binaries/{id_binary} | Deletes a ProgramPlatformVersionBinary
+[**findProgramPlatformVersionBinary**](ProgramsPlatformsVersionsBinariesApi.md#findprogramplatformversionbinary) | **GET** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/binaries | Gets a ProgramPlatformVersionBinary list
+[**readProgramPlatformVersionBinary**](ProgramsPlatformsVersionsBinariesApi.md#readprogramplatformversionbinary) | **GET** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/binaries/{id_binary} | Fetches a single ProgramPlatformVersionBinary
+[**replaceProgramPlatformVersionBinary**](ProgramsPlatformsVersionsBinariesApi.md#replaceprogramplatformversionbinary) | **PUT** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/binaries/{id_binary} | Entirely replaces a ProgramPlatformVersionBinary
+[**updateProgramPlatformVersionBinary**](ProgramsPlatformsVersionsBinariesApi.md#updateprogramplatformversionbinary) | **PATCH** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/binaries/{id_binary} | Partially updates a ProgramPlatformVersionBinary
 
 # **createProgramPlatformVersionBinary**
-> \Swagger\Client\Model\InlineResponse201 createProgramPlatformVersionBinary($body, $id_program, $id_platform, $id_version)
+> \Softonic\CatalogApiSdk\Client\Model\InlineResponse201 createProgramPlatformVersionBinary($body, $id_program, $id_platform, $id_version)
 
 Creates a ProgramPlatformVersionBinary
 
@@ -24,15 +24,15 @@ Creates a ProgramPlatformVersionBinary
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: softonic_auth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ProgramsPlatformsVersionsBinariesApi(
+$apiInstance = new Softonic\CatalogApiSdk\Client\Api\ProgramsPlatformsVersionsBinariesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\null(); //  | ProgramPlatformVersionBinary to be created
+$body = new \Softonic\CatalogApiSdk\Client\Model\null(); //  | ProgramPlatformVersionBinary to be created
 $id_program = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Program ID
 $id_platform = "id_platform_example"; // string | Platform ID
 $id_version = "id_version_example"; // string | Version ID
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse201**](../Model/InlineResponse201.md)
+[**\Softonic\CatalogApiSdk\Client\Model\InlineResponse201**](../Model/InlineResponse201.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteProgramPlatformVersionBinary**
-> \Swagger\Client\Model\InlineResponse2001 deleteProgramPlatformVersionBinary($id_program, $id_platform, $id_version, $id_binary)
+> \Softonic\CatalogApiSdk\Client\Model\InlineResponse2001 deleteProgramPlatformVersionBinary($id_program, $id_platform, $id_version, $id_binary)
 
 Deletes a ProgramPlatformVersionBinary
 
@@ -83,9 +83,9 @@ Deletes a ProgramPlatformVersionBinary
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: softonic_auth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ProgramsPlatformsVersionsBinariesApi(
+$apiInstance = new Softonic\CatalogApiSdk\Client\Api\ProgramsPlatformsVersionsBinariesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -116,7 +116,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Softonic\CatalogApiSdk\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -130,7 +130,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **findProgramPlatformVersionBinary**
-> \Swagger\Client\Model\ProgramPlatformVersionBinary[] findProgramPlatformVersionBinary($id_program, $id_platform, $id_version)
+> \Softonic\CatalogApiSdk\Client\Model\ProgramPlatformVersionBinary[] findProgramPlatformVersionBinary($id_program, $id_platform, $id_version)
 
 Gets a ProgramPlatformVersionBinary list
 
@@ -142,9 +142,9 @@ Gets a ProgramPlatformVersionBinary list
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: softonic_auth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ProgramsPlatformsVersionsBinariesApi(
+$apiInstance = new Softonic\CatalogApiSdk\Client\Api\ProgramsPlatformsVersionsBinariesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -173,7 +173,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ProgramPlatformVersionBinary[]**](../Model/ProgramPlatformVersionBinary.md)
+[**\Softonic\CatalogApiSdk\Client\Model\ProgramPlatformVersionBinary[]**](../Model/ProgramPlatformVersionBinary.md)
 
 ### Authorization
 
@@ -187,7 +187,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readProgramPlatformVersionBinary**
-> \Swagger\Client\Model\ProgramPlatformVersionBinary readProgramPlatformVersionBinary($id_program, $id_platform, $id_version, $id_binary)
+> \Softonic\CatalogApiSdk\Client\Model\ProgramPlatformVersionBinary readProgramPlatformVersionBinary($id_program, $id_platform, $id_version, $id_binary)
 
 Fetches a single ProgramPlatformVersionBinary
 
@@ -199,9 +199,9 @@ Fetches a single ProgramPlatformVersionBinary
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: softonic_auth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ProgramsPlatformsVersionsBinariesApi(
+$apiInstance = new Softonic\CatalogApiSdk\Client\Api\ProgramsPlatformsVersionsBinariesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -232,7 +232,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ProgramPlatformVersionBinary**](../Model/ProgramPlatformVersionBinary.md)
+[**\Softonic\CatalogApiSdk\Client\Model\ProgramPlatformVersionBinary**](../Model/ProgramPlatformVersionBinary.md)
 
 ### Authorization
 
@@ -246,7 +246,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **replaceProgramPlatformVersionBinary**
-> \Swagger\Client\Model\InlineResponse200 replaceProgramPlatformVersionBinary($body, $id_program, $id_platform, $id_version, $id_binary)
+> \Softonic\CatalogApiSdk\Client\Model\InlineResponse200 replaceProgramPlatformVersionBinary($body, $id_program, $id_platform, $id_version, $id_binary)
 
 Entirely replaces a ProgramPlatformVersionBinary
 
@@ -258,15 +258,15 @@ Entirely replaces a ProgramPlatformVersionBinary
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: softonic_auth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ProgramsPlatformsVersionsBinariesApi(
+$apiInstance = new Softonic\CatalogApiSdk\Client\Api\ProgramsPlatformsVersionsBinariesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\ProgramPlatformVersionBinary(); // \Swagger\Client\Model\ProgramPlatformVersionBinary | ProgramPlatformVersionBinary to be replaced
+$body = new \Softonic\CatalogApiSdk\Client\Model\ProgramPlatformVersionBinary(); // \Softonic\CatalogApiSdk\Client\Model\ProgramPlatformVersionBinary | ProgramPlatformVersionBinary to be replaced
 $id_program = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Program ID
 $id_platform = "id_platform_example"; // string | Platform ID
 $id_version = "id_version_example"; // string | Version ID
@@ -285,7 +285,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\ProgramPlatformVersionBinary**](../Model/ProgramPlatformVersionBinary.md)| ProgramPlatformVersionBinary to be replaced |
+ **body** | [**\Softonic\CatalogApiSdk\Client\Model\ProgramPlatformVersionBinary**](../Model/ProgramPlatformVersionBinary.md)| ProgramPlatformVersionBinary to be replaced |
  **id_program** | [**string**](../Model/.md)| Program ID |
  **id_platform** | **string**| Platform ID |
  **id_version** | **string**| Version ID |
@@ -293,7 +293,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Softonic\CatalogApiSdk\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
 
 ### Authorization
 
@@ -307,7 +307,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateProgramPlatformVersionBinary**
-> \Swagger\Client\Model\InlineResponse2002 updateProgramPlatformVersionBinary($body, $id_program, $id_platform, $id_version, $id_binary)
+> \Softonic\CatalogApiSdk\Client\Model\InlineResponse2002 updateProgramPlatformVersionBinary($body, $id_program, $id_platform, $id_version, $id_binary)
 
 Partially updates a ProgramPlatformVersionBinary
 
@@ -319,15 +319,15 @@ Partially updates a ProgramPlatformVersionBinary
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: softonic_auth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ProgramsPlatformsVersionsBinariesApi(
+$apiInstance = new Softonic\CatalogApiSdk\Client\Api\ProgramsPlatformsVersionsBinariesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\ProgramPlatformVersionBinary(); // \Swagger\Client\Model\ProgramPlatformVersionBinary | ProgramPlatformVersionBinary to be updated
+$body = new \Softonic\CatalogApiSdk\Client\Model\ProgramPlatformVersionBinary(); // \Softonic\CatalogApiSdk\Client\Model\ProgramPlatformVersionBinary | ProgramPlatformVersionBinary to be updated
 $id_program = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Program ID
 $id_platform = "id_platform_example"; // string | Platform ID
 $id_version = "id_version_example"; // string | Version ID
@@ -346,7 +346,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\ProgramPlatformVersionBinary**](../Model/ProgramPlatformVersionBinary.md)| ProgramPlatformVersionBinary to be updated |
+ **body** | [**\Softonic\CatalogApiSdk\Client\Model\ProgramPlatformVersionBinary**](../Model/ProgramPlatformVersionBinary.md)| ProgramPlatformVersionBinary to be updated |
  **id_program** | [**string**](../Model/.md)| Program ID |
  **id_platform** | **string**| Platform ID |
  **id_version** | **string**| Version ID |
@@ -354,7 +354,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
+[**\Softonic\CatalogApiSdk\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 

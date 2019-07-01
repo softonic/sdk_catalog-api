@@ -1,18 +1,18 @@
-# Swagger\Client\PlatformsVersionsApi
+# Softonic\CatalogApiSdk\PlatformsVersionsApi
 
-All URIs are relative to *http://my-default-host.com*
+All URIs are relative to *https://catalog-v4.sft.eu-west.sftapi.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createPlatformVersion**](PlatformsVersionsApi.md#createPlatformVersion) | **POST** /platforms/{id_platform}/versions | Creates a PlatformVersion
-[**deletePlatformVersion**](PlatformsVersionsApi.md#deletePlatformVersion) | **DELETE** /platforms/{id_platform}/versions/{id_version} | Deletes a PlatformVersion
-[**findPlatformVersion**](PlatformsVersionsApi.md#findPlatformVersion) | **GET** /platforms/{id_platform}/versions | Gets a PlatformVersion list
-[**readPlatformVersion**](PlatformsVersionsApi.md#readPlatformVersion) | **GET** /platforms/{id_platform}/versions/{id_version} | Fetches a single PlatformVersion
-[**replacePlatformVersion**](PlatformsVersionsApi.md#replacePlatformVersion) | **PUT** /platforms/{id_platform}/versions/{id_version} | Entirely replaces a PlatformVersion
-[**updatePlatformVersion**](PlatformsVersionsApi.md#updatePlatformVersion) | **PATCH** /platforms/{id_platform}/versions/{id_version} | Partially updates a PlatformVersion
+[**createPlatformVersion**](PlatformsVersionsApi.md#createplatformversion) | **POST** /platforms/{id_platform}/versions | Creates a PlatformVersion
+[**deletePlatformVersion**](PlatformsVersionsApi.md#deleteplatformversion) | **DELETE** /platforms/{id_platform}/versions/{id_version} | Deletes a PlatformVersion
+[**findPlatformVersion**](PlatformsVersionsApi.md#findplatformversion) | **GET** /platforms/{id_platform}/versions | Gets a PlatformVersion list
+[**readPlatformVersion**](PlatformsVersionsApi.md#readplatformversion) | **GET** /platforms/{id_platform}/versions/{id_version} | Fetches a single PlatformVersion
+[**replacePlatformVersion**](PlatformsVersionsApi.md#replaceplatformversion) | **PUT** /platforms/{id_platform}/versions/{id_version} | Entirely replaces a PlatformVersion
+[**updatePlatformVersion**](PlatformsVersionsApi.md#updateplatformversion) | **PATCH** /platforms/{id_platform}/versions/{id_version} | Partially updates a PlatformVersion
 
 # **createPlatformVersion**
-> \Swagger\Client\Model\InlineResponse201 createPlatformVersion($body, $id_platform)
+> \Softonic\CatalogApiSdk\Client\Model\InlineResponse201 createPlatformVersion($body, $id_platform)
 
 Creates a PlatformVersion
 
@@ -24,15 +24,15 @@ Creates a PlatformVersion
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: softonic_auth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PlatformsVersionsApi(
+$apiInstance = new Softonic\CatalogApiSdk\Client\Api\PlatformsVersionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\null(); //  | PlatformVersion to be created
+$body = new \Softonic\CatalogApiSdk\Client\Model\null(); //  | PlatformVersion to be created
 $id_platform = "id_platform_example"; // string | Platform ID
 
 try {
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse201**](../Model/InlineResponse201.md)
+[**\Softonic\CatalogApiSdk\Client\Model\InlineResponse201**](../Model/InlineResponse201.md)
 
 ### Authorization
 
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deletePlatformVersion**
-> \Swagger\Client\Model\InlineResponse2001 deletePlatformVersion($id_platform, $id_version)
+> \Softonic\CatalogApiSdk\Client\Model\InlineResponse2001 deletePlatformVersion($id_platform, $id_version)
 
 Deletes a PlatformVersion
 
@@ -79,9 +79,9 @@ Deletes a PlatformVersion
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: softonic_auth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PlatformsVersionsApi(
+$apiInstance = new Softonic\CatalogApiSdk\Client\Api\PlatformsVersionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -108,7 +108,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Softonic\CatalogApiSdk\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **findPlatformVersion**
-> \Swagger\Client\Model\PlatformVersion[] findPlatformVersion($id_platform)
+> \Softonic\CatalogApiSdk\Client\Model\PlatformVersion[] findPlatformVersion($id_platform)
 
 Gets a PlatformVersion list
 
@@ -134,9 +134,9 @@ Gets a PlatformVersion list
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: softonic_auth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PlatformsVersionsApi(
+$apiInstance = new Softonic\CatalogApiSdk\Client\Api\PlatformsVersionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PlatformVersion[]**](../Model/PlatformVersion.md)
+[**\Softonic\CatalogApiSdk\Client\Model\PlatformVersion[]**](../Model/PlatformVersion.md)
 
 ### Authorization
 
@@ -175,7 +175,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readPlatformVersion**
-> \Swagger\Client\Model\PlatformVersion readPlatformVersion($id_platform, $id_version)
+> \Softonic\CatalogApiSdk\Client\Model\PlatformVersion readPlatformVersion($id_platform, $id_version)
 
 Fetches a single PlatformVersion
 
@@ -187,9 +187,9 @@ Fetches a single PlatformVersion
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: softonic_auth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PlatformsVersionsApi(
+$apiInstance = new Softonic\CatalogApiSdk\Client\Api\PlatformsVersionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -216,7 +216,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PlatformVersion**](../Model/PlatformVersion.md)
+[**\Softonic\CatalogApiSdk\Client\Model\PlatformVersion**](../Model/PlatformVersion.md)
 
 ### Authorization
 
@@ -230,7 +230,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **replacePlatformVersion**
-> \Swagger\Client\Model\InlineResponse200 replacePlatformVersion($body, $id_platform, $id_version)
+> \Softonic\CatalogApiSdk\Client\Model\InlineResponse200 replacePlatformVersion($body, $id_platform, $id_version)
 
 Entirely replaces a PlatformVersion
 
@@ -242,15 +242,15 @@ Entirely replaces a PlatformVersion
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: softonic_auth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PlatformsVersionsApi(
+$apiInstance = new Softonic\CatalogApiSdk\Client\Api\PlatformsVersionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\null(); //  | PlatformVersion to be replaced
+$body = new \Softonic\CatalogApiSdk\Client\Model\null(); //  | PlatformVersion to be replaced
 $id_platform = "id_platform_example"; // string | Platform ID
 $id_version = "id_version_example"; // string | Platform version ID
 
@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Softonic\CatalogApiSdk\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
 
 ### Authorization
 
@@ -287,7 +287,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updatePlatformVersion**
-> \Swagger\Client\Model\InlineResponse2002 updatePlatformVersion($body, $id_platform, $id_version)
+> \Softonic\CatalogApiSdk\Client\Model\InlineResponse2002 updatePlatformVersion($body, $id_platform, $id_version)
 
 Partially updates a PlatformVersion
 
@@ -299,15 +299,15 @@ Partially updates a PlatformVersion
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: softonic_auth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PlatformsVersionsApi(
+$apiInstance = new Softonic\CatalogApiSdk\Client\Api\PlatformsVersionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\PlatformVersion(); // \Swagger\Client\Model\PlatformVersion | PlatformVersion to be updated
+$body = new \Softonic\CatalogApiSdk\Client\Model\PlatformVersion(); // \Softonic\CatalogApiSdk\Client\Model\PlatformVersion | PlatformVersion to be updated
 $id_platform = "id_platform_example"; // string | Platform ID
 $id_version = "id_version_example"; // string | Platform version ID
 
@@ -324,13 +324,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\PlatformVersion**](../Model/PlatformVersion.md)| PlatformVersion to be updated |
+ **body** | [**\Softonic\CatalogApiSdk\Client\Model\PlatformVersion**](../Model/PlatformVersion.md)| PlatformVersion to be updated |
  **id_platform** | **string**| Platform ID |
  **id_version** | **string**| Platform version ID |
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
+[**\Softonic\CatalogApiSdk\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 

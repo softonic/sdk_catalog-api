@@ -1,18 +1,18 @@
-# Swagger\Client\LicensesApi
+# Softonic\CatalogApiSdk\LicensesApi
 
-All URIs are relative to *http://my-default-host.com*
+All URIs are relative to *https://catalog-v4.sft.eu-west.sftapi.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createLicense**](LicensesApi.md#createLicense) | **POST** /licenses | Creates a License
-[**deleteLicense**](LicensesApi.md#deleteLicense) | **DELETE** /licenses/{id_license} | Deletes a License
-[**findLicense**](LicensesApi.md#findLicense) | **GET** /licenses | Gets a License list
-[**readLicense**](LicensesApi.md#readLicense) | **GET** /licenses/{id_license} | Fetches a single License
-[**replaceLicense**](LicensesApi.md#replaceLicense) | **PUT** /licenses/{id_license} | Entirely replaces a License
-[**updateLicense**](LicensesApi.md#updateLicense) | **PATCH** /licenses/{id_license} | Partially updates a License
+[**createLicense**](LicensesApi.md#createlicense) | **POST** /licenses | Creates a License
+[**deleteLicense**](LicensesApi.md#deletelicense) | **DELETE** /licenses/{id_license} | Deletes a License
+[**findLicense**](LicensesApi.md#findlicense) | **GET** /licenses | Gets a License list
+[**readLicense**](LicensesApi.md#readlicense) | **GET** /licenses/{id_license} | Fetches a single License
+[**replaceLicense**](LicensesApi.md#replacelicense) | **PUT** /licenses/{id_license} | Entirely replaces a License
+[**updateLicense**](LicensesApi.md#updatelicense) | **PATCH** /licenses/{id_license} | Partially updates a License
 
 # **createLicense**
-> \Swagger\Client\Model\InlineResponse201 createLicense($body)
+> \Softonic\CatalogApiSdk\Client\Model\InlineResponse201 createLicense($body)
 
 Creates a License
 
@@ -24,15 +24,15 @@ Creates a License
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: softonic_auth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\LicensesApi(
+$apiInstance = new Softonic\CatalogApiSdk\Client\Api\LicensesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\null(); //  | License to be created
+$body = new \Softonic\CatalogApiSdk\Client\Model\null(); //  | License to be created
 
 try {
     $result = $apiInstance->createLicense($body);
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse201**](../Model/InlineResponse201.md)
+[**\Softonic\CatalogApiSdk\Client\Model\InlineResponse201**](../Model/InlineResponse201.md)
 
 ### Authorization
 
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteLicense**
-> \Swagger\Client\Model\InlineResponse2001 deleteLicense($id_license)
+> \Softonic\CatalogApiSdk\Client\Model\InlineResponse2001 deleteLicense($id_license)
 
 Deletes a License
 
@@ -77,9 +77,9 @@ Deletes a License
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: softonic_auth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\LicensesApi(
+$apiInstance = new Softonic\CatalogApiSdk\Client\Api\LicensesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -104,7 +104,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Softonic\CatalogApiSdk\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **findLicense**
-> \Swagger\Client\Model\License[] findLicense()
+> \Softonic\CatalogApiSdk\Client\Model\License[] findLicense()
 
 Gets a License list
 
@@ -130,9 +130,9 @@ Gets a License list
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: softonic_auth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\LicensesApi(
+$apiInstance = new Softonic\CatalogApiSdk\Client\Api\LicensesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -153,7 +153,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\License[]**](../Model/License.md)
+[**\Softonic\CatalogApiSdk\Client\Model\License[]**](../Model/License.md)
 
 ### Authorization
 
@@ -167,7 +167,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readLicense**
-> \Swagger\Client\Model\License readLicense($id_license)
+> \Softonic\CatalogApiSdk\Client\Model\License readLicense($id_license)
 
 Fetches a single License
 
@@ -179,9 +179,9 @@ Fetches a single License
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: softonic_auth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\LicensesApi(
+$apiInstance = new Softonic\CatalogApiSdk\Client\Api\LicensesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -206,7 +206,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\License**](../Model/License.md)
+[**\Softonic\CatalogApiSdk\Client\Model\License**](../Model/License.md)
 
 ### Authorization
 
@@ -220,7 +220,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **replaceLicense**
-> \Swagger\Client\Model\InlineResponse200 replaceLicense($body, $id_license)
+> \Softonic\CatalogApiSdk\Client\Model\InlineResponse200 replaceLicense($body, $id_license)
 
 Entirely replaces a License
 
@@ -232,15 +232,15 @@ Entirely replaces a License
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: softonic_auth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\LicensesApi(
+$apiInstance = new Softonic\CatalogApiSdk\Client\Api\LicensesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\null(); //  | License to be replaced
+$body = new \Softonic\CatalogApiSdk\Client\Model\null(); //  | License to be replaced
 $id_license = "id_license_example"; // string | License ID
 
 try {
@@ -261,7 +261,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Softonic\CatalogApiSdk\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
 
 ### Authorization
 
@@ -275,7 +275,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateLicense**
-> \Swagger\Client\Model\InlineResponse2002 updateLicense($body, $id_license)
+> \Softonic\CatalogApiSdk\Client\Model\InlineResponse2002 updateLicense($body, $id_license)
 
 Partially updates a License
 
@@ -287,15 +287,15 @@ Partially updates a License
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: softonic_auth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\LicensesApi(
+$apiInstance = new Softonic\CatalogApiSdk\Client\Api\LicensesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\License(); // \Swagger\Client\Model\License | License to be updated
+$body = new \Softonic\CatalogApiSdk\Client\Model\License(); // \Softonic\CatalogApiSdk\Client\Model\License | License to be updated
 $id_license = "id_license_example"; // string | License ID
 
 try {
@@ -311,12 +311,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\License**](../Model/License.md)| License to be updated |
+ **body** | [**\Softonic\CatalogApiSdk\Client\Model\License**](../Model/License.md)| License to be updated |
  **id_license** | **string**| License ID |
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
+[**\Softonic\CatalogApiSdk\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 

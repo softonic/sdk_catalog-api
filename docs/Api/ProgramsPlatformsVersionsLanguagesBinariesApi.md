@@ -1,17 +1,17 @@
-# Swagger\Client\ProgramsPlatformsVersionsLanguagesBinariesApi
+# Softonic\CatalogApiSdk\ProgramsPlatformsVersionsLanguagesBinariesApi
 
-All URIs are relative to *http://my-default-host.com*
+All URIs are relative to *https://catalog-v4.sft.eu-west.sftapi.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createProgramPlatformVersionLanguageBinary**](ProgramsPlatformsVersionsLanguagesBinariesApi.md#createProgramPlatformVersionLanguageBinary) | **POST** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/binaries | Creates a ProgramPlatformVersionLanguageBinary
-[**deleteProgramPlatformVersionLanguageBinary**](ProgramsPlatformsVersionsLanguagesBinariesApi.md#deleteProgramPlatformVersionLanguageBinary) | **DELETE** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/binaries/{id_binary} | Deletes a ProgramPlatformVersionLanguageBinary
-[**findProgramPlatformVersionLanguageBinary**](ProgramsPlatformsVersionsLanguagesBinariesApi.md#findProgramPlatformVersionLanguageBinary) | **GET** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/binaries | Gets a ProgramPlatformVersionLanguageBinary list
-[**readProgramPlatformVersionLanguageBinary**](ProgramsPlatformsVersionsLanguagesBinariesApi.md#readProgramPlatformVersionLanguageBinary) | **GET** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/binaries/{id_binary} | Fetches a single ProgramPlatformVersionLanguageBinary
-[**replaceProgramPlatformVersionLanguageBinary**](ProgramsPlatformsVersionsLanguagesBinariesApi.md#replaceProgramPlatformVersionLanguageBinary) | **PUT** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/binaries/{id_binary} | Entirely replaces a ProgramPlatformVersionLanguageBinary
+[**createProgramPlatformVersionLanguageBinary**](ProgramsPlatformsVersionsLanguagesBinariesApi.md#createprogramplatformversionlanguagebinary) | **POST** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/binaries | Creates a ProgramPlatformVersionLanguageBinary
+[**deleteProgramPlatformVersionLanguageBinary**](ProgramsPlatformsVersionsLanguagesBinariesApi.md#deleteprogramplatformversionlanguagebinary) | **DELETE** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/binaries/{id_binary} | Deletes a ProgramPlatformVersionLanguageBinary
+[**findProgramPlatformVersionLanguageBinary**](ProgramsPlatformsVersionsLanguagesBinariesApi.md#findprogramplatformversionlanguagebinary) | **GET** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/binaries | Gets a ProgramPlatformVersionLanguageBinary list
+[**readProgramPlatformVersionLanguageBinary**](ProgramsPlatformsVersionsLanguagesBinariesApi.md#readprogramplatformversionlanguagebinary) | **GET** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/binaries/{id_binary} | Fetches a single ProgramPlatformVersionLanguageBinary
+[**replaceProgramPlatformVersionLanguageBinary**](ProgramsPlatformsVersionsLanguagesBinariesApi.md#replaceprogramplatformversionlanguagebinary) | **PUT** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/binaries/{id_binary} | Entirely replaces a ProgramPlatformVersionLanguageBinary
 
 # **createProgramPlatformVersionLanguageBinary**
-> \Swagger\Client\Model\InlineResponse201 createProgramPlatformVersionLanguageBinary($body, $id_program, $id_platform, $id_version, $id_language)
+> \Softonic\CatalogApiSdk\Client\Model\InlineResponse201 createProgramPlatformVersionLanguageBinary($body, $id_program, $id_platform, $id_version, $id_language)
 
 Creates a ProgramPlatformVersionLanguageBinary
 
@@ -23,15 +23,15 @@ Creates a ProgramPlatformVersionLanguageBinary
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: softonic_auth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ProgramsPlatformsVersionsLanguagesBinariesApi(
+$apiInstance = new Softonic\CatalogApiSdk\Client\Api\ProgramsPlatformsVersionsLanguagesBinariesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\null(); //  | ProgramPlatformVersionLanguageBinary to be created
+$body = new \Softonic\CatalogApiSdk\Client\Model\null(); //  | ProgramPlatformVersionLanguageBinary to be created
 $id_program = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Program ID
 $id_platform = "id_platform_example"; // string | Platform ID
 $id_version = "id_version_example"; // string | Version ID
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse201**](../Model/InlineResponse201.md)
+[**\Softonic\CatalogApiSdk\Client\Model\InlineResponse201**](../Model/InlineResponse201.md)
 
 ### Authorization
 
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteProgramPlatformVersionLanguageBinary**
-> \Swagger\Client\Model\InlineResponse2001 deleteProgramPlatformVersionLanguageBinary($id_program, $id_platform, $id_version, $id_language, $id_binary)
+> \Softonic\CatalogApiSdk\Client\Model\InlineResponse2001 deleteProgramPlatformVersionLanguageBinary($id_program, $id_platform, $id_version, $id_language, $id_binary)
 
 Deletes a ProgramPlatformVersionLanguageBinary
 
@@ -84,9 +84,9 @@ Deletes a ProgramPlatformVersionLanguageBinary
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: softonic_auth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ProgramsPlatformsVersionsLanguagesBinariesApi(
+$apiInstance = new Softonic\CatalogApiSdk\Client\Api\ProgramsPlatformsVersionsLanguagesBinariesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -119,7 +119,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Softonic\CatalogApiSdk\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -133,7 +133,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **findProgramPlatformVersionLanguageBinary**
-> \Swagger\Client\Model\ProgramPlatformVersionLanguageBinary[] findProgramPlatformVersionLanguageBinary($id_program, $id_platform, $id_version, $id_language)
+> \Softonic\CatalogApiSdk\Client\Model\ProgramPlatformVersionLanguageBinary[] findProgramPlatformVersionLanguageBinary($id_program, $id_platform, $id_version, $id_language)
 
 Gets a ProgramPlatformVersionLanguageBinary list
 
@@ -145,9 +145,9 @@ Gets a ProgramPlatformVersionLanguageBinary list
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: softonic_auth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ProgramsPlatformsVersionsLanguagesBinariesApi(
+$apiInstance = new Softonic\CatalogApiSdk\Client\Api\ProgramsPlatformsVersionsLanguagesBinariesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -178,7 +178,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ProgramPlatformVersionLanguageBinary[]**](../Model/ProgramPlatformVersionLanguageBinary.md)
+[**\Softonic\CatalogApiSdk\Client\Model\ProgramPlatformVersionLanguageBinary[]**](../Model/ProgramPlatformVersionLanguageBinary.md)
 
 ### Authorization
 
@@ -192,7 +192,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readProgramPlatformVersionLanguageBinary**
-> \Swagger\Client\Model\ProgramPlatformVersionLanguageBinary readProgramPlatformVersionLanguageBinary($id_program, $id_platform, $id_version, $id_language, $id_binary)
+> \Softonic\CatalogApiSdk\Client\Model\ProgramPlatformVersionLanguageBinary readProgramPlatformVersionLanguageBinary($id_program, $id_platform, $id_version, $id_language, $id_binary)
 
 Fetches a single ProgramPlatformVersionLanguageBinary
 
@@ -204,9 +204,9 @@ Fetches a single ProgramPlatformVersionLanguageBinary
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: softonic_auth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ProgramsPlatformsVersionsLanguagesBinariesApi(
+$apiInstance = new Softonic\CatalogApiSdk\Client\Api\ProgramsPlatformsVersionsLanguagesBinariesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -239,7 +239,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ProgramPlatformVersionLanguageBinary**](../Model/ProgramPlatformVersionLanguageBinary.md)
+[**\Softonic\CatalogApiSdk\Client\Model\ProgramPlatformVersionLanguageBinary**](../Model/ProgramPlatformVersionLanguageBinary.md)
 
 ### Authorization
 
@@ -253,7 +253,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **replaceProgramPlatformVersionLanguageBinary**
-> \Swagger\Client\Model\InlineResponse200 replaceProgramPlatformVersionLanguageBinary($id_program, $id_platform, $id_version, $id_language, $id_binary)
+> \Softonic\CatalogApiSdk\Client\Model\InlineResponse200 replaceProgramPlatformVersionLanguageBinary($id_program, $id_platform, $id_version, $id_language, $id_binary)
 
 Entirely replaces a ProgramPlatformVersionLanguageBinary
 
@@ -265,9 +265,9 @@ Entirely replaces a ProgramPlatformVersionLanguageBinary
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: softonic_auth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ProgramsPlatformsVersionsLanguagesBinariesApi(
+$apiInstance = new Softonic\CatalogApiSdk\Client\Api\ProgramsPlatformsVersionsLanguagesBinariesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -300,7 +300,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Softonic\CatalogApiSdk\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
 
 ### Authorization
 

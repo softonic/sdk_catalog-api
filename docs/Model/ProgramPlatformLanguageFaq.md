@@ -11,5 +11,5 @@ Name | Type | Description | Notes
 **answer** | **string** | Answer | [optional] 
 **priority** | **int** | Priority used to order the faqs | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

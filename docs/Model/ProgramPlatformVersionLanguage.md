@@ -11,5 +11,5 @@ Name | Type | Description | Notes
 **visible** | **bool** | Is version visible for this language? | [optional] 
 **about_license** | **string** | License extra information | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

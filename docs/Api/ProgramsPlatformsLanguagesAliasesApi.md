@@ -1,17 +1,17 @@
-# Swagger\Client\ProgramsPlatformsLanguagesAliasesApi
+# Softonic\CatalogApiSdk\ProgramsPlatformsLanguagesAliasesApi
 
-All URIs are relative to *http://my-default-host.com*
+All URIs are relative to *https://catalog-v4.sft.eu-west.sftapi.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createProgramPlatformLanguageAlias**](ProgramsPlatformsLanguagesAliasesApi.md#createProgramPlatformLanguageAlias) | **POST** /programs/{id_program}/platforms/{id_platform}/languages/{id_language}/aliases | Creates a ProgramPlatformLanguageAlias
-[**deleteProgramPlatformLanguageAlias**](ProgramsPlatformsLanguagesAliasesApi.md#deleteProgramPlatformLanguageAlias) | **DELETE** /programs/{id_program}/platforms/{id_platform}/languages/{id_language}/aliases/{id_alias} | Deletes a ProgramPlatformLanguageAlias
-[**findProgramPlatformLanguageAlias**](ProgramsPlatformsLanguagesAliasesApi.md#findProgramPlatformLanguageAlias) | **GET** /programs/{id_program}/platforms/{id_platform}/languages/{id_language}/aliases | Gets a ProgramPlatformLanguageAlias list
-[**readProgramPlatformLanguageAlias**](ProgramsPlatformsLanguagesAliasesApi.md#readProgramPlatformLanguageAlias) | **GET** /programs/{id_program}/platforms/{id_platform}/languages/{id_language}/aliases/{id_alias} | Fetches a single ProgramPlatformLanguageAlias
-[**replaceProgramPlatformLanguageAlias**](ProgramsPlatformsLanguagesAliasesApi.md#replaceProgramPlatformLanguageAlias) | **PUT** /programs/{id_program}/platforms/{id_platform}/languages/{id_language}/aliases/{id_alias} | Entirely replaces a ProgramPlatformLanguageAlias
+[**createProgramPlatformLanguageAlias**](ProgramsPlatformsLanguagesAliasesApi.md#createprogramplatformlanguagealias) | **POST** /programs/{id_program}/platforms/{id_platform}/languages/{id_language}/aliases | Creates a ProgramPlatformLanguageAlias
+[**deleteProgramPlatformLanguageAlias**](ProgramsPlatformsLanguagesAliasesApi.md#deleteprogramplatformlanguagealias) | **DELETE** /programs/{id_program}/platforms/{id_platform}/languages/{id_language}/aliases/{id_alias} | Deletes a ProgramPlatformLanguageAlias
+[**findProgramPlatformLanguageAlias**](ProgramsPlatformsLanguagesAliasesApi.md#findprogramplatformlanguagealias) | **GET** /programs/{id_program}/platforms/{id_platform}/languages/{id_language}/aliases | Gets a ProgramPlatformLanguageAlias list
+[**readProgramPlatformLanguageAlias**](ProgramsPlatformsLanguagesAliasesApi.md#readprogramplatformlanguagealias) | **GET** /programs/{id_program}/platforms/{id_platform}/languages/{id_language}/aliases/{id_alias} | Fetches a single ProgramPlatformLanguageAlias
+[**replaceProgramPlatformLanguageAlias**](ProgramsPlatformsLanguagesAliasesApi.md#replaceprogramplatformlanguagealias) | **PUT** /programs/{id_program}/platforms/{id_platform}/languages/{id_language}/aliases/{id_alias} | Entirely replaces a ProgramPlatformLanguageAlias
 
 # **createProgramPlatformLanguageAlias**
-> \Swagger\Client\Model\InlineResponse201 createProgramPlatformLanguageAlias($body, $id_program, $id_platform, $id_language)
+> \Softonic\CatalogApiSdk\Client\Model\InlineResponse201 createProgramPlatformLanguageAlias($body, $id_program, $id_platform, $id_language)
 
 Creates a ProgramPlatformLanguageAlias
 
@@ -23,15 +23,15 @@ Creates a ProgramPlatformLanguageAlias
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: softonic_auth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ProgramsPlatformsLanguagesAliasesApi(
+$apiInstance = new Softonic\CatalogApiSdk\Client\Api\ProgramsPlatformsLanguagesAliasesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\null(); //  | ProgramPlatformLanguageAlias to be created
+$body = new \Softonic\CatalogApiSdk\Client\Model\null(); //  | ProgramPlatformLanguageAlias to be created
 $id_program = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Program ID
 $id_platform = "id_platform_example"; // string | Platform ID
 $id_language = "id_language_example"; // string | Language ID
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse201**](../Model/InlineResponse201.md)
+[**\Softonic\CatalogApiSdk\Client\Model\InlineResponse201**](../Model/InlineResponse201.md)
 
 ### Authorization
 
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteProgramPlatformLanguageAlias**
-> \Swagger\Client\Model\InlineResponse2001 deleteProgramPlatformLanguageAlias($id_program, $id_platform, $id_language, $id_alias)
+> \Softonic\CatalogApiSdk\Client\Model\InlineResponse2001 deleteProgramPlatformLanguageAlias($id_program, $id_platform, $id_language, $id_alias)
 
 Deletes a ProgramPlatformLanguageAlias
 
@@ -82,9 +82,9 @@ Deletes a ProgramPlatformLanguageAlias
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: softonic_auth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ProgramsPlatformsLanguagesAliasesApi(
+$apiInstance = new Softonic\CatalogApiSdk\Client\Api\ProgramsPlatformsLanguagesAliasesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -115,7 +115,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Softonic\CatalogApiSdk\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -129,7 +129,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **findProgramPlatformLanguageAlias**
-> \Swagger\Client\Model\ProgramPlatformLanguageAlias[] findProgramPlatformLanguageAlias($id_program, $id_platform, $id_language, $active)
+> \Softonic\CatalogApiSdk\Client\Model\ProgramPlatformLanguageAlias[] findProgramPlatformLanguageAlias($id_program, $id_platform, $id_language, $active)
 
 Gets a ProgramPlatformLanguageAlias list
 
@@ -141,9 +141,9 @@ Gets a ProgramPlatformLanguageAlias list
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: softonic_auth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ProgramsPlatformsLanguagesAliasesApi(
+$apiInstance = new Softonic\CatalogApiSdk\Client\Api\ProgramsPlatformsLanguagesAliasesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -174,7 +174,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ProgramPlatformLanguageAlias[]**](../Model/ProgramPlatformLanguageAlias.md)
+[**\Softonic\CatalogApiSdk\Client\Model\ProgramPlatformLanguageAlias[]**](../Model/ProgramPlatformLanguageAlias.md)
 
 ### Authorization
 
@@ -188,7 +188,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readProgramPlatformLanguageAlias**
-> \Swagger\Client\Model\ProgramPlatformLanguageAlias readProgramPlatformLanguageAlias($id_program, $id_platform, $id_language, $id_alias)
+> \Softonic\CatalogApiSdk\Client\Model\ProgramPlatformLanguageAlias readProgramPlatformLanguageAlias($id_program, $id_platform, $id_language, $id_alias)
 
 Fetches a single ProgramPlatformLanguageAlias
 
@@ -200,9 +200,9 @@ Fetches a single ProgramPlatformLanguageAlias
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: softonic_auth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ProgramsPlatformsLanguagesAliasesApi(
+$apiInstance = new Softonic\CatalogApiSdk\Client\Api\ProgramsPlatformsLanguagesAliasesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -233,7 +233,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ProgramPlatformLanguageAlias**](../Model/ProgramPlatformLanguageAlias.md)
+[**\Softonic\CatalogApiSdk\Client\Model\ProgramPlatformLanguageAlias**](../Model/ProgramPlatformLanguageAlias.md)
 
 ### Authorization
 
@@ -247,7 +247,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **replaceProgramPlatformLanguageAlias**
-> \Swagger\Client\Model\InlineResponse200 replaceProgramPlatformLanguageAlias($id_program, $id_platform, $id_language, $id_alias)
+> \Softonic\CatalogApiSdk\Client\Model\InlineResponse200 replaceProgramPlatformLanguageAlias($id_program, $id_platform, $id_language, $id_alias)
 
 Entirely replaces a ProgramPlatformLanguageAlias
 
@@ -259,9 +259,9 @@ Entirely replaces a ProgramPlatformLanguageAlias
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: softonic_auth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ProgramsPlatformsLanguagesAliasesApi(
+$apiInstance = new Softonic\CatalogApiSdk\Client\Api\ProgramsPlatformsLanguagesAliasesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -292,7 +292,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Softonic\CatalogApiSdk\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
 
 ### Authorization
 

@@ -1,18 +1,18 @@
-# Swagger\Client\OrigingroupsApi
+# Softonic\CatalogApiSdk\OrigingroupsApi
 
-All URIs are relative to *http://my-default-host.com*
+All URIs are relative to *https://catalog-v4.sft.eu-west.sftapi.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createOrigingroup**](OrigingroupsApi.md#createOrigingroup) | **POST** /origingroups | Creates an Origingroup
-[**deleteOrigingroup**](OrigingroupsApi.md#deleteOrigingroup) | **DELETE** /origingroups/{id_origingroup} | Deletes an Origingroup
-[**findOrigingroups**](OrigingroupsApi.md#findOrigingroups) | **GET** /origingroups | Gets an Origingroup list
-[**readOrigingroup**](OrigingroupsApi.md#readOrigingroup) | **GET** /origingroups/{id_origingroup} | Fetches a single Origingroup
-[**replaceOrigingroup**](OrigingroupsApi.md#replaceOrigingroup) | **PUT** /origingroups/{id_origingroup} | Entirely replaces an Origingroup
-[**updateOrigingroup**](OrigingroupsApi.md#updateOrigingroup) | **PATCH** /origingroups/{id_origingroup} | Partially updates an Origingroup
+[**createOrigingroup**](OrigingroupsApi.md#createorigingroup) | **POST** /origingroups | Creates an Origingroup
+[**deleteOrigingroup**](OrigingroupsApi.md#deleteorigingroup) | **DELETE** /origingroups/{id_origingroup} | Deletes an Origingroup
+[**findOrigingroups**](OrigingroupsApi.md#findorigingroups) | **GET** /origingroups | Gets an Origingroup list
+[**readOrigingroup**](OrigingroupsApi.md#readorigingroup) | **GET** /origingroups/{id_origingroup} | Fetches a single Origingroup
+[**replaceOrigingroup**](OrigingroupsApi.md#replaceorigingroup) | **PUT** /origingroups/{id_origingroup} | Entirely replaces an Origingroup
+[**updateOrigingroup**](OrigingroupsApi.md#updateorigingroup) | **PATCH** /origingroups/{id_origingroup} | Partially updates an Origingroup
 
 # **createOrigingroup**
-> \Swagger\Client\Model\InlineResponse201 createOrigingroup($body)
+> \Softonic\CatalogApiSdk\Client\Model\InlineResponse201 createOrigingroup($body)
 
 Creates an Origingroup
 
@@ -24,15 +24,15 @@ Creates an Origingroup
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: softonic_auth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\OrigingroupsApi(
+$apiInstance = new Softonic\CatalogApiSdk\Client\Api\OrigingroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\null(); //  | Origingroup to be created
+$body = new \Softonic\CatalogApiSdk\Client\Model\null(); //  | Origingroup to be created
 
 try {
     $result = $apiInstance->createOrigingroup($body);
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse201**](../Model/InlineResponse201.md)
+[**\Softonic\CatalogApiSdk\Client\Model\InlineResponse201**](../Model/InlineResponse201.md)
 
 ### Authorization
 
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteOrigingroup**
-> \Swagger\Client\Model\InlineResponse2001 deleteOrigingroup($id_origingroup)
+> \Softonic\CatalogApiSdk\Client\Model\InlineResponse2001 deleteOrigingroup($id_origingroup)
 
 Deletes an Origingroup
 
@@ -77,9 +77,9 @@ Deletes an Origingroup
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: softonic_auth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\OrigingroupsApi(
+$apiInstance = new Softonic\CatalogApiSdk\Client\Api\OrigingroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -104,7 +104,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Softonic\CatalogApiSdk\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **findOrigingroups**
-> \Swagger\Client\Model\Origingroup[] findOrigingroups()
+> \Softonic\CatalogApiSdk\Client\Model\Origingroup[] findOrigingroups()
 
 Gets an Origingroup list
 
@@ -130,9 +130,9 @@ Gets an Origingroup list
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: softonic_auth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\OrigingroupsApi(
+$apiInstance = new Softonic\CatalogApiSdk\Client\Api\OrigingroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -153,7 +153,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\Origingroup[]**](../Model/Origingroup.md)
+[**\Softonic\CatalogApiSdk\Client\Model\Origingroup[]**](../Model/Origingroup.md)
 
 ### Authorization
 
@@ -167,7 +167,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readOrigingroup**
-> \Swagger\Client\Model\Origingroup readOrigingroup($id_origingroup)
+> \Softonic\CatalogApiSdk\Client\Model\Origingroup readOrigingroup($id_origingroup)
 
 Fetches a single Origingroup
 
@@ -179,9 +179,9 @@ Fetches a single Origingroup
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: softonic_auth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\OrigingroupsApi(
+$apiInstance = new Softonic\CatalogApiSdk\Client\Api\OrigingroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -206,7 +206,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Origingroup**](../Model/Origingroup.md)
+[**\Softonic\CatalogApiSdk\Client\Model\Origingroup**](../Model/Origingroup.md)
 
 ### Authorization
 
@@ -220,7 +220,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **replaceOrigingroup**
-> \Swagger\Client\Model\InlineResponse200 replaceOrigingroup($body, $id_origingroup)
+> \Softonic\CatalogApiSdk\Client\Model\InlineResponse200 replaceOrigingroup($body, $id_origingroup)
 
 Entirely replaces an Origingroup
 
@@ -232,15 +232,15 @@ Entirely replaces an Origingroup
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: softonic_auth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\OrigingroupsApi(
+$apiInstance = new Softonic\CatalogApiSdk\Client\Api\OrigingroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\null(); //  | Origingroup to be replaced
+$body = new \Softonic\CatalogApiSdk\Client\Model\null(); //  | Origingroup to be replaced
 $id_origingroup = "id_origingroup_example"; // string | Origin group ID
 
 try {
@@ -261,7 +261,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Softonic\CatalogApiSdk\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
 
 ### Authorization
 
@@ -275,7 +275,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateOrigingroup**
-> \Swagger\Client\Model\InlineResponse2002 updateOrigingroup($body, $id_origingroup)
+> \Softonic\CatalogApiSdk\Client\Model\InlineResponse2002 updateOrigingroup($body, $id_origingroup)
 
 Partially updates an Origingroup
 
@@ -287,15 +287,15 @@ Partially updates an Origingroup
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: softonic_auth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Softonic\CatalogApiSdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\OrigingroupsApi(
+$apiInstance = new Softonic\CatalogApiSdk\Client\Api\OrigingroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\Origingroup(); // \Swagger\Client\Model\Origingroup | Origingroup to be updated
+$body = new \Softonic\CatalogApiSdk\Client\Model\Origingroup(); // \Softonic\CatalogApiSdk\Client\Model\Origingroup | Origingroup to be updated
 $id_origingroup = "id_origingroup_example"; // string | Origin group ID
 
 try {
@@ -311,12 +311,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Origingroup**](../Model/Origingroup.md)| Origingroup to be updated |
+ **body** | [**\Softonic\CatalogApiSdk\Client\Model\Origingroup**](../Model/Origingroup.md)| Origingroup to be updated |
  **id_origingroup** | **string**| Origin group ID |
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
+[**\Softonic\CatalogApiSdk\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
