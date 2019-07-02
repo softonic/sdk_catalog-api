@@ -366,7 +366,7 @@ class ProgramsPlatformsUrltypesUrlsApi
             if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
                 $httpBody = \GuzzleHttp\json_encode($httpBody);
             }
-            elseif (('POST' === 'PUT' || 'POST' === 'POST') && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
+            elseif ((in_array("POST", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
                 $httpBody = json_encode($httpBody->toArray(true));
             }
         } elseif (count($formParams) > 0) {
@@ -692,7 +692,7 @@ class ProgramsPlatformsUrltypesUrlsApi
             if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
                 $httpBody = \GuzzleHttp\json_encode($httpBody);
             }
-            elseif (('DELETE' === 'PUT' || 'DELETE' === 'POST') && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
+            elseif ((in_array("DELETE", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
                 $httpBody = json_encode($httpBody->toArray(true));
             }
         } elseif (count($formParams) > 0) {
@@ -999,7 +999,7 @@ class ProgramsPlatformsUrltypesUrlsApi
             if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
                 $httpBody = \GuzzleHttp\json_encode($httpBody);
             }
-            elseif (('GET' === 'PUT' || 'GET' === 'POST') && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
+            elseif ((in_array("GET", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
                 $httpBody = json_encode($httpBody->toArray(true));
             }
         } elseif (count($formParams) > 0) {
@@ -1325,7 +1325,7 @@ class ProgramsPlatformsUrltypesUrlsApi
             if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
                 $httpBody = \GuzzleHttp\json_encode($httpBody);
             }
-            elseif (('GET' === 'PUT' || 'GET' === 'POST') && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
+            elseif ((in_array("GET", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
                 $httpBody = json_encode($httpBody->toArray(true));
             }
         } elseif (count($formParams) > 0) {
@@ -1665,7 +1665,7 @@ class ProgramsPlatformsUrltypesUrlsApi
             if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
                 $httpBody = \GuzzleHttp\json_encode($httpBody);
             }
-            elseif (('PUT' === 'PUT' || 'PUT' === 'POST') && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
+            elseif ((in_array("PUT", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
                 $httpBody = json_encode($httpBody->toArray(true));
             }
         } elseif (count($formParams) > 0) {
