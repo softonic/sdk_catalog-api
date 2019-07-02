@@ -347,6 +347,9 @@ class ProgramsPlatformsUrltypesApi
             if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
                 $httpBody = \GuzzleHttp\json_encode($httpBody);
             }
+            elseif (('POST' === 'PUT' || 'POST' === 'POST') && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
+                $httpBody = json_encode($httpBody->toArray(true));
+            }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
                 $multipartContents = [];
@@ -651,6 +654,9 @@ class ProgramsPlatformsUrltypesApi
             if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
                 $httpBody = \GuzzleHttp\json_encode($httpBody);
             }
+            elseif (('DELETE' === 'PUT' || 'DELETE' === 'POST') && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
+                $httpBody = json_encode($httpBody->toArray(true));
+            }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
                 $multipartContents = [];
@@ -935,6 +941,9 @@ class ProgramsPlatformsUrltypesApi
             // \stdClass has no __toString(), so we should encode it manually
             if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
                 $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+            elseif (('GET' === 'PUT' || 'GET' === 'POST') && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
+                $httpBody = json_encode($httpBody->toArray(true));
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1240,6 +1249,9 @@ class ProgramsPlatformsUrltypesApi
             if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
                 $httpBody = \GuzzleHttp\json_encode($httpBody);
             }
+            elseif (('GET' === 'PUT' || 'GET' === 'POST') && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
+                $httpBody = json_encode($httpBody->toArray(true));
+            }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
                 $multipartContents = [];
@@ -1543,6 +1555,9 @@ class ProgramsPlatformsUrltypesApi
             // \stdClass has no __toString(), so we should encode it manually
             if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
                 $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+            elseif (('PUT' === 'PUT' || 'PUT' === 'POST') && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
+                $httpBody = json_encode($httpBody->toArray(true));
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
