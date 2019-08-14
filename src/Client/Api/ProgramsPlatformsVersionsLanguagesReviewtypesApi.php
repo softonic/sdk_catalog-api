@@ -89,7 +89,7 @@ class ProgramsPlatformsVersionsLanguagesReviewtypesApi
     /**
      * Operation createProgramPlatformVersionLanguageReviewtype
      *
-     * Creates a ProgramPlatformVersionLanguageReviewtype
+     * Creates a      *   ProgramPlatformVersionLanguageReviewtype
      *
      * @param   $body ProgramPlatformVersionLanguageReviewtype to be created (required)
      * @param  string $id_program Program ID (required)
@@ -110,7 +110,7 @@ class ProgramsPlatformsVersionsLanguagesReviewtypesApi
     /**
      * Operation createProgramPlatformVersionLanguageReviewtypeWithHttpInfo
      *
-     * Creates a ProgramPlatformVersionLanguageReviewtype
+     * Creates a      *   ProgramPlatformVersionLanguageReviewtype
      *
      * @param   $body ProgramPlatformVersionLanguageReviewtype to be created (required)
      * @param  string $id_program Program ID (required)
@@ -197,7 +197,7 @@ class ProgramsPlatformsVersionsLanguagesReviewtypesApi
     /**
      * Operation createProgramPlatformVersionLanguageReviewtypeAsync
      *
-     * Creates a ProgramPlatformVersionLanguageReviewtype
+     * Creates a      *   ProgramPlatformVersionLanguageReviewtype
      *
      * @param   $body ProgramPlatformVersionLanguageReviewtype to be created (required)
      * @param  string $id_program Program ID (required)
@@ -221,7 +221,7 @@ class ProgramsPlatformsVersionsLanguagesReviewtypesApi
     /**
      * Operation createProgramPlatformVersionLanguageReviewtypeAsyncWithHttpInfo
      *
-     * Creates a ProgramPlatformVersionLanguageReviewtype
+     * Creates a      *   ProgramPlatformVersionLanguageReviewtype
      *
      * @param   $body ProgramPlatformVersionLanguageReviewtype to be created (required)
      * @param  string $id_program Program ID (required)
@@ -385,7 +385,7 @@ class ProgramsPlatformsVersionsLanguagesReviewtypesApi
             if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
                 $httpBody = \GuzzleHttp\json_encode($httpBody);
             }
-            elseif ((in_array("POST", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
+            elseif (in_array("POST", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
                 $httpBody = json_encode($httpBody->toArray(true));
             }
         } elseif (count($formParams) > 0) {
@@ -437,7 +437,7 @@ class ProgramsPlatformsVersionsLanguagesReviewtypesApi
     /**
      * Operation deleteProgramPlatformVersionLanguageReviewtype
      *
-     * Deletes a ProgramPlatformVersionLanguageReviewtype
+     * Deletes a      *   ProgramPlatformVersionLanguageReviewtype
      *
      * @param  string $id_program Program ID (required)
      * @param  string $id_platform Platform ID (required)
@@ -458,7 +458,7 @@ class ProgramsPlatformsVersionsLanguagesReviewtypesApi
     /**
      * Operation deleteProgramPlatformVersionLanguageReviewtypeWithHttpInfo
      *
-     * Deletes a ProgramPlatformVersionLanguageReviewtype
+     * Deletes a      *   ProgramPlatformVersionLanguageReviewtype
      *
      * @param  string $id_program Program ID (required)
      * @param  string $id_platform Platform ID (required)
@@ -537,7 +537,7 @@ class ProgramsPlatformsVersionsLanguagesReviewtypesApi
     /**
      * Operation deleteProgramPlatformVersionLanguageReviewtypeAsync
      *
-     * Deletes a ProgramPlatformVersionLanguageReviewtype
+     * Deletes a      *   ProgramPlatformVersionLanguageReviewtype
      *
      * @param  string $id_program Program ID (required)
      * @param  string $id_platform Platform ID (required)
@@ -561,7 +561,7 @@ class ProgramsPlatformsVersionsLanguagesReviewtypesApi
     /**
      * Operation deleteProgramPlatformVersionLanguageReviewtypeAsyncWithHttpInfo
      *
-     * Deletes a ProgramPlatformVersionLanguageReviewtype
+     * Deletes a      *   ProgramPlatformVersionLanguageReviewtype
      *
      * @param  string $id_program Program ID (required)
      * @param  string $id_platform Platform ID (required)
@@ -730,7 +730,7 @@ class ProgramsPlatformsVersionsLanguagesReviewtypesApi
             if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
                 $httpBody = \GuzzleHttp\json_encode($httpBody);
             }
-            elseif ((in_array("DELETE", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
+            elseif (in_array("DELETE", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
                 $httpBody = json_encode($httpBody->toArray(true));
             }
         } elseif (count($formParams) > 0) {
@@ -782,7 +782,7 @@ class ProgramsPlatformsVersionsLanguagesReviewtypesApi
     /**
      * Operation findProgramPlatformVersionLanguageReviewtype
      *
-     * Gets a ProgramPlatformVersionLanguageReviewtype list
+     * Gets a      *   ProgramPlatformVersionLanguageReviewtype list
      *
      * @param  string $id_program Program ID (required)
      * @param  string $id_platform Platform ID (required)
@@ -802,7 +802,7 @@ class ProgramsPlatformsVersionsLanguagesReviewtypesApi
     /**
      * Operation findProgramPlatformVersionLanguageReviewtypeWithHttpInfo
      *
-     * Gets a ProgramPlatformVersionLanguageReviewtype list
+     * Gets a      *   ProgramPlatformVersionLanguageReviewtype list
      *
      * @param  string $id_program Program ID (required)
      * @param  string $id_platform Platform ID (required)
@@ -880,7 +880,7 @@ class ProgramsPlatformsVersionsLanguagesReviewtypesApi
     /**
      * Operation findProgramPlatformVersionLanguageReviewtypeAsync
      *
-     * Gets a ProgramPlatformVersionLanguageReviewtype list
+     * Gets a      *   ProgramPlatformVersionLanguageReviewtype list
      *
      * @param  string $id_program Program ID (required)
      * @param  string $id_platform Platform ID (required)
@@ -903,7 +903,7 @@ class ProgramsPlatformsVersionsLanguagesReviewtypesApi
     /**
      * Operation findProgramPlatformVersionLanguageReviewtypeAsyncWithHttpInfo
      *
-     * Gets a ProgramPlatformVersionLanguageReviewtype list
+     * Gets a      *   ProgramPlatformVersionLanguageReviewtype list
      *
      * @param  string $id_program Program ID (required)
      * @param  string $id_platform Platform ID (required)
@@ -1056,7 +1056,7 @@ class ProgramsPlatformsVersionsLanguagesReviewtypesApi
             if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
                 $httpBody = \GuzzleHttp\json_encode($httpBody);
             }
-            elseif ((in_array("GET", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
+            elseif (in_array("GET", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
                 $httpBody = json_encode($httpBody->toArray(true));
             }
         } elseif (count($formParams) > 0) {
@@ -1108,7 +1108,7 @@ class ProgramsPlatformsVersionsLanguagesReviewtypesApi
     /**
      * Operation readProgramPlatformVersionLanguageReviewtype
      *
-     * Fetches a single ProgramPlatformVersionLanguageReviewtype
+     * Fetches a single      *   ProgramPlatformVersionLanguageReviewtype
      *
      * @param  string $id_program Program ID (required)
      * @param  string $id_platform Platform ID (required)
@@ -1129,7 +1129,7 @@ class ProgramsPlatformsVersionsLanguagesReviewtypesApi
     /**
      * Operation readProgramPlatformVersionLanguageReviewtypeWithHttpInfo
      *
-     * Fetches a single ProgramPlatformVersionLanguageReviewtype
+     * Fetches a single      *   ProgramPlatformVersionLanguageReviewtype
      *
      * @param  string $id_program Program ID (required)
      * @param  string $id_platform Platform ID (required)
@@ -1208,7 +1208,7 @@ class ProgramsPlatformsVersionsLanguagesReviewtypesApi
     /**
      * Operation readProgramPlatformVersionLanguageReviewtypeAsync
      *
-     * Fetches a single ProgramPlatformVersionLanguageReviewtype
+     * Fetches a single      *   ProgramPlatformVersionLanguageReviewtype
      *
      * @param  string $id_program Program ID (required)
      * @param  string $id_platform Platform ID (required)
@@ -1232,7 +1232,7 @@ class ProgramsPlatformsVersionsLanguagesReviewtypesApi
     /**
      * Operation readProgramPlatformVersionLanguageReviewtypeAsyncWithHttpInfo
      *
-     * Fetches a single ProgramPlatformVersionLanguageReviewtype
+     * Fetches a single      *   ProgramPlatformVersionLanguageReviewtype
      *
      * @param  string $id_program Program ID (required)
      * @param  string $id_platform Platform ID (required)
@@ -1401,7 +1401,7 @@ class ProgramsPlatformsVersionsLanguagesReviewtypesApi
             if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
                 $httpBody = \GuzzleHttp\json_encode($httpBody);
             }
-            elseif ((in_array("GET", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
+            elseif (in_array("GET", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
                 $httpBody = json_encode($httpBody->toArray(true));
             }
         } elseif (count($formParams) > 0) {
@@ -1453,7 +1453,7 @@ class ProgramsPlatformsVersionsLanguagesReviewtypesApi
     /**
      * Operation replaceProgramPlatformVersionLanguageReviewtype
      *
-     * Entirely replaces a ProgramPlatformVersionLanguageReviewtype
+     * Entirely replaces a      *   ProgramPlatformVersionLanguageReviewtype
      *
      * @param   $body ProgramPlatformVersionLanguageReviewtype to be replaced (required)
      * @param  string $id_program Program ID (required)
@@ -1475,7 +1475,7 @@ class ProgramsPlatformsVersionsLanguagesReviewtypesApi
     /**
      * Operation replaceProgramPlatformVersionLanguageReviewtypeWithHttpInfo
      *
-     * Entirely replaces a ProgramPlatformVersionLanguageReviewtype
+     * Entirely replaces a      *   ProgramPlatformVersionLanguageReviewtype
      *
      * @param   $body ProgramPlatformVersionLanguageReviewtype to be replaced (required)
      * @param  string $id_program Program ID (required)
@@ -1555,7 +1555,7 @@ class ProgramsPlatformsVersionsLanguagesReviewtypesApi
     /**
      * Operation replaceProgramPlatformVersionLanguageReviewtypeAsync
      *
-     * Entirely replaces a ProgramPlatformVersionLanguageReviewtype
+     * Entirely replaces a      *   ProgramPlatformVersionLanguageReviewtype
      *
      * @param   $body ProgramPlatformVersionLanguageReviewtype to be replaced (required)
      * @param  string $id_program Program ID (required)
@@ -1580,7 +1580,7 @@ class ProgramsPlatformsVersionsLanguagesReviewtypesApi
     /**
      * Operation replaceProgramPlatformVersionLanguageReviewtypeAsyncWithHttpInfo
      *
-     * Entirely replaces a ProgramPlatformVersionLanguageReviewtype
+     * Entirely replaces a      *   ProgramPlatformVersionLanguageReviewtype
      *
      * @param   $body ProgramPlatformVersionLanguageReviewtype to be replaced (required)
      * @param  string $id_program Program ID (required)
@@ -1760,7 +1760,7 @@ class ProgramsPlatformsVersionsLanguagesReviewtypesApi
             if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
                 $httpBody = \GuzzleHttp\json_encode($httpBody);
             }
-            elseif ((in_array("PUT", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
+            elseif (in_array("PUT", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
                 $httpBody = json_encode($httpBody->toArray(true));
             }
         } elseif (count($formParams) > 0) {
@@ -1812,7 +1812,7 @@ class ProgramsPlatformsVersionsLanguagesReviewtypesApi
     /**
      * Operation updateProgramPlatformVersionLanguageReviewtype
      *
-     * Partially updates a ProgramPlatformVersionLanguageReviewtype
+     * Partially updates a      *   ProgramPlatformVersionLanguageReviewtype
      *
      * @param  \Softonic\CatalogApiSdk\Client\Model\ProgramPlatformVersionLanguageReviewtype $body ProgramPlatformVersionLanguageReviewtype to be updated (required)
      * @param  string $id_program Program ID (required)
@@ -1834,7 +1834,7 @@ class ProgramsPlatformsVersionsLanguagesReviewtypesApi
     /**
      * Operation updateProgramPlatformVersionLanguageReviewtypeWithHttpInfo
      *
-     * Partially updates a ProgramPlatformVersionLanguageReviewtype
+     * Partially updates a      *   ProgramPlatformVersionLanguageReviewtype
      *
      * @param  \Softonic\CatalogApiSdk\Client\Model\ProgramPlatformVersionLanguageReviewtype $body ProgramPlatformVersionLanguageReviewtype to be updated (required)
      * @param  string $id_program Program ID (required)
@@ -1914,7 +1914,7 @@ class ProgramsPlatformsVersionsLanguagesReviewtypesApi
     /**
      * Operation updateProgramPlatformVersionLanguageReviewtypeAsync
      *
-     * Partially updates a ProgramPlatformVersionLanguageReviewtype
+     * Partially updates a      *   ProgramPlatformVersionLanguageReviewtype
      *
      * @param  \Softonic\CatalogApiSdk\Client\Model\ProgramPlatformVersionLanguageReviewtype $body ProgramPlatformVersionLanguageReviewtype to be updated (required)
      * @param  string $id_program Program ID (required)
@@ -1939,7 +1939,7 @@ class ProgramsPlatformsVersionsLanguagesReviewtypesApi
     /**
      * Operation updateProgramPlatformVersionLanguageReviewtypeAsyncWithHttpInfo
      *
-     * Partially updates a ProgramPlatformVersionLanguageReviewtype
+     * Partially updates a      *   ProgramPlatformVersionLanguageReviewtype
      *
      * @param  \Softonic\CatalogApiSdk\Client\Model\ProgramPlatformVersionLanguageReviewtype $body ProgramPlatformVersionLanguageReviewtype to be updated (required)
      * @param  string $id_program Program ID (required)
@@ -2119,7 +2119,7 @@ class ProgramsPlatformsVersionsLanguagesReviewtypesApi
             if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
                 $httpBody = \GuzzleHttp\json_encode($httpBody);
             }
-            elseif ((in_array("PATCH", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
+            elseif (in_array("PATCH", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
                 $httpBody = json_encode($httpBody->toArray(true));
             }
         } elseif (count($formParams) > 0) {

@@ -385,7 +385,7 @@ class ProgramsPlatformsVersionsLanguagesImagesApi
             if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
                 $httpBody = \GuzzleHttp\json_encode($httpBody);
             }
-            elseif ((in_array("POST", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
+            elseif (in_array("POST", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
                 $httpBody = json_encode($httpBody->toArray(true));
             }
         } elseif (count($formParams) > 0) {
@@ -437,7 +437,7 @@ class ProgramsPlatformsVersionsLanguagesImagesApi
     /**
      * Operation deleteProgramPlatformVersionLanguageImage
      *
-     * Deletes a ProgramPlatformVersionLanguageImage
+     * Deletes a      *   ProgramPlatformVersionLanguageImage
      *
      * @param  string $id_program Program ID (required)
      * @param  string $id_platform Platform ID (required)
@@ -458,7 +458,7 @@ class ProgramsPlatformsVersionsLanguagesImagesApi
     /**
      * Operation deleteProgramPlatformVersionLanguageImageWithHttpInfo
      *
-     * Deletes a ProgramPlatformVersionLanguageImage
+     * Deletes a      *   ProgramPlatformVersionLanguageImage
      *
      * @param  string $id_program Program ID (required)
      * @param  string $id_platform Platform ID (required)
@@ -537,7 +537,7 @@ class ProgramsPlatformsVersionsLanguagesImagesApi
     /**
      * Operation deleteProgramPlatformVersionLanguageImageAsync
      *
-     * Deletes a ProgramPlatformVersionLanguageImage
+     * Deletes a      *   ProgramPlatformVersionLanguageImage
      *
      * @param  string $id_program Program ID (required)
      * @param  string $id_platform Platform ID (required)
@@ -561,7 +561,7 @@ class ProgramsPlatformsVersionsLanguagesImagesApi
     /**
      * Operation deleteProgramPlatformVersionLanguageImageAsyncWithHttpInfo
      *
-     * Deletes a ProgramPlatformVersionLanguageImage
+     * Deletes a      *   ProgramPlatformVersionLanguageImage
      *
      * @param  string $id_program Program ID (required)
      * @param  string $id_platform Platform ID (required)
@@ -730,7 +730,7 @@ class ProgramsPlatformsVersionsLanguagesImagesApi
             if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
                 $httpBody = \GuzzleHttp\json_encode($httpBody);
             }
-            elseif ((in_array("DELETE", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
+            elseif (in_array("DELETE", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
                 $httpBody = json_encode($httpBody->toArray(true));
             }
         } elseif (count($formParams) > 0) {
@@ -1056,7 +1056,7 @@ class ProgramsPlatformsVersionsLanguagesImagesApi
             if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
                 $httpBody = \GuzzleHttp\json_encode($httpBody);
             }
-            elseif ((in_array("GET", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
+            elseif (in_array("GET", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
                 $httpBody = json_encode($httpBody->toArray(true));
             }
         } elseif (count($formParams) > 0) {
@@ -1108,7 +1108,7 @@ class ProgramsPlatformsVersionsLanguagesImagesApi
     /**
      * Operation readProgramPlatformVersionLanguageImage
      *
-     * Fetches a single ProgramPlatformVersionLanguageImage
+     * Fetches a single      *   ProgramPlatformVersionLanguageImage
      *
      * @param  string $id_program Program ID (required)
      * @param  string $id_platform Platform ID (required)
@@ -1129,7 +1129,7 @@ class ProgramsPlatformsVersionsLanguagesImagesApi
     /**
      * Operation readProgramPlatformVersionLanguageImageWithHttpInfo
      *
-     * Fetches a single ProgramPlatformVersionLanguageImage
+     * Fetches a single      *   ProgramPlatformVersionLanguageImage
      *
      * @param  string $id_program Program ID (required)
      * @param  string $id_platform Platform ID (required)
@@ -1208,7 +1208,7 @@ class ProgramsPlatformsVersionsLanguagesImagesApi
     /**
      * Operation readProgramPlatformVersionLanguageImageAsync
      *
-     * Fetches a single ProgramPlatformVersionLanguageImage
+     * Fetches a single      *   ProgramPlatformVersionLanguageImage
      *
      * @param  string $id_program Program ID (required)
      * @param  string $id_platform Platform ID (required)
@@ -1232,7 +1232,7 @@ class ProgramsPlatformsVersionsLanguagesImagesApi
     /**
      * Operation readProgramPlatformVersionLanguageImageAsyncWithHttpInfo
      *
-     * Fetches a single ProgramPlatformVersionLanguageImage
+     * Fetches a single      *   ProgramPlatformVersionLanguageImage
      *
      * @param  string $id_program Program ID (required)
      * @param  string $id_platform Platform ID (required)
@@ -1401,7 +1401,7 @@ class ProgramsPlatformsVersionsLanguagesImagesApi
             if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
                 $httpBody = \GuzzleHttp\json_encode($httpBody);
             }
-            elseif ((in_array("GET", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
+            elseif (in_array("GET", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
                 $httpBody = json_encode($httpBody->toArray(true));
             }
         } elseif (count($formParams) > 0) {
@@ -1453,7 +1453,7 @@ class ProgramsPlatformsVersionsLanguagesImagesApi
     /**
      * Operation replaceProgramPlatformVersionLanguageImage
      *
-     * Entirely replaces a ProgramPlatformVersionLanguageImage
+     * Entirely replaces a      *   ProgramPlatformVersionLanguageImage
      *
      * @param   $body ProgramPlatformVersionLanguageImage to be replaced (required)
      * @param  string $id_program Program ID (required)
@@ -1475,7 +1475,7 @@ class ProgramsPlatformsVersionsLanguagesImagesApi
     /**
      * Operation replaceProgramPlatformVersionLanguageImageWithHttpInfo
      *
-     * Entirely replaces a ProgramPlatformVersionLanguageImage
+     * Entirely replaces a      *   ProgramPlatformVersionLanguageImage
      *
      * @param   $body ProgramPlatformVersionLanguageImage to be replaced (required)
      * @param  string $id_program Program ID (required)
@@ -1555,7 +1555,7 @@ class ProgramsPlatformsVersionsLanguagesImagesApi
     /**
      * Operation replaceProgramPlatformVersionLanguageImageAsync
      *
-     * Entirely replaces a ProgramPlatformVersionLanguageImage
+     * Entirely replaces a      *   ProgramPlatformVersionLanguageImage
      *
      * @param   $body ProgramPlatformVersionLanguageImage to be replaced (required)
      * @param  string $id_program Program ID (required)
@@ -1580,7 +1580,7 @@ class ProgramsPlatformsVersionsLanguagesImagesApi
     /**
      * Operation replaceProgramPlatformVersionLanguageImageAsyncWithHttpInfo
      *
-     * Entirely replaces a ProgramPlatformVersionLanguageImage
+     * Entirely replaces a      *   ProgramPlatformVersionLanguageImage
      *
      * @param   $body ProgramPlatformVersionLanguageImage to be replaced (required)
      * @param  string $id_program Program ID (required)
@@ -1760,7 +1760,7 @@ class ProgramsPlatformsVersionsLanguagesImagesApi
             if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
                 $httpBody = \GuzzleHttp\json_encode($httpBody);
             }
-            elseif ((in_array("PUT", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
+            elseif (in_array("PUT", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
                 $httpBody = json_encode($httpBody->toArray(true));
             }
         } elseif (count($formParams) > 0) {
@@ -1812,7 +1812,7 @@ class ProgramsPlatformsVersionsLanguagesImagesApi
     /**
      * Operation updateProgramPlatformVersionLanguageImage
      *
-     * Partially updates a ProgramPlatformVersionLanguageImage
+     * Partially updates a      *   ProgramPlatformVersionLanguageImage
      *
      * @param  \Softonic\CatalogApiSdk\Client\Model\ProgramPlatformVersionLanguageImage $body ProgramPlatformVersionLanguageImage to be updated (required)
      * @param  string $id_program Program ID (required)
@@ -1834,7 +1834,7 @@ class ProgramsPlatformsVersionsLanguagesImagesApi
     /**
      * Operation updateProgramPlatformVersionLanguageImageWithHttpInfo
      *
-     * Partially updates a ProgramPlatformVersionLanguageImage
+     * Partially updates a      *   ProgramPlatformVersionLanguageImage
      *
      * @param  \Softonic\CatalogApiSdk\Client\Model\ProgramPlatformVersionLanguageImage $body ProgramPlatformVersionLanguageImage to be updated (required)
      * @param  string $id_program Program ID (required)
@@ -1914,7 +1914,7 @@ class ProgramsPlatformsVersionsLanguagesImagesApi
     /**
      * Operation updateProgramPlatformVersionLanguageImageAsync
      *
-     * Partially updates a ProgramPlatformVersionLanguageImage
+     * Partially updates a      *   ProgramPlatformVersionLanguageImage
      *
      * @param  \Softonic\CatalogApiSdk\Client\Model\ProgramPlatformVersionLanguageImage $body ProgramPlatformVersionLanguageImage to be updated (required)
      * @param  string $id_program Program ID (required)
@@ -1939,7 +1939,7 @@ class ProgramsPlatformsVersionsLanguagesImagesApi
     /**
      * Operation updateProgramPlatformVersionLanguageImageAsyncWithHttpInfo
      *
-     * Partially updates a ProgramPlatformVersionLanguageImage
+     * Partially updates a      *   ProgramPlatformVersionLanguageImage
      *
      * @param  \Softonic\CatalogApiSdk\Client\Model\ProgramPlatformVersionLanguageImage $body ProgramPlatformVersionLanguageImage to be updated (required)
      * @param  string $id_program Program ID (required)
@@ -2119,7 +2119,7 @@ class ProgramsPlatformsVersionsLanguagesImagesApi
             if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
                 $httpBody = \GuzzleHttp\json_encode($httpBody);
             }
-            elseif ((in_array("PATCH", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
+            elseif (in_array("PATCH", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
                 $httpBody = json_encode($httpBody->toArray(true));
             }
         } elseif (count($formParams) > 0) {

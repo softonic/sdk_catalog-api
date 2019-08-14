@@ -78,7 +78,7 @@ class ProgramPlatformVersionBinary implements ModelInterface, ArrayAccess, JsonS
         'id_program' => 'uuid',
 'id_platform' => null,
 'id_version' => 'versionSlug',
-'id_binary' => null,
+'id_binary' => 'sha1',
 'type' => null,
 'created_at' => null    ];
 
@@ -239,22 +239,6 @@ self::TYPE__64BITS,        ];
     public function listInvalidUnrequiredProperties()
     {
         $invalidProperties = [];
-        if (
-            array_key_exists('id_binary', $this->container)
-            && $this->container['id_binary'] !== null
-            && (strlen($this->container['id_binary']) > 40)
-        ) {
-            $invalidProperties[] = "invalid value for 'id_binary', the character length must be smaller than or equal to 40.";
-        }
-
-        if (
-            array_key_exists('id_binary', $this->container)
-            && $this->container['id_binary'] !== null
-            && (strlen($this->container['id_binary']) < 40)
-        ) {
-            $invalidProperties[] = "invalid value for 'id_binary', the character length must be bigger than or equal to 40.";
-        }
-
         $allowedValues = $this->getTypeAllowableValues();
         if (
             array_key_exists('type', $this->container)

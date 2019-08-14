@@ -250,7 +250,7 @@ null;
     /**
      * Sets message
      *
-     * @param string $message The response is error if it already exists or the alias is already active for another program
+     * @param string $message The response is error if it already exists or the alias is already active for another      *           program
      *
      * @return $this
      */

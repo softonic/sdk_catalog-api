@@ -385,7 +385,7 @@ class ProgramsPlatformsVersionsLanguagesBinariesApi
             if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
                 $httpBody = \GuzzleHttp\json_encode($httpBody);
             }
-            elseif ((in_array("POST", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
+            elseif (in_array("POST", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
                 $httpBody = json_encode($httpBody->toArray(true));
             }
         } elseif (count($formParams) > 0) {
@@ -437,7 +437,7 @@ class ProgramsPlatformsVersionsLanguagesBinariesApi
     /**
      * Operation deleteProgramPlatformVersionLanguageBinary
      *
-     * Deletes a ProgramPlatformVersionLanguageBinary
+     * Deletes a      *   ProgramPlatformVersionLanguageBinary
      *
      * @param  string $id_program Program ID (required)
      * @param  string $id_platform Platform ID (required)
@@ -458,7 +458,7 @@ class ProgramsPlatformsVersionsLanguagesBinariesApi
     /**
      * Operation deleteProgramPlatformVersionLanguageBinaryWithHttpInfo
      *
-     * Deletes a ProgramPlatformVersionLanguageBinary
+     * Deletes a      *   ProgramPlatformVersionLanguageBinary
      *
      * @param  string $id_program Program ID (required)
      * @param  string $id_platform Platform ID (required)
@@ -537,7 +537,7 @@ class ProgramsPlatformsVersionsLanguagesBinariesApi
     /**
      * Operation deleteProgramPlatformVersionLanguageBinaryAsync
      *
-     * Deletes a ProgramPlatformVersionLanguageBinary
+     * Deletes a      *   ProgramPlatformVersionLanguageBinary
      *
      * @param  string $id_program Program ID (required)
      * @param  string $id_platform Platform ID (required)
@@ -561,7 +561,7 @@ class ProgramsPlatformsVersionsLanguagesBinariesApi
     /**
      * Operation deleteProgramPlatformVersionLanguageBinaryAsyncWithHttpInfo
      *
-     * Deletes a ProgramPlatformVersionLanguageBinary
+     * Deletes a      *   ProgramPlatformVersionLanguageBinary
      *
      * @param  string $id_program Program ID (required)
      * @param  string $id_platform Platform ID (required)
@@ -730,7 +730,7 @@ class ProgramsPlatformsVersionsLanguagesBinariesApi
             if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
                 $httpBody = \GuzzleHttp\json_encode($httpBody);
             }
-            elseif ((in_array("DELETE", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
+            elseif (in_array("DELETE", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
                 $httpBody = json_encode($httpBody->toArray(true));
             }
         } elseif (count($formParams) > 0) {
@@ -1056,7 +1056,7 @@ class ProgramsPlatformsVersionsLanguagesBinariesApi
             if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
                 $httpBody = \GuzzleHttp\json_encode($httpBody);
             }
-            elseif ((in_array("GET", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
+            elseif (in_array("GET", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
                 $httpBody = json_encode($httpBody->toArray(true));
             }
         } elseif (count($formParams) > 0) {
@@ -1108,7 +1108,7 @@ class ProgramsPlatformsVersionsLanguagesBinariesApi
     /**
      * Operation readProgramPlatformVersionLanguageBinary
      *
-     * Fetches a single ProgramPlatformVersionLanguageBinary
+     * Fetches a single      *   ProgramPlatformVersionLanguageBinary
      *
      * @param  string $id_program Program ID (required)
      * @param  string $id_platform Platform ID (required)
@@ -1129,7 +1129,7 @@ class ProgramsPlatformsVersionsLanguagesBinariesApi
     /**
      * Operation readProgramPlatformVersionLanguageBinaryWithHttpInfo
      *
-     * Fetches a single ProgramPlatformVersionLanguageBinary
+     * Fetches a single      *   ProgramPlatformVersionLanguageBinary
      *
      * @param  string $id_program Program ID (required)
      * @param  string $id_platform Platform ID (required)
@@ -1208,7 +1208,7 @@ class ProgramsPlatformsVersionsLanguagesBinariesApi
     /**
      * Operation readProgramPlatformVersionLanguageBinaryAsync
      *
-     * Fetches a single ProgramPlatformVersionLanguageBinary
+     * Fetches a single      *   ProgramPlatformVersionLanguageBinary
      *
      * @param  string $id_program Program ID (required)
      * @param  string $id_platform Platform ID (required)
@@ -1232,7 +1232,7 @@ class ProgramsPlatformsVersionsLanguagesBinariesApi
     /**
      * Operation readProgramPlatformVersionLanguageBinaryAsyncWithHttpInfo
      *
-     * Fetches a single ProgramPlatformVersionLanguageBinary
+     * Fetches a single      *   ProgramPlatformVersionLanguageBinary
      *
      * @param  string $id_program Program ID (required)
      * @param  string $id_platform Platform ID (required)
@@ -1401,7 +1401,7 @@ class ProgramsPlatformsVersionsLanguagesBinariesApi
             if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
                 $httpBody = \GuzzleHttp\json_encode($httpBody);
             }
-            elseif ((in_array("GET", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
+            elseif (in_array("GET", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
                 $httpBody = json_encode($httpBody->toArray(true));
             }
         } elseif (count($formParams) > 0) {
@@ -1453,7 +1453,7 @@ class ProgramsPlatformsVersionsLanguagesBinariesApi
     /**
      * Operation replaceProgramPlatformVersionLanguageBinary
      *
-     * Entirely replaces a ProgramPlatformVersionLanguageBinary
+     * Entirely replaces a      *   ProgramPlatformVersionLanguageBinary
      *
      * @param  string $id_program Program ID (required)
      * @param  string $id_platform Platform ID (required)
@@ -1474,7 +1474,7 @@ class ProgramsPlatformsVersionsLanguagesBinariesApi
     /**
      * Operation replaceProgramPlatformVersionLanguageBinaryWithHttpInfo
      *
-     * Entirely replaces a ProgramPlatformVersionLanguageBinary
+     * Entirely replaces a      *   ProgramPlatformVersionLanguageBinary
      *
      * @param  string $id_program Program ID (required)
      * @param  string $id_platform Platform ID (required)
@@ -1553,7 +1553,7 @@ class ProgramsPlatformsVersionsLanguagesBinariesApi
     /**
      * Operation replaceProgramPlatformVersionLanguageBinaryAsync
      *
-     * Entirely replaces a ProgramPlatformVersionLanguageBinary
+     * Entirely replaces a      *   ProgramPlatformVersionLanguageBinary
      *
      * @param  string $id_program Program ID (required)
      * @param  string $id_platform Platform ID (required)
@@ -1577,7 +1577,7 @@ class ProgramsPlatformsVersionsLanguagesBinariesApi
     /**
      * Operation replaceProgramPlatformVersionLanguageBinaryAsyncWithHttpInfo
      *
-     * Entirely replaces a ProgramPlatformVersionLanguageBinary
+     * Entirely replaces a      *   ProgramPlatformVersionLanguageBinary
      *
      * @param  string $id_program Program ID (required)
      * @param  string $id_platform Platform ID (required)
@@ -1746,7 +1746,7 @@ class ProgramsPlatformsVersionsLanguagesBinariesApi
             if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
                 $httpBody = \GuzzleHttp\json_encode($httpBody);
             }
-            elseif ((in_array("PUT", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
+            elseif (in_array("PUT", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
                 $httpBody = json_encode($httpBody->toArray(true));
             }
         } elseif (count($formParams) > 0) {

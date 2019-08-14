@@ -5,10 +5,10 @@ All URIs are relative to *https://catalog-v4.sft.eu-west.sftapi.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createProgramPlatformVersionLanguageBinary**](ProgramsPlatformsVersionsLanguagesBinariesApi.md#createprogramplatformversionlanguagebinary) | **POST** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/binaries | Creates a ProgramPlatformVersionLanguageBinary
-[**deleteProgramPlatformVersionLanguageBinary**](ProgramsPlatformsVersionsLanguagesBinariesApi.md#deleteprogramplatformversionlanguagebinary) | **DELETE** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/binaries/{id_binary} | Deletes a ProgramPlatformVersionLanguageBinary
+[**deleteProgramPlatformVersionLanguageBinary**](ProgramsPlatformsVersionsLanguagesBinariesApi.md#deleteprogramplatformversionlanguagebinary) | **DELETE** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/binaries/{id_binary} | Deletes a      *   ProgramPlatformVersionLanguageBinary
 [**findProgramPlatformVersionLanguageBinary**](ProgramsPlatformsVersionsLanguagesBinariesApi.md#findprogramplatformversionlanguagebinary) | **GET** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/binaries | Gets a ProgramPlatformVersionLanguageBinary list
-[**readProgramPlatformVersionLanguageBinary**](ProgramsPlatformsVersionsLanguagesBinariesApi.md#readprogramplatformversionlanguagebinary) | **GET** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/binaries/{id_binary} | Fetches a single ProgramPlatformVersionLanguageBinary
-[**replaceProgramPlatformVersionLanguageBinary**](ProgramsPlatformsVersionsLanguagesBinariesApi.md#replaceprogramplatformversionlanguagebinary) | **PUT** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/binaries/{id_binary} | Entirely replaces a ProgramPlatformVersionLanguageBinary
+[**readProgramPlatformVersionLanguageBinary**](ProgramsPlatformsVersionsLanguagesBinariesApi.md#readprogramplatformversionlanguagebinary) | **GET** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/binaries/{id_binary} | Fetches a single      *   ProgramPlatformVersionLanguageBinary
+[**replaceProgramPlatformVersionLanguageBinary**](ProgramsPlatformsVersionsLanguagesBinariesApi.md#replaceprogramplatformversionlanguagebinary) | **PUT** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/binaries/{id_binary} | Entirely replaces a      *   ProgramPlatformVersionLanguageBinary
 
 # **createProgramPlatformVersionLanguageBinary**
 > \Softonic\CatalogApiSdk\Client\Model\InlineResponse201 createProgramPlatformVersionLanguageBinary($body, $id_program, $id_platform, $id_version, $id_language)
@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 # **deleteProgramPlatformVersionLanguageBinary**
 > \Softonic\CatalogApiSdk\Client\Model\InlineResponse2001 deleteProgramPlatformVersionLanguageBinary($id_program, $id_platform, $id_version, $id_language, $id_binary)
 
-Deletes a ProgramPlatformVersionLanguageBinary
+Deletes a      *   ProgramPlatformVersionLanguageBinary
 
 Deletes a ProgramPlatformVersionLanguageBinary
 
@@ -194,7 +194,7 @@ Name | Type | Description  | Notes
 # **readProgramPlatformVersionLanguageBinary**
 > \Softonic\CatalogApiSdk\Client\Model\ProgramPlatformVersionLanguageBinary readProgramPlatformVersionLanguageBinary($id_program, $id_platform, $id_version, $id_language, $id_binary)
 
-Fetches a single ProgramPlatformVersionLanguageBinary
+Fetches a single      *   ProgramPlatformVersionLanguageBinary
 
 Fetches a single ProgramPlatformVersionLanguageBinary
 
@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 # **replaceProgramPlatformVersionLanguageBinary**
 > \Softonic\CatalogApiSdk\Client\Model\InlineResponse200 replaceProgramPlatformVersionLanguageBinary($id_program, $id_platform, $id_version, $id_language, $id_binary)
 
-Entirely replaces a ProgramPlatformVersionLanguageBinary
+Entirely replaces a      *   ProgramPlatformVersionLanguageBinary
 
 Entirely replaces a ProgramPlatformVersionLanguageBinary
 

@@ -78,7 +78,7 @@ class ProgramPlatformVersionLanguageBinary implements ModelInterface, ArrayAcces
 'id_platform' => null,
 'id_version' => 'versionSlug',
 'id_language' => null,
-'id_binary' => null    ];
+'id_binary' => 'sha1'    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -220,22 +220,6 @@ class ProgramPlatformVersionLanguageBinary implements ModelInterface, ArrayAcces
     public function listInvalidUnrequiredProperties()
     {
         $invalidProperties = [];
-        if (
-            array_key_exists('id_binary', $this->container)
-            && $this->container['id_binary'] !== null
-            && (strlen($this->container['id_binary']) > 40)
-        ) {
-            $invalidProperties[] = "invalid value for 'id_binary', the character length must be smaller than or equal to 40.";
-        }
-
-        if (
-            array_key_exists('id_binary', $this->container)
-            && $this->container['id_binary'] !== null
-            && (strlen($this->container['id_binary']) < 40)
-        ) {
-            $invalidProperties[] = "invalid value for 'id_binary', the character length must be bigger than or equal to 40.";
-        }
-
         
         return $invalidProperties;
     }

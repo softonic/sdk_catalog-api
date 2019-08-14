@@ -5,11 +5,11 @@ All URIs are relative to *https://catalog-v4.sft.eu-west.sftapi.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createProgramPlatformVersionLanguageUrltype**](ProgramsPlatformsVersionsLanguagesUrltypesApi.md#createprogramplatformversionlanguageurltype) | **POST** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/urltypes | Creates a ProgramPlatformVersionLanguageUrltype
-[**deleteProgramPlatformVersionLanguageUrltype**](ProgramsPlatformsVersionsLanguagesUrltypesApi.md#deleteprogramplatformversionlanguageurltype) | **DELETE** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/urltypes/{id_urltype} | Deletes a ProgramPlatformVersionLanguageUrltype
+[**deleteProgramPlatformVersionLanguageUrltype**](ProgramsPlatformsVersionsLanguagesUrltypesApi.md#deleteprogramplatformversionlanguageurltype) | **DELETE** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/urltypes/{id_urltype} | Deletes a      *   ProgramPlatformVersionLanguageUrltype
 [**findProgramPlatformVersionLanguageUrltype**](ProgramsPlatformsVersionsLanguagesUrltypesApi.md#findprogramplatformversionlanguageurltype) | **GET** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/urltypes | Gets a ProgramPlatformVersionLanguageUrltype list
-[**readProgramPlatformVersionLanguageUrltype**](ProgramsPlatformsVersionsLanguagesUrltypesApi.md#readprogramplatformversionlanguageurltype) | **GET** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/urltypes/{id_urltype} | Fetches a single ProgramPlatformVersionLanguageUrltype
-[**replaceProgramPlatformVersionLanguageUrltype**](ProgramsPlatformsVersionsLanguagesUrltypesApi.md#replaceprogramplatformversionlanguageurltype) | **PUT** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/urltypes/{id_urltype} | Entirely replaces a ProgramPlatformVersionLanguageUrltype
-[**updateProgramPlatformVersionLanguageUrltype**](ProgramsPlatformsVersionsLanguagesUrltypesApi.md#updateprogramplatformversionlanguageurltype) | **PATCH** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/urltypes/{id_urltype} | Partially updates a ProgramPlatformVersionLanguageUrltype
+[**readProgramPlatformVersionLanguageUrltype**](ProgramsPlatformsVersionsLanguagesUrltypesApi.md#readprogramplatformversionlanguageurltype) | **GET** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/urltypes/{id_urltype} | Fetches a single      *   ProgramPlatformVersionLanguageUrltype
+[**replaceProgramPlatformVersionLanguageUrltype**](ProgramsPlatformsVersionsLanguagesUrltypesApi.md#replaceprogramplatformversionlanguageurltype) | **PUT** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/urltypes/{id_urltype} | Entirely replaces a      *   ProgramPlatformVersionLanguageUrltype
+[**updateProgramPlatformVersionLanguageUrltype**](ProgramsPlatformsVersionsLanguagesUrltypesApi.md#updateprogramplatformversionlanguageurltype) | **PATCH** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/urltypes/{id_urltype} | Partially updates a      *   ProgramPlatformVersionLanguageUrltype
 
 # **createProgramPlatformVersionLanguageUrltype**
 > \Softonic\CatalogApiSdk\Client\Model\InlineResponse201 createProgramPlatformVersionLanguageUrltype($body, $id_program, $id_platform, $id_version, $id_language)
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 # **deleteProgramPlatformVersionLanguageUrltype**
 > \Softonic\CatalogApiSdk\Client\Model\InlineResponse2001 deleteProgramPlatformVersionLanguageUrltype($id_program, $id_platform, $id_version, $id_language, $id_urltype)
 
-Deletes a ProgramPlatformVersionLanguageUrltype
+Deletes a      *   ProgramPlatformVersionLanguageUrltype
 
 Deletes a ProgramPlatformVersionLanguageUrltype
 
@@ -195,7 +195,7 @@ Name | Type | Description  | Notes
 # **readProgramPlatformVersionLanguageUrltype**
 > \Softonic\CatalogApiSdk\Client\Model\ProgramPlatformVersionLanguageUrltype readProgramPlatformVersionLanguageUrltype($id_program, $id_platform, $id_version, $id_language, $id_urltype)
 
-Fetches a single ProgramPlatformVersionLanguageUrltype
+Fetches a single      *   ProgramPlatformVersionLanguageUrltype
 
 Fetches a single ProgramPlatformVersionLanguageUrltype
 
@@ -256,9 +256,9 @@ Name | Type | Description  | Notes
 # **replaceProgramPlatformVersionLanguageUrltype**
 > \Softonic\CatalogApiSdk\Client\Model\InlineResponse200 replaceProgramPlatformVersionLanguageUrltype($body, $id_program, $id_platform, $id_version, $id_language, $id_urltype)
 
-Entirely replaces a ProgramPlatformVersionLanguageUrltype
+Entirely replaces a      *   ProgramPlatformVersionLanguageUrltype
 
-Entirely replaces a ProgramPlatformVersionLanguageUrltype
+Entirely replaces a      *   ProgramPlatformVersionLanguageUrltype
 
 ### Example
 ```php
@@ -319,9 +319,9 @@ Name | Type | Description  | Notes
 # **updateProgramPlatformVersionLanguageUrltype**
 > \Softonic\CatalogApiSdk\Client\Model\InlineResponse2002 updateProgramPlatformVersionLanguageUrltype($body, $id_program, $id_platform, $id_version, $id_language, $id_urltype)
 
-Partially updates a ProgramPlatformVersionLanguageUrltype
+Partially updates a      *   ProgramPlatformVersionLanguageUrltype
 
-Partially updates a ProgramPlatformVersionLanguageUrltype
+Partially updates a      *   ProgramPlatformVersionLanguageUrltype
 
 ### Example
 ```php

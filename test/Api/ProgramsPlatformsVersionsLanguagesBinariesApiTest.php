@@ -83,7 +83,7 @@ class ProgramsPlatformsVersionsLanguagesBinariesApiTest extends \PHPUnit_Framewo
     /**
      * Test case for deleteProgramPlatformVersionLanguageBinary
      *
-     * Deletes a ProgramPlatformVersionLanguageBinary.
+     * Deletes a      *   ProgramPlatformVersionLanguageBinary.
      *
      */
     public function testDeleteProgramPlatformVersionLanguageBinary()
@@ -103,7 +103,7 @@ class ProgramsPlatformsVersionsLanguagesBinariesApiTest extends \PHPUnit_Framewo
     /**
      * Test case for readProgramPlatformVersionLanguageBinary
      *
-     * Fetches a single ProgramPlatformVersionLanguageBinary.
+     * Fetches a single      *   ProgramPlatformVersionLanguageBinary.
      *
      */
     public function testReadProgramPlatformVersionLanguageBinary()
@@ -113,7 +113,7 @@ class ProgramsPlatformsVersionsLanguagesBinariesApiTest extends \PHPUnit_Framewo
     /**
      * Test case for replaceProgramPlatformVersionLanguageBinary
      *
-     * Entirely replaces a ProgramPlatformVersionLanguageBinary.
+     * Entirely replaces a      *   ProgramPlatformVersionLanguageBinary.
      *
      */
     public function testReplaceProgramPlatformVersionLanguageBinary()

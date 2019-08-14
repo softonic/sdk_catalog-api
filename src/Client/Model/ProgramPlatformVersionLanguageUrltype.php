@@ -80,7 +80,7 @@ class ProgramPlatformVersionLanguageUrltype implements ModelInterface, ArrayAcce
 'id_version' => 'versionSlug',
 'id_language' => null,
 'id_urltype' => null,
-'id_url' => null    ];
+'id_url' => 'sha1'    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization

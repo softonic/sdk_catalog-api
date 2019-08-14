@@ -77,7 +77,7 @@ class ProgramPlatformUrltypeUrl implements ModelInterface, ArrayAccess, JsonSeri
         'id_program' => 'uuid',
 'id_platform' => null,
 'id_urltype' => null,
-'id_url' => null,
+'id_url' => 'sha1',
 'url' => null    ];
 
     /**
@@ -220,22 +220,6 @@ class ProgramPlatformUrltypeUrl implements ModelInterface, ArrayAccess, JsonSeri
     public function listInvalidUnrequiredProperties()
     {
         $invalidProperties = [];
-        if (
-            array_key_exists('id_url', $this->container)
-            && $this->container['id_url'] !== null
-            && (strlen($this->container['id_url']) > 40)
-        ) {
-            $invalidProperties[] = "invalid value for 'id_url', the character length must be smaller than or equal to 40.";
-        }
-
-        if (
-            array_key_exists('id_url', $this->container)
-            && $this->container['id_url'] !== null
-            && (strlen($this->container['id_url']) < 40)
-        ) {
-            $invalidProperties[] = "invalid value for 'id_url', the character length must be bigger than or equal to 40.";
-        }
-
         
         return $invalidProperties;
     }

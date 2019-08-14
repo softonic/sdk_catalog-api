@@ -73,7 +73,7 @@ class ProgramsPlatformsVersionsLanguagesReviewtypesApiTest extends \PHPUnit_Fram
     /**
      * Test case for createProgramPlatformVersionLanguageReviewtype
      *
-     * Creates a ProgramPlatformVersionLanguageReviewtype.
+     * Creates a      *   ProgramPlatformVersionLanguageReviewtype.
      *
      */
     public function testCreateProgramPlatformVersionLanguageReviewtype()
@@ -83,7 +83,7 @@ class ProgramsPlatformsVersionsLanguagesReviewtypesApiTest extends \PHPUnit_Fram
     /**
      * Test case for deleteProgramPlatformVersionLanguageReviewtype
      *
-     * Deletes a ProgramPlatformVersionLanguageReviewtype.
+     * Deletes a      *   ProgramPlatformVersionLanguageReviewtype.
      *
      */
     public function testDeleteProgramPlatformVersionLanguageReviewtype()
@@ -93,7 +93,7 @@ class ProgramsPlatformsVersionsLanguagesReviewtypesApiTest extends \PHPUnit_Fram
     /**
      * Test case for findProgramPlatformVersionLanguageReviewtype
      *
-     * Gets a ProgramPlatformVersionLanguageReviewtype list.
+     * Gets a      *   ProgramPlatformVersionLanguageReviewtype list.
      *
      */
     public function testFindProgramPlatformVersionLanguageReviewtype()
@@ -103,7 +103,7 @@ class ProgramsPlatformsVersionsLanguagesReviewtypesApiTest extends \PHPUnit_Fram
     /**
      * Test case for readProgramPlatformVersionLanguageReviewtype
      *
-     * Fetches a single ProgramPlatformVersionLanguageReviewtype.
+     * Fetches a single      *   ProgramPlatformVersionLanguageReviewtype.
      *
      */
     public function testReadProgramPlatformVersionLanguageReviewtype()
@@ -113,7 +113,7 @@ class ProgramsPlatformsVersionsLanguagesReviewtypesApiTest extends \PHPUnit_Fram
     /**
      * Test case for replaceProgramPlatformVersionLanguageReviewtype
      *
-     * Entirely replaces a ProgramPlatformVersionLanguageReviewtype.
+     * Entirely replaces a      *   ProgramPlatformVersionLanguageReviewtype.
      *
      */
     public function testReplaceProgramPlatformVersionLanguageReviewtype()
@@ -123,7 +123,7 @@ class ProgramsPlatformsVersionsLanguagesReviewtypesApiTest extends \PHPUnit_Fram
     /**
      * Test case for updateProgramPlatformVersionLanguageReviewtype
      *
-     * Partially updates a ProgramPlatformVersionLanguageReviewtype.
+     * Partially updates a      *   ProgramPlatformVersionLanguageReviewtype.
      *
      */
     public function testUpdateProgramPlatformVersionLanguageReviewtype()

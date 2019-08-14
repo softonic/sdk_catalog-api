@@ -83,7 +83,7 @@ class ProgramsPlatformsVersionsLanguagesUrltypesApiTest extends \PHPUnit_Framewo
     /**
      * Test case for deleteProgramPlatformVersionLanguageUrltype
      *
-     * Deletes a ProgramPlatformVersionLanguageUrltype.
+     * Deletes a      *   ProgramPlatformVersionLanguageUrltype.
      *
      */
     public function testDeleteProgramPlatformVersionLanguageUrltype()
@@ -103,7 +103,7 @@ class ProgramsPlatformsVersionsLanguagesUrltypesApiTest extends \PHPUnit_Framewo
     /**
      * Test case for readProgramPlatformVersionLanguageUrltype
      *
-     * Fetches a single ProgramPlatformVersionLanguageUrltype.
+     * Fetches a single      *   ProgramPlatformVersionLanguageUrltype.
      *
      */
     public function testReadProgramPlatformVersionLanguageUrltype()
@@ -113,7 +113,7 @@ class ProgramsPlatformsVersionsLanguagesUrltypesApiTest extends \PHPUnit_Framewo
     /**
      * Test case for replaceProgramPlatformVersionLanguageUrltype
      *
-     * Entirely replaces a ProgramPlatformVersionLanguageUrltype.
+     * Entirely replaces a      *   ProgramPlatformVersionLanguageUrltype.
      *
      */
     public function testReplaceProgramPlatformVersionLanguageUrltype()
@@ -123,7 +123,7 @@ class ProgramsPlatformsVersionsLanguagesUrltypesApiTest extends \PHPUnit_Framewo
     /**
      * Test case for updateProgramPlatformVersionLanguageUrltype
      *
-     * Partially updates a ProgramPlatformVersionLanguageUrltype.
+     * Partially updates a      *   ProgramPlatformVersionLanguageUrltype.
      *
      */
     public function testUpdateProgramPlatformVersionLanguageUrltype()

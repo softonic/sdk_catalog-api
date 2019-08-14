@@ -1,6 +1,6 @@
 <?php
 /**
- * ProgramsPlatformsVersionsPlatformversionsApiTest
+ * DefaultApiTest
  * PHP version 5
  *
  * @category Class
@@ -32,14 +32,14 @@ use Softonic\CatalogApiSdk\ApiException;
 use Softonic\CatalogApiSdk\ObjectSerializer;
 
 /**
- * ProgramsPlatformsVersionsPlatformversionsApiTest Class Doc Comment
+ * DefaultApiTest Class Doc Comment
  *
  * @category Class
  * @package  Softonic\CatalogApiSdk
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ProgramsPlatformsVersionsPlatformversionsApiTest extends \PHPUnit_Framework_TestCase
+class DefaultApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,52 +71,12 @@ class ProgramsPlatformsVersionsPlatformversionsApiTest extends \PHPUnit_Framewor
     }
 
     /**
-     * Test case for createProgramPlatformVersionPlatformversion
+     * Test case for schemaGet
      *
-     * Creates a ProgramPlatformVersionPlatformversion.
-     *
-     */
-    public function testCreateProgramPlatformVersionPlatformversion()
-    {
-    }
-
-    /**
-     * Test case for deleteProgramPlatformVersionPlatformversion
-     *
-     * Deletes a      *   ProgramPlatformVersionPlatformversion.
+     * .
      *
      */
-    public function testDeleteProgramPlatformVersionPlatformversion()
-    {
-    }
-
-    /**
-     * Test case for findProgramPlatformVersionPlatformversion
-     *
-     * Gets a ProgramPlatformVersionPlatformversion list.
-     *
-     */
-    public function testFindProgramPlatformVersionPlatformversion()
-    {
-    }
-
-    /**
-     * Test case for readProgramPlatformVersionPlatformversion
-     *
-     * Fetches a single      *   ProgramPlatformVersionPlatformversion.
-     *
-     */
-    public function testReadProgramPlatformVersionPlatformversion()
-    {
-    }
-
-    /**
-     * Test case for replaceProgramPlatformVersionPlatformversion
-     *
-     * Entirely replaces a      *   ProgramPlatformVersionPlatformversion.
-     *
-     */
-    public function testReplaceProgramPlatformVersionPlatformversion()
+    public function testSchemaGet()
     {
     }
 }

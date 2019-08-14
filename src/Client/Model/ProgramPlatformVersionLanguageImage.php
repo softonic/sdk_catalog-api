@@ -85,7 +85,7 @@ class ProgramPlatformVersionLanguageImage implements ModelInterface, ArrayAccess
 'id_platform' => null,
 'id_version' => 'versionSlug',
 'id_language' => null,
-'id_image' => null,
+'id_image' => 'sha1',
 'path' => null,
 'filename' => null,
 'type' => null,
@@ -275,22 +275,6 @@ self::TYPE_SCREENSHOT,        ];
     public function listInvalidUnrequiredProperties()
     {
         $invalidProperties = [];
-        if (
-            array_key_exists('id_image', $this->container)
-            && $this->container['id_image'] !== null
-            && (strlen($this->container['id_image']) > 40)
-        ) {
-            $invalidProperties[] = "invalid value for 'id_image', the character length must be smaller than or equal to 40.";
-        }
-
-        if (
-            array_key_exists('id_image', $this->container)
-            && $this->container['id_image'] !== null
-            && (strlen($this->container['id_image']) < 40)
-        ) {
-            $invalidProperties[] = "invalid value for 'id_image', the character length must be bigger than or equal to 40.";
-        }
-
         if (
             array_key_exists('path', $this->container)
             && $this->container['path'] !== null

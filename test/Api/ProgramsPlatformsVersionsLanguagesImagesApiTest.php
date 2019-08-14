@@ -83,7 +83,7 @@ class ProgramsPlatformsVersionsLanguagesImagesApiTest extends \PHPUnit_Framework
     /**
      * Test case for deleteProgramPlatformVersionLanguageImage
      *
-     * Deletes a ProgramPlatformVersionLanguageImage.
+     * Deletes a      *   ProgramPlatformVersionLanguageImage.
      *
      */
     public function testDeleteProgramPlatformVersionLanguageImage()
@@ -103,7 +103,7 @@ class ProgramsPlatformsVersionsLanguagesImagesApiTest extends \PHPUnit_Framework
     /**
      * Test case for readProgramPlatformVersionLanguageImage
      *
-     * Fetches a single ProgramPlatformVersionLanguageImage.
+     * Fetches a single      *   ProgramPlatformVersionLanguageImage.
      *
      */
     public function testReadProgramPlatformVersionLanguageImage()
@@ -113,7 +113,7 @@ class ProgramsPlatformsVersionsLanguagesImagesApiTest extends \PHPUnit_Framework
     /**
      * Test case for replaceProgramPlatformVersionLanguageImage
      *
-     * Entirely replaces a ProgramPlatformVersionLanguageImage.
+     * Entirely replaces a      *   ProgramPlatformVersionLanguageImage.
      *
      */
     public function testReplaceProgramPlatformVersionLanguageImage()
@@ -123,7 +123,7 @@ class ProgramsPlatformsVersionsLanguagesImagesApiTest extends \PHPUnit_Framework
     /**
      * Test case for updateProgramPlatformVersionLanguageImage
      *
-     * Partially updates a ProgramPlatformVersionLanguageImage.
+     * Partially updates a      *   ProgramPlatformVersionLanguageImage.
      *
      */
     public function testUpdateProgramPlatformVersionLanguageImage()

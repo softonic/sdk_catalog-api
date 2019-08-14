@@ -385,7 +385,7 @@ class ProgramsPlatformsVersionsLanguagesUrltypesApi
             if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
                 $httpBody = \GuzzleHttp\json_encode($httpBody);
             }
-            elseif ((in_array("POST", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
+            elseif (in_array("POST", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
                 $httpBody = json_encode($httpBody->toArray(true));
             }
         } elseif (count($formParams) > 0) {
@@ -437,7 +437,7 @@ class ProgramsPlatformsVersionsLanguagesUrltypesApi
     /**
      * Operation deleteProgramPlatformVersionLanguageUrltype
      *
-     * Deletes a ProgramPlatformVersionLanguageUrltype
+     * Deletes a      *   ProgramPlatformVersionLanguageUrltype
      *
      * @param  string $id_program Program ID (required)
      * @param  string $id_platform Platform ID (required)
@@ -458,7 +458,7 @@ class ProgramsPlatformsVersionsLanguagesUrltypesApi
     /**
      * Operation deleteProgramPlatformVersionLanguageUrltypeWithHttpInfo
      *
-     * Deletes a ProgramPlatformVersionLanguageUrltype
+     * Deletes a      *   ProgramPlatformVersionLanguageUrltype
      *
      * @param  string $id_program Program ID (required)
      * @param  string $id_platform Platform ID (required)
@@ -537,7 +537,7 @@ class ProgramsPlatformsVersionsLanguagesUrltypesApi
     /**
      * Operation deleteProgramPlatformVersionLanguageUrltypeAsync
      *
-     * Deletes a ProgramPlatformVersionLanguageUrltype
+     * Deletes a      *   ProgramPlatformVersionLanguageUrltype
      *
      * @param  string $id_program Program ID (required)
      * @param  string $id_platform Platform ID (required)
@@ -561,7 +561,7 @@ class ProgramsPlatformsVersionsLanguagesUrltypesApi
     /**
      * Operation deleteProgramPlatformVersionLanguageUrltypeAsyncWithHttpInfo
      *
-     * Deletes a ProgramPlatformVersionLanguageUrltype
+     * Deletes a      *   ProgramPlatformVersionLanguageUrltype
      *
      * @param  string $id_program Program ID (required)
      * @param  string $id_platform Platform ID (required)
@@ -730,7 +730,7 @@ class ProgramsPlatformsVersionsLanguagesUrltypesApi
             if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
                 $httpBody = \GuzzleHttp\json_encode($httpBody);
             }
-            elseif ((in_array("DELETE", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
+            elseif (in_array("DELETE", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
                 $httpBody = json_encode($httpBody->toArray(true));
             }
         } elseif (count($formParams) > 0) {
@@ -1056,7 +1056,7 @@ class ProgramsPlatformsVersionsLanguagesUrltypesApi
             if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
                 $httpBody = \GuzzleHttp\json_encode($httpBody);
             }
-            elseif ((in_array("GET", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
+            elseif (in_array("GET", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
                 $httpBody = json_encode($httpBody->toArray(true));
             }
         } elseif (count($formParams) > 0) {
@@ -1108,7 +1108,7 @@ class ProgramsPlatformsVersionsLanguagesUrltypesApi
     /**
      * Operation readProgramPlatformVersionLanguageUrltype
      *
-     * Fetches a single ProgramPlatformVersionLanguageUrltype
+     * Fetches a single      *   ProgramPlatformVersionLanguageUrltype
      *
      * @param  string $id_program Program ID (required)
      * @param  string $id_platform Platform ID (required)
@@ -1129,7 +1129,7 @@ class ProgramsPlatformsVersionsLanguagesUrltypesApi
     /**
      * Operation readProgramPlatformVersionLanguageUrltypeWithHttpInfo
      *
-     * Fetches a single ProgramPlatformVersionLanguageUrltype
+     * Fetches a single      *   ProgramPlatformVersionLanguageUrltype
      *
      * @param  string $id_program Program ID (required)
      * @param  string $id_platform Platform ID (required)
@@ -1208,7 +1208,7 @@ class ProgramsPlatformsVersionsLanguagesUrltypesApi
     /**
      * Operation readProgramPlatformVersionLanguageUrltypeAsync
      *
-     * Fetches a single ProgramPlatformVersionLanguageUrltype
+     * Fetches a single      *   ProgramPlatformVersionLanguageUrltype
      *
      * @param  string $id_program Program ID (required)
      * @param  string $id_platform Platform ID (required)
@@ -1232,7 +1232,7 @@ class ProgramsPlatformsVersionsLanguagesUrltypesApi
     /**
      * Operation readProgramPlatformVersionLanguageUrltypeAsyncWithHttpInfo
      *
-     * Fetches a single ProgramPlatformVersionLanguageUrltype
+     * Fetches a single      *   ProgramPlatformVersionLanguageUrltype
      *
      * @param  string $id_program Program ID (required)
      * @param  string $id_platform Platform ID (required)
@@ -1401,7 +1401,7 @@ class ProgramsPlatformsVersionsLanguagesUrltypesApi
             if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
                 $httpBody = \GuzzleHttp\json_encode($httpBody);
             }
-            elseif ((in_array("GET", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
+            elseif (in_array("GET", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
                 $httpBody = json_encode($httpBody->toArray(true));
             }
         } elseif (count($formParams) > 0) {
@@ -1453,7 +1453,7 @@ class ProgramsPlatformsVersionsLanguagesUrltypesApi
     /**
      * Operation replaceProgramPlatformVersionLanguageUrltype
      *
-     * Entirely replaces a ProgramPlatformVersionLanguageUrltype
+     * Entirely replaces a      *   ProgramPlatformVersionLanguageUrltype
      *
      * @param   $body ProgramPlatformVersionLanguageUrltype to be replaced (required)
      * @param  string $id_program Program ID (required)
@@ -1475,7 +1475,7 @@ class ProgramsPlatformsVersionsLanguagesUrltypesApi
     /**
      * Operation replaceProgramPlatformVersionLanguageUrltypeWithHttpInfo
      *
-     * Entirely replaces a ProgramPlatformVersionLanguageUrltype
+     * Entirely replaces a      *   ProgramPlatformVersionLanguageUrltype
      *
      * @param   $body ProgramPlatformVersionLanguageUrltype to be replaced (required)
      * @param  string $id_program Program ID (required)
@@ -1555,7 +1555,7 @@ class ProgramsPlatformsVersionsLanguagesUrltypesApi
     /**
      * Operation replaceProgramPlatformVersionLanguageUrltypeAsync
      *
-     * Entirely replaces a ProgramPlatformVersionLanguageUrltype
+     * Entirely replaces a      *   ProgramPlatformVersionLanguageUrltype
      *
      * @param   $body ProgramPlatformVersionLanguageUrltype to be replaced (required)
      * @param  string $id_program Program ID (required)
@@ -1580,7 +1580,7 @@ class ProgramsPlatformsVersionsLanguagesUrltypesApi
     /**
      * Operation replaceProgramPlatformVersionLanguageUrltypeAsyncWithHttpInfo
      *
-     * Entirely replaces a ProgramPlatformVersionLanguageUrltype
+     * Entirely replaces a      *   ProgramPlatformVersionLanguageUrltype
      *
      * @param   $body ProgramPlatformVersionLanguageUrltype to be replaced (required)
      * @param  string $id_program Program ID (required)
@@ -1760,7 +1760,7 @@ class ProgramsPlatformsVersionsLanguagesUrltypesApi
             if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
                 $httpBody = \GuzzleHttp\json_encode($httpBody);
             }
-            elseif ((in_array("PUT", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
+            elseif (in_array("PUT", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
                 $httpBody = json_encode($httpBody->toArray(true));
             }
         } elseif (count($formParams) > 0) {
@@ -1812,7 +1812,7 @@ class ProgramsPlatformsVersionsLanguagesUrltypesApi
     /**
      * Operation updateProgramPlatformVersionLanguageUrltype
      *
-     * Partially updates a ProgramPlatformVersionLanguageUrltype
+     * Partially updates a      *   ProgramPlatformVersionLanguageUrltype
      *
      * @param  \Softonic\CatalogApiSdk\Client\Model\ProgramPlatformVersionLanguageUrltype $body ProgramPlatformVersionLanguageUrltype to be updated (required)
      * @param  string $id_program Program ID (required)
@@ -1834,7 +1834,7 @@ class ProgramsPlatformsVersionsLanguagesUrltypesApi
     /**
      * Operation updateProgramPlatformVersionLanguageUrltypeWithHttpInfo
      *
-     * Partially updates a ProgramPlatformVersionLanguageUrltype
+     * Partially updates a      *   ProgramPlatformVersionLanguageUrltype
      *
      * @param  \Softonic\CatalogApiSdk\Client\Model\ProgramPlatformVersionLanguageUrltype $body ProgramPlatformVersionLanguageUrltype to be updated (required)
      * @param  string $id_program Program ID (required)
@@ -1914,7 +1914,7 @@ class ProgramsPlatformsVersionsLanguagesUrltypesApi
     /**
      * Operation updateProgramPlatformVersionLanguageUrltypeAsync
      *
-     * Partially updates a ProgramPlatformVersionLanguageUrltype
+     * Partially updates a      *   ProgramPlatformVersionLanguageUrltype
      *
      * @param  \Softonic\CatalogApiSdk\Client\Model\ProgramPlatformVersionLanguageUrltype $body ProgramPlatformVersionLanguageUrltype to be updated (required)
      * @param  string $id_program Program ID (required)
@@ -1939,7 +1939,7 @@ class ProgramsPlatformsVersionsLanguagesUrltypesApi
     /**
      * Operation updateProgramPlatformVersionLanguageUrltypeAsyncWithHttpInfo
      *
-     * Partially updates a ProgramPlatformVersionLanguageUrltype
+     * Partially updates a      *   ProgramPlatformVersionLanguageUrltype
      *
      * @param  \Softonic\CatalogApiSdk\Client\Model\ProgramPlatformVersionLanguageUrltype $body ProgramPlatformVersionLanguageUrltype to be updated (required)
      * @param  string $id_program Program ID (required)
@@ -2119,7 +2119,7 @@ class ProgramsPlatformsVersionsLanguagesUrltypesApi
             if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
                 $httpBody = \GuzzleHttp\json_encode($httpBody);
             }
-            elseif ((in_array("PATCH", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
+            elseif (in_array("PATCH", ["PUT", "POST"]) && $httpBody instanceof ModelInterface && $headers['Content-Type'] === 'application/json') {
                 $httpBody = json_encode($httpBody->toArray(true));
             }
         } elseif (count($formParams) > 0) {

@@ -4,17 +4,17 @@ All URIs are relative to *https://catalog-v4.sft.eu-west.sftapi.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createProgramPlatformVersionLanguageReviewtype**](ProgramsPlatformsVersionsLanguagesReviewtypesApi.md#createprogramplatformversionlanguagereviewtype) | **POST** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/reviewtypes | Creates a ProgramPlatformVersionLanguageReviewtype
-[**deleteProgramPlatformVersionLanguageReviewtype**](ProgramsPlatformsVersionsLanguagesReviewtypesApi.md#deleteprogramplatformversionlanguagereviewtype) | **DELETE** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/reviewtypes/{id_reviewtype} | Deletes a ProgramPlatformVersionLanguageReviewtype
-[**findProgramPlatformVersionLanguageReviewtype**](ProgramsPlatformsVersionsLanguagesReviewtypesApi.md#findprogramplatformversionlanguagereviewtype) | **GET** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/reviewtypes | Gets a ProgramPlatformVersionLanguageReviewtype list
-[**readProgramPlatformVersionLanguageReviewtype**](ProgramsPlatformsVersionsLanguagesReviewtypesApi.md#readprogramplatformversionlanguagereviewtype) | **GET** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/reviewtypes/{id_reviewtype} | Fetches a single ProgramPlatformVersionLanguageReviewtype
-[**replaceProgramPlatformVersionLanguageReviewtype**](ProgramsPlatformsVersionsLanguagesReviewtypesApi.md#replaceprogramplatformversionlanguagereviewtype) | **PUT** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/reviewtypes/{id_reviewtype} | Entirely replaces a ProgramPlatformVersionLanguageReviewtype
-[**updateProgramPlatformVersionLanguageReviewtype**](ProgramsPlatformsVersionsLanguagesReviewtypesApi.md#updateprogramplatformversionlanguagereviewtype) | **PATCH** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/reviewtypes/{id_reviewtype} | Partially updates a ProgramPlatformVersionLanguageReviewtype
+[**createProgramPlatformVersionLanguageReviewtype**](ProgramsPlatformsVersionsLanguagesReviewtypesApi.md#createprogramplatformversionlanguagereviewtype) | **POST** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/reviewtypes | Creates a      *   ProgramPlatformVersionLanguageReviewtype
+[**deleteProgramPlatformVersionLanguageReviewtype**](ProgramsPlatformsVersionsLanguagesReviewtypesApi.md#deleteprogramplatformversionlanguagereviewtype) | **DELETE** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/reviewtypes/{id_reviewtype} | Deletes a      *   ProgramPlatformVersionLanguageReviewtype
+[**findProgramPlatformVersionLanguageReviewtype**](ProgramsPlatformsVersionsLanguagesReviewtypesApi.md#findprogramplatformversionlanguagereviewtype) | **GET** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/reviewtypes | Gets a      *   ProgramPlatformVersionLanguageReviewtype list
+[**readProgramPlatformVersionLanguageReviewtype**](ProgramsPlatformsVersionsLanguagesReviewtypesApi.md#readprogramplatformversionlanguagereviewtype) | **GET** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/reviewtypes/{id_reviewtype} | Fetches a single      *   ProgramPlatformVersionLanguageReviewtype
+[**replaceProgramPlatformVersionLanguageReviewtype**](ProgramsPlatformsVersionsLanguagesReviewtypesApi.md#replaceprogramplatformversionlanguagereviewtype) | **PUT** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/reviewtypes/{id_reviewtype} | Entirely replaces a      *   ProgramPlatformVersionLanguageReviewtype
+[**updateProgramPlatformVersionLanguageReviewtype**](ProgramsPlatformsVersionsLanguagesReviewtypesApi.md#updateprogramplatformversionlanguagereviewtype) | **PATCH** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/reviewtypes/{id_reviewtype} | Partially updates a      *   ProgramPlatformVersionLanguageReviewtype
 
 # **createProgramPlatformVersionLanguageReviewtype**
 > \Softonic\CatalogApiSdk\Client\Model\InlineResponse201 createProgramPlatformVersionLanguageReviewtype($body, $id_program, $id_platform, $id_version, $id_language)
 
-Creates a ProgramPlatformVersionLanguageReviewtype
+Creates a      *   ProgramPlatformVersionLanguageReviewtype
 
 Creates a ProgramPlatformVersionLanguageReviewtype
 
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 # **deleteProgramPlatformVersionLanguageReviewtype**
 > \Softonic\CatalogApiSdk\Client\Model\InlineResponse2001 deleteProgramPlatformVersionLanguageReviewtype($id_program, $id_platform, $id_version, $id_language, $id_reviewtype)
 
-Deletes a ProgramPlatformVersionLanguageReviewtype
+Deletes a      *   ProgramPlatformVersionLanguageReviewtype
 
 Deletes a ProgramPlatformVersionLanguageReviewtype
 
@@ -136,9 +136,9 @@ Name | Type | Description  | Notes
 # **findProgramPlatformVersionLanguageReviewtype**
 > \Softonic\CatalogApiSdk\Client\Model\ProgramPlatformVersionLanguageReviewtype[] findProgramPlatformVersionLanguageReviewtype($id_program, $id_platform, $id_version, $id_language)
 
-Gets a ProgramPlatformVersionLanguageReviewtype list
+Gets a      *   ProgramPlatformVersionLanguageReviewtype list
 
-Gets a ProgramPlatformVersionLanguageReviewtype list
+Gets a ProgramPlatformVersionLanguageReviewtype      *   list
 
 ### Example
 ```php
@@ -195,9 +195,9 @@ Name | Type | Description  | Notes
 # **readProgramPlatformVersionLanguageReviewtype**
 > \Softonic\CatalogApiSdk\Client\Model\ProgramPlatformVersionLanguageReviewtype readProgramPlatformVersionLanguageReviewtype($id_program, $id_platform, $id_version, $id_language, $id_reviewtype)
 
-Fetches a single ProgramPlatformVersionLanguageReviewtype
+Fetches a single      *   ProgramPlatformVersionLanguageReviewtype
 
-Fetches a single ProgramPlatformVersionLanguageReviewtype
+Fetches a single      *   ProgramPlatformVersionLanguageReviewtype
 
 ### Example
 ```php
@@ -256,9 +256,9 @@ Name | Type | Description  | Notes
 # **replaceProgramPlatformVersionLanguageReviewtype**
 > \Softonic\CatalogApiSdk\Client\Model\InlineResponse200 replaceProgramPlatformVersionLanguageReviewtype($body, $id_program, $id_platform, $id_version, $id_language, $id_reviewtype)
 
-Entirely replaces a ProgramPlatformVersionLanguageReviewtype
+Entirely replaces a      *   ProgramPlatformVersionLanguageReviewtype
 
-Entirely replaces a ProgramPlatformVersionLanguageReviewtype
+Entirely replaces a      *   ProgramPlatformVersionLanguageReviewtype
 
 ### Example
 ```php
@@ -319,9 +319,9 @@ Name | Type | Description  | Notes
 # **updateProgramPlatformVersionLanguageReviewtype**
 > \Softonic\CatalogApiSdk\Client\Model\InlineResponse2002 updateProgramPlatformVersionLanguageReviewtype($body, $id_program, $id_platform, $id_version, $id_language, $id_reviewtype)
 
-Partially updates a ProgramPlatformVersionLanguageReviewtype
+Partially updates a      *   ProgramPlatformVersionLanguageReviewtype
 
-Partially updates a ProgramPlatformVersionLanguageReviewtype
+Partially updates a      *   ProgramPlatformVersionLanguageReviewtype
 
 ### Example
 ```php

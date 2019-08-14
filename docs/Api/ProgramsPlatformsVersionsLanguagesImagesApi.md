@@ -5,11 +5,11 @@ All URIs are relative to *https://catalog-v4.sft.eu-west.sftapi.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createProgramPlatformVersionLanguageImage**](ProgramsPlatformsVersionsLanguagesImagesApi.md#createprogramplatformversionlanguageimage) | **POST** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/images | Creates a ProgramPlatformVersionLanguageImage
-[**deleteProgramPlatformVersionLanguageImage**](ProgramsPlatformsVersionsLanguagesImagesApi.md#deleteprogramplatformversionlanguageimage) | **DELETE** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/images/{id_image} | Deletes a ProgramPlatformVersionLanguageImage
+[**deleteProgramPlatformVersionLanguageImage**](ProgramsPlatformsVersionsLanguagesImagesApi.md#deleteprogramplatformversionlanguageimage) | **DELETE** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/images/{id_image} | Deletes a      *   ProgramPlatformVersionLanguageImage
 [**findProgramPlatformVersionLanguageImage**](ProgramsPlatformsVersionsLanguagesImagesApi.md#findprogramplatformversionlanguageimage) | **GET** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/images | Gets a ProgramPlatformVersionLanguageImage list
-[**readProgramPlatformVersionLanguageImage**](ProgramsPlatformsVersionsLanguagesImagesApi.md#readprogramplatformversionlanguageimage) | **GET** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/images/{id_image} | Fetches a single ProgramPlatformVersionLanguageImage
-[**replaceProgramPlatformVersionLanguageImage**](ProgramsPlatformsVersionsLanguagesImagesApi.md#replaceprogramplatformversionlanguageimage) | **PUT** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/images/{id_image} | Entirely replaces a ProgramPlatformVersionLanguageImage
-[**updateProgramPlatformVersionLanguageImage**](ProgramsPlatformsVersionsLanguagesImagesApi.md#updateprogramplatformversionlanguageimage) | **PATCH** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/images/{id_image} | Partially updates a ProgramPlatformVersionLanguageImage
+[**readProgramPlatformVersionLanguageImage**](ProgramsPlatformsVersionsLanguagesImagesApi.md#readprogramplatformversionlanguageimage) | **GET** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/images/{id_image} | Fetches a single      *   ProgramPlatformVersionLanguageImage
+[**replaceProgramPlatformVersionLanguageImage**](ProgramsPlatformsVersionsLanguagesImagesApi.md#replaceprogramplatformversionlanguageimage) | **PUT** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/images/{id_image} | Entirely replaces a      *   ProgramPlatformVersionLanguageImage
+[**updateProgramPlatformVersionLanguageImage**](ProgramsPlatformsVersionsLanguagesImagesApi.md#updateprogramplatformversionlanguageimage) | **PATCH** /programs/{id_program}/platforms/{id_platform}/versions/{id_version}/languages/{id_language}/images/{id_image} | Partially updates a      *   ProgramPlatformVersionLanguageImage
 
 # **createProgramPlatformVersionLanguageImage**
 > \Softonic\CatalogApiSdk\Client\Model\InlineResponse201 createProgramPlatformVersionLanguageImage($body, $id_program, $id_platform, $id_version, $id_language)
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 # **deleteProgramPlatformVersionLanguageImage**
 > \Softonic\CatalogApiSdk\Client\Model\InlineResponse2001 deleteProgramPlatformVersionLanguageImage($id_program, $id_platform, $id_version, $id_language, $id_image)
 
-Deletes a ProgramPlatformVersionLanguageImage
+Deletes a      *   ProgramPlatformVersionLanguageImage
 
 Deletes a ProgramPlatformVersionLanguageImage
 
@@ -195,7 +195,7 @@ Name | Type | Description  | Notes
 # **readProgramPlatformVersionLanguageImage**
 > \Softonic\CatalogApiSdk\Client\Model\ProgramPlatformVersionLanguageImage readProgramPlatformVersionLanguageImage($id_program, $id_platform, $id_version, $id_language, $id_image)
 
-Fetches a single ProgramPlatformVersionLanguageImage
+Fetches a single      *   ProgramPlatformVersionLanguageImage
 
 Fetches a single ProgramPlatformVersionLanguageImage
 
@@ -256,7 +256,7 @@ Name | Type | Description  | Notes
 # **replaceProgramPlatformVersionLanguageImage**
 > \Softonic\CatalogApiSdk\Client\Model\InlineResponse200 replaceProgramPlatformVersionLanguageImage($body, $id_program, $id_platform, $id_version, $id_language, $id_image)
 
-Entirely replaces a ProgramPlatformVersionLanguageImage
+Entirely replaces a      *   ProgramPlatformVersionLanguageImage
 
 Entirely replaces a ProgramPlatformVersionLanguageImage
 
@@ -319,7 +319,7 @@ Name | Type | Description  | Notes
 # **updateProgramPlatformVersionLanguageImage**
 > \Softonic\CatalogApiSdk\Client\Model\InlineResponse2002 updateProgramPlatformVersionLanguageImage($body, $id_program, $id_platform, $id_version, $id_language, $id_image)
 
-Partially updates a ProgramPlatformVersionLanguageImage
+Partially updates a      *   ProgramPlatformVersionLanguageImage
 
 Partially updates a ProgramPlatformVersionLanguageImage
 
