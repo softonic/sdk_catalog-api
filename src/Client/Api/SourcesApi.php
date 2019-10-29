@@ -176,7 +176,7 @@ class SourcesApi
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Softonic\CatalogApiSdk\Client\Model\InlineResponse40926',
+                        '\Softonic\CatalogApiSdk\Client\Model\InlineResponse40925',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);

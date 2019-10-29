@@ -67,6 +67,7 @@ class ProgramPlatformVersionBinary implements ModelInterface, ArrayAccess, JsonS
 'id_version' => 'string',
 'id_binary' => 'string',
 'type' => 'string',
+'tongues' => 'string[]',
 'created_at' => 'string'    ];
 
     /**
@@ -80,6 +81,7 @@ class ProgramPlatformVersionBinary implements ModelInterface, ArrayAccess, JsonS
 'id_version' => 'versionSlug',
 'id_binary' => 'sha1',
 'type' => null,
+'tongues' => null,
 'created_at' => null    ];
 
     /**
@@ -114,6 +116,7 @@ class ProgramPlatformVersionBinary implements ModelInterface, ArrayAccess, JsonS
 'id_version' => 'id_version',
 'id_binary' => 'id_binary',
 'type' => 'type',
+'tongues' => 'tongues',
 'created_at' => 'created_at'    ];
 
     /**
@@ -127,6 +130,7 @@ class ProgramPlatformVersionBinary implements ModelInterface, ArrayAccess, JsonS
 'id_version' => 'setIdVersion',
 'id_binary' => 'setIdBinary',
 'type' => 'setType',
+'tongues' => 'setTongues',
 'created_at' => 'setCreatedAt'    ];
 
     /**
@@ -140,6 +144,7 @@ class ProgramPlatformVersionBinary implements ModelInterface, ArrayAccess, JsonS
 'id_version' => 'getIdVersion',
 'id_binary' => 'getIdBinary',
 'type' => 'getType',
+'tongues' => 'getTongues',
 'created_at' => 'getCreatedAt'    ];
 
     /**
@@ -218,6 +223,7 @@ self::TYPE__64BITS,        ];
         array_key_exists('id_version', $data) && $this->container['id_version'] = $data['id_version'];
         array_key_exists('id_binary', $data) && $this->container['id_binary'] = $data['id_binary'];
         array_key_exists('type', $data) && $this->container['type'] = $data['type'];
+        array_key_exists('tongues', $data) && $this->container['tongues'] = $data['tongues'];
         array_key_exists('created_at', $data) && $this->container['created_at'] = $data['created_at'];
     }
 
@@ -427,6 +433,31 @@ null;
     }
 
     /**
+     * Gets tongues
+     *
+     * @return string[]
+     */
+    public function getTongues()
+    {
+        return array_key_exists('tongues', $this->container) ? $this->container['tongues'] :
+null;
+    }
+
+    /**
+     * Sets tongues
+     *
+     * @param string[] $tongues Tongues
+     *
+     * @return $this
+     */
+    public function setTongues($tongues)
+    {
+        $this->container['tongues'] = $tongues;
+
+        return $this;
+    }
+
+    /**
      * Gets created_at
      *
      * @return string
@@ -549,6 +580,7 @@ null;
         $data['id_version'] = $this->getIdVersion();
         $data['id_binary'] = $this->getIdBinary();
         $data['type'] = $this->getType();
+        $data['tongues'] = $this->getTongues();
         $data['created_at'] = $this->getCreatedAt();
 
         return $data;

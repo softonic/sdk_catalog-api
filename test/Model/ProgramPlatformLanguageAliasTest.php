@@ -102,4 +102,11 @@ class ProgramPlatformLanguageAliasTest extends \PHPUnit_Framework_TestCase
     public function testPropertyIdAlias()
     {
     }
+
+    /**
+     * Test attribute "active"
+     */
+    public function testPropertyActive()
+    {
+    }
 }

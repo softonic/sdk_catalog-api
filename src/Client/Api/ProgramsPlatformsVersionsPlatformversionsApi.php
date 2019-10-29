@@ -182,7 +182,7 @@ class ProgramsPlatformsVersionsPlatformversionsApi
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Softonic\CatalogApiSdk\Client\Model\InlineResponse40925',
+                        '\Softonic\CatalogApiSdk\Client\Model\InlineResponse40924',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);

@@ -65,7 +65,8 @@ class ProgramPlatformLanguageAlias implements ModelInterface, ArrayAccess, JsonS
         'id_program' => 'string',
 'id_platform' => 'string',
 'id_language' => 'string',
-'id_alias' => 'string'    ];
+'id_alias' => 'string',
+'active' => 'bool'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -76,7 +77,8 @@ class ProgramPlatformLanguageAlias implements ModelInterface, ArrayAccess, JsonS
         'id_program' => 'uuid',
 'id_platform' => null,
 'id_language' => null,
-'id_alias' => 'slug'    ];
+'id_alias' => 'slug',
+'active' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -108,7 +110,8 @@ class ProgramPlatformLanguageAlias implements ModelInterface, ArrayAccess, JsonS
         'id_program' => 'id_program',
 'id_platform' => 'id_platform',
 'id_language' => 'id_language',
-'id_alias' => 'id_alias'    ];
+'id_alias' => 'id_alias',
+'active' => 'active'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -119,7 +122,8 @@ class ProgramPlatformLanguageAlias implements ModelInterface, ArrayAccess, JsonS
         'id_program' => 'setIdProgram',
 'id_platform' => 'setIdPlatform',
 'id_language' => 'setIdLanguage',
-'id_alias' => 'setIdAlias'    ];
+'id_alias' => 'setIdAlias',
+'active' => 'setActive'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -130,7 +134,8 @@ class ProgramPlatformLanguageAlias implements ModelInterface, ArrayAccess, JsonS
         'id_program' => 'getIdProgram',
 'id_platform' => 'getIdPlatform',
 'id_language' => 'getIdLanguage',
-'id_alias' => 'getIdAlias'    ];
+'id_alias' => 'getIdAlias',
+'active' => 'getActive'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -194,6 +199,7 @@ class ProgramPlatformLanguageAlias implements ModelInterface, ArrayAccess, JsonS
         array_key_exists('id_platform', $data) && $this->container['id_platform'] = $data['id_platform'];
         array_key_exists('id_language', $data) && $this->container['id_language'] = $data['id_language'];
         array_key_exists('id_alias', $data) && $this->container['id_alias'] = $data['id_alias'];
+        array_key_exists('active', $data) && $this->container['active'] = $data['active'];
     }
 
     /**
@@ -370,6 +376,31 @@ null;
 
         return $this;
     }
+
+    /**
+     * Gets active
+     *
+     * @return bool
+     */
+    public function getActive()
+    {
+        return array_key_exists('active', $this->container) ? $this->container['active'] :
+null;
+    }
+
+    /**
+     * Sets active
+     *
+     * @param bool $active Is the active program alias?
+     *
+     * @return $this
+     */
+    public function setActive($active)
+    {
+        $this->container['active'] = $active;
+
+        return $this;
+    }
     /**
      * Returns true if offset exists. False otherwise.
      *
@@ -468,6 +499,7 @@ null;
         $data['id_platform'] = $this->getIdPlatform();
         $data['id_language'] = $this->getIdLanguage();
         $data['id_alias'] = $this->getIdAlias();
+        $data['active'] = $this->getActive();
 
         return $data;
     }
